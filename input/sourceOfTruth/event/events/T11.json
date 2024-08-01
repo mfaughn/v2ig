@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/T11",
+  "id": "T11",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "T11",
+        "path": "T11",
+        "short": "T11",
+        "definition": "Event T11: Document Cancel Notification",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 T11 Message Definition",
+  "name": "T11",
+  "type": "T11",
+  "date": "2024-07-24T19:13:28Z"
+}

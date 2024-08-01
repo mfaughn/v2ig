@@ -1,0 +1,24 @@
+= (JCC) Data Type - job code/class
+:v291_section: 2A.2.37
+:v2type: 'Data Type'
+:code: JCC
+:name: job code/class
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[example]
+1: Codified job (where 1 represents the code for Administrator and F represents full time)
+
+|1\^F^Administrator|
+
+[example]
+2: Uncodified job (where job codes are not codified and PT represents part time)
+
+|\^PT^Analyst|.
+
+include::JCC-components/JCC-1.adoc[]
+
+include::JCC-components/JCC-2.adoc[]
+
+include::JCC-components/JCC-3.adoc[]
+

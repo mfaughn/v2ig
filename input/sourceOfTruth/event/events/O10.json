@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O10",
+  "id": "O10",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O10",
+        "path": "O10",
+        "short": "O10",
+        "definition": "Event O10: Pharmacy/Treatment Order Acknowledgment",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O10 Message Definition",
+  "name": "O10",
+  "type": "O10",
+  "date": "2024-07-24T19:13:28Z"
+}

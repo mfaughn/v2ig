@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ADT-A48-",
+  "id": "ADT-A48-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ADT-A48-",
+        "path": "ADT-A48-",
+        "short": "ADT-A48-",
+        "definition": "ADT^A48^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 ADT^A48^ Message Definition",
+  "name": "ADT^A48^",
+  "type": "ADT-A48-",
+  "date": "2024-07-24T19:13:26Z"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O33",
+  "id": "O33",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O33",
+        "path": "O33",
+        "short": "O33",
+        "definition": "Event O33: Laboratory order for multiple orders related to a single specimen",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O33 Message Definition",
+  "name": "O33",
+  "type": "O33",
+  "date": "2024-07-24T19:13:28Z"
+}

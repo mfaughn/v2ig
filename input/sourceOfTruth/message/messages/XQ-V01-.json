@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/XQ-V01-",
+  "id": "XQ-V01-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "XQ-V01-",
+        "path": "XQ-V01-",
+        "short": "XQ-V01-",
+        "definition": "XQ^V01^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 XQ^V01^ Message Definition",
+  "name": "XQ^V01^",
+  "type": "XQ-V01-",
+  "date": "2024-07-24T19:13:27Z"
+}

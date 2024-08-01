@@ -1,0 +1,7 @@
+== Pharmacy/Treatment Transaction Flow Diagram
+[v291_section="4A.6"]
+
+The following are possible routes at a generic site.
+
+image::extracted-media/media/image1.wmf[]
+

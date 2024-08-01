@@ -1,0 +1,15 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/Message",
+  "id" : "v2-message",
+  "version" : "0.0.1",
+  "name" : "V2Message",
+  "title" : " HL7 v2 Message",
+  "status" : "active",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "Message",
+  "description" : "Abstract base for all messages",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization"
+}

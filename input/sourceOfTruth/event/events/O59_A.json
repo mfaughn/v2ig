@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O59_A",
+  "id": "O59_A",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O59_A",
+        "path": "O59_A",
+        "short": "O59_A",
+        "definition": "Event O59_A: Laboratory Result Interpretation Request Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O59_A Message Definition",
+  "name": "O59_A",
+  "type": "O59_A",
+  "date": "2024-07-24T19:13:28Z"
+}

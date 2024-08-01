@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OML-O33-OML_O33",
+  "id": "OML-O33-OML_O33",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OML-O33-OML_O33",
+        "path": "OML-O33-OML_O33",
+        "short": "OML-O33-OML_O33",
+        "definition": "OML^O33^OML_O33 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OML-O33-OML_O33.structure",
+        "path": "OML-O33-OML_O33.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OML_O33"
+      }
+    ]
+  },
+  "title": "HL7 v2 OML^O33^OML_O33 Message Definition",
+  "name": "OML^O33^OML_O33",
+  "type": "OML-O33-OML_O33",
+  "date": "2024-07-24T19:13:26Z"
+}

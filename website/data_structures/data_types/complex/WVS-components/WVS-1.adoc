@@ -1,0 +1,5 @@
+== WVS.1 - Source One Name (ST)
+
+[datatype-definition]
+This component identifies the first input for the waveform source.
+

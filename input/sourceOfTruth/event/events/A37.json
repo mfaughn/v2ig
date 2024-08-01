@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/A37",
+  "id": "A37",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "A37",
+        "path": "A37",
+        "short": "A37",
+        "definition": "Event A37: Unlink Patient Information",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 A37 Message Definition",
+  "name": "A37",
+  "type": "A37",
+  "date": "2024-07-24T19:13:28Z"
+}

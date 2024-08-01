@@ -1,0 +1,18 @@
+= (QIP) Data Type - query input parameter list
+:v291_section: 2A.2.60
+:v2type: 'Data Type'
+:code: QIP
+:name: query input parameter list
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type contains a segment field name and the list of values to be passed to the query processor.
+
+[er7-example]
+|@PID.5.1^EVANS|
+
+include::QIP-components/QIP-1.adoc[]
+
+include::QIP-components/QIP-2.adoc[]
+

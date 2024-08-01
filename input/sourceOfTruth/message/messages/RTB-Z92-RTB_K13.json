@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RTB-Z92-RTB_K13",
+  "id": "RTB-Z92-RTB_K13",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RTB-Z92-RTB_K13",
+        "path": "RTB-Z92-RTB_K13",
+        "short": "RTB-Z92-RTB_K13",
+        "definition": "RTB^Z92^RTB_K13 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RTB-Z92-RTB_K13.structure",
+        "path": "RTB-Z92-RTB_K13.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RTB_K13-C"
+      }
+    ]
+  },
+  "title": "HL7 v2 RTB^Z92^RTB_K13 Message Definition",
+  "name": "RTB^Z92^RTB_K13",
+  "type": "RTB-Z92-RTB_K13",
+  "date": "2024-07-24T19:13:27Z"
+}

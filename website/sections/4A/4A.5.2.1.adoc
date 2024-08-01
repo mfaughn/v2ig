@@ -1,0 +1,6 @@
+==== RXO-1 Requested Give code example
+[v291_section="4A.5.2.1"]
+
+[er7]
+RXO|58160040000110^Fluoxetine HCL 10mg Capsule^GPI^00777310402^Prozac 10 mg caps^NDC|...<cr>
+

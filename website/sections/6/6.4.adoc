@@ -1,0 +1,7 @@
+== TRIGGER EVENTS AND MESSAGE DEFINITIONS
+[v291_section="6.4"]
+
+The triggering events that follow are served by Detail Financial Transaction (DFT), Add/Change Billing Account (BAR), and General Acknowledgment (ACK) messages.
+
+Each trigger event is documented below, along with the applicable form of the message exchange. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for Defining Abstract Messages."
+

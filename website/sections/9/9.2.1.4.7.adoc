@@ -1,0 +1,5 @@
+===== Pre-Authenticated:
+[v291_section="9.2.1.4.7"]
+
+A completion status in which a document is transcribed but not authenticated.
+

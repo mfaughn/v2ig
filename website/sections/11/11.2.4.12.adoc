@@ -1,0 +1,5 @@
+==== Referring provider:
+[v291_section="11.2.4.12"]
+
+Indicates the provider who requests services from a specialist or another primary care provider. A referring provider may, in fact, be a specialist who is referring a patient to another specialist.
+

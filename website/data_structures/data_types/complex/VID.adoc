@@ -1,0 +1,14 @@
+= (VID) Data Type - version identifier
+:v291_section: 2A.2.83
+:v2type: 'Data Type'
+:code: VID
+:name: version identifier
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+include::VID-components/VID-1.adoc[]
+
+include::VID-components/VID-2.adoc[]
+
+include::VID-components/VID-3.adoc[]
+

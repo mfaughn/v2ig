@@ -1,0 +1,18 @@
+= (RI) Data Type - repeat interval
+:v291_section: 2A.2.64
+:v2type: 'Data Type'
+:code: RI
+:name: repeat interval
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+contains the interval between repeated services.
+
+[NOTE]
+The reader is referred to the link:#a.2.67-rpt-repeat-pattern[_RPT – Repeat pattern_] data type, which provides a more rigorous framework for defining repeating time intervals.
+
+include::RI-components/RI-1.adoc[]
+
+include::RI-components/RI-2.adoc[]
+

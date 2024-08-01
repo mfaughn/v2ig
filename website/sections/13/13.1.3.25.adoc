@@ -1,0 +1,5 @@
+==== Directions of the sample, Transportation system, Instrument or Specimen processing handling device and interfaces
+[v291_section="13.1.3.25"]
+
+See Directions of the specimen, etc.
+

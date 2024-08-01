@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/INU_U05",
+  "id": "INU_U05",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "INU_U05",
+        "path": "INU_U05",
+        "short": "INU_U05",
+        "definition": "INU_U05 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "INU_U05.1-MSH",
+          "path": "INU_U05.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "INU_U05.2-SFT",
+          "path": "INU_U05.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "INU_U05.3-UAC",
+          "path": "INU_U05.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "INU_U05.4-EQU",
+          "path": "INU_U05.4-EQU",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/EQU"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "INU_U05.5-INV",
+          "path": "INU_U05.5-INV",
+          "min": 0,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/INV"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "INU_U05.6-ROL",
+          "path": "INU_U05.6-ROL",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ROL"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "B"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "title": "HL7 v2 INU_U05 Segment Definition",
+  "name": "INU_U05",
+  "type": "INU_U05",
+  "date": "2024-07-24T19:13:19Z"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/A53",
+  "id": "A53",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "A53",
+        "path": "A53",
+        "short": "A53",
+        "definition": "Event A53: Cancel Patient Returns from a Leave of Absence",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 A53 Message Definition",
+  "name": "A53",
+  "type": "A53",
+  "date": "2024-07-24T19:13:28Z"
+}

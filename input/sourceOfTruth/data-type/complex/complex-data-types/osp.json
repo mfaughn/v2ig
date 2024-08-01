@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OSP",
+  "id": "OSP",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "OSP",
+  "title": "HL7 v2 OSP Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "OSP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OSP",
+        "path": "OSP",
+        "short": "occurrence span code and date",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000010a182940>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OSP.1",
+        "path": "OSP.1",
+        "short": "Occurrence Span Code",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CNE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0351"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "OSP.2",
+        "path": "OSP.2",
+        "short": "Occurrence Span Start Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OSP.3",
+        "path": "OSP.3",
+        "short": "Occurrence Span Stop Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* Replaces the CM data type used in section 6.5.11.8 UB2-8, as of v 2.5.\n\nUse case: The patient was admitted for minor surgery (1/6/03) and discharged the following day (1/7/03). Complications ensured and the patient was readmitted the following day (1/8/03). When the claim for 1/8/03 is filed, the prior stay dates (1/6/03-1/7/03) must be reported (per the Health Plan) using Occurrence Span Code and Dates 71 - Prior Stay Date. Example:\n\n|71&Prior Stay Date&NUBC^20030106^20030107|"
+}

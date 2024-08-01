@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SLR_S28-D",
+  "id": "SLR_S28-D",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SLR_S28-D",
+        "path": "SLR_S28-D",
+        "short": "SLR_S28-D",
+        "definition": "SLR_S28-D Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "SLR_S28-D.1-MSH",
+          "path": "SLR_S28-D.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "SLR_S28-D.2-SFT",
+          "path": "SLR_S28-D.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "SLR_S28-D.3-UAC",
+          "path": "SLR_S28-D.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "SLR_S28-D.4-SLT",
+          "path": "SLR_S28-D.4-SLT",
+          "min": 0,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SLT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "title": "HL7 v2 SLR_S28-D Segment Definition",
+  "name": "SLR_S28-D",
+  "type": "SLR_S28-D",
+  "date": "2024-07-24T19:13:19Z"
+}

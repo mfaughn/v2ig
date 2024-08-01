@@ -1,0 +1,5 @@
+==== Test mnemonics:
+[v291_section="13.1.3.59"]
+
+Short, understandable contractions for test names.
+

@@ -1,0 +1,5 @@
+==== Par Level
+[v291_section="17.4.2.12"]
+
+Par Level refers to an inventory location specific to a particular area of the healthcare facility, such as Surgery.
+

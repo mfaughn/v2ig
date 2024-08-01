@@ -1,0 +1,28 @@
+= (CP) Data Type - composite price
+:v291_section: 2A.2.10
+:v2type: 'Data Type'
+:code: CP
+:name: composite price
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[NOTE]
+This data type is often used to define a repeating field within a given segment.
+
+[er7-example]
+|100.00&USD\^UP^0\^9^min\^P~50.00&USD^UP\^10^59\^min^P~10.00&USD\^UP^60\^999^P~50.00&USD\^AP~200.00&USD^PF
+
+~80.00&USD^DC|
+
+include::CP-components/CP-1.adoc[]
+
+include::CP-components/CP-2.adoc[]
+
+include::CP-components/CP-3.adoc[]
+
+include::CP-components/CP-4.adoc[]
+
+include::CP-components/CP-5.adoc[]
+
+include::CP-components/CP-6.adoc[]
+

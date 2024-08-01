@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORA_R41",
+  "id": "ORA_R41",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORA_R41",
+        "path": "ORA_R41",
+        "short": "ORA_R41",
+        "definition": "ORA_R41 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "ORA_R41.1-MSH",
+          "path": "ORA_R41.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORA_R41.2-SFT",
+          "path": "ORA_R41.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORA_R41.3-UAC",
+          "path": "ORA_R41.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORA_R41.4-MSA",
+          "path": "ORA_R41.4-MSA",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSA"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORA_R41.5-ERR",
+          "path": "ORA_R41.5-ERR",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ERR"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORA_R41.6-PRT",
+          "path": "ORA_R41.6-PRT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/PRT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "title": "HL7 v2 ORA_R41 Segment Definition",
+  "name": "ORA_R41",
+  "type": "ORA_R41",
+  "date": "2024-07-24T19:13:18Z"
+}

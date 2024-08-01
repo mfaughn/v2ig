@@ -1,0 +1,20 @@
+= (ICD) Data Type - insurance certification definition
+:v291_section: 2A.2.34
+:v2type: 'Data Type'
+:code: ICD
+:name: insurance certification definition
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies whether insurance certification is required for particular patient types, and the time window for obtaining the certification.
+
+[NOTE]
+Replaces the CM data type used in section 6.5.8.20 IN3-20, as of v2.5.
+
+include::ICD-components/ICD-1.adoc[]
+
+include::ICD-components/ICD-2.adoc[]
+
+include::ICD-components/ICD-3.adoc[]
+

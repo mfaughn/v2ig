@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Znn_A",
+  "id": "Znn_A",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Znn_A",
+        "path": "Znn_A",
+        "short": "Znn_A",
+        "definition": "Event Znn_A: Query Grammer",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Znn_A Message Definition",
+  "name": "Znn_A",
+  "type": "Znn_A",
+  "date": "2024-07-24T19:13:28Z"
+}

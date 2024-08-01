@@ -1,0 +1,15 @@
+=== Automated Equipment Log/Service Request
+[v291_section="13.5.13"]
+
+The LAS queries chemistry analyzer for log file of events occurring between 7am and 8am on 30^th^ June 1998.
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |LSR^U13^LSU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+EQP|LOG^LOG_EVENT||199806300700|199806300800<cr>
+
+

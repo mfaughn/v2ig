@@ -1,0 +1,18 @@
+= (EIP) Data Type - entity identifier pair
+:v291_section: 2A.2.26
+:v2type: 'Data Type'
+:code: EIP
+:name: entity identifier pair
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Specifies an identifier assigned to an entity by either the placer or the filler system. If both components are populated the identifiers must refer to the same entity.
+
+[NOTE]
+Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 – OBR-29, 7.3.1.29 – OBR-29, as of v 2.5.
+
+include::EIP-components/EIP-1.adoc[]
+
+include::EIP-components/EIP-2.adoc[]
+

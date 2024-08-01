@@ -1,0 +1,5 @@
+== QUERY IMPLEMENTATION CONSIDERATIONS
+[v291_section="5.8"]
+
+Implementation issues are discussed in section 5.2.
+

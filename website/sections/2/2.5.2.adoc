@@ -1,0 +1,11 @@
+=== Rules for the recipient
+[v291_section="2.5.2"]
+
+The following rules apply to receiving HL7 messages and converting their contents to data values:
+
+{empty}a) ignore segments, fields, components, subcomponents, and extra repetitions of a field that are present but were not expected.
+
+{empty}b) treat optional segments that were expected but are not present as consisting entirely of fields that are not present.
+
+{empty}c) treat fields and components that are expected but were not included in a segment as not present.
+

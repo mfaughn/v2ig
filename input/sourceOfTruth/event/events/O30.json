@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O30",
+  "id": "O30",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O30",
+        "path": "O30",
+        "short": "O30",
+        "definition": "Event O30: Blood Product Dispense Status Acknowledgment",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O30 Message Definition",
+  "name": "O30",
+  "type": "O30",
+  "date": "2024-07-24T19:13:28Z"
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--ESU_U01",
+  "id": "--ESU_U01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--ESU_U01",
+        "path": "--ESU_U01",
+        "short": "--ESU_U01",
+        "definition": "^^ESU_U01 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--ESU_U01.structure",
+        "path": "--ESU_U01.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ESU_U01"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^ESU_U01 Message Definition",
+  "name": "^^ESU_U01",
+  "type": "--ESU_U01",
+  "date": "2024-07-24T19:13:26Z"
+}

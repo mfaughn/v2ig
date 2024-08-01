@@ -1,0 +1,5 @@
+== XCN.3 - Given Name (ST)
+
+[datatype-definition]
+First name.
+

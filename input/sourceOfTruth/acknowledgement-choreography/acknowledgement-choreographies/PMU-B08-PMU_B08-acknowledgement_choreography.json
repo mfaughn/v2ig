@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PMU-B08-PMU_B08-acknowledgement_choreography",
+  "id": "PMU-B08-PMU_B08-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PMU-B08-PMU_B08-acknowledgement_choreography",
+        "path": "PMU-B08-PMU_B08-acknowledgement_choreography",
+        "short": "PMU-B08-PMU_B08-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for PMU^B08^PMU_B08",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "PMU^B08^PMU_B08",
+  "date": "2024-07-24T19:13:32Z",
+  "type": "PMU-B08-PMU_B08-acknowledgement_choreography"
+}

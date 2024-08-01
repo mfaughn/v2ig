@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OMB-O27-OMB_O27",
+  "id": "OMB-O27-OMB_O27",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OMB-O27-OMB_O27",
+        "path": "OMB-O27-OMB_O27",
+        "short": "OMB-O27-OMB_O27",
+        "definition": "OMB^O27^OMB_O27 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OMB-O27-OMB_O27.structure",
+        "path": "OMB-O27-OMB_O27.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OMB_O27"
+      }
+    ]
+  },
+  "title": "HL7 v2 OMB^O27^OMB_O27 Message Definition",
+  "name": "OMB^O27^OMB_O27",
+  "type": "OMB-O27-OMB_O27",
+  "date": "2024-07-24T19:13:26Z"
+}

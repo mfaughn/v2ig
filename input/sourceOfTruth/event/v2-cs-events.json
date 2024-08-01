@@ -1,0 +1,1433 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://hl7.org/v2/CodeSystem/Events",
+  "id": "v2-cs-events",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "A01",
+      "display": "Admit/Visit Notification"
+    },
+    {
+      "code": "A02",
+      "display": "Transfer a Patient"
+    },
+    {
+      "code": "A03",
+      "display": "Discharge/End Visit"
+    },
+    {
+      "code": "A04",
+      "display": "Register a Patient"
+    },
+    {
+      "code": "A05",
+      "display": "Pre-Admit a Patient"
+    },
+    {
+      "code": "A06",
+      "display": "Change an Outpatient to an Inpatient"
+    },
+    {
+      "code": "A07",
+      "display": "Change an Inpatient to an Outpatient"
+    },
+    {
+      "code": "A08",
+      "display": "Update Patient Information"
+    },
+    {
+      "code": "A09",
+      "display": "Patient Departing - Tracking"
+    },
+    {
+      "code": "A10",
+      "display": "Patient Arriving - Tracking"
+    },
+    {
+      "code": "A11",
+      "display": "Cancel Admit / Visit Notification"
+    },
+    {
+      "code": "A12",
+      "display": "Cancel Transfer"
+    },
+    {
+      "code": "A13",
+      "display": "Cancel Discharge / End Visit"
+    },
+    {
+      "code": "A14",
+      "display": "Pending Admit"
+    },
+    {
+      "code": "A15",
+      "display": "Pending Transfer"
+    },
+    {
+      "code": "A16",
+      "display": "Pending Discharge"
+    },
+    {
+      "code": "A17",
+      "display": "Swap Patients"
+    },
+    {
+      "code": "A18",
+      "display": "ADT/ACK - Merge Patient Information"
+    },
+    {
+      "code": "A19",
+      "display": "QRY/ADR - Patient Query"
+    },
+    {
+      "code": "A20",
+      "display": "Bed Status Update"
+    },
+    {
+      "code": "A21",
+      "display": "Patient Goes on a Leave of Absence"
+    },
+    {
+      "code": "A22",
+      "display": "Patient Returns From a Leave of Absence"
+    },
+    {
+      "code": "A23",
+      "display": "Delete a Patient Record"
+    },
+    {
+      "code": "A24",
+      "display": "Link Patient Information"
+    },
+    {
+      "code": "A25",
+      "display": "Cancel Pending Discharge"
+    },
+    {
+      "code": "A26",
+      "display": "Cancel Pending Transfer"
+    },
+    {
+      "code": "A27",
+      "display": "Cancel Pending Admit"
+    },
+    {
+      "code": "A28",
+      "display": "Add Person or Patient Information"
+    },
+    {
+      "code": "A29",
+      "display": "Delete Person Information"
+    },
+    {
+      "code": "A30",
+      "display": "ADT/ACK - Merge Person Information"
+    },
+    {
+      "code": "A31",
+      "display": "Update Person Information"
+    },
+    {
+      "code": "A32",
+      "display": "Cancel Patient Arriving - Tracking"
+    },
+    {
+      "code": "A33",
+      "display": "Cancel Patient Departing - Tracking"
+    },
+    {
+      "code": "A34",
+      "display": "ADT/ACK - Merge Patient Information - Patient ID Only"
+    },
+    {
+      "code": "A35",
+      "display": "ADT/ACK - Merge Patient Information - Account Number Only"
+    },
+    {
+      "code": "A36",
+      "display": "ADT/ACK - Merge Patient Information - Patient ID & Account Number"
+    },
+    {
+      "code": "A37",
+      "display": "Unlink Patient Information"
+    },
+    {
+      "code": "A38",
+      "display": "Cancel Pre-Admit"
+    },
+    {
+      "code": "A39",
+      "display": "ADT/ACK - Merge Person - Patient ID"
+    },
+    {
+      "code": "A40",
+      "display": "Merge Patient - Patient Identifier List"
+    },
+    {
+      "code": "A41",
+      "display": "Merge Account - Patient Account Number"
+    },
+    {
+      "code": "A42",
+      "display": "Merge Visit - Visit Number"
+    },
+    {
+      "code": "A43",
+      "display": "Move Patient Information - Patient Identifier List"
+    },
+    {
+      "code": "A44",
+      "display": "Move Account Information - Patient Account Number"
+    },
+    {
+      "code": "A45",
+      "display": "Move Visit Information - Visit Number"
+    },
+    {
+      "code": "A46",
+      "display": "ADT/ACK - Change Patient ID"
+    },
+    {
+      "code": "A47",
+      "display": "Change Patient Identifier List"
+    },
+    {
+      "code": "A48",
+      "display": "ADT/ACK - Change Alternate Patient ID"
+    },
+    {
+      "code": "A49",
+      "display": "Change Patient Account Number"
+    },
+    {
+      "code": "A50",
+      "display": "Change Visit Number"
+    },
+    {
+      "code": "A51",
+      "display": "Change Alternate Visit ID"
+    },
+    {
+      "code": "A52",
+      "display": "Cancel Leave of Absence for a Patient"
+    },
+    {
+      "code": "A53",
+      "display": "Cancel Patient Returns from a Leave of Absence"
+    },
+    {
+      "code": "A54",
+      "display": "Change Attending Doctor"
+    },
+    {
+      "code": "A55",
+      "display": "Cancel Change Attending Doctor"
+    },
+    {
+      "code": "Q21",
+      "display": "Get Person Demographics"
+    },
+    {
+      "code": "K21",
+      "display": "Get Person DemographicsResponse"
+    },
+    {
+      "code": "Q22",
+      "display": "Find Candidates"
+    },
+    {
+      "code": "K22",
+      "display": "Find CandidatesResponse"
+    },
+    {
+      "code": "Q23",
+      "display": "Get Corresponding Identifiers"
+    },
+    {
+      "code": "K23",
+      "display": "Get Corresponding IdentifiersResponse"
+    },
+    {
+      "code": "Q24",
+      "display": "Allocate Identifiers"
+    },
+    {
+      "code": "K24",
+      "display": "Allocate IdentifiersResponse"
+    },
+    {
+      "code": "A60",
+      "display": "Update Adverse Reaction Information"
+    },
+    {
+      "code": "A61",
+      "display": "Change Consulting Doctor"
+    },
+    {
+      "code": "A62",
+      "display": "Cancel Change Consulting Doctor"
+    },
+    {
+      "code": "Q32",
+      "display": "Find Candidates including Visit Information"
+    },
+    {
+      "code": "K32",
+      "display": "Find Candidates including Visit InformationResponse"
+    },
+    {
+      "code": "O19",
+      "display": "general clinical order message"
+    },
+    {
+      "code": "O20",
+      "display": "general clinical order acknowledgement message"
+    },
+    {
+      "code": "O21",
+      "display": "laboratory order message"
+    },
+    {
+      "code": "O22",
+      "display": "General Laboratory Order Acknowledgment Message - Patient Segments Required"
+    },
+    {
+      "code": "O53",
+      "display": "General Laboratory Order Acknowledgment Message - Patient Segments Optional"
+    },
+    {
+      "code": "O33",
+      "display": "Laboratory order for multiple orders related to a single specimen"
+    },
+    {
+      "code": "O34",
+      "display": "Laboratory order response message to a multiple order related to single specimen OML - Patient Segments Required"
+    },
+    {
+      "code": "O54",
+      "display": "Laboratory order response message to a multiple order related to single specimen OML - Patient Segments Optional"
+    },
+    {
+      "code": "O35",
+      "display": "Laboratory order for multiple orders related to a single container of a specimen"
+    },
+    {
+      "code": "O36",
+      "display": "Laboratory order response message to a single container of a specimen OML - Patient Segments Required"
+    },
+    {
+      "code": "O55",
+      "display": "Laboratory order response message to a single container of a specimen OML - Patient Segments Optional"
+    },
+    {
+      "code": "O39",
+      "display": "Specimen shipment centric laboratory order"
+    },
+    {
+      "code": "O40",
+      "display": "Specimen shipment centric laboratory order response message to specimen shipment OML - Patient Segments Required"
+    },
+    {
+      "code": "O56",
+      "display": "Specimen shipment centric laboratory order response message to specimen shipment OML - Patient Segments Optional"
+    },
+    {
+      "code": "O23",
+      "display": "Imaging Order Message"
+    },
+    {
+      "code": "O24",
+      "display": "Imaging Order Response Message to Any OMI"
+    },
+    {
+      "code": "O37",
+      "display": "Population/Location-Based Laboratory Order Message"
+    },
+    {
+      "code": "O38",
+      "display": "Population/Location-Based Laboratory Order Acknowledgment Message"
+    },
+    {
+      "code": "O51",
+      "display": "Order Status Update"
+    },
+    {
+      "code": "O52",
+      "display": "Order Status Update Acknowledgement"
+    },
+    {
+      "code": "O57",
+      "display": "General Order Message with Document Payload"
+    },
+    {
+      "code": "O58",
+      "display": "General Order Message with Document Payload Acknowledgement Message"
+    },
+    {
+      "code": "O59_A",
+      "display": "Laboratory Result Interpretation Request Message"
+    },
+    {
+      "code": "O59_B",
+      "display": "Pharmacy/Treatment Dispense Message"
+    },
+    {
+      "code": "Z73",
+      "display": "Query Example: Information about Phone Calls"
+    },
+    {
+      "code": "Z74",
+      "display": "Query Example: Information about Phone Calls"
+    },
+    {
+      "code": "O03",
+      "display": "Dietary Order"
+    },
+    {
+      "code": "O04",
+      "display": "dietary order acknowledgment"
+    },
+    {
+      "code": "O05",
+      "display": "stock requisition order message"
+    },
+    {
+      "code": "O06",
+      "display": "stock requisition order acknowledgment message"
+    },
+    {
+      "code": "O07",
+      "display": "non-stock requisition order message"
+    },
+    {
+      "code": "O08",
+      "display": "non-stock requisition order acknowledgment message"
+    },
+    {
+      "code": "O27",
+      "display": "Blood Product Order Message"
+    },
+    {
+      "code": "O28",
+      "display": "Blood Product Order Acknowledgment"
+    },
+    {
+      "code": "O29",
+      "display": "Blood Product Dispense Status Message"
+    },
+    {
+      "code": "O30",
+      "display": "Blood Product Dispense Status Acknowledgment"
+    },
+    {
+      "code": "O31",
+      "display": "Blood Product Transfusion/Disposition Message"
+    },
+    {
+      "code": "O32",
+      "display": "Blood Product Transfusion/Disposition Acknowledgment"
+    },
+    {
+      "code": "O41",
+      "display": "Create Donor Record Message"
+    },
+    {
+      "code": "O42",
+      "display": "Update Donor Record Message"
+    },
+    {
+      "code": "Q33",
+      "display": "Get Donor Record Candidates"
+    },
+    {
+      "code": "K33",
+      "display": null
+    },
+    {
+      "code": "Q34",
+      "display": "Get Donor Record"
+    },
+    {
+      "code": "K34",
+      "display": null
+    },
+    {
+      "code": "O43",
+      "display": "Donor Registration"
+    },
+    {
+      "code": "O44",
+      "display": "Donor Eligibility Request"
+    },
+    {
+      "code": "O45",
+      "display": "Donor Eligibility Observations"
+    },
+    {
+      "code": "O46",
+      "display": "Donor Eligibility"
+    },
+    {
+      "code": "O47",
+      "display": "Donor Request to Collect"
+    },
+    {
+      "code": "O48",
+      "display": "Donation Procedure"
+    },
+    {
+      "code": "O09",
+      "display": "Pharmacy/Treatment Order Message"
+    },
+    {
+      "code": "O10",
+      "display": "Pharmacy/Treatment Order Acknowledgment"
+    },
+    {
+      "code": "O11",
+      "display": "Pharmacy/Treatment Encoded Order Message"
+    },
+    {
+      "code": "O12",
+      "display": "Pharmacy/Treatment Encoded Order Acknowledgment"
+    },
+    {
+      "code": "O13",
+      "display": "Pharmacy/Treatment Dispense Message"
+    },
+    {
+      "code": "O14",
+      "display": "Pharmacy/Treatment Dispense Acknowledgement Message"
+    },
+    {
+      "code": "O15",
+      "display": "Pharmacy/Treatment Give Message"
+    },
+    {
+      "code": "O16",
+      "display": "Pharmacy/Treatment Give Acknowledgment Message"
+    },
+    {
+      "code": "O17",
+      "display": "Pharmacy/Treatment Administration Message"
+    },
+    {
+      "code": "O18",
+      "display": "Pharmacy/Treatment Administration Acknowledgment Message"
+    },
+    {
+      "code": "O25",
+      "display": "Pharmacy/Treatment Refill Authorization Request Message"
+    },
+    {
+      "code": "O26",
+      "display": "Pharmacy/Treatment Refill Authorization Request Acknowledgment"
+    },
+    {
+      "code": "Q31",
+      "display": "Query Example: Pharmacy"
+    },
+    {
+      "code": "K31",
+      "display": "Query Example: Pharmacy"
+    },
+    {
+      "code": "O49",
+      "display": "Pharmacy/Treatment Dispense Request Message"
+    },
+    {
+      "code": "O50",
+      "display": "Pharmacy/Treatment Encoded Order Acknowledgment"
+    },
+    {
+      "code": "V01",
+      "display": "XQ - Query for Vaccination Record"
+    },
+    {
+      "code": "V02",
+      "display": "VXX - Response To Vaccintaion Query Returning Multiple PID Matches"
+    },
+    {
+      "code": "V03",
+      "display": "VXR - Vaccination Record Response"
+    },
+    {
+      "code": "V04",
+      "display": "Unsolicited Vaccination Record Update"
+    },
+    {
+      "code": "Z99",
+      "display": "Query Example: Who Am I"
+    },
+    {
+      "code": "Z84",
+      "display": "Query Example: Who Am I"
+    },
+    {
+      "code": "Znn_A",
+      "display": "Query Grammer"
+    },
+    {
+      "code": "Znn_B",
+      "display": "Response Grammer"
+    },
+    {
+      "code": "Znn_C",
+      "display": "Response Grammer for display response Example"
+    },
+    {
+      "code": "Znn_D",
+      "display": "Response Grammer with tabular response"
+    },
+    {
+      "code": "Znn_E",
+      "display": "Query Profile template for query with segment pattern response"
+    },
+    {
+      "code": "Znn_F",
+      "display": "Response Grammer RDY Message"
+    },
+    {
+      "code": "Q11",
+      "display": "Query by Parameter"
+    },
+    {
+      "code": "K11",
+      "display": "Segment Pattern Response"
+    },
+    {
+      "code": "K13",
+      "display": "Tabular Response"
+    },
+    {
+      "code": "Q15",
+      "display": "Query by Parameter"
+    },
+    {
+      "code": "K15",
+      "display": "Display Response"
+    },
+    {
+      "code": "Q16",
+      "display": "Create subscription"
+    },
+    {
+      "code": "Q17",
+      "display": "query for previous events"
+    },
+    {
+      "code": "J01",
+      "display": "cancel query/acknowledge message"
+    },
+    {
+      "code": "J02",
+      "display": "cancel subscription/acknowledge message"
+    },
+    {
+      "code": "Z83",
+      "display": "Query Grammer QSB Message Example"
+    },
+    {
+      "code": "Z82",
+      "display": "Response Grammar Example: Pharmacy Dispense Message"
+    },
+    {
+      "code": "Z85",
+      "display": "Response Grammar Example: Pharmacy Information Comprehensive"
+    },
+    {
+      "code": "Z87",
+      "display": "Query Grammar Example: Dispense Information"
+    },
+    {
+      "code": "Z88",
+      "display": "Query Grammar Example: Dispense Information"
+    },
+    {
+      "code": "Z89",
+      "display": "Query Grammar Example: Lab Results History"
+    },
+    {
+      "code": "Z90",
+      "display": "Query Grammar Example: Lab Results History"
+    },
+    {
+      "code": "Z92",
+      "display": "Response Grammar Example: Who Am I"
+    },
+    {
+      "code": "Z94",
+      "display": "Response Grammar Example: Who Am I"
+    },
+    {
+      "code": "Z95",
+      "display": "Response Grammar Example: Who Am I"
+    },
+    {
+      "code": "Z98",
+      "display": "Response Grammar Example: Dispense History"
+    },
+    {
+      "code": "Z80",
+      "display": "Response Grammar Example: Dispense History"
+    },
+    {
+      "code": "Z78",
+      "display": "Response Grammar Example: TBD"
+    },
+    {
+      "code": "Z76",
+      "display": "Response Grammar Example: TBD"
+    },
+    {
+      "code": "P01",
+      "display": "Add Patient Account"
+    },
+    {
+      "code": "P02",
+      "display": "Purge Patient Accounts"
+    },
+    {
+      "code": "P03",
+      "display": "Post Detail Financial Transactions"
+    },
+    {
+      "code": "P04",
+      "display": "QRY/DSR - Generate Bills And Accounts Receivable Statements"
+    },
+    {
+      "code": "P05",
+      "display": "Update Account"
+    },
+    {
+      "code": "P06",
+      "display": "End Account"
+    },
+    {
+      "code": "P10",
+      "display": "Transmit Ambulatory Payment Classification (APC) Groups"
+    },
+    {
+      "code": "P11",
+      "display": "Post Detail Financial Transactions - Expanded"
+    },
+    {
+      "code": "P12",
+      "display": "Update Diagnosis/Procedure"
+    },
+    {
+      "code": "R01",
+      "display": "Unsolicited Observation Message"
+    },
+    {
+      "code": "R21",
+      "display": "OUL – Unsolicited Laboratory Observation Message"
+    },
+    {
+      "code": "R02",
+      "display": "QRY/ORF - Query for Results of Observation"
+    },
+    {
+      "code": "R04",
+      "display": "QRY/ORF - Query for Results of Observation"
+    },
+    {
+      "code": "R30",
+      "display": "Unsolicited Point-Of-Care Observation Message without Existing Order – Place an Order"
+    },
+    {
+      "code": "R31",
+      "display": "Unsolicited New Point-Of-Care Observation Message – Search for an Order"
+    },
+    {
+      "code": "R32",
+      "display": "Unsolicited Pre-Ordered Point-Of-Care Observation"
+    },
+    {
+      "code": "R33",
+      "display": "Observation Report Acknowledgement"
+    },
+    {
+      "code": "R22",
+      "display": "Unsolicited Specimen Oriented Observation Message"
+    },
+    {
+      "code": "R23",
+      "display": "Unsolicited Specimen Container Oriented Observation Message"
+    },
+    {
+      "code": "R24",
+      "display": "Unsolicited Order Oriented Observation Message"
+    },
+    {
+      "code": "R25",
+      "display": "Unsolicited Population/Location-Based Laboratory Observation Message"
+    },
+    {
+      "code": "R40",
+      "display": "Unsolicited Alert Observation Message"
+    },
+    {
+      "code": "R41",
+      "display": "Observation Report Alert Acknowledgement"
+    },
+    {
+      "code": "R42",
+      "display": "Unsolicited Device Event Observation Message"
+    },
+    {
+      "code": "R43",
+      "display": "Unsolicited Patient-Device Association Observation Message"
+    },
+    {
+      "code": "C01",
+      "display": "Register a patient on a clinical trial"
+    },
+    {
+      "code": "C02",
+      "display": "Cancel a patient registration on clinical trial (for clerical mistakes since an intended registration should not be canceled)"
+    },
+    {
+      "code": "C03",
+      "display": "Correct/update registration information"
+    },
+    {
+      "code": "C04",
+      "display": "Patient has gone off a clinical trial"
+    },
+    {
+      "code": "C05",
+      "display": "Patient enters phase of clinical trial"
+    },
+    {
+      "code": "C06",
+      "display": "Cancel patient entering a phase (clerical mistake)"
+    },
+    {
+      "code": "C07",
+      "display": "Correct/update phase information"
+    },
+    {
+      "code": "C08",
+      "display": "Patient has gone off phase of clinical trial"
+    },
+    {
+      "code": "C09",
+      "display": "Automated time intervals for reporting, like monthly"
+    },
+    {
+      "code": "C10",
+      "display": "Patient completes the clinical trial"
+    },
+    {
+      "code": "C11",
+      "display": "Patient completes a phase of the clinical trial"
+    },
+    {
+      "code": "C12",
+      "display": "Update/correction of patient order/result information"
+    },
+    {
+      "code": "P07",
+      "display": "Unsolicited initial individual product experience report"
+    },
+    {
+      "code": "P08",
+      "display": "Unsolicited update individual product experience report"
+    },
+    {
+      "code": "P09",
+      "display": "SUR - Summary Product Experience Report"
+    },
+    {
+      "code": "R26",
+      "display": "Unsolicited Specimen Shipment Manifest Message"
+    },
+    {
+      "code": "M01",
+      "display": "MFN/MFK - Master File Notification [WITHDRAWN]"
+    },
+    {
+      "code": "M13",
+      "display": "Master File Notification - General"
+    },
+    {
+      "code": "M14",
+      "display": "Master File Notification - Site Defined"
+    },
+    {
+      "code": "M02",
+      "display": "Staff/Practitioner Master File Message"
+    },
+    {
+      "code": "M03",
+      "display": "MFN/MFK - Master File Notification - Test/Observation [WITHDRAWN]"
+    },
+    {
+      "code": "M08",
+      "display": "Master File Notification - Test/Observation (Numeric)"
+    },
+    {
+      "code": "M09",
+      "display": "Master File Notification - Test/Observation (Categorical)"
+    },
+    {
+      "code": "M10",
+      "display": "Master File Notification - Test/Observation Batteries"
+    },
+    {
+      "code": "M11",
+      "display": "Master File Notification - Test/Calculated Observations"
+    },
+    {
+      "code": "M12",
+      "display": "Master File Notification - Additional Basic Observation/Service Attributes"
+    },
+    {
+      "code": "M18",
+      "display": "Master File Notification – Test/Observation (Payer)"
+    },
+    {
+      "code": "M05",
+      "display": "Patient Location Master File Message"
+    },
+    {
+      "code": "M04",
+      "display": "Charge Description Master File Message"
+    },
+    {
+      "code": "M06",
+      "display": "Clinical Trials Master File Message"
+    },
+    {
+      "code": "M07",
+      "display": "Clinical Trials Master File Message"
+    },
+    {
+      "code": "M15",
+      "display": "Inventory Item Master File Message"
+    },
+    {
+      "code": "M16",
+      "display": "Inventory Item Master File Message – Enhanced"
+    },
+    {
+      "code": "M17",
+      "display": "DRG Master File Message"
+    },
+    {
+      "code": "M19",
+      "display": "Contract Master File –"
+    },
+    {
+      "code": "T01",
+      "display": "Original Document Notification"
+    },
+    {
+      "code": "T02",
+      "display": "Original Document Notification and Content"
+    },
+    {
+      "code": "T03",
+      "display": "Document Status Change Notification"
+    },
+    {
+      "code": "T04",
+      "display": "Document Status Change Notification and Content"
+    },
+    {
+      "code": "T05",
+      "display": "Document Addendum Notification"
+    },
+    {
+      "code": "T06",
+      "display": "Document Addendum Notification and Content"
+    },
+    {
+      "code": "T07",
+      "display": "Document Edit Notification"
+    },
+    {
+      "code": "T08",
+      "display": "Document Edit Notification and Content"
+    },
+    {
+      "code": "T09",
+      "display": "Document Replacement Notification"
+    },
+    {
+      "code": "T10",
+      "display": "Document Replacement Notification and Content"
+    },
+    {
+      "code": "T11",
+      "display": "Document Cancel Notification"
+    },
+    {
+      "code": "T12",
+      "display": "QRY/DOC - Document Query"
+    },
+    {
+      "code": "S01",
+      "display": null
+    },
+    {
+      "code": "S02",
+      "display": null
+    },
+    {
+      "code": "S03",
+      "display": null
+    },
+    {
+      "code": "S04",
+      "display": null
+    },
+    {
+      "code": "S05",
+      "display": null
+    },
+    {
+      "code": "S06",
+      "display": null
+    },
+    {
+      "code": "S07",
+      "display": null
+    },
+    {
+      "code": "S08",
+      "display": null
+    },
+    {
+      "code": "S09",
+      "display": null
+    },
+    {
+      "code": "S10",
+      "display": null
+    },
+    {
+      "code": "S11",
+      "display": null
+    },
+    {
+      "code": "S12",
+      "display": null
+    },
+    {
+      "code": "S13",
+      "display": null
+    },
+    {
+      "code": "S14",
+      "display": null
+    },
+    {
+      "code": "S15",
+      "display": null
+    },
+    {
+      "code": "S16",
+      "display": null
+    },
+    {
+      "code": "S17",
+      "display": null
+    },
+    {
+      "code": "S18",
+      "display": null
+    },
+    {
+      "code": "S19",
+      "display": null
+    },
+    {
+      "code": "S20",
+      "display": null
+    },
+    {
+      "code": "S21",
+      "display": null
+    },
+    {
+      "code": "S22",
+      "display": null
+    },
+    {
+      "code": "S23",
+      "display": null
+    },
+    {
+      "code": "S24",
+      "display": null
+    },
+    {
+      "code": "S26",
+      "display": null
+    },
+    {
+      "code": "S27",
+      "display": null
+    },
+    {
+      "code": "S25",
+      "display": "SQM/SQR - Schedule Query Message and Response"
+    },
+    {
+      "code": "I01",
+      "display": "Request for Insurance Information"
+    },
+    {
+      "code": "I02",
+      "display": "Request/Receipt of Patient Selection Display List"
+    },
+    {
+      "code": "I03",
+      "display": "Request/Receipt of Patient Selection List"
+    },
+    {
+      "code": "I04",
+      "display": "request for patient demographic data"
+    },
+    {
+      "code": "I05",
+      "display": "RQC/RCI - Request for Patient Clinical Information"
+    },
+    {
+      "code": "I06",
+      "display": "RQC/RCL - Request/Receipt of Clinical Data Listing"
+    },
+    {
+      "code": "I07",
+      "display": "Unsolicited Insurance Information"
+    },
+    {
+      "code": "I08",
+      "display": "Request for Treatment Authorization Information"
+    },
+    {
+      "code": "I09",
+      "display": "Request for Modification to an Authorization"
+    },
+    {
+      "code": "I10",
+      "display": "Request for Resubmission of an Authorization"
+    },
+    {
+      "code": "I11",
+      "display": "Request for Cancellation of an Authorization"
+    },
+    {
+      "code": "I21",
+      "display": "Collaborative Care Message"
+    },
+    {
+      "code": "I16",
+      "display": "Collaborative Care Referral"
+    },
+    {
+      "code": "I17",
+      "display": "Modify Collaborative Care Referral"
+    },
+    {
+      "code": "I18",
+      "display": "Cancel Collaborative Care Referral"
+    },
+    {
+      "code": "I20",
+      "display": "Asynchronous Collaborative Care Update"
+    },
+    {
+      "code": "I19",
+      "display": "Collaborative Care Query/Collaborative Care Query Update"
+    },
+    {
+      "code": "I22",
+      "display": "Collaborative Care Fetch / Collaborative Care Information"
+    },
+    {
+      "code": "PC6",
+      "display": "Patient Goal Message"
+    },
+    {
+      "code": "PC7",
+      "display": "Patient Goal Message"
+    },
+    {
+      "code": "PC8",
+      "display": "Patient Goal Message"
+    },
+    {
+      "code": "PC1",
+      "display": "Patient Problem Message"
+    },
+    {
+      "code": "PC2",
+      "display": "Patient Problem Message"
+    },
+    {
+      "code": "PC3",
+      "display": "Patient Problem Message"
+    },
+    {
+      "code": "PCB",
+      "display": "Patient Pathway Message (Problem-Oriented)"
+    },
+    {
+      "code": "PCC",
+      "display": "Patient Pathway Message (Problem-Oriented)"
+    },
+    {
+      "code": "PCD",
+      "display": "Patient Pathway Message (Problem-Oriented)"
+    },
+    {
+      "code": "PCG",
+      "display": "Patient Pathway Message (Goal-Oriented)"
+    },
+    {
+      "code": "PCH",
+      "display": "Patient Pathway Message (Goal-Oriented)"
+    },
+    {
+      "code": "PCJ",
+      "display": "Patient Pathway Message (Goal-Oriented)"
+    },
+    {
+      "code": "PC4",
+      "display": "QRY - Patient Care Problem Query"
+    },
+    {
+      "code": "PC5",
+      "display": "PRR - Patient Problem Response"
+    },
+    {
+      "code": "PC9",
+      "display": "QRY - Patient Goal Query"
+    },
+    {
+      "code": "PCA",
+      "display": "PPV - Patient Goal Response"
+    },
+    {
+      "code": "PCE",
+      "display": "QRY - Patient Pathway (Problem-Oriented) Query"
+    },
+    {
+      "code": "PCF",
+      "display": "PTR - Patient Pathway (Problem-Oriented) Response"
+    },
+    {
+      "code": "PCK",
+      "display": "QRY - Patient Pathway (Goal-Oriented) Query"
+    },
+    {
+      "code": "PCL",
+      "display": "PPT - Patient Pathway (Goal-Oriented) Response"
+    },
+    {
+      "code": "U01",
+      "display": "Automated Equipment Status Update"
+    },
+    {
+      "code": "U02",
+      "display": "Automated Equipment Status Request"
+    },
+    {
+      "code": "U03",
+      "display": "Specimen Status Update"
+    },
+    {
+      "code": "U04",
+      "display": "Specimen Status Request"
+    },
+    {
+      "code": "U05",
+      "display": "Automated Equipment Inventory Update"
+    },
+    {
+      "code": "U06",
+      "display": "Automated Equipment Inventory Request"
+    },
+    {
+      "code": "U07",
+      "display": "Automated Equipment Command"
+    },
+    {
+      "code": "U08",
+      "display": "Automated Equipment Response"
+    },
+    {
+      "code": "U09",
+      "display": "Automated Equipment Notification"
+    },
+    {
+      "code": "U10",
+      "display": "Automated Equipment Test Code Settings Update"
+    },
+    {
+      "code": "U11",
+      "display": "Automated Equipment Test Code Settings Request"
+    },
+    {
+      "code": "U12",
+      "display": "Automated Equipment Log/Service Update"
+    },
+    {
+      "code": "U13",
+      "display": "Automated Equipment Log/Service Request"
+    },
+    {
+      "code": "U14",
+      "display": "Automated Equipment Inventory Request"
+    },
+    {
+      "code": "N01",
+      "display": "NMQ - Application Management Query Message"
+    },
+    {
+      "code": "N02",
+      "display": "Application Management Data Message"
+    },
+    {
+      "code": "B01",
+      "display": "Add Personnel Record"
+    },
+    {
+      "code": "B02",
+      "display": "Update Personnel Record"
+    },
+    {
+      "code": "B03",
+      "display": "Delete Personnel Record"
+    },
+    {
+      "code": "B04",
+      "display": "Activate Practicing Person"
+    },
+    {
+      "code": "B05",
+      "display": "Deactivate Practicing Person"
+    },
+    {
+      "code": "B06",
+      "display": "Terminate Practicing Person"
+    },
+    {
+      "code": "Q25",
+      "display": "Query by Parameter"
+    },
+    {
+      "code": "K25",
+      "display": "Segment Pattern Response"
+    },
+    {
+      "code": "B07",
+      "display": "Grant Certificate/Permission"
+    },
+    {
+      "code": "B08",
+      "display": "Revoke Certificate/Permission"
+    },
+    {
+      "code": "E01",
+      "display": "Submit HealthCare Services Invoice"
+    },
+    {
+      "code": "E02",
+      "display": "Cancel HealthCare Services Invoice"
+    },
+    {
+      "code": "E03",
+      "display": "Query HealthCare Services Invoice Status"
+    },
+    {
+      "code": "E04",
+      "display": "Re-Assess HealthCare Services Invoice Request"
+    },
+    {
+      "code": "E10",
+      "display": "Edit/Adjudication Results"
+    },
+    {
+      "code": "E12",
+      "display": "Request Additional Information"
+    },
+    {
+      "code": "E13",
+      "display": "Additional Information Response"
+    },
+    {
+      "code": "E15",
+      "display": "Payment/Remittance Advice"
+    },
+    {
+      "code": "E20",
+      "display": "Submit Authorization Request"
+    },
+    {
+      "code": "E21",
+      "display": "Cancel Authorization Request"
+    },
+    {
+      "code": "E22",
+      "display": "Query Authorization Request Status"
+    },
+    {
+      "code": "E24",
+      "display": "Authorization Response"
+    },
+    {
+      "code": "E30",
+      "display": "Submit Health Document related to Authorization Request"
+    },
+    {
+      "code": "E31",
+      "display": "Cancel Health Document related to Authorization Request"
+    },
+    {
+      "code": "S28",
+      "display": "Request New Sterilization Lot"
+    },
+    {
+      "code": "S29",
+      "display": "Request Sterilization Lot Deletion"
+    },
+    {
+      "code": "S30",
+      "display": "Request Item"
+    },
+    {
+      "code": "S31",
+      "display": "Request Anti-Microbial Device Data"
+    },
+    {
+      "code": "S32",
+      "display": "Request Anti-Microbial Device Cycle Data"
+    },
+    {
+      "code": "S33",
+      "display": "Notification of Sterilization Configuration"
+    },
+    {
+      "code": "S34",
+      "display": "Notification of New Sterilization Lot"
+    },
+    {
+      "code": "S35",
+      "display": "Notification of Sterilization Lot Deletion"
+    },
+    {
+      "code": "S36",
+      "display": "Notification of Anti-Microbial Device Data"
+    },
+    {
+      "code": "S37",
+      "display": "Notification of Anti-Microbial Device Cycle Data"
+    }
+  ]
+}

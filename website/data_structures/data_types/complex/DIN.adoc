@@ -1,0 +1,18 @@
+= (DIN) Data Type - date and institution name
+:v291_section: 2A.2.16
+:v2type: 'Data Type'
+:code: DIN
+:name: date and institution name
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Specifies the date and institution information where a staff member became active or inactive.
+
+[NOTE]
+Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5.
+
+include::DIN-components/DIN-1.adoc[]
+
+include::DIN-components/DIN-2.adoc[]
+

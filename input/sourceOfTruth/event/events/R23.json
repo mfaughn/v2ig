@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/R23",
+  "id": "R23",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "R23",
+        "path": "R23",
+        "short": "R23",
+        "definition": "Event R23: Unsolicited Specimen Container Oriented Observation Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 R23 Message Definition",
+  "name": "R23",
+  "type": "R23",
+  "date": "2024-07-24T19:13:28Z"
+}

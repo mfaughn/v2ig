@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--DEO_O45",
+  "id": "--DEO_O45",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--DEO_O45",
+        "path": "--DEO_O45",
+        "short": "--DEO_O45",
+        "definition": "^^DEO_O45 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--DEO_O45.structure",
+        "path": "--DEO_O45.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "DEO_O45"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^DEO_O45 Message Definition",
+  "name": "^^DEO_O45",
+  "type": "--DEO_O45",
+  "date": "2024-07-24T19:13:25Z"
+}

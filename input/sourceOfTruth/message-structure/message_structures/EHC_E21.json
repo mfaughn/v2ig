@@ -1,0 +1,230 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/EHC_E21",
+  "id": "EHC_E21",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EHC_E21",
+        "path": "EHC_E21",
+        "short": "EHC_E21",
+        "definition": "EHC_E21 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "EHC_E21.1-MSH",
+          "path": "EHC_E21.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "EHC_E21.2-SFT",
+          "path": "EHC_E21.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "EHC_E21.3-UAC",
+          "path": "EHC_E21.3-UAC",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "EHC_E21.4-AUTHORIZATION_REQUEST",
+          "path": "EHC_E21.4-AUTHORIZATION_REQUEST",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1",
+              "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1",
+              "min": 0,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1.1-IVC",
+                  "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1.1-IVC",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/IVC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO",
+                  "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO",
+                  "min": 0,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "BackboneElement"
+                    }
+                  ]
+                },
+                [
+                  [
+                    {
+                      "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.1-PSL",
+                      "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.1-PSL",
+                      "min": 0,
+                      "max": "1",
+                      "definition": "1",
+                      "short": "1",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/PSL"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.2-NTE",
+                      "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.2-NTE",
+                      "min": 1,
+                      "max": "*",
+                      "definition": "*",
+                      "short": "*",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "id": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.3-AUT",
+                      "path": "EHC_E21.4-AUTHORIZATION_REQUEST.1.2-PSL_ITEM_INFO.3-AUT",
+                      "min": 1,
+                      "max": "1",
+                      "definition": "1",
+                      "short": "1",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/AUT"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "title": "HL7 v2 EHC_E21 Segment Definition",
+  "name": "EHC_E21",
+  "type": "EHC_E21",
+  "date": "2024-07-24T19:13:19Z"
+}

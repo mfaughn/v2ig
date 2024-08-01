@@ -1,0 +1,5 @@
+==== Placer order group:
+[v291_section="4.2.2.6"]
+
+A list of associated orders coming from a single location regarding a single patient.
+

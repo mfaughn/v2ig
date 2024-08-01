@@ -1,0 +1,94 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/VR",
+  "id": "VR",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "VR",
+  "title": "HL7 v2 VR Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "VR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "VR",
+        "path": "VR",
+        "short": "value range",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b4d78a0>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "VR.1",
+        "path": "VR.1",
+        "short": "First Data Code Value",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "6"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "VR.2",
+        "path": "VR.2",
+        "short": "Last Data Code Value",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "6"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* Replaces the CM data type used in 5.10.5.3.11 QRD-11 as of v 2.5.\n\nThe VR differs from the Numeric Range (NR) data type only in that the values are not restricted to numbers. If the range is not numeric, the set must be orderable in some intuitive way such as alpha or the order must be defined in the field where the data type is used.\n\nExample 1:\n\n|+^+++|\n\nExample 2: Colors of the rainbow\n\n|violet^red|"
+}

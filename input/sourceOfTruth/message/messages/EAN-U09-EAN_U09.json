@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/EAN-U09-EAN_U09",
+  "id": "EAN-U09-EAN_U09",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EAN-U09-EAN_U09",
+        "path": "EAN-U09-EAN_U09",
+        "short": "EAN-U09-EAN_U09",
+        "definition": "EAN^U09^EAN_U09 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "EAN-U09-EAN_U09.structure",
+        "path": "EAN-U09-EAN_U09.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "EAN_U09"
+      }
+    ]
+  },
+  "title": "HL7 v2 EAN^U09^EAN_U09 Message Definition",
+  "name": "EAN^U09^EAN_U09",
+  "type": "EAN-U09-EAN_U09",
+  "date": "2024-07-24T19:13:27Z"
+}

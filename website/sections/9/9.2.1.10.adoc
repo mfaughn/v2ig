@@ -1,0 +1,5 @@
+==== Restricted:
+[v291_section="9.2.1.10"]
+
+A confidentiality status in which access to a document has institutionally assigned limitations.
+

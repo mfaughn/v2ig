@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--QSB_Q16",
+  "id": "--QSB_Q16",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--QSB_Q16",
+        "path": "--QSB_Q16",
+        "short": "--QSB_Q16",
+        "definition": "^^QSB_Q16 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--QSB_Q16.structure",
+        "path": "--QSB_Q16.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "QSB_Q16-B"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^QSB_Q16 Message Definition",
+  "name": "^^QSB_Q16",
+  "type": "--QSB_Q16",
+  "date": "2024-07-24T19:13:25Z"
+}

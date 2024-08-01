@@ -1,0 +1,5 @@
+==== Decapping:
+[v291_section="13.1.3.22"]
+
+The removal of a closure from a specimen container.
+

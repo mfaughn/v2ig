@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SQM-S25-",
+  "id": "SQM-S25-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SQM-S25-",
+        "path": "SQM-S25-",
+        "short": "SQM-S25-",
+        "definition": "SQM^S25^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 SQM^S25^ Message Definition",
+  "name": "SQM^S25^",
+  "type": "SQM-S25-",
+  "date": "2024-07-24T19:13:27Z"
+}

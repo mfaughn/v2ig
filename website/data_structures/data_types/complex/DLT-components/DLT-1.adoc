@@ -1,0 +1,5 @@
+== DLT.1 - Normal Range (NR)
+
+[datatype-definition]
+Specifies the normal interval of the reference data.
+

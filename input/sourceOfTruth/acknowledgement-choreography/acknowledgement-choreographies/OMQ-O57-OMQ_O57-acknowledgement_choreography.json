@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OMQ-O57-OMQ_O57-acknowledgement_choreography",
+  "id": "OMQ-O57-OMQ_O57-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OMQ-O57-OMQ_O57-acknowledgement_choreography",
+        "path": "OMQ-O57-OMQ_O57-acknowledgement_choreography",
+        "short": "OMQ-O57-OMQ_O57-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for OMQ^O57^OMQ_O57",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "OMQ^O57^OMQ_O57",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "OMQ-O57-OMQ_O57-acknowledgement_choreography"
+}

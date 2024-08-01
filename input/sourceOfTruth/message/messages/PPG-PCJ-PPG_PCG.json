@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PPG-PCJ-PPG_PCG",
+  "id": "PPG-PCJ-PPG_PCG",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PPG-PCJ-PPG_PCG",
+        "path": "PPG-PCJ-PPG_PCG",
+        "short": "PPG-PCJ-PPG_PCG",
+        "definition": "PPG^PCJ^PPG_PCG Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PPG-PCJ-PPG_PCG.structure",
+        "path": "PPG-PCJ-PPG_PCG.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "PPG_PCG"
+      }
+    ]
+  },
+  "title": "HL7 v2 PPG^PCJ^PPG_PCG Message Definition",
+  "name": "PPG^PCJ^PPG_PCG",
+  "type": "PPG-PCJ-PPG_PCG",
+  "date": "2024-07-24T19:13:27Z"
+}

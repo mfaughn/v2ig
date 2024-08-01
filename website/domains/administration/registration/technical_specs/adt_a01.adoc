@@ -1,0 +1,5 @@
+= ADT_A01
+
+== Message - A01 Admit/Visit Notification
+
+FIXME

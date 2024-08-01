@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--RSP_E22",
+  "id": "--RSP_E22",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--RSP_E22",
+        "path": "--RSP_E22",
+        "short": "--RSP_E22",
+        "definition": "^^RSP_E22 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--RSP_E22.structure",
+        "path": "--RSP_E22.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RSP_E22"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^RSP_E22 Message Definition",
+  "name": "^^RSP_E22",
+  "type": "--RSP_E22",
+  "date": "2024-07-24T19:13:26Z"
+}

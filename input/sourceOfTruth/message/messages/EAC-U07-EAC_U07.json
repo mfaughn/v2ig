@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/EAC-U07-EAC_U07",
+  "id": "EAC-U07-EAC_U07",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EAC-U07-EAC_U07",
+        "path": "EAC-U07-EAC_U07",
+        "short": "EAC-U07-EAC_U07",
+        "definition": "EAC^U07^EAC_U07 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "EAC-U07-EAC_U07.structure",
+        "path": "EAC-U07-EAC_U07.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "EAC_U07"
+      }
+    ]
+  },
+  "title": "HL7 v2 EAC^U07^EAC_U07 Message Definition",
+  "name": "EAC^U07^EAC_U07",
+  "type": "EAC-U07-EAC_U07",
+  "date": "2024-07-24T19:13:27Z"
+}

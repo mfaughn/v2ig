@@ -1,0 +1,5 @@
+== MESSAGE SEGMENTS
+[v291_section="15.4"]
+
+The following segments are defined for the Personnel Management messages.
+

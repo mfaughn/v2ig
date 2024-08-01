@@ -1,0 +1,23 @@
+= (EI) Data Type - entity identifier
+:v291_section: 2A.2.25
+:v2type: 'Data Type'
+:code: EI
+:name: entity identifier
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+The entity identifier defines a given entity within a specified series of identifiers.
+
+The EI is appropriate for, but not limited to, machine or software generated identifiers. The generated identifier goes in the first component. The remaining components, 2 through 4, are known as the assigning authority; they identify the machine/system responsible for generating the identifier in component 1.
+
+The specified series, the assigning authority, is defined by components 2 through 4. The assigning authority is of the hierarchic designator (HD) data type, but it is defined as three separate components in the EI data type, rather than as a single component as would normally be the case. This is in order to maintain backward compatibility with the EI’s use as a component in several existing data fields. Otherwise, the components 2 through 4 are as defined in Section _2A.2.33_, "_HD - hierarchic designator_". Hierarchic designators (HD) are unique across a given HL7 implementation.
+
+include::EI-components/EI-1.adoc[]
+
+include::EI-components/EI-2.adoc[]
+
+include::EI-components/EI-3.adoc[]
+
+include::EI-components/EI-4.adoc[]
+

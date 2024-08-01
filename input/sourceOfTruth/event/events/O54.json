@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O54",
+  "id": "O54",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O54",
+        "path": "O54",
+        "short": "O54",
+        "definition": "Event O54: Laboratory order response message to a multiple order related to single specimen OML - Patient Segments Optional",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O54 Message Definition",
+  "name": "O54",
+  "type": "O54",
+  "date": "2024-07-24T19:13:28Z"
+}

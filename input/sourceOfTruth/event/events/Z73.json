@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Z73",
+  "id": "Z73",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Z73",
+        "path": "Z73",
+        "short": "Z73",
+        "definition": "Event Z73: Query Example: Information about Phone Calls",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Z73 Message Definition",
+  "name": "Z73",
+  "type": "Z73",
+  "date": "2024-07-24T19:13:28Z"
+}

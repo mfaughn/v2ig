@@ -1,0 +1,11 @@
+=Financial
+
+== Introduction
+
+FIXME
+
+== Financial Subdomains
+
+xref:claims_and_reimbursements/claims_and_reimbursements.adoc[Claims And Reimbursements]
+
+xref:financial_management/financial_management.adoc[Financial Management]

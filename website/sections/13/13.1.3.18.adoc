@@ -1,0 +1,5 @@
+==== Closed-tube sampling:
+[v291_section="13.1.3.18"]
+
+See Closed-container sampling.
+

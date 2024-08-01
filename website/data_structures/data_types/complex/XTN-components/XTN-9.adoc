@@ -1,0 +1,8 @@
+== XTN.9 - Any Text (ST)
+
+[datatype-definition]
+Contains comments with respect to the telephone number.
+
+[example]
+|\^^\^^\^^\^^Do not use after 5PM|
+

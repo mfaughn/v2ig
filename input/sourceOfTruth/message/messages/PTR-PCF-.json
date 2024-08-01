@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PTR-PCF-",
+  "id": "PTR-PCF-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PTR-PCF-",
+        "path": "PTR-PCF-",
+        "short": "PTR-PCF-",
+        "definition": "PTR^PCF^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PTR^PCF^ Message Definition",
+  "name": "PTR^PCF^",
+  "type": "PTR-PCF-",
+  "date": "2024-07-24T19:13:27Z"
+}

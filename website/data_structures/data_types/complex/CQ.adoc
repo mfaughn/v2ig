@@ -1,0 +1,22 @@
+= (CQ) Data Type - composite quantity with units
+:v291_section: 2A.2.11
+:v2type: 'Data Type'
+:code: CQ
+:name: composite quantity with units
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[NOTE]
+CQ cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.
+
+[example]
+s:
+
+|123.7^kg| kilograms is an ISO unit
+[er7]
+|150^lb&&ANSI+| weight in pounds is a customary US unit defined within ANSI+.
+
+include::CQ-components/CQ-1.adoc[]
+
+include::CQ-components/CQ-2.adoc[]
+

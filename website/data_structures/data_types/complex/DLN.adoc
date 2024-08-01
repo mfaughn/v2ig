@@ -1,0 +1,17 @@
+= (DLN) Data Type - driver’s license number
+:v291_section: 2A.2.18
+:v2type: 'Data Type'
+:code: DLN
+:name: driver’s license number
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This field contains the driver’s license information. For state or province refer to official postal codes for that country; for country refer to ISO 3166 for codes.
+
+include::DLN-components/DLN-1.adoc[]
+
+include::DLN-components/DLN-2.adoc[]
+
+include::DLN-components/DLN-3.adoc[]
+

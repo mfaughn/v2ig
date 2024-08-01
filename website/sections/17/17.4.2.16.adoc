@@ -1,0 +1,5 @@
+==== Stocked Items
+[v291_section="17.4.2.16"]
+
+Supply items that are routinely ordered and issued at a specific supply location.
+

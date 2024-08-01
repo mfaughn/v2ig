@@ -1,0 +1,5 @@
+=== WITHDRAWN (LA2 - location with address variation 2)
+[v291_section="2A.2.39"]
+
+*Attention: _The LA2 data type was retained for backward compatibility only as of v 2.5 and the detail was withdrawn and removed from the standard as of v 2.8._*
+

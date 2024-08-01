@@ -1,0 +1,5 @@
+== SPD.1 - Specialty Name (ST)
+
+[datatype-definition]
+Identifies the provider’s specialty.
+

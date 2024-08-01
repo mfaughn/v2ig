@@ -1,0 +1,8 @@
+==== Acknowledgment Choreography
+[v291_section="2.12.1.0"]
+
+[ack_chor-table]
+
+[NOTE]
+In general, there is no purpose for a receiver to acknowledge an Immediate Acknowledgment message while at times it is appropriate to acknowledge an Application Acknowledgment.  Site specific profiles MAY require this based on the use case.
+

@@ -1,0 +1,8 @@
+==== Laboratory automation system (LAS):
+[v291_section="13.1.3.31"]
+
+A system of information and hardware technology that allows the operation of the clinical laboratory process without significant operator intervention;
+
+[NOTE]
+Typical functionality includes information system control of the instruments through direct LAS interfacing, including any technology that manipulates the specimen (i.e., centrifuge); transportation of the specimen; result evaluation, repeat testing, reflex testing; and quality assessment and results reporting.
+

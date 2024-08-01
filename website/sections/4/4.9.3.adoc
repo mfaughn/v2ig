@@ -1,0 +1,18 @@
+=== Tube feeding
+[v291_section="4.9.3"]
+
+This order specifies Similac with MCT oil and polycose additives.
+
+MSH|...<cr>
+
+PID|...<cr>
+
+[er7]
+ORC|NW|1232^NURS|||||60^Q3H^^200608021700||200608021200|333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|...<cr>
+[er7]
+ODS|D||010^SIMILAC^99DO1|...<cr>
+[er7]
+ODS|D||011^MCT^99DO1|...<cr>
+[er7]
+ODS|D||012^POLYCOSE^99DO1|...<cr>
+

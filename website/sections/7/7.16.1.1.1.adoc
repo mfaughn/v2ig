@@ -1,0 +1,5 @@
+===== Specimen Shipper
+[v291_section="7.16.1.1.1"]
+
+The Specimen Shipper actor is an application capable of sending specimen shipments and transmitting the specimen shipment manifest message.
+

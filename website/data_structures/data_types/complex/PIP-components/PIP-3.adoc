@@ -1,0 +1,5 @@
+== PIP.3 - Expiration Date (DT)
+
+[datatype-definition]
+Specifies the date the institutional privilege is/was no longer valid.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O36",
+  "id": "O36",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O36",
+        "path": "O36",
+        "short": "O36",
+        "definition": "Event O36: Laboratory order response message to a single container of a specimen OML - Patient Segments Required",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O36 Message Definition",
+  "name": "O36",
+  "type": "O36",
+  "date": "2024-07-24T19:13:28Z"
+}

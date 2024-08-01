@@ -1,0 +1,5 @@
+== PL.9 - Location Description (ST)
+
+[datatype-definition]
+This component describes the location in free text.
+

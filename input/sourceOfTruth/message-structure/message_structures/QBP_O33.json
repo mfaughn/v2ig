@@ -1,0 +1,137 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/QBP_O33",
+  "id": "QBP_O33",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "QBP_O33",
+        "path": "QBP_O33",
+        "short": "QBP_O33",
+        "definition": "QBP_O33 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "QBP_O33.1-MSH",
+          "path": "QBP_O33.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "QBP_O33.2-SFT",
+          "path": "QBP_O33.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "QBP_O33.3-UAC",
+          "path": "QBP_O33.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "QBP_O33.4-QPD",
+          "path": "QBP_O33.4-QPD",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/QPD"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "QBP_O33.5-RCP",
+          "path": "QBP_O33.5-RCP",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/RCP"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "title": "HL7 v2 QBP_O33 Segment Definition",
+  "name": "QBP_O33",
+  "type": "QBP_O33",
+  "date": "2024-07-24T19:13:17Z"
+}

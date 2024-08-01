@@ -1,0 +1,98 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SRT",
+  "id": "SRT",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "SRT",
+  "title": "HL7 v2 SRT Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "SRT",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SRT",
+        "path": "SRT",
+        "short": "sort order",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b7d3180>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SRT.1",
+        "path": "SRT.1",
+        "short": "Sort-by Field",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 6
+              },
+              {
+                "url": "max",
+                "valueInteger": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SRT.2",
+        "path": "SRT.2",
+        "short": "Sequencing",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0397"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Example: In a tabular response query, where the return data is known by column name, the SRT might look like:\n\n|LastName^A~FirstName^A|\n\nExample: In a segment response query, where the return data is known by segment and offset, the SRT field would use segment field name notation:\n\n|PID.3.1^A~PID.3.2^A|"
+}

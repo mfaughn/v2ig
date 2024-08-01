@@ -1,0 +1,5 @@
+== QUERY/RESPONSE MESSAGE SEGMENTS
+[v291_section="5.5"]
+
+This section includes all message segments, except for the general message segments, used for the query/response pairs recommended for use in v 2.4 and later.
+

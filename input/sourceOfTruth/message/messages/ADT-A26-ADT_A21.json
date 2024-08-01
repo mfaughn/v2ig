@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ADT-A26-ADT_A21",
+  "id": "ADT-A26-ADT_A21",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ADT-A26-ADT_A21",
+        "path": "ADT-A26-ADT_A21",
+        "short": "ADT-A26-ADT_A21",
+        "definition": "ADT^A26^ADT_A21 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ADT-A26-ADT_A21.structure",
+        "path": "ADT-A26-ADT_A21.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ADT_A21-E"
+      }
+    ]
+  },
+  "title": "HL7 v2 ADT^A26^ADT_A21 Message Definition",
+  "name": "ADT^A26^ADT_A21",
+  "type": "ADT-A26-ADT_A21",
+  "date": "2024-07-24T19:13:26Z"
+}

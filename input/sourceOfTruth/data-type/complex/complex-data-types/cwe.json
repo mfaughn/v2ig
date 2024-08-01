@@ -1,0 +1,726 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/CWE",
+  "id": "CWE",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "CWE",
+  "title": "HL7 v2 CWE Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CWE",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CWE",
+        "path": "CWE",
+        "short": "coded with exceptions",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011bc97090>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CWE.1",
+        "path": "CWE.1",
+        "short": "Identifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "20"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.2",
+        "path": "CWE.2",
+        "short": "Text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.3",
+        "path": "CWE.3",
+        "short": "Name of Coding System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0396"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.4",
+        "path": "CWE.4",
+        "short": "Alternate Identifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "20"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.5",
+        "path": "CWE.5",
+        "short": "Alternate Text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.6",
+        "path": "CWE.6",
+        "short": "Name of Alternate Coding System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0396"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.7",
+        "path": "CWE.7",
+        "short": "Coding System Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "10"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.8",
+        "path": "CWE.8",
+        "short": "Alternate Coding System Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "10"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.9",
+        "path": "CWE.9",
+        "short": "Original Text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.10",
+        "path": "CWE.10",
+        "short": "Second Alternate Identifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "20"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.11",
+        "path": "CWE.11",
+        "short": "Second Alternate Text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.12",
+        "path": "CWE.12",
+        "short": "Name of Second Alternate Coding System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0396"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.13",
+        "path": "CWE.13",
+        "short": "Second Alternate Coding System Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "10"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.14",
+        "path": "CWE.14",
+        "short": "Coding System OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.15",
+        "path": "CWE.15",
+        "short": "Value Set OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.16",
+        "path": "CWE.16",
+        "short": "Value Set Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.17",
+        "path": "CWE.17",
+        "short": "Alternate Coding System OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.18",
+        "path": "CWE.18",
+        "short": "Alternate Value Set OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.19",
+        "path": "CWE.19",
+        "short": "Alternate Value Set Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.20",
+        "path": "CWE.20",
+        "short": "Second Alternate Coding System OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.21",
+        "path": "CWE.21",
+        "short": "Second Alternate Value Set OID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CWE.22",
+        "path": "CWE.22",
+        "short": "Second Alternate Value Set Version ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "As of v2.7 a third tuple, formerly known as triplet, has been added to the CWE data type. Additionally, 3 new components were added to each tuple such that each tuple now has a total of 7 components. The Original Text component applies to the CWE as a whole.\n\n*Note:* The Vocabulary TC is the steward of the CWE data type.\n\nThe presence of two sets of equivalent codes in this data type is semantically different from a repetition of a CWE-type field. With repetition, several distinct codes (with distinct meanings) may be transmitted.\n\n[#CWE_UsageNote .anchor]##*Usage Notes:* The CWE data type should be used for coded fields with one or more of the following characteristics:\n\n• The identifier code (CWE.1) component is optional\n\n• The set of allowable values from which the identifier code is drawn may be extended on a site-specific basis\n\n• An exception identifier code may be encountered; that is, a code that is not defined in the value set (either model or site-extended).\n\nThis is in contrast to the CNE data type, which requires a code from a non-extendable value set be sent in the identifier code component (CNE.1) in all cases (except, of course, if the entire field is empty and defined as optional at the segment level).\n\nThe rules for populating CWE components are governed by the status of the identifier code:\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<table border=\"1\">\n<tr>\n<th>*Identifier Code Status* </th>\n<th>*Identifier Code (CWE.1)* </th>\n<th>*Descriptive Text (CWE.2)* </th>\n<th>*Coding System (CWE.3)*</th>\n</tr>\n<tr>\n<td>Contained in model value set </td>\n<td>Populated </td>\n<td>May be populated </td>\n<td>Must be populated with model coding system, or (not recommended) site-specific coding system that is a superset containing model values.</td>\n</tr>\n<tr>\n<td>Contained in site-specific extensions to model value set </td>\n<td>Populated </td>\n<td>May be populated </td>\n<td>Site-specific coding system.</td>\n</tr>\n<tr>\n<td>Contained in neither model nor extended value sets </td>\n<td>Not populated </td>\n<td>May be populated with the identifier code, free-text description, or a concatenation of the two. Should be human interpretable. </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td>Not supplied; but descriptive text is supplied. </td>\n<td>Not populated </td>\n<td>May be populated with descriptive text. </td>\n<td>Must not be populated.</td>\n</tr>\n</table>\n\n\nAs an example, consider “currency” codes where:\n\n• The model values are defined by the ISO 4217 value set,\n\n• The value set is extended on site to include the code HL7 – “HL7 Drink Ticket”, and\n\n• The data entry screen on the sending system does not enforce any edits for the currency code.\n\nAnd so the value set used on site is:\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<table border=\"1\">\n<tr>\n<th>Identifier Code Status </th>\n<th>Identifier Code </th>\n<th>Descriptive Text</th>\n</tr>\n<tr>\n<td>Model values from ISO 4217 external table </td>\n<td>AED </td>\n<td>United Arab Emirates, Dirhams</td>\n</tr>\n<tr>\n<td> </td>\n<td>AFA </td>\n<td>Afghanistan, Afghanis</td>\n</tr>\n<tr>\n<td> </td>\n<td>ALL </td>\n<td>Albania, Leke</td>\n</tr>\n<tr>\n<td> </td>\n<td>&hellip; </td>\n</tr>\n<tr>\n<td> </td>\n<td>ZAR </td>\n<td>South Africa, Rand</td>\n</tr>\n<tr>\n<td> </td>\n<td>ZMK </td>\n<td>Zambia, Kwacha</td>\n</tr>\n<tr>\n<td> </td>\n<td>ZWD </td>\n<td>Zimbabwe, Zimbabwe Dollars</td>\n</tr>\n<tr>\n<td>Site-specific extension </td>\n<td>HL7 </td>\n<td>HL7 Events, Drink Ticket</td>\n</tr>\n</table>\n\n\nCollectively, this value set must be referred to with a local coding system ID, because “HL7” does not exist in ISO 4217. According to the rules, the site assigns the coding system ID “99CUR” to the value set.\n\nBased on the code and descriptive text entered by the user on the sending system, the CWE would be populated as follows:\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<table border=\"1\">\n<tr>\n<th>*Entered by user* </th>\n<th> </th>\n<th>*Sent in CWE* </th>\n<th> </th>\n</tr>\n<tr>\n<td>*Code* </td>\n<td>*Descriptive Text* </td>\n<td>*Identifier Code (CWE.1)* </td>\n<td>*Descriptive Text (CWE.2)* </td>\n<td>*Coding System (CWE.3)*</td>\n</tr>\n<tr>\n<td>GBP </td>\n<td>Great Britain, Pound </td>\n<td>GBP </td>\n<td>Great Britain, Pound </td>\n<td>ISO4217</td>\n</tr>\n<tr>\n<td> </td>\n<td> </td>\n<td>GBP </td>\n<td>Great Britain, Pound </td>\n<td>99CUR (This option is NOT recommended)</td>\n</tr>\n<tr>\n<td>HL7 </td>\n<td>HL7 Drink Ticket </td>\n<td>HL7 </td>\n<td>HL7 Drink Ticket </td>\n<td>99CUR</td>\n</tr>\n<tr>\n<td>XXX </td>\n<td>&lt;Bogus entry&gt; </td>\n<td>Must not be populated </td>\n<td>XXX </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td> </td>\n<td> </td>\n<td>Must not be populated </td>\n<td>Bogus entry </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td> </td>\n<td> </td>\n<td>Must not be populated </td>\n<td>XXX: Bogus entry </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td> </td>\n<td> </td>\n<td>Must not be populated </td>\n<td>anything &ndash; or nothing. </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td> </td>\n<td>Dollar </td>\n<td>Must not be populated </td>\n<td>Dollar </td>\n<td>Must not be populated.</td>\n</tr>\n<tr>\n<td> </td>\n<td> </td>\n<td>Valued from HL7 Table 0353 (e.g., &ldquo;U&rdquo; for unknown) </td>\n<td>Dollar </td>\n<td>HL70353</td>\n</tr>\n</table>\n\n\nNotes:\n\n{empty}1. Where multiple valid options for sending the entered data exist, each alternative is depicted as a separate row.\n\n{empty}2. _CWE.2 - Descriptive Text_ is never required, and there are no hard and fast rules on what text may be sent in this component. Of course, common sense suggests that if valued, the text should complement the identifier code of _CWE.1_.\n\nIt follows that where _CWE.1_ cannot be valued because the entered code does not exist in the value set, the entered code _may_ be sent in _CWE.2_; with or without additional descriptive text. However, this is not required by HL7.\n\n{empty}3. The example with GBP shows two options for the code set: ISO4217 or 99CUR. While it is now technically possible to send 99CUR on the basis that this code may exist on its own in the extended local code set, HL7 urges that where a code is a member of the standard code set, that code set should be named in _CWE.3_. HL7 intends to mandate this in a future release.\n\n{empty}4. While there are no formal rules regarding the valuation of _CWE.2 - Descriptive Text_, it is expected that any value contained therein be meaningful to a human reader."
+}

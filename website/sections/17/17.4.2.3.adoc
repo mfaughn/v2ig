@@ -1,0 +1,5 @@
+==== Cycle - Steam Sterilization, Gravity Displacement Type
+[v291_section="17.4.2.3"]
+
+Type of sterilization cycle in which incoming steam displaces residual air through a port or drain in or near the bottom of the sterilizing chamber.
+

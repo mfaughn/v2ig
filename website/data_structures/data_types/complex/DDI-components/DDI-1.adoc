@@ -1,0 +1,5 @@
+== DDI.1 - Delay Days (NM)
+
+[datatype-definition]
+The number of days after which the daily deductible begins.
+

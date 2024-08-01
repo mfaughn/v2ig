@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PPT-PCL-",
+  "id": "PPT-PCL-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PPT-PCL-",
+        "path": "PPT-PCL-",
+        "short": "PPT-PCL-",
+        "definition": "PPT^PCL^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PPT^PCL^ Message Definition",
+  "name": "PPT^PCL^",
+  "type": "PPT-PCL-",
+  "date": "2024-07-24T19:13:27Z"
+}

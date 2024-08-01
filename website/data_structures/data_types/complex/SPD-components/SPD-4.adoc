@@ -1,0 +1,5 @@
+== SPD.4 - Date of Certification (DT)
+
+[datatype-definition]
+Specifies when certification occurred.
+

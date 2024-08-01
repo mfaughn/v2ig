@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/V02",
+  "id": "V02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "V02",
+        "path": "V02",
+        "short": "V02",
+        "definition": "Event V02: VXX - Response To Vaccintaion Query Returning Multiple PID Matches",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 V02 Message Definition",
+  "name": "V02",
+  "type": "V02",
+  "date": "2024-07-24T19:13:28Z"
+}

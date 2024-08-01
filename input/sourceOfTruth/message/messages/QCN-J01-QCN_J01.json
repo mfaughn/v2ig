@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/QCN-J01-QCN_J01",
+  "id": "QCN-J01-QCN_J01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "QCN-J01-QCN_J01",
+        "path": "QCN-J01-QCN_J01",
+        "short": "QCN-J01-QCN_J01",
+        "definition": "QCN^J01^QCN_J01 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "QCN-J01-QCN_J01.structure",
+        "path": "QCN-J01-QCN_J01.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "QCN_J01-A"
+      }
+    ]
+  },
+  "title": "HL7 v2 QCN^J01^QCN_J01 Message Definition",
+  "name": "QCN^J01^QCN_J01",
+  "type": "QCN-J01-QCN_J01",
+  "date": "2024-07-24T19:13:27Z"
+}

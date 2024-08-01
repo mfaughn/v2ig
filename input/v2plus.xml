@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="hl7.other.uv.v2plus"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/> 
+  </extension> 
+  <url value="http://somewhere.org/fhir/uv/v2plus/ImplementationGuide/hl7.other.uv.v2plus"/>
+  <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
+  <version value="0.0.0"/>
+  <name value="V2Plus"/>
+  <title value="HL7 v2+ Specification"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <telecom>
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/v2mgmt"/>
+    </telecom>
+  </contact>
+  <description value="HL7 v2+ Specification"/>
+  <packageId value="hl7.v2plus"/>
+  <license value="CC0-1.0"/>
+  <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
+  <fhirVersion value="5.0.0"/>
+  <definition>
+    <page>
+      <name value="index.html"/>
+      <!-- <title value="v2+ Home Page"/> -->
+      <generation value="html"/>
+      <page>
+        <name value="data-types.html"/>
+        <title value="V2+ Data Types"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/control-manifests"/>
+    </parameter>
+    
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/data-type"/>
+    </parameter>
+    
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/data-type/complex"/>
+    </parameter>
+    
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/data-type/complex/complex-data-types"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/data-type/primitive"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/data-type/primitive/primitive-data-types"/>
+    </parameter>
+    
+    <!-- <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/message"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/message/messages"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/message-structure"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/message-structure/message-structures"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/segment"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/segment/segments"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/acknowledgement-choreography"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/acknowledgement-choreography/acknowledgement-choreographies"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/event"/>
+    </parameter>
+
+    <parameter>
+      <code>
+      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+      <code value="path-resource"/>
+      </code>
+      <value value="input/sourceOfTruth/event/events"/>
+    </parameter> -->
+    
+  </definition>
+</ImplementationGuide>

@@ -1,0 +1,20 @@
+= (DDI) Data Type - daily deductible information
+:v291_section: 2A.2.15
+:v2type: 'Data Type'
+:code: DDI
+:name: daily deductible information
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies the detail information for the daily deductible.
+
+[NOTE]
+Replaces the CM data type used in section 6.5.7.30 IN2-30, as of v 2.5.
+
+include::DDI-components/DDI-1.adoc[]
+
+include::DDI-components/DDI-2.adoc[]
+
+include::DDI-components/DDI-3.adoc[]
+

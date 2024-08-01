@@ -1,0 +1,5 @@
+== GENERAL MASTER FILE SEGMENTS
+[v291_section="8.5"]
+
+The following segments are defined for the master files messages.
+

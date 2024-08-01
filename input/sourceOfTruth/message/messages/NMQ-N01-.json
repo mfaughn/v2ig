@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/NMQ-N01-",
+  "id": "NMQ-N01-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NMQ-N01-",
+        "path": "NMQ-N01-",
+        "short": "NMQ-N01-",
+        "definition": "NMQ^N01^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 NMQ^N01^ Message Definition",
+  "name": "NMQ^N01^",
+  "type": "NMQ-N01-",
+  "date": "2024-07-24T19:13:27Z"
+}

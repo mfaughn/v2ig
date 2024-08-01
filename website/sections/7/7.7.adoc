@@ -1,0 +1,5 @@
+== Clinical Trials - Trigger Events And Message Definitions
+[v291_section="7.7"]
+
+The event type will be carried in the message header segment.
+

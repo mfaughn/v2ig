@@ -1,0 +1,43 @@
+=== Complex order
+[v291_section="4.9.2"]
+
+Basic diet: high protein, low fat. Supplements are ice cream at service period 4 and a half ham sandwich at service period 6. There are also tray orders for early service period 1, late service period 3, and guest tray at dinner.
+
+MSH|...<cr>
+
+PID|...<cr>
+
+[er7]
+ORC|NW|1234^NURS|||||^^^200608021700||200608021200|333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|...<cr>
+
+[er7]
+ODS|D||011^HIPRO100^99FD1|...<cr>
+
+[er7]
+ODS|D||123^LOFAT20^99FD1|...<cr>
+
+[er7]
+ODS|S|4|119^ICE CREAM^99FD8|...<cr>
+
+[er7]
+ODS|S|6|320^1/2 HAM SANDWICH^99FD8|...<cr>
+
+[er7]
+ORC|NW|1244^NURS|||||^^^200608031700||200608031200|333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|...<cr>
+
+[er7]
+ODT|EARLY^Early tray^HL70160|1^^99CBD|...<cr>
+
+[er7]
+ORC|NW|1245^NURS|||||^^^200608031700||200608031200|333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|...<cr>
+
+[er7]
+ODT|LATE^Late tray^HL70160|3^^99CBD|...<cr>
+
+[er7]
+ORC|NW|1246^NURS|||||^^^200608031700||200608031200|333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|...<cr>
+
+[er7]
+ODT|GUEST^Guest tray^HL70160|5^DINNER^99CBD|...<cr>
+
+

@@ -1,0 +1,5 @@
+== OG.3 - Sequence (NM)
+
+[datatype-definition]
+The Sequence component indicates the sequence within the group as defined in OG-2.
+

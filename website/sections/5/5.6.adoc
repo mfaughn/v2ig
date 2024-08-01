@@ -1,0 +1,5 @@
+== AUXILIARY QUERY PROTOCOLS
+[v291_section="5.6"]
+
+This section discusses properties of queries that can be described as global properties. These properties enable the Client and Server to deal with timing and sizing issues and to handle exceptions.
+

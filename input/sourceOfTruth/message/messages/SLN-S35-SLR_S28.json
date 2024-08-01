@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SLN-S35-SLR_S28",
+  "id": "SLN-S35-SLR_S28",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SLN-S35-SLR_S28",
+        "path": "SLN-S35-SLR_S28",
+        "short": "SLN-S35-SLR_S28",
+        "definition": "SLN^S35^SLR_S28 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SLN-S35-SLR_S28.structure",
+        "path": "SLN-S35-SLR_S28.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "SLR_S28-E"
+      }
+    ]
+  },
+  "title": "HL7 v2 SLN^S35^SLR_S28 Message Definition",
+  "name": "SLN^S35^SLR_S28",
+  "type": "SLN-S35-SLR_S28",
+  "date": "2024-07-24T19:13:27Z"
+}

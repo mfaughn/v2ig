@@ -1,0 +1,22 @@
+= (RCD) Data Type - row column definition
+:v291_section: 2A.2.62
+:v2type: 'Data Type'
+:code: RCD
+:name: row column definition
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This specifies the format of a column in terms of a segment field name, a data type, and a maximum length.
+
+[example]
+This defines a column containing the value of the "last name" component of _PID-5_, expressed as a ST data type with a maximum width of 20.
+
+|@PID.5.1\^ST^20|
+
+include::RCD-components/RCD-1.adoc[]
+
+include::RCD-components/RCD-2.adoc[]
+
+include::RCD-components/RCD-3.adoc[]
+

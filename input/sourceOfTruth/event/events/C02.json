@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/C02",
+  "id": "C02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "C02",
+        "path": "C02",
+        "short": "C02",
+        "definition": "Event C02: Cancel a patient registration on clinical trial (for clerical mistakes since an intended registration should not be canceled)",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 C02 Message Definition",
+  "name": "C02",
+  "type": "C02",
+  "date": "2024-07-24T19:13:28Z"
+}

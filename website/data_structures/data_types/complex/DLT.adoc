@@ -1,0 +1,22 @@
+= (DLT) Data Type - delta
+:v291_section: 2A.2.19
+:v2type: 'Data Type'
+:code: DLT
+:name: delta
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Describes the information that controls delta check warnings.
+
+[NOTE]
+Replaces the CM data type used in section 8.8.4.9 – OM2-9, as of v 2.5.
+
+include::DLT-components/DLT-1.adoc[]
+
+include::DLT-components/DLT-2.adoc[]
+
+include::DLT-components/DLT-3.adoc[]
+
+include::DLT-components/DLT-4.adoc[]
+

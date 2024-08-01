@@ -1,0 +1,196 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/TCU_U10-A",
+  "id": "TCU_U10-A",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TCU_U10-A",
+        "path": "TCU_U10-A",
+        "short": "TCU_U10-A",
+        "definition": "TCU_U10-A Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "TCU_U10-A.1-MSH",
+          "path": "TCU_U10-A.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "TCU_U10-A.2-SFT",
+          "path": "TCU_U10-A.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "TCU_U10-A.3-UAC",
+          "path": "TCU_U10-A.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "TCU_U10-A.4-EQU",
+          "path": "TCU_U10-A.4-EQU",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/EQU"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "TCU_U10-A.5-TEST_CONFIGURATION",
+          "path": "TCU_U10-A.5-TEST_CONFIGURATION",
+          "min": 0,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "TCU_U10-A.5-TEST_CONFIGURATION.1-SPM",
+              "path": "TCU_U10-A.5-TEST_CONFIGURATION.1-SPM",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/SPM"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "TCU_U10-A.5-TEST_CONFIGURATION.2-TCC",
+              "path": "TCU_U10-A.5-TEST_CONFIGURATION.2-TCC",
+              "min": 0,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/TCC"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ]
+        ]
+      ],
+      [
+        {
+          "id": "TCU_U10-A.6-ROL",
+          "path": "TCU_U10-A.6-ROL",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ROL"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "B"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "title": "HL7 v2 TCU_U10-A Segment Definition",
+  "name": "TCU_U10-A",
+  "type": "TCU_U10-A",
+  "date": "2024-07-24T19:13:19Z"
+}

@@ -1,0 +1,5 @@
+== Outstanding Issues
+[v291_section="12.7"]
+
+In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
+

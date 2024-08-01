@@ -1,0 +1,64 @@
+= (CSU) Data Type - channel sensitivity and units
+:v291_section: 2A.2.12
+:v2type: 'Data Type'
+:code: CSU
+:name: channel sensitivity and units
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+*Attention: _Retained for backward compatibility only in version 2.7._* This is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in version 2.7.
+
+As of v2.7 a third tuple, formerly known as triplet, has been added to the CSU data type. Additionally, 3 new components were added to each tuple such that each tuple now has a total of 7 components. The Original Text component applies to the CSU as a whole.
+
+[datatype-definition]
+This data type defines the channel sensitivity (gain) and the units in which it is measured in a waveform result.
+
+[NOTE]
+Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5 Observation value (*) is data type CD as of v 2.5.
+
+include::CSU-components/CSU-1.adoc[]
+
+include::CSU-components/CSU-2.adoc[]
+
+include::CSU-components/CSU-3.adoc[]
+
+include::CSU-components/CSU-4.adoc[]
+
+include::CSU-components/CSU-5.adoc[]
+
+include::CSU-components/CSU-6.adoc[]
+
+include::CSU-components/CSU-7.adoc[]
+
+include::CSU-components/CSU-8.adoc[]
+
+include::CSU-components/CSU-9.adoc[]
+
+include::CSU-components/CSU-10.adoc[]
+
+include::CSU-components/CSU-11.adoc[]
+
+include::CSU-components/CSU-12.adoc[]
+
+include::CSU-components/CSU-13.adoc[]
+
+include::CSU-components/CSU-14.adoc[]
+
+include::CSU-components/CSU-15.adoc[]
+
+include::CSU-components/CSU-16.adoc[]
+
+include::CSU-components/CSU-17.adoc[]
+
+include::CSU-components/CSU-18.adoc[]
+
+include::CSU-components/CSU-19.adoc[]
+
+include::CSU-components/CSU-20.adoc[]
+
+include::CSU-components/CSU-21.adoc[]
+
+include::CSU-components/CSU-22.adoc[]
+
+include::CSU-components/CSU-23.adoc[]
+

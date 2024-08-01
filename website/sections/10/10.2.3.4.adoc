@@ -1,0 +1,5 @@
+==== Types
+[v291_section="10.2.3.4"]
+
+Rather than describing why an appointment has been scheduled – as the appointment reason does – the appointment type describes the kind of appointment recorded in the schedule. This information tends to be administrative in nature. Typical appointment types might include: normal, tentative (or "penciled in"), STAT, etc.
+

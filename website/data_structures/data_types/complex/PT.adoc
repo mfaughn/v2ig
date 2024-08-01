@@ -1,0 +1,15 @@
+= (PT) Data Type - processing type
+:v291_section: 2A.2.58
+:v2type: 'Data Type'
+:code: PT
+:name: processing type
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type indicates whether to process a message as defined in HL7 Application (level 7) Processing rules.
+
+include::PT-components/PT-1.adoc[]
+
+include::PT-components/PT-2.adoc[]
+

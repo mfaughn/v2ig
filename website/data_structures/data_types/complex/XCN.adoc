@@ -1,0 +1,79 @@
+= (XCN) Data Type - extended composite ID number and name for persons
+:v291_section: 2A.2.88
+:v2type: 'Data Type'
+:code: XCN
+:name: extended composite ID number and name for persons
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[NOTE]
+Replaces CN data type as of v 2.3.
+
+This data type is used extensively appearing in the PV1, ORC, RXO, RXE, OBR and SCH segments, as well as others, where there is a need to specify the ID number and name of a person.
+
+[example]
+without assigning authority and assigning facility:
+
+|1234567\^Everyman^Adam\^A^III\^DR^\^ADT01^\^L^4\^M11^MR|
+
+[example]
+s with assigning authority and assigning facility:
+
+Dr. Harold Hippocrates’ provider ID was assigned by the Provider Master and was first issued at Good Health Hospital within the Community Health and Hospitals System. Since IS table values (first component of the HD) were not used for assigning authority and assigning facility, components 2 and 3 of the HD data type are populated and demoted to sub-components as follows:
+
+12188^Hippocrates^Harold^H^IV^Dr^^^&Provider Master.Community Health and Hospitals&L^L^9^M10^DN^&Good Health Hospital.Community Health and Hospitals&L^A
+
+Ludwig van Beethoven's medical record number was assigned by the Master Patient Index and was first issued at Fairview Hospital within the University Hospitals System.
+
+10535^van Beethoven&van^Ludwig^A^III^Dr^^^&MPI.Community Health and Hospitals&L^L^3^M10^MR^& Good Health Hospital.Community Health and Hospitals&L^A
+
+include::XCN-components/XCN-1.adoc[]
+
+include::XCN-components/XCN-2.adoc[]
+
+include::XCN-components/XCN-3.adoc[]
+
+include::XCN-components/XCN-4.adoc[]
+
+include::XCN-components/XCN-5.adoc[]
+
+include::XCN-components/XCN-6.adoc[]
+
+include::XCN-components/XCN-7.adoc[]
+
+include::XCN-components/XCN-8.adoc[]
+
+include::XCN-components/XCN-9.adoc[]
+
+include::XCN-components/XCN-10.adoc[]
+
+include::XCN-components/XCN-11.adoc[]
+
+include::XCN-components/XCN-12.adoc[]
+
+include::XCN-components/XCN-13.adoc[]
+
+include::XCN-components/XCN-14.adoc[]
+
+include::XCN-components/XCN-15.adoc[]
+
+include::XCN-components/XCN-16.adoc[]
+
+include::XCN-components/XCN-17.adoc[]
+
+include::XCN-components/XCN-18.adoc[]
+
+include::XCN-components/XCN-19.adoc[]
+
+include::XCN-components/XCN-20.adoc[]
+
+include::XCN-components/XCN-21.adoc[]
+
+include::XCN-components/XCN-22.adoc[]
+
+include::XCN-components/XCN-23.adoc[]
+
+include::XCN-components/XCN-24.adoc[]
+
+include::XCN-components/XCN-25.adoc[]
+

@@ -1,0 +1,5 @@
+== FN.1 - Surname (ST)
+
+[datatype-definition]
+The atomic element of the person's family name. In most Western usage, this is the person's last name.
+

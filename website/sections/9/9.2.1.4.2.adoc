@@ -1,0 +1,5 @@
+===== Dictated:
+[v291_section="9.2.1.4.2"]
+
+A completion status in which information has been orally recorded but not yet transcribed.
+

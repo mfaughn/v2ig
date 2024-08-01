@@ -1,0 +1,617 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORD_O04",
+  "id": "ORD_O04",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORD_O04",
+        "path": "ORD_O04",
+        "short": "ORD_O04",
+        "definition": "ORD_O04 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "ORD_O04.1-MSH",
+          "path": "ORD_O04.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.2-MSA",
+          "path": "ORD_O04.2-MSA",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSA"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.3-ARV",
+          "path": "ORD_O04.3-ARV",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ARV"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.4-ERR",
+          "path": "ORD_O04.4-ERR",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ERR"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.5-SFT",
+          "path": "ORD_O04.5-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.6-UAC",
+          "path": "ORD_O04.6-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.7-NTE",
+          "path": "ORD_O04.7-NTE",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/NTE"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ORD_O04.8-RESPONSE",
+          "path": "ORD_O04.8-RESPONSE",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "ORD_O04.8-RESPONSE.1-PATIENT",
+              "path": "ORD_O04.8-RESPONSE.1-PATIENT",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.1-PATIENT.1-PID",
+                  "path": "ORD_O04.8-RESPONSE.1-PATIENT.1-PID",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PID"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.1-PATIENT.2-PRT",
+                  "path": "ORD_O04.8-RESPONSE.1-PATIENT.2-PRT",
+                  "min": 0,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.1-PATIENT.3-ARV",
+                  "path": "ORD_O04.8-RESPONSE.1-PATIENT.3-ARV",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "B"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.1-PATIENT.4-NTE",
+                  "path": "ORD_O04.8-RESPONSE.1-PATIENT.4-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET",
+              "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET",
+              "min": 0,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.1-ORC",
+                  "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.1-ORC",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.2-PRT",
+                  "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.2-PRT",
+                  "min": 0,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET",
+                  "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "BackboneElement"
+                    }
+                  ]
+                },
+                [
+                  [
+                    {
+                      "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET.1-TQ1",
+                      "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET.1-TQ1",
+                      "min": 0,
+                      "max": "1",
+                      "definition": "1",
+                      "short": "1",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET.2-TQ2",
+                      "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.3-TIMING_DIET.2-TQ2",
+                      "min": 1,
+                      "max": "*",
+                      "definition": "*",
+                      "short": "*",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.4-ODS",
+                  "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.4-ODS",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ODS"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.2-ORDER_DIET.5-NTE",
+                  "path": "ORD_O04.8-RESPONSE.2-ORDER_DIET.5-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY",
+              "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.1-ORC",
+                  "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.1-ORC",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.2-PRT",
+                  "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.2-PRT",
+                  "min": 0,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY",
+                  "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "BackboneElement"
+                    }
+                  ]
+                },
+                [
+                  [
+                    {
+                      "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY.1-TQ1",
+                      "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY.1-TQ1",
+                      "min": 0,
+                      "max": "1",
+                      "definition": "1",
+                      "short": "1",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY.2-TQ2",
+                      "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.3-TIMING_TRAY.2-TQ2",
+                      "min": 1,
+                      "max": "*",
+                      "definition": "*",
+                      "short": "*",
+                      "type": [
+                        {
+                          "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+                        }
+                      ],
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                          "valueCode": "A"
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.4-ODT",
+                  "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.4-ODT",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ODT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.5-NTE",
+                  "path": "ORD_O04.8-RESPONSE.3-ORDER_TRAY.5-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "title": "HL7 v2 ORD_O04 Segment Definition",
+  "name": "ORD_O04",
+  "type": "ORD_O04",
+  "date": "2024-07-24T19:13:16Z"
+}

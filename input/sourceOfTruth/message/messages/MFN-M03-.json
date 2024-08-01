@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/MFN-M03-",
+  "id": "MFN-M03-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MFN-M03-",
+        "path": "MFN-M03-",
+        "short": "MFN-M03-",
+        "definition": "MFN^M03^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 MFN^M03^ Message Definition",
+  "name": "MFN^M03^",
+  "type": "MFN-M03-",
+  "date": "2024-07-24T19:13:27Z"
+}

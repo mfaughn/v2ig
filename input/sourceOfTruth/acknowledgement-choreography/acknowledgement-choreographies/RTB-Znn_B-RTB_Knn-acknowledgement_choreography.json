@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RTB-Znn_B-RTB_Knn-acknowledgement_choreography",
+  "id": "RTB-Znn_B-RTB_Knn-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RTB-Znn_B-RTB_Knn-acknowledgement_choreography",
+        "path": "RTB-Znn_B-RTB_Knn-acknowledgement_choreography",
+        "short": "RTB-Znn_B-RTB_Knn-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for RTB^Znn_B^RTB_Knn",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "RTB^Znn_B^RTB_Knn",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "RTB-Znn_B-RTB_Knn-acknowledgement_choreography"
+}

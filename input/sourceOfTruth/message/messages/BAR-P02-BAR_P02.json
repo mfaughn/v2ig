@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/BAR-P02-BAR_P02",
+  "id": "BAR-P02-BAR_P02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "BAR-P02-BAR_P02",
+        "path": "BAR-P02-BAR_P02",
+        "short": "BAR-P02-BAR_P02",
+        "definition": "BAR^P02^BAR_P02 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BAR-P02-BAR_P02.structure",
+        "path": "BAR-P02-BAR_P02.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "BAR_P02"
+      }
+    ]
+  },
+  "title": "HL7 v2 BAR^P02^BAR_P02 Message Definition",
+  "name": "BAR^P02^BAR_P02",
+  "type": "BAR-P02-BAR_P02",
+  "date": "2024-07-24T19:13:27Z"
+}

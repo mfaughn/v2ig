@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OCD",
+  "id": "OCD",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "OCD",
+  "title": "HL7 v2 OCD Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "OCD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OCD",
+        "path": "OCD",
+        "short": "occurrence code and date",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1d1408>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OCD.1",
+        "path": "OCD.1",
+        "short": "Occurrence Code",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CNE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0350"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "OCD.2",
+        "path": "OCD.2",
+        "short": "Occurrence Date",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "8"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.\n\nThis data type carries data defined by CMS or other regulatory agencies. It corresponds to UB82 Fields 28‑32 and UB92 fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. Refer to a UB specification for additional information.\n\nUse Case: A Medicare beneficiary was confined in hospital from January 1, 1992 to January 10, 1992, however, his Medicare Part A benefits were exhausted as of January 8, 1992, and he was not entitled to Part B benefits. Therefore, Form Locator 32 should contain code 23 and the date 010892.\n\nExample:\n\n|23&Benefits Exhausted&NUBC^19920108|"
+}

@@ -1,0 +1,5 @@
+== PIP.4 - Activation Date (DT)
+
+[datatype-definition]
+Specifies the date the institutional privilege became/becomes valid.
+

@@ -1,0 +1,9 @@
+===== Example 1
+[v291_section="7.6.1.2.1"]
+
+Alternating treatment plus observation intervals:
+
+__________> _________> _________> _________> ...
+
+Rx A Rx B Rx A Rx B
+

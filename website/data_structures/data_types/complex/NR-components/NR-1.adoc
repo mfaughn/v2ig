@@ -1,0 +1,5 @@
+== NR.1 - Low Value (NM)
+
+[datatype-definition]
+The number specifying the lower limit or boundary of the range.
+

@@ -1,0 +1,5 @@
+==== Service
+[v291_section="10.2.5.12"]
+
+A service is any activity that must be scheduled prior to its performance.
+

@@ -1,0 +1,5 @@
+== MO.1 - Quantity (NM)
+
+[datatype-definition]
+The first component is a quantity.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Znn_F",
+  "id": "Znn_F",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Znn_F",
+        "path": "Znn_F",
+        "short": "Znn_F",
+        "definition": "Event Znn_F: Response Grammer RDY Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Znn_F Message Definition",
+  "name": "Znn_F",
+  "type": "Znn_F",
+  "date": "2024-07-24T19:13:28Z"
+}

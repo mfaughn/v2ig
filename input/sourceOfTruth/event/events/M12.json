@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/M12",
+  "id": "M12",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "M12",
+        "path": "M12",
+        "short": "M12",
+        "definition": "Event M12: Master File Notification - Additional Basic Observation/Service Attributes",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 M12 Message Definition",
+  "name": "M12",
+  "type": "M12",
+  "date": "2024-07-24T19:13:28Z"
+}

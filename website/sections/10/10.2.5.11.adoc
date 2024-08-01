@@ -1,0 +1,5 @@
+==== Schedule
+[v291_section="10.2.5.11"]
+
+A schedule is the sum of all of the slots related to a service or resource.
+

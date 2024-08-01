@@ -1,0 +1,22 @@
+= (PLN) Data Type - practitioner license or other Id number
+:v291_section: 2A.2.55
+:v2type: 'Data Type'
+:code: PLN
+:name: practitioner license or other Id number
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies a practitioner’s license number, or other ID number such as UPIN, Medicare and Medicaid number, and associated detail.
+
+[NOTE]
+Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5.
+
+include::PLN-components/PLN-1.adoc[]
+
+include::PLN-components/PLN-2.adoc[]
+
+include::PLN-components/PLN-3.adoc[]
+
+include::PLN-components/PLN-4.adoc[]
+

@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/EIP",
+  "id": "EIP",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "EIP",
+  "title": "HL7 v2 EIP Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "EIP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EIP",
+        "path": "EIP",
+        "short": "entity identifier pair",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b7f53c0>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "EIP.1",
+        "path": "EIP.1",
+        "short": "Placer Assigned Identifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "EIP.2",
+        "path": "EIP.2",
+        "short": "Filler Assigned Identifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 – OBR-29, 7.3.1.29 – OBR-29, as of v 2.5."
+}

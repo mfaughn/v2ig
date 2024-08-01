@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O40",
+  "id": "O40",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O40",
+        "path": "O40",
+        "short": "O40",
+        "definition": "Event O40: Specimen shipment centric laboratory order response message to specimen shipment OML - Patient Segments Required",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O40 Message Definition",
+  "name": "O40",
+  "type": "O40",
+  "date": "2024-07-24T19:13:28Z"
+}

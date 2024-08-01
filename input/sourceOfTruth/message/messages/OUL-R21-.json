@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OUL-R21-",
+  "id": "OUL-R21-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OUL-R21-",
+        "path": "OUL-R21-",
+        "short": "OUL-R21-",
+        "definition": "OUL^R21^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 OUL^R21^ Message Definition",
+  "name": "OUL^R21^",
+  "type": "OUL-R21-",
+  "date": "2024-07-24T19:13:27Z"
+}

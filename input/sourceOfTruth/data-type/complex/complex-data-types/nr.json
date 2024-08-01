@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/NR",
+  "id": "NR",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "NR",
+  "title": "HL7 v2 NR Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "NR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NR",
+        "path": "NR",
+        "short": "numeric range",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1d74e8>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NR.1",
+        "path": "NR.1",
+        "short": "Low Value",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "NR.2",
+        "path": "NR.2",
+        "short": "High Value",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* Replaces the CM data type used in sections 8.8.4.6.1– OM2-6.1, 8.8.4.6.3– OM2-6.3and 8.8.4.6.4– OM2-6.4, as of v 2.5."
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--PEX_P07",
+  "id": "--PEX_P07",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--PEX_P07",
+        "path": "--PEX_P07",
+        "short": "--PEX_P07",
+        "definition": "^^PEX_P07 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--PEX_P07.structure",
+        "path": "--PEX_P07.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "PEX_P07"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^PEX_P07 Message Definition",
+  "name": "^^PEX_P07",
+  "type": "--PEX_P07",
+  "date": "2024-07-24T19:13:26Z"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PCC",
+  "id": "PCC",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PCC",
+        "path": "PCC",
+        "short": "PCC",
+        "definition": "Event PCC: Patient Pathway Message (Problem-Oriented)",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PCC Message Definition",
+  "name": "PCC",
+  "type": "PCC",
+  "date": "2024-07-24T19:13:28Z"
+}

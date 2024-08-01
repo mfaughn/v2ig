@@ -1,0 +1,5 @@
+=== CM1 - Clinical Study Phase Master Segment
+[v291_section="7.8.6"]
+
+The clinical study phase master segment (CMI) is described in Chapter 8, section 8.11.3.
+

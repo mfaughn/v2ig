@@ -1,0 +1,22 @@
+= (CCP) Data Type - channel calibration parameters
+:v291_section: 2A.2.4
+:v2type: 'Data Type'
+:code: CCP
+:name: channel calibration parameters
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+*Attention: Retained for backward compatibility only in version 2.7.* This is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.
+
+[datatype-definition]
+This data type identifies the corrections to channel sensitivity, the baseline, and the channel time skew when transmitting waveform results.
+
+[NOTE]
+Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5 Observation value (*) is data type CD as of v 2.5.
+
+include::CCP-components/CCP-1.adoc[]
+
+include::CCP-components/CCP-2.adoc[]
+
+include::CCP-components/CCP-3.adoc[]
+

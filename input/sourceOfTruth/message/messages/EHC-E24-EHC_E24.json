@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/EHC-E24-EHC_E24",
+  "id": "EHC-E24-EHC_E24",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EHC-E24-EHC_E24",
+        "path": "EHC-E24-EHC_E24",
+        "short": "EHC-E24-EHC_E24",
+        "definition": "EHC^E24^EHC_E24 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "EHC-E24-EHC_E24.structure",
+        "path": "EHC-E24-EHC_E24.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "EHC_E24"
+      }
+    ]
+  },
+  "title": "HL7 v2 EHC^E24^EHC_E24 Message Definition",
+  "name": "EHC^E24^EHC_E24",
+  "type": "EHC-E24-EHC_E24",
+  "date": "2024-07-24T19:13:27Z"
+}

@@ -1,0 +1,945 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OMP_O09",
+  "id": "OMP_O09",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OMP_O09",
+        "path": "OMP_O09",
+        "short": "OMP_O09",
+        "definition": "OMP_O09 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "OMP_O09.1-MSH",
+          "path": "OMP_O09.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "OMP_O09.2-ARV",
+          "path": "OMP_O09.2-ARV",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/ARV"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "OMP_O09.3-SFT",
+          "path": "OMP_O09.3-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "OMP_O09.4-UAC",
+          "path": "OMP_O09.4-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "OMP_O09.5-NTE",
+          "path": "OMP_O09.5-NTE",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/NTE"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "OMP_O09.6-PATIENT",
+          "path": "OMP_O09.6-PATIENT",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.1-PID",
+              "path": "OMP_O09.6-PATIENT.1-PID",
+              "min": 0,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/PID"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS",
+              "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.1-PD1",
+                  "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.1-PD1",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PD1"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.2-GSP",
+                  "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.2-GSP",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/GSP"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.3-GSR",
+                  "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.3-GSR",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/GSR"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.4-GSC",
+                  "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.4-GSC",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/GSC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.5-PRT",
+                  "path": "OMP_O09.6-PATIENT.2-ADDITIONAL_DEMOGRAPHICS.5-PRT",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.3-NTE",
+              "path": "OMP_O09.6-PATIENT.3-NTE",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.4-ARV",
+              "path": "OMP_O09.6-PATIENT.4-ARV",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/ARV"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "B"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.5-PATIENT_VISIT",
+              "path": "OMP_O09.6-PATIENT.5-PATIENT_VISIT",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.1-PV1",
+                  "path": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.1-PV1",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PV1"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.2-PV2",
+                  "path": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.2-PV2",
+                  "min": 1,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PV2"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.3-PRT",
+                  "path": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.3-PRT",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.4-ARV",
+                  "path": "OMP_O09.6-PATIENT.5-PATIENT_VISIT.4-ARV",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "B"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.6-INSURANCE",
+              "path": "OMP_O09.6-PATIENT.6-INSURANCE",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.6-INSURANCE.1-IN1",
+                  "path": "OMP_O09.6-PATIENT.6-INSURANCE.1-IN1",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/IN1"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.6-INSURANCE.2-IN2",
+                  "path": "OMP_O09.6-PATIENT.6-INSURANCE.2-IN2",
+                  "min": 1,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/IN2"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.6-PATIENT.6-INSURANCE.3-IN3",
+                  "path": "OMP_O09.6-PATIENT.6-INSURANCE.3-IN3",
+                  "min": 1,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/IN3"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.7-GT1",
+              "path": "OMP_O09.6-PATIENT.7-GT1",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/GT1"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.6-PATIENT.8-AL1",
+              "path": "OMP_O09.6-PATIENT.8-AL1",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/AL1"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ]
+        ]
+      ],
+      [
+        {
+          "id": "OMP_O09.7-ORDER",
+          "path": "OMP_O09.7-ORDER",
+          "min": 0,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "OMP_O09.7-ORDER.1-ORC",
+              "path": "OMP_O09.7-ORDER.1-ORC",
+              "min": 0,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/ORC"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.2-TIMING",
+              "path": "OMP_O09.7-ORDER.2-TIMING",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.2-TIMING.1-TQ1",
+                  "path": "OMP_O09.7-ORDER.2-TIMING.1-TQ1",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.2-TIMING.2-TQ2",
+                  "path": "OMP_O09.7-ORDER.2-TIMING.2-TQ2",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.3-RXO",
+              "path": "OMP_O09.7-ORDER.3-RXO",
+              "min": 0,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/RXO"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.4-PRT",
+              "path": "OMP_O09.7-ORDER.4-PRT",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.5-NTE",
+              "path": "OMP_O09.7-ORDER.5-NTE",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.6-RXR",
+              "path": "OMP_O09.7-ORDER.6-RXR",
+              "min": 0,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/RXR"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.7-COMPONENT",
+              "path": "OMP_O09.7-ORDER.7-COMPONENT",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.7-COMPONENT.1-RXC",
+                  "path": "OMP_O09.7-ORDER.7-COMPONENT.1-RXC",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/RXC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.7-COMPONENT.2-NTE",
+                  "path": "OMP_O09.7-ORDER.7-COMPONENT.2-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.8-CDO",
+              "path": "OMP_O09.7-ORDER.8-CDO",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/CDO"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.9-OBSERVATION",
+              "path": "OMP_O09.7-ORDER.9-OBSERVATION",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.9-OBSERVATION.1-OBX",
+                  "path": "OMP_O09.7-ORDER.9-OBSERVATION.1-OBX",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.9-OBSERVATION.2-PRT",
+                  "path": "OMP_O09.7-ORDER.9-OBSERVATION.2-PRT",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "OMP_O09.7-ORDER.9-OBSERVATION.3-NTE",
+                  "path": "OMP_O09.7-ORDER.9-OBSERVATION.3-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.10-FT1",
+              "path": "OMP_O09.7-ORDER.10-FT1",
+              "min": 1,
+              "max": "*",
+              "definition": "*",
+              "short": "*",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/FT1"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "id": "OMP_O09.7-ORDER.11-BLG",
+              "path": "OMP_O09.7-ORDER.11-BLG",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "http://hl7.org/v2/StructureDefinition/BLG"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                  "valueCode": "A"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    ]
+  },
+  "title": "HL7 v2 OMP_O09 Segment Definition",
+  "name": "OMP_O09",
+  "type": "OMP_O09",
+  "date": "2024-07-24T19:13:17Z"
+}

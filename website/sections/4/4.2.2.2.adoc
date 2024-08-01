@@ -1,0 +1,5 @@
+==== Observation segment:
+[v291_section="4.2.2.2"]
+
+An OBX segment defined in Chapter 7.
+

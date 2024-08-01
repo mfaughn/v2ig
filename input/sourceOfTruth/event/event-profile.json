@@ -1,0 +1,47 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/Event-Profile",
+  "id" : "v2-event-profile",
+  "version" : "0.0.1",
+  "name" : "V2EventProfile",
+  "title" : " HL7 v2 Event Profile",
+  "status" : "active",
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "StructureDefinition",
+  "description" : "Rules that are true for all HL7 v2 Events",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "StructureDefinition.kind",
+        "path" : "StructureDefinition.kind",
+        "fixedCode" : "logical"
+      },
+      {
+        "id" : "StructureDefinition.abstract",
+        "path" : "StructureDefinition.abstract",
+        "fixedBoolean" : false
+      },
+      {
+        "id" : "StructureDefinition.type",
+        "path" : "StructureDefinition.type",
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "http://hl7.org/v2/ValueSet/Events"
+        }
+      },
+      {
+        "id" : "StructureDefinition.baseDefinition",
+        "path" : "StructureDefinition.baseDefinition",
+        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/Event"
+      },
+      {
+        "id" : "StructureDefinition.derivation",
+        "path" : "StructureDefinition.derivation",
+        "fixedCode" : "specialization"
+      }
+    ]
+  }
+}

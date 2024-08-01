@@ -1,0 +1,22 @@
+= (RMC) Data Type - room coverage
+:v291_section: 2A.2.65
+:v2type: 'Data Type'
+:code: RMC
+:name: room coverage
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies insurance coverage detail for a room.
+
+[NOTE]
+Replaces the CM data type used in section 6.5.7.28 IN2-28, as of v 2.5.
+
+include::RMC-components/RMC-1.adoc[]
+
+include::RMC-components/RMC-2.adoc[]
+
+include::RMC-components/RMC-3.adoc[]
+
+include::RMC-components/RMC-4.adoc[]
+

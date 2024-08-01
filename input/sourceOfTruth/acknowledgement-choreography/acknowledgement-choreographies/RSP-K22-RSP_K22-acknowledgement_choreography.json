@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RSP-K22-RSP_K22-acknowledgement_choreography",
+  "id": "RSP-K22-RSP_K22-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RSP-K22-RSP_K22-acknowledgement_choreography",
+        "path": "RSP-K22-RSP_K22-acknowledgement_choreography",
+        "short": "RSP-K22-RSP_K22-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for RSP^K22^RSP_K22",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "RSP^K22^RSP_K22",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "RSP-K22-RSP_K22-acknowledgement_choreography"
+}

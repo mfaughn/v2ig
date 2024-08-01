@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PCF",
+  "id": "PCF",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PCF",
+        "path": "PCF",
+        "short": "PCF",
+        "definition": "Event PCF: PTR - Patient Pathway (Problem-Oriented) Response",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PCF Message Definition",
+  "name": "PCF",
+  "type": "PCF",
+  "date": "2024-07-24T19:13:28Z"
+}

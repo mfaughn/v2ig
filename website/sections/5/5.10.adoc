@@ -1,0 +1,5 @@
+== SUPERSEDED QUERY/RESPONSE TRIGGER EVENTS AND MESSAGE PAIRS
+[v291_section="5.10"]
+
+*If the reader is defining a new query, please refer to the new recommended query/response pairs defined in section* _5.4_*, "*_QUERY/RESPONSE MESSAGE PAIRS_*." This section is retained for backward compatibility and the framework for the existing functional queries.*
+

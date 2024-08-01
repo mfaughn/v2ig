@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RRG-O16-RRG_O16",
+  "id": "RRG-O16-RRG_O16",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RRG-O16-RRG_O16",
+        "path": "RRG-O16-RRG_O16",
+        "short": "RRG-O16-RRG_O16",
+        "definition": "RRG^O16^RRG_O16 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RRG-O16-RRG_O16.structure",
+        "path": "RRG-O16-RRG_O16.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RRG_O16"
+      }
+    ]
+  },
+  "title": "HL7 v2 RRG^O16^RRG_O16 Message Definition",
+  "name": "RRG^O16^RRG_O16",
+  "type": "RRG-O16-RRG_O16",
+  "date": "2024-07-24T19:13:26Z"
+}

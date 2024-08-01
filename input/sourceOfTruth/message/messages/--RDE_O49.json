@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--RDE_O49",
+  "id": "--RDE_O49",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--RDE_O49",
+        "path": "--RDE_O49",
+        "short": "--RDE_O49",
+        "definition": "^^RDE_O49 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--RDE_O49.structure",
+        "path": "--RDE_O49.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RDE_O49"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^RDE_O49 Message Definition",
+  "name": "^^RDE_O49",
+  "type": "--RDE_O49",
+  "date": "2024-07-24T19:13:25Z"
+}

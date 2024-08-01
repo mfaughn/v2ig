@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--OML_O35",
+  "id": "--OML_O35",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--OML_O35",
+        "path": "--OML_O35",
+        "short": "--OML_O35",
+        "definition": "^^OML_O35 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--OML_O35.structure",
+        "path": "--OML_O35.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OML_O35"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^OML_O35 Message Definition",
+  "name": "^^OML_O35",
+  "type": "--OML_O35",
+  "date": "2024-07-24T19:13:25Z"
+}

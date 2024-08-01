@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Znn_B",
+  "id": "Znn_B",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Znn_B",
+        "path": "Znn_B",
+        "short": "Znn_B",
+        "definition": "Event Znn_B: Response Grammer",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Znn_B Message Definition",
+  "name": "Znn_B",
+  "type": "Znn_B",
+  "date": "2024-07-24T19:13:28Z"
+}

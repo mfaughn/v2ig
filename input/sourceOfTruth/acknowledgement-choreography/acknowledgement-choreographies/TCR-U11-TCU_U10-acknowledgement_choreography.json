@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/TCR-U11-TCU_U10-acknowledgement_choreography",
+  "id": "TCR-U11-TCU_U10-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TCR-U11-TCU_U10-acknowledgement_choreography",
+        "path": "TCR-U11-TCU_U10-acknowledgement_choreography",
+        "short": "TCR-U11-TCU_U10-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for TCR^U11^TCU_U10",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "TCR^U11^TCU_U10",
+  "date": "2024-07-24T19:13:32Z",
+  "type": "TCR-U11-TCU_U10-acknowledgement_choreography"
+}

@@ -1,0 +1,13 @@
+=== CRM - Message When Patient Registered on a Clinical Trial
+[v291_section="7.9.1"]
+
+[er7]
+MSH|^~\&|PDMS|MDACC|ORDER ENTRY|MDACC|200006021649||CRM^C01^CRM_C01|...<cr>
+
+[er7]
+PID|1||2222||Everywoman^Eve^E||19530117|...<cr>
+
+[er7]
+|||||1005\^^\^^\^^\^MDACC|19941013|Y^Meets All Requirements^PDMS|...<cr>
+
+

@@ -1,0 +1,5 @@
+==== Causation:
+[v291_section="7.10.1.8"]
+
+An exposure which truly does increase or decrease the probability of a certain outcome.
+

@@ -1,0 +1,15 @@
+= (DR) Data Type - date/time range
+:v291_section: 2A.2.20
+:v2type: 'Data Type'
+:code: DR
+:name: date/time range
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[NOTE]
+DR cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.
+
+include::DR-components/DR-1.adoc[]
+
+include::DR-components/DR-2.adoc[]
+

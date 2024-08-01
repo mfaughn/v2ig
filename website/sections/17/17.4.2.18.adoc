@@ -1,0 +1,5 @@
+==== Washer
+[v291_section="17.4.2.18"]
+
+An apparatus that provides decontamination services in order to render items safe for handling.
+

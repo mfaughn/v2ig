@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--ADT_A12",
+  "id": "--ADT_A12",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--ADT_A12",
+        "path": "--ADT_A12",
+        "short": "--ADT_A12",
+        "definition": "^^ADT_A12 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--ADT_A12.structure",
+        "path": "--ADT_A12.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ADT_A12"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^ADT_A12 Message Definition",
+  "name": "^^ADT_A12",
+  "type": "--ADT_A12",
+  "date": "2024-07-24T19:13:25Z"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/R30",
+  "id": "R30",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "R30",
+        "path": "R30",
+        "short": "R30",
+        "definition": "Event R30: Unsolicited Point-Of-Care Observation Message without Existing Order – Place an Order",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 R30 Message Definition",
+  "name": "R30",
+  "type": "R30",
+  "date": "2024-07-24T19:13:28Z"
+}

@@ -1,0 +1,15 @@
+=== Specimen Status Request
+[v291_section="13.5.4"]
+
+The chemistry analyzer 0001 queries the LAS for status of specimen/container (id=092321A).
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |SSR^U04^SSR|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+SAC|991912376^EXTLAB|01039421^THISLAB|092321A^LAS||||199806200823<cr>
+
+

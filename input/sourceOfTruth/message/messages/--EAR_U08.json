@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--EAR_U08",
+  "id": "--EAR_U08",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--EAR_U08",
+        "path": "--EAR_U08",
+        "short": "--EAR_U08",
+        "definition": "^^EAR_U08 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--EAR_U08.structure",
+        "path": "--EAR_U08.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "EAR_U08"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^EAR_U08 Message Definition",
+  "name": "^^EAR_U08",
+  "type": "--EAR_U08",
+  "date": "2024-07-24T19:13:26Z"
+}

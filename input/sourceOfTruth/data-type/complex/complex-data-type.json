@@ -1,0 +1,15 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "id" : "v2-complex-data-type",
+  "version" : "0.0.1",
+  "name" : "V2ComplexDataType",
+  "title" : " HL7 v2 Complex Data Type",
+  "status" : "active",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "ComplexDataType",
+  "description" : "Abstract base for complex data types",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization"
+}

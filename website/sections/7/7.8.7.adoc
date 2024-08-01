@@ -1,0 +1,5 @@
+=== CM2 - Clinical Study Schedule Master Segment
+[v291_section="7.8.7"]
+
+The clinical study schedule master segment is described in Chapter 8, section 8.11.4.
+

@@ -1,0 +1,48 @@
+= (RFR) Data Type - reference range
+:v291_section: 2A.2.63
+:v2type: 'Data Type'
+:code: RFR
+:name: reference range
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Describes a reference range and its supporting detail.
+
+[NOTE]
+Replaces the CM data type used in sections 8.8.4.6 - OM2-6, 8.8.4.7 - OM2-7 and 8.8.4.8 - OM2-8 as of v 2.5.
+
+[example]
+s:
+
+{empty}a) A range that applies unconditionally, such as albumin, is transmitted as:
+
+[er7]
+|3.0&5.5|
+
+{empty}b) A normal range that depends on sex, such as Hgb, is transmitted as:
+
+[er7]
+|13.5&18\^M~12.0 & 16^F|
+
+{empty}c) A normal range that depends on age, sex, and race (a concocted example) is:
+
+[er7]
+|10&13\^M^0&2\^^\^B11&13.5^M\^2&20^\^^B~12&14.5\^M^20&70\^^\^B~13&16.0^M\^70&^\^^B|
+
+When no value is specified for a particular component, the range given applies to all categories of that component. For example, when nothing is specified for race/species, the range should be taken as the human range without regard to race. If no age range is specified, the normal range given is assumed to apply to all ages.
+
+include::RFR-components/RFR-1.adoc[]
+
+include::RFR-components/RFR-2.adoc[]
+
+include::RFR-components/RFR-3.adoc[]
+
+include::RFR-components/RFR-4.adoc[]
+
+include::RFR-components/RFR-5.adoc[]
+
+include::RFR-components/RFR-6.adoc[]
+
+include::RFR-components/RFR-7.adoc[]
+

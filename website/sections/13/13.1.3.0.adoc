@@ -1,0 +1,5 @@
+==== Additive:
+[v291_section="13.1.3.0"]
+
+As used here, refers to a substance generally a chemical that has been added to a specimen collection tube or container to prevent degradation of one or more constituents of the specimen.
+

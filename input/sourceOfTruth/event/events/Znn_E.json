@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Znn_E",
+  "id": "Znn_E",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Znn_E",
+        "path": "Znn_E",
+        "short": "Znn_E",
+        "definition": "Event Znn_E: Query Profile template for query with segment pattern response",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Znn_E Message Definition",
+  "name": "Znn_E",
+  "type": "Znn_E",
+  "date": "2024-07-24T19:13:28Z"
+}

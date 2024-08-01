@@ -1,0 +1,5 @@
+==== Book
+[v291_section="10.2.5.4"]
+
+The act of reserving a slot or set of slots on a schedule for a service or resource.
+

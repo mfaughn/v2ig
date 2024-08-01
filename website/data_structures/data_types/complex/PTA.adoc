@@ -1,0 +1,22 @@
+= (PTA) Data Type - policy type and amount
+:v291_section: 2A.2.59
+:v2type: 'Data Type'
+:code: PTA
+:name: policy type and amount
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies the policy type and amount covered by the insurance.
+
+[NOTE]
+Replaces the CM data type used in section 6.5.7.29 IN2-29, as of v 2.5.
+
+include::PTA-components/PTA-1.adoc[]
+
+include::PTA-components/PTA-2.adoc[]
+
+include::PTA-components/PTA-3.adoc[]
+
+include::PTA-components/PTA-4.adoc[]
+

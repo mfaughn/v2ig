@@ -1,0 +1,5 @@
+==== Product manufacturer:
+[v291_section="7.10.1.11"]
+
+The organization which is responsible for the manufacture of a product. This will usually be the entity, which holds the marketing authorization for the product.
+

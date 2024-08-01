@@ -1,0 +1,5 @@
+==== Referral:
+[v291_section="11.2.4.11"]
+
+Means a provider's recommendation that a covered person receive care from a different provider.
+

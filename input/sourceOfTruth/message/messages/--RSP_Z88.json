@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--RSP_Z88",
+  "id": "--RSP_Z88",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--RSP_Z88",
+        "path": "--RSP_Z88",
+        "short": "--RSP_Z88",
+        "definition": "^^RSP_Z88 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--RSP_Z88.structure",
+        "path": "--RSP_Z88.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RSP_Z88"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^RSP_Z88 Message Definition",
+  "name": "^^RSP_Z88",
+  "type": "--RSP_Z88",
+  "date": "2024-07-24T19:13:25Z"
+}

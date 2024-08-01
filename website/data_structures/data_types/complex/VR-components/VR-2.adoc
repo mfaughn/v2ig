@@ -1,0 +1,5 @@
+== VR.2 - Last Data Code Value (ST)
+
+[datatype-definition]
+Specifies the upper bound value.
+

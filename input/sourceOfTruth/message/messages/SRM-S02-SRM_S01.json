@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SRM-S02-SRM_S01",
+  "id": "SRM-S02-SRM_S01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SRM-S02-SRM_S01",
+        "path": "SRM-S02-SRM_S01",
+        "short": "SRM-S02-SRM_S01",
+        "definition": "SRM^S02^SRM_S01 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SRM-S02-SRM_S01.structure",
+        "path": "SRM-S02-SRM_S01.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "SRM_S01"
+      }
+    ]
+  },
+  "title": "HL7 v2 SRM^S02^SRM_S01 Message Definition",
+  "name": "SRM^S02^SRM_S01",
+  "type": "SRM-S02-SRM_S01",
+  "date": "2024-07-24T19:13:27Z"
+}

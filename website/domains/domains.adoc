@@ -1,0 +1,17 @@
+=Domains
+
+== Introduction
+
+FIXME
+
+== Domains Subdomains
+
+xref:administration/administration.adoc[Administration]
+
+xref:clinical/clinical.adoc[Clinical]
+
+xref:erp/erp.adoc[Erp]
+
+xref:financial/financial.adoc[Financial]
+
+xref:technical/technical.adoc[Technical]

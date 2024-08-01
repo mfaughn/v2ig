@@ -1,0 +1,5 @@
+=== WITHDRAWN (TS – timestamp)
+[v291_section="2A.2.79"]
+
+*Attention: _The TS data type has been replaced by the DTM data type and the detail was withdrawn and removed from the standard as of v 2.6._*
+

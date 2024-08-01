@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--BTS_O31",
+  "id": "--BTS_O31",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--BTS_O31",
+        "path": "--BTS_O31",
+        "short": "--BTS_O31",
+        "definition": "^^BTS_O31 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--BTS_O31.structure",
+        "path": "--BTS_O31.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "BTS_O31"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^BTS_O31 Message Definition",
+  "name": "^^BTS_O31",
+  "type": "--BTS_O31",
+  "date": "2024-07-24T19:13:25Z"
+}

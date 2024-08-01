@@ -1,0 +1,5 @@
+== General Segments
+[v291_section="4.5"]
+
+The following segments (ORC and BLG) are common to many order messages.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/M08",
+  "id": "M08",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "M08",
+        "path": "M08",
+        "short": "M08",
+        "definition": "Event M08: Master File Notification - Test/Observation (Numeric)",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 M08 Message Definition",
+  "name": "M08",
+  "type": "M08",
+  "date": "2024-07-24T19:13:28Z"
+}

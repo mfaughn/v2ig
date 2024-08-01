@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/QRY-PC9-",
+  "id": "QRY-PC9-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "QRY-PC9-",
+        "path": "QRY-PC9-",
+        "short": "QRY-PC9-",
+        "definition": "QRY^PC9^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 QRY^PC9^ Message Definition",
+  "name": "QRY^PC9^",
+  "type": "QRY-PC9-",
+  "date": "2024-07-24T19:13:27Z"
+}

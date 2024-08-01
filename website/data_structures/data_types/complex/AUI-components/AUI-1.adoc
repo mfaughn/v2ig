@@ -1,0 +1,5 @@
+== AUI.1 - Authorization Number (ST)
+
+[datatype-definition]
+Identifier assigned to the authorization.
+

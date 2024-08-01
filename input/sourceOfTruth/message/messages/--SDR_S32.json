@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--SDR_S32",
+  "id": "--SDR_S32",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--SDR_S32",
+        "path": "--SDR_S32",
+        "short": "--SDR_S32",
+        "definition": "^^SDR_S32 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--SDR_S32.structure",
+        "path": "--SDR_S32.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "SDR_S32-B"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^SDR_S32 Message Definition",
+  "name": "^^SDR_S32",
+  "type": "--SDR_S32",
+  "date": "2024-07-24T19:13:26Z"
+}

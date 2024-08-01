@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ADT-A28-ADT_A05-acknowledgement_choreography",
+  "id": "ADT-A28-ADT_A05-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ADT-A28-ADT_A05-acknowledgement_choreography",
+        "path": "ADT-A28-ADT_A05-acknowledgement_choreography",
+        "short": "ADT-A28-ADT_A05-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for ADT^A28^ADT_A05",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "ADT^A28^ADT_A05",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "ADT-A28-ADT_A05-acknowledgement_choreography"
+}

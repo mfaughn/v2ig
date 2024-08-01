@@ -1,0 +1,5 @@
+==== Consent Text:
+[v291_section="9.2.2.12"]
+
+When recording consents electronically it is important to know the specific text that was presented to the consenting person.
+

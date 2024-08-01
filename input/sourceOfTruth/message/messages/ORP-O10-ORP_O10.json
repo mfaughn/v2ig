@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORP-O10-ORP_O10",
+  "id": "ORP-O10-ORP_O10",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORP-O10-ORP_O10",
+        "path": "ORP-O10-ORP_O10",
+        "short": "ORP-O10-ORP_O10",
+        "definition": "ORP^O10^ORP_O10 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ORP-O10-ORP_O10.structure",
+        "path": "ORP-O10-ORP_O10.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ORP_O10"
+      }
+    ]
+  },
+  "title": "HL7 v2 ORP^O10^ORP_O10 Message Definition",
+  "name": "ORP^O10^ORP_O10",
+  "type": "ORP-O10-ORP_O10",
+  "date": "2024-07-24T19:13:26Z"
+}

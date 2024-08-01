@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Znn_D",
+  "id": "Znn_D",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Znn_D",
+        "path": "Znn_D",
+        "short": "Znn_D",
+        "definition": "Event Znn_D: Response Grammer with tabular response",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Znn_D Message Definition",
+  "name": "Znn_D",
+  "type": "Znn_D",
+  "date": "2024-07-24T19:13:28Z"
+}

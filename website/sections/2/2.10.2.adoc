@@ -1,0 +1,5 @@
+=== Trigger events
+[v291_section="2.10.2"]
+
+Users MAY develop local Z trigger events for messages.
+

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/QVR-Q17-QVR_Q17",
+  "id": "QVR-Q17-QVR_Q17",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "QVR-Q17-QVR_Q17",
+        "path": "QVR-Q17-QVR_Q17",
+        "short": "QVR-Q17-QVR_Q17",
+        "definition": "QVR^Q17^QVR_Q17 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "QVR-Q17-QVR_Q17.structure",
+        "path": "QVR-Q17-QVR_Q17.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "QVR_Q17"
+      }
+    ]
+  },
+  "title": "HL7 v2 QVR^Q17^QVR_Q17 Message Definition",
+  "name": "QVR^Q17^QVR_Q17",
+  "type": "QVR-Q17-QVR_Q17",
+  "date": "2024-07-24T19:13:27Z"
+}

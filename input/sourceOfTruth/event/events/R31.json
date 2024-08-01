@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/R31",
+  "id": "R31",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "R31",
+        "path": "R31",
+        "short": "R31",
+        "definition": "Event R31: Unsolicited New Point-Of-Care Observation Message – Search for an Order",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 R31 Message Definition",
+  "name": "R31",
+  "type": "R31",
+  "date": "2024-07-24T19:13:28Z"
+}

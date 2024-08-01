@@ -1,0 +1,5 @@
+==== Container Identifier
+[v291_section="13.1.3.20"]
+
+A numeric (or alphanumeric) identifier provided by the LIS or LAS to uniquely identify each specimen container or aliquot container. The _NCCLS LAB AUTOMATION STANDARD_ requires a unique identifier for each container introduced into the LAS or leaving the LAS.
+

@@ -1,0 +1,6 @@
+==== ZL7-1 Primary Key Value - ZL7 (CWE)
+[v291_section="8.6.1.1"]
+
+[datatype-definition]
+This field contains HL7 table values for identifier and text encoded as a CWE data type.
+

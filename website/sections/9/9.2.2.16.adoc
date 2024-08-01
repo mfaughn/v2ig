@@ -1,0 +1,5 @@
+==== Subject-imposed Limitations:
+[v291_section="9.2.2.16"]
+
+At the time of consent, the subject may wish to make modifications or add limitations to his or her consent. These modifications and limitations must be recorded.
+

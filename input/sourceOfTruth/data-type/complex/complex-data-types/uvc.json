@@ -1,0 +1,108 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/UVC",
+  "id": "UVC",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "UVC",
+  "title": "HL7 v2 UVC Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "UVC",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "UVC",
+        "path": "UVC",
+        "short": "UB value code and amount",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b7bb698>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "UVC.1",
+        "path": "UVC.1",
+        "short": "Value Code",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0153"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "UVC.2",
+        "path": "UVC.2",
+        "short": "Value Amount",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "UVC.3",
+        "path": "UVC.3",
+        "short": "Non-Monetary Value Amount / Quantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "UVC.4",
+        "path": "UVC.4",
+        "short": "Non-Monetary Value Amount / Units",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CWE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This data type is used to convey information defined by CMS or other regulatory agencies. It corresponds to UB fields 46A, 47A, 48A, 49A, 46B, 47B, 48B, and 49B and UB92 fields 39a, 39b, 39c, 39d, 40a, 40b, 40c, 40d, 41a, 41b, 41c, and 41d.\n\n*Note:* Replaces the CM data type used in sections 6.5.10.10 UB1-10 and 6.5.11.6 UB2-6, as of v 2.5.\n\nThe most common semi-private room rate is used in instances where the patient is placed in a private room at their request but their insurance only covers a semi-private room rate, which can be calculated using the 01-most common semi-private room rate.\n\nExample:\n\n|01&most common semi private rate&NUBC^750&USD|"
+}

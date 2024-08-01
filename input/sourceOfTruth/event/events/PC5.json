@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PC5",
+  "id": "PC5",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PC5",
+        "path": "PC5",
+        "short": "PC5",
+        "definition": "Event PC5: PRR - Patient Problem Response",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PC5 Message Definition",
+  "name": "PC5",
+  "type": "PC5",
+  "date": "2024-07-24T19:13:28Z"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Z85",
+  "id": "Z85",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Z85",
+        "path": "Z85",
+        "short": "Z85",
+        "definition": "Event Z85: Response Grammar Example: Pharmacy Information Comprehensive",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Z85 Message Definition",
+  "name": "Z85",
+  "type": "Z85",
+  "date": "2024-07-24T19:13:28Z"
+}

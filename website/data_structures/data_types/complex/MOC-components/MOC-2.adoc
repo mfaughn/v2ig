@@ -1,0 +1,5 @@
+== MOC.2 - Charge Code (CWE)
+
+[datatype-definition]
+The code identifying the charge to the ordering entity for the services performed.
+

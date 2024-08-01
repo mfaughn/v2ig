@@ -1,0 +1,20 @@
+= (MSG) Data Type - message type
+:v291_section: 2A.2.44
+:v2type: 'Data Type'
+:code: MSG
+:name: message type
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This field contains the message type, trigger event, and the message structure ID for the message.
+
+[NOTE]
+Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5.
+
+include::MSG-components/MSG-1.adoc[]
+
+include::MSG-components/MSG-2.adoc[]
+
+include::MSG-components/MSG-3.adoc[]
+

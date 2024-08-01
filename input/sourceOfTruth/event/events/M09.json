@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/M09",
+  "id": "M09",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "M09",
+        "path": "M09",
+        "short": "M09",
+        "definition": "Event M09: Master File Notification - Test/Observation (Categorical)",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 M09 Message Definition",
+  "name": "M09",
+  "type": "M09",
+  "date": "2024-07-24T19:13:28Z"
+}

@@ -1,0 +1,15 @@
+= (MO) Data Type - money
+:v291_section: 2A.2.41
+:v2type: 'Data Type'
+:code: MO
+:name: money
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies an amount of money and the denomination in which it is expressed.
+
+include::MO-components/MO-1.adoc[]
+
+include::MO-components/MO-2.adoc[]
+

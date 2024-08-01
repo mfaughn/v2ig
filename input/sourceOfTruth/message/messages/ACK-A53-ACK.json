@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ACK-A53-ACK",
+  "id": "ACK-A53-ACK",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ACK-A53-ACK",
+        "path": "ACK-A53-ACK",
+        "short": "ACK-A53-ACK",
+        "definition": "ACK^A53^ACK Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ACK-A53-ACK.structure",
+        "path": "ACK-A53-ACK.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ACK-A"
+      }
+    ]
+  },
+  "title": "HL7 v2 ACK^A53^ACK Message Definition",
+  "name": "ACK^A53^ACK",
+  "type": "ACK-A53-ACK",
+  "date": "2024-07-24T19:13:26Z"
+}

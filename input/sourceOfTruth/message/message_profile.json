@@ -1,0 +1,47 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile",
+  "id" : "v2-message-profile",
+  "version" : "0.0.1",
+  "name" : "V2MessageDefinitionProfile",
+  "title" : " HL7 v2 Message Definition Profile",
+  "status" : "active",
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "StructureDefinition",
+  "description" : "Rules that are true for all HL7 v2 Message Definitions",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "StructureDefinition.kind",
+        "path" : "StructureDefinition.kind",
+        "fixedCode" : "logical"
+      },
+      {
+        "id" : "StructureDefinition.abstract",
+        "path" : "StructureDefinition.abstract",
+        "fixedBoolean" : false
+      },
+      {
+        "id" : "StructureDefinition.type",
+        "path" : "StructureDefinition.type",
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "http://hl7.org/v2/ValueSet/Messages"
+        }
+      },
+      {
+        "id" : "StructureDefinition.baseDefinition",
+        "path" : "StructureDefinition.baseDefinition",
+        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/MessageDefinition"
+      },
+      {
+        "id" : "StructureDefinition.derivation",
+        "path" : "StructureDefinition.derivation",
+        "fixedCode" : "specialization"
+      }
+    ]
+  }
+}

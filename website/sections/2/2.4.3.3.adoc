@@ -1,0 +1,8 @@
+==== Length
+[v291_section="2.4.3.3"]
+
+[datatype-definition]
+If applicable, the number of characters that one occurrence of the data field or component MAY occupy if populated.
+
+For full discussion, consult section 2.5.5
+

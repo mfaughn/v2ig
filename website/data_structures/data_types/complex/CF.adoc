@@ -1,0 +1,65 @@
+= (CF) Data Type - coded element with formatted values
+:v291_section: 2A.2.7
+:v2type: 'Data Type'
+:code: CF
+:name: coded element with formatted values
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+As of v2.7 a third tuple, formerly known as triplet, has been added to the CF data type. Additionally, 3 new components were added to each tuple such that each tuple now has a total of 7 components. The Original Text component applies to the CF as a whole.
+
+[NOTE]
+The Vocabulary TC is the steward of the CF data type.
+
+[datatype-definition]
+This data type transmits codes and the formatted text associated with the code. This data type can be used to transmit for the first time the formatted text for the *canned text* portion of a report, for example, a standard radiological description for a normal chest X‑ray. The receiving system can store this information and in subsequent messages only the identifier need be sent. Another potential use of this data type is transmitting master file records that contain formatted text. This data type has six components as follows:
+
+The components, primary and alternate, are defined exactly as in the CE data type with the exception of the second and fifth components, which are of the formatted text data type.
+
+[er7-example]
+OBX||CF|71020^CXR^99CPMC||79989^\H\Description:\N\\.sp\\ti+4\Heart is not enlarged. There is no evidence of pneumonia, effusion, pneumothorax or any masses. \.sp+3\\H\Impression:\N\\.sp\\.ti+4\Negative chest.^99CPMC
+
+include::CF-components/CF-1.adoc[]
+
+include::CF-components/CF-2.adoc[]
+
+include::CF-components/CF-3.adoc[]
+
+include::CF-components/CF-4.adoc[]
+
+include::CF-components/CF-5.adoc[]
+
+include::CF-components/CF-6.adoc[]
+
+include::CF-components/CF-7.adoc[]
+
+include::CF-components/CF-8.adoc[]
+
+include::CF-components/CF-9.adoc[]
+
+include::CF-components/CF-10.adoc[]
+
+include::CF-components/CF-11.adoc[]
+
+include::CF-components/CF-12.adoc[]
+
+include::CF-components/CF-13.adoc[]
+
+include::CF-components/CF-14.adoc[]
+
+include::CF-components/CF-15.adoc[]
+
+include::CF-components/CF-16.adoc[]
+
+include::CF-components/CF-17.adoc[]
+
+include::CF-components/CF-18.adoc[]
+
+include::CF-components/CF-19.adoc[]
+
+include::CF-components/CF-20.adoc[]
+
+include::CF-components/CF-21.adoc[]
+
+include::CF-components/CF-22.adoc[]
+

@@ -1,0 +1,5 @@
+=== CM0 - Clinical Study Master Segment
+[v291_section="7.8.5"]
+
+The clinical study master segment (CMO) is described in Chapter 8 section 8.11.2.
+

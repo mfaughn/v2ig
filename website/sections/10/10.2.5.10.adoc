@@ -1,0 +1,5 @@
+==== Resource
+[v291_section="10.2.5.10"]
+
+A resource is any person, place or thing that must be reserved prior to its use.
+

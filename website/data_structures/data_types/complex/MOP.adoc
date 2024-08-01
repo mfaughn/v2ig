@@ -1,0 +1,25 @@
+= (MOP) Data Type - money or percentage
+:v291_section: 2A.2.43
+:v2type: 'Data Type'
+:code: MOP
+:name: money or percentage
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies an amount that may be either currency or a percentage. It is a variation on the MO data type that is limited to currency.
+
+[NOTE]
+Replaces the CM data type used in section 6.5.8.5 IN3-5, as of v 2.5. This data type is restricted to this field.
+
+[example]
+USD is the ISO 4217 code for the U.S. American dollar.
+
+|AT\^99.50^USD|
+
+include::MOP-components/MOP-1.adoc[]
+
+include::MOP-components/MOP-2.adoc[]
+
+include::MOP-components/MOP-3.adoc[]
+

@@ -1,0 +1,5 @@
+==== Pre-authorization:
+[v291_section="11.2.4.9"]
+
+Refers to the process of obtaining prior approval as to the appropriateness of a service. Pre-authorization does not guarantee coverage.
+

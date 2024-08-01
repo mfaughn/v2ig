@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RI",
+  "id": "RI",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "RI",
+  "title": "HL7 v2 RI Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "RI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RI",
+        "path": "RI",
+        "short": "repeat interval",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b99cb38>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RI.1",
+        "path": "RI.1",
+        "short": "Repeat Pattern",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0335"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RI.2",
+        "path": "RI.2",
+        "short": "Explicit Time Interval",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "199"
+              },
+              {
+                "url": "noTruncate",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Note: The reader is referred to the link:#a.2.67-rpt-repeat-pattern[_RPT – Repeat pattern_] data type, which provides a more rigorous framework for defining repeating time intervals."
+}

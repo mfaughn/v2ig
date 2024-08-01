@@ -1,0 +1,15 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">v2+ Home</a></li>
+  <!-- <li><a href="toc.html">Table of Contents</a></li> -->
+  <li><a href="domains.html">Domains</a></li>
+  <li><a href="message-structures.html">Message Structures</a></li>
+  <li><a href="segment-defintions.html">Segments</a></li>
+  <li><a href="data-types.html">Data Types</a></li>
+  <li><a href="data-type-flavors.html">Data Type Flavors</a></li>
+  <li><a href="terminology.html">Terminology</a></li>
+  <li><a href="control.html">Control</a></li>
+  <li><a href="conformance.html">Conformance</a></li>
+  <!-- <li><a href="FIXME.html">Encoding</a></li>
+  <li><a href="transport.html">Transport</a></li>
+  <li><a href="history.html">v2.x</a></li> -->
+</ul>      

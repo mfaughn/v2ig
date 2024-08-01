@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/Z82",
+  "id": "Z82",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Z82",
+        "path": "Z82",
+        "short": "Z82",
+        "definition": "Event Z82: Response Grammar Example: Pharmacy Dispense Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Z82 Message Definition",
+  "name": "Z82",
+  "type": "Z82",
+  "date": "2024-07-24T19:13:28Z"
+}

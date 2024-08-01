@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/DRC-O47-DRC_O47-acknowledgement_choreography",
+  "id": "DRC-O47-DRC_O47-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DRC-O47-DRC_O47-acknowledgement_choreography",
+        "path": "DRC-O47-DRC_O47-acknowledgement_choreography",
+        "short": "DRC-O47-DRC_O47-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for DRC^O47^DRC_O47",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "DRC^O47^DRC_O47",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "DRC-O47-DRC_O47-acknowledgement_choreography"
+}

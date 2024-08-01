@@ -1,0 +1,11 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/v2/ValueSet/Messages",
+  "id": "v2-vs-messages",
+  "status" : "active",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/v2/CodeSystem/Messages"
+    }]
+  }
+}

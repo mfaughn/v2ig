@@ -1,0 +1,18 @@
+= (MOC) Data Type - money and charge code
+:v291_section: 2A.2.42
+:v2type: 'Data Type'
+:code: MOC
+:name: money and charge code
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Transmits monetary information and the associated charge code for services performed.
+
+[NOTE]
+Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5.
+
+include::MOC-components/MOC-1.adoc[]
+
+include::MOC-components/MOC-2.adoc[]
+

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OSU-O52-OSU_O52",
+  "id": "OSU-O52-OSU_O52",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OSU-O52-OSU_O52",
+        "path": "OSU-O52-OSU_O52",
+        "short": "OSU-O52-OSU_O52",
+        "definition": "OSU^O52^OSU_O52 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OSU-O52-OSU_O52.structure",
+        "path": "OSU-O52-OSU_O52.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OSU_O52"
+      }
+    ]
+  },
+  "title": "HL7 v2 OSU^O52^OSU_O52 Message Definition",
+  "name": "OSU^O52^OSU_O52",
+  "type": "OSU-O52-OSU_O52",
+  "date": "2024-07-24T19:13:26Z"
+}

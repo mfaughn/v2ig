@@ -1,0 +1,22 @@
+= (SPD) Data Type - specialty description
+:v291_section: 2A.2.73
+:v2type: 'Data Type'
+:code: SPD
+:name: specialty description
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies the practitioner’s specialty and related information.
+
+[NOTE]
+Replaces the CM data type used in 15.4.5.5 PRA-5 as of v 2.5.
+
+include::SPD-components/SPD-1.adoc[]
+
+include::SPD-components/SPD-2.adoc[]
+
+include::SPD-components/SPD-3.adoc[]
+
+include::SPD-components/SPD-4.adoc[]
+

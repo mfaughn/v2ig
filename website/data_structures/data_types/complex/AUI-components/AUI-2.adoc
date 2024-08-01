@@ -1,0 +1,5 @@
+== AUI.2 - Date (DT)
+
+[datatype-definition]
+Date of authorization.
+

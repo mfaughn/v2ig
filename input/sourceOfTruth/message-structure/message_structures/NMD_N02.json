@@ -1,0 +1,289 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/NMD_N02",
+  "id": "NMD_N02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageStructure-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageStructure",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NMD_N02",
+        "path": "NMD_N02",
+        "short": "NMD_N02",
+        "definition": "NMD_N02 Message Structure",
+        "min": 0,
+        "max": "*"
+      },
+      [
+        {
+          "id": "NMD_N02.1-MSH",
+          "path": "NMD_N02.1-MSH",
+          "min": 0,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/MSH"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "NMD_N02.2-SFT",
+          "path": "NMD_N02.2-SFT",
+          "min": 1,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/SFT"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "NMD_N02.3-UAC",
+          "path": "NMD_N02.3-UAC",
+          "min": 1,
+          "max": "1",
+          "definition": "1",
+          "short": "1",
+          "type": [
+            {
+              "code": "http://hl7.org/v2/StructureDefinition/UAC"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+              "valueCode": "A"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES",
+          "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES",
+          "min": 0,
+          "max": "*",
+          "definition": "*",
+          "short": "*",
+          "type": [
+            {
+              "code": "BackboneElement"
+            }
+          ]
+        },
+        [
+          [
+            {
+              "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK",
+              "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK.1-NCK",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK.1-NCK",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NCK"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK.2-NTE",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.1-CLOCK.2-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS",
+              "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS.1-NST",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS.1-NST",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NST"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS.2-NTE",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.2-APP_STATS.2-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ],
+          [
+            {
+              "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS",
+              "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS",
+              "min": 1,
+              "max": "1",
+              "definition": "1",
+              "short": "1",
+              "type": [
+                {
+                  "code": "BackboneElement"
+                }
+              ]
+            },
+            [
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS.1-NSC",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS.1-NSC",
+                  "min": 0,
+                  "max": "1",
+                  "definition": "1",
+                  "short": "1",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NSC"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "id": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS.2-NTE",
+                  "path": "NMD_N02.4-CLOCK_AND_STATS_WITH_NOTES.3-APP_STATUS.2-NTE",
+                  "min": 1,
+                  "max": "*",
+                  "definition": "*",
+                  "short": "*",
+                  "type": [
+                    {
+                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+                      "valueCode": "A"
+                    }
+                  ]
+                }
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "title": "HL7 v2 NMD_N02 Segment Definition",
+  "name": "NMD_N02",
+  "type": "NMD_N02",
+  "date": "2024-07-24T19:13:19Z"
+}

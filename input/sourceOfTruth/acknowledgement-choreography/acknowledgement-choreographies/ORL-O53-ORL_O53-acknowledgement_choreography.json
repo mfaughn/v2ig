@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORL-O53-ORL_O53-acknowledgement_choreography",
+  "id": "ORL-O53-ORL_O53-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORL-O53-ORL_O53-acknowledgement_choreography",
+        "path": "ORL-O53-ORL_O53-acknowledgement_choreography",
+        "short": "ORL-O53-ORL_O53-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for ORL^O53^ORL_O53",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "ORL^O53^ORL_O53",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "ORL-O53-ORL_O53-acknowledgement_choreography"
+}

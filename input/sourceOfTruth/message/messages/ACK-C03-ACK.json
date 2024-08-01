@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ACK-C03-ACK",
+  "id": "ACK-C03-ACK",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ACK-C03-ACK",
+        "path": "ACK-C03-ACK",
+        "short": "ACK-C03-ACK",
+        "definition": "ACK^C03^ACK Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ACK-C03-ACK.structure",
+        "path": "ACK-C03-ACK.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ACK-A"
+      }
+    ]
+  },
+  "title": "HL7 v2 ACK^C03^ACK Message Definition",
+  "name": "ACK^C03^ACK",
+  "type": "ACK-C03-ACK",
+  "date": "2024-07-24T19:13:27Z"
+}

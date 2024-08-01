@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PCK",
+  "id": "PCK",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PCK",
+        "path": "PCK",
+        "short": "PCK",
+        "definition": "Event PCK: QRY - Patient Pathway (Goal-Oriented) Query",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PCK Message Definition",
+  "name": "PCK",
+  "type": "PCK",
+  "date": "2024-07-24T19:13:28Z"
+}

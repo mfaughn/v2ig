@@ -1,0 +1,293 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://hl7.org/v2/CodeSystem/ComplexDataTypes",
+  "id": "v2-cs-complex-data-types",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "AD",
+      "display": "address"
+    },
+    {
+      "code": "AUI",
+      "display": "authorization information"
+    },
+    {
+      "code": "CCD",
+      "display": "charge code and date"
+    },
+    {
+      "code": "CCP",
+      "display": "channel calibration parameters"
+    },
+    {
+      "code": "CD",
+      "display": "channel definition"
+    },
+    {
+      "code": "CF",
+      "display": "coded element with formatted values"
+    },
+    {
+      "code": "CNE",
+      "display": "coded with no exceptions"
+    },
+    {
+      "code": "CNN",
+      "display": "composite ID number and name simplified"
+    },
+    {
+      "code": "CP",
+      "display": "composite price"
+    },
+    {
+      "code": "CQ",
+      "display": "composite quantity with units"
+    },
+    {
+      "code": "CSU",
+      "display": "channel sensitivity and units"
+    },
+    {
+      "code": "CWE",
+      "display": "coded with exceptions"
+    },
+    {
+      "code": "CX",
+      "display": "extended composite ID with check digit"
+    },
+    {
+      "code": "DDI",
+      "display": "daily deductible information"
+    },
+    {
+      "code": "DIN",
+      "display": "date and institution name"
+    },
+    {
+      "code": "DLD",
+      "display": "discharge to location and date"
+    },
+    {
+      "code": "DLN",
+      "display": "driver’s license number"
+    },
+    {
+      "code": "DLT",
+      "display": "delta"
+    },
+    {
+      "code": "DR",
+      "display": "date/time range"
+    },
+    {
+      "code": "DTN",
+      "display": "day type and number"
+    },
+    {
+      "code": "ED",
+      "display": "encapsulated data"
+    },
+    {
+      "code": "EI",
+      "display": "entity identifier"
+    },
+    {
+      "code": "EIP",
+      "display": "entity identifier pair"
+    },
+    {
+      "code": "ERL",
+      "display": "Message location"
+    },
+    {
+      "code": "FC",
+      "display": "financial class"
+    },
+    {
+      "code": "FN",
+      "display": "family name"
+    },
+    {
+      "code": "HD",
+      "display": "hierarchic designator"
+    },
+    {
+      "code": "ICD",
+      "display": "insurance certification definition"
+    },
+    {
+      "code": "JCC",
+      "display": "job code/class"
+    },
+    {
+      "code": "MA",
+      "display": "multiplexed array"
+    },
+    {
+      "code": "MO",
+      "display": "money"
+    },
+    {
+      "code": "MOC",
+      "display": "money and charge code"
+    },
+    {
+      "code": "MOP",
+      "display": "money or percentage"
+    },
+    {
+      "code": "MSG",
+      "display": "message type"
+    },
+    {
+      "code": "NA",
+      "display": "numeric array"
+    },
+    {
+      "code": "NDL",
+      "display": "name with date and location"
+    },
+    {
+      "code": "NR",
+      "display": "numeric range"
+    },
+    {
+      "code": "OCD",
+      "display": "occurrence code and date"
+    },
+    {
+      "code": "OG",
+      "display": "observation grouper"
+    },
+    {
+      "code": "OSP",
+      "display": "occurrence span code and date"
+    },
+    {
+      "code": "PIP",
+      "display": "practitioner institutional privileges"
+    },
+    {
+      "code": "PL",
+      "display": "person location"
+    },
+    {
+      "code": "PLN",
+      "display": "practitioner license or other Id number"
+    },
+    {
+      "code": "PPN",
+      "display": "performing person time stamp"
+    },
+    {
+      "code": "PRL",
+      "display": "parent result link"
+    },
+    {
+      "code": "PT",
+      "display": "processing type"
+    },
+    {
+      "code": "PTA",
+      "display": "policy type and amount"
+    },
+    {
+      "code": "QIP",
+      "display": "query input parameter list"
+    },
+    {
+      "code": "QSC",
+      "display": "query selection criteria"
+    },
+    {
+      "code": "RCD",
+      "display": "row column definition"
+    },
+    {
+      "code": "RFR",
+      "display": "reference range"
+    },
+    {
+      "code": "RI",
+      "display": "repeat interval"
+    },
+    {
+      "code": "RMC",
+      "display": "room coverage"
+    },
+    {
+      "code": "RP",
+      "display": "reference pointer"
+    },
+    {
+      "code": "RPT",
+      "display": "repeat pattern"
+    },
+    {
+      "code": "SAD",
+      "display": "street address"
+    },
+    {
+      "code": "SCV",
+      "display": "scheduling class value pair"
+    },
+    {
+      "code": "SN",
+      "display": "structured numeric"
+    },
+    {
+      "code": "SPD",
+      "display": "specialty description"
+    },
+    {
+      "code": "SRT",
+      "display": "sort order"
+    },
+    {
+      "code": "UVC",
+      "display": "UB value code and amount"
+    },
+    {
+      "code": "VH",
+      "display": "visiting hours"
+    },
+    {
+      "code": "VID",
+      "display": "version identifier"
+    },
+    {
+      "code": "VR",
+      "display": "value range"
+    },
+    {
+      "code": "WVI",
+      "display": "channel identifier"
+    },
+    {
+      "code": "WVS",
+      "display": "waveform source"
+    },
+    {
+      "code": "XAD",
+      "display": "extended address"
+    },
+    {
+      "code": "XCN",
+      "display": "extended composite ID number and name for persons"
+    },
+    {
+      "code": "XON",
+      "display": "extended composite name and identification number for organizations"
+    },
+    {
+      "code": "XPN",
+      "display": "extended person name"
+    },
+    {
+      "code": "XTN",
+      "display": "extended telecommunication number"
+    }
+  ]
+}

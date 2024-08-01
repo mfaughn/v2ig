@@ -1,0 +1,5 @@
+== General Segments
+[v291_section="7.4"]
+
+The full definitions of many segments required for reporting clinical observations are included in other chapters. The patient identifying segment (PID) is provided in Chapter 3. The NTE segment is in Chapter 2.
+

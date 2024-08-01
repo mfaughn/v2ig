@@ -1,0 +1,6 @@
+==== Conformance Length
+[v291_section="2.4.3.4"]
+
+[datatype-definition]
+If applicable, the conformance length that applies to the field or component. For full discussion, consult section 2.5.5
+

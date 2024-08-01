@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PRR-PC5-",
+  "id": "PRR-PC5-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PRR-PC5-",
+        "path": "PRR-PC5-",
+        "short": "PRR-PC5-",
+        "definition": "PRR^PC5^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PRR^PC5^ Message Definition",
+  "name": "PRR^PC5^",
+  "type": "PRR-PC5-",
+  "date": "2024-07-24T19:13:27Z"
+}

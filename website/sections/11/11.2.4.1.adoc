@@ -1,0 +1,5 @@
+==== Benefits:
+[v291_section="11.2.4.1"]
+
+The services payable under a specific payor plan. They are also referred to as an insurance product, such as professional services, prescription drugs, etc.
+

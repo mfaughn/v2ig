@@ -1,0 +1,20 @@
+= (SAD) Data Type - street address
+:v291_section: 2A.2.68
+:v2type: 'Data Type'
+:code: SAD
+:name: street address
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies an entity's street address and associated detail.
+
+[NOTE]
+Appears ONLY in the XAD data type
+
+include::SAD-components/SAD-1.adoc[]
+
+include::SAD-components/SAD-2.adoc[]
+
+include::SAD-components/SAD-3.adoc[]
+

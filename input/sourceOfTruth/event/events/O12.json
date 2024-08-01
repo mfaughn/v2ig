@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O12",
+  "id": "O12",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O12",
+        "path": "O12",
+        "short": "O12",
+        "definition": "Event O12: Pharmacy/Treatment Encoded Order Acknowledgment",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O12 Message Definition",
+  "name": "O12",
+  "type": "O12",
+  "date": "2024-07-24T19:13:28Z"
+}

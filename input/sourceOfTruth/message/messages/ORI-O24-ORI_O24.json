@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORI-O24-ORI_O24",
+  "id": "ORI-O24-ORI_O24",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORI-O24-ORI_O24",
+        "path": "ORI-O24-ORI_O24",
+        "short": "ORI-O24-ORI_O24",
+        "definition": "ORI^O24^ORI_O24 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ORI-O24-ORI_O24.structure",
+        "path": "ORI-O24-ORI_O24.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ORI_O24"
+      }
+    ]
+  },
+  "title": "HL7 v2 ORI^O24^ORI_O24 Message Definition",
+  "name": "ORI^O24^ORI_O24",
+  "type": "ORI-O24-ORI_O24",
+  "date": "2024-07-24T19:13:26Z"
+}

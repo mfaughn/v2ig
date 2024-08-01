@@ -1,0 +1,8 @@
+==== Bottom of cap:
+[v291_section="13.1.3.10"]
+
+The farthest point from the top of the container/test tube that the cap reaches.
+
+[NOTE]
+This point may be inside the tube.
+

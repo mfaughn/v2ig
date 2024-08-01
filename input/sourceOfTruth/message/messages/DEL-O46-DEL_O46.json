@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/DEL-O46-DEL_O46",
+  "id": "DEL-O46-DEL_O46",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DEL-O46-DEL_O46",
+        "path": "DEL-O46-DEL_O46",
+        "short": "DEL-O46-DEL_O46",
+        "definition": "DEL^O46^DEL_O46 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DEL-O46-DEL_O46.structure",
+        "path": "DEL-O46-DEL_O46.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "DEL_O46"
+      }
+    ]
+  },
+  "title": "HL7 v2 DEL^O46^DEL_O46 Message Definition",
+  "name": "DEL^O46^DEL_O46",
+  "type": "DEL-O46-DEL_O46",
+  "date": "2024-07-24T19:13:26Z"
+}

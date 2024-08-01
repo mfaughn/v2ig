@@ -1,0 +1,5 @@
+==== LECIS:
+[v291_section="13.1.3.34"]
+
+Acronym for Laboratory Equipment Control Interface Specification, (ASTM E 1989-98).
+

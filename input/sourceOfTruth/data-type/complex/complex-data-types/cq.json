@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/CQ",
+  "id": "CQ",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "CQ",
+  "title": "HL7 v2 CQ Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CQ",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CQ",
+        "path": "CQ",
+        "short": "composite quantity with units",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011bfbebb0>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CQ.1",
+        "path": "CQ.1",
+        "short": "Quantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CQ.2",
+        "path": "CQ.2",
+        "short": "Units",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0794"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* CQ cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.\n\nExamples:\n\n|123.7^kg| kilograms is an ISO unit\n\n|150^lb&&ANSI+| weight in pounds is a customary US unit defined within ANSI+."
+}

@@ -1,0 +1,9 @@
+==== Application roles in a messaging environment
+[v291_section="11.2.2.6"]
+
+In a messaging environment, these four application roles communicate using specific kinds of messages and trigger events. The following figure illustrates the relationships between these application roles in a messaging environment:
+
+Figure 11‑1. Application role messaging relationships
+
+image::extracted-media/media/image1.wmf[]
+

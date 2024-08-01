@@ -1,0 +1,5 @@
+== CQ.1 - Quantity (NM)
+
+[datatype-definition]
+This component specifies the numeric quantity or amount of an entity.
+

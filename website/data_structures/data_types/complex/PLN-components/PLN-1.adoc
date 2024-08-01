@@ -1,0 +1,5 @@
+== PLN.1 - ID Number (ST)
+
+[datatype-definition]
+Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number.
+

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RDY-Znn_C-RDY_K15",
+  "id": "RDY-Znn_C-RDY_K15",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RDY-Znn_C-RDY_K15",
+        "path": "RDY-Znn_C-RDY_K15",
+        "short": "RDY-Znn_C-RDY_K15",
+        "definition": "RDY^Znn_C^RDY_K15 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RDY-Znn_C-RDY_K15.structure",
+        "path": "RDY-Znn_C-RDY_K15.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RDY_K15-A"
+      }
+    ]
+  },
+  "title": "HL7 v2 RDY^Znn_C^RDY_K15 Message Definition",
+  "name": "RDY^Znn_C^RDY_K15",
+  "type": "RDY-Znn_C-RDY_K15",
+  "date": "2024-07-24T19:13:27Z"
+}

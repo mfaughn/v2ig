@@ -1,0 +1,5 @@
+==== Original Mode flow chart
+[v291_section="2.8.2.3"]
+
+image::extracted-media/media/image3.png[]
+

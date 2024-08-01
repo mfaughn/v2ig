@@ -1,0 +1,18 @@
+= (CCD) Data Type - charge code and date
+:v291_section: 2A.2.3
+:v2type: 'Data Type'
+:code: CCD
+:name: charge code and date
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Specifies whether a charge action is based on an invocation event or is time-based.
+
+[NOTE]
+Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v2.5.
+
+include::CCD-components/CCD-1.adoc[]
+
+include::CCD-components/CCD-2.adoc[]
+

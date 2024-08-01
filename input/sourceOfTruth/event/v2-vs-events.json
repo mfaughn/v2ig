@@ -1,0 +1,11 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/v2/ValueSet/Events",
+  "id": "v2-vs-events",
+  "status" : "active",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/v2/CodeSystem/Events"
+    }]
+  }
+}

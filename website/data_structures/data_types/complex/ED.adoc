@@ -1,0 +1,21 @@
+= (ED) Data Type - encapsulated data
+:v291_section: 2A.2.24
+:v2type: 'Data Type'
+:code: ED
+:name: encapsulated data
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type transmits encapsulated data from a source system to a destination system. It contains the identity of the source system, the type of data, the encoding method of the data, and the data itself. This data type is similar to the RP (reference pointer) data type of Section _2A.2.66_, "_RP - reference pointer_," except that instead of pointing to the data on another system, it contains the data which is to be sent to that system.
+
+include::ED-components/ED-1.adoc[]
+
+include::ED-components/ED-2.adoc[]
+
+include::ED-components/ED-3.adoc[]
+
+include::ED-components/ED-4.adoc[]
+
+include::ED-components/ED-5.adoc[]
+

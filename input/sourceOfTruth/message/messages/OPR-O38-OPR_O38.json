@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OPR-O38-OPR_O38",
+  "id": "OPR-O38-OPR_O38",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OPR-O38-OPR_O38",
+        "path": "OPR-O38-OPR_O38",
+        "short": "OPR-O38-OPR_O38",
+        "definition": "OPR^O38^OPR_O38 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OPR-O38-OPR_O38.structure",
+        "path": "OPR-O38-OPR_O38.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OPR_O38"
+      }
+    ]
+  },
+  "title": "HL7 v2 OPR^O38^OPR_O38 Message Definition",
+  "name": "OPR^O38^OPR_O38",
+  "type": "OPR-O38-OPR_O38",
+  "date": "2024-07-24T19:13:26Z"
+}

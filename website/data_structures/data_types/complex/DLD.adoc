@@ -1,0 +1,18 @@
+= (DLD) Data Type - discharge to location and date
+:v291_section: 2A.2.17
+:v2type: 'Data Type'
+:code: DLD
+:name: discharge to location and date
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+Specifies the healthcare facility to which the patient was discharged and the date.
+
+[NOTE]
+Replaces the CM data type used in section 3.4.3.37 PV1-37, as of v 2.5.
+
+include::DLD-components/DLD-1.adoc[]
+
+include::DLD-components/DLD-2.adoc[]
+

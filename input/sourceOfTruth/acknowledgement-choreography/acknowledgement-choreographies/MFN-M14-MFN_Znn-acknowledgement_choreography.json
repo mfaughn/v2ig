@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/MFN-M14-MFN_Znn-acknowledgement_choreography",
+  "id": "MFN-M14-MFN_Znn-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MFN-M14-MFN_Znn-acknowledgement_choreography",
+        "path": "MFN-M14-MFN_Znn-acknowledgement_choreography",
+        "short": "MFN-M14-MFN_Znn-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for MFN^M14^MFN_Znn",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "MFN^M14^MFN_Znn",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "MFN-M14-MFN_Znn-acknowledgement_choreography"
+}

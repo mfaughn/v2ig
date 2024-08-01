@@ -1,0 +1,8 @@
+=== RAS:
+[v291_section="4A.6.5"]
+
+The Nursing application (and other applications) can generate the RAS, the pharmacy/treatment Administration Results message, whenever a medication is given to the patient. This message may occur multiple times for each order.
+
+[NOTE]
+Sites having a long term clinical data repository may wish to route data to the data repository from copies of all or any of the five messages.
+

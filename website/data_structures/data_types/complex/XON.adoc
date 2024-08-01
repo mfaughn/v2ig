@@ -1,0 +1,44 @@
+= (XON) Data Type - extended composite name and identification number for organizations
+:v291_section: 2A.2.89
+:v2type: 'Data Type'
+:code: XON
+:name: extended composite name and identification number for organizations
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+This data type is used in fields (e.g., PV2-23, NK1-13, PD1-3, OBR-44) to specify the name and ID number of an organization.
+
+[example]
+1:
+
+The ID for Good Health Hospital was assigned by the Community Health and Hospitals enterprise’s Hospital Master and was first issued at the Central Offices.
+
+Good Health Hospital^L^716^9^M10^&Hospital Master.Community Health and Hospitals&L^XX^&Central Offices.Community Health and Hospitals&L^A
+
+[example]
+2:
+
+Good Health Hospital has another ID that was issued by CMS. Assigning Authority, CMS, values only the first HD component, an IS data type and assigning facility is not relevant. This information might be transmitted accordingly:
+
+Good Health Hospital^L^4544^3^M10^CMS^XX^^A
+
+include::XON-components/XON-1.adoc[]
+
+include::XON-components/XON-2.adoc[]
+
+include::XON-components/XON-3.adoc[]
+
+include::XON-components/XON-4.adoc[]
+
+include::XON-components/XON-5.adoc[]
+
+include::XON-components/XON-6.adoc[]
+
+include::XON-components/XON-7.adoc[]
+
+include::XON-components/XON-8.adoc[]
+
+include::XON-components/XON-9.adoc[]
+
+include::XON-components/XON-10.adoc[]
+

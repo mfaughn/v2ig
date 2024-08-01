@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/A36",
+  "id": "A36",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "A36",
+        "path": "A36",
+        "short": "A36",
+        "definition": "Event A36: ADT/ACK - Merge Patient Information - Patient ID & Account Number",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 A36 Message Definition",
+  "name": "A36",
+  "type": "A36",
+  "date": "2024-07-24T19:13:28Z"
+}

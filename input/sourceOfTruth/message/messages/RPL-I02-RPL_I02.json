@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RPL-I02-RPL_I02",
+  "id": "RPL-I02-RPL_I02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RPL-I02-RPL_I02",
+        "path": "RPL-I02-RPL_I02",
+        "short": "RPL-I02-RPL_I02",
+        "definition": "RPL^I02^RPL_I02 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RPL-I02-RPL_I02.structure",
+        "path": "RPL-I02-RPL_I02.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "RPL_I02"
+      }
+    ]
+  },
+  "title": "HL7 v2 RPL^I02^RPL_I02 Message Definition",
+  "name": "RPL^I02^RPL_I02",
+  "type": "RPL-I02-RPL_I02",
+  "date": "2024-07-24T19:13:27Z"
+}

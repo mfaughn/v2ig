@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--CCU_I20",
+  "id": "--CCU_I20",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--CCU_I20",
+        "path": "--CCU_I20",
+        "short": "--CCU_I20",
+        "definition": "^^CCU_I20 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--CCU_I20.structure",
+        "path": "--CCU_I20.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "CCU_I20"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^CCU_I20 Message Definition",
+  "name": "^^CCU_I20",
+  "type": "--CCU_I20",
+  "date": "2024-07-24T19:13:26Z"
+}

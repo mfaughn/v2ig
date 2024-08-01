@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SMD-S32-SDR_S32",
+  "id": "SMD-S32-SDR_S32",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SMD-S32-SDR_S32",
+        "path": "SMD-S32-SDR_S32",
+        "short": "SMD-S32-SDR_S32",
+        "definition": "SMD^S32^SDR_S32 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SMD-S32-SDR_S32.structure",
+        "path": "SMD-S32-SDR_S32.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "SDR_S32-A"
+      }
+    ]
+  },
+  "title": "HL7 v2 SMD^S32^SDR_S32 Message Definition",
+  "name": "SMD^S32^SDR_S32",
+  "type": "SMD-S32-SDR_S32",
+  "date": "2024-07-24T19:13:27Z"
+}

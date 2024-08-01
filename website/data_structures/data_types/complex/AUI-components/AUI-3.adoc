@@ -1,0 +1,5 @@
+== AUI.3 - Source (ST)
+
+[datatype-definition]
+Source of authorization.
+

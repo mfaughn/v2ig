@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PPG-PCJ-PPG_PCG-acknowledgement_choreography",
+  "id": "PPG-PCJ-PPG_PCG-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PPG-PCJ-PPG_PCG-acknowledgement_choreography",
+        "path": "PPG-PCJ-PPG_PCG-acknowledgement_choreography",
+        "short": "PPG-PCJ-PPG_PCG-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for PPG^PCJ^PPG_PCG",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "PPG^PCJ^PPG_PCG",
+  "date": "2024-07-24T19:13:32Z",
+  "type": "PPG-PCJ-PPG_PCG-acknowledgement_choreography"
+}

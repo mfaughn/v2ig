@@ -1,0 +1,5 @@
+Please refer to this webpage for guidance on authoring using AsciiDoc: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+
+The directories in the 'website' directory do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the 'website' directory and its subdirectories. *NOTE*: whitespace is not allowed in the names of directories.  Please use underscore characters instead of whitespace characters.
+
+The content here will be processed into content suitable for use by the FHIR IG Publisher.

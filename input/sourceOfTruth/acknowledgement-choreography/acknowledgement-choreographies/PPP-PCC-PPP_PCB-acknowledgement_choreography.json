@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PPP-PCC-PPP_PCB-acknowledgement_choreography",
+  "id": "PPP-PCC-PPP_PCB-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PPP-PCC-PPP_PCB-acknowledgement_choreography",
+        "path": "PPP-PCC-PPP_PCB-acknowledgement_choreography",
+        "short": "PPP-PCC-PPP_PCB-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for PPP^PCC^PPP_PCB",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "PPP^PCC^PPP_PCB",
+  "date": "2024-07-24T19:13:32Z",
+  "type": "PPP-PCC-PPP_PCB-acknowledgement_choreography"
+}

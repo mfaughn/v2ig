@@ -1,0 +1,25 @@
+= (OG) Data Type - observation grouper
+:v291_section: 2A.2.50
+:v2type: 'Data Type'
+:code: OG
+:name: observation grouper
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+The components that can be used to define the structure of the observation/result segments (OBX) within an observation report segment (OBR).
+
+[example]
+Original Mode - |1.3 2| where the dot and space are locally defined; Enhanced Mode - |^1^3^2| where the standard defines the purpose of the components to enable grouping.
+
+[NOTE]
+In original mode, OG.1 plus OBX-3 provides uniqueness; in enhanced mode OG.2 and OG.3 plus OBX-3 will provide uniqueness; OG.4 may not be present.
+
+include::OG-components/OG-1.adoc[]
+
+include::OG-components/OG-2.adoc[]
+
+include::OG-components/OG-3.adoc[]
+
+include::OG-components/OG-4.adoc[]
+

@@ -1,0 +1,5 @@
+==== Purged:
+[v291_section="9.2.1.8"]
+
+A storage status in which a document is no longer available in this system.
+

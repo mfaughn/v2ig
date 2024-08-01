@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/MDM-T11-MDM_T01",
+  "id": "MDM-T11-MDM_T01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MDM-T11-MDM_T01",
+        "path": "MDM-T11-MDM_T01",
+        "short": "MDM-T11-MDM_T01",
+        "definition": "MDM^T11^MDM_T01 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MDM-T11-MDM_T01.structure",
+        "path": "MDM-T11-MDM_T01.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "MDM_T01-F"
+      }
+    ]
+  },
+  "title": "HL7 v2 MDM^T11^MDM_T01 Message Definition",
+  "name": "MDM^T11^MDM_T01",
+  "type": "MDM-T11-MDM_T01",
+  "date": "2024-07-24T19:13:27Z"
+}

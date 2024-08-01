@@ -1,0 +1,5 @@
+==== Primary care provider:
+[v291_section="11.2.4.10"]
+
+Indicates the provider responsible for delivering care as well as authorizing and channeling care to specialists and other providers in a gatekeeper system. The provider is also referred to as a case manager or a gatekeeper.
+

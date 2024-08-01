@@ -1,0 +1,5 @@
+=== OMP:
+[v291_section="4A.6.1"]
+
+The Ordering application generates a pharmacy/treatment OMP and sends it to the pharmacy or treatment application, Nursing application, and/or other applications as appropriate at the site.
+

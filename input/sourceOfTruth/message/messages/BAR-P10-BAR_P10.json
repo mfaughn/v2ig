@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/BAR-P10-BAR_P10",
+  "id": "BAR-P10-BAR_P10",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "BAR-P10-BAR_P10",
+        "path": "BAR-P10-BAR_P10",
+        "short": "BAR-P10-BAR_P10",
+        "definition": "BAR^P10^BAR_P10 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BAR-P10-BAR_P10.structure",
+        "path": "BAR-P10-BAR_P10.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "BAR_P10"
+      }
+    ]
+  },
+  "title": "HL7 v2 BAR^P10^BAR_P10 Message Definition",
+  "name": "BAR^P10^BAR_P10",
+  "type": "BAR-P10-BAR_P10",
+  "date": "2024-07-24T19:13:27Z"
+}

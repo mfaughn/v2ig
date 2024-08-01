@@ -1,0 +1,5 @@
+==== Acknowledgement Choreography
+[v291_section="14.3.1.0"]
+
+None - Refer to Chapter 5 for generic query choreography.
+

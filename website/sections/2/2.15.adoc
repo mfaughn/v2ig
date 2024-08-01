@@ -1,0 +1,3 @@
+== Miscellaneous HL7 tables used across all chapters
+[v291_section="2.15"]
+

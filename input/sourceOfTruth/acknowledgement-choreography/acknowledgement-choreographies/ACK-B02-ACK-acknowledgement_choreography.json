@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ACK-B02-ACK-acknowledgement_choreography",
+  "id": "ACK-B02-ACK-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ACK-B02-ACK-acknowledgement_choreography",
+        "path": "ACK-B02-ACK-acknowledgement_choreography",
+        "short": "ACK-B02-ACK-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for ACK^B02^ACK",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "ACK^B02^ACK",
+  "date": "2024-07-24T19:13:32Z",
+  "type": "ACK-B02-ACK-acknowledgement_choreography"
+}

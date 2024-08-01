@@ -1,0 +1,15 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/Event",
+  "id" : "v2-event",
+  "version" : "0.0.1",
+  "name" : "V2Event",
+  "title" : " HL7 v2 Event",
+  "status" : "active",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "Event",
+  "description" : "Abstract base for all event definitions",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization"
+}

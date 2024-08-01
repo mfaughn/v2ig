@@ -1,0 +1,31 @@
+=Clinical
+
+== Introduction
+
+FIXME
+
+== Clinical Subdomains
+
+xref:blood_bank/blood_bank.adoc[Blood Bank]
+
+xref:clinical_trials/clinical_trials.adoc[Clinical Trials]
+
+xref:dietary/dietary.adoc[Dietary]
+
+xref:general_orders_and_results/general_orders_and_results.adoc[General Orders And Results]
+
+xref:imaging/imaging.adoc[Imaging]
+
+xref:immunizations/immunizations.adoc[Immunizations]
+
+xref:laboratory/laboratory.adoc[Laboratory]
+
+xref:medical records/medical records.adoc[Medical Records]
+
+xref:patient_care/patient_care.adoc[Patient Care]
+
+xref:pharmacy/pharmacy.adoc[Pharmacy]
+
+xref:product_experience/product_experience.adoc[Product Experience]
+
+xref:supply/supply.adoc[Supply]

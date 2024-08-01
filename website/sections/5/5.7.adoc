@@ -1,0 +1,5 @@
+== PUBLISH AND SUBSCRIBE
+[v291_section="5.7"]
+
+This section outlines the framework/process of the publish and subscribe machinery.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/P04",
+  "id": "P04",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "P04",
+        "path": "P04",
+        "short": "P04",
+        "definition": "Event P04: QRY/DSR - Generate Bills And Accounts Receivable Statements",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 P04 Message Definition",
+  "name": "P04",
+  "type": "P04",
+  "date": "2024-07-24T19:13:28Z"
+}

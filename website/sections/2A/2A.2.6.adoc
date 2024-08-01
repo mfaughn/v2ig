@@ -1,0 +1,5 @@
+=== WITHDRAWN (CE – coded entry)
+[v291_section="2A.2.6"]
+
+*Attention: _The CE data type has been replaced by the CWE and CNE data types and the detail was withdrawn and removed from the standard as of v 2.6._*
+

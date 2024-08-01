@@ -1,0 +1,5 @@
+== OCD.2 - Occurrence Date (DT)
+
+[datatype-definition]
+The date the event, relating to a bill that may affect payer processing, occurred.
+

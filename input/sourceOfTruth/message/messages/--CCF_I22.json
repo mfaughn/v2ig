@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--CCF_I22",
+  "id": "--CCF_I22",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--CCF_I22",
+        "path": "--CCF_I22",
+        "short": "--CCF_I22",
+        "definition": "^^CCF_I22 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--CCF_I22.structure",
+        "path": "--CCF_I22.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "CCF_I22"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^CCF_I22 Message Definition",
+  "name": "^^CCF_I22",
+  "type": "--CCF_I22",
+  "date": "2024-07-24T19:13:26Z"
+}

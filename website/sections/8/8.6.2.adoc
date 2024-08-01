@@ -1,0 +1,3 @@
+=== MFN Message with Original Acknowledgment Mode
+[v291_section="8.6.2"]
+

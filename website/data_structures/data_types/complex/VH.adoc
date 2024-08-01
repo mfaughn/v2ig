@@ -1,0 +1,19 @@
+= (VH) Data Type - visiting hours
+:v291_section: 2A.2.82
+:v2type: 'Data Type'
+:code: VH
+:name: visiting hours
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type contains the hours when a patient location is open for visiting. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70267[_HL7 Table 0267 - Days of_ _the Week_] for valid values for the first two components.
+
+include::VH-components/VH-1.adoc[]
+
+include::VH-components/VH-2.adoc[]
+
+include::VH-components/VH-3.adoc[]
+
+include::VH-components/VH-4.adoc[]
+

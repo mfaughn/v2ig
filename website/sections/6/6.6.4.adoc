@@ -1,0 +1,19 @@
+=== Update patient accounts - update diagnosis and DRG information
+[v291_section="6.6.4"]
+
+[er7]
+MSH|^~\&|UREV||PATB||19930908135030||BAR^P05^BAR_P05|MSG0018|P|2.8<cr>
+
+[er7]
+EVN|P05|19930908135030
+
+[er7]
+PID|||125976||EVERYMAN^ADAM^J|||||||||||||125976011<cr>
+
+[er7]
+DG1|001|I9|1550|MAL NEO LIVER, PRIMARY|19880501103005|F<cr>
+
+[er7]
+DRG|203|19880501103010|Y||D|5<cr>
+
+

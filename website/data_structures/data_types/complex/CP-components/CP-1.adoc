@@ -1,0 +1,8 @@
+== CP.1 - Price (MO)
+
+[datatype-definition]
+The only required component; usually containing a decimal point.
+
+[NOTE]
+Each component of the MO data type (Section _2A.2.41_, "_MO - money_") is a subcomponent here.
+

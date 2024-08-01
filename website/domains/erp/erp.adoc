@@ -1,0 +1,17 @@
+=Erp
+
+== Introduction
+
+FIXME
+
+== Erp Subdomains
+
+xref:lab_automation/lab_automation.adoc[Lab Automation]
+
+xref:materials_management/materials_management.adoc[Materials Management]
+
+xref:personnel_management/personnel_management.adoc[Personnel Management]
+
+xref:specimen_shipment_manifest/specimen_shipment_manifest.adoc[Specimen Shipment Manifest]
+
+xref:supply/supply.adoc[Supply]

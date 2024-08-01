@@ -1,0 +1,7 @@
+=== RXA - segment usage in vaccine messages
+[v291_section="4A.8.1"]
+
+With the exception of _RXA-5-Administered code_ and _RXA-17-Substance manufacturer name_, the structure for the RXA segment below is identical to that documented in section _4A.4.7_, "_RXA - Pharmacy/Treatment Administration Segment_." When using the RXA segment for vaccine messages, link:#HL70292[_H__L7 Table 0292- V__acci__nes Adm__inistered_], should be used for _RXA-5- Administered code_, as noted in Section _4A.8.1.1_, "_Using RXA-5 in vaccine messages_." file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70227[_Imported Table 0227- Manufacturers of Vaccines_], should be used for _RXA-17- Substance manufacturer name_, as noted in Section _4A.8.1.2_, "_Using RXA-17 in vaccine messages_."
+
+[segment_definition-table]
+

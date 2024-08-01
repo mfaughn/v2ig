@@ -1,0 +1,5 @@
+== QUERY
+[v291_section="9.9"]
+
+A query may be used to retrieve a list of documents or a specific document. See Chapter 5, "Queries", for details of queries.
+

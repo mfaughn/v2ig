@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OUL-R24-OUL_R24",
+  "id": "OUL-R24-OUL_R24",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OUL-R24-OUL_R24",
+        "path": "OUL-R24-OUL_R24",
+        "short": "OUL-R24-OUL_R24",
+        "definition": "OUL^R24^OUL_R24 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OUL-R24-OUL_R24.structure",
+        "path": "OUL-R24-OUL_R24.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OUL_R24"
+      }
+    ]
+  },
+  "title": "HL7 v2 OUL^R24^OUL_R24 Message Definition",
+  "name": "OUL^R24^OUL_R24",
+  "type": "OUL-R24-OUL_R24",
+  "date": "2024-07-24T19:13:27Z"
+}

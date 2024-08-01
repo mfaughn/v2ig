@@ -1,0 +1,5 @@
+==== Document completion table:
+[v291_section="9.2.1.4"]
+
+The following terms are used to describe the workflow progression of a document:
+

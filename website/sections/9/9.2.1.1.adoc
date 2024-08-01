@@ -1,0 +1,5 @@
+==== Archived:
+[v291_section="9.2.1.1"]
+
+A storage status in which a document has been stored off-line for long-term access.
+

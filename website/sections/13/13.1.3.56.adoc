@@ -1,0 +1,8 @@
+==== Specimen probe//Sample probe:
+[v291_section="13.1.3.56"]
+
+A part of an instrument or specimen processing and handling device that aspirates fluid from a specimen and delivers it to the instrument for analysis.
+
+[NOTE]
+The sample probe can also be called sample proboscis, nozzle, needle, or sampling mechanism.
+

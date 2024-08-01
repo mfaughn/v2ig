@@ -1,0 +1,5 @@
+== Outstanding Issues
+[v291_section="16.5"]
+
+The following items are being discussed in the Financial Management committee for addition to future versions of HL7:
+

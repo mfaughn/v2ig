@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ADT-A39-",
+  "id": "ADT-A39-",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ADT-A39-",
+        "path": "ADT-A39-",
+        "short": "ADT-A39-",
+        "definition": "ADT^A39^ Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 ADT^A39^ Message Definition",
+  "name": "ADT^A39^",
+  "type": "ADT-A39-",
+  "date": "2024-07-24T19:13:26Z"
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/QBP-Z99-QBP_Q13",
+  "id": "QBP-Z99-QBP_Q13",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "QBP-Z99-QBP_Q13",
+        "path": "QBP-Z99-QBP_Q13",
+        "short": "QBP-Z99-QBP_Q13",
+        "definition": "QBP^Z99^QBP_Q13 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "QBP-Z99-QBP_Q13.structure",
+        "path": "QBP-Z99-QBP_Q13.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "QBP_Q13"
+      }
+    ]
+  },
+  "title": "HL7 v2 QBP^Z99^QBP_Q13 Message Definition",
+  "name": "QBP^Z99^QBP_Q13",
+  "type": "QBP-Z99-QBP_Q13",
+  "date": "2024-07-24T19:13:27Z"
+}

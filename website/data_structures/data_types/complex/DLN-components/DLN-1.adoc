@@ -1,0 +1,5 @@
+== DLN.1 - Driver's License Number (ST)
+
+[datatype-definition]
+This field contains the driver’s license number.
+

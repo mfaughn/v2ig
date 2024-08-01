@@ -1,0 +1,63 @@
+= (PPN) Data Type - performing person time stamp
+:v291_section: 2A.2.56
+:v2type: 'Data Type'
+:code: PPN
+:name: performing person time stamp
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type is the equivalent of an XCN data type joined with a DTM data type. However, the XCN data type has been flattened to allow legal expression of its embedded complex data types HD, CWE and CWE.
+
+include::PPN-components/PPN-1.adoc[]
+
+include::PPN-components/PPN-2.adoc[]
+
+include::PPN-components/PPN-3.adoc[]
+
+include::PPN-components/PPN-4.adoc[]
+
+include::PPN-components/PPN-5.adoc[]
+
+include::PPN-components/PPN-6.adoc[]
+
+include::PPN-components/PPN-7.adoc[]
+
+include::PPN-components/PPN-8.adoc[]
+
+include::PPN-components/PPN-9.adoc[]
+
+include::PPN-components/PPN-10.adoc[]
+
+include::PPN-components/PPN-11.adoc[]
+
+include::PPN-components/PPN-12.adoc[]
+
+include::PPN-components/PPN-13.adoc[]
+
+include::PPN-components/PPN-14.adoc[]
+
+include::PPN-components/PPN-15.adoc[]
+
+include::PPN-components/PPN-16.adoc[]
+
+include::PPN-components/PPN-17.adoc[]
+
+include::PPN-components/PPN-18.adoc[]
+
+include::PPN-components/PPN-19.adoc[]
+
+include::PPN-components/PPN-20.adoc[]
+
+include::PPN-components/PPN-21.adoc[]
+
+include::PPN-components/PPN-22.adoc[]
+
+include::PPN-components/PPN-23.adoc[]
+
+include::PPN-components/PPN-24.adoc[]
+
+include::PPN-components/PPN-25.adoc[]
+
+include::PPN-components/PPN-26.adoc[]
+

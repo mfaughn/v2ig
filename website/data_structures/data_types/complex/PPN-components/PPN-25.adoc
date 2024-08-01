@@ -1,0 +1,5 @@
+== PPN.25 - Security Check (ST)
+
+[datatype-definition]
+This component is used to communicate a version code that may be assigned to the value given in _PPN.1 - Person Identifier_.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORU-R42-ORU_R01-acknowledgement_choreography",
+  "id": "ORU-R42-ORU_R01-acknowledgement_choreography",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORU-R42-ORU_R01-acknowledgement_choreography",
+        "path": "ORU-R42-ORU_R01-acknowledgement_choreography",
+        "short": "ORU-R42-ORU_R01-acknowledgement_choreography",
+        "definition": "Acknowledgement Choreography for ORU^R42^ORU_R01",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 Acknowledgement Choreography for ",
+  "name": "ORU^R42^ORU_R01",
+  "date": "2024-07-24T19:13:31Z",
+  "type": "ORU-R42-ORU_R01-acknowledgement_choreography"
+}

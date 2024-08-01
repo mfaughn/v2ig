@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--MFN_Znn",
+  "id": "--MFN_Znn",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--MFN_Znn",
+        "path": "--MFN_Znn",
+        "short": "--MFN_Znn",
+        "definition": "^^MFN_Znn Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--MFN_Znn.structure",
+        "path": "--MFN_Znn.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "MFN_Znn"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^MFN_Znn Message Definition",
+  "name": "^^MFN_Znn",
+  "type": "--MFN_Znn",
+  "date": "2024-07-24T19:13:26Z"
+}

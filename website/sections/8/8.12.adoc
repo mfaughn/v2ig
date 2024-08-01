@@ -1,0 +1,3 @@
+== INVENTORY ITEM MASTER FILES
+[v291_section="8.12"]
+

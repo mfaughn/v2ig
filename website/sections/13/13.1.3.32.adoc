@@ -1,0 +1,5 @@
+==== Laboratory equipment control interface specification (LECIS):
+[v291_section="13.1.3.32"]
+
+A high-level protocol that defines message content for standard behaviors or interactions for remote control of analytical instruments and devices (ASTM E 1989-98).
+

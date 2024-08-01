@@ -1,0 +1,5 @@
+== DDI.2 - Monetary Amount (MO)
+
+[datatype-definition]
+The monetary amount of the deductible.
+

@@ -1,0 +1,24 @@
+= (PIP) Data Type - practitioner institutional privileges
+:v291_section: 2A.2.53
+:v2type: 'Data Type'
+:code: PIP
+:name: practitioner institutional privileges
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type specifies the institutional privileges with associated detail granted to a provider.
+
+[NOTE]
+Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5.
+
+include::PIP-components/PIP-1.adoc[]
+
+include::PIP-components/PIP-2.adoc[]
+
+include::PIP-components/PIP-3.adoc[]
+
+include::PIP-components/PIP-4.adoc[]
+
+include::PIP-components/PIP-5.adoc[]
+

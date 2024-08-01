@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--CCQ_I19",
+  "id": "--CCQ_I19",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--CCQ_I19",
+        "path": "--CCQ_I19",
+        "short": "--CCQ_I19",
+        "definition": "^^CCQ_I19 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--CCQ_I19.structure",
+        "path": "--CCQ_I19.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "CCQ_I19"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^CCQ_I19 Message Definition",
+  "name": "^^CCQ_I19",
+  "type": "--CCQ_I19",
+  "date": "2024-07-24T19:13:26Z"
+}

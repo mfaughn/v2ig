@@ -1,0 +1,25 @@
+= (QSC) Data Type - query selection criteria
+:v291_section: 2A.2.61
+:v2type: 'Data Type'
+:code: QSC
+:name: query selection criteria
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This field indicates the conditions that qualify the rows to be returned in the query response.
+
+[NOTE]
+This field conveys the same information as the "WHERE" clause in the corresponding SQL expression of the query, but is formatted differently.
+
+[er7-example]
+|@PID.5.1\^EQ^EVANS|
+
+include::QSC-components/QSC-1.adoc[]
+
+include::QSC-components/QSC-2.adoc[]
+
+include::QSC-components/QSC-3.adoc[]
+
+include::QSC-components/QSC-4.adoc[]
+

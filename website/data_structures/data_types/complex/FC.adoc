@@ -1,0 +1,12 @@
+= (FC) Data Type - financial class
+:v291_section: 2A.2.29
+:v2type: 'Data Type'
+:code: FC
+:name: financial class
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+include::FC-components/FC-1.adoc[]
+
+include::FC-components/FC-2.adoc[]
+

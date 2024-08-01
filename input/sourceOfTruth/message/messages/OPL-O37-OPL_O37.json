@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/OPL-O37-OPL_O37",
+  "id": "OPL-O37-OPL_O37",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OPL-O37-OPL_O37",
+        "path": "OPL-O37-OPL_O37",
+        "short": "OPL-O37-OPL_O37",
+        "definition": "OPL^O37^OPL_O37 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "OPL-O37-OPL_O37.structure",
+        "path": "OPL-O37-OPL_O37.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "OPL_O37"
+      }
+    ]
+  },
+  "title": "HL7 v2 OPL^O37^OPL_O37 Message Definition",
+  "name": "OPL^O37^OPL_O37",
+  "type": "OPL-O37-OPL_O37",
+  "date": "2024-07-24T19:13:26Z"
+}

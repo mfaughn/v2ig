@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/DR",
+  "id": "DR",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "DR",
+  "title": "HL7 v2 DR Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "DR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DR",
+        "path": "DR",
+        "short": "date/time range",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b952588>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DR.1",
+        "path": "DR.1",
+        "short": "Range Start Date/Time",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "DR.2",
+        "path": "DR.2",
+        "short": "Range End Date/Time",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Note:* DR cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field."
+}

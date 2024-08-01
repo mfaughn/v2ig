@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O34",
+  "id": "O34",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O34",
+        "path": "O34",
+        "short": "O34",
+        "definition": "Event O34: Laboratory order response message to a multiple order related to single specimen OML - Patient Segments Required",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O34 Message Definition",
+  "name": "O34",
+  "type": "O34",
+  "date": "2024-07-24T19:13:28Z"
+}

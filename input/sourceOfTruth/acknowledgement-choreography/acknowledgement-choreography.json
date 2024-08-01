@@ -1,0 +1,15 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/AcknowledgementChoreography",
+  "id" : "v2-acknowledgement-choreography",
+  "version" : "0.0.1",
+  "name" : "V2AcknowledgementChoreography",
+  "title" : " HL7 v2 Acknowledgement Choreography",
+  "status" : "active",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "AcknowledgementChoreography",
+  "description" : "Abstract base for all v2 acknowlegement choreographies",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization"
+}

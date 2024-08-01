@@ -1,0 +1,19 @@
+== Transfusion Service (Blood Bank) Transaction Flow Diagram
+[v291_section="4.15"]
+
+The following diagram depicts the message flow of the blood product messages.
+
+image::extracted-media/media/image3.wmf[]
+
+image::extracted-media/media/image4.emf[]
+
+image::extracted-media/media/image5.wmf[]
+
+image::extracted-media/media/image6.wmf[]
+
+image::extracted-media/media/image7.wmf[]
+
+image::extracted-media/media/image8.wmf[]
+
+image::extracted-media/media/image9.emf[]
+

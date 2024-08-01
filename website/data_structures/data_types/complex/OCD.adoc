@@ -1,0 +1,25 @@
+= (OCD) Data Type - occurrence code and date
+:v291_section: 2A.2.49
+:v2type: 'Data Type'
+:code: OCD
+:name: occurrence code and date
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+The code and associated date defining a significant event relating to a bill that may affect payer processing.
+
+[NOTE]
+Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.
+
+This data type carries data defined by CMS or other regulatory agencies. It corresponds to UB82 Fields 28‑32 and UB92 fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. Refer to a UB specification for additional information.
+
+Use Case: A Medicare beneficiary was confined in hospital from January 1, 1992 to January 10, 1992, however, his Medicare Part A benefits were exhausted as of January 8, 1992, and he was not entitled to Part B benefits. Therefore, Form Locator 32 should contain code 23 and the date 010892.
+
+[er7-example]
+|23&Benefits Exhausted&NUBC^19920108|
+
+include::OCD-components/OCD-1.adoc[]
+
+include::OCD-components/OCD-2.adoc[]
+

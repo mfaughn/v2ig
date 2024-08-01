@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--QBP_O34",
+  "id": "--QBP_O34",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--QBP_O34",
+        "path": "--QBP_O34",
+        "short": "--QBP_O34",
+        "definition": "^^QBP_O34 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--QBP_O34.structure",
+        "path": "--QBP_O34.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "QBP_O34"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^QBP_O34 Message Definition",
+  "name": "^^QBP_O34",
+  "type": "--QBP_O34",
+  "date": "2024-07-24T19:13:25Z"
+}

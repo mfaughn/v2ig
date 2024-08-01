@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PCJ",
+  "id": "PCJ",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PCJ",
+        "path": "PCJ",
+        "short": "PCJ",
+        "definition": "Event PCJ: Patient Pathway Message (Goal-Oriented)",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 PCJ Message Definition",
+  "name": "PCJ",
+  "type": "PCJ",
+  "date": "2024-07-24T19:13:28Z"
+}

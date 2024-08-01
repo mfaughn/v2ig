@@ -1,0 +1,11 @@
+== Referenced Organizations and Documents
+[v291_section="3.7"]
+
+• HCFA, Health Care Financing Administration, U.S. Dept. of Health and Human Services, USA
+
+• CMS, Centers for Medicare/Medicaid Services
+
+• ERISA: Employment Retirement Income Security Act, USA
+
+• LOINC: Lab Observation Identifier Names and Codes, Regenstrief Institute, Indianapolis, IN, USA
+

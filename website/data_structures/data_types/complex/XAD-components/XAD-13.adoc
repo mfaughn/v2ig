@@ -1,0 +1,5 @@
+== XAD.13 - Effective Date (DTM)
+
+[datatype-definition]
+The first date, if known, on which the address is valid and active for the ‘owning’ entity.
+

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/MFN-M11-MFN_M11",
+  "id": "MFN-M11-MFN_M11",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MFN-M11-MFN_M11",
+        "path": "MFN-M11-MFN_M11",
+        "short": "MFN-M11-MFN_M11",
+        "definition": "MFN^M11^MFN_M11 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MFN-M11-MFN_M11.structure",
+        "path": "MFN-M11-MFN_M11.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "MFN_M11"
+      }
+    ]
+  },
+  "title": "HL7 v2 MFN^M11^MFN_M11 Message Definition",
+  "name": "MFN^M11^MFN_M11",
+  "type": "MFN-M11-MFN_M11",
+  "date": "2024-07-24T19:13:27Z"
+}

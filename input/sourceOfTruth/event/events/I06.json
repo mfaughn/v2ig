@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/I06",
+  "id": "I06",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "I06",
+        "path": "I06",
+        "short": "I06",
+        "definition": "Event I06: RQC/RCL - Request/Receipt of Clinical Data Listing",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 I06 Message Definition",
+  "name": "I06",
+  "type": "I06",
+  "date": "2024-07-24T19:13:28Z"
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "http://hl7.org/v2/StructureDefinition/Segment",
+  "id" : "v2-segment",
+  "version" : "0.0.1",
+  "name" : "V2Segment",
+  "title" : " HL7 v2 Segment",
+  "status" : "active",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "Segment",
+  "description" : "Abstract base for all v2 segment definitions",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization"
+}

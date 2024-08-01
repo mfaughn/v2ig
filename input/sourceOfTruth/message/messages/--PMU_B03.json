@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/--PMU_B03",
+  "id": "--PMU_B03",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "--PMU_B03",
+        "path": "--PMU_B03",
+        "short": "--PMU_B03",
+        "definition": "^^PMU_B03 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "--PMU_B03.structure",
+        "path": "--PMU_B03.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "PMU_B03"
+      }
+    ]
+  },
+  "title": "HL7 v2 ^^PMU_B03 Message Definition",
+  "name": "^^PMU_B03",
+  "type": "--PMU_B03",
+  "date": "2024-07-24T19:13:26Z"
+}

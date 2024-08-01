@@ -1,0 +1,24 @@
+{
+  "resourceType" : "CodeSystem",
+  "url" : "http://hl7.org/v2/CodeSystem/SegmentStatus",
+  "status" : "active",
+  "content" : "complete",
+  "concept" : [
+    {
+      "code" : "A",
+      "display" : "Active"
+    },
+    {
+      "code" : "B",
+      "display" : "Retained for backwards compatibility"
+    },
+    {
+      "code" : "D",
+      "display" : "Deprecated"
+    },
+    {
+      "code" : "W",
+      "display" : "Withdrawn"
+    }
+  ]
+}

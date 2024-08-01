@@ -1,0 +1,5 @@
+==== Interaction:
+[v291_section="13.1.3.29"]
+
+A standard exchange of messages between two instances of equipment that synchronizes the execution of one or more commands. State models are used describe the standard interactions.
+

@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/R32",
+  "id": "R32",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "R32",
+        "path": "R32",
+        "short": "R32",
+        "definition": "Event R32: Unsolicited Pre-Ordered Point-Of-Care Observation",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 R32 Message Definition",
+  "name": "R32",
+  "type": "R32",
+  "date": "2024-07-24T19:13:28Z"
+}

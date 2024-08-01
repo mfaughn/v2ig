@@ -1,0 +1,5 @@
+== Special HL7 Protocols
+[v291_section="2.9"]
+
+This section contains several extensions to the basic HL7 message protocol. These extensions represent implementation choices, and are to be used on a site-specific and application-specific basis as needed.
+

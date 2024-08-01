@@ -1,0 +1,5 @@
+== XPN.4 - Suffix (ST)
+
+[datatype-definition]
+Used to specify a name suffix (e.g., Jr. or III).
+

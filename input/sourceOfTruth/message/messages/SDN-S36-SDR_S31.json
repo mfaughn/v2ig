@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SDN-S36-SDR_S31",
+  "id": "SDN-S36-SDR_S31",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SDN-S36-SDR_S31",
+        "path": "SDN-S36-SDR_S31",
+        "short": "SDN-S36-SDR_S31",
+        "definition": "SDN^S36^SDR_S31 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SDN-S36-SDR_S31.structure",
+        "path": "SDN-S36-SDR_S31.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "SDR_S31-B"
+      }
+    ]
+  },
+  "title": "HL7 v2 SDN^S36^SDR_S31 Message Definition",
+  "name": "SDN^S36^SDR_S31",
+  "type": "SDN-S36-SDR_S31",
+  "date": "2024-07-24T19:13:27Z"
+}

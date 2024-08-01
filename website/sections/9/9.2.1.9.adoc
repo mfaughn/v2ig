@@ -1,0 +1,5 @@
+==== Replacement Document:
+[v291_section="9.2.1.9"]
+
+A document that replaces an existing document. The original document becomes obsolete, but is still retained in the system for historical reference.
+

@@ -1,0 +1,9 @@
+=Application Management
+
+== Introduction
+
+FIXME
+
+== Technical Specs
+
+xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]

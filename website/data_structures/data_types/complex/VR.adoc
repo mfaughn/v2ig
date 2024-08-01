@@ -1,0 +1,30 @@
+= (VR) Data Type - value range
+:v291_section: 2A.2.84
+:v2type: 'Data Type'
+:code: VR
+:name: value range
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type contains the lower bound value and upper bound values that constitute a range. Either or both components may be populated.
+
+[NOTE]
+Replaces the CM data type used in 5.10.5.3.11 QRD-11 as of v 2.5.
+
+The VR differs from the Numeric Range (NR) data type only in that the values are not restricted to numbers. If the range is not numeric, the set must be orderable in some intuitive way such as alpha or the order must be defined in the field where the data type is used.
+
+[example]
+1:
+
+|+^+++|
+
+[example]
+2: Colors of the rainbow
+
+|violet^red|
+
+include::VR-components/VR-1.adoc[]
+
+include::VR-components/VR-2.adoc[]
+

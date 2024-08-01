@@ -1,0 +1,41 @@
+= (CX) Data Type - extended composite ID with check digit
+:v291_section: 2A.2.14
+:v2type: 'Data Type'
+:code: CX
+:name: extended composite ID with check digit
+:primitive: false
+:generated: Wed, 31 Jul 2024 17:32:26 -0600
+
+[datatype-definition]
+This data type is used for specifying an identifier with its associated administrative detail.
+
+[NOTE]
+The check digit and check digit scheme are null if ID is alphanumeric.
+
+[er7-example]
+|1234567\^4^M11\^ADT01^MR^University Hospital|
+
+include::CX-components/CX-1.adoc[]
+
+include::CX-components/CX-2.adoc[]
+
+include::CX-components/CX-3.adoc[]
+
+include::CX-components/CX-4.adoc[]
+
+include::CX-components/CX-5.adoc[]
+
+include::CX-components/CX-6.adoc[]
+
+include::CX-components/CX-7.adoc[]
+
+include::CX-components/CX-8.adoc[]
+
+include::CX-components/CX-9.adoc[]
+
+include::CX-components/CX-10.adoc[]
+
+include::CX-components/CX-11.adoc[]
+
+include::CX-components/CX-12.adoc[]
+

@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ORA-R41-ORA_R41",
+  "id": "ORA-R41-ORA_R41",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/MessageDefinition-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/MessageDefinition",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ORA-R41-ORA_R41",
+        "path": "ORA-R41-ORA_R41",
+        "short": "ORA-R41-ORA_R41",
+        "definition": "ORA^R41^ORA_R41 Message",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ORA-R41-ORA_R41.structure",
+        "path": "ORA-R41-ORA_R41.structure",
+        "short": "The message structure used for this message.",
+        "definition": "The message structure used for this message.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "ORA_R41"
+      }
+    ]
+  },
+  "title": "HL7 v2 ORA^R41^ORA_R41 Message Definition",
+  "name": "ORA^R41^ORA_R41",
+  "type": "ORA-R41-ORA_R41",
+  "date": "2024-07-24T19:13:27Z"
+}

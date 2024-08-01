@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/O59_B",
+  "id": "O59_B",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Event-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Event",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "O59_B",
+        "path": "O59_B",
+        "short": "O59_B",
+        "definition": "Event O59_B: Pharmacy/Treatment Dispense Message",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  },
+  "title": "HL7 v2 O59_B Message Definition",
+  "name": "O59_B",
+  "type": "O59_B",
+  "date": "2024-07-24T19:13:28Z"
+}

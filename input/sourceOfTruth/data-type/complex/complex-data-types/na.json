@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/NA",
+  "id": "NA",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "name": "NA",
+  "title": "HL7 v2 NA Data Type",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "NA",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NA",
+        "path": "NA",
+        "short": "numeric array",
+        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b43a820>",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NA.1",
+        "path": "NA.1",
+        "short": "Value1",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "NA.2",
+        "path": "NA.2",
+        "short": "Value2",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "NA.3",
+        "path": "NA.3",
+        "short": "Value3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "NA.4",
+        "path": "NA.4",
+        "short": "Value4",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "*Example 1:* vector of 8 numbers\n\n|125^34^-22^-234^569^442^-212^6|\n\n*Example 2:* 3 x 3 array of numbers\n\n|1.2^-3.5^5.2~2.0^3.1^-6.2~3.5^7.8^-1.3|\n\n*Example 3:* 5 x 4 array of numbers with the values in positions (1,1), (2,2), (2,3), (3,3), (3,4), (4,1), (4,2), (4,3), and (4,4) not present\n\n|^2^3^4~5^^^8~9^10~~17^18^19^20|"
+}

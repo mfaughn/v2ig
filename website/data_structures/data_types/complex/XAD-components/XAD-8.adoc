@@ -1,0 +1,5 @@
+== XAD.8 - Other Geographic Designation (ST)
+
+[datatype-definition]
+This component specifies any other geographic designation. It includes county, bioregion, SMSA, etc.
+
