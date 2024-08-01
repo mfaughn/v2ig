@@ -1,9 +1,5 @@
 = Laboratory
 
-== Introduction
-
-FIXME
-
 == Technical Specs
 
 xref:technical_specs/General_Laboratory_Order.adoc[Message - General Laboratory Order]
@@ -25,3 +21,216 @@ xref:technical_specs/Message_–_Unsolicited_Specimen_Oriented_Observation.adoc[
 xref:technical_specs/Multiple_Laboratory_Orders_for_Single_Specimen.adoc[Message - Multiple Laboratory Orders for Single Specimen]
 
 xref:technical_specs/Multiple_Laboratory_Orders_for_a_Single_Container_of_a_Specimen.adoc[Message - Multiple Laboratory Orders for a Single Container of a Specimen]
+
+== Example Messages
+[v291_section="13.5"]
+
+This sub-chapter contains examples to messages defined in the chapter 13. Examples for other messages using segments defined in the chapter 13 are published in corresponding chapters, e.g., for laboratory orders in chapter 4 and for laboratory observations in chapter 7.
+
+=== Automated Equipment Status Update
+[v291_section="13.5.1"]
+
+The chemistry analyzer 0001 was powered up directly by the operator (local control) and correctly performed the initialization process. This information is sent by the analyzer to the LAS.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |ESU^U01^ESU|MSG00001|P|2.8|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038|PU^POWERED_UP|L^LOCAL|N^NORMAL<cr>
+
+[er7]
+ISD|123456789|IN^INIT|OK<cr>
+
+
+=== Automated Equipment Status Request
+[v291_section="13.5.2"]
+
+The LAS queries the chemistry analyzer 0001 for status information.
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |ESR^U02^ESR|MSG00001|P|2.9|<cr>
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+=== Specimen Status Update
+[v291_section="13.5.3"]
+
+The chemistry analyzer 0001 recognized an aliquot container (id=092321A) with blood. This container is in a position 1 of carrier type R5 (id=120) and is located in the input buffer 1.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |SSU^U03^SSU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+SAC|991912376^EXTLAB|01039421^THISLAB|092321A^LAS|092321^LAS||BLD^BLOOD |19980620080037|I^IDENTIFIED|R5^5_HOLE_RACK|120|1||||BUF1^INPUT BUFFER 1<cr>
+
+
+A pre-analytical instrument 0001 performed aliquoting and sorting operation. +
+(See Fig. 13-5 for visualization of positions and locations) +
+The carrier (id=2002) with primary/parent container (id=12345) at position 2 was transported in the location: output buffer 1, into position 4 of the output tray (id=A1203). +
+The aliquot container (id=12345A) was sorted into the manual transportable carrier (id=045), in row 3, column 2. This carrier is located in the sorter bed at location 4.
+
+[er7]
+MSH|^~\&|PREANPROG|AUTPREAN|LASPROG|LASSYS|19980630080040|SECURITY |SSU^U03^SSU|MSG00002|P|2.9|<cr>
+[er7]
+EQU|0001^AQS|19980630080043<cr>
+[er7]
+SAC|991912376^EXTLAB|01039421^THISLAB|12345^LAS||||19980620080039|R^COMPLETED |R3^3_HOLE_RACK|2002|1|OT^OUTPUTTRAY|A1203^AQSTRAY|4|OB1^OUTPUTBUFFER<cr>
+[er7]
+SAC|991912376^EXTLAB|01039421^THISLAB|12345A^LAS|12345^LAS|||19980620080039 |R^COMPLETED|R14^14_HOLE_RACK|045|3^2||||AQSBED||||||2|0.5||ml<cr>
+
+=== Specimen Status Request
+[v291_section="13.5.4"]
+
+The chemistry analyzer 0001 queries the LAS for status of specimen/container (id=092321A).
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |SSR^U04^SSR|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+SAC|991912376^EXTLAB|01039421^THISLAB|092321A^LAS||||199806200823<cr>
+
+
+=== Automated Equipment Inventory Update
+[v291_section="13.5.5"]
+
+The chemistry analyzer 0001 sends to the LAS the status of a TSH reagent (id=MF01239) in bottle (id=12345).
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |INU^U05^INU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+INV|MF01239^REAGENT1|OK^OK_STATUS|SR^SINGLE_TEST_REAGENT |12345^BOTTLE_NUM|||||190||ML|20000101||^^D60|TSH|A12345678|PROD1<cr>
+
+
+=== Automated Equipment Inventory Request
+[v291_section="13.5.6"]
+
+The LAS queries the chemistry analyzer 0001 for status of all packages of the substance (id=MF01239).
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |INR^U06^INR|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+INV|MF01239^REAGENT1|OK^OK_STATUS<cr>
+
+
+=== Automated Equipment Command
+[v291_section="13.5.7"]
+
+The LAS sends command of "Clearing Notification" to the chemistry analyzer 0001.
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |EAC^U07^EAC|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+ECD|89421|CN^CLEAR NOTIFICATION|Y^YES<cr>
+
+[er7]
+CNS|1209|1500|199806010800|199806300800<cr>
+
+=== Automated Equipment Response
+[v291_section="13.5.8"]
+
+The chemistry analyzer confirms completion of the execution of the initialization command.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |EAR^U08^EAR|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+ECD|89421|IN^INIT|Y^YES<cr>
+
+[er7]
+ECR|OK^COMMAND_COMPLETE|19980630080035<cr>
+
+=== Automated Equipment Notification
+[v291_section="13.5.9"]
+
+The chemistry analyzer sends a notification (warning) about drift in the detection unit.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |EAN^U09^EAN|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+NDS|8923|199806300800|W^WARNING^|DU001^DETECTIO UNIT DRIFT<cr>
+
+=== Automated Equipment Test Code Settings Update
+[v291_section="13.5.10"]
+
+The LAS send update of configuration parameters for Glucose test.
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |TCU^U10^TCU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+TCC|15074-8^GLUCOSE|GLU-HK^CHEMISTRYANALYZER|SER^SERUM|10|10|0|0|500| Y^YES|Y^YES|N^NO |^2^‑^400|mg/dL|P<cr>
+
+=== Automated Equipment Test Code Settings Request
+[v291_section="13.5.11"]
+
+The chemistry analyzer 0001 queries the LAS for configuration parameters of the Glucose test.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |TCR^U11^TCU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+TCC|15074-8^GLUCOSE|GLU-HK^CHEMISTRYANALYZER<cr>
+
+=== Automated Equipment Log/Service Update
+[v291_section="13.5.12"]
+
+The chemistry analyzer 0001 sends 1 record from the event log to the LAS.
+
+[er7]
+MSH|^~\&|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |LSU^U12^LSU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+EQP|LOG^LOG_EVENT||199806300755|199806300800|I976 Instrument Initialization<cr>
+
+
+=== Automated Equipment Log/Service Request
+[v291_section="13.5.13"]
+
+The LAS queries chemistry analyzer for log file of events occurring between 7am and 8am on 30^th^ June 1998.
+
+[er7]
+MSH|^~\&|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |LSR^U13^LSU|MSG00001|P|2.9|<cr>
+
+[er7]
+EQU|0001^CHEMISTRYANALYZER|19980630080038<cr>
+
+[er7]
+EQP|LOG^LOG_EVENT||199806300700|199806300800<cr>
+
+
+
+

@@ -1,8 +1,18 @@
 = Registration
 
-== Introduction
+The Patient Administration transaction set provides for the transmission of new or updated demographic and visit information about patients. Since virtually any system attached to the network requires information about patients, the Patient Administration transaction set is one of the most commonly used.
+
+Generally, information is entered into a Patient Administration system and passed to the nursing, ancillary and financial systems either in the form of an unsolicited update or a response to a record-oriented query.
+
+This chapter defines the transactions that occur at the seventh level, that is, the abstract messages. The examples included in this chapter were constructed using the HL7 Encoding Rules.
+
+== General Use Cases / Background
 
 FIXME
+
+== Implementation Considerations
+
+include::implementation_considerations.adoc[]
 
 == Technical Specs
 
@@ -115,3 +125,26 @@ xref:technical_specs/Q24_K24.adoc[Message - Q24/K24 Allocate Identifiers (QBP) a
 xref:technical_specs/Q32_K32.adoc[Message - Q32/K32 Find Candidates including Visit Information (QBP) and Response (RSP)]
 
 xref:technical_specs/technical_specs.adoc[Technical Specs]
+
+== Example Transactions
+[v291_section="3.5"]
+
+include::example_transactions/admit_visit_notification_‑_event_a01_(admitted_patient).adoc[]
+
+include::example_transactions/update_adverse_reaction_info_-_allergen_code_provides_unique_identifier_-_event_a60_(where_the_allergen_code_provides_unique_identifier).adoc[]
+
+include::example_transactions/pre-admit_notification_-_event_a05_(nonadmitted_patient).adoc[]
+
+include::example_transactions/register_a_patient_-_event_a04_(nonadmitted_patient).adoc[]
+
+include::example_transactions/change_an_outpatient_to_an_inpatient_-_event_a06.adoc[]
+
+include::example_transactions/transfer_patient_-_event_a02_(first_example).adoc[]
+
+include::example_transactions/cancel_transfer_-_event_a12.adoc[]
+
+include::example_transactions/transfer_patient_-_event_a02_(second_example).adoc[]
+
+include::example_transactions/discharge_patient_-_event_a03.adoc[]
+
+include::example_transactions/update_adverse_reaction_info_-_unique_identifier_is_provided_-_event_a60_(where_unique_identifier_is_provided).adoc[]
