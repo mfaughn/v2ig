@@ -34,7 +34,7 @@ def stub_dir(dir)
     File.open(adoc, 'w+') do |f|
       lines = []
       title = desnake_and_titleize(base)
-      lines << '=' + title
+      lines << '= ' + title
       lines << ''
       lines << '== Introduction'
       lines << ''

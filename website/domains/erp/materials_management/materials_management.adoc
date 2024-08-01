@@ -1,4 +1,4 @@
-=Materials Management
+= Materials Management
 
 == Introduction
 

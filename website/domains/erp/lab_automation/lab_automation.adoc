@@ -1,4 +1,4 @@
-=Lab Automation
+= Lab Automation
 
 == Introduction
 

@@ -1,4 +1,4 @@
-=Clinical Trials
+= Clinical Trials
 
 == Introduction
 
