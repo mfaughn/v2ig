@@ -6,4 +6,6 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/Unsolicited_initial_individual_product_experience_report.adoc[Message - Unsolicited initial individual product experience report]
+
+xref:technical_specs/Unsolicited_update_individual_product_experience_report.adoc[Message - Unsolicited update individual product experience report]

@@ -6,4 +6,14 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/U01.adoc[Message - U01 Automated Equipment Status Update]
+
+xref:technical_specs/U02.adoc[Message - U02 Automated Equipment Status Request]
+
+xref:technical_specs/U03.adoc[Message - U03 Specimen Status Update]
+
+xref:technical_specs/U04.adoc[Message - U04 Specimen Status Request]
+
+xref:technical_specs/U05.adoc[Message - U05 Automated Equipment Inventory Update]
+
+xref:technical_specs/U06.adoc[Message - U06 Automated Equipment Inventory Request]

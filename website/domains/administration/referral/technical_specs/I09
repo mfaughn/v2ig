@@ -1,7 +1,0 @@
-= Message - I09 Request for Modification to an Authorization
-:v291_section:"11.4.3"
-:v2_section_name:"RQA/RPA - Request for Modification to an Authorization (Event I09"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-This event triggers a message sent from a healthcare provider to a payor requesting changes to a previously referenced authorization. For example, a provider may determine that a substitute testing or surgical procedure should be performed on a specified patient.
-

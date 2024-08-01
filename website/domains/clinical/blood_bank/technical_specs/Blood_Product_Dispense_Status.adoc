@@ -1,0 +1,15 @@
+= Message - Blood Product Dispense Status
+:v291_section: "4.13.4"
+:v2_section_name: "BPS – Blood Product Dispense Status Message (Event O29) "
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+In the pre-transfusion processing of blood products, it is necessary for the transfusion service and the placer system to communicate information that is not included in the current HL7 order/observation model. Examples of pre-transfusion processing include performing a crossmatch test to ensure compatibility with the patient, or irradiation of the blood product due to a special transfusion requirement for the patient. The blood product dispense status messages need to contain additional information regarding the blood products requested, such as the Donation ID, product code, blood type, expiration date/time and current status of the blood product.
+
+In the processing of commercial blood products, such as Rh Immune Globulin, Factor Concentrate, or Albumin Products, the status messages need to contain additional information, such as the lot number and manufacturer, expiration date and status of the commercial product.
+
+Blood product dispense status messages use the BPS and BRP messages as described below.
+
+[message_structure-table]
+
+[ack_chor-table]
+

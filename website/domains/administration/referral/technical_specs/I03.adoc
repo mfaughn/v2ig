@@ -1,0 +1,15 @@
+= Message - I03 Request of Patient Selection List 
+:v291_section: "11.3.3"
+:v2_section_name: "RQI/RPR - Request/Receipt of Patient Selection List (Event I03)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This trigger event occurs when the inquirer specifies a request for a listing of patient names. This event differs from event I02 (request/receipts of patient selection display list) in that it returns the patient list in repeating PID segments instead of repeating DSP segments.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,7 @@
+= Message - I15 Request Patient Referral Status
+:v291_section: "11.5.5"
+:v2_section_name: "REF/RRI - Request Patient Referral Status (Event I15)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This event triggers a message to be sent between healthcare providers regarding the status of a patient referral request. A previous referral has been made and acknowledged; however, no response has been received to indicate results and/or procedures performed.
+

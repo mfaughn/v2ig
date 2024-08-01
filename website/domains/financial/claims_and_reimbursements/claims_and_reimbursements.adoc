@@ -6,4 +6,26 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/E01.adoc[Message - E01 Submit HealthCare Services Invoice]
+
+xref:technical_specs/E02.adoc[Message - E02 Cancel HealthCare Services Invoice]
+
+xref:technical_specs/E03.adoc[Message - E03 Query HealthCare Services Invoice Status]
+
+xref:technical_specs/E04.adoc[Message - E04 Re-Assess HealthCare Services Invoice Request]
+
+xref:technical_specs/E10.adoc[Message - E10 Edit/Adjudication Results]
+
+xref:technical_specs/E12.adoc[Message - E12 Request Additional Information]
+
+xref:technical_specs/E13.adoc[Message - E13 Additional Information Response]
+
+xref:technical_specs/E15.adoc[Message - E15 Payment/Remittance Advice]
+
+xref:technical_specs/E20.adoc[Message - E20 Submit Authorization Request]
+
+xref:technical_specs/E21.adoc[Message - E21 Cancel Authorization Request]
+
+xref:technical_specs/E22.adoc[Message - E22 Query Authorization Request Statu]
+
+xref:technical_specs/E24.adoc[Message - E24 Authorization Response]

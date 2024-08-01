@@ -6,4 +6,22 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/General_Clinical_Order.adoc[Message - General Clinical Order]
+
+xref:technical_specs/General_Clinical_Order_with_Supporting_Document.adoc[Message - General Clinical Order with Supporting Document]
+
+xref:technical_specs/Message_–_Unsolicited_Alert_Observation.adoc[Message – Unsolicited Alert Observation]
+
+xref:technical_specs/Message_–_Unsolicited_Device_Event_Observation.adoc[Message – Unsolicited Device Event Observation]
+
+xref:technical_specs/Message_–_Unsolicited_Patient-Device_Association_Observation.adoc[Message – Unsolicited Patient-Device Association Observation]
+
+xref:technical_specs/Order_Status_Update.adoc[Message - Order Status Update]
+
+xref:technical_specs/Unsolicited_New_Point-Of-Care_Observation_-_Search_for_an_Order_.adoc[Message - Unsolicited New Point-Of-Care Observation - Search for an Order]
+
+xref:technical_specs/Unsolicited_Observation.adoc[Message - Unsolicited Observation]
+
+xref:technical_specs/Unsolicited_Point-Of-Care_Observation_without_Existing_Order_–_Place_an_Order.adoc[Message - Unsolicited Point-Of-Care Observation without Existing Order – Place an Order]
+
+xref:technical_specs/Unsolicited_Pre-Ordered_Point-Of-Care_Observation.adoc[Message - Unsolicited Pre-Ordered Point-Of-Care Observation]

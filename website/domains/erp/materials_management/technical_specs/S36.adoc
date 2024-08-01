@@ -1,0 +1,15 @@
+= Message - S36 Notification of Anti-Microbial Device Data 
+:v291_section: "17.7.4"
+:v2_section_name: "SDN/ACK - Notification of Anti-Microbial Device Data (Event S36) "
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This message is sent from a filler application to notify other applications that anti-microbial device data has been generated. The information in the SDN segment and the other detail segments as appropriate describe the detail of a device during a sterilization or decontamination cycle.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

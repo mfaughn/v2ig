@@ -1,7 +1,0 @@
-= Message - I10 Request for Resubmission of an Authorizatio
-:v291_section:"11.4.4"
-:v2_section_name:"RQA/RPA - Request for Resubmission of an Authorization (Event I10)"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-If a previously submitted request for treatment authorization is rejected or canceled, this event could trigger a resubmission message for a referenced authorization. For example, the payor may have rejected a request until additional clinical information is sent to support the authorization request.
-

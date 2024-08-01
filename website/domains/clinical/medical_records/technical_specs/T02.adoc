@@ -1,0 +1,19 @@
+= Message - T02 Document with Content
+:v291_section: "9.6.2"
+:v2_section_name: "MDM/ACK - Original Document Notification and Content (Event T02)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This is a notification of the creation of a document with the accompanying content.
+
+*Scenario A:* Dictation is transcribed and the chart tracking system is notified that the document exists and requires authentication. The content of the document is transmitted along with the notification.
+
+*Scenario B:* A provider orders a series of three X-rays. The radiologist's dictation is transcribed in a single document, which covers all three orders. Multiple placer numbers are used to identify each of the orders within the single document message. The notification and document content are transmitted.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,7 @@
+= Message - I11 Request for Cancellation of an Authorization
+:v291_section: "11.4.5"
+:v2_section_name: "RQA/RPA - Request for Cancellation of an Authorization (Event I11)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This event may trigger the cancellation of an authorization. It may be used by the provider to indicate that an authorized service was not performed, or perhaps that the patient changed to another provider. A payor may use this request to reject a submitted authorization request from a provider.
+

@@ -1,0 +1,63 @@
+= Message - Pharmacy/Treatment Dispense
+:v291_section: "4A.3.8"
+:v2_section_name: "RDS - Pharmacy/Treatment Dispense Message (Event O13)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The RDS message may be created by the pharmacy/treatment application for each instance of dispensing a drug or treatment to fill an existing order or orders. In the most common case, the RDS messages would be routed to a Nursing application or to some clinical application, which needs the data about drugs dispensed or treatments given. As a site-specific variant, the original order segments (RXO, RXE and their associated RXR/RXCs) may be sent optionally (for comparison).
+
+The ORC must have the filler order number and the order control code RE. The RXE and associated RXCs may be present if the receiving application needs any of their data. The RXD carries the dispense data for a given issuance of medication: thus it may describe a single dose, a half-day dose, a daily dose, a refill of a prescription, etc. The RXD is not a complete record of an order. Use the RXO and RXE segments if a complete order is needed. It is a record from the pharmacy or treatment supplier to the Nursing application (or other) with drug/treatment dispense and administration instructions.
+
+The FT1 segment is optional and repeating in order to accommodate multiple charge, benefit and pricing situations. Example use cases demonstrating zero, one and two FT1 segments follow:
+
+In the case where the RDS message represents a dispense event that is in process (i.e., has not been received by the patient), the financial transactions associated with the dispense do not yet exist. Until the financial transactions associated with the dispense event have been completed, no FT1 segment may exist in the message.
+
+In the case where the RDS message represents a dispense event that has been received by the patient, and thus all financial transactions have been completed, the RDS message may contain one or more FT1 segments. Examples of single and multiple FT1 segments follow.
+
+Payment for the dispense event completed by a single payor:
+
+[er7]
+MSH|^&~\|Pharm|GenHosp|CIS|GenHosp|2006082911150700||RDS^O13^RDS_O13|...<cr>
+
+PID|...<cr>
+
+[er7]
+ORC|RE|...<cr>
+[er7]
+RXD|1|00310-0131-10^LISINOPRIL 10MG TABLET^NDC|200607150830|100|TAB|...<cr>
+[er7]
+FT1|1|||200607151035||PY|00310-0131-10^LISINOPRIL 10MG TABLET^NDC|||100|125.43&USD|...<cr>
+
+Payment for the dispense event involves multiple payment sources:
+
+[er7]
+MSH|^&~\|Pharm|GenHosp|CIS|GenHosp|2006082213000700||RDS^O13^RDS_O13|...<cr>
+
+PID|...<cr>
+
+[er7]
+ORC|RE|...<cr>
+[er7]
+RXD|1|00340-0241-10^VERAPAMIL 120MG TABLET^NDC|200607200940|100|TAB|...<cr>
+[er7]
+FT1|1|||200607211055||CD|00340024110^VERAPAMIL 120MG TABLET ^NDC|||100|55.43&USD|...<cr> (amount paid by insurance)
+[er7]
+FT1|2|||200607211055||CP|00340024110^VERAPAMIL 120MG TABLET ^NDC|||100|5.00&USD|...<cr> (copay paid by patient)
+
+[NOTE]
+The use of RDS with the trigger of O01 and RRD with the trigger O02 is maintained for backward compatibility as of v 2.4 *_and is withdrawn as of v 2.7_*.
+
+[message_structure-table]
+
+[NOTE]
+The NTE segment(s) following the PD1 segment are intended to communicate notes and comments relative to the patient.
+
+The NTE segment(s) following the RXO segment are intended to communicate notes and comments relative to the pharmacy/treatment order.
+
+The NTE segment(s) following the RXE segment are intended to communicate notes and comments relative to the encoded order.
+
+The NTE segment(s) following the RXD segment are intended to communicate notes and comments relative to the dispense event.
+
+The NTE segment(s) following the RXC segment are intended to communicate notes and comments relative to the component(s).
+
+[ack_chor-table]
+

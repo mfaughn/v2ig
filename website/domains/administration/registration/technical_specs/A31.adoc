@@ -1,0 +1,21 @@
+= Message - A31 Update Person Information
+:v291_section: "3.3.31"
+:v2_section_name: "ADT/ACK - Update Person Information (Event A31)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+An A31 event can be used to update person information on an MPI. It is similar to an A08 (update patient information) event, but an A08 (update patient information) event should be used to update patient information for a current episode. An A28 (add person information) or A31 can also be used for backloading MPI information for the person, or for backloading person and historical information.
+
+To maintain backward compatibility with previous releases, the PV1 segment is required. However, a "pseudo-optional" PV1 can be achieved by valuing _PV1-2 - Patient Class_ to N - not applicable.
+
+The ROL segment has been deprecated and retained for backwards compatiblity purposes only as of v 2.9. The reader is referred to the PRT segment instead.
+
+The PRT – Participation Information Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin and end date of the provider, use the _PRT-11 - Begin Date/Time_ and the _PRT-12 - End Date/Time_ in the PRT segment, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

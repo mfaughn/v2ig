@@ -6,4 +6,4 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/N02.adoc[Message - N02 Application Management Data Message]

@@ -1,0 +1,17 @@
+= Message - A25 Cancel Pending Discharge
+:v291_section: "3.3.25"
+:v2_section_name: "ADT/ACK - Cancel Pending Discharge (Event A25)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The A25 event is sent when an A16 (pending discharge) event is cancelled, either because of erroneous entry of the A16 event or because of a decision not to discharge the patient after all.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

@@ -1,7 +1,0 @@
-= Message - I13 Modify Patient Referral
-:v291_section:"11.5.3"
-:v2_section_name:"REF/RRI - Modify Patient Referral (Event I13)"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-This event triggers a message to be sent from one healthcare provider to another regarding changes to an existing referral. Changes in a referral may include additional instructions from the referring provider, additional clinical information, and even additional information on patient demographics.
-

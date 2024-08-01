@@ -1,0 +1,39 @@
+= Message - Patient has gone off a clinical trial
+:v291_section: "7.7.1"
+:v2_section_name: "CRM - Clinical Study Registration Message (Events C01-C08)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The data are entered in a clinical trials or other patient data system and broadcast to other facility systems such as order entry, pharmacy, accounting, and nursing systems. They can be transmitted in batch mode or broadcast to outside-facility computer systems, including diagnostic and patient management systems. It is assumed that proper routing and security mechanisms are in place.
+
+.The general acknowledgement message as defined in Chapter 2 should be used for any acknowledgements.
+[width="100%",cols="12%,88%",options="header",]
+|===
+|Event |Description
+|C01 |Register a patient on a clinical trial
+|C02 |Cancel a patient registration on clinical trial (for clerical mistakes since an intended registration should not be canceled)
+|C03 |Correct/update registration information
+|C04 |Patient has gone off a clinical trial
+|C05 |Patient enters phase of clinical trial
+|C06 |Cancel patient entering a phase (clerical mistake)
+|C07 |Correct/update phase information
+|C08 |Patient has gone off phase of clinical trial
+|===
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+
+[ack_chor-table]
+

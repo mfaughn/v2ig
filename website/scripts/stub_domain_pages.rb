@@ -61,8 +61,43 @@ def stub_dir(dir)
   subs.each { |sub| stub_dir(sub) if File.directory?(sub) }
 end
 
+def finish_tech_specs_links(dir)
+  base = dir.split('/').last
+  adoc = File.join(dir, base + '.adoc')
+  subs = subdirs(dir)
+  techspecs = subs.find { |d| d =~ /technical_specs/ }
+  subs = subs.reject { |d| d =~ /technical_specs/ }
+  if techspecs
+    puts Rainbow(techspecs).springgreen
+    # create the adoc file
+    File.open(adoc, 'w+') do |f|
+      lines = []
+      title = desnake_and_titleize(base)
+      lines << '= ' + title
+      lines << ''
+      lines << '== Introduction'
+      lines << ''
+      lines << 'FIXME'
+      lines << ''
+      lines << '== Technical Specs'
+      files = Dir.glob(File.join(techspecs, '*.adoc'))
+      files.each do |f|
+        title = File.readlines(f).first.sub(/^\s*=\s*/, '').chomp.strip
+        puts title.inspect
+        lines << ''
+        lines << "xref:technical_specs/#{File.basename(f)}[#{title}]"
+      end
+      # puts lines
+      f.puts lines
+    end
+  else
+    subs.each { |sub| finish_tech_specs_links(sub) if File.directory?(sub) }
+  end
+end
+
 # stub_dir(dir)
-sections = V2AD.v2.sections
+finish_tech_specs_links(dir)
+# sections = V2AD.v2.sections
 
 
 

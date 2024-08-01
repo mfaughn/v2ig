@@ -1,0 +1,25 @@
+= Message - A40 Merge Patient - Patient Identifier List 
+:v291_section: "3.3.40"
+:v2_section_name: "ADT/ACK - Merge Patient - Patient Identifier List (Event A40)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+A merge has been done at the patient identifier list level. That is, two _PID-3 - Patient Identifier List_ identifiers have been merged into one.
+
+An A40 event is used to signal a merge of records for a patient that was incorrectly filed under two different identifiers. The "incorrect source identifier" identified in the MRG segment (_MRG-1 - Prior Patient Identifier List_) is to be merged with the required "correct target identifier" of the same "identifier type code" component identified in the PID segment (_PID-3 - Patient Identifier List_). The "incorrect source identifier" would then logically never be referenced in future transactions. It is noted that some systems may still physically keep this "incorrect identifier" for audit trail purposes or other reasons associated with database index implementation requirements.
+
+The identifiers involved in identifying the patients may or may not have accounts, which may or may not have visits. An A40 (merge patient-patient identifier list) event is intended for merging patient records without merging other subordinate identifiers. Any other subordinate identifiers that were previously associated with the "incorrect source identifier" are now associated with the "correct target identifier." Specification of these other subordinate identifiers is not required.
+
+This event and the message syntax do, however, allow for the specification of any other "new subordinate identifiers" (in addition to the _PID-3 - Patient Identifier List_ identifier). For those environments that may require changes to these other subordinate identifiers because of the A40 (merge patient-patient identifier list) event, it is required that the old and new identifiers be a "tightly coupled" pair.
+
+See sections link:#merging-patientperson-information[_3.6.2_], "link:#merging-patientperson-information[_Merging patient/person information_]," and link:#merge[_3.6.2.1.2_], "link:#merge[_Merge_]," for a discussion of issues related to the implementation of merge messages.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other fields change, it is recommended that the A31 (update person information) event be used for person level updates and A08 (update patient information) event for patient level updates.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

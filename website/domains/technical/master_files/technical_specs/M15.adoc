@@ -1,0 +1,24 @@
+= Message - M15 Inventory Item Master File Message
+:v291_section: "8.12.1"
+:v2_section_name: "MFN/MFK - Inventory Item Master File Message (Event M15)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This section is concerned with describing a master file message that should be used to communicate information that relates to the inventory of items that can be used to perform an ordered service. While an order specifies a service that is represented in an Other Observation/Service Item master file, this message is concerned with communicating attributes of those orderable items (for example lot number and expiration date) that are represented in the Other Observation/Service Item master file. These attributes are more granular than can be represented in the Other Observation/Service Item master file as there may be multiple items in inventory that meet the characteristics of the Service Item but have different specific characteristics, e.g., multiple lots of a vaccine.
+
+Each MFE/IIM structure describes a specific set of lot, expiration date, location, etc. for a Service Item. Multiple instances of MFE/IIM could be used to describe the same Service Item lot at multiple locations, or a location with multiple lots of the same Service Item.
+
+This message is not intended to act as a complete inventory management system. Various inventory management concepts, e.g., PAR levels, invoice and purchase order tracking, are intentionally not supported. The message is intended to synchronize limited orderable item attributes, e.g., quantity on hand, lot number, expiration date, between communicating systems. Such systems may include a Pharmacy Application and a Nurse-based dispensing system. While the Pharmacy application may define the service items (communicated in [MFN^M12^MFN_12] Other Observation/Service Item master file Messages), the dispensing system would communicate the lot numbers, expiration date and quantity on hand for service items in inventory using the Inventory Item Master file message.
+
+[NOTE]
+The IIM segment has been moved to Chapter 17.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+
+Master Files Query Response: Refer to Section 8.4.4.
+

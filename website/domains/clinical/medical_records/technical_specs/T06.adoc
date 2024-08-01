@@ -1,0 +1,17 @@
+= Message - T06 Document Addendum with Content
+:v291_section: "9.6.6"
+:v2_section_name: "MDM/ACK - Document Addendum Notification and Content (Event T06)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This is a notification of an addendum to a document with the accompanying content.
+
+*Scenario:* Author dictates additional information as an addendum to a previously transcribed document. A new document is transcribed. This addendum has its own new unique document ID that is linked to the original document via the parent ID. Addendum document notification is transmitted, along with the document content. This creates a composite document.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

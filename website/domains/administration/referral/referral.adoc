@@ -6,4 +6,42 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/I01.adoc[Message - I01 Request for Insurance]
+
+xref:technical_specs/I02.adoc[Message - I02 Request of Patient Selection Display List]
+
+xref:technical_specs/I03.adoc[Message - I03 Request of Patient Selection List]
+
+xref:technical_specs/I04.adoc[Message - I04 Request for Demographics]
+
+xref:technical_specs/I07.adoc[Message - I07 Unsolicited Insurance Information]
+
+xref:technical_specs/I08.adoc[Message - I08 Request for Treatment Authorization Information]
+
+xref:technical_specs/I09.adoc[Message - I09 Request for Modification to an Authorization]
+
+xref:technical_specs/I10.adoc[Message - I10 Request for Resubmission of an Authorization]
+
+xref:technical_specs/I11.adoc[Message - I11 Request for Cancellation of an Authorization]
+
+xref:technical_specs/I12.adoc[Message - I12 Patient Referral]
+
+xref:technical_specs/I13.adoc[Message - I13 Modify Patient Referral]
+
+xref:technical_specs/I14.adoc[Message - I14 Cancel Patient Referral]
+
+xref:technical_specs/I15.adoc[Message - I15 Request Patient Referral Status]
+
+xref:technical_specs/I16.adoc[Message - I16 Collaborative Care Referral]
+
+xref:technical_specs/I17.adoc[Message - I17 Modify Collaborative Care Referral]
+
+xref:technical_specs/I18.adoc[Message - I18 Cancel Collaborative Care Referral]
+
+xref:technical_specs/I19.adoc[Message - I19 Collaborative Care Query/Collaborative Care Query Update]
+
+xref:technical_specs/I20.adoc[Message - I20 Asynchronous Collaborative Care Update]
+
+xref:technical_specs/I21.adoc[Message - I21 Collaborative Care Message]
+
+xref:technical_specs/I22.adoc[Message - I22 Collaborative Care Fetch / Collaborative Care Information]

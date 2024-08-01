@@ -1,0 +1,29 @@
+= Medical Records
+
+== Introduction
+
+FIXME
+
+== Technical Specs
+
+xref:technical_specs/T01.adoc[Message - T01 Document]
+
+xref:technical_specs/T02.adoc[Message - T02 Document with Content]
+
+xref:technical_specs/T03.adoc[Message - T03 Document Status Change]
+
+xref:technical_specs/T04.adoc[Message - T04 Document Status Change with Content]
+
+xref:technical_specs/T05.adoc[Message - T05 Document Addendum]
+
+xref:technical_specs/T06.adoc[Message - T06 Document Addendum with Content]
+
+xref:technical_specs/T07.adoc[Message - T07 Document Edit]
+
+xref:technical_specs/T08.adoc[Message - T08 Document Edit with Content]
+
+xref:technical_specs/T09.adoc[Message - T09 Document Replacement]
+
+xref:technical_specs/T10.adoc[Message - T10 Document Replacement with Content]
+
+xref:technical_specs/T11.adoc[Message - T11 Document Cancel]

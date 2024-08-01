@@ -1,0 +1,15 @@
+= Message - I04 Request for Demographics
+:v291_section: "11.3.4"
+:v2_section_name: "RQP/RPI - request for patient demographic data (Event I04)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This event triggers a request from one healthcare provider to another for patient demographic information, including insurance and billing information. Typically, this transaction would occur between one provider to another, but it could also be directed to a payor.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+

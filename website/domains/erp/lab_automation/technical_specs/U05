@@ -1,9 +1,0 @@
-= Message - U05 Automated Equipment Inventory Update
-:v291_section:"13.3.5"
-:v2_section_name:"INU/ACK – Automated Equipment Inventory Update (Event U05)"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-The equipment command segment contains the information required to notify the receiving component what is to happen.
-
-[segment_definition-table]
-

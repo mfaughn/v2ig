@@ -160,7 +160,8 @@ module V2FHIR
             section_content.each_with_index do |item, i|
               V2FHIR.process_section_item(i, section, adoc)
             end
-            File.open(dest_file, 'w+') { |f| f.puts adoc }
+            FileUtils.rm(dest_file) if File.exist?(dest_file)
+            File.open(dest_file+'.adoc', 'w+') { |f| f.puts adoc }
           else
             puts Rainbow(num).orange + ' section not found in registry'
           end

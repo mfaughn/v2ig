@@ -6,4 +6,36 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/M02.adoc[Message - M02 Staff/Practitioner Master File]
+
+xref:technical_specs/M04.adoc[Message - M04 Charge Description Master File Message]
+
+xref:technical_specs/M05.adoc[Message - M05 Patient Location Master File]
+
+xref:technical_specs/M06.adoc[Message - M06 Clinical Trials Master File]
+
+xref:technical_specs/M07.adoc[Message - M07 Clinical Trials Master File]
+
+xref:technical_specs/M08.adoc[Message - M08 Master File Notification - Test/Observation (Numeric)]
+
+xref:technical_specs/M09.adoc[Message - M09 Master File Notification - Test/Observation (Categorical)]
+
+xref:technical_specs/M10.adoc[Message - M10 Master File Notification - Test/Observation Batteries]
+
+xref:technical_specs/M11.adoc[Message - M11 Master File Notification - Test/Calculated Observations]
+
+xref:technical_specs/M12.adoc[Message - M12 Master File Notification - Additional Basic Observation/Service Attributes]
+
+xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
+
+xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
+
+xref:technical_specs/M15.adoc[Message - M15 Inventory Item Master File Message]
+
+xref:technical_specs/M16.adoc[Message - M16 Inventory Item Master File – Enhanced]
+
+xref:technical_specs/M17.adoc[Message - M17 DRG Master File]
+
+xref:technical_specs/M18.adoc[Message - M18 Master File Notification – Test/Observation (Payer)]
+
+xref:technical_specs/M19.adoc[Message - M19 Contract Master File]

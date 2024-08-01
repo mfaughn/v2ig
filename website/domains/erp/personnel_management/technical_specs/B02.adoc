@@ -1,0 +1,19 @@
+= Message - B02 Update Personnel Record
+:v291_section: "15.3.2"
+:v2_section_name: "PMU/ACK – Update Personnel Record (Event B02)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+An event B02 signals to update the record with the healthcare administration information about an individual healthcare practitioner. This event should not be used to grant/revoke a certificate.
+
+The EVN segment is used to indicate the effective or planned date.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

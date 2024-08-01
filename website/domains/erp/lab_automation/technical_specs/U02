@@ -1,9 +1,0 @@
-= Message - U02 Automated Equipment Status Request
-:v291_section:"13.3.2"
-:v2_section_name:"ESR/ACK - Automated Equipment Status Request (Event U02)"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-The interaction detail segment contains information about the status of specific interaction (e.g., processing — see section Glossary) on the specific equipment.
-
-[segment_definition-table]
-

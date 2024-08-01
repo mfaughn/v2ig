@@ -1,0 +1,25 @@
+= Message – Unsolicited Specimen Container Oriented Observation
+:v291_section: "7.3.9"
+:v2_section_name: "OUL – Unsolicited Specimen Container Oriented Observation Message (Event R23)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This message was designed to accommodate specimen oriented testing. It should be applicable to, for example, laboratory automation systems requiring container.
+
+Generally this construct allows *transfer of multiple results related to one or more specific containers with one or more specimens from a patient.*
+
+In addition to the patient results themselves it permits the communication of the following kinds of information:
+
+• Analysis results of a non patient related sample (e.g., environmental) – patient related segments (e.g., PID, PD1, PV1, PV2) are optional.
+
+• Analysis results to a particular container with QC sample and the lot and manufacturer information about this sample (SAC-INV segments).
+
+• Basic identification data (lot, manufacturer, etc.) of the reagents and other substances involved in the generation of analysis results (TCD-SID segments).
+
+Refer to Chapter 13 Laboratory Automation for additional examples of usage of SAC.
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+

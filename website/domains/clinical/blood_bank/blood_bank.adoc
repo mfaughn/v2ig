@@ -6,4 +6,28 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/Blood_Product_Dispense_Status.adoc[Message - Blood Product Dispense Status]
+
+xref:technical_specs/Blood_Product_Order.adoc[Message - Blood Product Order]
+
+xref:technical_specs/Blood_Product_Transfusion_Disposition.adoc[Message - Blood Product Transfusion/Disposition]
+
+xref:technical_specs/Create_Donor_Record.adoc[Message - Create Donor Record]
+
+xref:technical_specs/Donation_Procedure.adoc[Message - Donation Procedure]
+
+xref:technical_specs/Donor_Eligibility_Notification.adoc[Message - Donor Eligibility Notification]
+
+xref:technical_specs/Donor_Eligibility_Observations.adoc[Message - Donor Eligibility Observations]
+
+xref:technical_specs/Donor_Eligibility_Request.adoc[Message - Donor Eligibility Request]
+
+xref:technical_specs/Donor_Registraiton.adoc[Message - Donor Registraiton]
+
+xref:technical_specs/Donor_Request_to_Collect.adoc[Message - Donor Request to Collect]
+
+xref:technical_specs/Get_Donor_Record.adoc[Message - Get Donor Record]
+
+xref:technical_specs/Get_Donor_Record_Candidates.adoc[Message - Get Donor Record Candidates]
+
+xref:technical_specs/Update_Donor_Record.adoc[Message - Update Donor Record]

@@ -1,0 +1,19 @@
+= Message - A33 Cancel Patient Departing - Tracking
+:v291_section: "3.3.33"
+:v2_section_name: "ADT/ACK - Cancel Patient Departing - Tracking (Event A33)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The A33 event is sent when an A09 (patient departing-tracking) event is cancelled, either because of erroneous entry of the A09 event or because of a decision not to send the patient after all.
+
+If the patient was in a non-temporary location, then _PV1-3 - Assigned Patient_ location must contain the original patient location prior to the erroneous A09 (patient departing-tracking) event. If the patient was in a temporary location, then _PV1-11 - Temporary Location_ must contain the original patient location prior to the erroneous A09 (patient departing-tracking) event.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

@@ -1,9 +1,0 @@
-= Message - U01 Automated Equipment Status Update
-:v291_section:"13.3.1"
-:v2_section_name:"ESU/ACK - Automated Equipment Status Update (Event U01)"
-:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
-
-The equipment detail segment contains the data necessary to identify and maintain the equipment that is being used throughout the Laboratory Automation System.
-
-[segment_definition-table]
-

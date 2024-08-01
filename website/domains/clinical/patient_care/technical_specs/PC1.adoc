@@ -1,0 +1,17 @@
+= Message - PC1 Patient Problem Add
+:v291_section: "12.3.2"
+:v2_section_name: "PPR/ACK - Patient Problem Message (Events PC1, PC2, PC3)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The patient problem message is used to send problems from one application to another (e.g., a point of care system to a clinical repository). Many of the segments associated with this event are optional. This optionality allows systems in need of this information to set up transactions that fulfill their requirements.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+This error segment indicates the fields that caused a transaction to be rejected.
+

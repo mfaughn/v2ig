@@ -1,0 +1,15 @@
+= Message - I07 Unsolicited Insurance Information 
+:v291_section: "11.3.7"
+:v2_section_name: "PIN/ACK - Unsolicited Insurance Information (Event I07)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This trigger event is used by an entity or organization to transmit to a healthcare provider the insurance information on a specific patient. Typically, the healthcare provider will be a primary care provider.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

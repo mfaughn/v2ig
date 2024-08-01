@@ -6,4 +6,26 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/PC1.adoc[Message - PC1 Patient Problem Add]
+
+xref:technical_specs/PC2.adoc[Message - PC2 Patient Problem Update]
+
+xref:technical_specs/PC3.adoc[Message - PC3 Patient Problem Delete]
+
+xref:technical_specs/PC6.adoc[Message - PC6 Patient Goal Add]
+
+xref:technical_specs/PC7.adoc[Message - PC7 Patient Goal Update]
+
+xref:technical_specs/PC8.adoc[Message - PC8 Patient Goal Delete]
+
+xref:technical_specs/PCB.adoc[Message - PCB Patient Pathway Add]
+
+xref:technical_specs/PCC.adoc[Message - PCC Patient Pathway Update]
+
+xref:technical_specs/PCD.adoc[Message - PCD Patient Pathway Delete]
+
+xref:technical_specs/PCG.adoc[Message - PCG Patient Pathway Goal Add]
+
+xref:technical_specs/PCH.adoc[Message - PCH Patient Pathway Goal Update]
+
+xref:technical_specs/PCJ.adoc[Message - PCJ Patient Pathway Goal Delete]

@@ -1,0 +1,19 @@
+= Message - A12 Cancel Transfer
+:v291_section: "3.3.12"
+:v2_section_name: "ADT/ACK - Cancel Transfer (Event A12)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The A12 event is sent when an A02 (transfer a patient) event is cancelled, either because of erroneous entry of the A02 event or because of a decision not to transfer the patient after all. _PV1-3 - Assigned Patient Location_ must show the location of the patient prior to the original transfer.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) even be used in addition.
+
+*Attention: The DG1 segment was retained for backward compatibility only as of v2.4 and was withdrawn and removed from this message structure as of v2.7.*
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

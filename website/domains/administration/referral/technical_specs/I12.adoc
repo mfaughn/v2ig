@@ -1,0 +1,7 @@
+= Message - I12 Patient Referral
+:v291_section: "11.5.2"
+:v2_section_name: "REF/RRI - Patient Referral (Event I12)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This event triggers a message to be sent from one healthcare provider to another regarding a specific patient. The referral message may contain patient demographic information, specific medical procedures to be performed (accompanied by previously obtained authorizations) and relevant clinical information pertinent to the patient's case.
+

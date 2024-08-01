@@ -1,0 +1,16 @@
+= Message - M10 Master File Notification - Test/Observation Batteries
+:v291_section: "8.8.5"
+:v2_section_name: "MFN/MFK - Master File Notification - Test/Observation Batteries (Event M10)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[NOTE]
+The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
+
+[ack_chor-table]
+

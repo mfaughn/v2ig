@@ -6,4 +6,20 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/B01.adoc[Message - B01 Add Personnel Record]
+
+xref:technical_specs/B02.adoc[Message - B02 Update Personnel Record]
+
+xref:technical_specs/B03.adoc[Message - B03 Delete Personnel Record]
+
+xref:technical_specs/B04.adoc[Message - B04 Activate Practicing Person]
+
+xref:technical_specs/B05.adoc[Message - B05 Deactivate Practicing Person]
+
+xref:technical_specs/B06.adoc[Message - B06 Terminate Practicing Person]
+
+xref:technical_specs/B07.adoc[Message - B07 Grant Certificate/Permission]
+
+xref:technical_specs/B08.adoc[Message - B08 Revoke Certificate/Permission]
+
+xref:technical_specs/Q25_K25.adoc[Message - Q25/K25 Query Personnel Information]

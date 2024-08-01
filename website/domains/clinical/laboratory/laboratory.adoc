@@ -6,4 +6,22 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/General_Laboratory_Order.adoc[Message - General Laboratory Order]
+
+xref:technical_specs/Laboratory_Order_for_All_Specimens_in_Shipment.adoc[Message - Laboratory Order for All Specimens in Shipment]
+
+xref:technical_specs/Laboratory_Order_for_Population_Location.adoc[Message - Laboratory Order for Population/Location]
+
+xref:technical_specs/Laboratory_Result_Interpretation_Request.adoc[Message - Laboratory Result Interpretation Request]
+
+xref:technical_specs/Message_–_Unsolicited_Order_Oriented_Observation.adoc[Message – Unsolicited Order Oriented Observation]
+
+xref:technical_specs/Message_–_Unsolicited_Population_Location-Based_Laboratory_Observation.adoc[Message – Unsolicited Population/Location-Based Laboratory Observation]
+
+xref:technical_specs/Message_–_Unsolicited_Specimen_Container_Oriented_Observation.adoc[Message – Unsolicited Specimen Container Oriented Observation]
+
+xref:technical_specs/Message_–_Unsolicited_Specimen_Oriented_Observation.adoc[Message – Unsolicited Specimen Oriented Observation]
+
+xref:technical_specs/Multiple_Laboratory_Orders_for_Single_Specimen.adoc[Message - Multiple Laboratory Orders for Single Specimen]
+
+xref:technical_specs/Multiple_Laboratory_Orders_for_a_Single_Container_of_a_Specimen.adoc[Message - Multiple Laboratory Orders for a Single Container of a Specimen]

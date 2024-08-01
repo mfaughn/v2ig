@@ -1,0 +1,9 @@
+= Message - U06 Automated Equipment Inventory Request 
+:v291_section: "13.3.6"
+:v2_section_name: "INR/ACK – Automated Equipment Inventory Request (Event U06)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The equipment command response segment contains the receiving component's response to the previously received command.
+
+[segment_definition-table]
+

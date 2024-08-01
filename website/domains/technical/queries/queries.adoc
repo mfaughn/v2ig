@@ -6,4 +6,16 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/J01.adoc[Message - J01 Cancel query/acknowledge message]
+
+xref:technical_specs/J02.adoc[Message - J02 Cancel subscription/acknowledge message]
+
+xref:technical_specs/Q16.adoc[Message - Q16 Create subscription]
+
+xref:technical_specs/Q17.adoc[Message - Q17 Query for previous events]
+
+xref:technical_specs/Query_by_parameter_display_response.adoc[Message - Query by parameter/display response]
+
+xref:technical_specs/Query_by_parameter_segment_pattern_response.adoc[Message - Query by parameter/segment pattern response]
+
+xref:technical_specs/Query_by_parameter_tabular_response.adoc[Message - Query by parameter/tabular response]

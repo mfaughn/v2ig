@@ -6,4 +6,18 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/P01.adoc[Message - P01 Add Patient Account]
+
+xref:technical_specs/P02.adoc[Message - P02 Purge Patient Accounts]
+
+xref:technical_specs/P03.adoc[Message - P03 Post Detail Financial Transactions]
+
+xref:technical_specs/P05.adoc[Message - P05 BAR/ACK - Update Account]
+
+xref:technical_specs/P06.adoc[Message - P06 BAR/ACK - End Account]
+
+xref:technical_specs/P10.adoc[Message - P10 Transmit Ambulatory Payment Classification (APC) Groups]
+
+xref:technical_specs/P11.adoc[Message - P11 Post Detail Financial Transactions - Expanded]
+
+xref:technical_specs/P12.adoc[Message - P12 Update Diagnosis/Procedure]

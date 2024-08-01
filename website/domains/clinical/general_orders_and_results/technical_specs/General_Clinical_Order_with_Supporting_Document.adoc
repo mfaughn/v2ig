@@ -1,0 +1,17 @@
+= Message - General Clinical Order with Supporting Document
+:v291_section: "4.4.20"
+:v2_section_name: "OMQ – General Order Message with Document Payload (Event O57)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The purpose of this message is to enable communication of orders using a CDA document type to convey the content of the order (e.g., prescription, lab tests, etc.) while the message infrastructure enables appropriate state management.
+
+It should be noted that, unless orders are communicated at the granular, fully decomposed test/medication/procedure/etc. level, state management can only happen at the group level, i.e., equal to all elements in the document. It also should be noted that identification of individual elements can only be achieved if the CDA document contains appropriate identification while the order numbers in ORC effectively act as a group number.
+
+Once the order manager determines to initiate a new order using this message, then all subsequent state management messages must continue at the document level, forgoing detailed level state management.
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+[message_structure-table]
+
+[ack_chor-table]
+

@@ -6,4 +6,54 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/S01.adoc[Message - S01 Request New Appointment Booking]
+
+xref:technical_specs/S02.adoc[Message - S02 Request Appointment Rescheduling]
+
+xref:technical_specs/S03.adoc[Message - S03 Request Appointment Modification]
+
+xref:technical_specs/S04.adoc[Message - S04 Request Appointment Cancellation]
+
+xref:technical_specs/S05.adoc[Message - S05 Request Appointment Discontinuation]
+
+xref:technical_specs/S06.adoc[Message - S06 Request Appointment Deletion]
+
+xref:technical_specs/S07.adoc[Message - S07 Request Addition of Service/Resource on Appointment]
+
+xref:technical_specs/S08.adoc[Message - S08 Request Modification of Service/Resource on Appointment]
+
+xref:technical_specs/S09.adoc[Message - S09 Request Cancellation of Service/Resource on Appointment]
+
+xref:technical_specs/S10.adoc[Message - S10 Request Discontinuation of Service/Resource on Appointment]
+
+xref:technical_specs/S11.adoc[Message - S11 Request Deletion of Service/Resource on Appointment]
+
+xref:technical_specs/S12.adoc[Message - S12 Notification of New Appointment Booking]
+
+xref:technical_specs/S13.adoc[Message - S13 Notification of Appointment Rescheduling]
+
+xref:technical_specs/S14.adoc[Message - S14 Notification of Appointment Modification]
+
+xref:technical_specs/S15.adoc[Message - S15 Notification of Appointment Cancellation]
+
+xref:technical_specs/S16.adoc[Message - S16 Notification of Appointment Discontinuation]
+
+xref:technical_specs/S17.adoc[Message - S17 Notification of Appointment Deletion]
+
+xref:technical_specs/S18.adoc[Message - S18 Notification of Addition of Service/Resource on Appointment]
+
+xref:technical_specs/S19.adoc[Message - S19 Notification of Modification of Service/Resource on Appointment]
+
+xref:technical_specs/S20.adoc[Message - S20 Notification of Cancellation of Service/Resource on Appointment]
+
+xref:technical_specs/S21.adoc[Message - S21 Request Discontinuation of Service/Resource on Appointment]
+
+xref:technical_specs/S22.adoc[Message - S22 Notification of Deletion of Service/Resource on Appointment]
+
+xref:technical_specs/S23.adoc[Message - S23 Notification of Blocked Schedule Time Slot(s)]
+
+xref:technical_specs/S24.adoc[Message - S24 Notification of Opened ("un-blocked") Schedule Time Slot(s)]
+
+xref:technical_specs/S26.adoc[Message - S26 Notification That Patient Did Not Show Up for Scheduled Appointment]
+
+xref:technical_specs/S27.adoc[Message - S27 Broadcast Notification of Scheduled Appointments]

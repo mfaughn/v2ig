@@ -1,0 +1,11 @@
+= Message - Donor Eligibility Notification
+:v291_section: "4.16.13"
+:v2_section_name: "DEL - Donor Eligibility (Event O46)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+Use this message to communicate a donor’s eligibility to donate.
+
+[message_structure-table]
+
+[ack_chor-table]
+

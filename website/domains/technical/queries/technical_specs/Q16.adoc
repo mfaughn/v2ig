@@ -1,0 +1,15 @@
+= Message - Q16 Create subscription
+:v291_section: "5.4.4"
+:v2_section_name: "QSB – Create subscription (Event Q16)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+See section _5.7_, "_PUBLISH AND SUBSCRIBE_" for more information about this event.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

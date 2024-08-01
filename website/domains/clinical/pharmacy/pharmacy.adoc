@@ -6,4 +6,20 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/Pharmacy_Query_Response.adoc[Pharmacy Query/Response]
+
+xref:technical_specs/Pharmacy_Treatment_Administration.adoc[Message - Pharmacy/Treatment Administration]
+
+xref:technical_specs/Pharmacy_Treatment_Dispense.adoc[Message - Pharmacy/Treatment Dispense]
+
+xref:technical_specs/Pharmacy_Treatment_Dispense_Receipt.adoc[Message - Pharmacy/Treatment Dispense Receipt]
+
+xref:technical_specs/Pharmacy_Treatment_Dispense_Request.adoc[Pharmacy/Treatment Dispense Request]
+
+xref:technical_specs/Pharmacy_Treatment_EncodedOrder.adoc[Message - Pharmacy/Treatment EncodedOrder]
+
+xref:technical_specs/Pharmacy_Treatment_Give_Instructions.adoc[Message - Pharmacy/Treatment Give Instructions]
+
+xref:technical_specs/Pharmacy_Treatment_Order.adoc[Message - Pharmacy/Treatment Order]
+
+xref:technical_specs/Pharmacy_Treatment_Refill_Authorization_Request.adoc[Message - Pharmacy/Treatment Refill Authorization Request]

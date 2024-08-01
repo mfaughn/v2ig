@@ -1,0 +1,15 @@
+= Message - I02 Request of Patient Selection Display List 
+:v291_section: "11.3.2"
+:v2_section_name: "RQI/RPL - Request/Receipt of Patient Selection Display List (Event I02)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This trigger event occurs when the inquirer specifies a request for a name lookup listing. Generally, this request is used by the responder when insufficient data is on hand for a positive match. In this case, the requester may ask for a list of possible candidates from which to make a selection. This event code is also used by the responder to signify that the return information contains a list of information rather than information specific to a single patient.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+

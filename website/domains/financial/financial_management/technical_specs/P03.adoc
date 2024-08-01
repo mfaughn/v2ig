@@ -1,0 +1,36 @@
+= Message - P03 Post Detail Financial Transactions
+:v291_section: "6.4.3"
+:v2_section_name: "DFT/ACK - Post Detail Financial Transactions (Event P03)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The Detail Financial Transaction (DFT) message is used to describe a finan­cial transaction transmitted between systems, that is, to the billing system for ancillary charges, ADT to billing system for patient deposits, etc.
+
+Use case for Post Detail Financial Transaction with related Order:
+
+This information can originate in many ways. For instance, a detailed financial transaction for an ancillary charge is sent to a billing system that also tracks the transaction(s) in relation to their order via placer order number or wishes to post these transactions with the additional order information. Therefore a service reaches a state where a detailed financial transaction is created and interfaced to other systems along with optional associated order information. If the message contains multiple transactions for the same order, such as a test service and venipuncture charge on the same order, the ordering information is entered in the Order segment construct that precedes the FT1 segments. If a message contains multiple transactions for disparate orders for the same account each FT1 segment construct may contain the order related information specific to that transaction within the message.
+
+If the common order information is sent, the Order Control Code should reflect the current state of the common order and is not intended to initiate any order related triggers on the receiving application. For example if observations are included along with common order information the order control code would indicate 'RE' as observations to follow.
+
+If common order information is sent related to the entire message or a specific financial transaction, the required Order Control Code should reflect the current state of the common order and is not intended to initiate any order related triggers on the receiving application. For example if observations are included along with common order information the order control code would indicate 'RE' as observations to follow.
+
+If order detail information is sent related to the entire message or a specific financial transaction, the required fields for that detail segment must accompany that information.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[NOTE]
+The ROL segment is optionally included after the PD1 to transmit information for patient level primary care providers, after the PV2 for additional information on the physicians whose information is sent there (i.e., Attending Doctor, Referring Doctor, Consulting Doctor), and within the insurance construct to transmit information for insurance level primary care providers.
+
+[NOTE]
+There is an information overlap between the FT1, DG1 and PR1 segments. If diagnosis information is sent in an FT1 segment, it should be consistent with the information contained in any DG1 segments present within its hierarchy. Since the procedure code field within the FT1 does not repeat, if procedure information is sent on an FT1 it is recommended that the single occurrence of the code in FT1 equates to the primary procedure (_PR1-14 - Procedure Priority_ code value 1).
+
+[NOTE]
+The extra set of DG1/DRG/GT1/IN1/IN2/IN3/ROL segments added in V2.4 have been withdrawn as a technical correction
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+The error segment indicates the fields that caused a transaction to be rejected.
+

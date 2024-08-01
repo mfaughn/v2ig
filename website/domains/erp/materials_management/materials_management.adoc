@@ -6,4 +6,22 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/S28.adoc[Message - S28 Request New Sterilization Lot]
+
+xref:technical_specs/S29.adoc[Message - S29 Request Sterilization Lot Deletion]
+
+xref:technical_specs/S30.adoc[Message - S30 Request Item]
+
+xref:technical_specs/S31.adoc[Message - S31 Request Anti-Microbial Device Data]
+
+xref:technical_specs/S32.adoc[Message - S32 Request Anti-Microbial Device Cycle Data]
+
+xref:technical_specs/S33.adoc[Message - S33 Notification of Sterilization Configuration]
+
+xref:technical_specs/S34.adoc[Message - S34 Notification of New Sterilization Lot]
+
+xref:technical_specs/S35.adoc[Message - S35 Notification of Sterilization Lot Deletion]
+
+xref:technical_specs/S36.adoc[Message - S36 Notification of Anti-Microbial Device Data]
+
+xref:technical_specs/S37.adoc[Message - S37 Notification of Anti-Microbial Device Cycle Data]

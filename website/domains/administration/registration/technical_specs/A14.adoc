@@ -1,0 +1,17 @@
+= Message - A14 Pending Admit 
+:v291_section: "3.3.14"
+:v2_section_name: "ADT/ACK - Pending Admit (Event A14)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+An A14 event notifies other systems of a planned admission, when there is a reservation or when patient admission is to occur imminently. The A14 event is similar to a pre-admit, but without the implication that an account should be opened for the purposes of tests prior to admission. It is used when advanced notification of an admit is required in order to prepare for the patient's arrival.
+
+The PRT - Participation Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _–PRT-11 - Begin Date/Time_ and the _–PRT-12 - End Date/Time_ in the PRT, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

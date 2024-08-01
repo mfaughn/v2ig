@@ -1,0 +1,21 @@
+= Message - P01 Add Patient Account
+:v291_section: "6.4.1"
+:v2_section_name: "BAR/ACK - Add Patient Account (Event P01)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+Data are sent from some application (usually a Registration or an ADT system, for example) to the patient accounting or financial system to establish an account for a patient's billing/accounts receivable record. Many of the segments associated with this event are optional. This optionality allows those systems needing these fields to set up transactions that fulfill their requirements and yet satisfy the HL7 requirements.
+
+When an account's start and end dates span a period greater than any particular visit, the P01 (add account) event should be used to transmit the opening of an account. The A01 (admit/visit notification) event can notify systems of the creation of an account as well as notify them of a patient's arrival in the healthcare facility. In order to create a new account without notifying systems of a patient's arrival, use the P01 trigger event.
+
+From Standard Version 2.3 onward, the P01 event should only be used to add a new account that did not exist before, not to update an existing account. The new P05 (update account) event should be used to update an existing account. The new P06 (end account) event should be used to close an account. With the P01 event, _EVN-2 - Recorded Date/Time_ should contain the account start date.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+The error segment will indicate the fields that caused a transaction to be rejected.
+

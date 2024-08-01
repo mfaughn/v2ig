@@ -1,0 +1,13 @@
+= Message - J01 Cancel query/acknowledge message
+:v291_section: "5.4.6"
+:v2_section_name: "QCN/ACK – cancel query/acknowledge message (Event J01)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

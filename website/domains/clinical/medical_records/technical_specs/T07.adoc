@@ -1,0 +1,20 @@
+= Message - T07 Document Edit
+:v291_section: "9.6.7"
+:v2_section_name: "MDM/ACK - Document Edit Notification (Event T07)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+[NOTE]
+The only valid use of this trigger event is for documents whose availability status is "Unavailable," i.e., the document has not been made available for patient care.
+
+This is a notification of an edit to a document without the accompanying content.
+
+*Scenario:* Errors, which need to be corrected, are discovered in a document. The original document is edited, and an edit notification is sent.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

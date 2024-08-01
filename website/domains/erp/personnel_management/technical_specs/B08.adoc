@@ -1,0 +1,19 @@
+= Message - B08 Revoke Certificate/Permission
+:v291_section: "15.3.9"
+:v2_section_name: "PMU/ACK – Revoke Certificate/Permission (Event B08)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+An event B08 indicates that a certificate/permission for a health professional is revoked.
+
+The EVN segment is used to indicate the effective or planned date.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

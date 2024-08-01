@@ -6,4 +6,6 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/Non-Stock_Supply_Requisition.adoc[Non-Stock Supply Requisition]
+
+xref:technical_specs/Stock_Supply_Requisition.adoc[Message - Stock Supply Requisition]

@@ -1,0 +1,13 @@
+= Message - PCJ Patient Pathway Goal Delete
+:v291_section: "12.3.4"
+:v2_section_name: "PPG/ACK - Patient Pathway Message (Goal Oriented) (Events PCG, PCH, PCJ)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

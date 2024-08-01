@@ -1,0 +1,17 @@
+= Message - A55 Cancel Change Attending Doctor
+:v291_section: "3.3.55"
+:v2_section_name: "ADT/ACK - Cancel Change Attending Doctor (Event A55)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The A55 event is sent when an A54 (change attending doctor) event is cancelled, either because of erroneous entry of the A54 event or because of a decision not to change the attending doctor after all. _PV1-7 - Attending Doctor_ must contain the patient's doctor prior to the change of attending doctor.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,14 @@
+= Unsolicited Vaccination Record Update
+:v291_section: "4A.7.6"
+:v2_section_name: "VXU - Unsolicited Vaccination Record Update (Event V04)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+[datatype-definition]
+When a provider wishes to update the patient's vaccination record being held in a registry, the provider will transmit an unsolicited update of the record (a V04 trigger event).
+
+An unsolicited update will follow this format. The three-letter code in the leftmost column indicates the segment that is included; the column on the right specifies the chapter in which that segment is fully defined.
+
+[message_structure-table]
+
+[ack_chor-table]
+

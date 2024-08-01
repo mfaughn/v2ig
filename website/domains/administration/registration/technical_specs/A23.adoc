@@ -1,0 +1,15 @@
+= Message - A23 Delete a Patient Record
+:v291_section: "3.3.23"
+:v2_section_name: "ADT/ACK - Delete a Patient Record (Event A23)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The A23 event is used to delete visit or episode-specific information from the patient record. For example, it is used to remove old data from a database that cannot hold all historical patient visit data. When an event was entered erroneously, use one of the cancel transactions. This event can be used to purge account-level data while retaining the person in the database.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

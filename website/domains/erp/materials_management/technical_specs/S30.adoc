@@ -1,0 +1,19 @@
+= Message - S30 Request Item
+:v291_section: "17.6.3"
+:v2_section_name: "STI/ACK/STS - Request Item (Event S30)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+A request item is sent by the placer application to the filler application to request the ID and description of an item to be sterilized or decontaminated. If it is successful, the filler application returns an application acknowledgment (if requested under the enhanced acknowledgment mode, or if the original acknowledgment mode is in use).
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+

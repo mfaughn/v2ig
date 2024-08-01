@@ -6,4 +6,4 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/SPEC_CODE.adoc[SPEC TITLE]
+xref:technical_specs/Unsolicited_Vaccination_Record_Update.adoc[Unsolicited Vaccination Record Update]

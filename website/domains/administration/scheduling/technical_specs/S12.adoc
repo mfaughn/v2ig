@@ -1,0 +1,7 @@
+= Message - S12 Notification of New Appointment Booking
+:v291_section: "10.4.1"
+:v2_section_name: "Notification of New Appointment Booking (Event S12)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This message is sent from a filler application to notify other applications that a new appointment has been booked. The information provided in the SCH segment and the other detail segments as appropriate describe the appointment that has been booked by the filler application.
+

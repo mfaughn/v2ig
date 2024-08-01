@@ -1,0 +1,7 @@
+= Message - M13 Master File Notification - General 
+:v291_section: "8.4.2.1"
+:v2_section_name: "MFN/MFK - Master File Notification - General (Event M13)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The MFA segment carries acknowledgment information for the corresponding MFE segment (identified by MFA__-5 - Primary Key Value - MFA__). Fields _MFE-4 - Primary Key Value - MFE_ and _MFA-5 - Primary Key Value - MFA_ provide the link between the corresponding segments.
+
