@@ -1,0 +1,21 @@
+= Message - A11 Cancel Admit / Visit Notification
+:v291_section:"3.3.11"
+:v2_section_name:"ADT/ACK - Cancel Admit / Visit Notification (Event A11)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+For "admitted" patients, the A11 event is sent when an A01 (admit/visit notification) event is cancelled, either because of an erroneous entry of the A01 event, or because of a decision not to admit the patient after all.
+
+For "non-admitted" patients, the A11 event is sent when an A04 (register a patient) event is cancelled, either because of an erroneous entry of the A04 event, or because of a decision not to check the patient in for the visit after all. To cancel an A05 (pre-admit a patient) event, use the A38 (cancel pre-admit), which was new for Version 2.3 of this Standard.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+*Attention: The DG1 segment was retained for backward compatibility only as of v2.4 and was withdrawn and removed from this message structure as of v2.7.*
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

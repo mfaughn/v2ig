@@ -1,0 +1,15 @@
+= Message - S34 Notification of New Sterilization Lot
+:v291_section:"17.7.2"
+:v2_section_name:"SLN/ACK - Notification of New Sterilization Lot (Event S34) "
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This message is sent from a filler application to notify other applications that a new sterilization lot has been created. The information provided in the SLT segment describes the new sterilization lot that has been created by the filler application.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

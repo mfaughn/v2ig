@@ -1,0 +1,13 @@
+= Message - Laboratory Result Interpretation Request
+:v291_section:"4.4.22"
+:v2_section_name:"OML – Laboratory Result Interpretation Request Message (Event O59) "
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This is a simplified fulfillment order representing a request for interpretation of a pre-existing result. The ORC and OBR are the new fulfillment order requesting confirmation of a previous result.
+
+The REL segment (Ch. 12) establishes a relationship between the new order (source) and a previous order/result (target) requiring additional action such as confirmation of that order or result, or interpretation of that result. The REL segment includes a variety of fields defining a clinical relationship and the identity of the asserting party. For this use, the required fields are the relationship type (REL-2), the source identifier (REL-4, new order number in this message), and the target identifier (REL-5, previous order group, order, or result identifier included in a previous message). Targets may be represented using order or order group identifiers, in which case the target encompasses the entire order or order group and all results, or may include results identifiers (OBX-21, Observation Instance Identifier), in which case the target is restricted to the specific result.
+
+[message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,17 @@
+= Message - A27 Cancel Pending Admit
+:v291_section:"3.3.27"
+:v2_section_name:"ADT/ACK - Cancel Pending Admit (Event A27)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The A27 event is sent when an A14 (pending admit) event is cancelled, either because of erroneous entry of the A14 event or because of a decision not to admit the patient after all.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

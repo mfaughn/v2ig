@@ -1,0 +1,27 @@
+= Message - Unsolicited Point-Of-Care Observation without Existing Order – Place an Order
+:v291_section:"7.3.4"
+:v2_section_name:"ORU – Unsolicited Point-Of-Care Observation Message without Existing Order – Place an Order (Event R30)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This event trigger instructs the receiving system to create a new order for the observation(s) contained in the message.
+
+One example of this trigger's use case occurs when a Doctor verbally instructs a nurse to perform a test. Looking at this use case from an information management perspective, one might expect that, the nurse would enter an order into laboratory information or ordering system before performing the test. However, there usually isn't time for order entry in these use cases. In fact, it is highly desirable for the POC measurement process to become automated so that the only action a user needs to take is to make a measurement on the POC Device, with all other processes for generating an order and tying it in to the observation handled by the "machines."
+
+In order to allow for the passing of specific information relating to the Patient, responsible Doctor, placing doctor, patient location, etc., there is a requirement for the inclusion of a PV1 and PD1 segment in the ORU message type. One example of this trigger's use case occurs when a Doctor at a remote site without a shared Patient index instructs a nurse to perform a test. The testing is carried out without prior entry of a request into the LIS. Once performed, the results, along with the patient information are transmitted to the LIS. In some circumstances, the LIS may add clinical interpretation to this and report it back to the placing system and/or another system. In order to allow for this to take place, the requester, location, etc., information is required.
+
+To allow the sending system to correlate every result with its associated order, the receiving system will return the placer order number in the ORC segment of the ORA^R33 message. If the receiving system cannot place an order it must returning an application level error description in the Application Acknowledgement Message MSA Text Message field.
+
+The sending system must return a commit-level acknowledgement in response to the ORA^R33 message.
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 SHALL always be set to NE (Never).
+

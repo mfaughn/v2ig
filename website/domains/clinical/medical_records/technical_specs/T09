@@ -1,0 +1,20 @@
+= Message - T09 Document Replacement
+:v291_section:"9.6.9"
+:v2_section_name:"MDM/ACK - Document Replacement Notification (Event T09)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+[NOTE]
+This trigger event is generally used when the original document availability status is "Available."
+
+This is a notification of replacement to a document without the accompanying content.
+
+*Scenario*: Errors discovered in a document are corrected. The original document is replaced with the revised document. The replacement document has its own new unique document ID that is linked to the original document via the parent ID. The availability status of the original document is changed to "Obsolete" but the original document should be retained in the system for historical reference. Document replacement notification is sent.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

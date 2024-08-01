@@ -1,0 +1,19 @@
+= Message - A08 Update Patient Information
+:v291_section:"3.3.8"
+:v2_section_name:"ADT/ACK - Update Patient Information (Event A08)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This trigger event is used when any patient information has changed but when no other trigger event has occurred. For example, an A08 event can be used to notify the receiving systems of a change of address or a name change. We strongly recommend that the A08 transaction be used to update fields that are [.underline]#not# updated by any of the other trigger events. If there are specific trigger events for this update, these trigger events should be used. For example, if a patient's address and location are to be changed, then an A08 is used to change the patient address and the appropriate patient location trigger event is used to change the patient location. The A08 event can include information specific to an episode of care, but it can also be used for demographic information only.
+
+The ROL segment has been deprecated and retained for backwards compatiblity purposes only as of v 2.9. The reader is referred to the PRT segment instead.
+
+The PRT – Participation Information Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _PRT-11 – Begin Date/Time_ and the _–PRT-12 - End Date/Time_ in the PRT, with the applicable _PRT-4 – role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

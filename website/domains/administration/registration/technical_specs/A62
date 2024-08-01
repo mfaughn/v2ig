@@ -1,0 +1,17 @@
+= Message - A62 Cancel Change Consulting Doctor
+:v291_section:"3.3.62"
+:v2_section_name:"ADT/ACK - Cancel Change Consulting Doctor (Event A62)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The A62 event is sent when an A61 (change consulting doctor) event is cancelled, either because of erroneous entry of the A61 event or because of a decision not to change the consulting physician(s) after all. _PV1-9 - Consulting Doctor_ must show the patient's doctor prior to the change being cancelled.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event is used.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

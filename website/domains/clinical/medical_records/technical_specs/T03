@@ -1,0 +1,27 @@
+= Message - T03 Document Status Change
+:v291_section:"9.6.3"
+:v2_section_name:"MDM/ACK - Document Status Change Notification (Event T03)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This is a notification of a change in a status of a document without the accompanying content.
+
+*Scenario:* A document is authenticated. Notification is sent to the chart tracking system and is used to update the document status from pre-authenticated to authenticated or legally authenticated.
+
+A change in any of the following independent status characteristics would cause a message to be sent:
+
+• Completion Status
+
+• Confidentiality Status
+
+• Availability Status (the Availability Status of "cancelled" is supported in T11 (document cancel notification) or T03)
+
+• Storage Status
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,13 @@
+= Message - Pharmacy/Treatment Administration
+:v291_section:"4A.3.14"
+:v2_section_name:"RAS - Pharmacy/Treatment Administration Message (Event O17)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The RAS message may be created by the administering application (e.g., nursing application) for each instance of administration for an existing order. If the administering application wants to report several administrations of medication/treatment for a given order with a single RAS message, each instance is reported by a separate (repeating) RXA segment. In addition, the administration records for a group of orders may be sent in a single message by creating repeating groups of segments at the ORC level.
+
+In the most common case, the RAS messages would be sent from a nursing application to the pharmacy or treatment application (or to the ordering application or another clinical application), which could use the data to generate the medication administration reports. Multiple RXA segments, each corresponding to a separate administration instance for a given order, may be sent with a single ORC.
+
+[message_structure-table]
+
+[ack_chor-table]
+

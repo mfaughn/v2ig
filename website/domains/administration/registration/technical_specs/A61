@@ -1,0 +1,29 @@
+= Message - A61 Change Consulting Doctor
+:v291_section:"3.3.61"
+:v2_section_name:"ADT/ACK - Change Consulting Doctor (Event A61)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+An A61 event is used as a result of a change in the consulting physician(s) for the treatment of a patient.
+
+When other important fields change, it is recommended that the A08 (update patient information) event be used in addition. If the Patient Administration system allows demographics to change at the same time (for example an address change), two messages (an A61 followed by an A08) should be sent.
+
+The new consulting doctor(s) of the patient should appear in the _PV1-9 - Consulting Doctor_ and may appear in a role segment per new consulting physician.
+
+If a consulting doctor stops being consulting doctor for this patient-visit, the end date/time can be sent in the _PRT-12 - End Date/Time_.
+
+For example, an A61 event can be used to notify the billing system that doctors' fees for being a consulting doctor, should be billed to the new doctor(s) starting from the timestamp in the message.
+
+It is recommended that field _EVN-6 - Event Occurred_ contains the date/time the event actually occurred to the patient.
+
+The ROL segment has been deprecated and retained for backwards compatiblity purposes only as of v 2.9. The reader is referred to the PRT segment instead.
+
+The PRT – Participation Information Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _PRT-11 - Participation Begin Date/Time_ and the _PRT-12 - Participation End Date/Time_ in the PRT segment, with the applicable _PRT-4 - PArticipation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

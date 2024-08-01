@@ -1,0 +1,21 @@
+= Message - A53 Cancel Patient Returns from a Leave of Absence
+:v291_section:"3.3.53"
+:v2_section_name:"ADT/ACK - Cancel Patient Returns from a Leave of Absence (Event A53)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The A53 event is sent when an A22 (patient returns from "leave of absence") event is cancelled, either because of erroneous entry of the A22 event or because of a decision not to return the patient from "leave of absence" after all.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+As there is no specific field for the cancel LOA date/time, it is recommended that field _EVN-6 - Event Occurred_ contain the date/time the return from LOA was actually cancelled (but not necessarily recorded).
+
+_PV2-47 - Expected LOA Return Date/Time_ is used to communicate the date/time the patient is expected to return from LOA.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

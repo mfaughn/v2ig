@@ -1,0 +1,19 @@
+= Message - Blood Product Order
+:v291_section:"4.13.2"
+:v2_section_name:"OMB – Blood Product Order Message (Event O27)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+Blood product order messages present the need for additional information that is not included in standard HL7 order messages. Order messages must contain accompanying details regarding the blood product component, such as special processing requirements (e.g., irradiation and leukoreduction), and the amount of the blood product to be administered. Additionally, specific relevant clinical information can be included to allow the prospective review of the appropriateness of the blood product order.
+
+Blood product orders use the OMB message with the BPO segment for the detail segment and the acknowledgment message, ORB as described below.
+
+[message_structure-table]
+
+OMB use notes
+
+The NTE segment(s) can be included in the OMB message in four places; in each place the NTE refers to the segment that it follows. In particular, the NTEs following the MSH refer only to the message header; the NTEs following the blood product order segment apply to the service defined by that ORC and blood product order segment.
+
+The PID segment is required if and only if new orders are being entered and they are related to a particular patient. For non-patient-related orders the PID segment is never included.
+
+[ack_chor-table]
+

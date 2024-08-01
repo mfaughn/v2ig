@@ -1,0 +1,25 @@
+= Imaging Order
+:v291_section:"4.4.14"
+:v2_section_name:"OMI – Imaging Order Message (Event O23)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This message is used in communication between the information systems involved in the fulfillment of the request directed to the imaging department, such as a Radiology Information System (RIS) and a Picture Archiving and Communication System (PACS). For the purpose of the following discussion these systems will be identified as Imaging Department Information Systems (IDIS). Information contained in the Imaging Procedure Control (IPC) segment allows multiple IDIS to share the context of Imaging Studies (collections of images acquired, processed, stored, and interpreted) in Image Management tasks.
+
+The order for the imaging service is communicated between the Order Placer (such as an Order Entry system) and the Order Filler (such as an RIS). In the imaging department environment, the Order Filler also identifies the set of procedures (studies) and sub-procedures (procedure steps) that have to be performed in the process of fulfilling the order. Each sub-procedure is performed using a single device (station). The Order Filler identifies the type of device and either a specific device or group of devices (for example, by geographic location) one of which is to be used in performing the procedure step. Thus, the system performs an aspect of workflow management in the department.
+
+Another information system in the department may be managing storage and distribution of the images within the department as well as providing them to the enterprise. This system will have to operate within the same context as the system managing the workflow. This context includes identifiers, content of the order, and details of procedures and procedure steps that have to be performed to fulfill that particular order.
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+It is expected that the OMI message will typically be used in communication between IDIS as depicted in figure 4-1.
+
+Figure 4-1 – Use of OMI message
+
+image::extracted-media/media/image1.wmf[]
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+

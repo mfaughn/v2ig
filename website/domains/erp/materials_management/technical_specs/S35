@@ -1,0 +1,15 @@
+= Message - S35 Notification of Sterilization Lot Deletion
+:v291_section:"17.7.3"
+:v2_section_name:"SLN/ACK - Notification of Sterilization Lot Deletion (Event S35)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This message is sent from a filler application to notify other applications that a sterilization lot has been deleted. The information provided in the SLT segment describes the sterilization lot that has been deleted by the filler application.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

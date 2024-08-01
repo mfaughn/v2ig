@@ -1,0 +1,11 @@
+= Message - U03 Specimen Status Update 
+:v291_section:"13.3.3"
+:v2_section_name:"SSU/ACK - Specimen Status Update (Event U03)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The container detail segment is the data necessary to maintain the containers that are being used throughout the Laboratory Automation System.
+
+The specimens in many laboratories are transported and processed in containers (e.g., sample tubes). When SPM and SAC are used in the same message, then the conceptually duplicate attributes will be valued only in the SPM. This applies to _SAC-6 Specimen Source_, _SAC-27 Additives_, and _SAC-43 Special Handling Considerations_.
+
+[segment_definition-table]
+

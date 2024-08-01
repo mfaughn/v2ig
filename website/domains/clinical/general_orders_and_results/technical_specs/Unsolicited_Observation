@@ -1,0 +1,30 @@
+= Message - Unsolicited Observation
+:v291_section:"7.3.1"
+:v2_section_name:"ORU – Unsolicited Observation Message (Event R01)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The ORU message is for transmitting observational results, including lab, clinical or other observations, to other systems.. The OUL message is designed to accommodate the laboratory processes of laboratory automation systems.
+
+With the segment (OBX) defined in this chapter, and the OBR defined in Chapter 4, one can construct almost any clinical report as a multi-level hierarchy, with the PID segment defined in Chapter 3 at the upper level, an order record (OBR) at the next level with one or more observation records (OBX), followed by the specimen information (SPM) and one or more observations (OBX) directly associated with the specimen.
+
+One result segment (OBX) is transmitted for each component of a diagnostic report, such as an EKG or obstetrical ultrasound or electrolyte battery.
+
+The CTD segment in this trigger is used to transmit temporary patient contact details specific to this order.
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[NOTE]
+The ORC is permitted but not required in this message. Any information that could be included in either the ORC or the OBR must be included in the OBR on reporting. Notice also that the ORU (and the QRY) messages accommodate reports about many patients.
+
+Many report headers (OBR) may be sent beneath each patient segment, with many separate observation segments (OBX) related to the order / observation request beneath each OBR. OBX segments that are related to specimens immediately follow the SPM segments. Note segments (NTE) may be inserted at different locations in the message. The note segment applies to the entity that immediately precedes it, i.e., the patient if it follows the PID segment, the observation request if it follows the OBR segment, and the individual result if it follows the OBX segment.
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 SHALL always be set to NE (Never).
+

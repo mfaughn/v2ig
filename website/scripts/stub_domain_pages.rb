@@ -61,4 +61,8 @@ def stub_dir(dir)
   subs.each { |sub| stub_dir(sub) if File.directory?(sub) }
 end
 
-stub_dir(dir)
+# stub_dir(dir)
+sections = V2AD.v2.sections
+
+
+

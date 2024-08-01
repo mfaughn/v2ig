@@ -1,0 +1,13 @@
+= Message - U04 Specimen Status Request 
+:v291_section:"13.3.4"
+:v2_section_name:"SSR/ACK - Specimen Status Request (Event U04)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The inventory detail segment is the data necessary to track the inventory of substances (e.g. reagent, tips, waste) and equipment state indicators (a special type of non-material inventory items) on equipment.
+
+image::extracted-media/media/image6.wmf[]
+
+Figure 13-6. Information on the Types of Measures on a Container
+
+[segment_definition-table]
+

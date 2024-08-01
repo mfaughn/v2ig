@@ -1,0 +1,30 @@
+= Message - General Laboratory Order
+:v291_section:"4.4.6"
+:v2_section_name:"OML – laboratory order message (event O21)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The following message structure may be used for the communication of laboratory and other order messages and must be used for lab automation messages where it is required that the Specimen/Container information is within the ORC/OBR segment group.
+
+The trigger event for this message is any change to a laboratory order. Such changes include submission of new orders, cancellations, updates, etc. OML messages can originate also with a placer, filler, or an interested third party.
+
+[NOTE]
+The additional patient information, which is sent after the OBR with the current order (the segments PID, PD1, PV1, PV2, etc, indicated below with words "previous result"), could have been transferred with the previous result because the patient demographics related to the previous result can differ from the demographics related to the current order. The current intent is to only allow references to the same patient as in the header PID.
+
+The SAC segments included in the message allow the transfer of, e.g., a laboratory order with multiple containers and multiple test orders related to each container, or laboratory orders with test order requiring multiple containers.
+
+Refer to Chapter 13, "Laboratory Automation" for examples of usage, particularly to clarify the use of two references to SAC segments in this one message.
+
+The CTD segment in this trigger is used to transmit temporary patient contact details specific to this order.
+
+The IPC segment in this trigger is used to transmit imaging process identifiers for observations that will result in DICOM information objects (e.g., slide images). Note that the IPC-1 Accession Identifier is the identifier assigned by the Order Filler for associating the DICOM results with other laboratory information and processes; it may or may not be the same as the SPM-30 Accession ID or the SAC-2 Accession Identifier.
+
+In relationship to triggers O21, O33, O35, and O39 this message/trigger (O21) should be used where an order with multiple samples and optionally multiple containers per order item are to be communicated, but not against a complete specimen shipment (O39)
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+

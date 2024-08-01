@@ -1,0 +1,19 @@
+= Message - S31 Request Anti-Microbial Device Data
+:v291_section:"17.6.4"
+:v2_section_name:"SDR/ACK/SDS - Request Anti-Microbial Device Data (Event S31)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This trigger event is sent by the placer application to the filler application to request anti-microbial device data created during the decontamination/sterilization of medical supplies. In the context of this message segment, the term 'device' refers to a sterilizer or a washer. Sterilizers perform a sterilization process and washers perform a decontamination process.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+

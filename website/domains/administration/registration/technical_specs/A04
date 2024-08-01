@@ -1,0 +1,22 @@
+= Message - A04 Register a Patient
+:v291_section:"3.3.4"
+:v2_section_name:"ADT/ACK - Register a Patient (Event A04)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+An A04 event signals that the patient has arrived or checked in as a one-time, or recurring outpatient, and is not assigned to a bed. One example might be its use to signal the beginning of a visit to the Emergency Room (= Casualty, etc.).
+
+[NOTE]
+Some systems refer to these events as outpatient registrations or emergency admissions. _PV1-44 - Admit Date/Time_ is used for the visit start date/time.
+
+The ROL segment has been deprecated and retained for backwards compatiblity purposes only as of v 2.9. The reader is referred to the PRT segment instead.
+
+The PRT - Participation Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRTsegment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _–PRT-11 - Begin Date/Time_ and the _–PRT-12 - End Date/Time_ in the PRT segment, with the applicable _PRT-4 – role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

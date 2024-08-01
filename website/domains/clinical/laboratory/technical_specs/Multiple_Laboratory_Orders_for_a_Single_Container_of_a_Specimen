@@ -1,0 +1,23 @@
+= Message - Multiple Laboratory Orders for a Single Container of a Specimen
+:v291_section:"4.4.10"
+:v2_section_name:"OML – Laboratory order for multiple orders related to a single container of a specimen (event O35)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The trigger event for this message is any change to a laboratory order. Such changes include submission of new orders, cancellations, updates, etc., where multiple orders are associated with a single sample which may be carried in multiple containers. OML messages can originate also with a placer, filler, or an interested third party.
+
+This allows for a Specimen-centric message with multiple orders per specimen grouped by the specimen.
+
+The following message structure may be used for the communication of laboratory and other order messages and must be used for lab automation messages where the message requires Specimen/container information to group a number of orders.
+
+The IPC segment in this trigger is used to transmit imaging process identifiers for obsrevations that will result in DICOM information objects (e.g., slide images). Note that the IPC-1 Accession Identifier is the identifier assigned by the Order Filler for associating the DICOM results with other laboratory information and processes; it may or may not be the same as the SPM-30 Accession ID or the SAC-2 Accession Identifier.
+
+In relationship to triggers O21, O33, and O35, this message/trigger (O35) should be used for laboratory orders where there is 1 or more Specimens with 1 to many containers and each container may have 1 to many orders with previous result(s) per container.
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+

@@ -1,0 +1,19 @@
+= Message - M08 Master File Notification - Test/Observation (Numeric)
+:v291_section:"8.8.3"
+:v2_section_name:"MFN/MFK - Master File Notification - Test/Observation (Numeric) (Event M08)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[NOTE]
+The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
+
+[NOTE]
+_MFI-1 -_ Master _File Identifier_ = OMA for numeric observations.
+
+[ack_chor-table]
+

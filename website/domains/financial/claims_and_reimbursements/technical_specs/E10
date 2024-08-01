@@ -1,0 +1,28 @@
+= Message - E10 Edit/Adjudication Results 
+:v291_section:"16.3.6"
+:v2_section_name:"EHC^E10 – Edit/Adjudication Results (event E10)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This message is used to send edit and/or adjudication results for a HealthCare Services Invoice. Edit/Adjudication results are sent to the same Network Application ID that originated the Invoice, which was specified as the Sending Application on MSH on the original HealthCare Services Invoice.
+
+This message is returned to a Provider Application each time an EHC^E01 – Submit HealthCare Services Invoice message is successfully processed by a Payer Application. As a minimum, the EHC^E10 – Edit/Adjudication Results message will contain the Payer Applications' Invoice number (Payer Invoice Number on IVC), status codes for each Product/Service Line Item in the Invoice and optionally, a tracking number for the Payer Application (Payer Tracking Number on PSL).
+
+[NOTE]
+that an EHC^E12 – Request Additional Information (pending) is a valid response for an EHC^E01 – Submit HealthCare Services Invoice. In this case, the interactions would be EHC^E01 -> EHC^E12 (pending). If the Payer Application is able to process the Invoice on-line, the EHC^E10 – Edit/Adjudication Results message will contain the Invoice Processing Results portion completely filled out, indicating the results of the adjudication (e.g., paid as submitted, paid partial, etc.).
+
+Processing Rules:
+
+{empty}1) The Provider Application and the Payer Application must uniquely identify each Invoice, Product/Service Group, Product/Service Line Item and Adjustment. +
+These numbers appear as a pair on the IVC, PSG, PSL and ADJ segments and must be echoed on any subsequent interactions for the Invoice, group or line item between the Provider Application and Payer Application.
+
+{empty}2) The Provider Application and/or Payer Application may also supply a tracking number for each Product/Service Line Item it processes, specified as the Provider Tracking Number or Payer Tracking Number. +
+The Provider Tracking Number and Payer Tracking Number must be echoed on any subsequent interactions for the Product/Service Line Item between the Provider Application and Payer Application.
+
+{empty}3) The EHC^E10 – Edit/Adjudication Results message must only report against one HealthCare Services Invoice within a message. In other words, each IPR in this message must have the same Provider Invoice Number on IVC and the same Payer Invoice Number for all repetitions of the IVC segment in this message.
+
+{empty}4) The Provider Invoice Number on IVC must be the same as the Provider Invoice Number on IVC as specified on the EHC^E01 input message. In other words, this message must be used to respond to the incoming EHC^E01 and not a previous EHC^E01 HealthCare Services Invoice. Only IPRs for the Invoice specified on the EHC^E01 may be included in the EHC^E10 response.
+
+[message_structure-table]
+
+[ack_chor-table]
+

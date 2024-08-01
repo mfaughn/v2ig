@@ -1,0 +1,32 @@
+= Message - M16 Inventory Item Master File – Enhanced 
+:v291_section:"8.12.2"
+:v2_section_name:"MFN/MFK - Inventory Item Master File Message – Enhanced (Event M16)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This section describes a master file message designed to communicate information that relates to the sharing of material item master catalog and material item-inventory information between materials management systems and other systems such as surgical and immunization systems. The synchronization of the "item master" between systems and across the enterprise enables the success of the subsequent interfacing of transactions such as: material item requisitions (pre and post case), accounts payable invoices for the payment of material items, journal entries generated from the issue of items to departments or other inventory locations, and patient charges that allow a customer to improve patient care through the better management of materials. To face budget challenges, healthcare organizations need materials management systems that integrate with finance to automate logistics, eliminate paperwork and analyze data to improve efficiency and reduce overall costs. This process is a major contributor to improving the customers' bottom line by helping to eliminate materials waste, streamline ordering, ensure accurate payment of materials purchased, ensure accurate billing for materials used, and an accurate presentation of the financial statements of a healthcare facility.
+
+Material items defined in this message include consumable supplies, devices, surgical sets, and implants.
+
+Each MFE/ITM structure describes a set of attributes, specific to a material item existing in an item master catalog. The PCE and NTE segments are optional and repeating, associated with the item referred to in the ITM segment. An item may be linked to many patient charge exception combinations.
+
+Each VND/PKG segment grouping includes the available vendors and packaging information valid for the item referred to in the ITM segment. An item may be associated with many vendors. A vendor may be linked to many packaging configurations. Therefore the vendor segment can repeat and can include a repeating PKG segment within each repetition of the vendor segment.
+
+Each MFE/ITM/IVT structure describes a set of attributes specific to the inventory locations associated with the item referred to in the associated ITM segment. An inventory item can exist in more than one inventory location with different values for the same attributes, therefore, this segment repeats.
+
+The ILT segment describes lot and quantity information for a material product. In the message structure, this segment is directly associated with the IVT segment, thus the lot/quantity information is always related to a location. Repetition of the ILT segment supports the case where more than one lot of a material product may exist in an inventory location.
+
+[NOTE]
+that the quantities in the ILT segment are not necessarily intended to refer to continuously updated inventory quantities. The expectation is that periodic inventory quantities would be updated with subsequent master file messages. This segment can be used for interfacing, for example, Immunization information.
+
+Additional specialized information segments may be defined as additional use cases are defined, such as medication/drug segments.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+
+Master Files Query Response: Refer to Section 8.4.4.
+

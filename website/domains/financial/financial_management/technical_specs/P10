@@ -1,0 +1,17 @@
+= Message - P10 Transmit Ambulatory Payment Classification (APC) Groups
+:v291_section:"6.4.7"
+:v2_section_name:"BAR/ACK - Transmit Ambulatory Payment Classification (APC) Groups (Event P10)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The P10 event is used to communicate Ambulatory Payment Classification (APC) grouping. The grouping can be estimated or actual, based on the APC status indictor in GP1-1. This information is mandated in the USA by the Centers for Medicare and Medicaid Services (CMS) for reimbursement of outpatient services. The PID and PV1 segments are included for identification purposes only. When other patient or visit related fields change, use the A08 (update patient information) event.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+
+The error segment indicates the fields that caused a transaction to be rejected.
+

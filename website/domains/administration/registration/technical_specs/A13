@@ -1,0 +1,22 @@
+= Message - A13 Cancel Discharge / End Visit
+:v291_section:"3.3.13"
+:v2_section_name:"ADT/ACK - Cancel Discharge / End Visit (Event A13)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The A13 event is sent when an A03 (discharge/end visit) event is cancelled, either because of erroneous entry of the A03 event or because of a decision not to discharge or end the visit of the patient after all. _PV1-3 - Assigned Patient Location_ should reflect the location of the patient after the cancellation has been processed.
+
+[NOTE]
+This location may be different from the patient's location prior to the erroneous discharge. Prior Location could be used to show the location of the patient prior to the erroneous discharge.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+The PRT - Participation Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _–PRT-11 - Begin Date/Time_ and the _–PRT-12 - End Date/Time_ in the ROL, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

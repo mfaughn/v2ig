@@ -1,0 +1,7 @@
+= Message - I14 Cancel Patient Referral
+:v291_section:"11.5.4"
+:v2_section_name:"REF/RRI - Cancel Patient Referral (Event I14)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+This event triggers a message to be sent from one healthcare provider to another canceling a referral. A previous referral may have been made in error, or perhaps the cancellation has come from the patient.
+

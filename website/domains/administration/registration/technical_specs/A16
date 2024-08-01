@@ -1,0 +1,21 @@
+= Message - A16 Pending Discharge
+:v291_section:"3.3.16"
+:v2_section_name:"ADT/ACK - Pending Discharge (Event A16)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+An A16 event notifies other systems of a plan to discharge a patient when the patient has not yet left the healthcare facility. It is used when advanced notification of a discharge is required in order to prepare for the patient's change in location. For example, it is used to notify the pharmacy of the possible need for discharge drugs or to notify psychotherapy of the possible need for post-discharge appointments or to notify the extended care or home health system that the patient will be discharged and that the new extended care and home health admission assessment can be scheduled.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+The ROL segment has been deprecated and retained for backwards compatiblity purposes only as of v 2.9. The reader is referred to the PRT segment instead.
+
+The PRT – Participation Information Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _PRT-11 - Begin Date/Time_ and the _PRT-12 - End Date/Time_ in the PRT, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

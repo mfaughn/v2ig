@@ -1,0 +1,20 @@
+= Message - M02 Staff/Practitioner Master File
+:v291_section:"8.7.1"
+:v2_section_name:"MFN/MFK - Staff/Practitioner Master File Message (Event M02)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The staff identification (STF), person gender and sex (GSP) and recorded, practitioner detail (PRA), practitioner organization unit segment (ORG), professional affiliation (AFF), language detail (LAN), educational detail (EDU), and certificate detail (CER) segments can be used to transmit master files information between systems. The STF segment provides general information about personnel; the GSP, GSR, GSC, PRA, ORG, AFF, LAN, EDU, CER and NTE segments provide detailed information for a staff member.
+
+When the STF, GSP, GSR, GSC, PRA, ORG, AFF, LAN, EDU, CER and NTE segments are used in an MFN message, the abstract definition is as follows:
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[NOTE]
+As of v2.5, the PRA and ORG segments in the MFN^M02 are repeatable. HL7 does not give semantic meaning to the first instance of either. Refer to section 2.8.2.d in Chapter 2.
+

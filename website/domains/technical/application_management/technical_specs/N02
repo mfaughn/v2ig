@@ -1,0 +1,20 @@
+= Message - N02 Application Management Data Message
+:v291_section:"14.3.2"
+:v2_section_name:"NMD - Application Management Data Message (Event N02)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The N02 event signifies when an unsolicited update (UU) Application Management Data message (NMD) is created by on application to transmit application management information to other applications. In this case, the initiating application sends an NMD message as an unsolicited update (UU) containing application management information to a receiving application, which responds with a generic acknowledgement message (ACK).
+
+For example, an application going down for backups (or starting up again after backups) might issue such a message to one or more other applications. An application switching to another CPU or file-server may also need to use this transaction to notify other systems.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[NOTE]
+Because this message pair does not have an application acknowledgement, the value in MSH-16 does not affect the choreography
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

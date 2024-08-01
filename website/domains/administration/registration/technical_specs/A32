@@ -1,0 +1,19 @@
+= Message - A32 Cancel Patient Arriving - Tracking 
+:v291_section:"3.3.32"
+:v2_section_name:"ADT/ACK - Cancel Patient Arriving - Tracking (Event A32)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The A32 event is sent when an A10 (patient arriving-tracking) event is cancelled, either because of erroneous entry of the A10 event or because of a decision not to receive the patient after all.
+
+If the patient was in a non-temporary location, then the _PV1-3 - Assigned Patient Location_ may contain (if known) the original patient location prior to the erroneous A10 (patient arriving-tracking) event. If the patient was in a temporary location, then _PV1-11 - Temporary Location_ may contain (if known) the original patient location prior to the erroneous A10 (patient arriving-tracking) event.
+
+The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
+
+[message_structure-table]
+
+[ack_chor-table]
+
+[ack_message_structure-table]
+
+[ack_chor-table]
+

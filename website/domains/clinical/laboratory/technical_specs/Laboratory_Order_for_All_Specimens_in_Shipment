@@ -1,0 +1,15 @@
+= Message - Laboratory Order for All Specimens in Shipment
+:v291_section:"4.4.12"
+:v2_section_name:"OML – Specimen shipment centric laboratory order (event O39)"
+:generated: "Thu, 01 Aug 2024 14:45:37 -0600"
+
+The function of this message is to apply an order to all specimens in a shipment or a package within a shipment.
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[message_structure-table]
+
+[ack_chor-table]
+
