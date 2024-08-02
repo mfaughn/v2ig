@@ -6,8 +6,8 @@ FIXME
 
 == Administration Subdomains
 
-xref:referral/referral.adoc[Referral]
-
 xref:registration/registration.adoc[Registration]
 
 xref:scheduling/scheduling.adoc[Scheduling]
+
+xref:referral/referral.adoc[Referral]
