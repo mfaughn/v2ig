@@ -1,13 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "SNM"
+  "id" : "SNM",
   "meta" : {
     "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
   },
-  "text" : {
-    "status" : "generated",
-    "div" : "<p>FIXME</p>"
-  },
+
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -30,26 +27,22 @@
   "version" : "0.0.1",
   "name" : "V2_SNM_Data_Type",
   "title" : " HL7 v2 SNM Data Type",
-  "todo" : {
-    [ "how can we specify a regex that value must conform to?"
-    ]
-  }
   "status" : "active",
   "experimental" : "true",
-  "date" : "2024-06-01T12:00:00+11:00"
+  "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME",
   "kind" : "primitive-type",
   "abstract" : false,
   "type" : "string",
   "baseDefinition" : "http://hl7.org/v2/StructureDefinition/ST",
-  "_comment" : [
-    "derivation" : "constraint",
+  "derivation" : "constraint",
+  "_comment" : [{
     "differential" : {
       "element" : [{
         "id" : "ST.value",
         "path" : "ST.value",
-        "regex" : "/^\+?\d+$/"
+        "regex" : "/^\\+?\\d+$/"
       }]
     }    
-  ]
+  }]
 }

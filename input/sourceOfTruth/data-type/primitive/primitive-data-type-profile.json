@@ -9,7 +9,7 @@
   "kind" : "resource",
   "abstract" : false,
   "type" : "StructureDefinition",
-  "description" : "Rules that are true for all primitive type definitions",
+  "description" : "Rules that are true for all primitive type definitions that can be derived from FHIR data types.",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
   "derivation" : "constraint",
   "differential" : {
@@ -35,7 +35,7 @@
       {
         "id" : "StructureDefinition.derivation",
         "path" : "StructureDefinition.derivation",
-        "fixedCode" : "constraint" // I don't think this can always be true
+        "fixedCode" : "constraint"
       }
     ]
   }

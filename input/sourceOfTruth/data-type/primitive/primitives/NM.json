@@ -1,13 +1,7 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "NM"
-  "meta" : {
-    "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
-  },
-  "text" : {
-    "status" : "generated",
-    "div" : "<p>FIXME</p>"
-  },
+  "id" : "NM",
+
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -32,7 +26,7 @@
   "title" : " HL7 v2 NM Data Type",
   "status" : "active",
   "experimental" : "true",
-  "date" : "2024-06-01T12:00:00+11:00"
+  "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME add from v2",
   "kind" : "primitive-type",
   "abstract" : false,
@@ -51,7 +45,7 @@
         "human" : {
           "value" : "At least one digit is required.  Any value containing a decimal point must include one digit to the left of the decimal point.  The leftmost character may be a '+' or '-'.  The total length of the value must be between 1 and 16 characters."
         },
-        "expression" : "NM.value.matches('^(?=.{1,16}$)([+-]?\d+(\.\d\d*)?)$')"
+        "expression" : "NM.value.matches('/^(?=.{1,16}$)([+-]?\\d+(\\.\\d\\d*)?)$/')"
       }
     },{
       "id" : "NM.id",
@@ -68,7 +62,7 @@
         "value" : "nm-1"
       } 
     }]
-  }
+  },
   "differential" : {
     "element" : [{
       "id" : "NM",
@@ -81,7 +75,7 @@
         "human" : {
           "value" : "At least one digit is required.  Any value containing a decimal point must include one digit to the left of the decimal point.  The leftmost character may be a '+' or '-'.  The total length of the value must be between 1 and 16 characters."
         },
-        "expression" : "NM.value.matches('^(?=.{1,16}$)([+-]?\d+(\.\d\d*)?)$')"
+        "expression" : "NM.value.matches('^(?=.{1,16}$)([+-]?\\d+(\\.\\d\\d*)?)$')"
       }
     },{
       "id" : "NM.id",

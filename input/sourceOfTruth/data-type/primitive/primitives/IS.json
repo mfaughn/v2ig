@@ -1,13 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "IS"
+  "id" : "IS",
   "meta" : {
     "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
   },
-  "text" : {
-    "status" : "generated",
-    "div" : "<p>FIXME</p>"
-  },
+
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -30,13 +27,9 @@
   "version" : "0.0.1",
   "name" : "V2_IS_Data_Type",
   "title" : " HL7 v2 IS Data Type",
-  "todo" : {
-    [ "can we specify that the value must not come from an HL7 code system?"
-    ]
-  }
   "status" : "active",
   "experimental" : "true",
-  "date" : "2024-06-01T12:00:00+11:00"
+  "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME",
   "kind" : "primitive-type",
   "abstract" : false,
