@@ -13,18 +13,23 @@ When using the RPT, if an application doesn't recognize the code in component 1,
 
 *Use Case*: The use case supporting this proposal is the need to define repeat patterns on the fly while placing an order. The TQ data type did not have the capability to define the meaning of a repeat pattern on the fly. To get around this problem, vendors have implemented a variety of solutions to solve this issue. One way was to add Z-components to the TQ data type to transmit information about the repeat pattern. Another solution was to attempt to parse the repeat pattern code in an attempt to decipher what the code meant.
 
-[example]
-s:
+Examples:
 
+[er7]
 |Q1H&Every 1 Hour&HL7xxx\^^\^^1^h|
+
 [er7]
 |Q2J2&Every second Tuesday&HL7xxx\^DW^2\^^2^wk|
+
 [er7]
 |BID&Twice a day at institution specified times&HL7xxx\^^\^^12\^h^Y|
+
 [er7]
 |QAM&Every morning at the institution specified time&HL7xxx\^HD^00\^11^1\^d^Y|
+
 [er7]
 |QHS&Every day before the hours of sleep&HL7xxx\^^\^^1\^d^^AHS|
+
 [er7]
 |ACM&Before Breakfast&HL7xxx\^^\^^\^^^ACM|
 
