@@ -1,0 +1,8 @@
+= Non-Stock Supply Requisition
+:v291_section: "4.10.3"
+:v2_section_name: "OMN - non-stock requisition order message (event O07)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+Non-stock requisitions can use the ORM message with the RQD and RQ1 segments as the detail segment, or use the OMN and ORN messages described below.
+
+[tabset, "OMN^O07^OMN_O07 ACK^O07^ACK ORN^O08^ORN_O08 OSU^O52^OSU_O52 ACK^O52^ACK"]

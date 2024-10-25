@@ -13,11 +13,11 @@ The PRT - Participation Segment is used in this message to communicate providers
 
 *Attention: The DG1 segment was retained in this message for backward compatibility only as of v2.4 and was withdrawn and removed from this message structure as of v2.7.*
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

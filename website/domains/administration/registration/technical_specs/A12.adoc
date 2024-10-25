@@ -9,11 +9,11 @@ The fields included when this message is sent should be the fields pertinent to 
 
 *Attention: The DG1 segment was retained for backward compatibility only as of v2.4 and was withdrawn and removed from this message structure as of v2.7.*
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

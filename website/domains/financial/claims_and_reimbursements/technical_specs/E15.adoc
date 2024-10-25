@@ -23,7 +23,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 
 {empty}5) The Payment/Remittance Amount on PMT must equal to the sum of all Adjudicated/Paid Amount for all IPR segments PLUS the sum of all Adjudication/Paid Amounts for all ADJ segments in the Payment/Re­mittance Advice, excluding information adjustment types (Adjustment Category on ADJ = "IN").
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

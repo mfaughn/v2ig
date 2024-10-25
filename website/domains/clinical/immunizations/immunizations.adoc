@@ -1,9 +1,33 @@
 = Immunizations
 
 == Introduction
+[v291_section="4A.7.1"]
 
-FIXME
+Immunization information systems (IIS) that maintain vaccination records need to be able to transmit patient-specific records of vaccine administration to other health information systems to provide access to the record at the time healthcare is given and to allow tracking of progress in reaching age-appropriate immunization coverage. The unsolicited update is the result of a vaccine administration update or delete. This message permits the transmission of immunization records from care providers to immunization registries. Messages containing immunization records carry patient identifying information in the PID segment. They may also carry parent or guardian information in the NK1 segments to help identify a child. The RXA segment is used to report the details of the immunization event: the type of vaccine (e.g., DTaP, polio, MMR), the date administered, the sequence (1st, 2nd, etc.), the amount (e.g., 0.5 ml), and location and provider of the immunization. In addition, the RXA provides a place to record the lot number, manufacturer and date of expiration of the immunization. The RXA can also be used to report the fact that a specified immunization was refused. This section references two tables (CVX and MVX as referenced in file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[_HL7 Table 0396 – Coding Systems_] in Chapter 2C, Code Tables) maintained by the U.S. Centers for Disease Control and Prevention (CDC). These tables are recommended in the U.S. for identifying the immunization in field _RXA-5-Administered Code_ and the vaccine manufacturer in field _RXA-17-substance manufacturer name_.
 
 == Technical Specs
 
-xref:technical_specs/Unsolicited_Vaccination_Record_Update.adoc[Unsolicited Vaccination Record Update]
+xref:technical_specs/V04.adoc[Message - V04 Unsolicited Vaccination Record Update]
+
+== Examples
+
+=== VXU - unsolicited vaccination record update
+[v291_section="4A.9.4"]
+
+[er7]
+MSH|^~\&||AZVACREC||GAVACREC|200605221606||VXU^V04^VXU_V04|...<cr>
+PID|...<cr>
+NK1|...<cr>
+NK1|...<cr>
+PV1|...<cr>
+PV2|...<cr>
+IN1|...<cr>
+IN2|||||||NUCLEAR^NANCY^D|909686637A|...<cr>
+ORC|...<cr>
+RXA|0|1|20060901115500|20060901115500|03^MMR^CVX|.5|MG^^ISO+| 222557777^KIDDER^KAREN^K^^DR|^^^ CHILD HEALTHCARE CLINIC^^^^^1044 Healthcare Drive^^METROPOLIS^AZ||||W23487909876456|20061125|MSD^Merck \T\ Co., Inc.^MVX|...<cr>
+RXR|IM^INTRAMUSCULAR^HL70162|LG^LEFT GLUTEUS MEDIUS^HL70163|...<cr>
+OBX|1|NM|1000.3^TEMP.RECTAL^AS4||102.9|DEGF^^ANSI+|||||F|||20060901153000|...<cr>
+NTE|||PATIENT DEVELOPED HIGH FEVER APPROX 3 HRS AFTER VACCINE INJECTION. PROBABLE ADVERSE REACTION|...<cr>
+
+This message shows an unsolicited update of a vaccination record. The message type is VXU-Unsolicited Vaccination Record Update, with event code V04 (unsolicited vaccination record update). This example is given to show possible uses for some of the optional segments in the message.
+

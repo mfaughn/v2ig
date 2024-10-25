@@ -1,0 +1,27 @@
+= Message – Unsolicited Device Event Observation
+:v291_section: "7.3.14"
+:v2_section_name: "ORU – Unsolicited Device Event Observation Message (Event R42)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The R42 trigger event is used for observation reports that identify a device-sourced event (e.g., transition on an infusion pump between primary and secondary modes of operation) that is relevant to clinical workflow but that does not require a response from a clinician or clinical management system (in which case, an R40 alert message should be used). These events are episodic (vs. periodic), require low latency and appropriate prioritized handling (i.e., should be communicated immediately after the event is signaled), and typically require low transmission bandwidth. R42 messages do not need to provide for an application level response, as does the ORU^R40 message (via the ORA^R41 message).
+
+Use examples of this message include:
+
+• Electronic medication administration record (eMAR) systems that record the pre-programmed transition event of an infusion pump between primary and secondary operational modes, or when it is manually paused and then restarted;
+
+• Clinical decision support systems (CDSS) that track a patient’s progress by monitoring, among other events, ventilator transitions from the primary operational mode to a backup mode (e.g., patient triggered to fully mechanical breaths);
+
+• Clinical information systems that note an event when a patient’s physiological monitor is placed into Standby Mode;
+
+• Computerized Maintenance Management Systems (CMMS) records usage events and technical (non-alert) maintenance events to determine when a piece of equipment should be evaluated for proper operation.
+
+In contrast to ORU^R42, the ORU^R01 message is typically used to periodically report “bulk” or full-disclosure device data that may include event information, albeit not reported in a timely manner and in a way that requires more processing to identify. As mentioned, the ORU^R40 message supports a class of episodic events, but focuses on those alerts and alarms that require some level of clinical response to resolve. The ORU^R42 message explicitly does not require clinical action to be taken in response to receipt of the message.
+
+The OBX-8 field for these messages should be left blank or set to “N” for normal. Any abnormal or other non-normal indications should result in usage of the ORU^R40 message.
+
+The ORU^R40 message is outside of the order-fulfilling cycle of the ORU and OUL messages with other trigger events, and is supplemental to those order-fulfilling observations. As such, the results conveyed in the ORU^R40 message do not replace, edit, or override the results of messages with other trigger events.
+
+[tabset]
+
+
+

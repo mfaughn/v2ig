@@ -37,7 +37,7 @@ Processing Rules:
 
 {empty}9) Interpretive Rule__:__ Inclusion of Product/Service Line item information implies that the request is directly related to the Product/Service described in PSL. Omitting this optional segment implies that the request is related to all product/service line items in the original Product/Service Group. (See E01 message for rules governing the construction of Product/Service Groups.)
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

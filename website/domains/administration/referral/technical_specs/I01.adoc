@@ -5,11 +5,11 @@
 
 This event triggers a message to be sent from one healthcare provider to another to request insurance information for a specified patient.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
 
-[ack_chor-table]
+[tabset]
+
+
 

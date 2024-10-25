@@ -5,11 +5,11 @@
 
 This message is sent from a filler application to notify other applications of a new sterilization configuration. The information in the STC segment describes the detail of the new sterilization configuration.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

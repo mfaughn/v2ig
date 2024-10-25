@@ -18,11 +18,11 @@ If there is a concern that it will be difficult to distinguish these messages fr
 
 [query_message_structure-table]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 
 The QVR message segments are identical to those of the QBP. A QVR Query Profile may use either the QSC or query by example syntactic variants as well as the query by simple parameter.
 

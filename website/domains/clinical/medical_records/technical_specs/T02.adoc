@@ -9,11 +9,11 @@ This is a notification of the creation of a document with the accompanying conte
 
 *Scenario B:* A provider orders a series of three X-rays. The radiologist's dictation is transcribed in a single document, which covers all three orders. Multiple placer numbers are used to identify each of the orders within the single document message. The notification and document content are transmitted.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

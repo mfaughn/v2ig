@@ -1,0 +1,27 @@
+= Message - Unsolicited Pre-Ordered Point-Of-Care Observation
+:v291_section: "7.3.6"
+:v2_section_name: "ORU – Unsolicited Pre-Ordered Point-Of-Care Observation (Event R32)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This event trigger instructs the receiver to place the result with the order information included in the message.
+
+From a traditional clinical laboratory perspective, this event trigger's use case is probably the predominant (if not exclusive) one. However, in the POC environment, it is actually uncommon to have an order already generated when a test is performed. It does happen sometimes, though. If it is necessary to pass specific information related to the Patient, responsible Doctor, placing doctor, patient location, etc., there is a requirement for the inclusion of a PV1 and PD1 segment in the ORU message type (see also ORU^R30 for description).
+
+If the receiving system accepts both the order and the result, it will return an ORA^R33 Application Acknowledgement message with the acknowledgement code of AA. A comment may be included in the Acknowledgement Message MSA Text Message field.
+
+If the receiving system is unable to accept both the order and the result, no order or result should be placed and an ACK^33 Application Acknowledgement message must be returned to the sender with the error identified in the MSA Text Message field.
+
+The sending system must return a commit-level acknowledgement in response to the ORA^R33 message.
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[tabset]
+
+
+
+[ack_message_structure-table]
+
+
+
+There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 SHALL always be set to NE (Never).
+

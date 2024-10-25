@@ -7,11 +7,11 @@ This is a notification of a change in a status of a document with the accompanyi
 
 *Scenario:* A document is authenticated. Notification is sent to the chart tracking system and is used to update the document status from pre-authenticated to authenticated or legally authenticated. The document content is also transmitted.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

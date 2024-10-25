@@ -97,28 +97,28 @@ This system is used to document the shipping manifest from information received 
 
 == Technical Specs
 
-xref:technical_specs/Blood_Product_Dispense_Status.adoc[Message - Blood Product Dispense Status]
+xref:technical_specs/O27.adoc[Message - O27 Blood Product Order]
 
-xref:technical_specs/Blood_Product_Order.adoc[Message - Blood Product Order]
+xref:technical_specs/O29.adoc[Message - O29 Blood Product Dispense Status]
 
-xref:technical_specs/Blood_Product_Transfusion_Disposition.adoc[Message - Blood Product Transfusion/Disposition]
+xref:technical_specs/O31.adoc[Message - O31 Blood Product Transfusion/Disposition]
 
-xref:technical_specs/Create_Donor_Record.adoc[Message - Create Donor Record]
+xref:technical_specs/O41.adoc[Message - O41 Create Donor Record]
 
-xref:technical_specs/Donation_Procedure.adoc[Message - Donation Procedure]
+xref:technical_specs/O42.adoc[Message - O42 Update Donor Record]
 
-xref:technical_specs/Donor_Eligibility_Notification.adoc[Message - Donor Eligibility Notification]
+xref:technical_specs/Q33.adoc[Message - Q33 Get Donor Record Candidates]
 
-xref:technical_specs/Donor_Eligibility_Observations.adoc[Message - Donor Eligibility Observations]
+xref:technical_specs/Q34.adoc[Message - Q34 Get Donor Record]
 
-xref:technical_specs/Donor_Eligibility_Request.adoc[Message - Donor Eligibility Request]
+xref:technical_specs/O43.adoc[Message - O43 Donor Registraiton]
 
-xref:technical_specs/Donor_Registraiton.adoc[Message - Donor Registraiton]
+xref:technical_specs/O44.adoc[Message - O44 Donor Eligibility Request]
 
-xref:technical_specs/Donor_Request_to_Collect.adoc[Message - Donor Request to Collect]
+xref:technical_specs/O45.adoc[Message - O45 Donor Eligibility Observations]
 
-xref:technical_specs/Get_Donor_Record.adoc[Message - Get Donor Record]
+xref:technical_specs/O46.adoc[Message - O46 Donor Eligibility Notification]
 
-xref:technical_specs/Get_Donor_Record_Candidates.adoc[Message - Get Donor Record Candidates]
+xref:technical_specs/O47.adoc[Message - O47 Donor Request to Collect]
 
-xref:technical_specs/Update_Donor_Record.adoc[Message - Update Donor Record]
+xref:technical_specs/O48.adoc[Message - O48 Donation Procedure]

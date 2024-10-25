@@ -12,9 +12,9 @@ If the insurance and/or the guarantor information is specific to a certain finan
 [example]
 Before being employed by a company, a pre-employment physical is required. The cost of the examinations is paid by the company, and not by the person's private health insurance. One of the physicians examining the person is an eye doctor. For efficiency reasons, the person made an appointment for these examinations on the same day as he already had an appointment with his eye doctor in the same hospital. The costs for this eye doctor appointment are being paid by the patient's private health insurance. Both financial transactions for the same patient/person could be sent in the same message. To bill the examination for the future-employer to that organization, you need to use the GT1 segment that is related to the FT1.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [NOTE]
 The ROL segment is optionally included after the PD1 to transmit information for patient level primary care providers, after the PV2 for additional information on the physicians whose information is sent there (i.e., Attending Doctor, Referring Doctor, Consulting Doctor), and within the insurance construct to transmit information for insurance level primary care providers.
@@ -24,7 +24,7 @@ There is an information overlap between the FT1, DG1 and PR1 segments. If diagno
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 
 The error segment indicates the fields that caused a transaction to be rejected.
 

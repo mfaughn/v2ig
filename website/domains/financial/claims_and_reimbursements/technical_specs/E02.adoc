@@ -60,7 +60,7 @@ PSL.Billed Amount
 
 {empty}10) This message must not be used to cancel a Product/Service Line Item in a Product/Service Group which was submitted with Adjudicated as Group = "Y".
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

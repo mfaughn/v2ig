@@ -1,0 +1,11 @@
+= Message - Donor Registraiton
+:v291_section: "4.16.10"
+:v2_section_name: "DRG - Donor Registration (Event O43)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The Donor Registration messages contain information to register a donor for a donation.
+
+[tabset]
+
+
+

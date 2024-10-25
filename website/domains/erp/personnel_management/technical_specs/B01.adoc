@@ -7,13 +7,13 @@ An event B01 signals to add a new record for healthcare administration informati
 
 The EVN segment is used to indicate the effective or planned date.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

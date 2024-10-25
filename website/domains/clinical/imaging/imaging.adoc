@@ -6,4 +6,6 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/Imaging_Order.adoc[Imaging Order]
+xref:technical_specs/O23.adoc[Message - O23 Imaging Order]
+
+== Examples

@@ -174,25 +174,25 @@ The current Standard treats each component of a narrative report as a separate "
 
 == Technical Specs
 
-xref:technical_specs/General_Clinical_Order.adoc[Message - General Clinical Order]
+xref:technical_specs/O19.adoc[Message - O19 General Clinical Order]
 
-xref:technical_specs/General_Clinical_Order_with_Supporting_Document.adoc[Message - General Clinical Order with Supporting Document]
+xref:technical_specs/O51.adoc[Message - O51 Order Status Update]
 
-xref:technical_specs/Message_–_Unsolicited_Alert_Observation.adoc[Message – Unsolicited Alert Observation]
+xref:technical_specs/O57.adoc[Message - O57 General Clinical Order with Supporting Document]
 
-xref:technical_specs/Message_–_Unsolicited_Device_Event_Observation.adoc[Message – Unsolicited Device Event Observation]
+xref:technical_specs/R01.adoc[Message - R01 Unsolicited Observation]
 
-xref:technical_specs/Message_–_Unsolicited_Patient-Device_Association_Observation.adoc[Message – Unsolicited Patient-Device Association Observation]
+xref:technical_specs/R30.adoc[Message - R30 Unsolicited Point-Of-Care Observation without Existing Order - R30 Place an Order]
 
-xref:technical_specs/Order_Status_Update.adoc[Message - Order Status Update]
+xref:technical_specs/R31.adoc[Message - R31 Unsolicited New Point-Of-Care Observation - R31 Search for an Order]
 
-xref:technical_specs/Unsolicited_New_Point-Of-Care_Observation_-_Search_for_an_Order_.adoc[Message - Unsolicited New Point-Of-Care Observation - Search for an Order]
+xref:technical_specs/R32.adoc[Message - R32 Unsolicited Pre-Ordered Point-Of-Care Observation]
 
-xref:technical_specs/Unsolicited_Observation.adoc[Message - Unsolicited Observation]
+xref:technical_specs/R40.adoc[Message - R40 Unsolicited Alert Observation]
 
-xref:technical_specs/Unsolicited_Point-Of-Care_Observation_without_Existing_Order_–_Place_an_Order.adoc[Message - Unsolicited Point-Of-Care Observation without Existing Order – Place an Order]
+xref:technical_specs/R42.adoc[Message - R42 Unsolicited Device Event Observation]
 
-xref:technical_specs/Unsolicited_Pre-Ordered_Point-Of-Care_Observation.adoc[Message - Unsolicited Pre-Ordered Point-Of-Care Observation]
+xref:technical_specs/R43.adoc[Message - R43 Unsolicited Patient-Device Association Observation]
 
 == Example Transactions
 
@@ -415,7 +415,7 @@ When the patient is discharged, the ADT^A03 message is sent to indicate a discha
 
 After discharging a patient his final charges must be billed. Using the query P04 returns the data in a display oriented format which can be used for printing. Alternatively a print request can be used. The billing system issues a QRY^P04 message where the fields are valued as follows: QRD-2 = "R" (record oriented format), QRD-3 = "I" (immediate response), QRD-8.1 = <Patient ID>, QRF-2 = <start date/time>, and QRF-3 = <end date/time>. The phone number assigning applications responds with a DSR^P04 message with the data in DSP-3.
 
-*Note:* The original mode query, including QRD and QRF segments were retained for backward compatibility only as of v 2.4. The reader is therefore referred to chapter 5, section 5.4, for the current query/response message structure.
+NOTE: The original mode query, including QRD and QRF segments were retained for backward compatibility only as of v 2.4. The reader is therefore referred to chapter 5, section 5.4, for the current query/response message structure.
 
 *Phone Call Queries (Z73)*
 

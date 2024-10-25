@@ -1,0 +1,11 @@
+= Message - Update Donor Record
+:v291_section: "4.16.5"
+:v2_section_name: "DBU - Update Donor Record Message (Event O42)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The Update Donor Record messages contain information to update an existing donor book of record.
+
+[tabset]
+
+
+

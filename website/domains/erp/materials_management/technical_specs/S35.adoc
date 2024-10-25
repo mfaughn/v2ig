@@ -5,11 +5,11 @@
 
 This message is sent from a filler application to notify other applications that a sterilization lot has been deleted. The information provided in the SLT segment describes the sterilization lot that has been deleted by the filler application.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

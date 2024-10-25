@@ -5,11 +5,11 @@
 
 The A17 is used when it is decided that two patients will exchange beds. The patient ID and visit data are repeated for the two patients changing places. See section link:#swapping-a-patient[_3.6.1_], "_link:#swapping-a-patient[Swapping a patient],_" for a discussion of issues related to implementing this trigger event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

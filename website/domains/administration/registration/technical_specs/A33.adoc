@@ -9,11 +9,11 @@ If the patient was in a non-temporary location, then _PV1-3 - Assigned Patient_ 
 
 The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

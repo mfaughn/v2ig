@@ -5,11 +5,11 @@
 
 See section _5.7_, "_PUBLISH AND SUBSCRIBE_" for more information about this event.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

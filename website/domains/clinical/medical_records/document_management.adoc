@@ -1,0 +1,77 @@
+= Document Management
+
+== Introduction
+[v291_section="9.2"]
+
+This chapter currently supports document management. In the future, it is intended also to support the data exchange needs of applications supporting other medical record functions, including chart location and tracking, deficiency analysis, consents, and release of information. The main purpose of the medical record is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
+
+Document/reports supported in this chapter will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in 7.2.
+
+== ASSUMPTIONS
+[v291_section="9.5"]
+
+Within this section we have created a single message whose contents vary predicated on the trigger event. The following assumptions are made when the Medical Document Management (MDM) message is used:
+
+• The application system is responsible for meeting all legal requirements (on the local, state, and federal levels) in the areas of document authentication, confidentiality, and retention.
+
+• All documents are unique, and document numbers and file names are not reused.
+
+• Documents may be associated with one or more orders.
+
+== Technical Specs
+
+xref:technical_specs/T01.adoc[Message - T01 Document]
+
+xref:technical_specs/T02.adoc[Message - T02 Document with Content]
+
+xref:technical_specs/T03.adoc[Message - T03 Document Status Change]
+
+xref:technical_specs/T04.adoc[Message - T04 Document Status Change with Content]
+
+xref:technical_specs/T05.adoc[Message - T05 Document Addendum]
+
+xref:technical_specs/T06.adoc[Message - T06 Document Addendum with Content]
+
+xref:technical_specs/T07.adoc[Message - T07 Document Edit]
+
+xref:technical_specs/T08.adoc[Message - T08 Document Edit with Content]
+
+xref:technical_specs/T09.adoc[Message - T09 Document Replacement]
+
+xref:technical_specs/T10.adoc[Message - T10 Document Replacement with Content]
+
+xref:technical_specs/T11.adoc[Message - T11 Document Cancel]
+
+== Examples
+
+=== History and Physical Exam:
+[v291_section="9.8.1"]
+
+The following is an example of an original transmission of a history and physical examination which has been authenticated prior to this message being initiated:
+
+[er7]
+MSH|...<cr>
+EVN|T02|19960215154405||04|097220^Seven^Henry^L^ ^Dr^MD^| <cr>
+PID|...<cr>
+PR1|...<cr>
+TXA|0001|HP^history & physical|TX^text|19960213213000|099919^Everyman^Adam^A^ ^Mr^MS^|19960213153000|19960215134500||099919^Everyman^Adam^A^III^Mr^MS^|097220^Seven^Henry^L^ ^Dr^MD^|01234567^Contact^Carrie^C^Ms|1996021500001^transA|||example.doc|LA|UC|AV||AC|||||097220^Seven^Henry^L^ ^Dr^MD^| <cr>
+OBX|1|CE|2000.40^CHIEF COMPLAINT|| ... <cr>
+OBX|2|ST|2000.01^SOURCE||PATIENT <cr>
+OBX|3|TX|2000.02^PRESENT ILLNESS||SUDDEN ONSET OF CHEST PAIN. 2 DAYS, PTA ASSOCIATED WITH NAUSEA, VOMITING & SOB. NO RELIEF WITH ANTACIDS OR NTG. NO OTHER SX. NOT PREVIOUSLY ILL.<cr>
+.
+.
+and so on.
+
+=== Document Folder
+[v291_section="9.8.2"]
+
+Hospital A creates a psychiatric report. It sends a notification to hospital B.
+
+[er7]
+MSH|^~\&|SENDAPP|SENDFAC|RECAPP|RECFAC|200411261008||MDM^T01^MDM_T01|167865|P|2.9
+EVN|T01|200811261007|200811261007|60012|10107
+PID|1|1011684|1011684||Jurgensen^Antoine^^||197710220000|F|||Hubertweg^^Stuttgart^^70173^DE|||||M|CAT||4390271065||||Karlsruhe|N||
+PV1|1|I|STATION^^^3200^^13372100|A^^301||||||||||||N|||0460005110||K|||||||||||||||||||||||200811160916|||||
+TXA|1|Psychiatric Disabilities Report|PDF|||||20081126100756 ||||570531^SENDFAC||||1081007_2874942_570531_26100756.PDF|DO|||||||PSY^psychiatric document^^1.2.4481222~WEB^web document^^1.2.4481223
+
+Hospital B receives the document. Hospital A and B have negotiated the folder definitions in the form of a catalog (the exchange is out of scope of this document). Therefore, Hospital B knows the document should only be accessible to psychiatrists and should be available in the patient's personal web access. This is only an example; document folder interpretation is up to the systems and out of scope of this proposal.

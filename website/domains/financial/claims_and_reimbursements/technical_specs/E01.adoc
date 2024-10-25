@@ -52,7 +52,7 @@ The Product/Service Billed Amount on PSL should be the amount the Provider is bi
 
 {empty}12) A single group cannot have both multiple Patients and multiple Product/Service Line Items for the same Product/Service Group. In this situation, the multiple Patient and Product/Service Line Item must be split into multiple Product/Service Groups.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

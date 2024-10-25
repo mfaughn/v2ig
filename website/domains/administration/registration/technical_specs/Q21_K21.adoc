@@ -18,11 +18,11 @@
 
 [query_message_structure-table]
 
-[ack_chor-table]
+
 
 [response_message_structure-table]
 
-[ack_chor-table]
+
 
 [width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
 |===
@@ -58,24 +58,16 @@ Search
 Following is an example of a Q21/K21 query/response pair of messages. First is the query:
 
 [er7]
-MSH|^~\&|CLINREG|WESTCLIN|HOSPMPI|HOSP|199912121135-0600||QBP^Q21^QBP_Q21|1|D|2.5
-[er7]
-QPD|Q21^Get Person Demographics^HL7nnn|111069|112234^^^GOOD HEALTH HOSPITAL|^^^ GOOD HEALTH HOSPITAL~^^^SOUTH LAB|
-[er7]
+MSH|^~\&|CLINREG|WESTCLIN|HOSPMPI|HOSP|199912121135-0600||QBP^Q21^QBP_Q21|1|D|2.5+
+QPD|Q21^Get Person Demographics^HL7nnn|111069|112234^^^GOOD HEALTH HOSPITAL|^^^ GOOD HEALTH HOSPITAL~^^^SOUTH LAB|+
 RCP|I|
 
 This query is asking for demographics for the person identified by the identifier 112234 from the assigning authority GOOD HEALTH HOSPITAL. With the demographics, we want identifiers returned for the person from the assigning authorities GOOD HEALTH HOSPITAL and SOUTH LAB. Here is a sample response:
 
 [er7]
-MSH|^~\&|HOSPMPI|HOSP|CLINREG|WESTCLIN|199912121135-0600||RSP^K21^RSP_K21|1|D|2.5|
-[er7]
-MSA|AA|8699|
-[er7]
-QAK|111069|OK|Q21^Get Person Demographics^HL7nnn|1|
-[er7]
-QPD|Q21^Get Person Demographics^HL7nnn|111069|112234^^^GOOD HEALTH HOSPITAL|^^^ GOOD HEALTH HOSPITAL~^^^SOUTH LAB|
-[er7]
-PID|||112234^^^GOOD HEALTH HOSPITAL~98223^^^SOUTH LAB||Everyman^Adam||19600614|M||C|2101 Webster # 106^^Oakland^CA^94612|
-[er7]
+MSH|^~\&|HOSPMPI|HOSP|CLINREG|WESTCLIN|199912121135-0600||RSP^K21^RSP_K21|1|D|2.5|+
+MSA|AA|8699|+
+QAK|111069|OK|Q21^Get Person Demographics^HL7nnn|1|+
+QPD|Q21^Get Person Demographics^HL7nnn|111069|112234^^^GOOD HEALTH HOSPITAL|^^^ GOOD HEALTH HOSPITAL~^^^SOUTH LAB|+
+PID|||112234^^^GOOD HEALTH HOSPITAL~98223^^^SOUTH LAB||Everyman^Adam||19600614|M||C|2101 Webster # 106^^Oakland^CA^94612|+
 QRI|100|
-

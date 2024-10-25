@@ -25,7 +25,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 
 {empty}6) Provider reference numbers must exist on Payer Application's database and must point to the same Invoice, Product/Service Group or Product/Service Line Item; otherwise, an error must be generated (mismatched Invoice and/or Product/Service Line Item).
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

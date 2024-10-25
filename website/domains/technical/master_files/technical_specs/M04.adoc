@@ -13,11 +13,11 @@ The NTE segment may also contain other information to the provider to convey oth
 
 The CDM segment below is a specially designed master file segment for interfacing charge description masters. In the following message, the MFI-master file identifier should equal "CDM." When the CDM segment is used in an MFN message, the abstract definition is as follows:
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
 
-[ack_chor-table]
+[tabset]
+
+
 

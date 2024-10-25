@@ -1,11 +1,57 @@
 = Supply
 
 == Introduction
+[v291_section="4.10"]
 
-FIXME
+The Requisition Detail segment (RQD) is used for ordering medical, surgical, and patient care supplies. It is assumed that these supplies are managed by a materials management application, which contains a master list of all items the hospital uses.
+
+There are basically two types of supplies, commonly referred to as stock and non-stock.
+
+Stock supplies are, as the name suggests, stocked in the hospital in designated areas, such as the warehouse, Central Supply, Nursing floors, or Operating Room. When requisitioning stock supplies, the requesting application need only specify the information in the RQD segment. It is assumed that this is enough information for the application receiving to identify the item. If the sending application is not aware whether the supply is stock, it may optionally send an RQ1 along with the RQD. Typically in that case, the item is requested with a free text description.
+
+Non-stock supplies are not stocked anywhere in the hospital and must be ordered from an industry distributor or manufacturer. When the requesting application knows that it is requisitioning non-stock supplies, it may also send an RQ1 segment with the RQD if at least one field in RQ1 is known to the sending application. This may be necessary in order for the receiving application to properly determine where to get these supplies. This depends on the sophistication of the database of the receiving application, which may contain a history of requisitions from the sending application.
 
 == Technical Specs
 
-xref:technical_specs/Non-Stock_Supply_Requisition.adoc[Non-Stock Supply Requisition]
+xref:technical_specs/O05.adoc[Message - O05 Stock Supply Requisition]
 
-xref:technical_specs/Stock_Supply_Requisition.adoc[Message - Stock Supply Requisition]
+xref:technical_specs/O07.adoc[Message - O07 Non-Stock Supply Requisition]
+
+== Examples
+
+=== Patient order
+[v291_section="4.12.1"]
+
+This example is a requisition from the ORSUPPLY application to the MMSUPPLY application for two items for patient Adam A. Everyman. One item is a stock item for an IV Solution and the second item is a nonstock implant manufactured by Detter. The requisition numbers used by the ORSUPPLY application are RQ101 & RQ102.
+
+[er7]
+MSH|^~\&|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|20061105131523||OMS^O05^OMS_O05| ...<cr>
+PID|... <cr>
+ORC|NW|RQ101^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V|MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|1|1234^Solution, 2.25% Saline||S1786^Saline Solution|1|BT^Bottle|1234‑5678||ORSUP^Main OR Supply Room|20061123|...<cr>
+
+// This looked like a separate message, even though that isn't clear from the text.  So, I made it a separate message.  FIXME if this is incorrect.
+[er7]
+MSH|^~\&|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|19911105131523||OMN^O07^OMN_O07|...<cr>
+PID|... <cr>
+ORC|NW|RQ102^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304<cr>
+RQD|1|23455^Implant, Special Hip||I45323^Implant|1|EA^ Each|1234‑5678||ORSUP^Main OR Supply Room|20061123|...<cr>
+RQ1|123.45|DET^Detter, Inc.|444456|DST^Local Distributors, Inc.|333‑456|N|...<cr>
+
+=== Replenish Supply Closet
+[v291_section="4.12.2"]
+
+This example is a requisition from the ORSUPPLY application to the MMSUPPLY application for five stock items to replenish a supply closet. The requisition numbers used by the ORSUPPLY application is RQ103 - RQ1037.
+
+[er7]
+MSH|^~\&|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|20061105131523||OMS^O05^OMS_O05|...<cr>
+ORC|NW|RQ103^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|1|1232^Solution, 1% Saline||S1784^Saline Solution|5|BT^Bottle|1234‑5678||ORSUP^Main OR Supply Room|20061105|...<cr>
+ORC|NW|RQ104^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|2|1231^Solution, 0.2% Saline||S1781^Saline Solution|2|BT^Bottle|1234‑5678||ORSUP^Main OR Supply Room|20061105|...<cr>
+ORC|NW|RQ105^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|3|2342^Suture, Black Silk||SU123^Suture|2|DZ^Dozen|1234‑5678||ORSUP^Main OR Supply Room|20061105|...<cr>
+ORC|NW|RQ106^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|4|2344^Suture, Black Silk 3‑0||SU124^Suture|1|DZ^Dozen|1234‑5678||ORSUP^Main OR Supply Room|20061105|...<cr>
+ORC|NW|RQ107^ORSUPPLY||||N|||20061105130000||333-77-7777^COMRAD^CONNOR^C|999-99-9999^VERIFY^VIRGIL^V |MAINOR^2W|321-1234 X2304^^^^^^3211234^2304|...<cr>
+RQD|5|4565^Bandage Pad, 4x4||B6345^Bandage Pad|3|BX^Box|1234‑5678||ORSUP^Main OR Supply Room|20061105|...<cr>

@@ -12,13 +12,13 @@ This message is not intended to act as a complete inventory management system. V
 [NOTE]
 The IIM segment has been moved to Chapter 17.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
 
-[ack_chor-table]
+[tabset]
+
+
 
 Master Files Query Response: Refer to Section 8.4.4.
 

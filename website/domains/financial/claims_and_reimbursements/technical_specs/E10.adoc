@@ -22,7 +22,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 
 {empty}4) The Provider Invoice Number on IVC must be the same as the Provider Invoice Number on IVC as specified on the EHC^E01 input message. In other words, this message must be used to respond to the incoming EHC^E01 and not a previous EHC^E01 HealthCare Services Invoice. Only IPRs for the Invoice specified on the EHC^E01 may be included in the EHC^E10 response.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
