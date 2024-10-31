@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "MOC",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/MOC",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "MOC",
         "path": "MOC",
         "short": "money and charge code",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b49e618>",
+        "definition": "Definition: Transmits monetary information and the associated charge code for services performed.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "MOC.1",
         "path": "MOC.1",
         "short": "Monetary Amount",
+        "defintion": "*Definition:* The amount and denomination of money associated with the charge code.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "MOC.2",
         "path": "MOC.2",
         "short": "Charge Code",
+        "defintion": "*Definition:* The code identifying the charge to the ordering entity for the services performed.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -57,7 +59,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

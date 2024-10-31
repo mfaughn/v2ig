@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RI",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RI",
         "path": "RI",
         "short": "repeat interval",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b99cb38>",
+        "definition": "*Definition:* contains the interval between repeated services.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RI.1",
         "path": "RI.1",
         "short": "Repeat Pattern",
+        "defintion": "*Definition:* The repeating frequency with which the treatment is to be administered. It is similar to the frequency and SIG code tables used in order entry systems.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70335[_User-de__fined Table 0335 - Repeat Pattern_] for suggested values.\n\n\n\nThe first component may repeat, with repeat values separated by a space. The repeats are interpreted as connected by logical ANDs.\n\n\n\nExample:\nTwice per day, every other day: BID QOD\n\n\n\nThree times per day, Monday Wednesday and Friday: TID QJ135\n\n\n\nBecause of this syntax, repeat values should never contain blanks.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "RI.2",
         "path": "RI.2",
         "short": "Explicit Time Interval",
+        "defintion": "*Definition:* This component explicitly lists the actual times referenced by the code in the first component, in the following format: HHMM,HHMM,HHMM,.... This second component will be used to clarify the first component in cases where the actual times vary within an institution. If the time of the order spans more than a single day, this new component is only practical if the same times of administration occur for each day of the order. If the actual start time of the order (as given by the fourth component of the quantity/timing field) is after the first explicit time, the first administration is taken to be the first explicit time after the start time. In the case where the patient moves to a location having a different set of explicit times, the existing order may be updated with a new quantity/timing field showing the changed explicit times.\n\n\n\nExample:\n2nd component of quantity/timing field:\n\n\n\n|QID^0230,0830,1430,2030|\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -61,15 +63,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",

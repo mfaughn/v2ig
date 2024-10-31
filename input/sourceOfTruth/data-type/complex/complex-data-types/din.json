@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DIN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DIN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DIN",
         "path": "DIN",
         "short": "date and institution name",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9d5140>",
+        "definition": "Definition: Specifies the date and institution information where a staff member became active or inactive.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DIN.1",
         "path": "DIN.1",
         "short": "Date",
+        "defintion": "*Definition:* Specifies the date when a staff member became active or inactive.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "DIN.2",
         "path": "DIN.2",
         "short": "Institution Name",
+        "defintion": "*Definition:* Specifies the institution where a staff member is or was active. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70531[_User-De__fined Table 0531 - Institution_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -61,7 +63,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]

@@ -1,10 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
   "url" : "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile",
-  "id" : "v2-complex-data-type-profile",
+  "id" : "ComplexDataType-Profile",
   "version" : "0.0.1",
-  "name" : "V2ComplexDataTypeDefinition",
-  "title" : " HL7 v2 Complex Data Type Definition",
+  "name" : "ComplexDataType-Profile",
+  "title" : "HL7 v2 Complex Data Type Profile",
   "status" : "active",
   "kind" : "resource",
   "abstract" : false,
@@ -14,6 +14,14 @@
   "derivation" : "constraint",
   "differential" : {
     "element" : [
+      {
+        "id" : "StructureDefinition.url",
+        "path" : "StructureDefinition.url",
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-type-urls"
+        }
+      },
       {
         "id" : "StructureDefinition.kind",
         "path" : "StructureDefinition.kind",
@@ -29,13 +37,13 @@
         "path" : "StructureDefinition.type",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/ComplexDataType"
+          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-types"
         }
       },
       {
         "id" : "StructureDefinition.baseDefinition",
         "path" : "StructureDefinition.baseDefinition",
-        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/ComplexDataType"
+        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/v2-complex-data-type"
       },
       {
         "id" : "StructureDefinition.derivation",
@@ -43,14 +51,14 @@
         "fixedCode" : "specialization"
       },
       {
-        "id" : "StructureDefinition.differential.element",
-        "path" : "StructureDefinition.differential.element",
+        "id" : "StructureDefinition.differential.element.id",
+        "path" : "StructureDefinition.differential.element.id",
         "max" : "*",
         "constraint" : [{
           "key" : "complex-data-type-profile-2",
           "severity" : "error",
           "human" : "The component name must be an integer that matches the offset",
-          "expression" : "path.substring(indexOf('.')+1).convertsToInteger()"
+          "expression" : "matches('^[A-Z]{2,3}(\\.\\d+)?$')"
         }]
       },
       {
@@ -70,7 +78,7 @@
         "min" : 1,
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/ComplexDataTypes"
+          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-type-urls"
         }
       }
     ]

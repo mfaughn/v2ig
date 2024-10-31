@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DLT",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DLT",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DLT",
         "path": "DLT",
         "short": "delta",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b95c4e8>",
+        "definition": "Definition: Describes the information that controls delta check warnings.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DLT.1",
         "path": "DLT.1",
         "short": "Normal Range",
+        "defintion": "*Definition:* Specifies the normal interval of the reference data.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "DLT.2",
         "path": "DLT.2",
         "short": "Numeric Threshold",
+        "defintion": "*Definition:* The numeric threshold of the change that is detected.\n\n\n\nFor example the threshold may be set to 10.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -57,15 +59,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
@@ -79,6 +81,7 @@
         "id": "DLT.3",
         "path": "DLT.3",
         "short": "Change Computation",
+        "defintion": "*Definition:* Specifies if the change is computed as a percent change or as an absolute change. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70523[_HL7 Table 0523 - Computation Type_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,7 +95,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -101,6 +104,7 @@
         "id": "DLT.4",
         "path": "DLT.4",
         "short": "Days Retained",
+        "defintion": "*Definition:* The length of time in days that the value is retained for computing delta checks.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -110,15 +114,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",

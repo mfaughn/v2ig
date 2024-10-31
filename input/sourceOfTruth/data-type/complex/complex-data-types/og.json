@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "OG",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/OG",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "OG",
         "path": "OG",
         "short": "observation grouper",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1b8a20>",
+        "definition": "Definition: The components that can be used to define the structure of the observation/result segments (OBX) within an observation report segment (OBR).",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "OG.1",
         "path": "OG.1",
         "short": "Original Sub-Identifier",
+        "defintion": "*Definition:* The Original Sub-Identifier component represents the original data type used in OBX-4 to enable backwards compatibility to continue use of the original format to provide OBX segment grouping.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "OG.2",
         "path": "OG.2",
         "short": "Group",
+        "defintion": "*Definition:* The Group component indicates the group and its sequence within the OBR segment that the OBX segment is a part of.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -79,6 +81,7 @@
         "id": "OG.3",
         "path": "OG.3",
         "short": "Sequence",
+        "defintion": "*Definition:* The Sequence component indicates the sequence within the group as defined in OG-2.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,7 +91,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -97,6 +100,7 @@
         "id": "OG.4",
         "path": "OG.4",
         "short": "Identifier",
+        "defintion": "*Definition:* The Identifier component enables assignment of an identifier to a result component, for example an isolate in a microbiology message. Futher guidance on how to use this field will be found in an Implementation Guide.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -106,7 +110,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

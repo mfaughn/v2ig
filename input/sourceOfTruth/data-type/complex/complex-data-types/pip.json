@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "PIP",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/PIP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "PIP",
         "path": "PIP",
         "short": "practitioner institutional privileges",
-        "definition": "#<Gui_Builder_Profile::RichText:0x0000000118e11fe0>",
+        "definition": "Definition: This data type specifies the institutional privileges with associated detail granted to a provider.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "PIP.1",
         "path": "PIP.1",
         "short": "Privilege",
+        "defintion": "*Definition:* Specifies the institutional privilege itself. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70525[_User-defined Table 0525 – Privilege_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "PIP.2",
         "path": "PIP.2",
         "short": "Privilege Class",
+        "defintion": "*Definition:* Specifies the class category of institutional privilege. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70526[_User-defined Table 0526 – Privilege Class_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -65,7 +67,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -74,6 +76,7 @@
         "id": "PIP.3",
         "path": "PIP.3",
         "short": "Expiration Date",
+        "defintion": "*Definition:* Specifies the date the institutional privilege is/was no longer valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,15 +86,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",
@@ -105,6 +108,7 @@
         "id": "PIP.4",
         "path": "PIP.4",
         "short": "Activation Date",
+        "defintion": "*Definition:* Specifies the date the institutional privilege became/becomes valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -114,15 +118,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",
@@ -136,6 +140,7 @@
         "id": "PIP.5",
         "path": "PIP.5",
         "short": "Facility",
+        "defintion": "*Definition:* Specifies the facility in which the institutional privilege is/was valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -145,7 +150,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

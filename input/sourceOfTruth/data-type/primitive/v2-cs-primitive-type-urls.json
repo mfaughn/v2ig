@@ -1,9 +1,22 @@
 {
   "resourceType" : "CodeSystem",
-  "url" : "http://hl7.org/v2/CodeSystem/PrimitiveTypes",
-  "id": "v2-cs-primitive-data-types",
+  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-primitive-data-type-urls",
+  "id": "v2-cs-primitive-data-type-urls",
+  "name" : "V2PrimitiveDataTypeURLs",
+  "title" : "v2 Primitive Data Type URLs",
   "status" : "active",
   "content" : "complete",
+  "experimental" : false,
+  "description" : "v2 Primitive Data Type URLs",
+  "caseSensitive" : false,
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "inm"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
   "concept" : [{
     "code" : "http://hl7.org/v2/StructureDefinition/DT",
     "display" : "Date"

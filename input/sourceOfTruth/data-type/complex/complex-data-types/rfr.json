@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RFR",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RFR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RFR",
         "path": "RFR",
         "short": "reference range",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9d8e80>",
+        "definition": "Definition: Describes a reference range and its supporting detail.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RFR.1",
         "path": "RFR.1",
         "short": "Numeric Range",
+        "defintion": "*Definition:* This component specifies the numeric interval of the reference data. Range is taken to be inclusive (i.e., the range includes the end points). Units are context sensitive and are defined in the usage note for the field where this data type is used.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "RFR.2",
         "path": "RFR.2",
         "short": "Sex",
+        "defintion": "*Definition:* This component specifies the clinically relevant sex for which the reference range is valid. This may be the Sex Parameter for Clinical Use concept (refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70001[User-defined Table 0828 –Sex] Parameter for Clinical Use_ in Chapter 2C for suggested values) or some other representation of a clinically relevent sex. For backwards compatibility purposes only, implementers may also refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70001[_User-defined Table 0001 – Administrative Sex_] in Chapter 2C for additional valuesBecause multiple tables may potentially be used in this component, inclusion of the Name of the Coding System component of the CWE data type is critical so that the receiving system can appropriately interpret the received code.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -61,7 +63,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -70,6 +72,7 @@
         "id": "RFR.3",
         "path": "RFR.3",
         "short": "Age Range",
+        "defintion": "*Definition:* This component specifies the age range for which the reference range is valid. Ages of less than one year should be specified as a fraction (e.g., 1 month = 0.0830, 1 week = 0.01920, 1 day = 0.0027300). However, for most purposes involving infants, the gestational age (measured in weeks) is preferred. The lower end of the range is not indicated; the upper end is, assuring that series of ranges do not overlap.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,7 +82,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -88,6 +91,7 @@
         "id": "RFR.4",
         "path": "RFR.4",
         "short": "Gestational Age Range",
+        "defintion": "*Definition:* This component specifies the gestational age range for which the reference range is valid. Gestational age is relevant only when the reference range is influenced by the stage of pregnancy. The gestational age is measured in weeks from conception. For example, |1&4| implies that the normals apply to gestational ages from 1 week to 4 weeks inclusive. The lower end of the range is not included; the upper end is, assuring that series of age ranges do not overlap.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -97,7 +101,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -106,6 +110,7 @@
         "id": "RFR.5",
         "path": "RFR.5",
         "short": "Species",
+        "defintion": "*Definition:* This component specifies the species for which the reference range is valid. Species is assumed to be human unless otherwise stated. Example values are rabbit, mouse, and rat.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -115,15 +120,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -137,6 +142,7 @@
         "id": "RFR.6",
         "path": "RFR.6",
         "short": "Race/subspecies",
+        "defintion": "*Definition:* This component specifies the race or subspecies for which the reference range is valid. In the case of humans (the default species), the race is specified when race influences the reference range. When normal ranges for animals are being described, this component can be used to describe subspecies or special breeds of animals.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -146,15 +152,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -168,6 +174,7 @@
         "id": "RFR.7",
         "path": "RFR.7",
         "short": "Conditions",
+        "defintion": "*Definition:* This component specifies any arbitrary condition for which the reference range is valid. This may include such conditions as phase of menstrual cycle or dose of a particular drug. It is provided as a way to communicate the normal ranges for special conditions. It does not allow automatic checking of these text conditions.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -177,7 +184,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

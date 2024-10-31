@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "PLN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/PLN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "PLN",
         "path": "PLN",
         "short": "practitioner license or other Id number",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011bfba5b0>",
+        "definition": "Definition: This data type specifies a practitioner’s license number, or other ID number such as UPIN, Medicare and Medicaid number, and associated detail.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "PLN.1",
         "path": "PLN.1",
         "short": "ID Number",
+        "defintion": "*Definition:* Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "PLN.2",
         "path": "PLN.2",
         "short": "Type of ID Number",
+        "defintion": "*Definition:* Specifies the type of number.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70338[_User-defined Table 0338 – Practitioner ID Number Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -74,7 +76,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -83,6 +85,7 @@
         "id": "PLN.3",
         "path": "PLN.3",
         "short": "State/other Qualifying Information",
+        "defintion": "*Definition:* Specifies the state or province in which the license or ID is valid, if relevant, or other qualifying information. It is recommended that state qualifications use the abbreviations from the postal service of the country.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,15 +95,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "62"
+                "valueInteger": 62
               },
               {
                 "url": "noTruncate",
@@ -114,6 +117,7 @@
         "id": "PLN.4",
         "path": "PLN.4",
         "short": "Expiration Date",
+        "defintion": "*Definition:* Specifies the date when the license or ID is no longer valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -123,15 +127,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",

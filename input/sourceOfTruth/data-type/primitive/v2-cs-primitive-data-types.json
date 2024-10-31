@@ -1,0 +1,57 @@
+{
+  "resourceType" : "CodeSystem",
+  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-primitive-data-types",
+  "id": "v2-cs-primitive-data-types",
+  "name" : "V2PrimitiveDataTypes",
+  "title" : "v2 Primitive Data Types",  
+  "status" : "active",
+  "content" : "complete",
+  "experimental" : false,
+  "description" : "HL7 v2 Primitive Data Types",
+  "caseSensitive" : false,
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "inm"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
+  "concept" : [{
+    "code" : "DT",
+    "display" : "Date"
+  },{
+    "code" : "DTM",
+    "display" : "Date Time"
+  },{
+    "code" : "FT",
+    "display" : "Formatted Text"
+  },{
+    "code" : "GTS",
+    "display" : "General Timing Specification"
+  },{
+    "code" : "ID",
+    "display" : "Coded Value"
+  },{
+    "code" : "IS",
+    "display" : "Coded Value"
+  },{
+    "code" : "NM",
+    "display" : "Numeric"
+  },{
+    "code" : "SI",
+    "display" : "Sequence ID"
+  },{
+    "code" : "SNM",
+    "display" : "Telephone Number"
+  },{
+    "code" : "ST",
+    "display" : "String"
+  },{
+    "code" : "TM",
+    "display" : "Time"
+  },{
+    "code" : "TX",
+    "display" : "Text"
+  }]
+}

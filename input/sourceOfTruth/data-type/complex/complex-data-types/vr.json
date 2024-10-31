@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "VR",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/VR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "VR",
         "path": "VR",
         "short": "value range",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b4d78a0>",
+        "definition": "*Definition:* This data type contains the lower bound value and upper bound values that constitute a range. Either or both components may be populated.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "VR.1",
         "path": "VR.1",
         "short": "First Data Code Value",
+        "defintion": "*Definition:* Specifies the lower bound value.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "6"
+                "valueInteger": 6
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "VR.2",
         "path": "VR.2",
         "short": "Last Data Code Value",
+        "defintion": "*Definition:* Specifies the upper bound value.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,15 +72,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "6"
+                "valueInteger": 6
               },
               {
                 "url": "noTruncate",

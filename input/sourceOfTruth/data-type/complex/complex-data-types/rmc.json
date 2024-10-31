@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RMC",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RMC",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RMC",
         "path": "RMC",
         "short": "room coverage",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9949d8>",
+        "definition": "Definition: This data type specifies insurance coverage detail for a room.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RMC.1",
         "path": "RMC.1",
         "short": "Room Type",
+        "defintion": "*Definition:* Specifies the room type.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70145[_User-defined Table 0145 - Room Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "RMC.2",
         "path": "RMC.2",
         "short": "Amount Type",
+        "defintion": "*Definition:* Specifies amount quantity type.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70146[_User-defined Table 0146 – Amount Type_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -65,7 +67,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -74,9 +76,10 @@
         "id": "RMC.3",
         "path": "RMC.3",
         "short": "Coverage Amount",
+        "defintion": "*Attention:* _The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7._ Refer to _2A.2.65.4_, \"link:#a.2.65.4-money-or-percentage-mop[_Money or Percentage_]\".\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -85,6 +88,7 @@
         "id": "RMC.4",
         "path": "RMC.4",
         "short": "Money or Percentage",
+        "defintion": "*Definition:* specifies an amount that may be either currency or a percentage.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -94,7 +98,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]

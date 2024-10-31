@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "CCD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/CCD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "CCD",
         "path": "CCD",
         "short": "charge code and date",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b0351f8>",
+        "definition": "Definition: Specifies whether a charge action is based on an invocation event or is time-based.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "CCD.1",
         "path": "CCD.1",
         "short": "Invocation Event",
+        "defintion": "*Definition:* Specifies the code for the event precipitating/triggering the charge activity. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70100[_HL__7 Table 010__0 - Invocation_ _event_] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,11 +44,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -65,6 +66,7 @@
         "id": "CCD.2",
         "path": "CCD.2",
         "short": "Date/time",
+        "defintion": "*Definition:* The second component is used to express the exact time to charge for the ordered service; it is used only when the _CCD.1_ value is T. When used, it is expressed as a DTM data type.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -74,7 +76,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

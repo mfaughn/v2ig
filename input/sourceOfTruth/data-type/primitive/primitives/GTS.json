@@ -26,12 +26,11 @@
   "url" : "http://hl7.org/v2/StructureDefinition/GTS",
   "version" : "0.0.1",
   "name" : "V2_GTS_Data_Type",
-  "title" : " HL7 v2 GTS Data Type",
+  "title" : "HL7 v2 GTS Data Type",
   "notes" : [ 
     "I don't think it is reasonable to do more than direct people to https://www.hl7.org/documentcenter/private/standards/v3/edition_web/welcome/environment/index.html."
   ],
   "status" : "active",
-  "experimental" : "true",
   "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME",
   "kind" : "primitive-type",

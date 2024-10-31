@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "CNN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/CNN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "CNN",
         "path": "CNN",
         "short": "composite ID number and name simplified",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011a756230>",
+        "definition": "Definition: Specifies a person using both an identifier and the person’s name. Retained for backward compatibility only as of v2.6.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "CNN.1",
         "path": "CNN.1",
         "short": "ID Number",
+        "defintion": "Coded ID according to a user-defined table. If the first component is present, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "15"
+                "valueInteger": 15
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "CNN.2",
         "path": "CNN.2",
         "short": "Family Name",
+        "defintion": "This component contains the person's family name in a string format.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,15 +72,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "50"
+                "valueInteger": 50
               },
               {
                 "url": "noTruncate",
@@ -92,6 +94,7 @@
         "id": "CNN.3",
         "path": "CNN.3",
         "short": "Given Name",
+        "defintion": "Used to specify a first name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -101,15 +104,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -123,6 +126,7 @@
         "id": "CNN.4",
         "path": "CNN.4",
         "short": "Second and Further Given Names or Initials Thereof",
+        "defintion": "",
         "min": 0,
         "max": "1",
         "type": [
@@ -132,15 +136,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -154,6 +158,7 @@
         "id": "CNN.5",
         "path": "CNN.5",
         "short": "Suffix",
+        "defintion": "Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -163,15 +168,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -185,6 +190,7 @@
         "id": "CNN.6",
         "path": "CNN.6",
         "short": "Prefix",
+        "defintion": "Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -194,15 +200,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -216,6 +222,7 @@
         "id": "CNN.7",
         "path": "CNN.7",
         "short": "Degree",
+        "defintion": "Used to specify an educational degree (e.g., MD). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70360[_User-defined Table 0360 – Degree/license/certificate_] in Chapter 2C, Code Tables, for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -229,15 +236,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "6"
+                "valueInteger": 6
               },
               {
                 "url": "noTruncate",
@@ -251,6 +258,7 @@
         "id": "CNN.8",
         "path": "CNN.8",
         "short": "Source Table",
+        "defintion": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70297[_User-defined Table 0297 - CN ID source_] in Chapter 2C, Code Tables, for suggested values. Used to delineate the first component. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -264,15 +272,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
@@ -286,6 +294,7 @@
         "id": "CNN.9",
         "path": "CNN.9",
         "short": "Assigning Authority - Namespace ID",
+        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Authority_] in Chapter 2C, Code Tables, for suggested values. Assigning Authority is normally expressed as an HD data type, but has been flattened to 3 components here (_CNN.9_, _CNN.10_ and _CNN.11_) in this data type so that it may be fully expressed. Also note that if additional components are added to the HD data type in the future, adjustment will need to be made accordingly to this data type.\n\n\n\nIf component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -299,15 +308,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -321,6 +330,7 @@
         "id": "CNN.10",
         "path": "CNN.10",
         "short": "Assigning Authority - Universal ID",
+        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition.\n\n\n\nIf _CNN.11_ is valued, this component must be valued. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -330,15 +340,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -352,6 +362,7 @@
         "id": "CNN.11",
         "path": "CNN.11",
         "short": "Assigning Authority - Universal ID Type",
+        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition. If this component is a known UID refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70301[_HL7 Table 0301 - Universal ID type_] in Chapter 2C, Code Tables, for valid values.\n\n\n\nIf _CNN.10_ is valued, this component must be valued. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -365,11 +376,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

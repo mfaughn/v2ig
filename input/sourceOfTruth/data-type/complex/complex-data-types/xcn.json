@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "XCN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/XCN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "XCN",
         "path": "XCN",
         "short": "extended composite ID number and name for persons",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1f62d0>",
+        "definition": "",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "XCN.1",
         "path": "XCN.1",
         "short": "Person Identifier",
+        "defintion": "*Definition:* This component carries the Person Identifier itself. XCN.1, in conjunction with XCN.9 uniquely identifies the entity/person.\n\n\n\n_XCN.1_ is required if _XCN.2_ is not populated. Both may be populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "15"
+                "valueInteger": 15
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "XCN.2",
         "path": "XCN.2",
         "short": "Family Name",
+        "defintion": "*Definition:* This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section _2A.2.30_, \"_FN - family name_\".\n\n\n\n_XCN.2_ is required if _XCN.1_ is not populated. Both may be populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -79,6 +81,7 @@
         "id": "XCN.3",
         "path": "XCN.3",
         "short": "Given Name",
+        "defintion": "*Definition:* First name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,15 +91,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -110,6 +113,7 @@
         "id": "XCN.4",
         "path": "XCN.4",
         "short": "Second and Further Given Names or Initials Thereof",
+        "defintion": "*Definition:* Multiple middle names may be included by separating them with spaces.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -119,15 +123,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -141,6 +145,7 @@
         "id": "XCN.5",
         "path": "XCN.5",
         "short": "Suffix",
+        "defintion": "*Definition:* Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -150,15 +155,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -172,6 +177,7 @@
         "id": "XCN.6",
         "path": "XCN.6",
         "short": "Prefix",
+        "defintion": "*Definition:* Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -181,15 +187,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -203,9 +209,10 @@
         "id": "XCN.7",
         "path": "XCN.7",
         "short": "Degree",
+        "defintion": "*Attention:* _The XCN-7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v27.._ Refer to _XCN.21 Professional Suffix._\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -214,6 +221,7 @@
         "id": "XCN.8",
         "path": "XCN.8",
         "short": "Source Table",
+        "defintion": "*Attention*: _Retained for backwards compatibility only as of v 2.7_. The reader is referred to _XCN.9_ instead.\n\n\n\nfile:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70297[_User-de__fined Table 0297 – CN ID_] source is used as the HL7 identifier for the user-defined table of values for this component. Used to delineate the first component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -227,7 +235,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "B"
           }
         ]
@@ -236,6 +244,7 @@
         "id": "XCN.9",
         "path": "XCN.9",
         "short": "Assigning Authority",
+        "defintion": "*Definition:* The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assig__ning Authority_] is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.\n\n\n\nAs of v 2.7, the Assigning Authority is conditional. It is required if _XCN.1_ is populated and neither _XCN.22_ nor _XCN.23_ are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.\n\n\n\nThe reader is referred to _XCN.22_ and _XCN.23_ if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in _XCN.22_ and/or _XCN.23_ conflict with _XCN.9_, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Namespa__ce I__D_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementors may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 – Namespace ID_] for the first sub-component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -249,7 +258,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -258,6 +267,7 @@
         "id": "XCN.10",
         "path": "XCN.10",
         "short": "Name Type Code",
+        "defintion": "*Definition:* A code that represents the type of name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Nam__e Type_] for valid values. See Section _2A.2.90.7_, \"_Name Type Code (ID)_\".\n\n\n\nAs of v 2.7, _XCN.10_ is conditional. It is required if _XCN.2_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -271,11 +281,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -293,6 +303,7 @@
         "id": "XCN.11",
         "path": "XCN.11",
         "short": "Identifier Check Digit",
+        "defintion": "*Definition:* This component contains the digit, or digits, exclusive of the identifier in _XCN.1_, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -302,11 +313,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -324,6 +335,7 @@
         "id": "XCN.12",
         "path": "XCN.12",
         "short": "Check Digit Scheme",
+        "defintion": "*Definition:* Contains the code identifying the check digit scheme employed.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 T__able 0061 - Check Digit Scheme_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -337,11 +349,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -359,6 +371,7 @@
         "id": "XCN.13",
         "path": "XCN.13",
         "short": "Identifier Type Code",
+        "defintion": "*Definition:* A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the <assigning authority> component. Refer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29_CH02C_Tables.docx#HL70203[_HL7 Table 0203 - Identifier Type_] for suggested values.\n\n\n\nAs of v 2.7, _XCN.13_ is conditional. It is required if _XCN.1_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -372,11 +385,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -394,6 +407,7 @@
         "id": "XCN.14",
         "path": "XCN.14",
         "short": "Assigning Facility",
+        "defintion": "*Definition:* The place or location identifier where the identifier was first assigned to the person. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Nam__espace ID_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -403,7 +417,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -412,6 +426,7 @@
         "id": "XCN.15",
         "path": "XCN.15",
         "short": "Name Representation Code",
+        "defintion": "*Definition:* Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n\n\n*NOTE:* This new component remains in “alphabetic” representation with each repetition of the field using these data types. I.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70465[_HL7 Table 0465 – Name/address Representation_] for valid values.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -425,11 +440,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -447,6 +462,7 @@
         "id": "XCN.16",
         "path": "XCN.16",
         "short": "Name Context",
+        "defintion": "*Definition:* This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70448[_User-defined Table 0448 – Name Context_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -460,7 +476,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -469,9 +485,10 @@
         "id": "XCN.17",
         "path": "XCN.17",
         "short": "Name Validity Range",
+        "defintion": "*Attention:* _The XCN.17 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to _XCN.19 Effective Date_ and _XCN.20 Expiration Date_ instead.\n\n\n\nThis component contains the start and end date/times that define the period during which this name was valid.\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -480,6 +497,7 @@
         "id": "XCN.18",
         "path": "XCN.18",
         "short": "Name Assembly Order",
+        "defintion": "*Definition:* A code that represents the preferred display order of the components of this person name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70444[_HL7 Table 0444 - Name Assembly Order_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -493,11 +511,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -515,6 +533,7 @@
         "id": "XCN.19",
         "path": "XCN.19",
         "short": "Effective Date",
+        "defintion": "*Definition:* The first date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -524,15 +543,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",
@@ -546,6 +565,7 @@
         "id": "XCN.20",
         "path": "XCN.20",
         "short": "Expiration Date",
+        "defintion": "*Definition:* The last date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -555,15 +575,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",
@@ -577,6 +597,7 @@
         "id": "XCN.21",
         "path": "XCN.21",
         "short": "Professional Suffix",
+        "defintion": "*Definition:* Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, \"Personnel Management\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -586,15 +607,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -608,6 +629,7 @@
         "id": "XCN.22",
         "path": "XCN.22",
         "short": "Assigning Jurisdiction",
+        "defintion": "*Definition:* The geo-political body that assigned the identifier in _XCN.1_.\n\n\n\nSee section, _2A.2.14.9_, \"_Assigning Jurisdiction (CWE)_\" for further detail.\n\n\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if _XCN.1_ is populated and neither _XCN.9_ nor _XCN.23_ are populated. All 3 components may be populated. The reader is referred to _XCN.9_ if there is a need to transmit this information as an OID.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -617,7 +639,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -626,6 +648,7 @@
         "id": "XCN.23",
         "path": "XCN.23",
         "short": "Assigning Agency or Department",
+        "defintion": "*Definition:* The agency or department that assigned the identifier in _XCN.1_.\n\n\n\nSee section _2A.2.14.10_, \"_Assigning Agency or Department (CWE)_\" for further details.\n\n\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if _XCN.1_ is populated and neither _XCN.9_ nor _XCN.22_ are populated. All 3 components may be populated. The reader is referred to _XCN.9_ if there is a need to transmit this information as an OID.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -635,7 +658,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -644,6 +667,7 @@
         "id": "XCN.24",
         "path": "XCN.24",
         "short": "Security Check",
+        "defintion": "*Definition:* This component is used to communicate a version code that may be assigned to the value given in _XCN.1 Person Identifier_.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -653,15 +677,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
@@ -675,6 +699,7 @@
         "id": "XCN.25",
         "path": "XCN.25",
         "short": "Security Check Scheme",
+        "defintion": "*Definition:* This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70904[_HL7 Table 0904 - Security Check Scheme_] for valid values\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -688,11 +713,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

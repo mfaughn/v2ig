@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RCD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RCD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RCD",
         "path": "RCD",
         "short": "row column definition",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9f17c8>",
+        "definition": "*Definition:* This specifies the format of a column in terms of a segment field name, a data type, and a maximum length.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RCD.1",
         "path": "RCD.1",
         "short": "Segment Field Name",
+        "defintion": "*Definition:* The HL7 segment field name, which identifies the field occupying the column. Refer to Section _2A.2.60.1_, \"_Segment Field Name (ST)_,\" for segment field name definition conventions.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,11 +40,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -61,6 +62,7 @@
         "id": "RCD.2",
         "path": "RCD.2",
         "short": "HL7 Data Type",
+        "defintion": "*Definition:* The two or three character HL7 data type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70440[_HL7 Table 0440 – Data Types_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -74,11 +76,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -96,6 +98,7 @@
         "id": "RCD.3",
         "path": "RCD.3",
         "short": "Maximum Column Width",
+        "defintion": "*Definition:* The maximum width of the column, as dictated by the responding system. This may vary from the HL7-defined maximum field length.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -105,11 +108,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

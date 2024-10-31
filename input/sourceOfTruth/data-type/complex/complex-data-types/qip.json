@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "QIP",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/QIP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "QIP",
         "path": "QIP",
         "short": "query input parameter list",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011ba12ef0>",
+        "definition": "*Definition:* This data type contains a segment field name and the list of values to be passed to the query processor.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "QIP.1",
         "path": "QIP.1",
         "short": "Segment Field Name",
+        "defintion": "*Definition:* This component contains the segment field name.\n\n\n\nNaming conventions:\n\n\n\nSegment field names are designated by the “@” symbol concatenated with the HL7 segment ID followed by the sequence number for the field separated by a period. See sections 2.5.2, \"Segments and segment groups\" and 2.5.3.1, \"Position (sequence within the segment)\" for a definition of segment ID and sequence number. If the field is divided into components, the designation may be suffixed with \".nn\", to identify a particular component (a suffix of “.3” indicates the third component of the field); otherwise, the whole field is assumed. If the field is further divided into subcomponents, the designation is suffixed with “.nn.mm\", which identifies the component and subcomponent requested by relative position.\n\n\n\nSite-specific segment field names may be used**.** In this case, the site-specific segment ID (if the field is not being added to an existing HL7 segment) and the sequence number must be defined so that they do not conflict with existing HL7 segment IDs and field sequence numbers.\n\n\n\nValues for this field are defined in the function-specific chapters of this specification.\n\n\n\n*NOTE:* If the “@” is being used as one of the delimiter characters defined in MSH-2-encoding characters, it must be “escaped.” See Section 2.7.1, \"Formatting Codes\".\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,11 +40,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -61,6 +62,7 @@
         "id": "QIP.2",
         "path": "QIP.2",
         "short": "Values",
+        "defintion": "*Definition:* This component contains the field value or values in the form \"value1& value2 & value3...\"\n\n\n\nA single-valued parameter contains only a single subcomponent in the second component, thus no subcomponent delimiters are needed (e.g., <segment field name> ^ <value>). A simple list of values (i.e., a one-dimensional array) may be passed instead of a single value by separating each value with the subcomponent delimiter (e.g., <segment field name> ^ <value1 & value2 &...>).\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -70,15 +72,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",

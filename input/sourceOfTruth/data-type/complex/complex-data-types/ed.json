@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "ED",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/ED",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "ED",
         "path": "ED",
         "short": "encapsulated data",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9303c0>",
+        "definition": "*Definition:* This data type transmits encapsulated data from a source system to a destination system. It contains the identity of the source system, the type of data, the encoding method of the data, and the data itself. This data type is similar to the RP (reference pointer) data type of Section _2A.2.66_, \"_RP - reference pointer_,\" except that instead of pointing to the data on another system, it contains the data which is to be sent to that system.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "ED.1",
         "path": "ED.1",
         "short": "Source Application",
+        "defintion": "*Definition:* A unique name that identifies the system which was the source of the data. Identical format and restrictions as in reference pointer (see Section _2A.2.66.2_, \"_Application ID (HD)_\").\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "ED.2",
         "path": "ED.2",
         "short": "Type of Data",
+        "defintion": "*Definition:* Identical to “type of data” component in the reference pointer (RP) data type. See Section _2A.2.66.3_, \"_Type of Data (ID)_\".\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70834[Imported Table 0834 – MIME Types] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -61,11 +63,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -83,6 +85,7 @@
         "id": "ED.3",
         "path": "ED.3",
         "short": "Data Subtype",
+        "defintion": "*Definition:* Identical to “subtype” component in the reference pointer (RP) data type. See Section _2A.2.66.4_, \"_Subtype (ID)_\".\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70291[_External Table 0291 - Subtype of Referenced Data_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,7 +99,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -105,6 +108,7 @@
         "id": "ED.4",
         "path": "ED.4",
         "short": "Encoding",
+        "defintion": "*Definition:* The type of encoding used to represent successive octets of binary data as displayable ASCII characters. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70299[_HL7 Table 0299 - Enc__oding_] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -118,11 +122,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -140,6 +144,7 @@
         "id": "ED.5",
         "path": "ED.5",
         "short": "Data",
+        "defintion": "*Definition:* Displayable ASCII characters which constitute the data to be sent from source application to destination application. The characters are limited to the legal characters of the ST data type, as defined in Section _2A.2.76_, \"_ST - string data_,\" and, if encoded binary, are encoded according to the method of Section _2A.2.24.2_, \"_Type of Data (ID)_\".\n\n\n\nIf the encoding component (see Section _2A.2.24.4_, \"_Encoding (ID)_\") = \"A\" (none), then the data component must be scanned before transmission for HL7 delimiter characters, and any found must be escaped by using the HL7 escape sequences defined in Section 2.7 – \"Use of escape sequences in text fields.\" On the receiving application, the data field must be de-escaped after being parsed.\n\n\n\nIf the encoding component ED.4 does not equal \"A\", then, after encoding, the (encoded) data must be scanned for HL7 delimiter characters, and any found must be escaped by using the HL7 escape sequences. Only then can the component be added to the HL7 segment/message. On the receiving application, the data field must be de-escaped after being parsed out of the message before being decoded. This can be expressed as \"encode\", \"escape\", \"parse\", \"de-escape\" or \"decode\".\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -149,7 +154,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]

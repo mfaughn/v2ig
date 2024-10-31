@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "WVI",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/WVI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "WVI",
         "path": "WVI",
         "short": "channel identifier",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b4d0140>",
+        "definition": "*Definition:* This data type specifies the number and name of the recording channel where waveform data is transmitted.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "WVI.1",
         "path": "WVI.1",
         "short": "Channel Number",
+        "defintion": "*Definition:* This component specifies the number of the recording channel.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "WVI.2",
         "path": "WVI.2",
         "short": "Channel Name",
+        "defintion": "*Definition:* This component specifies the name of the recording channel.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,15 +72,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "17"
+                "valueInteger": 17
               },
               {
                 "url": "noTruncate",

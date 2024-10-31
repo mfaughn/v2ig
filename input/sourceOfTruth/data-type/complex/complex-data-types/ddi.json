@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DDI",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DDI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DDI",
         "path": "DDI",
         "short": "daily deductible information",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9dbb80>",
+        "definition": "Definition: This data type specifies the detail information for the daily deductible.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DDI.1",
         "path": "DDI.1",
         "short": "Delay Days",
+        "defintion": "*Definition:* The number of days after which the daily deductible begins.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "3"
+                "valueInteger": 3
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "DDI.2",
         "path": "DDI.2",
         "short": "Monetary Amount",
+        "defintion": "*Definition:* The monetary amount of the deductible.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -70,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -79,6 +81,7 @@
         "id": "DDI.3",
         "path": "DDI.3",
         "short": "Number of Days",
+        "defintion": "*Definition:* The number of days to apply the deductible. If this component is not populated, it means that the number of days is indefinite.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,15 +91,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
