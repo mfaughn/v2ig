@@ -1,8 +1,22 @@
 {
   "resourceType" : "CodeSystem",
-  "url" : "http://hl7.org/v2/CodeSystem/SegmentStatus",
+  "id" : "v2-cs-segment-status",
+  "name" : "V2SegmentStatus",
+  "title" : "HL7 v2 Segment Status",
+  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-segment-status",
   "status" : "active",
   "content" : "complete",
+  "experimental" : false,
+  "description" : "HL7 v2 Segment Status",
+  "caseSensitive" : false,
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "inm"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
   "concept" : [
     {
       "code" : "A",
