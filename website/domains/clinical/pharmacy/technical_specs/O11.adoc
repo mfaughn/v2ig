@@ -1,0 +1,28 @@
+= Message - Pharmacy/Treatment EncodedOrder
+:v291_section: "4A.3.6"
+:v2_section_name: "RDE - Pharmacy/Treatment Encoded Order Message (Event O11)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+This message communicates the pharmacy or treatment application's encoding of the pharmacy/treatment order ,OMP, message. It may be sent as an unsolicited message to report on either a single order or multiple pharmacy/treatment orders for a patient.
+
+The RDE/RRE message pair can also be used to communicate a refill authorization request; however, a specific trigger event has been assigned. See section _4A.3.16 "RDE - Pharmacy/Treatment Refill Authorization Request Message_ (Event O25)_."_ As a site-specific variant, the original order segments (RXO, RXRs, associated RXCs, and any NTEs) may be sent optionally (for comparison).
+
+The event O11 represents an encoding of an order. To communicate explicit dispense requests, which are different event types, the RDE^O11/RRE^O12 message pair is also used, but the event O49 is preferred. See section 4A.3.23 "RDE - Pharmacy/Treatment Refill Authorization Request Message (Event O25)." As a site-specific variant, the original order segments (RXO, RXRs, associated RXCs, and any NTEs) may be sent optionally (for comparison).
+
+[tabset]
+
+[NOTE]
+The RXCs which follow the RXO may not be fully encoded, but those that follow the RXE must be fully encoded.
+
+The NTE segment(s) following the PD1 segment are intended to communicate notes and comments relative to the patient.
+
+The NTE segment(s) following the RXO segment are intended to communicate notes and comments relative to the pharmacy/treatment order.
+
+The NTE segment(s) following the RXE segment are intended to communicate notes and comments relative to the encoded order.
+
+The NTE segment(s) following the RXV segment are intended to communicate notes and comments relative to the encoded order.
+
+The NTE segment(s) following the RXC segment are intended to communicate notes and comments relative to the component(s).
+
+
+

@@ -20,11 +20,11 @@ This query/response is designed for interaction between a client system and an M
 
 [query_message_structure-table]
 
-[ack_chor-table]
+
 
 [response_message_structure-table]
 
-[ack_chor-table]
+
 
 [width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
 |===
@@ -67,27 +67,18 @@ Following is an example of a Q25/K25 query/response pair of messages. First is t
 
 [er7]
 MSH|^&~\|CLINREG|WESTCLIN|HOSPMPI|HOSP|199912121135-0600||QBP^Q25^QBP_Q21|8702|D|2.6
-[er7]
 QPD|Q25^Find Candidates Including Visit Information^HL70471|111069|@PID.5.1^SMITH~@PV1.3.2^389 |80|MATCHWARE|1.2||^^^METRO HOSPITAL
-[er7]
 RCP||I|20^RD
 
 This query is asking for a list of persons matching the name SMITH who are recorded as being in Room 389. Candidates with a match level above 80 using the algorithm Matchware version 1.2 should be returned. The returned records should include identifiers for assigning authority METRO HOSPITAL. The RCP segment specifies that the number of matches should be limited to 20. Here is a sample response:
 
 [er7]
 MSH|^&~\|HOSPMPI|HOSP|CLINREG|WESTCLIN|200412121135-0600||RSP^K25^RSP_K25|H352357509|D|2.6
-[er7]
 MSA|AA|8702
-[er7]
 QAK|111069|OK|Q25^Find Candidates Including Visit Information^HL70471|1
-[er7]
 QPD|Q25^Find Candidates Including Visit Information^HL70471|111069|@PID.5.1^SMITH~ @PID.5.2^JOHN~@PID.8^M|80|MATCHWARE|1.2||^^^METRO HOSPITAL
-[er7]
 PID|||66785^^^METRO HOSPITAL||Smith^John||19630423|M||C|N2378 South Street^^Madison^WI^53711
-[er7]
 PV1||I|W^389^1^METRO HOSPITAL^^^^3||||12345^MORGAN^REX^J^^^MD^0010^METRO HOSPITAL^L||67890^GRAINGER^LUCY^X^^^MD^0010^METRO HOSPITAL^L|MED|||||A0||13579^POTTER^SHERMAN^T^^^MD^0010^METRO HOSPITAL^L
-[er7]
 QRI|95||MATCHWARE 1.2
 
 One candidate was returned. Notice the 1 at the end of the QAK segment signifying the number of matches. The group of segments includes a PID, PV1, and QRI segment; the QRI segment gives a confidence factor for the candidate.
-

@@ -1,22 +1,182 @@
 = Patient Care
 
 == Introduction
+[v291_section="12.2"]
 
-FIXME
+The Patient Carefootnote:[While not an ideal term, the word “patient” is used here to represent the entire spectrum of individuals who receive healthcare in a variety of settings including, but not limited to, acute care, clinic care, long-term care, residential care, home health care, office practices, school-based care and community settings.] Work Group has designed the following messages to support the communication of problem-oriented records, including clinical problems, goals, and pathway information between computer systems. The purpose of this chapter is to describe healthcare messages that need to be communicated between clinical applications for a given individual. These message transactions can be sent in either batch or online mode. As described in Chapter 2, multiple communication transactions may be grouped and sent between applications using a file transfer media or direct networked connection.
+
+This chapter defines the transactions that occur at the seventh OSI level, that is, abstract messages. The examples of messages included in this chapter were constructed using the HL7 Encoding Rules.
+
+This chapter describes a Clinical Relationship segment which enables the run-time expression of relationships between information elements both inside and, where identifiable, by the application, outside the message.
+
+== General Use Cases / Background
+
+=== Scenario Descriptions
+[v291_section="12.2.2"]
+
+==== Patient pre-admission or patient admission
+[v291_section="12.2.2.1"]
+
+A physician's office is scheduling a patient for admission to the hospital. The admitting diagnosis/problem list and admission information is sent by the physician's electronic information system to the hospital's Patient Administration system and longitudinal medical record. The trigger event identifies the message as an "add problem" or update patient medical information to the Patient Administration and medical record system.
+
+==== Consultation
+[v291_section="12.2.2.2"]
+
+A consultation is requested for an individual. The information system generating the consultation triggers an unsolicited message containing the problem/diagnosis list that is transmitted to the consulting organization. Goals and various kinds of role information are included with the transmission. The trigger event identifies the message as an unchanged record.
+
+==== Loading a clinical repository
+[v291_section="12.2.2.3"]
+
+Information from point of care, clinical practice management or ancillary systems regarding the creation or update of pathways, problems, diagnoses, or goals are communicated to the clinical repository. Message triggers from the departmental systems may indicate adding, correcting, deleting, or updating records maintained in the clinical data repository.
+
+==== Communicating clinical pathways and multidisciplinary plans of care
+[v291_section="12.2.2.4"]
+
+The pathway is communicated between Quality Assurance, Point of Care Systems, Research Databases, and Clinical Order Entry Systems. A point of care information system triggers a linkage between a problem and a set of ordered interventions initiated by the clinical order entry system.
+
+=== Trigger Events
+[v291_section="12.2.3"]
+
+The trigger events originate goal, problem and pathway messages. Each trigger event is documented below, along with the appropriate form of the message exchange. These are message-level event triggers, which are augmented by the action code fields contained in the pathway, problem and goal segments described below. Action codes are required fields in patient care message segments (see Chapter 2 for further information regarding implementation issues). Implementors need to apply the appropriate logic as part of their message construction (for example, logic would state that an "add" trigger event should not include segments with a "delete" action code).
+
+In order to accommodate these high-level events, the following patient care events are included in HL7 Table 0003 – Event Type. The added events are instantiated in MSH-9 Message Type and are used by the pathway, problem, and goal messages. MSH-9 Message Type contains the message type and trigger event for the message.
+
+=== Use of Action Codes
+[v291_section="12.2.4"]
+
+Prior to Version 2.3 of the Standard, all repeating segments had to be sent in an update message, because there was no way to indicate which ones changed and which ones did not. In this *snapshot* mode, all repeating segments must be sent with every subsequent message in the series of messages.
+
+To reduce the number of repeating segments, action codes may be employed. Action codes (e.g., order control codes and result status codes) may be embedded within repeating segments and used by sophisticated application parsers to reduce the number of repetitions required for a complete record.
+
+In either event, for systems implementing Version 2.3 or higher, if a particular repeating segment can be updated by either of these two modes, the parties concerned determine by agreement on a site-specific basis whether an interface uses the *snapshot* mode or the *action code/unique identifier* mode.
+
+A description of valid action codes used in message segments originating in this chapter is given immediately below:
+
+{empty}a) *AD* (*ADD*) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem. If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)
+
+{empty}b) *CO* (*CORRECT*) - The object attributes contained within the segment have been corrected. This is not updated information, but information originally sent and later found to be in error. The previous attributes should be replaced.
+
+{empty}c) *UP* (*UPDATE*) - The object attributes contained within the segment are an update of previously sent information. The previous information was correct for the period of time in which it was sent.
+
+{empty}d) *DE* (*DELETE*) - This object should be deleted from the set of objects which are linked to the previous object in the message hierarchy. An example might be a role deleted from the set of roles contained by the Goal object. Delete presumes the original linkage was in error.
+
+{empty}e) *LI (LINK)* - This action code denotes that the object contained in the segment should be linked in a dependency relationship to the previous object in the hierarchy. It is used to denote relationships and should not contain additional information other than those attributes necessary for specific identification.
+
+{empty}f) *UN* (*UNLINK*) - This is a request that the object be removed from the set of linked objects. An example might be the dissolution of a relationship between a problem and a goal. Unlink presumes the original linkage was correct, but due to life cycle changes the active linkage is no longer appropriate.
+
+{empty}g) *UC* (*UNCHANGED*) - This code signifies that the segment is being included for the purposes of hierarchical set identification. It does not contain any changed or additional data. Its purpose is to allow the identification of the collection set to which subsequent segments belong in the message structure. An example might be the modification of role information requiring the previous goal segment to be appropriately identified.
+
+==== Examples of action code usage
+[v291_section="12.2.4.1"]
+
+A problem list and associated goals are generated in a Point of Care system. This transaction is broadcast through an interface engine that determines which systems in the organization require the event information and then forwards the messages appropriately. Each segment included in the original message contains the Action Code for *ADD* to signify an original message instance.
+
+{empty}h) Upon subsequent review, it is determined that a role segment designates the wrong person as the transcribing clerk for a problem. After the information is changed in the originating system, a new message is sent to provide synchronization. The message includes the original PRB segment with the PRB-1 Action Code for *UNCHANGED* (to identify the problem for which the role is being changed). This code signifies that the segment is included for the purposes of hierarchical linkage identification and that none of the information contained in it has been changed. The accompanying role segment sent would include the role *transcriber* in ROL-3 Role, the correct person in ROL-4 Role Person, and the value for *CORRECT* in ROL-2 Action Code.
+
+{empty}i) It is later decided that an additional goal must be added to a specific problem, and that an already existing goal that is currently supporting another problem should also be linked with this specific problem. The message would be constructed with the problem (PRB) segment for identification (the value for PRB-1 Action Code is *UNCHANGED*). The goal segment (GOL) for the additional goal would include GOL-1 Action Code for *ADD*. The goals already included with the problem list that need to be linked to this problem would have to be included on additional GOL segments with the GOL-1 Action Code for *LINK*. +
++
+Once data regarding a Diagnosis/Problem or a Goal have been communicated to other systems, there are occasions on which the data may have to be amended.
+
+{empty}j) New diagnoses/problems must be added to an individual's list. The Problem message is sent with the appropriate Problem Instance ID. All PRB segment(s) included in the message that contain the value for *ADD* in PRB-1 Action Code are processed as additions to the individual's problem list.
+
+{empty}k) New goals are added to the individual's record. The Goal message is sent with the GOL segments indicating the value for *ADD* as GOL-1 Action Code in each segment occurrence.
+
+{empty}l) Changes are made to the attributes of a goal. Examples include a change in the expected resolution date, a change in the life cycle status to reflect its successful conclusion, etc. The Goal message is sent with the appropriate GOL-4 Goal Instance ID. The GOL segments of the Goal message would include the value for *UPDATE* in GOL-1 Action Code.
+
+{empty}m) A new goal is attached to a problem already in the repository (e.g., the goal of "education on diabetes" for an individual diagnosed with "insulin-dependent diabetes"). A problem message would be sent with the PRB segment including the PRB-4 Problem Instance ID for the diabetes problem, and with the value *UNCHANGED* in PRB-1 Action Code. The attached GOL segment for the education goal would accompany the message and contain the value *ADD* in its GOL-1 Action Code field.
+
+{empty}n) A new diagnosis/problem is attached to a goal (e.g., a Goal is to "discharge an individual with intact skin." While the initial problem was "skin breakdown related to immobility," a new problem is "potential for skin breakdown related to draining wounds"). A Goal message would be sent with the GOL segment, including the GOL-4 Goal Instance ID for the discharge goal, and contain the value *UNCHANGED* in GOL-1 Action Code. The attached PRB segment identifying the new problem, "potential for skin breakdown related to draining wounds," would accompany this message and contain the value for *ADD* in PRB-1 Action Code.
+
+[NOTE]
+If there is a requirement to modify information contained on a segment and unlink that same problem/goal, two segments must be transmitted (one for the modification and one for the unlink request).
+
+=== Message Construction Rules
+[v291_section="12.2.5"]
+
+The semantic meaning of a message is contained in the message through the use of the trigger events, the implicit hierarchical linkages of the segments, and the segment action codes. Each of these has a scope within the message. The message event as included in the MSH-9 Message Type has a scope which is global to the message. The segment hierarchical linkage has a scope which includes both the segment itself and its relationship to its parent. The segment action code's scope is to the segment itself. It may further define link and unlink actions in the hierarchical structure.
+
+==== Rule 1
+[v291_section="12.2.5.1"]
+
+The trigger event defines the action at the first level of the hierarchy, and should not be contradicted by either hierarchical linkages or segment action codes. Thus, a PC1 (problem add) event should only contain problem, goal, and role segments that have action codes *ADD*.
+
+.Allowable trigger event types and action codes
+[width="100%",cols="27%,73%",]
+|===
+|Trigger Event Types |Allowable Action Codes
+|xxx-Add |Top level action code must be ADD +
+Dependent segment action code must be ADD (or NW for Order segments)
+|xxx-Update |Top level action code must be CORRECT, UPDATE, or UNCHANGED +
+Dependent segment action codes - Any are allowed at the lower hierarchical levels
+|xxx-Delete |Top level action code must be DELETE +
+Dependent segments' action codes must be DELETE
+|===
+
+==== Rule 2
+[v291_section="12.2.5.2"]
+
+When using the segment action codes *LINK* and *UNLINK*, only those fields which are used to define a unique instance of the object are used. This action cannot be used to send changes and updates to the other fields of that segment.
+
+==== Rule 3
+[v291_section="12.2.5.3"]
+
+In dependent segments *ADD* is the action code to use to establish the initial relationship between parent-child objects. The receiving system must be ready to handle multiple adds of the same object. An example is a Problem List of three (3) problems which is being sent. Attached to these problems are three (3) goals. Problem A has Goals 1 and 2 attached to it. Problem B has the same Goal 2 and a new Goal 3 attached to it. All of these will have the *ADD* action code in the segment, and when Problem B is transmitted with Goals 2 and 3, Goal 2 will have been previously transmitted with Problem A. The message construct would look like this:
+
+[literal.er7]
+MSH...
+PID...
+          PRB (Problem A)
+                 GOL (Goal 1)
+                 GOL (Goal 2)
+          PRB (Problem B)
+                 GOL (Goal 2)
+                 GOL (Goal 3)
+          PRB (Problem C) (No attached goals)
+
+When two (or more) instances of the same problem or goal segment are present in a message both such segments must have identical values for all fields.
+
+==== Rule 4
+[v291_section="12.2.5.4"]
+
+Remember that HL7 only provides for error messages at the message level. Thus, if the receiving system cannot process one segment, the entire message is going to be treated as an error (See Chapter 2).
+
+==== Rule 5
+[v291_section="12.2.5.5"]
+
+The Problem, Goal, and Pathway messages integrate order segments as a method for establishing causal linkages. Linkages or relationships between orders, problems, goals, and pathways can therefore be presented in the Patient Care messages.
+
+Orders referenced in Patient Care messages are used for linkage purposes only. Initiation and status changes to orders are accomplished by using dedicated messages defined in the Order Entry Chapter.
+
+==== Rule 6
+[v291_section="12.2.5.6"]
+
+Order segments are sent with Problem and Goal segments in order to establish a linkage between them, NOT to communicate new orders or changes to those orders. For purposes of these messages, an LI (Link) and a UL (Unlink) code have been added to HL7 Table 0119 - Order Control Codes.
+
+== Implementation Considerations
+[v291_section="12.6"]
+
+The Patient Care Technical Committee recognizes that this document contains a great deal of information for computer systems that are currently under development. The participating institutions/vendors will be responsible for defining the necessary tables that have been previously discussed. As these tables are defined and clarified, they will be included in this document for distribution.
+
+Applications can have differing orientations for representing problem and goal hierarchies. For example, parent:child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
+
+=== Outstanding Issues
+[v291_section="12.7"]
+
+In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
 
 == Technical Specs
-
-xref:technical_specs/PC1.adoc[Message - PC1 Patient Problem Add]
-
-xref:technical_specs/PC2.adoc[Message - PC2 Patient Problem Update]
-
-xref:technical_specs/PC3.adoc[Message - PC3 Patient Problem Delete]
 
 xref:technical_specs/PC6.adoc[Message - PC6 Patient Goal Add]
 
 xref:technical_specs/PC7.adoc[Message - PC7 Patient Goal Update]
 
 xref:technical_specs/PC8.adoc[Message - PC8 Patient Goal Delete]
+
+xref:technical_specs/PC1.adoc[Message - PC1 Patient Problem Add]
+
+xref:technical_specs/PC2.adoc[Message - PC2 Patient Problem Update]
+
+xref:technical_specs/PC3.adoc[Message - PC3 Patient Problem Delete]
 
 xref:technical_specs/PCB.adoc[Message - PCB Patient Pathway Add]
 
@@ -29,3 +189,48 @@ xref:technical_specs/PCG.adoc[Message - PCG Patient Pathway Goal Add]
 xref:technical_specs/PCH.adoc[Message - PCH Patient Pathway Goal Update]
 
 xref:technical_specs/PCJ.adoc[Message - PCJ Patient Pathway Goal Delete]
+
+== Examples
+[v291_section="12.5"]
+
+The following is an example of a patient goal message.
+
+[er7]
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PGL^PC4| <cr>
+PID||0123456‑1||EVERYMAN^ADAM^A|||||||9821111|<cr>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||­||ADM|A0­|<cr>
+GOL|AD|199505011200|00312^Improve Peripheral Circulation^Goal Master List||||199505011200|199505101200|Due^Review Due^Next Review List|||199505021200||QAM|||ACT^Active^Level Seven Healthcare, Inc. Internal|199505011200| P^Patient^Level Seven Healthcare, Inc. Internal||<cr>
+PRT||AD||AT^Attending Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+PRT||AD||EP^Entering Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| <cr>
+PRT||AD||AT^Attending Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs|<cr>
+
+The following is an example of a patient problem message.
+
+[er7]
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PPR^PC1| <cr>
+PID||0123456‑1||EVERYMAN^ADAM^A|||||||9821111|<cr>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||­||ADM|A0­|<cr>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| <cr>
+PRT||AD||AT^Attending Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+PRT||AD||EP^Entering Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs|<cr>
+GOL|AD|199505011200|00312^Improve Peripheral Circulation^Goal Master List||||199505011200|199505101200|Due^Review Due^Next Review List|| 199505021200||QAM|||ACT^Active^ Level Seven Healthcare, Inc. Internal|199505011200| P^Patient^Level Seven Healthcare, Inc.||<cr>
+PRT||AD||AT^Attending Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+
+The following is an example of a patient pathway problem-oriented message.
+
+[er7]
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PPP^PCB| <cr>
+PID||0123456‑1||EVERYMAN^ADAM^A|||||||9821111|<cr>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||­||ADM|A0­|<cr>
+PTH|AD^^HL70287|OH457^Open Heart Pathway^AHCPR|0018329078785^PCIS1|199505011200|A1^Active^Pathway Life Cycle Status List|199505011200|<cr>
+VAR|84032847876^LOCK|199505011200||^Verify^Virgil^V^^RN|23^Coincident^Variance Class List|Exceeds APACHE III threshold score.|<cr>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| <cr>
+PRT||AD||AT^Attending Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+PRT||AD||EP^Entering Provider^HL70912|^Admit^Alan^A^^RN||||||199505011200<cr>
+ORC|NW|2045^OE||||E|^C^199505011200^199505011200^^TM30^^^^|<cr>
+RXO|||3|L|IV|D5W WITH 1/2 NS WITH 20 MEQ KCL EVERY THIRD BOTTLE STARTING WITH FIRST||W8&825&A^|N||||||||H30<cr>
+ORC|NW|1000^OE|9999999^RX|||E|^Q6H^D10^^^R|||||||<cr>
+RXA|1|199505011200|||0047-0402-30^Ampicillin 250 MG TAB^NDC|2|TAB||<cr>

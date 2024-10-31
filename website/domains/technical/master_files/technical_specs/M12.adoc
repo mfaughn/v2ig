@@ -3,14 +3,14 @@
 :v2_section_name: "MFN/MFK - Master File Notification - Additional Basic Observation/Service Attributes (Event M12)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
+
+[tabset]
 
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
 
-[ack_chor-table]
+
 

@@ -13,11 +13,11 @@ The ROL - Role Segment was used in this message to communicate providers not spe
 
 To communicate the begin and end date of the attending, referring, or admitting doctor, use the _PRT-11 - Begin Date/Time_ and the _PRT-12 - End Date/time_ in the PRT segment, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment. Use "UP" in _PRT-2 - Action Code_.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 

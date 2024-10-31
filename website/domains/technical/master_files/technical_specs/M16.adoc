@@ -20,13 +20,13 @@ that the quantities in the ILT segment are not necessarily intended to refer to 
 
 Additional specialized information segments may be defined as additional use cases are defined, such as medication/drug segments.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
 
-[ack_chor-table]
+[tabset]
+
+
 
 Master Files Query Response: Refer to Section 8.4.4.
 

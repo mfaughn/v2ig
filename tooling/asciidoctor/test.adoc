@@ -1,0 +1,20 @@
+// :sectnums: // turn section numbers on and off
+// :sectnumoffset: 2 // some number
+// :leveloffset: 1 //  some number
+
+[.css-class1.css-class2]
+= Test
+
+== Introduction
+
+[example]
+MSH|^~\&||AZVACREC||GAVACREC|200605221606||VXU^V04^VXU_V04|...<cr> +
+PID|...<cr> +
+IN2|||||||NUCLEAR^NANCY^D|909686637A|...<cr> +
+ORC|...<cr>
+
+[er7]
+MSH|^~\&||AZVACREC||GAVACREC|200605221606||VXU^V04^VXU_V04|...<cr>
+PID|...<cr>
+IN2|||||||NUCLEAR^NANCY^D|909686637A|...<cr>
+ORC|...<cr>

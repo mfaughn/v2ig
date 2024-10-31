@@ -17,5 +17,5 @@ Processing Rules:
 
 [response_message_structure-table]
 
-[ack_chor-table]
+
 

@@ -17,7 +17,7 @@ These numbers appear as a pair on the IVC, PSG, PSL and ADJ segments and must be
 {empty}2) The Provider Application and/or Payer Application may also supply a tracking number for each Product/Service Line Item it processes, specified as the Provider Tracking Number or Payer Tracking Number. +
 The Provider Tracking Number and Payer Tracking Number must be echoed on any subsequent interactions for the Product/Service Line Item between the Provider Application and Payer Application.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

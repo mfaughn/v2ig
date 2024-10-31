@@ -1,0 +1,28 @@
+= Message - Pharmacy/Treatment Dispense Receipt
+:v291_section: "4A.3.26"
+:v2_section_name: "RCV - Pharmacy/Treatment Dispense Message (Event O59)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The RCV message may be created to communicate the reception of items. This message supports reception of items to fill an existing order or orders, or to stock refills. In the most common case, the RCV messages would be routed to the dispensing system that issued the RDS message. The RDS message informs of the items that have been sent, while the RCV informs about the effectively received items (thus supporting any change in quantities, status,e tc., derived from transport or from a mismatch between the actually sent items and the content of the RDS).
+
+In typical cases, the RCV^O59 message is an “echo” of one RDS^O13, but this is not forcibly so: Since the shipment and reception are asynchronous events, and considering variants in delivery, it is expected that one RCV^OYY message is issued for each confirmation of a reception, independently of whether there was one shipment or several shipments.
+
+The RXD segment carries the dispense data for a given reception of the received items.
+
+The FT1 segment is optional and repeating in order to accommodate multiple charge, benefit and pricing situations. When a message of type RCV is used, the FT1 may be included in the RCV message. If the RCV^O59 message is not used by the implementation, then the RDS may contain the FT1 segment.
+
+[tabset]
+
+[NOTE]
+The NTE segment(s) following the PD1 segment are intended to communicate notes and comments relative to the patient.
+
+The NTE segment(s) following the RXO segment are intended to communicate notes and comments relative to the pharmacy/treatment order.
+
+The NTE segment(s) following the RXE segment are intended to communicate notes and comments relative to the encoded order.
+
+The NTE segment(s) following the RXD segment are intended to communicate notes and comments relative to the dispense event.
+
+The NTE segment(s) following the RXC segment are intended to communicate notes and comments relative to the component(s).
+
+
+

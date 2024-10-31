@@ -7,13 +7,13 @@ The MFN Site defined master file notification transaction is used where the mast
 
 The Site defined master file notification is defined as follows:
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
 
-[message_structure-table]
 
-[ack_chor-table]
+[tabset]
+
+
 
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.

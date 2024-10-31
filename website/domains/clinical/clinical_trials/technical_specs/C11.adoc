@@ -1,0 +1,27 @@
+= Message - Patient completes a phase of the clinical trial
+:v291_section: "7.7.2"
+:v2_section_name: "CSU - Unsolicited Study Data Message (Events C09-C12)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+Data are entered in the clinical trials system or may reside in laboratory, pathology, radiology, pharmacy and/or other clinical applications. Most clinical trials data ‑ clinical observations and study variables ‑ will be communicated in OBR and OBX segments. The CSR, CSP, and CSS segments will identify the specific association these OBR and OBX have to the clinical trial. Data can be broadcast or transmitted in batch mode to study sponsors or the data management center for collaborative studies.
+
+.The general acknowledgement message as defined in Chapter 2 should be used for any acknowledgements.
+[width="100%",cols="13%,87%",options="header",]
+|===
+|Event |Description
+|C09 |Automated time intervals for reporting, like monthly
+|C10 |Patient completes the clinical trial
+|C11 |Patient completes a phase of the clinical trial
+|C12 |Update/correction of patient order/result information
+|===
+
+[tabset]
+
+
+
+
+
+
+
+
+

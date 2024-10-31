@@ -9,13 +9,13 @@ When an account's start and end dates span a period greater than any particular 
 
 From Standard Version 2.3 onward, the P01 event should only be used to add a new account that did not exist before, not to update an existing account. The new P05 (update account) event should be used to update an existing account. The new P06 (end account) event should be used to close an account. With the P01 event, _EVN-2 - Recorded Date/Time_ should contain the account start date.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 
 The error segment will indicate the fields that caused a transaction to be rejected.
 

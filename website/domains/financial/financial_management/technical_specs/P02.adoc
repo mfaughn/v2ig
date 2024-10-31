@@ -5,13 +5,13 @@
 
 Generally, the elimination of all billing/accounts receivable records will be an internal function controlled, for example, by the patient accounting or financial system. However, on occasion, there will be a need to correct an account, or a series of accounts, that may require that a notice of account deletion be sent from another sub-system and processed, for example, by the patient accounting or financial system. Although a series of accounts may be purged within this one event, we recommend that only one PID segment be sent per event.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 
 [ack_message_structure-table]
 
-[ack_chor-table]
+
 
 The error segment indicates the fields that caused a transaction to be rejected.
 

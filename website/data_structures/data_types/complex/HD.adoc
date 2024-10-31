@@ -50,6 +50,7 @@ The syntax of the second component is defined by the ISO standard for object ide
 4: Local use only: a HD that looks like an IS data type
 
 |LAB1|
+
 [er7]
 |RX.PIMS.SystemB.KP.CA.SCA|
 

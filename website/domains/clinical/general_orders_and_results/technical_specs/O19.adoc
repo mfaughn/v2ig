@@ -1,0 +1,27 @@
+= Message - General Clinical Order
+:v291_section: "4.4.4"
+:v2_section_name: "OMG – general clinical order message (Event O19)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+
+The function of this message is to initiate the transmission of information about a general clinical order that uses the OBR segment. OMG messages can originate also with a placer, filler, or an interested third party.
+
+The trigger event for this message is any change to a general clinical order. Such changes include submission of new orders, cancellations, updates, patient and non-patient-specific orders, etc.
+
+This trigger includes segments identified as being for 'previous results.' These segments allow the sending system to include demographic and/or result information from previous result reports when they are related to the current order.
+
+For example:
+
+• Diagnostic laboratories referring tests to another lab for either confirmation of results (HIV, etc.) or due to not being equipped to do the tests (genetic testing, etc.).
+
+• Diagnostic laboratories sending test results to Knowledge Bases for the automated generation of diagnostic comments for inclusion into the lab report.
+
+The CTD segment in this trigger is used to transmit temporary patient contact details specific to this order.
+
+When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
+
+The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
+
+[tabset]
+
+
+

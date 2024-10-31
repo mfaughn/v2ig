@@ -5,7 +5,7 @@
 
 Non-stock requisitions can use the ORM message with the RQD and RQ1 segments as the detail segment, or use the OMN and ORN messages described below.
 
-[message_structure-table]
+[tabset]
 
-[ack_chor-table]
+
 

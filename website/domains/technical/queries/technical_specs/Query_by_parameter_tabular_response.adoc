@@ -11,7 +11,7 @@ The message structure for QBP^Q13^QPB_Q13 can be found in 5.3.1.2. Use the QBP^Q
 
 [response_message_structure-table]
 
-[ack_chor-table]
+
 
 The RTB_K13 supports a Tabular Response to the QBP and contains the MSH, MSA, ERR, QAK, QPD, RDF, RDT and the DSC. Its default trigger event is K13. A standard or site-defined response may use this trigger event or may specify a unique trigger event value in its Query Profile. If a unique trigger event value is chosen for a site-defined response, that value SHALL begin with *Z*.
 
