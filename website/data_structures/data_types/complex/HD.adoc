@@ -4,7 +4,7 @@
 :code: HD
 :name: hierarchic designator
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 The basic definition of the HD is that it identifies an (administrative or system or application or other) entity that has responsibility for managing or assigning a defined set of instance identifiers (such as placer or filler number, patient identifiers, provider identifiers, etc.). This entity could be a particular health care application such as a registration system that assigns patient identifiers, a governmental entity such as a licensing authority that assigns professional identifiers or drivers’ license numbers, or a facility where such identifiers are assigned.

@@ -4,7 +4,7 @@
 :code: CQ
 :name: composite quantity with units
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [NOTE]
 CQ cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.

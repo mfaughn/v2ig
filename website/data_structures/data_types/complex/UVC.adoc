@@ -4,7 +4,7 @@
 :code: UVC
 :name: UB value code and amount
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 A code structure to relate amounts or values to identified data elements necessary to process this claim as qualified by the payer organization.

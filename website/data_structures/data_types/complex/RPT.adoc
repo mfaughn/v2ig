@@ -4,7 +4,7 @@
 :code: RPT
 :name: repeat pattern
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 The repeat pattern data type should be used where it is necessary to define the frequency at which an event is to take place. This data type provides a way to define repeat pattern codes "on the fly". The repeat pattern code is equivalent to the TQ data type, component 2, sub-component 1 (repeat pattern). The additional components define the meaning of the repeat pattern code. Components 2 - 10 are used to define relatively simple repeat patterns. Component 11 is provided to define complex repeat patterns. This data type forms a bridge between the 2.x Repeat Pattern concept from Quantity/Timing, and the Version 3.0 GTS General Timing Specification. Component 1 is the 2.x concept of repeat pattern. Components 2-7 are derived from the version 3.0 data type PIVL. Components 8-10 are derived from the version 3.0 EIVL data type. If a repeat pattern cannot be defined using components 2-10, then component 11, General Timing Specification is provided. This allows the full literal form of the version 3.0 GTS to be specified.

@@ -4,7 +4,7 @@
 :code: SCV
 :name: scheduling class value pair
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 This data type is used to communicate parameters and preferences to the filler application regarding the selection of an appropriate time slot, resource, location, or filler override criterion for an appointment.

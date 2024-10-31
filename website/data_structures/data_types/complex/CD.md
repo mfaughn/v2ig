@@ -1,0 +1,5 @@
+# (CD) Data Type - channel definition
+
+**Attention: _Retained for backward compatibility onlyas of v 2.7_.** This is used only in the waveform message, CHM category, which has been retained for backward compatibility only in v 2.7.
+
+This data type is used for labeling of digital waveform data. It defines a recording channel, which is associated with one of the values in each time sample of waveform data. Each channel has a number (which generally defines its position in a multichannel display) and an optional name or label (also used in displays). One or two named waveform sources may also be associated with a channel (providing for the use of differential amplifiers with two inputs). The other components of the channel definition data type are optional. The individual components are defined as follows:
