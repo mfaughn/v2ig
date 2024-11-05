@@ -8,6 +8,7 @@ This message supports the use-case for submission of field level specimen and or
 When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP"."
 
 [tabset]
+O37
 
 This structure represents the way that most orders to veterinary laboratories occur. There is a multi-tier hierarchy in which a single individual (usually a veterinarian or an owner of a production facility) submits one or more specimen samples from one or more animals or non-living entities, such as environmental specimens or feed, etc. There are often many interested participants referenced for each set of orders, which explains the need for the repeating PRT segment. These include individuals such as the government official that is responsible for monitoring the testing of an animal or animal group, the parent organization, etc. This grouped submission of specimens from multiple animal "patients" requires that orders pertaining to animal and non-animal specimens be accommodated. The primary structure of concern is the following:
 

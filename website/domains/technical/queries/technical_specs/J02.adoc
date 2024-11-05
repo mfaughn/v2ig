@@ -6,10 +6,11 @@
 See section _5.6_, "_AUXILIARY QUERY PROTOCOLS_" for more information about this event.
 
 [tabset]
+J02
 
 
 
-[ack_message_structure-table]
+
 
 
 

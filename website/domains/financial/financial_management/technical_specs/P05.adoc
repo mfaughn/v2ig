@@ -6,10 +6,11 @@
 The P05 event is sent when an existing account is being updated. From version 2.3 onward, the P01 (add account) event should no longer be used for updating an existing account, but only for creating a new account. With the addition of P10 (transmit ambulatory payment classification [APC] groups) in version 2.4, it is expected that the P05 (update account) will be used to send inpatient coding information and the P10 (transmit ambulatory payment classification [APC] groups) will be used to send outpatient coding information.
 
 [tabset]
+P05
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -5,3 +5,5 @@
 
 This message is sent from a filler application to notify other applications that a new appointment has been booked. The information provided in the SCH segment and the other detail segments as appropriate describe the appointment that has been booked by the filler application.
 
+[tabset]
+S12

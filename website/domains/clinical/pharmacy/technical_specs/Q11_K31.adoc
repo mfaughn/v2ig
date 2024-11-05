@@ -1,6 +1,6 @@
 = Pharmacy Query/Response
 :v291_section: "4A.3.23"
-:v2_section_name: "Pharmacy Query/Response Message Pair "
+:v2_section_name: "Pharmacy Query/Response Message Pair (Events Q11 and K31)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 .Conformance Statement
@@ -19,6 +19,8 @@
 |===
 
 [tabset]
+Q11
+K31
 
 .QPD Input Parameter Specification
 [width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]

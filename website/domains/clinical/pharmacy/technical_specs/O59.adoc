@@ -12,6 +12,7 @@ The RXD segment carries the dispense data for a given reception of the received 
 The FT1 segment is optional and repeating in order to accommodate multiple charge, benefit and pricing situations. When a message of type RCV is used, the FT1 may be included in the RCV message. If the RCV^O59 message is not used by the implementation, then the RDS may contain the FT1 segment.
 
 [tabset]
+O59
 
 [NOTE]
 The NTE segment(s) following the PD1 segment are intended to communicate notes and comments relative to the patient.

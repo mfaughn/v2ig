@@ -6,14 +6,4 @@
 A placer application (Sterilizer) sends a transaction with this trigger event to a filler application (Instrument-tracking system) to request that a new sterilization lot be added. If it is successful, the filler application returns an application acknowledgment (if requested under the enhanced acknowledgment mode, or if the original acknowledgment mode is in use).
 
 [tabset]
-
-
-
-[ack_message_structure-table]
-
-
-
-[tabset]
-
-
-
+S28

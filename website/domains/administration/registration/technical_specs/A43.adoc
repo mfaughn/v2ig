@@ -14,10 +14,11 @@ See sections link:#merging-patientperson-information[_3.6.2_&#44;] "link:#mergin
 The fields included when this message is sent should be the fields pertinent to communicate this event. When demographic data in other fields change, it is recommended that the A08 (update patient information) event be used in conjunction with this message. However, all PID data associated with the "correct target identifier" (_PID-3 - Patient Identifier List_) are treated as updated information.
 
 [tabset]
+A43
 
 
 
-[ack_message_structure-table]
+
 
 
 

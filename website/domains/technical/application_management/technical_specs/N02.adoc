@@ -8,13 +8,14 @@ The N02 event signifies when an unsolicited update (UU) Application Management D
 For example, an application going down for backups (or starting up again after backups) might issue such a message to one or more other applications. An application switching to another CPU or file-server may also need to use this transaction to notify other systems.
 
 [tabset]
+N02
 
 
 
 [NOTE]
 Because this message pair does not have an application acknowledgement, the value in MSH-16 does not affect the choreography
 
-[ack_message_structure-table]
+
 
 
 

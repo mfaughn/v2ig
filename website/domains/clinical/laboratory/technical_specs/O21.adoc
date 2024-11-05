@@ -1,6 +1,6 @@
 = Message - General Laboratory Order
 :v291_section: "4.4.6"
-:v2_section_name: "OML – laboratory order message (event O21)"
+:v2_section_name: "OML – laboratory order message (Event O21)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 The following message structure may be used for the communication of laboratory and other order messages and must be used for lab automation messages where it is required that the Specimen/Container information is within the ORC/OBR segment group.
@@ -25,6 +25,7 @@ When one wants to convey with the detailed order message a supporting document, 
 The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
 
 [tabset]
+O21
 
 
 

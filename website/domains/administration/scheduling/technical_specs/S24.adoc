@@ -7,3 +7,5 @@ A notification of blocked schedule time slots is sent by the filler application 
 
 For example, if an exam room has been blocked for several hours because of maintenance activities or contamination, and if the work has been completed ahead of schedule, a user may open those several hours on the exam room's schedule. When such a situation occurs, the filler application may use this transaction to notify other applications that the room is available.
 
+[tabset]
+S24

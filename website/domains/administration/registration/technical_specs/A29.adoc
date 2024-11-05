@@ -8,10 +8,11 @@ An A29 event can be used to delete all demographic information related to a give
 To maintain backward compatibility with previous releases, the PV1 segment is required. However, a "pseudo-optional" PV1 can be achieved by valuing _PV1-2 - Patient Class_ to N - not applicable.
 
 [tabset]
+A29
 
 
 
-[ack_message_structure-table]
+
 
 
 

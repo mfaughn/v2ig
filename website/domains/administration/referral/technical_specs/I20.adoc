@@ -6,6 +6,7 @@
 This event triggers a message to be sent from a referred to healthcare provider to the referring health care provider, regarding a specific, previously received collaborative care referral. The collaborative care update may contain patient demographic information, additional appointments, additional clinical history, additional patient visits and additional medication history. It may also contain updates of patient problems, pathways and goal. The information is similar to that which may have been provided in the original Collaborate Care Referral message, but significantly different, as it is information from the perspective of the referred to provider. Patient visits will be those visits by the patient, to the referred to provider, relating to the referral. Appointments will be appointments made for the patient, by the referred to provider, during those visits. Clinical history will be observations made during those visits and medication history will be medications prescribed, observed or recommended during those visits. This message is used to update the referring provider as to the current status of the referral. The referrer would also use this message to update of the status of a referral, such as accepted, rejected, patient put on waiting list, treatment completed etc.
 
 [tabset]
+I20
 
 
 

@@ -18,10 +18,11 @@ A change in any of the following independent status characteristics would cause 
 • Storage Status
 
 [tabset]
+T03
 
 
 
-[ack_message_structure-table]
+
 
 
 

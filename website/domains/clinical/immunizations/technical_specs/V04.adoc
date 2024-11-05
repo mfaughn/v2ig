@@ -11,6 +11,7 @@ When a provider wishes to update the patient's vaccination record being held in 
 An unsolicited update will follow this format. The three-letter code in the leftmost column indicates the segment that is included; the column on the right specifies the chapter in which that segment is fully defined.
 
 [tabset]
+V04
 
 
 

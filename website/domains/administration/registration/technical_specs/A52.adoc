@@ -10,10 +10,11 @@ The fields included when this message is sent should be the fields pertinent to 
 As there is no specific field for the cancel LOA date/time, it is recommended field _EVN-6 - Event Occurred_ contain the date/time the LOA was actually cancelled (but not necessarily recorded).
 
 [tabset]
+A52
 
 
 
-[ack_message_structure-table]
+
 
 
 

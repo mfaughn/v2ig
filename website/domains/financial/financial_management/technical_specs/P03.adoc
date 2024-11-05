@@ -16,6 +16,7 @@ If common order information is sent related to the entire message or a specific 
 If order detail information is sent related to the entire message or a specific financial transaction, the required fields for that detail segment must accompany that information.
 
 [tabset]
+P03
 
 
 
@@ -28,7 +29,7 @@ There is an information overlap between the FT1, DG1 and PR1 segments. If diagno
 [NOTE]
 The extra set of DG1/DRG/GT1/IN1/IN2/IN3/ROL segments added in V2.4 have been withdrawn as a technical correction
 
-[ack_message_structure-table]
+
 
 
 

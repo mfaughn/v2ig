@@ -7,3 +7,5 @@ The request appointment cancellation trigger event is sent by the placer applica
 
 This trigger event can be used to cancel a parent appointment, in which none of the children of the appointment have either begun or have been completed. Any child appointments that exist on the filler and placer applications should be considered canceled. If one or more child appointments have begun or have been completed, then this trigger event should not be used. Instead, the S05 (request appointment discontinuation) event should be used.
 
+[tabset]
+S04

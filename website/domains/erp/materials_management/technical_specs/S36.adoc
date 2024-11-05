@@ -6,10 +6,11 @@
 This message is sent from a filler application to notify other applications that anti-microbial device data has been generated. The information in the SDN segment and the other detail segments as appropriate describe the detail of a device during a sterilization or decontamination cycle.
 
 [tabset]
+S36
 
 
 
-[ack_message_structure-table]
+
 
 
 

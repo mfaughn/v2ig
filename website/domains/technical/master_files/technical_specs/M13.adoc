@@ -1,7 +1,15 @@
 = Message - M13 Master File Notification - General 
-:v291_section: "8.4.2.1"
+:v291_section: "8.4; 8.4.2+"
 :v2_section_name: "MFN/MFK - Master File Notification - General (Event M13)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The MFA segment carries acknowledgment information for the corresponding MFE segment (identified by MFA__-5 - Primary Key Value - MFA__). Fields _MFE-4 - Primary Key Value - MFE_ and _MFA-5 - Primary Key Value - MFA_ provide the link between the corresponding segments.
+include::master_file_notification.adoc[]
 
+[v291_section="8.4.2"]
+The MFN General master file notification transaction is used where the master file is a simple one that contains only a key and the text value of that key. Both values are carried in _MFE-4 - Primary Key Value - MFE_. The specific master file being updated is identified by _MFI-1 - Master File Identifier_ and _MFI-2 - Master Files Application Identifier_.
+
+[v291_section="8.4.2.1"]
+The MFA segment carries acknowledgment information for the corresponding MFE segment (identified by MFA-5 - Primary Key Value - MFA). Fields _MFE-4 - Primary Key Value - MFE_ and _MFA-5 - Primary Key Value - MFA_ provide the link between the corresponding segments.
+
+[tabset]
+M13

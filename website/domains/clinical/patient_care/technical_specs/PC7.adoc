@@ -1,15 +1,16 @@
 = Message - PC7 Patient Goal Update
 :v291_section: "12.3.1"
-:v2_section_name: "PGL/ACK - Patient Goal Message (Events PC6, PC7, PC8)"
+:v2_section_name: "PGL/ACK - Patient Goal Message (Event PC7)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to send goals from one application to another (e.g., a point of care system to a clinical repository). Many of the segments associated with this event are optional. This optionality allows systems in need of this information to set up transactions that fulfill their requirements.
 
 [tabset]
+PC7
 
 
 
-[ack_message_structure-table]
+
 
 
 

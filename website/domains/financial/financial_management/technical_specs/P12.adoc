@@ -6,10 +6,11 @@
 The P12 event is used to communicate diagnosis and/or procedures in update mode. The newly created fields in DG1 and PR1, i.e., identifiers and action codes, must be populated to indicate which change should be applied. When other patient or visit related fields change, use the A08 (update patient information) event.
 
 [tabset]
+P12
 
 
 
-[ack_message_structure-table]
+
 
 
 

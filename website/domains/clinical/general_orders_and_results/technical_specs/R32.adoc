@@ -16,10 +16,11 @@ The sending system must return a commit-level acknowledgement in response to the
 The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
 
 [tabset]
+R32
 
 
 
-[ack_message_structure-table]
+
 
 
 

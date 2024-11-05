@@ -6,10 +6,7 @@
 This event triggers a query message to be sent from one healthcare provider to another healthcare provider, clinical repository or regulatory body regarding a specific patient. The Collaborative Care Fetch message must contain sufficient information for the healthcare provider, clinical repository or regulatory body to be able to identify the specific patient. The response to a Collaborative Care Fetch is a CCI - Collaborative Care Information message. The meaning of the Collaborative Care Query Information message is identical to the meaning of the Collaborative Care Message message.
 
 [tabset]
-
-
-
-[tabset]
+I22
 
 [width="99%",cols="33%,47%,9%,11%",options="header",]
 |===

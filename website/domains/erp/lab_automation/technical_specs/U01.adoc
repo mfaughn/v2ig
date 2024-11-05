@@ -1,9 +1,9 @@
 = Message - U01 Automated Equipment Status Update
-:v291_section: "13.3.1"
+:v291_section: "13.2.1"
 :v2_section_name: "ESU/ACK - Automated Equipment Status Update (Event U01)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The equipment detail segment contains the data necessary to identify and maintain the equipment that is being used throughout the Laboratory Automation System.
+This message is used to send information about the status of a device or equipment from one application to another (e.g., automated device to a Laboratory Automation System). The status update can be sent unsolicited or as a response to the trigger "Automated Equipment Status Request."
 
-[segment_definition-table]
-
+[tabset]
+U01

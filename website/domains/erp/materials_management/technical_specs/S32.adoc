@@ -6,14 +6,4 @@
 This trigger event is sent by the placer application to the filler application to request anti-microbial device cycle data created during the decontamination/sterilization of medical supplies. In the context of this message segment, the term 'device' refers to a sterilizer or a washer. Sterilizers perform a sterilization process and washers perform a decontamination process.
 
 [tabset]
-
-
-
-[ack_message_structure-table]
-
-
-
-[tabset]
-
-
-
+S32

@@ -1,6 +1,6 @@
 = Message - E02 Cancel HealthCare Services Invoice 
 :v291_section: "16.3.2"
-:v2_section_name: "EHC^E02 – Cancel HealthCare Services Invoice (event E02)"
+:v2_section_name: "EHC^E02 – Cancel HealthCare Services Invoice (Event E02)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to cancel one HealthCare Services Invoices or one Product/Service Group in an Invoice or one Product/Service Line Item in an Invoice that have previously been submitted to a TPA/Payer for processing and payment. Invoice Control codes are used to indicate the specific action being requested of the Payer (CN for Cancel Invoice, CG for Cancel Product/Service Group and CI for Cancel Product/Service Line Item). An Invoice that is cancelled must be marked as cancel only and not purged from the Payer Application's database.
@@ -61,6 +61,7 @@ PSL.Billed Amount
 {empty}10) This message must not be used to cancel a Product/Service Line Item in a Product/Service Group which was submitted with Adjudicated as Group = "Y".
 
 [tabset]
+E02
 
 
 

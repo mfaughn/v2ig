@@ -1,6 +1,6 @@
 = Message - E10 Edit/Adjudication Results 
 :v291_section: "16.3.6"
-:v2_section_name: "EHC^E10 – Edit/Adjudication Results (event E10)"
+:v2_section_name: "EHC^E10 – Edit/Adjudication Results (Event E10)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to send edit and/or adjudication results for a HealthCare Services Invoice. Edit/Adjudication results are sent to the same Network Application ID that originated the Invoice, which was specified as the Sending Application on MSH on the original HealthCare Services Invoice.
@@ -23,6 +23,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 {empty}4) The Provider Invoice Number on IVC must be the same as the Provider Invoice Number on IVC as specified on the EHC^E01 input message. In other words, this message must be used to respond to the incoming EHC^E01 and not a previous EHC^E01 HealthCare Services Invoice. Only IPRs for the Invoice specified on the EHC^E01 may be included in the EHC^E10 response.
 
 [tabset]
+E10
 
 
 

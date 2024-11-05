@@ -6,10 +6,11 @@
 This trigger event is used by an entity or organization to transmit to a healthcare provider the insurance information on a specific patient. Typically, the healthcare provider will be a primary care provider.
 
 [tabset]
+I07
 
 
 
-[ack_message_structure-table]
+
 
 
 

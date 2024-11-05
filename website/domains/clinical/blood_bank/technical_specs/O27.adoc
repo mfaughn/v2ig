@@ -8,6 +8,7 @@ Blood product order messages present the need for additional information that is
 Blood product orders use the OMB message with the BPO segment for the detail segment and the acknowledgment message, ORB as described below.
 
 [tabset]
+O27
 
 OMB use notes
 

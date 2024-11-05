@@ -22,3 +22,4 @@ The Device segment (DEV) provides additional device information for a device ref
 // FIXME we want tabs for OMI^O23^OMI_O23 message-structure, OMI^O23 AckChor, ORI^O24^ORI_O24 message-structure, ORI_O24 AckChor, OSU^O52^OSU_O52 message-structure, OSU_O52 AckChor
 
 [tabset]
+O23

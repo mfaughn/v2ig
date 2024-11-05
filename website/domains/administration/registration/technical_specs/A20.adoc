@@ -6,10 +6,11 @@
 Certain nursing/census applications need to be able to update the Patient Administration system's bed status. The following is the associated record layout:
 
 [tabset]
+A20
 
 
 
-[ack_message_structure-table]
+
 
 
 

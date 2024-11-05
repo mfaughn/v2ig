@@ -6,10 +6,11 @@
 This message is sent from a filler application to notify other applications that a new sterilization lot has been created. The information provided in the SLT segment describes the new sterilization lot that has been created by the filler application.
 
 [tabset]
+S34
 
 
 
-[ack_message_structure-table]
+
 
 
 

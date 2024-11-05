@@ -6,12 +6,13 @@
 An event B05 indicates that a staff member is temporarily unavailable for work, while maintaining a relationship with the institution. This message applies to STF-7.
 
 [tabset]
+B05
 
 
 
 There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
 
-[ack_message_structure-table]
+
 
 
 

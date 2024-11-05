@@ -12,10 +12,11 @@ The ROL segment has been deprecated and retained for backwards compatiblity purp
 The PRT – Participation Information Segment is used in this message to communicate providers not specified elsewhere. Person level providers with an ongoing relationship are reported in the PRT segment following the PID/PD1 segments. Providers corresponding to the PV1 data are reported in the PRT segment following the PV1/PV2 segments. Providers related to a specific procedure are reported in the PRT segment following the PR1 segment. Providers related to a specific insurance are reported in the PRT segment following the IN1/IN2/IN3 segments. To communicate the begin- and end-date of the provider, use the _PRT-11 - Begin Date/Time_ and the _PRT-12 - End Date/Time_ in the PRT, with the applicable _PRT-4 – Role of Participation_. Refer to Chapter 7 for the definition of the PRT segment.
 
 [tabset]
+A16
 
 
 
-[ack_message_structure-table]
+
 
 
 

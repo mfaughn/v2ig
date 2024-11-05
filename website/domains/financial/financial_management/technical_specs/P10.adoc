@@ -6,10 +6,11 @@
 The P10 event is used to communicate Ambulatory Payment Classification (APC) grouping. The grouping can be estimated or actual, based on the APC status indictor in GP1-1. This information is mandated in the USA by the Centers for Medicare and Medicaid Services (CMS) for reimbursement of outpatient services. The PID and PV1 segments are included for identification purposes only. When other patient or visit related fields change, use the A08 (update patient information) event.
 
 [tabset]
+P10
 
 
 
-[ack_message_structure-table]
+
 
 
 

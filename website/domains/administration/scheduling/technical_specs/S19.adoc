@@ -7,3 +7,5 @@ The notification of modification of service/resource is triggered on the filler 
 
 This trigger event should not be used when an existing resource or service has been replaced in relation to an existing appointment. Instead, use two other trigger events: S20 (notification of cancellation of service/ resource on appointment), as well as S18 (notification of addition of service/resource on appointment).
 
+[tabset]
+S08

@@ -1,6 +1,6 @@
 = Message - E12 Request Additional Information
 :v291_section: "16.3.7"
-:v2_section_name: "EHC^E12 – Request Additional Information (event E12) "
+:v2_section_name: "EHC^E12 – Request Additional Information (Event E12) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 A Payer or TPA uses this message to request additional information in support of an Invoice or a (Pre) Authorization Request. Normally, this request would be sent following receipt of an E01 or E20 message. However, it can also be sent following receipt of an E04 Re-Assess HealthCare Services Invoice Request. In this latter case the request for additional information still has as its object the original invoice (which is now under review) rather than the Re-assessment request per se.
@@ -38,6 +38,7 @@ Processing Rules:
 {empty}9) Interpretive Rule__:__ Inclusion of Product/Service Line item information implies that the request is directly related to the Product/Service described in PSL. Omitting this optional segment implies that the request is related to all product/service line items in the original Product/Service Group. (See E01 message for rules governing the construction of Product/Service Groups.)
 
 [tabset]
+E12
 
 
 

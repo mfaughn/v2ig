@@ -1,6 +1,6 @@
 = Message - E13 Additional Information Response
 :v291_section: "16.3.8"
-:v2_section_name: "EHC^E13 – Additional Information Response (event E13) "
+:v2_section_name: "EHC^E13 – Additional Information Response (Event E13) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used by a Provider to immediately respond to an EHC^E12 Request for Additional Information, in other words an automated response. The EHC^E13 message cannot be sent unsolicited.
@@ -50,6 +50,7 @@ If these fields are null the receiving system assumes that the Filler produced t
 {empty}8) Informative Rule: Document Confidentiality Status on TXA. When this optional field is completed it indicates that the Payer is to restrict access to the attached document according to the Payer's established policies and/or in accordance with prior business agreements between the Provider and Payer.
 
 [tabset]
+E13
 
 
 

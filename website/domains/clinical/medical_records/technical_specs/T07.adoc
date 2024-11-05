@@ -11,10 +11,11 @@ This is a notification of an edit to a document without the accompanying content
 *Scenario:* Errors, which need to be corrected, are discovered in a document. The original document is edited, and an edit notification is sent.
 
 [tabset]
+T07
 
 
 
-[ack_message_structure-table]
+
 
 
 

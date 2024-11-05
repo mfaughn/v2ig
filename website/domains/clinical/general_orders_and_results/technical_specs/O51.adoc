@@ -9,6 +9,7 @@ This message is used to create simple order status updates for any type of order
 that one also could send a regular order message using order control code “SC” (Status Changed). The choice to use one or the other is dependent on whether any of the other segments in the original message structure is necessary or not.
 
 [tabset]
+O51
 
 
 

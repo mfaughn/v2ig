@@ -14,6 +14,7 @@ The OSM^R26 Unsolicited Specimen Shipment Manifest message is used to communicat
 • Identification of persons/places/things associated with the specimens.
 
 [tabset]
+R26
 
 
 

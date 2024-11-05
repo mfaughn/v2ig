@@ -18,9 +18,8 @@
 |Based on Segment Pattern: |PMU_B01
 |===
 
-[query_message_structure-table]
-
-
+[tabset]
+Q25
 
 .There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
 [width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
@@ -55,10 +54,3 @@ Search
 |LanguageAbility | |CWE |The Server will evaluate this field only if the Language field is specified; otherwise, this field will be ignored. If this field is not valued, all values for this field are considered to be a match. If this field contains multiple values, the Server will record a match for any of the match values specified.
 |LanguageProficiency | |CWE |The Server will evaluate this field only if the Language field is specified; otherwise, this field will be ignored. If this field is not valued, all values for this field are considered to be a match. If this field contains multiple values, the Server will record a match for any of the match values specified.
 |===
-
-[response_message_structure-table]
-
-
-
-There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 SHALL always be set to NE (Never).
-

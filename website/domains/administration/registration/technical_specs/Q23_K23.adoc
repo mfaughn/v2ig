@@ -16,11 +16,9 @@
 |Purpose: |Returns list of identifiers from the specified domains, given an identifier from a given domain.
 |===
 
-[query_message_structure-table]
-
-
-
-[response_message_structure-table]
+[tabset]
+Q23
+K23
 
 
 

@@ -16,10 +16,11 @@ See sections link:#merging-patientperson-information[_3.6.2_], "link:#merging-pa
 The fields included when this message is sent should be the fields pertinent to communicate this event. When other fields change, it is recommended that the A31 (update person information) event be used for person level updates and A08 (update patient information) event for patient level updates.
 
 [tabset]
+A40
 
 
 
-[ack_message_structure-table]
+
 
 
 

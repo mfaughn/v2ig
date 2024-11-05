@@ -1,21 +1,393 @@
 = Queries
 
 == Introduction
+[v291_section="5.2"]
 
-FIXME
+This chapter defines the rules that apply to queries and to their responses. It also defines the unsolicited display messages because their message syntax is query-like in nature.
+
+.Version 2.4 of the standard introduced new models for query and response messages. The layout of this chapter is structured such that all information pertaining to those newly defined query/response message pairs, including auxiliary protocols, appears in sections 5.2–5.9 and the previously defined queries appear in section 5.10. Outstanding issues appear in the final section, 5.11.
+[width="100%",cols="75%,25%",options="header",]
+|===
+|Topic |Section Reference
+|Introduction |5.2
+|Query/Response Model |5.2.1
+|Evolution of the Query Standard |5.2.2
+|Query Development Methodology |5.2.3
+|Response Formats |5.2.4
+|Query Specification Formats |5.2.5
+|Summary Chart of Query/Response Pairs |5.2.6
+|Query/Response Profile |0
+|Query/Response Message Pairs |5.3.3.4
+|Query/Response Message Segments |0
+|Auxiliary Query Protocols |5.6
+|Publish and Subscribe |5.7
+|Query Implementation Considerations |5.8
+|Query/Response Message Examples |5.9
+|Superseded Query/Response Trigger Events and Message Pairs |5.10
+|Display Messages |5.10.1
+|Original Mode Queries |5.10.2
+|Outstanding Issues |5.11
+|===
+
+The Standard embraces the most common queries that are likely to occur. These are defined by the functional chapters. The following represents typical examples of queries supported by the Standard:
+
+{empty}a) data regarding a single patient, e.g., send all lab results for patient #123456
+
+{empty}b) data regarding multiple patients, e.g., send the list of patients whose attending physician is Dr. #123
+
+{empty}c) data that is not patient related, e.g., send the age specific normal values for serum protein.
+
+{empty}d) data within a specified time range, e.g., send all serum glucose results, reported between January 1, 1998 through December 31, 1999, for patient #123456.
+
+The variety of potential queries is almost unlimited. There was no attempt here to define a Standard that would cover every possible query. Chapter 5 discusses general ways query/response pairs are structured. Functional chapters discuss specific query/response pairs required for their needs. The technical committees responsible for functionally-specific chapters define detailed content of the query/response segment patterns within those chapters.
+
+In particular, there is no implication that a specific system SHALL support generalized queries or Conformance Statements to comply with the Standard. Rather, these transactions provide a format, or a set of tools to support queries to the extent desired by the institution. The resources available and local policies will influence the type of queries that MAY BE implemented.
+
+=== Query/response model
+[v291_section="5.2.1"]
+
+A query with its response should be thought of as a message pair. The following illustration shows the three generic models of message pairs: the *_declarative, interrogative,_* and *_imperative_*. Within each model, one system assumes the role of initiator and the other system assumes the role of responder. HL7 queries follow the "interrogative" style of messaging as described below.
+
+image::query_response_model.png[query_response_model]
+
+[NOTE]
+All messaging in HL7 assumes a single basic paradigm using a point-to-point transmission of an initial message from a sender to a receiver, followed by a response or acknowledgement message from the receiver back to the sender. The response/acknowledgment message may be optional depending on several use cases that will be discussed below. The point-to-point transmission is defined independent of any particular technology or architecture.
+
+The *_declarative_* model is employed for distribution or broadcast of unsolicited *events* such as the ORU and RDS. *Clients* (*interested parties*) that desire information that resides on a *Server* or *data owner* may "subscribe" to be updated when new information is available on the Server. The Server initiates a transmission of event information. This transmission may be to a single Client, or may be a broadcast to multiple Clients. Each Client responds with an acknowledgement of receipt.
+
+The *_interrogative_* model is employed for queries. A Client initiates a query (a request for data) to the Server. The Server processes the query, responds with a report of success or failure of the query to the Client, and further responds by delivering information requested by the query.
+
+The *_imperative_* model is employed for remote interoperation. A Client initiates a request for action (such as an order) to the Server. The Server processes the request and responds with a report of success or failure to the Client.
+
+[NOTE]
+In HL7 v2, there is no formal assumption of client-server architecture, or of a particular "publish and subscribe" architecture. Thus the roles of the intercommunicating applications may change according to the messaging needs. _i.e._, an application may be a data owner or Server for one set of messages (e.g., an order entry system creating orders), and an interested party or Client for another set of messages (e.g., an order entry system receiving order status messages from an ancillary departmental system). Furthermore, the "data owning" system may be a middleware component such as an "application server" or a "messaging gateway" or "router" that distributes information from a server application. In the discussions below, "_Client_" and "_Server_" are used as shorthand synonyms for "requesting system/application" and "responding system/application" without implying the assumption of a client/server architecture. Likewise, the support for "publish and subscribe" does not assume a particular operating system or architecture, but is defined at the application level (level 7), in a technology-neutral form. The phrase "_data owner_" is used to refer to the human institution that operates the Server program. One would say that "the data owner defines the data to be made available by the Server program."
+
+=== Evolution of the query standard
+[v291_section="5.2.2"]
+
+The Query Standard, like the HL7 Standard in general, has been evolving since its inception in Version 2.1. Version 2.4 introduced a new methodology intended to supersede the previous generation of queries.
+
+*Original Mode Queries*
+
+Originally, the parameters of an HL7 query were carried by the QRD and QRF segments. Because these segments were intended to be used by all queries, the content of these segments could only be loosely defined. Such "original mode queries" actually represent just a starting point for defining queries.
+
+In these original mode queries, separate trigger events were used to differentiate between an immediate response and a deferred response. In addition, some of the functional chapters defined queries and responses with separate trigger events.
+
+*Enhanced Mode Queries*
+
+In HL7 v 2.3, "enhanced mode queries" were introduced that attempted to provide for a much higher level of precision in queries. Four new ways of specifying a query were introduced in Version 2.3.
+
+[IMPORTANT]
+====
+* An Embedded Query Language query, which supports free-form select statements, based on the query language of choice (e.g., SQL)
+
+* a Virtual Table request query which supports queries against server database tables (virtual or actual) based on specific selection criteria
+
+* a stored procedure request, which enables an application on one system to execute a stored procedure on another system, which is coded to extract specific data
+
+* an event replay request message, which is used to request data formatted as an event replay response
+====
+
+"Enhanced Mode" introduced three new ways to pass data to the responding system (e.g., a Server).
+
+{empty}1) Passing values to specific parameters of a query. (Used by the stored procedure and event replay queries.) This is the most common and straightforward technique for creating queries. The drawback is that the client is tightly limited in the range of queries it can formulate.
+
+{empty}2) Passing the query as a single complex query "expression". (Used by the Virtual Table query.) The query is defined by an expression-tree made up of the usual AND OR, '<' , '>', ... Operators can refer to column names or variables defined by the Server. These Queries give the Client significant flexibility in specifying their query over the columns that the Server has permitted. The cost of this Client flexibility is that the Server SHALL evaluate the query expression, rather than simply plug parameter values into an existing stored procedure.
+
+{empty}3) Passing the query as a single string in an existing database query language such as SQL. (Used by the EQL External Query Language query.) An EQL query is represented as a string formatted in the particular syntax of an existing query language. The Server will probably pass this string expression directly to an existing database engine to evaluate the query, which will have to parse this expression to recover the query. The drawback of this technique is that different database engines use different query languages, and so the exact query string which the Client constructs will depend on the Server's query language.
+
+Also in Version 2.3, the use of the trigger event was moving closer to the definition set forth in chapter 2. Each offered query had its own trigger event. In Version 2.3.1 each response had its own trigger event.
+
+*Version 2.4 Queries*
+
+Users of v 2.3 queries encountered some somewhat arbitrary limitations suggested by the v 2.3 standard. A close reading of the v 2.3 virtual table query wording made it appear that the only way a query could be specified by a QSC selection expression was if it returned tabular (RDT) results, and it seemed that query-by-parameter queries could not return tabular results.
+
+Versions of the HL7 standard after v 2.3.1 more cleanly separate how a query is specified from how the data is returned, and they emphasize the existence of a "Conformance Statement." HL7 continues to support the semantics of the Stored Procedure/Event Replay queries and the Virtual Table queries, but formulates the syntax more clearly using a single new query, the Query By Parameter (QBP).
+
+The QBP query is intended to unify the semantics of the stored-procedure, event-replay and virtual-table queries within the framework of a precise conformance statement.
+
+The standard recognizes the continued use of the Original Mode queries (QRD/QRF), but uses a new query formalism to explain their semantics more clearly.
+
+The bulk of the new material after Version 2.3.1 consists of defining a format for Conformance Statements, and giving examples of query design and use.
+
+[NOTE]
+Version 2.5 introduced a new, use-case-based mechanism for conformance in Section 2.12 of Chapter 2. Query implementers are encouraged to review and, where appropriate, adopt the profiling structures outlined in that section. Conformance Statement structures introduced in Version 2.4 have been renamed Query Profiles.
+
+*Compatibility with past versions*
+
+For backward compatibility, both the "original" and "enhanced" queries remain in the standard, but their description has been relegated to a "for backward compatibility only" section. The main part of this chapter is a complete and consistent explanation of the recommended approach to HL7 queries in Version 2.4 and later.
+
+As in versions of the standard prior to 2.4, the detailed domain content of the query and response messages is defined by the technical committees responsible for the functionally-specific chapters; the basic forms and methodology for queries and responses are defined in this chapter.
+
+Sections _5.2.4_, "_Response format_," and _5.2.5_, "_Query specification formats_," discuss Response Formats and Query Specification Formats.
+
+=== Query development methodology
+[v291_section="5.2.3"]
+
+Typically, an individual HL7 conformant query would evolve as follows:
+
+An institution, or data owner, decides that it would like to make information available via a query. It decides precisely what data will be made available and how it will be offered. Knowing its own data, the data owner will define its query to return one of three representations of the data:
+
+{empty}1) As traditional HL7 segments. (See section _5.2.4.1_, "_Segment pattern response_.")
+
+{empty}2) As rows and columns of data from a precisely defined Virtual Table. (See section _5.2.4.2_, "_Tabular response_.")
+
+{empty}3) As rows of human readable text ready to output to a screen or printer. (See section _5.2.4.3_, "_Display response_.")
+
+Next, the data owner specifies exactly which input variables the Client can use to control the data that the Server agrees to return.
+
+The complete specification of what data are available, how the data will be returned, and what variables can be valued or constrained in a Query is called the Query Profile.
+
+The Query Profile concept is critical to the proper usage of the query/response pair. In the absence of a Query Profile, the Client would be unaware of the existence of the query, let alone how to use it or what to expect from it**_._** The data owner advertises the existence of, and support for, a query by publishing a *_Query Profile_*.
+
+.The Query Profile has the following broad structure:
+[width="100%",cols="100%",]
+|===
+|Introduction including title, trigger events, mode, characteristics and purpose
+|Query Grammar
+|Response Grammar
+|Input Specification and Commentary
+|Response Control
+|Output specifications and Commentary
+|===
+
+*Query Profile*: A declaration which sets forth the name of the query supported by the Server, the logical structure of the information that can be queried, and the logical structure of what can be returned.
+
+Section 0, "_Note that the_ Vaccination Query related messages have been removed as these were deprecated and withdrawn as of v 2.8.
+
+Acknowledgment Choreography
+
+As of Version 2.9 Infrastructure and Messaging requires that Acknowledgment Choreography be explicitly specified in MSH-15 and MSH-16. Because of the nature of the Query and Response Messaging pattern, the Response message is always an Application Acknowledgment. To specify this, the value in MSH-16 SHALL always be “AL” to indicate that there will always be an Application Acknowledgment to the Query Message. See Chapter 2 for more details on this subject.
+
+QUERY/RESPONSE PROFILE," will explain the Query Profile in detail.
+
+The next section elaborates on the three styles of response data (segment pattern, tabular, and display) that a data owner may use to represent its data.
+
+The introduction of the Query Profile concept is not intended to imply system certification. It is intended to promote well-specified queries. As in previous versions, support for queries is not required for HL7 conformance.
+
+=== Response Format
+[v291_section="5.2.4"]
+
+.The first decision a data owner SHALL make in formulating a query is to decide which style of representing data is most appropriate for their needs.
+[width="100%",cols="19%,81%",]
+|===
+|HL7 recognizes three main styles of representing responses to queries: *_tabular, segment pattern, or display_*. _Segment pattern_ and _tabular_ were previously known as _record-oriented_ as described in earlier versions of this Standard. _Segment pattern_ responses consist of a set of HL7 segments. Each query will define, in its Query Profile, the precise grammar of HL7 segments that it will return. Tabular responses return data as a set of rows, one RDT segment per row. Display queries return data in DSP segments. An HL7 conformant system interested in supporting queries will choose one or more of these styles before proceeding with a detailed design. |
+|Tabular |The responding system formats the data in a relational format, as rows and columns.
+|Segment pattern |The responding system formats the data on the basis of an application-specific segment-oriented (record-oriented) message.
+|Display |The responding system formats the data in human readable format for direct outputting to a display device (in both original and enhanced modes).
+|===
+
+These structures support all original mode and enhanced mode responses, as well as the Conformance Based Queries.
+
+==== Segment pattern response
+[v291_section="5.2.4.1"]
+
+Segment Pattern data responses reflect the traditional way of offering data within HL7. The Server responds to queries by returning a pattern of HL7 segments. For example, the core of a response to a query for Lab data might be defined by the following segment grammar:
+
+\{PID
+
+OBR
+
+{empty}[\{OBX}]
+
+}
+
+For example, patient information will be returned in the PID segment and laboratory results in OBR and OBX segments. In this style, the message returned by a Server is often a close approximation to an existing unsolicited update HL7 message.
+
+In creating a Query Profile for a segment pattern response, the data owner SHALL decide on the exact segment grammar it will return. The output specification of the Query Profile for a segment pattern response will have a structure very similar to the message definition of a standard HL7 transaction. It SHALL define a grammar of segments that will be returned, and, for each segment, it should clarify, where necessary, the meaning of each field, the cardinality of the data, and whether the data is optional or required.
+
+==== Tabular response
+[v291_section="5.2.4.2"]
+
+A data owner may decide that the best model for the data it wishes to offer is that of a fairly conventional table of rows and columns. In this case, a data owner advertises support for a straightforward ("virtual") table of data, with specific columns of specific data types. It further indicates which of the columns the Client can constrain in its query. The response to a query will be in the form of a set of rows from the advertised table.
+
+The Virtual Table is an abstraction around a traditional database table. However, there are important differences between a traditional database table and the Virtual Table. The Virtual Table need not be based on a single table or collection of data. It may represent a "join" or combination of data among database tables (although the "join" or combination is not explicitly exposed to the Client).
+
+The concept of _table,_ borrowed from the relational database world, is used merely as a representational aid. The actual internal data structure of the Server need not be relational. Virtual Tables may be used to present data elements from internal structures that are hierarchical, object-oriented, or otherwise non-relational in nature.
+
+Virtual Tables therefore insulate the user from the exact data layout or representation in the data source. That is to say, the requestor need not understand the structure of the tables, rows and columns of the database being queried but only the structure of the Virtual Table representation. Likewise, the responder (database owner) does not have to expose the structure of the real database. Neither the owner nor the requestor needs to worry if the structure of the database changes.
+
+The rows and columns of the Virtual Table for a query are fully described in the Query Profile for that query.
+
+A virtual table data representation is appropriate when the information being offered is relatively simple. It would not be the appropriate representation for lab reports that typically involve a complex nesting of results into sections. Data carried by the typical HL7 segment or segment group could be modeled as a virtual table. For example, the ADT system might offer a table consisting of the fields of PID, NK1 and a single PV1 segment. On the other hand, it would be difficult to represent the visit history of a patient in a single virtual table.
+
+==== Display response
+[v291_section="5.2.4.3"]
+
+A display message can be generated where the update information does not need to be captured by the receiving system's database, but only displayed, either on a visual medium (such as a PC, workstation or a CRT) or on printed medium.
+
+The display response does not actually represent a formal style of data organization. It represents a decision to return data formatted for human, rather than for computer, consumption. The Server offers a pretty-printed version of the data in a format that is meaningful for human readers. Logically, the content of the pretty-printed message might be the complex data carried by an HL7 segment pattern, or could be a simple record normally carried by a tabular response.
+
+==== Choosing among available response formats
+[v291_section="5.2.4.4"]
+
+In practice, it is easy to decide which style of data to offer. In general, segment pattern responses are able to carry complex data structures (e.g., an entire laboratory report) while tabular responses are typically simple data structures. Therefore, tabular response is intended as a simpler tool to accomplish a simpler task. There is no need for the Client to understand, parse and process the deep structure and relationships implied by the segment pattern response. The Client does not need a complex state machine to do segment level parsing. The rows all have the same structure so only a simple state machine is needed.
+
+If the query is defined by an HL7 technical committee, then the decision is already made. If, on the other hand, no query is yet defined but the domain of the data is well covered by HL7, then it is probable that there are existing HL7 segments that could carry the data. A Z query may be constructed out of the existing HL7 segments. If the data is site specific, the site can either create its own Z segments and offer a segment pattern response (which makes particular sense if the overall data is complex) or it can define its own Virtual Table, offer a tabular response and let the Client process each record.
+
+Once it is known what data a Server is making available, then the data can be ordered or requested. This is analogous to needing to refer to a catalog before ordering an item by mail.
+
+=== Query specification formats
+[v291_section="5.2.5"]
+
+The previous section explained the three representations for data that are returned to a query client. This section discusses how the client may represent a query for information.
+
+HL7 now recommends one primary way with 3 basic variants for specifying a query.
+
+This query model with its variants is intended to assist implementers in translating specific query needs from the ordinary prose of the business model into an appropriate HL7 query paradigm. The paradigm selected will depend upon the philosophy of the institution: whether to allow relative freedom to client systems in composing query expressions, or to control rigidly the fields and operations to be offered. The following paragraphs compare and contrast the features of each of the HL7 query variant models. The differences between them lie mainly in the processing they require on the Server side.
+
+*_Query by Simple Parameter_*
+
+The first variant is called the Simple Parameter query. In the simple parameter query, the input parameters are passed in order as successive fields of an HL7 segment. The Server need only read them from the corresponding HL7 fields, and plug them into an internal function to evaluate the query.
+
+This is the most basic form of the query in which the Server specifies a fixed list of parameters in its Query Profile. (For example, the Server may direct the querying system to specify a medical record number, a beginning date, and an ending date.) When invoking the query, the Client passes a specific value for each parameter. This is analogous to invoking a stored procedure against a database.
+
+The parameter definition segment (i.e., the QPD) can be seen as a generalization of the QRD and QRF segments of the original mode query. Each field in the QRD and QRF corresponds to 1 parameter of the QPD instance. HL7 recommends that queries defined by QRD and QRF segments be recast as a version 2.4 or later Query By Parameter.
+
+The obvious implementation gain is that the Server can simply map the input values to the parameters specified in the Query Profile. An already known function or procedure is called to evaluate the query and select data to be returned. The bulk of the work effort has already been invested in the development of this predefined function or procedure.
+
+*_Query by Example Variant:_*
+
+The Query by Example (QBE) is an extension of Query by Parameter (QBP) in which search parameters are passed by sending them in the segment which naturally carries them, instead of as fields of the QPD segment. For example, if one wanted to perform a "find_candidates" query using QBE, one would send the demographics information on which to search in the PID and/or PD1 segments, leaving blank those fields in the segment sent that are not query parameters. If, for example, religion were not one of the query parameters, PID-17 would be left blank when the PID was sent in the query. Parameters which do not occur naturally in an HL7 message, such as search algorithm, confidence level, etc., would continue to be carried in the QPD segment as they are in the Query by Parameter. The exact segments and fields available for use as query parameters would be specified in the Query Profile for the query.
+
+*_Query Using the QSC Variant:_*
+
+The third variant is known as the QSC variant because of its use of the QSC data type, which was used in the Virtual Table query. The Query Profile for the query will define all the variables that the Client may use in an expression. At runtime, the Client is able to define the exact search criteria by constructing a "tree" of operator/operand nodes that constrain the available input parameters. To evaluate the query, the Server SHALL be willing to analyze and interpret the query expression at runtime. The Server may translate the input expression into its local data access language, or perhaps it will interpret the request itself, and evaluate the expression for each item of the virtual table. The client's Complex Expression is analogous to an SQL selection statement against a relational database.
+
+This variant is most like the Virtual Table Query (VQQ).
+
+There are a number of factors to consider in determining which variant to offer. In the Complex Expression (QSC) variant, the Client may select any or all of the variables offered and may specify any permissible operators and values for each variable. By contrast, in the Simple Parameter variant or the Query by Example variant, the Client SHALL provide values for exactly the set of variables offered.
+
+The Simple Parameter variant is easy to parse and process because it has positional fields; i.e., the parameters are in a predefined and fixed order. Likewise, the Query by Example variant lends itself to simple processing, since parameters will occur in known positions in defined segments. The Complex Expression variant, on the other hand, requires more involved parsing and processing because of its flexibility and the optionality of its elements. Thus, while the Complex Expression variant offers more functionality to the Client, it is more burdensome for the Server to process. Conversely, the Simple Parameter and Query by Example variants offer less functionality to the Client but are generally easier for the Server to implement; they are often based on existing stored procedures on the Server's system.
+
+==== Expressing the same data using the variants
+[v291_section="5.2.5.1"]
+
+The following is an example of a query stated in all three variant forms. This example is presented to illustrate the utility of each format for the purpose of offering a query. Which format to use depends upon the level of processing complexity to be implemented on the Server and the degree of specification flexibility required by the Client.
+
+The purpose of the query is to allow a simple inquiry upon an administrative database. Suppose a patient information request is submitted by the Client. The Server is to respond with demographic information: patient's date of birth, sex, and ZIP code.
+
+===== Expression as simple parameters
+[v291_section="5.2.5.1.1"]
+
+As we have seen, this variant requires an exact parameter specification.
+
+The client system transmits a QBP query message in the following format:
+
+[er7]
+MSH|^~\&|FEH.IVR|HUHA.CSC|HUHA.DEMO||199902031135-0600||QBP^Z58^QBP_Q13|1|D|2.8
+QPD|Z58^Pat Parm Qry 2|Q502|111069999
+RCP|I
+
+The names of the input and output fields are not specified in the query message, but by the Query Profile, identified by _QPD-1-message query name_. The _MSH-9.2-trigger event_ and the _QPD-1-message query name_ are this query's only distinguishing elements. The requesting system SHALL refer to this query's Query Profile to learn more about the input and output fields.
+
+===== Expression as query by example
+[v291_section="5.2.5.1.2"]
+
+Just as in the Simple Parameter variant, the Query by Example requires an exact parameter specification. The distinction in a Query by Example is that segments other than QPD are used to transmit the parameters. The segments offered should be already-existing segments that the Server can parse easily.
+
+The client system transmits a Query by Example in the following format.
+
+[er7]
+MSH|^~\&|FEH.IVR|HUHA.CSC|HUHA.DEMO||199902031135-0600||QBP^Z58^QBP_Q13|1|D|2.8
+QPD|Z58^Pat Parm Qry 2|Q502
+RCP|I
+
+Parameters used in this query are specified in the Query Profile.
+
+===== Expression as a complex expression
+[v291_section="5.2.5.1.3"]
+
+In contrast, the Complex Expression variant allows flexible input specifications. This allows more choices for the Client system, but can require more complex processing capability on the part of the Server System.
+
+If the above Simple Parameter variant were to be stated as a Complex Expression, it might look like this.
+
+[er7]
+MSH|^~\&|FEH.IVR|HUHA.CSC|HUHA.DEMO||199902031135-0600||QBP^Q13^QBP_Q13|1|D|2.8
+QPD|Z999^Pat Sel Qry 1|Q501|@MedicalRecordNo^EQ^111069999
+RCP|I
+
+Note the explicit statement of the input field name in _QPD-3-user parameters_. Also, note that this query might be used to specify and request other fields, depending upon the specification of what is permitted by the server system's Query Profile.
+[width="100%",cols="36%,64%",]
+|===
+|Query Modalities |
+|Simple Parameter Variant |The Server specifies parameters and the Client passes specific values to the parameters when the query is invoked.
+|Complex Expression Variant |The Server offers variables which can be used by the Client who passes a constraining expression (subject to any limitations specified by the Query Profile) over those variables when invoking the query.
+|===
+
+Using the new modalities shown in the table, the variety and number of queries is almost unlimited. There is no implication that a specific Server must support all of these potential generalized queries to comply with the Standard. Rather, these transactions provide a format, or a set of tools, to support queries to the extent desired by the institution. The resources available and local policies will influence the types of queries that are implemented.
+
+=== Summary chart of query/response pairs
+[v291_section="5.2.6"]
+
+.The following chart delineates the query/response messages defined in chapter 5:
+[width="100%",cols="25%,11%,12%,21%,16%,15%",options="header",]
+|===
+|Description |Query |Response |Response type |Defining segment(s) |Sec Ref
+|Cancel query |QCN | | | |5.4.6
+|Query By Parameter |QBP | | |QPD |5.4.1, 5.4.2, 5.4.3
+|Query, original Mode (withdrawn) |QRY | |Original mode (withdrawn) |QRD/QRF |
+|Display response | |RDY |Display |DSP |5.4.3
+|Response Segment Pattern | |RSP |Segment pattern | |5.4.1
+|Response tabular | |RTB |tabular |RDF/RDT |5.4.2
+|Unsolicited display message (withdrawn) |UDM | |Display (withdrawn) |URD/URS |
+|===
+
+.The following chart delineates the query/response messages defined in the functional chapters:
+[width="100%",cols="24%,12%,12%,21%,16%,15%",options="header",]
+|===
+|Description |Query |Response |Response type |Defining +
+segment(s) |Sec Ref
+|ADT response (withdrawn) |QRY^A19 |ADR^A19 |Original mode (withdrawn) |QRD/QRF |
+|Allocate identifiers |QBP^Q24 |RSP^K24 |Segment pattern |QBP |3.3.59
+|Ancillary RPT (display) (for backward compatibility only) | |ARD |Original mode | |7
+|Find candidates |QBP^Q22 |RSP^K22 |Segment pattern |QBP |3.3.57
+|Get corresponding identifiers |QBP^Q23 |RSP^K23 |Segment pattern |QBP |3.3.58
+|Get person demographics |QBP^Q21 |RSP^K21 |Segment pattern |QBP |3.3.56
+|Order status query/ Order status response (withdrawn) |OSQ^Q06 |OSR^Q06 |Original mode (withdrawn) |QRD/QRF |
+|Pharmacy administration information (withdrawn) |QRY^Q27 |RAR^RAR |Original mode (withdrawn) |QRD/QRF |
+|Master files query |MFQ | |Original mode | |8.4.3
+|Master files query response | |MFR |Original mode | |8.43
+|Personnel information |QBP^Qnn |RSP^Knn |Segment pattern |QBP |15.3.7
+|Pharmacy dispense information (withdrawn) |QRY^Q28 |RDR^RDR |Original mode(withdrawn) |QRD/QRF |
+|Pharmacy dose information (withdrawn) |QRY^Q30 |RGR/RGR |Original mode (withdrawn) |QRD/QRF |
+|Pharmacy encoded order information (withdrawn) |QRY^Q29 |RER^RER |Original mode (withdrawn) |QRD/QRF |
+|Pharmacy prescription order response (withdrawn) |QRY^Q26 |ROR^ROR |Original mode (withdrawn) |QRD/QRF |
+|Request clinical information (withdrawn) |RQC^I05 | |Original mode (withdrawn) |QRD/QRF |
+|Results of observation, query for (withdrawn) |QRY^R02 |ORF^R04 |Original mode (withdrawn) |QRD/QRF |
+|Return Clinical Information (withdrawn) | |RCI^I05 |Original mode (withdrawn) |QRD/QRF |
+|Return Clinical List (withdrawn) | |RCL^I06 |Original mode (withdrawn) |QRD/QRF |
+|Return patient referral |RRI | |Original mode | |11.5
+|Return patient referral | |RRI |Original mode | |11.5
+|Schedule query |SQM | |Original mode | |10.5.3
+|Schedule query response | |SQR |Original mode | |10.5.3
+|===
+
+Note that the Vaccination Query related messages have been removed as these were deprecated and withdrawn as of v 2.8.
+
+=== Acknowledgment Choreography
+[v291_section="5.2.7"]
+
+As of Version 2.9 Infrastructure and Messaging requires that Acknowledgment Choreography be explicitly specified in MSH-15 and MSH-16. Because of the nature of the Query and Response Messaging pattern, the Response message is always an Application Acknowledgment. To specify this, the value in MSH-16 SHALL always be “AL” to indicate that there will always be an Application Acknowledgment to the Query Message. See Chapter 2 for more details on this subject.
+
+== General Use Cases / Background
+
+include::general_use_case_background.adoc[leveloffset=+1]
 
 == Technical Specs
 
-xref:technical_specs/J01.adoc[Message - J01 Cancel query/acknowledge message]
+xref:technical_specs/Q11.adoc[Message - Query by parameter/segment pattern response (events vary)]
 
-xref:technical_specs/J02.adoc[Message - J02 Cancel subscription/acknowledge message]
+xref:technical_specs/Q13.adoc[Message - Query by parameter/tabular response (events vary)]
+
+xref:technical_specs/Q15.adoc[Message - Query by parameter/display response (events vary)]
 
 xref:technical_specs/Q16.adoc[Message - Q16 Create subscription]
 
 xref:technical_specs/Q17.adoc[Message - Q17 Query for previous events]
 
-xref:technical_specs/Query_by_parameter_display_response.adoc[Message - Query by parameter/display response]
+xref:technical_specs/J01.adoc[Message - J01 Cancel query/acknowledge message]
 
-xref:technical_specs/Query_by_parameter_segment_pattern_response.adoc[Message - Query by parameter/segment pattern response]
+xref:technical_specs/J02.adoc[Message - J02 Cancel subscription/acknowledge message]
 
-xref:technical_specs/Query_by_parameter_tabular_response.adoc[Message - Query by parameter/tabular response]
+include::examples.adoc[]

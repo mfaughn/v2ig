@@ -1,15 +1,16 @@
 = Message - P06 BAR/ACK - End Account 
 :v291_section: "6.4.6"
-:v2_section_name: "BAR/ACK - End Account (event P06)"
+:v2_section_name: "BAR/ACK - End Account (Event P06)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 The P06 event is a notification that the account is no longer open, that is, no new charges can accrue to this account. This notification is not related to whether or not the account is paid in full. _EVN-2 - Recorded Date/Time_ must contain the account end date.
 
 [tabset]
+P06
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -10,22 +10,10 @@ The CM0 (Clinical Study Master), CM1 (Clinical Study Phase), and CM2 (Clinical S
 _MFI-1 - Master File Identifier Code_ = CMA
 
 [tabset]
-
-
-
-[tabset]
-
-
+M06
 
 *Case 2: MFN message for Clinical Study without phases but with schedules*
 
 _MFI-1 - Master File Identifier Code_ = CMB
 
 [tabset]
-
-
-
-[tabset]
-
-
-

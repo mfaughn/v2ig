@@ -18,6 +18,7 @@ In the latter use case, this message can be used to establish a “source of tru
 The message shall identify a patient with optional location information, and one or more device observations, each including a unique device identifier along with an indication of whether the device is being associated or disassociated with the specified patient. In addition, a single observation can be specified to disassociate all devices for a given patient.
 
 [tabset]
+R43
 
 
 

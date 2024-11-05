@@ -6,10 +6,11 @@
 The A23 event is used to delete visit or episode-specific information from the patient record. For example, it is used to remove old data from a database that cannot hold all historical patient visit data. When an event was entered erroneously, use one of the cancel transactions. This event can be used to purge account-level data while retaining the person in the database.
 
 [tabset]
+A23
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -6,10 +6,4 @@
 This event triggers a message to be sent from one healthcare provider to another to request insurance information for a specified patient.
 
 [tabset]
-
-
-
-[tabset]
-
-
-
+I01

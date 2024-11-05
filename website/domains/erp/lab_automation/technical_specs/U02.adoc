@@ -1,9 +1,9 @@
 = Message - U02 Automated Equipment Status Request
-:v291_section: "13.3.2"
+:v291_section: "13.2.2"
 :v2_section_name: "ESR/ACK - Automated Equipment Status Request (Event U02)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The interaction detail segment contains information about the status of specific interaction (e.g., processing — see section Glossary) on the specific equipment.
+This message is used to request information about a device's or piece of equipment's status from one application to another (e.g., Laboratory Automation System to automated equipment). The equipment identified in the EQU segment should respond with its status using the "Automated Equipment Status Update."
 
-[segment_definition-table]
-
+[tabset]
+U02

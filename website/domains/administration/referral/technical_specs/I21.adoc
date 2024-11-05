@@ -6,6 +6,7 @@
 This event triggers a message to be sent from one healthcare provider to another healthcare provider, clinical repository or regulatory body regarding a specific patient. The collaborative care message may contain patient demographic information, a full history of appointments, specific medical procedures that have been performed, a full clinical history, an administrative history of patient visits, a full medication history, all relevant problems, pathways and goals. This message fulfills the role of a notification of a single patient's health status and history. It is usable for discharge summaries, disease notifications or just moving a patient's electronic medical record from one the place to another. This message uses the REL segment to express the relationships between clinical histories.
 
 [tabset]
+I21
 
 
 
