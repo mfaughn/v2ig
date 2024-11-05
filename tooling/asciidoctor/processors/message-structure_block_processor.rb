@@ -1,7 +1,7 @@
 class TabSetBlockProcessor < Asciidoctor::Extensions::BlockProcessor
   use_dsl
 
-  named :"tabset"
+  named :"message-structure"
   on_context :paragraph
   # parse_content_as :simple
   parse_content_as :raw
@@ -10,12 +10,7 @@ class TabSetBlockProcessor < Asciidoctor::Extensions::BlockProcessor
     content = []
     reader.lines.each do |line|
       vals = line.split(/\s/)
-      if vals.size != 2
-        puts Rainbow(line).red
-        pp attrs
-        reader.lines.each_with_index { |l, i| puts i.to_s + ' ' + l.inspect }
-        raise "tabset had vals: #{vals.inspect}"
-      end 
+      raise if vals.size != 2
       type = vals.first
       msg  = vals.last
       case type
