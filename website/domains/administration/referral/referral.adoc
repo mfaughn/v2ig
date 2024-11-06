@@ -92,7 +92,7 @@ In a messaging environment, these four application roles communicate using speci
 
 Figure 11‑1. Application role messaging relationships
 
-image::extracted-media/media/image1.wmf[]
+image::patient_treatment_process.png[patient_treatment_process]
 
 == Technical Specs
 

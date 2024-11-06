@@ -1,4 +1,5 @@
 === Swapping a patient
+[v291_section="3.6.1"]
 
 Some systems may handle this as a single function. Others may require a multiple process in which:
 
@@ -11,8 +12,10 @@ Some systems may handle this as a single function. Others may require a multiple
 This three‑step scenario requires three separate transfer messages instead of a single swap message. If all beds in a hospital are occupied, it may be necessary to use a dummy location.
 
 === Merging patient/person information
+[v291_section="3.6.2"]
 
 ==== Definitions: Merge, move, and change identifier events
+[v291_section="3.6.2.1"]
 
 The term "identifier" is used throughout this section. An identifier is associated with a set (or sets) of data. For example, an identifier (_PID-3 - Patient Identifier List_) may be a medical record number which has associated with it account numbers (_PID-18 - Patient Account Number_). Account number (_PID-18 - Patient Account Number_) is a type of identifier which may have associated with it visit numbers (_PV1-19 - Visit Number_).
 
@@ -28,6 +31,7 @@ The registrar mistakenly selects the wrong person, patient, or account and creat
 The registrar accidentally types in the wrong new identifier for a person, patient, account, or visit. This type of mistake usually occurs when identifiers are manually assigned (not system generated). A "change identifier" operation is used to fix this type of error.
 
 ===== Hierarchy of Identifiers
+[v291_section="3.6.2.1.1"]
 
 This section was written from the perspective of one controlling MPI and does not adequately cover the implementation of peer MPIs or multiple enterprise identifiers. To avoid future problems implementors should carefully examine the inferences of multiple identifiers.
 
@@ -52,40 +56,45 @@ Note that these events will also apply to environments in which one or more of t
 image::impl_considerations1.png[impl_considerations1.png,width=499,height=174,align="center"]
 
 ===== Merge
+[v291_section="3.6.2.1.2"]
 
 A merge event signals that two distinct records have been combined together into a single record with a single set of identifiers and data surviving at the level of the merge. All records at a level subordinate to the merged identifier are combined under the surviving record. For example, an A40 (merge patient - patient identifier list) event would be sent to signal that two person records (identified by _MRG-1 - Prior Patient ID_ and by _PID-3 - Patient ID_) have been merged into a single record. All of the identifiers, accounts, and visits under the person record are not merged together - they are instead combined under the same person record. The following figure graphically depicts the merge event:
 
 ____
-image:extracted-media/media/image2.wmf[extracted-media/media/image2]
+image:merge.png[merge]
 ____
 
 NOTE: It is not the intent of the merge definition to define the application or implementation specifics of how various systems or environments define, use or handle non-surviving information. "Non-surviving" in this document implies that a data set was existing in a fashion that was incorrect. Merging it into a new data set in itself implies that where there were two datasets, there is now only one. The means by which any system or environment conveys this new data set and the absence of the previous data set to the user is application specific. It is noted that some systems may still physically keep these "incorrect" datasets for audit trail or other purposes.
 
 ===== Move
+[v291_section="3.6.2.1.3"]
 
 A "move" involves transferring one or more datasets (identified by a subordinate identifier) from one superior identifier at the next hierarchical level to another superior identifier at the next hierarchical level, while all identifiers involved retain their original value. An exception to retaining the original identifier value may occur if any of the subordinate source identifiers already exist under the target superior identifier. In this case the identifier value may have to be renumbered in order to be uniquely identified under the target superior identifier. (Refer to section _3.6.2.2.8_, "link:#_A45_-_move_visit information - visi[_A45 - Move visit information_]" for an illustration of this.)
 
 A move event signals that a patient, account, or visit has been moved from one person, patient, or account, respectively, to another. All records at a subordinate level are also moved. For example, an A43 (move patient information - patient identifier list) event would be sent to signal that a medical records administrator has moved a medical record attached to an incorrect person to a correct person. The following figure graphically depicts the move event:
 
 ____
-image:extracted-media/media/image3.wmf[extracted-media/media/image3,width=576,height=174]
+image:move.png[move,width=576,height=174]
 ____
 
 NOTE: The move event implies that all data related to the incorrect source ID and its subordinate IDs (specified in the MRG segment) will be moved to the correct target ID (specified in the PID or PV1 segment). Specifying each subordinate ID in repeating PID/MRG/PV1 sets is optional but not recommended.
 
 ===== Change identifier
+[v291_section="3.6.2.1.4"]
 
 A change identifier event signals that a single person, patient, account, or visit identifier has been changed. It does not reflect a merge or a move; it is simply a change of an identifier. For example, a "Change Identifier" event would be sent to signal that the registrar has changed an incorrectly assigned person identifier to a correct person identifier. The following picture graphically depicts this event:
 
 ____
-image:extracted-media/media/image4.wmf[extracted-media/media/image4]
+image:change_identifier.png[change_identifier]
 ____
 
 ===== Source and target identifiers
+[v291_section="3.6.2.1.5"]
 
 Merge, move, and change events reference target and source identifiers. The incorrect source identifier is specified in the MRG segment. The correct target identifier is identified in the PID or PV1 segment. For example, when you are changing a patient account number the source would be _MRG-3 - Prior Patient Account Number_. The target is _PID-18 - Patient Account Number_.
 
 ===== Tightly coupled relationship
+[v291_section="3.6.2.1.6"]
 
 When patient/person identifiers are the target in merge, move, or change events, as specified in the _PID-2 - Patient ID_, _PID-3 - Patient Identifier List_ and _PID-4 - Alternate Patient ID-PID_, the associated source identifiers in the _MRG-4 - Prior Patient ID_, _MRG-1 - Prior Patient Identifier List_, and _MRG-2 - Prior Alternate Patient ID_, respectively, must be "tightly coupled." Each event that is defined as a merge, move, or change message carries the "tightly" coupled relationship at the appropriate level in one of two ways: first, by virtue of positional placement in the sequence of identifiers; or, second, by identifier type and assigning authority. The methodology used to establish the definition of "tightly coupled" relationship is determined by site negotiation. The recommended definition is by virtue of positional placement in the sequence of identifiers (pairwise). In addition, HL7 allows the use of the second definition by identifier type and assigning authority as an acceptable convention to establish a "tightly coupled" relationship. In the absence of a site negotiated definition, it is assumed that the positional placement of the identifiers is the default method.
 
@@ -112,6 +121,7 @@ The pairing of identifiers between the MRG segment fields and their associated i
 |===
 
 ===== Ordered pairwise relationship
+[v291_section="3.6.2.1.7"]
 
 In a strict sense, this type of relationship is characterized by a one-to-one association based on type (e.g., medical record number to medical record number, etc.) and the corresponding order of the element, and is typically found in list or set operations. However, for purposes of practical implementation, this relationship will be defined as a simple one-for-one pairing, as exists between the _PID-3 - Patient Identifier List_ and the _MRG-1 - Prior Patient Identifier List_. In other words, elements "A", "B", and "C" in the first list would directly correspond to elements "X", "Y", and "Z" in the second list. No consideration is made to the type or value of the corresponding elements; it is the explicit order of the elements which controls the association process. This scenario could be expressed as follows:
 
@@ -163,6 +173,7 @@ List~2~ = \{X,Y,Z}
 In the third scenario, the last three elements "D", "E", and "F" are not affected and their value remains the same as if no association had been made.
 
 ===== Identifier type / assigning authority relationship
+[v291_section="3.6.2.1.8"]
 
 As stated earlier, the uniqueness of the identifiers included in a message can be determined by the combination of identifier type (t) and assigning authority (a). It is assumed that both sending system and receiving system can inspect both of these qualifiers as a message is constructed or processed. This method is used to determine the "tightly coupled" relationship between the identifiers. The implementation of this relationship exists between the _PID-3 - Patient Identifier List_ and the _MRG-1 - Prior Patient Identifier List_. In other words, elements "B^t2^a1", "C^t3^a1", "D^t4^a1", "A^t1^a1", "E^t5^a1", and "F^t6^a1" in the first list would be associated with elements "X^t1^a1", "Y^t2^a1", and "Z^t3^a1 in the second list. This scenario could be expressed as follows:
 
@@ -201,6 +212,7 @@ List~2~ = \{X^t4^a1,Y^t2^a1,Z^t3^a1, Q^t1^a1,R^t5^a1,S^t6^a1}
 In the second scenario, the three elements which do not have corresponding identifier type and assigning authority "X^t4^a1", "R^t5^a1", and "S^t6^a1" are not affected and their value remains the same as if no association had been made.
 
 ===== Global merge and move message construct versus repeating segment message constructs
+[v291_section="3.6.2.1.9"]
 
 A flexible message construct is provided for merge trigger events. The message construct allows for a repeating set of PID, optional PD1, MRG, and optional PV1 segments as illustrated below:
 
@@ -223,18 +235,22 @@ Trigger events support the concept of a global move or merge, where all the subo
 A repeating segment message construct supports reporting of the subordinate identifiers using the repeating segments. This is illustrated in the use case for A40 (merge patient - patient identifier list) (Section _3.6.2.2.2_, "_A40 - merge patient - patient identifier list (repeating segment)_," A41 (merge account - patient account number) (Section _3.6.2.2.4_, "_A41 - merge account - patient account number (repeating segment)_"), and A45 (move visit information-visit number) (Section _3.6.2.2.9_ "_A45 - move visit information - visit number (repeating segment)_"). Specifying each subordinate ID in repeating segments is optional but not recommended. This construct can be used when renumbering of identifiers is necessary as illustrated in Sections _3.6.2.2.2_, "_A40 - merge patient - patient identifier list (repeating segment)_," _3.6.2.2.4_, "_A41 - merge account - patient account number (repeating segment)_," and _3.6.2.2.9_, "_A45 - move visit information - visit number (repeating segment)_," or to explicitly identify individual subordinate identifiers as illustrated in Section _3.6.2.2.9_, "_A45 - move visit information - visit number (repeating segment)_."
 
 ===== Identifier renumbering
+[v291_section="3.6.2.1.10"]
 
 When renumbering of identifiers occurs, the repeating segment construct may be required in order to report identifier number changes. When renumbering occurs, the incorrect source identifier is specified in the MRG segment and the correct target identifier is reported in the PID or PV1 segment. Refer to the use case for A41 (merge account-patient account number) for an illustration.
 
 ===== Superior identifier reporting
+[v291_section="3.6.2.1.11"]
 
 When merging or moving subordinate numbers, the higher level, "superior" identifiers should be included in the message. For example, when merging an account where the target is _PID-18 - Patient Account Number_ and the source is _MRG-3 - Prior Patient Account Number_, the higher level patient identifiers (_PID-3 -Patient Identifier List_ and _MRG-1 - Prior Patient Identifier List_) and person identifiers (_PID-2 - Patient ID_ and _MRG-4 - Prior Patient ID_) should also be reported in the message.
 
 ==== Trigger events
+[v291_section="3.6.2.2"]
 
 The intent of trigger events A40 (merge patient- patient identifier list), A41 (merge account-patient account number), A42 (merge visit-visit number), A43 (move patient information-patient identifier list), A44 (move account information-patient account number), A45 (move visit information-visit number), A47 (change patient identifier list), A49 (change patient account number), A50 (change visit number), and A51 (change alternate visit ID) is to reconcile distinct sets of existing person/patient data records that have been entered under different identification numbers, either deliberately or because of errors. Ideally, following any of these trigger events, all of the person/patient data should be accessible under whatever surviving identifiers were specified in the messages. Because of substantial differences in database architectures and system-dependent data processing requirements or limitations, the exact meaning and implementation of these events must be negotiated between systems.
 
 ===== A40 - merge patient - patient identifier list
+[v291_section="3.6.2.2.1"]
 
 // FIXME this is going to need some manual help...
 [width="100%",cols="54%,46%",]
@@ -280,6 +296,7 @@ Since there could be a discrepancy in the demographic information between the tw
 |===
 
 ===== A40 - merge patient - patient identifier list (repeating segment)
+[v291_section="3.6.2.2.2"]
 
 // FIXME This is going to need some manual help
 [width="100%",cols="54%,46%",]
@@ -332,6 +349,7 @@ Since there could be a discrepancy in the demographic information between the tw
 |===
 
 ===== A41 - merge account - patient account number (global)
+[v291_section="3.6.2.2.3"]
 
 This event illustrates the concept of a global merge as defined in Section _3.6.2.1.9_, "_Global merge and move message construct versus repeating segment message constructs_."
 
@@ -392,6 +410,7 @@ Since there could be a discrepancy in the demographic information between the tw
 |===
 
 ===== A41 - merge account - patient account number (repeating segment)
+[v291_section="3.6.2.2.4"]
 
 This event illustrates the concept of a repeating segment merge as defined in _3.6.2.2.1_.
 
@@ -459,6 +478,7 @@ Since there could be a discrepancy in the demographic information between the tw
 |===
 
 ===== A42 - Merge visit - visit number
+[v291_section="3.6.2.2.5"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -498,6 +518,7 @@ VISIT1
 |===
 
 ===== A43 - move patient information - patient identifier list
+[v291_section="3.6.2.2.6"]
 
 [width="100%",cols="53%,47%",]
 |===
@@ -545,6 +566,7 @@ MRG\|E1^^^ENT1^PE~MR2^^^ABCHMO^MR\|. . .<cr>
 |===
 
 ===== A44 - move account information - patient account number
+[v291_section="3.6.2.2.7"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -581,6 +603,7 @@ ACCT2
 |===
 
 ===== A45 - move visit information - visit number (repeating segment)
+[v291_section="3.6.2.2.8"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -651,6 +674,7 @@ Implementation Considerations: In this scenario the repeating MRG/PV1 construct 
 |===
 
 ===== A45 - move visit information - visit number (repeating segment)
+[v291_section="3.6.2.2.9"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -723,6 +747,7 @@ Implementation Considerations: If Visit Numbers are not unique (as implied by th
 |===
 
 ===== A47 - change patient identifier list
+[v291_section="3.6.2.2.10"]
 
 [width="100%",cols="53%,47%",]
 |===
@@ -755,6 +780,7 @@ ACCT1
 |===
 
 ===== A49 - change patient account number
+[v291_section="3.6.2.2.11"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -787,6 +813,7 @@ ACCT1
 |===
 
 ===== A50 - change visit number 
+[v291_section="3.6.2.2.12"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -824,6 +851,7 @@ VISIT1
 |===
 
 ===== A51 - change alternate visit ID
+[v291_section="3.6.2.2.13"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -865,6 +893,7 @@ AV1
 |===
 
 ===== Example using multiple messages
+[v291_section="3.6.2.2.14"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -905,6 +934,7 @@ ACCT1
 |===
 
 ===== Example using multiple messages
+[v291_section="3.6.2.2.15"]
 
 [width="100%",cols="54%,46%",]
 |===
@@ -945,6 +975,7 @@ X1
 |===
 
 === Patient record links
+[v291_section="3.6.3"]
 
 Linking two or more patients does not require the actual merging of patient information as discussed in Section link:#merging-patientperson-information[_3.6.2_], "link:#merging-patientperson-information[_Merging patient/person information_];" following a link trigger event, sets of affected patient data records should remain distinct. However, because of differences in database architectures, there may be system-dependent limitations or restrictions regarding the linking of one or more patients that must be negotiated.
 
@@ -955,12 +986,14 @@ In an MPI setting, the A24 -link patient information message is preferred for tr
 Implicit linkage of identifiers, sometimes called passive linking, has been implemented using various messages. An acknowledged method is inclusion of multiple identifiers in _PID-3 - Patient Identifier List_, which the receiving system implicitly links. An MPI or application that makes such an implicit linkage can generate an A24 - link patient information message to explicitly notify another system of this action.
 
 === MPI Integration - an introduction
+[v291_section="3.6.4"]
 
 The purpose of this section is to provide some insight into how HL7 committees have approached the area of MPI integration, as well as to provide concrete examples of how the integration could be done using messages in Version 2.4 and later.
 
 ==== (hidden text)
 
 ==== Definitions - what is an MPI?
+[v291_section="3.6.4.1"]
 
 There can be quite a bit of confusion as to what defines an MPI. Early definitions called it a Master Patient Index, implying only patient data would be managed. Later the definition was expanded to mean persons in general, including patients, guarantors, subscribers, and even providers; essentially any entity that could be considered a "person." Thus the current acronym MPI generally is inferred to mean Master Person Index.
 
@@ -971,10 +1004,12 @@ MPI functionality also typically includes methods to provide an identifier for a
 This section currently deals only with MPI functionality related to persons in the context of Version 2.4 and later. It is assuming integration using Version 2.4 and later ADT messages, and the functionality surrounding finding and identifying a person.
 
 ==== HL7 and CORBAmed PIDS
+[v291_section="3.6.4.2"]
 
 There has been an effort to harmonize the modeling work that has been done in the CORBAMed Patient Identification Service (PIDS) with the HL7 message set, with an eye toward HL7 Version 3.0. You may see evidence of CORBAMed modeling in this implementation, but that should not be taken as evidence that full harmonization has taken place. There is much work left to do in this area.
 
 ==== MPI QUERY for person lookup and identification
+[v291_section="3.6.4.3"]
 
 Several QBP/RSP queries have been developed to aid in the integration of systems with an MPI. They consist of several Qxx/Kxx trigger/response pairs and one Q24/K24 trigger/response pair. The following table lists their functions:
 
@@ -998,12 +1033,13 @@ The scenarios are differentiated on two variables:
 *Person Existence -* On which system the person record currently exists - the client system, the MPI, or both.
 
 ==== Client system assigns identifier, person exists on MPI only
+[v291_section="3.6.4.4"]
 
 In this scenario, a client system (e.g., a registration system) will query an MPI for a person that does not currently exist on the client system. The MPI returns a list of one or more possible matching candidates, and one is chosen by the user on the client system. The client system assigns the person an identifier and an update is sent to the MPI to notify it of the new assigned identifier.
 
-image:extracted-media/media/image5.wmf[extracted-media/media/image5]
-
-===== *Figure 3-1* - Client system assigns identifier, person exists on MPI only
+.Client system assigns identifier, person exists on MPI only
+image:assign_identifier_1.png[assign_identifier_1]
+// Figure 3-1 section 3.6.4.4.1
 
 The messages are defined as follows:
 
@@ -1014,26 +1050,28 @@ The messages are defined as follows:
 *A24 or A01/A04/A05* - This transaction is to update the MPI with the new identifier the client system has created for the person. It is acceptable for systems to simply send _an A01 Admit/visit notification,_ _A04 Register a patient or A05 Pre-admit a patient_ as may have been done traditionally, with the new client system identifier and the existing MPI enterprise identifier in PID-3. However an _A24 Link patient information_ may be sent instead, with one PID segment containing the MPI enterprise identifier for the person, and the second PID segment containing the new registration system identifier.
 
 ==== Client system assigns identifier, person exists on both systems
+[v291_section="3.6.4.5"]
 
 In this scenario, a client system (e.g., a registration system) will query an MPI for a person, and the person record exists on both systems. The MPI returns a list of possible matching candidates, and one is chosen by the user on the client system. The client system simply asks the MPI for an updated set of demographics and does not assign an identifier since the person already exists with an identifier on the client system.
 
 Prior to querying the MPI, the client system may query its own database to reduce network transactions. However, the full searching capabilities of the MPI may be preferred to the client system in order to prevent the selection of the wrong person.
 
-image:extracted-media/media/image6.emf[extracted-media/media/image6,width=504,height=480]
-
-===== *Figure 3-2* - Client system assigns identifier, person exists on both systems
+.Client system assigns identifier, person exists on both systems
+image:assign_identifier_2.png[assign_identifier_2,width=504,height=480]
+// Figure 3-2  section 3.6.4.5.1
 
 The message flow is identical to the message flow in the 3.6.4.5 example, with the exception that the final update to the MPI is not needed in order to give the MPI a new identifier for the person. The MPI should already have the client system identifier from previous transactions.
 
 An ADT event may be sent later by the client system simply to update the MPI with any demographic changes that occur.
 
 ==== Client system assigns identifier, person exists on neither system
+[v291_section="3.6.4.6"]
 
 In this scenario, a client system (e.g., a registration system) will query an MPI for a person, and the person does not exist on either system. The MPI returns a list of possible matching candidates, or possibly an empty list. The user does _not_ choose one, and a new person record is created.
 
-image:extracted-media/media/image7.emf[extracted-media/media/image7,width=584,height=440]
-
-===== *Figure 3-3* - Client system assigns identifier, does not exist on either system
+.Client system assigns identifier, does not exist on either system
+image:assign_identifier_3.png[assign_identifier_3,width=584,height=440]
+// Figure 3-3  section 3.6.4.6.1
 
 The message flow again begins with a _Q22/K22_ _Find Candidates_ query. The response may or may not contain a list of candidates.
 
@@ -1042,12 +1080,13 @@ If the client system assigns a person identifier when the record is created, an 
 When the person record is added to the MPI with the new identifier, an enterprise identifier is assigned, and ancillary systems may be notified of the new person record creation.
 
 ==== MPI assigns identifier, person exists on MPI
+[v291_section="3.6.4.7"]
 
 In the next set of three scenarios, it is assumed that a third party (ID Manager) creates identifiers for the client system, and for these examples the MPI fulfills this role. The QBP/RSP queries support this service.
 
-image:extracted-media/media/image8.emf[extracted-media/media/image8,width=624,height=304]
-
-===== *Figure 3-4* - Example of two healthcare organizations merging
+.Example of two healthcare organizations merging
+image:assign_identifier_4.png[assign_identifier_4,width=624,height=304]
+// Figure 3-4  section 3.6.4.7.1
 
 Figure 3-4 shows a case where identifiers may need to be assigned by a third party. In the example, East Health Organization had one identifier domain (XXXX numbers) for both the hospital registration system and the outpatient clinic registration numbers. Coordination was done through the use of pre-printed charts for new patients, which prevented the two systems from using the same XXXX number for two patients.
 
@@ -1059,11 +1098,9 @@ A patient arrives at East Hospital that had never been there, but had been to We
 
 In the following first scenario, the person record exists on the MPI, however it does not exist on the client system. The message flow assumes that the MPI is assigning identifiers for the client system that are not the enterprise identifiers. If this were not the case, the Allocate Identifiers A56/K24 query would not be needed.
 
-____
-image:extracted-media/media/image9.wmf[extracted-media/media/image9]
-____
-
-===== *Figure 3-5* - MPI assigns identifier, person exists on MPI
+.MPI assigns identifier, person exists on MPI
+image:assign_identifier_5.png[assign_identifier_5]
+// Figure 3-5  section 3.6.4.7.2
 
 The message flow is similar to previous examples, with the exception of the _Q24/K24 Allocate Identifiers_ query and the final _A24 Link Patient Information_ message:
 
@@ -1072,20 +1109,25 @@ The message flow is similar to previous examples, with the exception of the _Q24
 *A24 Link patient information* - This message is to notify the MPI that the previously allocated identifier has been assigned to a person. The A24 should include one PID segment with the new identifier and one PID segment with the MPI enterprise identifier.
 
 ==== MPI assigns identifier, person exists on both systems
+[v291_section="3.6.4.8"]
 
 is scenario is identical to the scenario in 3.5.4.2 Client system assigns identifier, person exists on both systems.
 
-===== *Figure 3- 6* - MPI assigns identifier, person exists on both systems
+.MPI assigns identifier, person exists on both systems
+image:assign_identifier_6.png[assign_identifier_6]
+// Figure 3-6 section 3.6.4.8.1
 
 ==== MPI assigns identifier, person exists on neither system
+[v291_section="3.6.4.9"]
 
 In this scenario, the person does not exist on either system. The message flow is similar to _3.6.4.7_, "_MPI assigns identifier, person exists on MPI_"; however, there is no need for the _Q21/K21Get person Demographics_ query as a double-check for the user since the person does not exist on the MPI. Also, after the person is registered and the identifier assigned, an _A28 Add Person Information_ is sent to the MPI to have it add the person to its database and assign an enterprise identifier.
 
-image:extracted-media/media/image10.wmf[extracted-media/media/image10]
-
-===== *Figure 3-7* - MPI assigns identifier, person exists on neither system
+.MPI assigns identifier, person exists on neither system
+image:assign_identifier_7.png[assign_identifier_7]
+// Figure 3-6 section 3.6.4.9.1
 
 === Usage notes: Non-human PID patient identification
+[v291_section="3.6.5"]
 
 The species attribute is required for non-human patients. The breed and strain attributes are conditional. Thus if the strain attribute is populated, the species attribute must be populated, but the breed attribute is optional. The production class attribute is optional, but if populated the species attribute must also be populated. The name of the animal populates the PID-5 attribute, component 2. The last name of the owner may populate component 1 of PID-5. Owner information is transmitted in the NK1 segment.
 
