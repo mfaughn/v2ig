@@ -9,7 +9,3 @@ The following segments are required:  MSH, MFI, MFE, CTR, ITM, and VND.   PKG
 
 
 
-[tabset]
-
-
-

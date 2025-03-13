@@ -14,7 +14,7 @@ This is a notification of replacement to a document without the accompanying con
 
 
 
-[ack_message_structure-table]
+
 
 
 

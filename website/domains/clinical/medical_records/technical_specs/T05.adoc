@@ -11,7 +11,7 @@ This is a notification of an addendum to a document without the accompanying con
 
 
 
-[ack_message_structure-table]
+
 
 
 

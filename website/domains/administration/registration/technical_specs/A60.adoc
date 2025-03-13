@@ -9,7 +9,7 @@ This trigger event is used when person/patient allergy information has changed. 
 
 
 
-[ack_message_structure-table]
+
 
 
 

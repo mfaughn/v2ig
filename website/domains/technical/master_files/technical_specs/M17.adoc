@@ -11,9 +11,5 @@ The DMI segment must be preceded by the MFI and MFE segments, as described in Se
 
 
 
-[tabset]
-
-
-
 Master Files Query Response: Refer to Section 8.4.4.
 

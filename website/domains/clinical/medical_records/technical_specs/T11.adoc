@@ -11,7 +11,7 @@ This is a notification of a cancellation of a document. This trigger event shoul
 
 
 
-[ack_message_structure-table]
+
 
 
 

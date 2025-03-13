@@ -14,7 +14,7 @@ This is a notification of an edit to a document with the accompanying content.
 
 
 
-[ack_message_structure-table]
+
 
 
 

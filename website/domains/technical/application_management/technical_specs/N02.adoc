@@ -14,7 +14,7 @@ For example, an application going down for backups (or starting up again after b
 [NOTE]
 Because this message pair does not have an application acknowledgement, the value in MSH-16 does not affect the choreography
 
-[ack_message_structure-table]
+
 
 
 

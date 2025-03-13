@@ -17,7 +17,7 @@ See sections link:#merging-patientperson-information[_3.6.2_&#44;] "link:#mergin
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -11,19 +11,9 @@ _MFI-1 - Master File Identifier Code_ = CMA
 
 [tabset]
 
-
-
-[tabset]
-
-
-
 *Case 2: MFN message for Clinical Study without phases but with schedules*
 
 _MFI-1 - Master File Identifier Code_ = CMB
-
-[tabset]
-
-
 
 [tabset]
 

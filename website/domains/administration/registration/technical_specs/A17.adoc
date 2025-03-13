@@ -9,7 +9,7 @@ The A17 is used when it is decided that two patients will exchange beds. The pat
 
 
 
-[ack_message_structure-table]
+
 
 
 

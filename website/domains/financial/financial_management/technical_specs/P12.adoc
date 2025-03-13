@@ -9,7 +9,7 @@ The P12 event is used to communicate diagnosis and/or procedures in update mode.
 
 
 
-[ack_message_structure-table]
+
 
 
 

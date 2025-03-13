@@ -22,7 +22,7 @@ The ROL segment is optionally included after the PD1 to transmit information for
 [NOTE]
 There is an information overlap between the FT1, DG1 and PR1 segments. If diagnosis information is sent in an FT1 segment, it should be consistent with the information contained in any DG1 segments present within its hierarchy. Since the procedure code field within the FT1 does not repeat, if procedure information is sent on an FT1 it is recommended that the single occurrence of the code in FT1 equates to the primary procedure (_PR1-14 - Procedure Priority_ code value 1).
 
-[ack_message_structure-table]
+
 
 
 

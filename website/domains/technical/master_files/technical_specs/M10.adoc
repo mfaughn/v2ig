@@ -5,10 +5,6 @@
 
 [tabset]
 
-
-
-[tabset]
-
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
 

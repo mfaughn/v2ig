@@ -9,7 +9,7 @@ Generally, the elimination of all billing/accounts receivable records will be an
 
 
 
-[ack_message_structure-table]
+
 
 
 

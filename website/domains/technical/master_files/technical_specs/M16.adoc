@@ -24,9 +24,5 @@ Additional specialized information segments may be defined as additional use cas
 
 
 
-[tabset]
-
-
-
 Master Files Query Response: Refer to Section 8.4.4.
 

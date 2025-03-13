@@ -11,7 +11,7 @@ An event B06 signals that the formal relationship between a staff member and the
 
 There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
 
-[ack_message_structure-table]
+
 
 
 

@@ -9,7 +9,7 @@ Certain nursing/census applications need to be able to update the Patient Admini
 
 
 
-[ack_message_structure-table]
+
 
 
 

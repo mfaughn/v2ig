@@ -16,9 +16,5 @@ The IIM segment has been moved to Chapter 17.
 
 
 
-[tabset]
-
-
-
 Master Files Query Response: Refer to Section 8.4.4.
 

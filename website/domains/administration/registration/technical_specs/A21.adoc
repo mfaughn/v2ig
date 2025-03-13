@@ -13,7 +13,7 @@ As there is no specific field for the LOA start date/time, it is recommended fie
 
 
 
-[ack_message_structure-table]
+
 
 
 

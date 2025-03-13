@@ -13,7 +13,7 @@ As there is no specific field for the cancel LOA date/time, it is recommended fi
 
 
 
-[ack_message_structure-table]
+
 
 
 

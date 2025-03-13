@@ -9,7 +9,7 @@ See section _5.7_, "_PUBLISH AND SUBSCRIBE_" for more information about this eve
 
 
 
-[ack_message_structure-table]
+
 
 
 

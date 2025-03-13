@@ -20,7 +20,7 @@ If there is a concern that it will be difficult to distinguish these messages fr
 
 
 
-[ack_message_structure-table]
+
 
 
 

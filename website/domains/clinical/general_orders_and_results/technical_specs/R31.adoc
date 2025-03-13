@@ -17,7 +17,7 @@ The Device segment (DEV) provides additional device information for a device ref
 
 
 
-[ack_message_structure-table]
+
 
 
 

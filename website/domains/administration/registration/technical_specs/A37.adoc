@@ -9,7 +9,7 @@ The A37 event unlinks two patient identifiers.
 
 
 
-[ack_message_structure-table]
+
 
 
 

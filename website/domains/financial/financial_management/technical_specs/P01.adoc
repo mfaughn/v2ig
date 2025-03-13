@@ -13,7 +13,7 @@ From Standard Version 2.3 onward, the P01 event should only be used to add a new
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -9,8 +9,6 @@ The LOC, LCH, LRL, LDP, and LCC segments must be preceded by the MFI and MFE seg
 
 [tabset]
 
-
-
 When the LCH segment appears immediately following the LOC segment, it communicates characteristics which are the same across multiple departments that may use the same room. When the LCH segment appears immediately following the LDP segment, it communicates characteristics which differ for different departments that may use the same room.
 
 [tabset]

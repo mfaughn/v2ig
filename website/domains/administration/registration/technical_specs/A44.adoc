@@ -23,7 +23,7 @@ The fields included when this message is sent should be the fields pertinent to 
 
 
 
-[ack_message_structure-table]
+
 
 
 

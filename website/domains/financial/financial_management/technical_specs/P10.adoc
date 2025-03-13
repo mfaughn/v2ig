@@ -9,7 +9,7 @@ The P10 event is used to communicate Ambulatory Payment Classification (APC) gro
 
 
 
-[ack_message_structure-table]
+
 
 
 

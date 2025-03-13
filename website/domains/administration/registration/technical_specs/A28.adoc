@@ -25,7 +25,7 @@ The PRT – Participation Information Segment is used in this message to communi
 
 
 
-[ack_message_structure-table]
+
 
 
 

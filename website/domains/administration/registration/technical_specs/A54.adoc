@@ -17,7 +17,7 @@ To communicate the begin and end date of the attending, referring, or admitting 
 
 
 
-[ack_message_structure-table]
+
 
 
 

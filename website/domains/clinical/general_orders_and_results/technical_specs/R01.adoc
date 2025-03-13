@@ -22,7 +22,7 @@ The ORC is permitted but not required in this message. Any information that coul
 
 Many report headers (OBR) may be sent beneath each patient segment, with many separate observation segments (OBX) related to the order / observation request beneath each OBR. OBX segments that are related to specimens immediately follow the SPM segments. Note segments (NTE) may be inserted at different locations in the message. The note segment applies to the entity that immediately precedes it, i.e., the patient if it follows the PID segment, the observation request if it follows the OBR segment, and the individual result if it follows the OBX segment.
 
-[ack_message_structure-table]
+
 
 
 

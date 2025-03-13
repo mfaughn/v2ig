@@ -9,7 +9,7 @@ This message is used to send goals from one application to another (e.g., a poin
 
 
 
-[ack_message_structure-table]
+
 
 
 

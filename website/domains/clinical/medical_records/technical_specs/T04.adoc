@@ -11,7 +11,7 @@ This is a notification of a change in a status of a document with the accompanyi
 
 
 
-[ack_message_structure-table]
+
 
 
 

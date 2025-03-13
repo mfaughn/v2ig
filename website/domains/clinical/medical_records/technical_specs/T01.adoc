@@ -15,7 +15,7 @@ This is a notification of the creation of a document without the accompanying co
 
 
 
-[ack_message_structure-table]
+
 
 
 

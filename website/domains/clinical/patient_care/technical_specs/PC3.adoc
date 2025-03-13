@@ -9,7 +9,7 @@ The patient problem message is used to send problems from one application to ano
 
 
 
-[ack_message_structure-table]
+
 
 
 

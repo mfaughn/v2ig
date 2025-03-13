@@ -9,7 +9,7 @@ The A23 event is used to delete visit or episode-specific information from the p
 
 
 
-[ack_message_structure-table]
+
 
 
 

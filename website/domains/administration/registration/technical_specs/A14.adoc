@@ -11,7 +11,7 @@ The PRT - Participation Segment is used in this message to communicate providers
 
 
 
-[ack_message_structure-table]
+
 
 
 

@@ -15,7 +15,7 @@ _PV2-47 - Expected LOA Return Date/Time_ is used to communicate the date/time th
 
 
 
-[ack_message_structure-table]
+
 
 
 

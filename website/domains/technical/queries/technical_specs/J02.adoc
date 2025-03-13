@@ -9,7 +9,7 @@ See section _5.6_, "_AUXILIARY QUERY PROTOCOLS_" for more information about this
 
 
 
-[ack_message_structure-table]
+
 
 
 

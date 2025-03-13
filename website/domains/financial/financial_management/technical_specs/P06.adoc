@@ -9,7 +9,7 @@ The P06 event is a notification that the account is no longer open, that is, no 
 
 
 
-[ack_message_structure-table]
+
 
 
 
