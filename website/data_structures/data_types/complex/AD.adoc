@@ -15,3 +15,18 @@ Used only in the LA1 data type. Retained for backward compatibility as of v2.6. 
 [er7-example]
 |10 ASH LN\^#3^LIMA\^OH^48132­|
 
+include::AD-components/AD-1.adoc[]
+
+include::AD-components/AD-2.adoc[]
+
+include::AD-components/AD-3.adoc[]
+
+include::AD-components/AD-4.adoc[]
+
+include::AD-components/AD-5.adoc[]
+
+include::AD-components/AD-6.adoc[]
+
+include::AD-components/AD-7.adoc[]
+
+include::AD-components/AD-8.adoc[]
