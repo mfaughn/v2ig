@@ -1,5 +1,0 @@
-## FN.3 - Own Surname (ST)
-
-The portion of the surname (in most Western usage, the last name) that is derived from the person’s own surname, as distinguished from any portion that is derived from the surname of the person’s partner or spouse. This component is optional.
-
-If the person’s surname has legally changed to become (or incorporate) the surname of the person’s partner or spouse, this is the person’s surname immediately prior to such change. Often this is the person’s "maiden name".

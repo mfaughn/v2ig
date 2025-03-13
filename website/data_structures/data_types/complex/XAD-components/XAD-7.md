@@ -1,5 +1,0 @@
-## XAD.7 - Address Type (ID)
-
-This component specifies the kind or type of address. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70190[_HL7 Ta__ble 0190 - A__ddress Type_] for valid values.
-
-_XAD.7_ is required if there are multiple occurrences of XAD in a field.
