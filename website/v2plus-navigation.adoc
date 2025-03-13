@@ -2,11 +2,11 @@
 
 == Link to Data Types
 
-xref:data_types.adoc[Data Types]
+xref:data_types_navigation.adoc[Data Types]
 
 == Link to Domains Page
 
-xref:domains/domains.adoc[Domains]
+xref:domains/domains_navigation.adoc[Domains]
 
 == Direct Links to each Domain
 
