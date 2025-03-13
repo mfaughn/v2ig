@@ -1,4 +1,8 @@
-= v2+ Home
+= v2+ Editorial Navigation Home
+
+== Link to Data Types
+
+xref:data_types.adoc[Data Types]
 
 == Link to Domains Page
 
