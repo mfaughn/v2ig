@@ -1,5 +1,5 @@
 = Data Types
 
-xref:complex/complex_data_types.adoc[Complex Data Types]
+xref:complex/navigation.adoc[Complex Data Types]
 
-xref:primitive/primitive_data_types.adoc[Primitive Data Types]
+xref:primitive/navigation.adoc[Primitive Data Types]
