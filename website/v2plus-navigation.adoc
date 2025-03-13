@@ -2,7 +2,7 @@
 
 == Link to Data Types
 
-xref:data_types_navigation.adoc[Data Types]
+xref:data_structures/data_types/data_types_navigation.adoc[Data Types]
 
 == Link to Domains Page
 
