@@ -1,1 +1,0 @@
-Files in this directory are intended to be of use by the developer.  They should only be used during initial development and not represent any functionality that will have utility after initial development.
