@@ -7,11 +7,13 @@
 == TODO 
 
 Things to detail:
+
 * whitespace
 * comments
 * footnotes
 
 Things to maybe detail
+
 * parameters
 * document attributes
 ** :sectnums:
