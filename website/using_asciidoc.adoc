@@ -1,16 +1,23 @@
 = Using AsciiDoc with v2+
 :toc:
+:toclevels: 4
 :navtitle: AsciiDoc with v2+
 :description: An explanation on the basic use of AsciiDoc for v2+
 
-Things to detail:
-- general asciidoc: paragraphs, whitespace, comments, parameters
-- footnotes
-- er7 (automatic linebreaks)
-- document attributes
-  - :sectnums:
-  - :example-caption!:
+== TODO 
 
+Things to detail:
+* whitespace
+* comments
+* footnotes
+
+Things to maybe detail
+* parameters
+* document attributes
+** :sectnums:
+** :example-caption!:
+
+== Introduction
 
 This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].
 The v2+ content generally requires only the use of basic markup syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. 
@@ -22,6 +29,16 @@ If you are familiar with Markdown syntax, you will need to be careful.  AsciiDoc
 One of the goals of this v2+ project is to relieve editors of much of the need to be concerned with styling.  You should be primarily concerned with the content.
 
 The content in these AsciiDoc files is reusable and composable.  That means that content in a single file can be included in other files, as many as is desired.
+
+=== GitHub Limitations
+
+GitHub renders AsciiDoc in the browser (just like it does for Markdown).  This is very helpful because it gives us some idea of what the content will look like when it is rendered using IG Publisher.  However, GitHub's rendering of AsciiDoc does not cover all of the features of AsciiDoc.  There are some things it simply won't do, like showing colored text.  There are other things that it seems to do incorrectly, like inserting space between consecutive example blocks.  All this is to simply point out that the rendering of AsciiDoc here should be used to give you a rough idea of what the content will look like as basic HTML.  If you see unexpected behavior it may be because GitHub simply doesn't render AsciiDoc perfectly or it may be because your AsciiDoc markup isn't quite correct.  When in doubt, please feel free to consult the v2+ tooling developers.
+
+== AsciiDoc Elements
+
+=== Blocks
+
+TODO - brief discussion of how AsciiDoc is based on blocks.  Important to indicate that blocks are separated by blank lines
 
 === https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#paragraphs[Paragraphs]
 Paragraphs are very Straightforward.  There is no special markup.  Breaks between paragraphs are indicated by an empty line.  
@@ -63,6 +80,10 @@ The second sentence. +
 Even breaks within
 a sentence
 will be rendered as a continuous paragraph.#
+
+==== Whitespace
+
+TODO - Describe that, by default, whitespace is not preserved.  Reference documentation about this and also about how to preserve whitespace when it is necessary to do so.
 
 === https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#section-titles[Section Titles]
 The "top level" section title in any file is special.  It is the Document Title and should appear only once, at the top of the file. 
@@ -115,7 +136,11 @@ This is just a test of \*escaping* characters.  Does it always work the \^same\^
 
 ==== External References / Links
 
+TODO
+
 ==== Internal References / Links
+
+TODO
 
 === https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables[Tables]
 
@@ -184,4 +209,13 @@ GSP|2|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/him
 ....
 
 === Tabsets for Messages
+
+In the content associated with messages you will frequently see a `[tabset]` block, usually at the end of the content.  This will often have only the identifier of an event in the block.  An example is shown here.
+
+....
+[tabset]
+A01
+....
+
+The function of this block is to signal the pre-processing code that a set of tabs appropriate for the message associated with the event indicated.  These tabs may include the message structure, acknowledgement choreography information, message structure for associated ack or response messages, and any other information that might be appropriate to include and that can be programmatically generated during pre-processing.
 
