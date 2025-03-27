@@ -1,6 +1,16 @@
 = Using AsciiDoc with v2+
+:toc:
 :navtitle: AsciiDoc with v2+
 :description: An explanation on the basic use of AsciiDoc for v2+
+
+Things to detail:
+- general asciidoc: paragraphs, whitespace, comments, parameters
+- footnotes
+- er7 (automatic linebreaks)
+- document attributes
+  - :sectnums:
+  - :example-caption!:
+
 
 This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].
 The v2+ content generally requires only the use of basic markup syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. 
