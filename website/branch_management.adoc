@@ -4,14 +4,49 @@ Ideally, a separate branch should be created for each set of changes that are lo
 In this case, _only_ changes related to the Jira ticket should be made in the branch.  It may be the case, particularly during the early stages of v2+ development, that changes will be made
 that are not specified by any Jira ticket.  In this case, it is still highly recommended that all changes in any given branch be limited to only those that are logically related to each other.
 
+Note that making changes to the main branch is restricted.  This prevents inadvertent changes being made.  As we procede with the v2+ project, additional protected branches may be added.
+
 We are working towards an automated build process similar to that used by https://build.fhir.org/branches/[FHIR] and by the https://build.fhir.org/ig/HL7/UTG/branches/[UTG] project 
 where individual branches will be built and deployed to the web so that the changes may be viewed in the context of the rendered v2+ specification.
 
-== Creating a Branch
+== Creating Or Selecting A Branch
 
 In order to create a branch, visit the main https://github.com/HL7/v2ig[v2ig] page.
 
 From this page, click the branch button as shown in the image below.
 
 image::create_a_branch.png[Click the Branch Button]
+
+Next you can either create a new branch or select an existing branch
+
+=== Creating a New Branch
+
+To create a new branch, simply type a name for the branch into the input field as shown in the image below.
+
+image::create_a_branch_name_the_branch.png[Name the Branch]
+
+After typing the name of the branch in the input field, click below the field as shown in the image below.
+
+image::create_a_branch_click_here.png[Click Create Branch]
+
+You will be automatically switched to the newly created branch and you are ready to begin editing.
+
+=== Switching to an Existing Branch
+
+In order to make changes within an already existing branch, you will need to select that branch.  Simply click on the branch button and select your desired branch from the dropdown list.  Selecting a branch will automatically switch you to that branch and you will be ready to make edits.
+
+image::select_branch.png[Select A Branch]
+
+=== View All Branches
+
+You can view all of the branches by clicking on the Branch button and then selecting "View all branches" as shown in the image below.
+
+image::view_all_branches.png[View All Branches]
+
+This will take you to the https://github.com/HL7/v2ig/branches[branches page].  You can also create new branches from this page by clicking on the "New" button in the upper right.
+
+image::alternative_create_new_branch.png[Create a new branch from the Branches page]
+
+
+
 
