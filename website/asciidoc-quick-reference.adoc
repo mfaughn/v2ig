@@ -1,0 +1,177 @@
+= Using AsciiDoc with v2+
+:navtitle: AsciiDoc with v2+
+:description: An explanation on the basic use of AsciiDoc for v2+
+
+This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].
+The v2+ content generally requires only the use of basic markup syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. 
+You are strongly encouraged to visit the linked sections and review at least the basic usage of each of these when and if you have any questions about using AsciiDoc markup while editing v2+ content.
+
+[NOTE]
+If you are familiar with Markdown syntax, you will need to be careful.  AsciiDoc syntax can seem similar and in some cases overlaps with Markdown but it is different.  AsciiDoc also has *many* more features than Markdown does and is capable of much more.
+
+One of the goals of this v2+ project is to relieve editors of much of the need to be concerned with styling.  You should be primarily concerned with the content.
+
+The content in these AsciiDoc files is reusable and composable.  That means that content in a single file can be included in other files, as many as is desired.
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#paragraphs[Paragraphs]
+Paragraphs are very Straightforward.  There is no special markup.  Breaks between paragraphs are indicated by an empty line.  
+Indeed breaks between all AsciiDoc markup elements are typically indicated with an empty line.  
+
+****
+Note that in AsciiDoc it is possible to break paragraph content over multiple lines.  Some code editing software (e.g., the built-in editor in GitHub) does not wrap long
+sentences.  For this reason, it may be easier to, e.g., place each sentence of a paragraph on a new line...just don't introduce any blank lines.  See this example:
+****
+
+....
+The first sentence.
+The second sentence.
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.
+....
+
+
+#The first sentence.
+The second sentence.
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.#
+
+When visiting the quick reference, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#ex-hardbreaks[example 3] for inforamtion on hard line breaks within a paragraph.  
+Knowing how to accomplish hard line breaks may be useful while editing the v2+ specification.
+
+....
+The first sentence. + 
+The second sentence. + 
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.
+....
+
+#The first sentence. + 
+The second sentence. + 
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.#
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#section-titles[Section Titles]
+The "top level" section title in any file is special.  It is the Document Title and should appear only once, at the top of the file. 
+The Document Title may be followed by one or more lines of https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#document-header[document header] information. 
+The end of the document header is signaled by an empty line.
+This information is not rendered during the publication process.  In these v2+ files, this header information may include metadata that is of value to the editor.
+In the following example we see information about the orignal location of the content in this file which may help editors that are familiar with the historical location of the content.
+ 
+....
+= Message - I01 Request for Insurance
+:v291_section: "11.3.1"
+:v2_section_name: "RQI/RPI - Request for Insurance Information (Event I01)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+....
+
+You may also encounter similar types of metadata captured below other section headers in the v2+ AsciiDoc files.  This information is always immediately below the section header and is enclosed in square brackets.
+Below is an example showing several message headers on a page with attendent metadata.  The content within each section has been truncated in this example.
+
+....
+= Referral
+
+== Introduction
+[v291_section="11.2"]
+
+The Patient Referral section defines the message set used in patient referral communications between ...
+
+== General Use Cases / Background
+
+=== Patient Referral and Responses
+[v291_section="11.2.1"]
+
+When a patient is referred by one healthcare entity (e.g., a primary care provider) to another ...
+
+==== Patient referral
+[v291_section="11.2.1.1"]
+
+There are clear distinctions between a referral and an order. An order is ...
+....
+Note that the increasing number of equals signs indicates section nesting.  In this case, this nesting corresponds to the nesting of content sections found in the chapter of v2.9.1
+
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#text-formatting[Text Formatting] - bold, italics, etc..
+
+==== [Escape Characters]
+This is just a test of \*escaping* characters.  Does it always work the \^same\^ ^way? 
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#lists[Lists]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#links[Links]
+
+==== External References / Links
+
+==== Internal References / Links
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables[Tables]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#includes[Inclusions]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#images[Images]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#more-delimited-blocks[Block Titles]
+Any block type (Paragraph, Example, er7, etc.) can have a title. Thus far, this feature of AsciiDoc is not used all that often in the v2+ specification. 
+Where it has been used has typically been when the text includes a series of examples.
+
+....
+.Optional title 1
+[example]
+This is an example of an example block.
+
+.Optional title 2
+[example]
+This is another example of an example block.
+....
+
+.Optional title 1
+[example]
+This is an example of an example block.
+
+
+.Optional title 2
+[example]
+This is another example of an example block.
+
+
+
+
+== Special Notation for v2+
+AsciiDoc allows the creation of custom block types.  A few of these have been created for use with v2+
+
+=== ER7
+Blocks of ER7 notation should be placed in an `[er7]` block. Note that the GitHub rendering of ER7
+
+
+[IMPORTANT]
+Question for V2MGMT: Should all lines of ER7 (i.e., segments) be shown with the <cr> character at the end?  This is inconsistent in the chapters.
+
+....
+.Reporting that all tests are available (in INU^U05):
+[er7]
+INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||TA^^HL70942
+....
+
+[NOTE]
+In the special [er7] block, it is not necessary to use hard line breaks. 
+The formatting of ER7 is handled automatically when processed into the final publication. 
+Note though that this processing does not occur in the GitHub rendering so any ER7 shown in the GitHub Preview will definitely not look right. 
+The reason for this is primarily due to the fact that AsciiDoc formats any text enclosed by caret (`^`) symbols as superscript.
+
+GitHub Preview will render the above example something like this: `INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||TA^^HL70942`
+
+.Multi-line ER7 Example
+....
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|199902280700||PMU^B01^PMU_B01|MSGID002|P|2.8|<cr>
+EVN|B01|199902280700|<cr>
+STF||U2246^^^PLW~111223333^^^USSSA^SS|HIPPOCRATES^HAROLD^H^JR^DR^M.D.|P|M|19511004|A|^ICU|^MED|(555)555-1003X345CO~(555)555-3334CH(555)555-1345X789CB|1003 HEALTHCARE DRIVE^SUITE 200^ANNARBOR^MI^98199^U.S.A.^H~3029 HEALTHCARE DRIVE^^ANN ARBOR, MI^98198^U.S.A.^O |19890125^DOCTORSAREUS MEDICAL SCHOOL&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
+GSP|1|S||76691-5^Gender identity^LN |446151000124109^Identifies as male gender^SCT|20210101
+GSP|2|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/himself^LN|20210101
+....
+
+=== Tabsets for Messages
+
