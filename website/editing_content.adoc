@@ -1,0 +1,52 @@
+= Editing v2+ Content
+
+== Introduction
+
+This page explains the navigation and editing of v2+ textual content.  It does not cover editing structural content, e.g., adding segments to a message structure or defining a new segment.
+
+=== Directory Structure
+
+The directories in the [website](website] directory do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the [website](website] directory and its subdirectories. 
+
+NOTE: Whitespace is not allowed in the names of directories.  If you need to create a directory, please use underscore characters instead of whitespace characters.
+
+== Workflow
+
+=== Selecting a Branch
+
+When you are editing v2+, the first thing you must do is to create a branch of this project.  If you have already created a branch for the set of changes you wish to make, please make sure that you check out that branch before continuing to make any changes.  It is *important* that you familiarize yourself with the [Instructions](branch_management.adoc).
+
+=== Editing Content
+
+GitHub includes an editor that may be used to edit files online.
+
+==== Editing Files Directly in The Online GitHub Repository
+
+GitHub includes an easy-to-use editor right in the GitHub web application.  For information about using the tool please visit GitHub's documentation https://docs.github.com/en/codespaces/the-githubdev-web-based-editor[here].
+
+TODO
+
+==== Using the github.dev web-based editor (VS Code)
+
+You have the option of using the GitHub's online VS Code IDE for editing v2+ content.  Using this editor will have steeper learning curve for those unfamiliar with VS Code.  Some of the advantages of using this tool are the ability to group changes across multiple files into a single commit and the ability to see a near-realtime rendering of AsciiDoc beside your editing window.  For more information about the github.dev web-based editor, please see the https://docs.github.com/en/codespaces/the-githubdev-web-based-editor[GitHub documentation].
+
+TODO - add further documentation
+
+==== Using AsciiDoc with v2+
+
+Please visit the [using_asciidoc.adoc](Using AsciiDoc with v2+) page.
+
+=== Saving Changes
+
+[IMPORTANT]
+Whenever you make changes to any file, you *MUST* commit your changes in order for them to be saved.  Please review the [committing.adoc](Committing Changes to v2+) page.
+
+
+
+
+The content here will be processed into content suitable for use by the FHIR IG Publisher.
+
+  
+
+Questions:
+- Should the links to tech_specs really not include the event(s) identifiers??
