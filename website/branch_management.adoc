@@ -1,13 +1,22 @@
 = Using Git Branches While Editing v2+
+:toc:
+
+== Branch Scope
 
 Ideally, a separate branch should be created for each set of changes that are logically related.  Ideally, any changes that are related to any given Jira ticket will all be made in a single branch.
 In this case, _only_ changes related to the Jira ticket should be made in the branch.  It may be the case, particularly during the early stages of v2+ development, that changes will be made
 that are not specified by any Jira ticket.  In this case, it is still highly recommended that all changes in any given branch be limited to only those that are logically related to each other.
 
+=== Restricted Branches
+
 Note that making changes to the main branch is restricted.  This prevents inadvertent changes being made.  As we procede with the v2+ project, additional protected branches may be added.
+
+=== Automated builds of branches
 
 We are working towards an automated build process similar to that used by https://build.fhir.org/branches/[FHIR] and by the https://build.fhir.org/ig/HL7/UTG/branches/[UTG] project 
 where individual branches will be built and deployed to the web so that the changes may be viewed in the context of the rendered v2+ specification.
+
+It may be possible to manually build branches so that they can be viewed.  Ask the v2+ tooling developers about this if you have an immediate need to see how a feature branch will be rendered.
 
 == Creating Or Selecting A Branch
 
@@ -46,6 +55,14 @@ image::view_all_branches.png[View All Branches]
 This will take you to the https://github.com/HL7/v2ig/branches[branches page].  You can also create new branches from this page by clicking on the "New" button in the upper right.
 
 image::alternative_create_new_branch.png[Create a new branch from the Branches page]
+
+== Merging A Branch Into The Main v2+ Branch - TODO
+
+When a branch is ready to be merged into the main v2+ specification a `Pull Request` must be created.
+
+== Diffing Between Branches
+
+It is often helpful to view the differences between two branches.  This can, e.g., show you exactly what changed between to branches.  For more information about how to view diffs in GitHub, see the documentation https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits#comparing-branches[here].
 
 
 
