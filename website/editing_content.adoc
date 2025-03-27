@@ -1,4 +1,5 @@
 = Editing v2+ Content
+:toc:
 
 == Introduction
 
@@ -39,14 +40,24 @@ Please visit the [using_asciidoc.adoc](Using AsciiDoc with v2+) page.
 === Saving Changes
 
 [IMPORTANT]
-Whenever you make changes to any file, you *MUST* commit your changes in order for them to be saved.  Please review the [committing.adoc](Committing Changes to v2+) page.
+Whenever you make changes to any file, you [red]*MUST* commit your changes in order for them to be saved.
+
+To commit your changes when using the basic, built-in editor, find the `Commit` button in the upper right of the window and click it.  Follow the directions shown in the images below.  Make sure to enter sufficiently descriptive information about the commit.  The commit message may include information that describes what you did, why you did it, what work still remains to be done, a reference to a Jira ticket, or whatever you deem appropriate.
+
+.Click Commit Button
+image:commit_button.png[]
+
+.Add Commit Message and Complete Commit
+image:commit_finish.png[]
 
 
 
 
-The content here will be processed into content suitable for use by the FHIR IG Publisher.
 
   
 
-Questions:
+== Questions
+
+TODO: Move questions to a different file
+
 - Should the links to tech_specs really not include the event(s) identifiers??
