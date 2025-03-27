@@ -19,9 +19,3 @@ xref:domains/financial/financial.adoc[Financial]
 xref:domains/erp/erp.adoc[ERP]
 
 xref:domains/technical/technical.adoc[Technical]
-
-[NOTE]
-This is an example note
-
-[.er7]
-|MSH|...|
