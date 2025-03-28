@@ -2,7 +2,7 @@
 
 This IG is in development and is not yet production ready.  It is not expected to successfully build using IG publisher at this time.
 
-Most, if not all, of the textual portions of the v2+ specification are captured as AsciiDoc.  This text is found in the [website](website) directory.  You can navigate through the domains using either the directory structure found in the website directory or by folling the links that are rooted on this [mock v2+ homepage](website/v2plus-navigation.adoc). An introduction to the editing process for the text content of v2+ is found on the [Editing v2+ Content](website/editing_content.adoc) page.
+Most, if not all, of the textual portions of the v2+ specification are captured as AsciiDoc.  This text is found in the [website](website) directory.  You can navigate through the domains using either the directory structure found in the website directory or by folling the links that are rooted on this [mock v2+ homepage](website/v2plus-navigation.adoc). An introduction to the editing process for the text content of v2+ is found on the [Editing v2+ Content](editor_instructions/editing_content.adoc) page.
 
 While the _exact_details are still being worked out, the current plan for building the v2+ IG involves a substantial preprocessing step that generates files appropriate for IG Publisher input.  This will include conversion of AsciiDoc into HTML and/or Markdown.  The converted text will be distributed to appropriate IG input files.
 
