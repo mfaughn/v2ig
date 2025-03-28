@@ -39,7 +39,7 @@ TODO - add further documentation
 
 ==== Using AsciiDoc with v2+
 
-Please visit the [using_asciidoc.adoc](Using AsciiDoc with v2+) page.
+Please visit the xref:using_asciidoc.adoc[Using AsciiDoc with v2+] page.
 
 === Saving Changes
 
