@@ -1,6 +1,10 @@
 = Editing v2+ Content
 :toc:
 
+== TODO
+
+Write something the lets people know that the metadata about v291 origins is ultimately inconsequential
+
 == Introduction
 
 This page explains the navigation and editing of v2+ textual content.  It does not cover editing structural content, e.g., adding segments to a message structure or defining a new segment.
