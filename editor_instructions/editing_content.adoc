@@ -11,7 +11,7 @@ This page explains the navigation and editing of v2+ textual content.  It does n
 
 === Directory Structure
 
-The directories in the xref:.[website directory] do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the xref:.[website directory] and its subdirectories. 
+The directories in the link:../website[website directory] do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the link:../website[website directory] and its subdirectories. 
 
 NOTE: Whitespace is not allowed in the names of directories.  If you need to create a directory, please use underscore characters instead of whitespace characters.
 
