@@ -21,11 +21,13 @@ Things to maybe detail
 
 == Introduction
 
-This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].
-The v2+ content generally requires only the use of basic markup syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. 
-You are strongly encouraged to visit the linked sections and review at least the basic usage of each of these when and if you have any questions about using AsciiDoc markup while editing v2+ content.
+The v2+ content generally requires only the use of "basic" AsciiDoc syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. Reviewing some of the existing v2+ AsciiDoc files may give you a sense of the degree of familiarity you need to develop. You may find that, for the most part, it doesn't look all that intimidating.
 
-[NOTE]
+This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].  It is recommended that you first review what is presented in this file and augment the information here by visiting the linked sections Review at least the basic usage of each of these element if you have any questions about using AsciiDoc markup while editing v2+ content.
+
+In-depth documentation of AsciiDoc can be found https://docs.asciidoctor.org/asciidoc/latest/[here].  There is *a lot* here.  It is recommended that you only consult the full documentation when you have encountered a specific problem that you cannot solve otherwise or for which there is no documentation in the https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[quick reference].
+
+[NOTE#markdown-warning]
 If you are familiar with Markdown syntax, you will need to be careful.  AsciiDoc syntax can seem similar and in some cases overlaps with Markdown but it is different.  AsciiDoc also has *many* more features than Markdown does and is capable of much more.
 
 One of the goals of this v2+ project is to relieve editors of much of the need to be concerned with styling.  You should be primarily concerned with the content.
@@ -134,15 +136,103 @@ This is just a test of \*escaping* characters.  Does it always work the \^same\^
 
 === https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#lists[Lists]
 
-=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#links[Links]
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#ids-roles-and-options[Anchors] and https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#links[Links]
+
+
+
+==== Anchors
+
+The term "anchor" and the term "ID" are often used interchangeably within the context of HTML.  The same holds true in AsciiDocfootnote:[Read more about the `id attribute https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[here]].  There are several ways that anchors are created in AsciiDoc.  Some of them are created automatically.  The user may also create anchors.  Some of these methods are detailed here.
+
+A simple way to create an anchor is by declaring an id for a block in a file.
+
+.An explicitly defined ID for a Paragraph
+....
+[#my-id]
+This is a paragraph about HL7...
+....
+
+.An explicitly defined ID for a Section
+....
+[#some-section]
+=== Some Section in v2+
+
+A paragraph in the section
+....
+
+.An explicitly defined ID for a NOTE block
+....
+[NOTE#markdown-warning]
+A warning about Markdown...
+....
 
 ==== External References / Links
 
-TODO
+The easiest way to make a link to an external (i.e., a link outside of the v2+ specification) url is to simply add the url followed immediately by the text you want to display surrounded by square brackets.
 
-==== Internal References / Links
+.Syntax for external hyperlink
+....
+http://hl7.org[HL7]
+....
 
-TODO
+This will render as http://hl7.org[HL7].
+
+[#xrefs]
+==== Cross-References Between AsciiDoc Files
+
+Links between files between v2+ AsciiDoc files are https://docs.asciidoctor.org/asciidoc/latest/macros/inter-document-xref/[cross-references].  The recommended way to indicate a cross-reference is using the `xref:` macro as described in the linked guidance.  An example of a link to another document is shown here.
+
+....
+xref:v2plus-navigation.adoc#link-to-domains-page[Link to an anchor on the v2+ navigation page]
+....
+
+The `xref` in the above example would render like this: xref:v2plus-navigation.adoc#link-to-domains-page[Link to an anchor on the v2+ navigation page].  If you follow that link and then click on the `Code` button on that page, you will see more examples of the use of `xref`.  On that page you will see that the `xref` links follow the relative path of files within the directory structure.
+
+IMPORTANT: Because this AsciiDoc content will be processed and inserted into other files within the IG, it is likely that further processing will be necessary in order for cross-references to work properly.  For this reason, you may choose indicate cross-references using `v2ref:` instead of `xref:`.  Any cross-reference indicated using `v2ref:` is not going to work in the GitHub rendering but it will work in the final IG rendering.
+
+==== Cross References Within A File (Internal Cross References)
+
+There are several ways to link to an achor within the same file.
+
+A reliable way to do this is to simply use an `xref` as described xref:using_asciidoc.adoc#xrefs[here].  If desired, you can elide the filename and simply specify the anchor in the `xref`.
+
+....
+xref:#markdown-warning[Note about Markdown]
+....
+
+One way to links to a section within the same file is by simply enclosing the section title in double angle brackets.
+
+....
+<<ER7>>
+....
+
+This would render like this: <<ER7>> and link to the section below that describes the custom ER7 block.
+
+See the https://docs.asciidoctor.org/asciidoc/latest/macros/xref/#internal-cross-references[Asciidoctor Docs] for further details.
+
+==== Links to v2+ Structural Elements (Data Types, Segment Definitions, Etc.)
+
+Where a link to, e.g., a Data Type definition or Segment Definition is desired, using the `v2ref:` macro syntax is recommended.  The macro should be followed by the normal coded reference to the element.  Examples below:
+
+.A link to the CWE data type
+ v2ref:CWE
+
+.A link to the AD-3 data type component
+ v2ref:AD-3
+
+.A link to the MSH segment definition
+ v2ref:MSH
+
+.A link to the PID-5 field
+ v2ref:PID-5
+
+.A link to the ADT^A01 message definition
+ v2ref:ADT^A01
+
+.A link to the ADT_A01 message structure definition
+ v2ref:ADT_A01
+
+NOTE: Do not make an effort to insert `v2ref:` links at every place where you find an existing reference to a v2 data structure.  It is intended that these links will be identified and automatically created by the v2+ IG tooling.
 
 === https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables[Tables]
 
@@ -173,13 +263,12 @@ This is an example of an example block.
 [example]
 This is another example of an example block.
 
-
-
-
 == Special Notation for v2+
+
 AsciiDoc allows the creation of custom block types.  A few of these have been created for use with v2+
 
 === ER7
+
 Blocks of ER7 notation should be placed in an `[er7]` block. Note that the GitHub rendering of ER7
 
 
