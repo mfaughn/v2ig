@@ -19,7 +19,7 @@ NOTE: Whitespace is not allowed in the names of directories.  If you need to cre
 
 === Selecting a Branch
 
-When you are editing v2+, the first thing you must do is to create a branch of this project.  If you have already created a branch for the set of changes you wish to make, please make sure that you check out that branch before continuing to make any changes.  It is *important* that you familiarize yourself with the [Instructions](branch_management.adoc).
+When you are editing v2+, the first thing you must do is to create a branch of this project.  If you have already created a branch for the set of changes you wish to make, please make sure that you check out that branch before continuing to make any changes.  It is *important* that you familiarize yourself with the instructions found on the xref:branch_management.adoc[Using Git Branches While Editing v2+] page.
 
 === Editing Content
 
@@ -54,14 +54,3 @@ image:commit_button.png[]
 .Add Commit Message and Complete Commit
 image:commit_finish.png[]
 
-
-
-
-
-  
-
-== Questions
-
-TODO: Move questions to a different file
-
-- Should the links to tech_specs really not include the event(s) identifiers??
