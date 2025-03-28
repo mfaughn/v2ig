@@ -49,8 +49,8 @@ Whenever you make changes to any file, you [red]*MUST* commit your changes in or
 To commit your changes when using the basic, built-in editor, find the `Commit` button in the upper right of the window and click it.  Follow the directions shown in the images below.  Make sure to enter sufficiently descriptive information about the commit.  The commit message may include information that describes what you did, why you did it, what work still remains to be done, a reference to a Jira ticket, or whatever you deem appropriate.
 
 .Click Commit Button
-image:commit_button.png[]
+image::images/commit_button.png[]
 
 .Add Commit Message and Complete Commit
-image:commit_finish.png[]
+image::images/commit_finish.png[]
 
