@@ -1,0 +1,312 @@
+= Using AsciiDoc with v2+
+:toc:
+:toclevels: 4
+:navtitle: AsciiDoc with v2+
+:description: An explanation on the basic use of AsciiDoc for v2+
+
+== TODO 
+
+Things to detail:
+
+* whitespace
+* comments
+* footnotes
+
+Things to maybe detail
+
+* parameters
+* document attributes
+** :sectnums:
+** :example-caption!:
+
+== Introduction
+
+The v2+ content generally requires only the use of "basic" AsciiDoc syntax.  It should not be necessary to learn advanced usage of AsciiDoc markup syntax. Reviewing some of the existing v2+ AsciiDoc files may give you a sense of the degree of familiarity you need to develop. You may find that, for the most part, it doesn't look all that intimidating.
+
+This file contains introductory explanations of AsciiDoc markup elements that are commonly used in the v2+ spec as well as links to sections from https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[the official AsciiDoc Syntax Quick Reference].  It is recommended that you first review what is presented in this file and augment the information here by visiting the linked sections Review at least the basic usage of each of these element if you have any questions about using AsciiDoc markup while editing v2+ content.
+
+In-depth documentation of AsciiDoc can be found https://docs.asciidoctor.org/asciidoc/latest/[here].  There is *a lot* here.  It is recommended that you only consult the full documentation when you have encountered a specific problem that you cannot solve otherwise or for which there is no documentation in the https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[quick reference].
+
+[NOTE#markdown-warning]
+If you are familiar with Markdown syntax, you will need to be careful.  AsciiDoc syntax can seem similar and in some cases overlaps with Markdown but it is different.  AsciiDoc also has *many* more features than Markdown does and is capable of much more.
+
+One of the goals of this v2+ project is to relieve editors of much of the need to be concerned with styling.  You should be primarily concerned with the content.
+
+The content in these AsciiDoc files is reusable and composable.  That means that content in a single file can be included in other files, as many as is desired.
+
+=== GitHub Limitations
+
+GitHub renders AsciiDoc in the browser (just like it does for Markdown).  This is very helpful because it gives us some idea of what the content will look like when it is rendered using IG Publisher.  However, GitHub's rendering of AsciiDoc does not cover all of the features of AsciiDoc.  There are some things it simply won't do, like showing colored text.  There are other things that it seems to do incorrectly, like inserting space between consecutive example blocks.  All this is to simply point out that the rendering of AsciiDoc here should be used to give you a rough idea of what the content will look like as basic HTML.  If you see unexpected behavior it may be because GitHub simply doesn't render AsciiDoc perfectly or it may be because your AsciiDoc markup isn't quite correct.  When in doubt, please feel free to consult the v2+ tooling developers.
+
+== AsciiDoc Elements
+
+=== Blocks
+
+TODO - brief discussion of how AsciiDoc is based on blocks.  Important to indicate that blocks are separated by blank lines
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#paragraphs[Paragraphs]
+Paragraphs are very Straightforward.  There is no special markup.  Breaks between paragraphs are indicated by an empty line.  
+Indeed breaks between all AsciiDoc markup elements are typically indicated with an empty line.  
+
+****
+Note that in AsciiDoc it is possible to break paragraph content over multiple lines.  Some code editing software (e.g., the built-in editor in GitHub) does not wrap long
+sentences.  For this reason, it may be easier to, e.g., place each sentence of a paragraph on a new line...just don't introduce any blank lines.  See this example:
+****
+
+....
+The first sentence.
+The second sentence.
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.
+....
+
+
+#The first sentence.
+The second sentence.
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.#
+
+When visiting the quick reference, see https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#ex-hardbreaks[example 3] for inforamtion on hard line breaks within a paragraph.  
+Knowing how to accomplish hard line breaks may be useful while editing the v2+ specification.
+
+....
+The first sentence. + 
+The second sentence. + 
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.
+....
+
+#The first sentence. + 
+The second sentence. + 
+Even breaks within
+a sentence
+will be rendered as a continuous paragraph.#
+
+==== Whitespace
+
+TODO - Describe that, by default, whitespace is not preserved.  Reference documentation about this and also about how to preserve whitespace when it is necessary to do so.
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#section-titles[Section Titles]
+The "top level" section title in any file is special.  It is the Document Title and should appear only once, at the top of the file. 
+The Document Title may be followed by one or more lines of https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#document-header[document header] information. 
+The end of the document header is signaled by an empty line.
+This information is not rendered during the publication process.  In these v2+ files, this header information may include metadata that is of value to the editor.
+In the following example we see information about the orignal location of the content in this file which may help editors that are familiar with the historical location of the content.
+ 
+....
+= Message - I01 Request for Insurance
+:v291_section: "11.3.1"
+:v2_section_name: "RQI/RPI - Request for Insurance Information (Event I01)"
+:generated: "Thu, 01 Aug 2024 15:25:17 -0600"
+....
+
+You may also encounter similar types of metadata captured below other section headers in the v2+ AsciiDoc files.  This information is always immediately below the section header and is enclosed in square brackets.
+Below is an example showing several message headers on a page with attendent metadata.  The content within each section has been truncated in this example.
+
+....
+= Referral
+
+== Introduction
+[v291_section="11.2"]
+
+The Patient Referral section defines the message set used in patient referral communications between ...
+
+== General Use Cases / Background
+
+=== Patient Referral and Responses
+[v291_section="11.2.1"]
+
+When a patient is referred by one healthcare entity (e.g., a primary care provider) to another ...
+
+==== Patient referral
+[v291_section="11.2.1.1"]
+
+There are clear distinctions between a referral and an order. An order is ...
+....
+Note that the increasing number of equals signs indicates section nesting.  In this case, this nesting corresponds to the nesting of content sections found in the chapter of v2.9.1
+
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#text-formatting[Text Formatting] - bold, italics, etc..
+
+==== [Escape Characters]
+This is just a test of \*escaping* characters.  Does it always work the \^same\^ ^way? 
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#lists[Lists]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#ids-roles-and-options[Anchors] and https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#links[Links]
+
+
+
+==== Anchors
+
+The term "anchor" and the term "ID" are often used interchangeably within the context of HTML.  The same holds true in AsciiDocfootnote:[Read more about the `id attribute https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[here]].  There are several ways that anchors are created in AsciiDoc.  Some of them are created automatically.  The user may also create anchors.  Some of these methods are detailed here.
+
+A simple way to create an anchor is by declaring an id for a block in a file.
+
+.An explicitly defined ID for a Paragraph
+....
+[#my-id]
+This is a paragraph about HL7...
+....
+
+.An explicitly defined ID for a Section
+....
+[#some-section]
+=== Some Section in v2+
+
+A paragraph in the section
+....
+
+.An explicitly defined ID for a NOTE block
+....
+[NOTE#markdown-warning]
+A warning about Markdown...
+....
+
+==== External References / Links
+
+The easiest way to make a link to an external (i.e., a link outside of the v2+ specification) url is to simply add the url followed immediately by the text you want to display surrounded by square brackets.
+
+.Syntax for external hyperlink
+....
+http://hl7.org[HL7]
+....
+
+This will render as http://hl7.org[HL7].
+
+[#xrefs]
+==== Cross-References Between AsciiDoc Files
+
+Links between files between v2+ AsciiDoc files are https://docs.asciidoctor.org/asciidoc/latest/macros/inter-document-xref/[cross-references].  The recommended way to indicate a cross-reference is using the `xref:` macro as described in the linked guidance.  An example of a link to another document is shown here.
+
+....
+xref:v2plus-navigation.adoc#link-to-domains-page[Link to an anchor on the v2+ navigation page]
+....
+
+The `xref` in the above example would render like this: xref:v2plus-navigation.adoc#link-to-domains-page[Link to an anchor on the v2+ navigation page].  If you follow that link and then click on the `Code` button on that page, you will see more examples of the use of `xref`.  On that page you will see that the `xref` links follow the relative path of files within the directory structure.
+
+IMPORTANT: Because this AsciiDoc content will be processed and inserted into other files within the IG, it is likely that further processing will be necessary in order for cross-references to work properly.  For this reason, you may choose indicate cross-references using `v2ref:` instead of `xref:`.  Any cross-reference indicated using `v2ref:` is not going to work in the GitHub rendering but it will work in the final IG rendering.
+
+==== Cross References Within A File (Internal Cross References)
+
+There are several ways to link to an achor within the same file.
+
+A reliable way to do this is to simply use an `xref` as described xref:using_asciidoc.adoc#xrefs[here].  If desired, you can elide the filename and simply specify the anchor in the `xref`.
+
+....
+xref:#markdown-warning[Note about Markdown]
+....
+
+One way to links to a section within the same file is by simply enclosing the section title in double angle brackets.
+
+....
+<<ER7>>
+....
+
+This would render like this: <<ER7>> and link to the section below that describes the custom ER7 block.
+
+See the https://docs.asciidoctor.org/asciidoc/latest/macros/xref/#internal-cross-references[Asciidoctor Docs] for further details.
+
+==== Links to v2+ Structural Elements (Data Types, Segment Definitions, Etc.)
+
+Where a link to, e.g., a Data Type definition or Segment Definition is desired, using the `v2ref:` macro syntax is recommended.  The macro should be followed by the normal coded reference to the element.  Examples below:
+
+.A link to the CWE data type
+ v2ref:CWE
+
+.A link to the AD-3 data type component
+ v2ref:AD-3
+
+.A link to the MSH segment definition
+ v2ref:MSH
+
+.A link to the PID-5 field
+ v2ref:PID-5
+
+.A link to the ADT^A01 message definition
+ v2ref:ADT^A01
+
+.A link to the ADT_A01 message structure definition
+ v2ref:ADT_A01
+
+NOTE: Do not make an effort to insert `v2ref:` links at every place where you find an existing reference to a v2 data structure.  It is intended that these links will be identified and automatically created by the v2+ IG tooling.
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables[Tables]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#includes[Inclusions]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#images[Images]
+
+=== https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#more-delimited-blocks[Block Titles]
+Any block type (Paragraph, Example, er7, etc.) can have a title. Thus far, this feature of AsciiDoc is not used all that often in the v2+ specification. 
+Where it has been used has typically been when the text includes a series of examples.
+
+....
+.Optional title 1
+[example]
+This is an example of an example block.
+
+.Optional title 2
+[example]
+This is another example of an example block.
+....
+
+.Optional title 1
+[example]
+This is an example of an example block.
+
+
+.Optional title 2
+[example]
+This is another example of an example block.
+
+== Special Notation for v2+
+
+AsciiDoc allows the creation of custom block types.  A few of these have been created for use with v2+
+
+=== ER7
+
+Blocks of ER7 notation should be placed in an `[er7]` block. Note that the GitHub rendering of ER7
+
+
+[IMPORTANT]
+Question for V2MGMT: Should all lines of ER7 (i.e., segments) be shown with the <cr> character at the end?  This is inconsistent in the chapters.
+
+....
+.Reporting that all tests are available (in INU^U05):
+[er7]
+INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||TA^^HL70942
+....
+
+[NOTE]
+In the special [er7] block, it is not necessary to use hard line breaks. 
+The formatting of ER7 is handled automatically when processed into the final publication. 
+Note though that this processing does not occur in the GitHub rendering so any ER7 shown in the GitHub Preview will definitely not look right. 
+The reason for this is primarily due to the fact that AsciiDoc formats any text enclosed by caret (`^`) symbols as superscript.
+
+GitHub Preview will render the above example something like this: `INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||TA^^HL70942`
+
+.Multi-line ER7 Example
+....
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|199902280700||PMU^B01^PMU_B01|MSGID002|P|2.8|<cr>
+EVN|B01|199902280700|<cr>
+STF||U2246^^^PLW~111223333^^^USSSA^SS|HIPPOCRATES^HAROLD^H^JR^DR^M.D.|P|M|19511004|A|^ICU|^MED|(555)555-1003X345CO~(555)555-3334CH(555)555-1345X789CB|1003 HEALTHCARE DRIVE^SUITE 200^ANNARBOR^MI^98199^U.S.A.^H~3029 HEALTHCARE DRIVE^^ANN ARBOR, MI^98198^U.S.A.^O |19890125^DOCTORSAREUS MEDICAL SCHOOL&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
+GSP|1|S||76691-5^Gender identity^LN |446151000124109^Identifies as male gender^SCT|20210101
+GSP|2|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/himself^LN|20210101
+....
+
+=== Tabsets for Messages
+
+In the content associated with messages you will frequently see a `[tabset]` block, usually at the end of the content.  This will often have only the identifier of an event in the block.  An example is shown here.
+
+....
+[tabset]
+A01
+....
+
+The function of this block is to signal the pre-processing code that a set of tabs appropriate for the message associated with the event indicated.  These tabs may include the message structure, acknowledgement choreography information, message structure for associated ack or response messages, and any other information that might be appropriate to include and that can be programmatically generated during pre-processing.
+
