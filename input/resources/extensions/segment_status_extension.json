@@ -1,7 +1,6 @@
 {
   "resourceType" : "StructureDefinition",
   "id" : "v2-segment-status",
-  "url" : "http://hl7.org/v2/StructureDefinition/v2-segment-status",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -16,12 +15,13 @@
       "valueCode" : "can-bind"
     }
   ],
+  "url" : "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
   "name" : "V2SegmentStatus",
   "title" : "HL7 v2 Segment Status Extension",
   "status" : "draft",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2024-06-05T12:00:00+00:00",
-  "publisher" : "HL7 International / V2 Management",
+  "publisher" : "HL7 International / V2 Management Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
@@ -51,14 +51,14 @@
         "max" : "1"
       },
       {
+        "id" : "Extension.url",
+        "path" : "Extension.url",
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/v2-segment-status"
+      },
+      {
         "id" : "Extension.extension",
         "path" : "Extension.extension",
         "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/v2/StructureDefinition/v2-segment-status"
       },
       {
         "id" : "Extension.value[x]",
@@ -68,10 +68,12 @@
           "code" : "code"
         }],
         "binding" : {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-            "valueString" : "V2 Segment Status"
-          }],
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString" : "V2 Segment Status"
+            }
+          ],
           "strength" : "required",
           "description" : "The status of a segment or collection of segments within a MessageStructure.",
           "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-segment-status"
