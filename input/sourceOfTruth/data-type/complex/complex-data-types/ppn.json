@@ -4,7 +4,7 @@
   "id": "PPN",
   "meta": {
     "profile": [
-      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+      "http://hl7.org/v2/StructureDefinition/complex-data-type-profile"
     ]
   },
   "version": "0.0.1",
@@ -14,7 +14,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "http://hl7.org/v2/StructureDefinition/PPN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -40,11 +40,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -72,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -91,11 +91,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -123,11 +123,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -155,11 +155,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -187,11 +187,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -212,7 +212,7 @@
         "defintion": "*Attention: _The PPN.7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7_* See _PPN.22 - Professional Suffix_.\n",
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -228,7 +228,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -251,7 +251,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -274,11 +274,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -306,11 +306,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -342,11 +342,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -378,11 +378,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -410,7 +410,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -429,7 +429,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -452,11 +452,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -488,7 +488,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -500,7 +500,7 @@
         "defintion": "*Attention:* _The PPN.18 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to link:#a.2.56.20-effective-date-dtm[_PPN.20 Effective Date_] and link:#a.2.56.21-expiration-date-dtm[_PPN.21 Expiration Date_].\n",
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -523,11 +523,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -555,7 +555,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -574,7 +574,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -593,11 +593,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -625,7 +625,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -644,7 +644,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -663,11 +663,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -699,11 +699,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",

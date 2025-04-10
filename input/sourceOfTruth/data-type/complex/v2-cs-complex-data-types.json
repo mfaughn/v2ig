@@ -1,7 +1,7 @@
 {
   "resourceType" : "CodeSystem",
-  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-complex-data-types",
-  "id": "v2-cs-complex-data-types",
+  "url" : "http://hl7.org/v2/CodeSystem/complex-data-types",
+  "id": "complex-data-types",
   "name" : "V2ComplexDataTypes",
   "title" : "HL7 v2 Complex Data Types",  
   "status" : "active",

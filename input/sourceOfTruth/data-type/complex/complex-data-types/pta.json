@@ -4,7 +4,7 @@
   "id": "PTA",
   "meta": {
     "profile": [
-      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+      "http://hl7.org/v2/StructureDefinition/complex-data-type-profile"
     ]
   },
   "version": "0.0.1",
@@ -14,7 +14,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "http://hl7.org/v2/StructureDefinition/PTA",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -44,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
         ]
@@ -67,7 +67,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -79,7 +79,7 @@
         "defintion": "*Attention:* _The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to link:#a.2.59.4-money-or-percentage-mop[_PTA.4_] instead.\n",
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -98,7 +98,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
         ]

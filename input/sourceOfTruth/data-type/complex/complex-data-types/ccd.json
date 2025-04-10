@@ -4,7 +4,7 @@
   "id": "CCD",
   "meta": {
     "profile": [
-      "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile"
+      "http://hl7.org/v2/StructureDefinition/complex-data-type-profile"
     ]
   },
   "version": "0.0.1",
@@ -14,7 +14,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "http://hl7.org/v2/StructureDefinition/CCD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -44,11 +44,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -76,7 +76,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
