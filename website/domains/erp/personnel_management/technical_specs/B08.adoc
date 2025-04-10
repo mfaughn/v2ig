@@ -8,6 +8,7 @@ An event B08 indicates that a certificate/permission for a health professional i
 The EVN segment is used to indicate the effective or planned date.
 
 [tabset]
+B08
 
 
 

@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "PRL",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/PRL",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "PRL",
         "path": "PRL",
         "short": "parent result link",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011baf37c0>",
+        "definition": "Definition: Uniquely identifies the parent result’s OBX segment related to the current order, together with the information in _OBR-29 - Parent_.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "PRL.1",
         "path": "PRL.1",
         "short": "Parent Observation Identifier",
+        "defintion": "*Definition:* Contains the unique identifier of the parent observation as defined in the _OBX-3_ of the parent result. The value is the same as the _OBX-3_ of the parent.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "PRL.2",
         "path": "PRL.2",
         "short": "Parent Observation Sub-identifier",
+        "defintion": "*Definition:* Contains the sub-ID of the parent result as defined in the _OBX-4_ of the parent result. The value is the same as the _OBX-4_ of the parent.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -57,15 +59,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -79,6 +81,7 @@
         "id": "PRL.3",
         "path": "PRL.3",
         "short": "Parent Observation Value Descriptor",
+        "defintion": "*Definition:* Contains a descriptor of the parent observation value as specified in the _OBX-5_ of the parent result.\n\n\n\nAs an example, the third component may be used to record the name of the microorganism identified by the parent result directly. The organism in this case should be identified exactly as it is in the parent culture.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,7 +91,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

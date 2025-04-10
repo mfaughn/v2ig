@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "UVC",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/UVC",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "UVC",
         "path": "UVC",
         "short": "UB value code and amount",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b7bb698>",
+        "definition": "*Definition:* A code structure to relate amounts or values to identified data elements necessary to process this claim as qualified by the payer organization.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "UVC.1",
         "path": "UVC.1",
         "short": "Value Code",
+        "defintion": "*Definition:* Specifies the National Uniform Billing Committee (NUBC) code itself.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70153[_External Table 0153 – Value Code_] for valid values. In the United States, values for this component need to come from National Uniform Billing Committee (NUBC); no extensions are allowed.\n\n\n\nOther realms should determine the precise set appropriate for their realm.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "UVC.2",
         "path": "UVC.2",
         "short": "Value Amount",
+        "defintion": "*Definition:* Specifies the numeric amount when needed to pair with the value when it is monetary.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -61,7 +63,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -70,6 +72,7 @@
         "id": "UVC.3",
         "path": "UVC.3",
         "short": "Non-Monetary Value Amount / Quantity",
+        "defintion": "*Definition:* Specifies the numeric amount when needed to pair with the value when it is non-monetary.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,7 +82,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -88,6 +91,7 @@
         "id": "UVC.4",
         "path": "UVC.4",
         "short": "Non-Monetary Value Amount / Units",
+        "defintion": "*Definition:* This component species the units in which the non-monetary quantity is expressed. Refer to the Unified Code for Units of Measure (UCUM) for valid values [http://aurora.rg.iupui.edu/UCUM].\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -97,7 +101,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

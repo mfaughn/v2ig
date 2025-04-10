@@ -8,6 +8,8 @@ This is a notification of an addendum to a document without the accompanying con
 *Scenario:* Author dictates additional information as an addendum to a previously transcribed document. A new document is transcribed. This addendum has its own new unique document ID that is linked to the original document via the parent ID. Addendum document notification is transmitted. This creates a composite document.
 
 [tabset]
+T05
+
 
 
 

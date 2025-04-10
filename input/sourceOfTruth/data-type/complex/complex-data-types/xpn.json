@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "XPN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/XPN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "XPN",
         "path": "XPN",
         "short": "extended person name",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011c0787b8>",
+        "definition": "",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "XPN.1",
         "path": "XPN.1",
         "short": "Family Name",
+        "defintion": "*Definition:* This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section _2A.2.30_, \"_FN - family name_\".\n\n\n\n_XPN.1_ will be empty when _XPN.7_ is MSK. It MAY be empty when _XPN.7_ is NAV.\n\n\n\n*Usage Note:* If a person’s name has only one component, that name will be sent in _XPN.1 Family Name_. This is common practice in some countries such as Indonesia. This note does not cover the case where only one part of a person's multi-part name is known (e.g., only know \"John\" of \"John Doe\").\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "RE"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "XPN.2",
         "path": "XPN.2",
         "short": "Given Name",
+        "defintion": "*Definition:* First name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -57,15 +59,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -79,6 +81,7 @@
         "id": "XPN.3",
         "path": "XPN.3",
         "short": "Second and Further Given Names or Initials Thereof",
+        "defintion": "*Definition:* Multiple middle names may be included by separating them with spaces.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,15 +91,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -110,6 +113,7 @@
         "id": "XPN.4",
         "path": "XPN.4",
         "short": "Suffix",
+        "defintion": "*Definition:* Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -119,15 +123,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -141,6 +145,7 @@
         "id": "XPN.5",
         "path": "XPN.5",
         "short": "Prefix",
+        "defintion": "*Definition:* Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -150,15 +155,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -172,9 +177,10 @@
         "id": "XPN.6",
         "path": "XPN.6",
         "short": "Degree",
+        "defintion": "*Attention:* _The XPN-6 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ See _XPN.14 Professional Suffix_.\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -183,6 +189,7 @@
         "id": "XPN.7",
         "path": "XPN.7",
         "short": "Name Type Code",
+        "defintion": "*Definition:* A code that represents the type of name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Name Type_] for valid values.\n\n\n\n*NOTE:* The content of Legal Name is country specific. In the US the legal name is the same as the current married name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -196,11 +203,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -218,6 +225,7 @@
         "id": "XPN.8",
         "path": "XPN.8",
         "short": "Name Representation Code",
+        "defintion": "*Definition:* Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n\n\n*NOTE:* This new component remains in \"alphabetic\" representation with each repetition of the field using these data types, i.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70465[_HL7 Table 0465 – Name/ad__dress Representation_] for valid values.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -231,11 +239,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -253,6 +261,7 @@
         "id": "XPN.9",
         "path": "XPN.9",
         "short": "Name Context",
+        "defintion": "*Definition:* This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70448[_User-defined T__able 0448 – Nam__e Context_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -266,7 +275,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -275,9 +284,10 @@
         "id": "XPN.10",
         "path": "XPN.10",
         "short": "Name Validity Range",
+        "defintion": "*Attention:* _The XPN.10 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7._ Refer to 2A.2.90.12, \"Effective Date (DTM)\" and 2A.2.90.13, \"Expiration Date (DTM)\" components.\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -286,6 +296,7 @@
         "id": "XPN.11",
         "path": "XPN.11",
         "short": "Name Assembly Order",
+        "defintion": "*Definition:* A code that represents the preferred display order of the components of this person name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70444[_HL7 0444 – Name Assembly Order_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -299,11 +310,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -321,6 +332,7 @@
         "id": "XPN.12",
         "path": "XPN.12",
         "short": "Effective Date",
+        "defintion": "*Definition:* The first date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -330,7 +342,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -339,6 +351,7 @@
         "id": "XPN.13",
         "path": "XPN.13",
         "short": "Expiration Date",
+        "defintion": "*Definition:* The last date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -348,7 +361,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -357,6 +370,7 @@
         "id": "XPN.14",
         "path": "XPN.14",
         "short": "Professional Suffix",
+        "defintion": "*Definition:* Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, Personnel Management.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -366,15 +380,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -388,6 +402,7 @@
         "id": "XPN.15",
         "path": "XPN.15",
         "short": "Called By",
+        "defintion": "*Definition:* A \"called by\" name is the name that is preferred when a person is directly addressed; sometimes known as a nickname.\n\n\n\n*NOTE:* The called by component contains a name that could be categorized as a nickname using the name usage types in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Name type_]. Its use is reserved for instances in which the nickname is a single name part that is provided in addition to a name that has some other type, such as legal. It is understood that the \"called by\" name is not part of the full name. Where a nickname has more parts, possibly including a family name, a different XPN with a type of nickname should instead be used.\n\n\n\nExample:\ns:\n\n\n\n• James Robert Smith is Called By Jim Bob\n\n\n\n• James Robert Smith is Called By JR\n\n\n\n• Peter Richard Smith is Called By Richard\n\n\n\n• Mary Margaret Elizabeth Jones is Called By Meg.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -397,15 +412,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",

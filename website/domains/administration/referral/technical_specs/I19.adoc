@@ -6,6 +6,7 @@
 This event triggers a query message to be sent from a referring healthcare provider to a referred to healthcare provider, regarding a specific, previously sent collaborative care referral. The Collaborative Care Query message must contain sufficient data for the referred to provider to be able to identify the specific referral being queried. The response to a Collaborative Care Query message is a CQU - Collaborative Care Query Update message. The meaning of the Collaborative Care Query Update message is identical to the meaning of the Asynchronous Collaborative Care Update message.
 
 [tabset]
+I19
 
 [width="99%",cols="33%,47%,9%,11%",options="header",]
 |===

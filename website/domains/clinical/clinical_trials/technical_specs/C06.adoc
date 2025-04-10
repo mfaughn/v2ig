@@ -1,6 +1,6 @@
 = Message - Cancel patient entering a phase (clerical mistake)
 :v291_section: "7.7.1"
-:v2_section_name: "CRM - Clinical Study Registration Message (Events C01-C08)"
+:v2_section_name: "CRM - Clinical Study Registration Message (Event C06)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 The data are entered in a clinical trials or other patient data system and broadcast to other facility systems such as order entry, pharmacy, accounting, and nursing systems. They can be transmitted in batch mode or broadcast to outside-facility computer systems, including diagnostic and patient management systems. It is assumed that proper routing and security mechanisms are in place.
@@ -20,6 +20,7 @@ The data are entered in a clinical trials or other patient data system and broad
 |===
 
 [tabset]
+C06
 
 
 

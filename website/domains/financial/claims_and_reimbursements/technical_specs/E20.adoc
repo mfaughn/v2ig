@@ -1,6 +1,6 @@
 = Message - E20 Submit Authorization Request
 :v291_section: "16.3.10"
-:v2_section_name: "EHC^E20 – Submit Authorization Request (event E20) "
+:v2_section_name: "EHC^E20 – Submit Authorization Request (Event E20) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to submit a single Authorization Request to a TPA/Payer for authorization (for payment). An Authorization Request is made for one or more patients and may include 1 or more Product/Service Line Items (detail lines), each of which represents a specific, billable item or Payer allowed Treatment Plan.
@@ -32,6 +32,7 @@ Provider Information, if required by the Payer, must be specified with the Produ
 {empty}6) Product/Service Clarification Codes: Each Product/Service Line Item allows a number of clarification codes to be specified. These are specified as 2 fields: Product/Service Clarification Code Type and Product/Service Clarification Code Value. Both of these fields repeat within the PSL segment and must repeat the same number of times. For example, if 2 clarification codes are specified, then 2 repetitions of each field is required, the first repetition corresponding to the 1^st^ clarification code, the second repetition corresponding to the 2^nd^ clarification code.
 
 [tabset]
+E20
 
 
 

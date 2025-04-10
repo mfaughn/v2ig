@@ -18,11 +18,9 @@ This query/response is designed for interaction between a client system and an M
 |Purpose: |Returns list of candidates matching demographic data specified by the input parameters.
 |===
 
-[query_message_structure-table]
-
-
-
-[response_message_structure-table]
+[tabset]
+Q22
+K22
 
 
 

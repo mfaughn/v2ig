@@ -1,6 +1,6 @@
 = Message - E24 Authorization Response
 :v291_section: "16.3.14"
-:v2_section_name: "EHC^E24 – Authorization Response (event E24) "
+:v2_section_name: "EHC^E24 – Authorization Response (Event E24) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to send results of an Authorization Request to a Provider Application. Authorization results are sent to the same Network Application ID that originated the Authorization Request, which was specified as the Sending Application on MSH on the original Authorization Request.
@@ -24,6 +24,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 {empty}5) The Provider Invoice Number on IVC must be the same as the Provider Invoice Number on IVC as specified on the EHC^E20 input message. In other words, this message must be used to respond to the incoming EHC^E20 and not a previous EHC^E20 Authorization Request.
 
 [tabset]
+E24
 
 
 

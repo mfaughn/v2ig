@@ -1,8 +1,22 @@
 {
   "resourceType" : "CodeSystem",
-  "url" : "http://hl7.org/v2/CodeSystem/Optionality",
+  "id" : "v2-cs-optionality",
+  "name" : "V2Optionality",
+  "title" : "HL7 v2 Optionality",
+  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-optionality",
   "status" : "active",
   "content" : "complete",
+  "experimental" : false,
+  "description" : "HL7 v2 Optionality",
+  "caseSensitive" : false,
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "inm"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
   "concept" : [
     {
       "code" : "R",

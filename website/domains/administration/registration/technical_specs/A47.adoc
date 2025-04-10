@@ -16,6 +16,8 @@ See sections link:#merging-patientperson-information[_3.6.2_&#44;] "link:#mergin
 The fields included when this message is sent should be the fields pertinent to communicate this event. When demographic data in other fields change, it is recommended that the A31 (update patient information) event be used in conjunction with this message.
 
 [tabset]
+A47
+
 
 
 

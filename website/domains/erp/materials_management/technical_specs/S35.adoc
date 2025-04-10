@@ -6,6 +6,8 @@
 This message is sent from a filler application to notify other applications that a sterilization lot has been deleted. The information provided in the SLT segment describes the sterilization lot that has been deleted by the filler application.
 
 [tabset]
+S35
+
 
 
 

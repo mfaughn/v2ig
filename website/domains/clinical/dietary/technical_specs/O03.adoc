@@ -4,6 +4,7 @@
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 [tabset]
+O03
 
 The ODS segment is intended to cover the basic diet definition of one diet code. A diet can be ordered as a combination of one or more diet specifications, followed by any number of supplements and/or preferences. Many diets are common to all institutions, such as an ADA 1500 calorie diet, and may exist in a table. Each diet code is limited to a six-character abbreviation.
 

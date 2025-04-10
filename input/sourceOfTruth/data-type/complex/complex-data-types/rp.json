@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RP",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RP",
         "path": "RP",
         "short": "reference pointer",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b959748>",
+        "definition": "*Definition:* This data type transmits information about data stored on another system. It contains a reference pointer that uniquely identifies the data on the other system, the identity of the other system, and the type of data.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RP.1",
         "path": "RP.1",
         "short": "Pointer",
+        "defintion": "*Definition:* A key to the referenced data assigned by the system that stores the data. The key, which is an ST data type, is used to identify and access the data, either as an object identifier, or as a hierarchical name or query string.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "999"
+                "valueInteger": 999
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "RP.2",
         "path": "RP.2",
         "short": "Application ID",
+        "defintion": "*Definition:* A unique designator of the system that stores the data. It is an HD data type (See Section _2A.2.33_, \"_HD - hierarchic designator_\"). Application ID’s must be unique across a given HL7 implementation.\n\n\n\n*Usage Note:* The Application ID together with the Pointer may form a Uniform Resource Identifier (URI) in accordance with RFC 2396. In this case the Application ID shall include the Scheme and Authority parts of the URI, and the Path part if that points to an application. The Pointer shall include the Query part of the URI, or the Path part if that points to an object. All delimiters between URI parts (“:”, “/”, “?”) should be included in the components.\n\n\n\nReferenced data may be obtained by a mechanism not defined in the HL7 standard. The Scheme part of a URI in the Application ID specifies the access protocol, e.g., HTTP or FTP.\n\n\n\nExample:\n*Example 1:* A CDA document accessed by FTP:\n\n\n\n|/cdasvc/u28864099/s9076500a/e77534/d55378.xml\\^&ftp://www.saintelsewhere.org&URI^text^x-hl7-cda-level-one|\n\n\n\nExample:\n*Example 2:* A DICOM image accessed by HTTP and converted to JPEG (using the ISO/DICOM WADO standard);\n\n\n\n*NOTE:* the ampersands in the Pointer string are escaped to “\\T\\” to avoid conflict with the sub-component delimiter:\n\n\n\n|?requestType=WADO\\T\\study=1.2.840.113848.5.22.9220847989\\T\\series=1.2.840.113848.5.22.922084798.4\\T\\object=1.2.840.113848.5.22.922084798.4.5\\^&https://www.pacs.poupon.edu/wado.jsp&URI^image^jpeg|\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -79,6 +81,7 @@
         "id": "RP.3",
         "path": "RP.3",
         "short": "Type of Data",
+        "defintion": "*Definition:* An ID data type that declares the general type of data. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70834[_Imported Table 0834 – MIME Types_] for valid values. Table 0834 comprises the values of MIME media types established in accordance with RFC 2046 (http://ietf.org/rfc/rfc2046.txt) and registered with the Internet Assigned Numbers Authority (http://www.iana.org/numbers.html).\n\n\n\n*NOTE:* The MIME media type values are case-insensitive, in accordance with RFC 2045.\n\n\n\n*NOTE:* file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70191[_HL7 Table 0191- Type of Referenced Data_] is retained for backward compatibility as of v 2.6.*\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,11 +95,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -114,6 +117,7 @@
         "id": "RP.4",
         "path": "RP.4",
         "short": "Subtype",
+        "defintion": "*Definition:* An ID data type declaring the format for the referenced. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70291[_Externally-defined Table 0291 – Subtype_ of Referenced Data] for valid values. Table 0291 comprises the values of MIME media subtypes established in accordance with RFC 2046 (http://ietf.org/rfc/rfc2046.txt) and registered with the Internet Assigned Numbers Authority (http://www.iana.org/numbers.html).\n\n\n\n*NOTE:* the MIME media subtype values are case-insensitive, in accordance with RFC 2045.\n\n\n\nHL7 approved \"standard\" extensions as defined in table 0291 are allowed.\n\n\n\nAdditional subtypes may be added to this Standard. All subtypes registered by IANA may be used by implementation agreement between cooperating parties. In addition, private, non-standard subtypes may be defined by agreement between cooperating parties. All private, non-standard subtypes should begin with the character combination “X-” to distinguish them from the standard subtypes, in accordance with RFC 2045.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,7 +131,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

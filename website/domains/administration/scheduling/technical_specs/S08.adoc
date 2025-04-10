@@ -7,3 +7,5 @@ The request modification of service/resource is triggered on the placer applicat
 
 This trigger event should not be used when an existing resource or service must be replaced or rescheduled for an existing appointment. The following fields on the indicated segments should not be changed by this trigger event: the first three fields of the AIS, the first four fields of the AIG, the first four fields of the AIL, and the first four fields of the AIP. Instead, use two trigger events to accomplish the replacement or rescheduling of a service or resource: S09 (request cancellation of service/resource on appointment), as well as S07 (request addition of service/resource on appointment).
 
+[tabset]
+S08

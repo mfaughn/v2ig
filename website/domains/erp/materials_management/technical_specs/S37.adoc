@@ -6,6 +6,8 @@
 This message is sent from a filler application to notify other applications that anti-microbial device cycle data has been generated. The information in the SCN segment and the other detail segments as appropriate describe details of a sterilization or decontamination cycle.
 
 [tabset]
+S37
+
 
 
 

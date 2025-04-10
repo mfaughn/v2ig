@@ -1,6 +1,6 @@
 = Message - E21 Cancel Authorization Request
 :v291_section: "16.3.11"
-:v2_section_name: "EHC^E21 – Cancel Authorization Request (event E21) "
+:v2_section_name: "EHC^E21 – Cancel Authorization Request (Event E21) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to cancel an Authorization Request, as a result of a previously submitted EHC^E20 – Submit Authorization Request message.
@@ -26,6 +26,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 {empty}6) Provider reference numbers must exist on Payer Application's database and must point to the same Invoice, Product/Service Group or Product/Service Line Item; otherwise, an error must be generated (mismatched Invoice and/or Product/Service Line Item).
 
 [tabset]
+E21
 
 
 

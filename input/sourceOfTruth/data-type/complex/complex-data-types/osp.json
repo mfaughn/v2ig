@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "OSP",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/OSP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "OSP",
         "path": "OSP",
         "short": "occurrence span code and date",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000010a182940>",
+        "definition": "Definition: A code and the related dates that identify an event that relates to the payment of the claim. For example, Prior Stay Dates which is the from/through dates given by the patient of any hospital stay that ended within 60 days of this hospital or SNF admission.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "OSP.1",
         "path": "OSP.1",
         "short": "Occurrence Span Code",
+        "defintion": "*Definition:* The NUBC code itself that identifies an event that relates to the payment of a claim.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70351[_HL7 Table_ _0351 – Occurren__ce Span_] for valid values. Values for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "OSP.2",
         "path": "OSP.2",
         "short": "Occurrence Span Start Date",
+        "defintion": "*Definition:* The date an event started that relates to the payment of a claim.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -61,15 +63,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",
@@ -83,6 +85,7 @@
         "id": "OSP.3",
         "path": "OSP.3",
         "short": "Occurrence Span Stop Date",
+        "defintion": "*Definition:* The date an event ended that relates to the payment of a claim.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,15 +95,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",

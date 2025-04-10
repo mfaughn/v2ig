@@ -1,9 +1,11 @@
 = Message - PCH Patient Pathway Goal Update
 :v291_section: "12.3.4"
-:v2_section_name: "PPG/ACK - Patient Pathway Message (Goal Oriented) (Events PCG, PCH, PCJ)"
+:v2_section_name: "PPG/ACK - Patient Pathway Message (Goal Oriented) (Event PCH)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 [tabset]
+PCH
+
 
 
 

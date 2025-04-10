@@ -1,13 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "NM"
+  "id" : "NM",
   "meta" : {
     "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
   },
-  "text" : {
-    "status" : "generated",
-    "div" : "<p>FIXME</p>"
-  },
+
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -29,74 +26,38 @@
   "url" : "http://hl7.org/v2/StructureDefinition/NM",
   "version" : "0.0.1",
   "name" : "NM",
-  "title" : " HL7 v2 NM Data Type",
+  "title" : "HL7 v2 Numeric Primitive Type",
   "status" : "active",
-  "experimental" : "true",
-  "date" : "2024-06-01T12:00:00+11:00"
+  "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME add from v2",
   "kind" : "primitive-type",
   "abstract" : false,
-  "type" : "NM",
-  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/PrimitiveType",
-  "derivation" : "specialization",
-  "snapshot" : {
-    "element" : [{
-      "id" : "NM",
-      "path" : "NM",
-      "min" : 1,
-      "max" : 1,
-      "constraint" : {
-        "key" : "nm-1",
-        "severity" : "error",
-        "human" : {
-          "value" : "At least one digit is required.  Any value containing a decimal point must include one digit to the left of the decimal point.  The leftmost character may be a '+' or '-'.  The total length of the value must be between 1 and 16 characters."
-        },
-        "expression" : "NM.value.matches('^(?=.{1,16}$)([+-]?\d+(\.\d\d*)?)$')"
-      }
-    },{
-      "id" : "NM.id",
-      "path" : "NM.id",
-      "max" : "0"
-    },{
-      "id" : "NM.extension",
-      "path" : "NM.extension",
-      "max" : "0"
-    },{
-      "id" : "NM.value",
-      "path" : "NM.value",
-      "condition" : {
-        "value" : "nm-1"
-      } 
-    }]
-  }
+  "type" : "decimal",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/decimal",
+  "derivation" : "constraint",
   "differential" : {
-    "element" : [{
-      "id" : "NM",
-      "path" : "NM",
-      "min" : 1,
-      "max" : 1,
-      "constraint" : {
-        "key" : "nm-1",
-        "severity" : "error",
-        "human" : {
-          "value" : "At least one digit is required.  Any value containing a decimal point must include one digit to the left of the decimal point.  The leftmost character may be a '+' or '-'.  The total length of the value must be between 1 and 16 characters."
-        },
-        "expression" : "NM.value.matches('^(?=.{1,16}$)([+-]?\d+(\.\d\d*)?)$')"
+    "element" : [
+      {
+        "id" : "decimal",
+        "path" : "decimal",
+        "constraint" : {
+          "key" : "nm-1",
+          "severity" : "error",
+          "human" : {
+            "value" : "At least one digit is required.  Any value containing a decimal point must include one digit to the left of the decimal point.  The leftmost character may be a '+' or '-'.  The total length of the value must be between 1 and 16 characters. Note that while the v2 definition of Numeric allows a preceeding '+' symbol, the FHIR decimal data type does not. For compatibility with FHIR data types and the FHIR IG Publisher, this data type derives from the FHIR decimal type."
+          },
+          "expression" : "decimal.value.matches('/^(?=.{1,16}$)([+-]?\\d+(\\.\\d\\d*)?)$/')"
+        }
+      },
+      {
+        "id" : "decimal.id",
+        "path" : "decimal.id",
+        "max" : "0"
+      },{
+        "id" : "decimal.extension",
+        "path" : "decimal.extension",
+        "max" : "0"
       }
-    },{
-      "id" : "NM.id",
-      "path" : "NM.id",
-      "max" : "0"
-    },{
-      "id" : "NM.extension",
-      "path" : "NM.extension",
-      "max" : "0"
-    },{
-      "id" : "NM.value",
-      "path" : "NM.value",
-      "condition" : {
-        "value" : "nm-1"
-      } 
-    }]
+    ]
   }
 }

@@ -1,10 +1,133 @@
 = Lab Automation
 
 == Introduction
+[v291_section="13.1.2"]
 
-FIXME
+This chapter specifies HL7 triggers, messages, and segments required for implementation of clinical laboratory automation communication interfaces. It was developed jointly by the HL7 Laboratory Automation Special Interest Group and the NCCLS Subcommittee on Communications with Automated Systems. This chapter, by agreement between HL7 and NCCLS, is also published in its entirety as part of the NCCLS Approved Level standard:
+
+• AUTO3, "Laboratory Automation: Communications with Automated Clinical Laboratory Systems, Instruments, Devices, and Information Systems, © NCCLS" footnote:[(NCCLS. _Laboratory Automation: Communications With Automated Clinical Laboratory Systems, Instruments, Devices, and Information Systems_; Approved Standard - NCCLS Document AUTO3-A [ISBN 1-56238-361-2}. NCCLS, 940 West Valley Road, Suite 1400, Wayne, PA 19087-1898 USA, 2000). www.nccls.org]
+
+This document contains other chapters to enable a vendor to successfully implement all of the elements essential to meet the standard.
+
+The other related NCCLS clinical laboratory automation standards are:
+
+• AUTO1: "Laboratory Automation: Specimen Container / Specimen Carrier", © NCCLS.
+
+• AUTO2: "Laboratory Automation: Bar Codes for Specimen Container Identification", © NCCLS.
+
+• AUTO4: "Laboratory Automation: Systems Operational Requirements, Characteristics, and Information Elements", © NCCLS.
+
+• AUTO5: "Laboratory Automation: Electromechanical Interfaces", © NCCLS.
+
+The reader is referred to any or all of these NCCLS standards, particularly AUTO3 and AUTO4, for detailed information on the communications requirements in clinical laboratory automation applications.
+
+The control model proposed in this standard is an extension of the model described in LECIS:
+
+• ASTM E1989-98. Laboratory Equipment Control Interface Specification (LECIS). American Society for Testing and Materials; 1998.
+
+== General Use Cases / Background
+[v291_section="13.1.1"]
+
+Clinical laboratory automation involves the integration or interfacing of automated or robotic transport systems, analytical instruments, and pre- or post-analytical process equipment such as automated centrifuges and aliquoters, decappers, recappers, sorters, and specimen storage and retrieval systems. In addition to the electrical and mechanical interfaces of these various components, the computers that control these devices or instruments must also be interfaced to each other and/or the Laboratory Information System (LIS).
+
+The types of information communicated between these systems include process control and status information for each device or analyzer, each specimen, specimen container, and container carrier, information and detailed data related to patients, orders, and results, and information related to specimen flow algorithms and automated decision making. This wide array of communicated information is essential for a Laboratory Automation System (LAS) to control the various processes and to ensure that each specimen or aliquot has the correct tests performed in the proper sequence.
+
+As of 1999 there are already more than 200 clinical laboratories in the world with "total laboratory automation" systems and hundreds more with a lesser level of automation – generally workcells or modular automation systems. The development of prospective standards for these aspects of clinical laboratory automation will facilitate the inter-operability of the systems being developed by the various players in lab automation – the vendors of analytical instruments, LIS systems, automation systems and components and their laboratory customers.
+
+In the early 1990's an ad hoc task force, Clinical Testing Automation Standards Steering Committee (CTASSC), began to meet at the annual meetings of the International Conference on Automation and Robotics (ICAR) and the American Association for Clinical Chemistry (AACC). In 1996, CTASSC approached NCCLS,footnote:[NCCLS, 940 West Valley Road, Suite 1400, Wayne, PA 19087; www.nccls.org] a globally-recognized, consensus standards organization that has developed more than 125 clinical laboratory standards and related products since it was founded in 1968, about taking on a project for clinical laboratory automation. NCCLS agreed to sponsor this project which was separately funded via a direct solicitation of the vendors in lab automation, instruments, LIS systems, and automation customers. It was organized as a "fast track" project to develop prospective standards to guide future developments in laboratory automation. With the oversight of an Area Committee on Automation, five separate subcommittees have worked since 1997 to develop a series of prospective standards for:
+
+• Specimen containers and carriers
+
+• Bar codes for specimen container identification
+
+• Communications
+
+• System operational requirements and characteristics
+
+• Electromechanical interfaces
+
+Approved level standards for all five of these areas were published by NCCLS.
+
+== Implementation Considerations
+
+=== Other Required Original HL7 Messages
+[v291_section="13.4.1"]
+
+The transaction for synchronization of system clocks must be supported by all equipment as receiver. The master (sender) of the time is either the LAS computer or the LIS.
+
+=== Transfer of Laboratory Test Orders and Results
+[v291_section="13.4.2"]
+
+For the transfer of laboratory automation orders and results refer to 4.2.6 OML - laboratory order message (event O21) instead of ORM and 7.2.2 ORL – unsolicited laboratory observation message (event O20) instead of ORU.
+
+=== Transfer of QC Results
+[v291_section="13.4.3"]
+
+Use _SPM-11 Specimen Role_, or _SAC-6 Specimen Source_, or the 7th component of _OBR-15 Specimen Source_ or _SAC-6 Specimen Source_ to indicate that this is a control specimen. Use _SAC-3 Container Identifier_ for the identification of a control specimen container. The SID segment appended to this SAC segment specifies the manufacturer, lot identifiers, etc. for the control specimen.
+
+The identification of the instrument performing the QC measurement, should be transferred with the _OBX-18 Equipment Instance Identifier_), the measurement data/time with the _OBX-19 Date/Time of the Analysis_.
+
+=== Query for Order Information – Triggers for Download of Test Orders
+[v291_section="13.4.4"]
+
+There is no specific query for laboratory order information. Instead, the order information should be downloaded to the LAS either unsolicited (based on LIS internal triggers such as Sample Collected or Order Entered) or after an implicit trigger such as Sample Status Update – sample identified by the LAS.
+
+=== Transfer of Additional Information for Automated Processing
+[v291_section="13.4.5"]
+
+Instruments requiring additional information for performing of automated processing based on automatic validation, such as Expected Date of Birth (Delivery Date), Menstrual Status, History of Medication Use, should consider using OBX segments and LOINC codes. For example, the LOINC code for Delivery Date is 11778-8, Menstrual status is 8678-5, History of Medication Use is 10160‑0.
+
+=== Working With Non-Substance Inventory Items
+[v291_section="13.4.6"]
+
+This section provides examples of INV segments related to reporting and querying values of equipment state indicators (special non-material inventory items).
+
+// The er7 blocks below have the title of each example noted using the AsciiDoc '.' notation.  They will be automatically numbered unless that feature is turned off.
+
+.Reporting that all tests are available (in INU^U05):
+[er7]
+INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||TA^^HL70942
+
+.Reporting that tests with LOINC codes 1492-8 and 1496-8 are available (in INU^U05):
+[er7]
+INV|NONE^^HL70451|OK^^HL70383|||||||||||||1492-8^^LN~1496-8^^LN||||||TA^^HL70942
+
+.Reporting that the current instrument processing capacity is 42 % (in INU^U05):
+[er7]
+INV|NONE^^HL70451|OK^^HL70383|||||||||||||||||||IC^^HL70942|42^%&&UCUM
+
+.Reporting that an output specimen buffer “Buffer1” is full (in INU^U05):
+[er7]
+INV|BufferId1^^HL70451|OK^^HL70383|||||||||||||||||||OB^^HL70942|100^%&&UCUM
+
+.Reporting that an emergency input specimen buffer “Buffer2” is empty (in INU^U05):
+[er7]
+INV|BufferId2^^HL70451|OK^^HL70383|||||||||||||||||||EB^^HL70942|0^%&&UCUM
+
+.Querying the current instrument processing capacity (in INR^U14):
+[er7]
+INV|||||||||||||||||||||IC^^HL70942
+
+.Querying the current capacity of all regular specimen input buffers (in INR^U14):
+[er7]
+INV|||||||||||||||||||||IB^^HL70942
+
+.Querying the current capacity of the regular specimen input buffer “Buffer3” (in INR^U14):
+[er7]
+INV|Buffer3^^HL70451||||||||||||||||||||IB^^HL70942
 
 == Technical Specs
+[v291_section="13.3"]
+
+Each trigger event is listed below, along with the application form of the message exchange. The notation used to describe the sequence, optionality and repetition of segments is described in Chapter 2.
+
+The notation used to describe the sequence, the optionality, and the repetition of segments is described in Chapter 2 under "Format for Defining Abstract Message."
+
+All the ACK messages are varieties of the 'general acknowledgement' message defined in Chapter 2, section 2.13.1. The only difference is the event code.
+
+The "Equipment Notification" message (EAN/ACK event U09) is used to send information about the occurrence of an event. An event does not necessarily cause a state transition. The "Status Update" message (EAU/ACK event U01) is used to transfer information about the current status. This status can be the result of one or more events that led to the state transition. Example: The event of a "warning level of a consumable being reached" (e.g., 10% left) does not cause a state transition, because the system can remain "In operation". This results in an EAN/ACK message. An event "container transport jammed" causes the state transition to "Emergency stop". This results in both EAN/ACK and EAU/ACK messages.
+
+For the transfer of laboratory automation orders and results refer to 4.4.6 OML - laboratory order message (event O21) instead of ORM and 7.3.2 OUL – unsolicited laboratory observation message (event O20) instead of ORU.
 
 xref:technical_specs/U01.adoc[Message - U01 Automated Equipment Status Update]
 

@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DTN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DTN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DTN",
         "path": "DTN",
         "short": "day type and number",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b93a780>",
+        "definition": "Definition: This data type specifies the type and number of days for which a certification is valid.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DTN.1",
         "path": "DTN.1",
         "short": "Day Type",
+        "defintion": "*Definition:* Specifies whether the days are denied, pending, or approved.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70149[_User-defined Ta__ble_ _0149 - Day Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "DTN.2",
         "path": "DTN.2",
         "short": "Number of Days",
+        "defintion": "*Definition:* Specifies the number of days for which the certification is valid.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -61,15 +63,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "3"
+                "valueInteger": 3
               },
               {
                 "url": "noTruncate",

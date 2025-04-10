@@ -4,7 +4,7 @@
 :code: MSG
 :name: message type
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 This field contains the message type, trigger event, and the message structure ID for the message.

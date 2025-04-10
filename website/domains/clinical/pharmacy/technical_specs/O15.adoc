@@ -14,6 +14,7 @@ When used for an update to a continuous administration which is currently in pro
 The RXE and associated RXCs may be present if the receiving application needs any of their data. The RXG carries the scheduled administration data for either a single "give instruction" (single dose) of medication or for multiple "give instructions." The RXG is not a complete record of an order. Use the RXO and RXE segments if a complete order is needed. It is a record from the pharmacy or treatment application to the Nursing application (or other) with drug/treatment administration instructions.
 
 [tabset]
+O15
 
 
 

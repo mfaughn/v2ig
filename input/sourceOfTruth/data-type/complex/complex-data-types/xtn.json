@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "XTN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/XTN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "XTN",
         "path": "XTN",
         "short": "extended telecommunication number",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011bf1f510>",
+        "definition": "",
         "min": 0,
         "max": "*"
       },
@@ -30,9 +30,10 @@
         "id": "XTN.1",
         "path": "XTN.1",
         "short": "Telephone Number",
+        "defintion": "*Attention:* _The XTN-1 component was deprecated as of v2.3 and the detail was withdrawn and removed from the standard as of v2.6._\n",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "W"
           }
         ]
@@ -41,6 +42,7 @@
         "id": "XTN.2",
         "path": "XTN.2",
         "short": "Telecommunication Use Code",
+        "defintion": "*Definition:* A code that represents a specific use of a telecommunication number. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70201[_HL7 Table 0201 - Telecommunication Use Code_] for valid values. This component along with _XTN.3_ describes the nature of the telecommunication data that follows. Best practice requires the population of _XTN.2_ when _XTN.4_ or _XTN.7_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -54,11 +56,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -76,6 +78,7 @@
         "id": "XTN.3",
         "path": "XTN.3",
         "short": "Telecommunication Equipment Type",
+        "defintion": "*Definition:* A code that represents the type of telecommunication equipment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70202[_HL7 Tabl__e 0202 - Telecommunication Equipment Type_] for valid values. This component along with _XTN.2_ describes the nature of the telecommunication data that follows and is necessary to accurately interpret it.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -89,11 +92,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -111,6 +114,7 @@
         "id": "XTN.4",
         "path": "XTN.4",
         "short": "Communication Address",
+        "defintion": "*NOTE:* This component is required if, and only allowed if, XTN.7 or XTN.12 are not populated.\n\n\n\n*NOTE:* If any of the HL7 delimiters are found in the Communication Address, such as @, the appropriate HL7 escape sequence SHALL be used when encoding an Internet address (see Chapter 2, \"Control\", section 2.7.1, \"Formatting Codes\").\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -120,15 +124,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -142,6 +146,7 @@
         "id": "XTN.5",
         "path": "XTN.5",
         "short": "Country Code",
+        "defintion": "*Definition:* The numeric code assigned by the http://www.wordiq.com/definition/International_Telecommunication_Union[International Telecommunication Union] in standard http://www.wordiq.com/definition/E.164[E.164] to access telephone services in another country. For example, \"+1\" is the country code for the United States, \"+49\" is the code for Germany.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -151,15 +156,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "3"
+                "valueInteger": 3
               },
               {
                 "url": "noTruncate",
@@ -173,6 +178,7 @@
         "id": "XTN.6",
         "path": "XTN.6",
         "short": "Area/City Code",
+        "defintion": "*Definition:* The numeric code to access telephone services in another area/city within a country. This number historically needs not be dialed if the caller is located in the same area/city as the phone number of the called party.\n\n\n\nThe use and size of area/city codes is however country specific: some countries do not use area/city codes, or the use of area/city codes may be mandatory when dialing, or area/city codes may be used to group phone numbers based on other criteria than geographic location, such as cell-phone area/city-codes, or free information numbers (e.g., 800 numbers).\n\n\n\nMost countries have a prefix for Area/City codes which only has to be dialed if one doesn't use a country code. This prefix (mostly \"0\", sometimes \"9\") should be omitted from the content of this field. If the prefix for the Area/Code is also mandatory if one uses the country code (e.g., in Italy) then this field should also contain the prefix.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -182,15 +188,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "3"
+                "valueInteger": 3
               },
               {
                 "url": "noTruncate",
@@ -204,6 +210,7 @@
         "id": "XTN.7",
         "path": "XTN.7",
         "short": "Local Number",
+        "defintion": "*Definition:* The numeric code used to contact the called party, exclusive of country and area/city codes. The Local Number is required when, and allowed only if, _XTN.4_ and _XTN.12_ are not populated.\n\n\n\nThe size of the Local Number is country specific.\n\n\n\n*NOTE:* The Local Number does not include the numeric codes that have to be dialed once a connection has been established. Examples include (automated) organizational phone systems which allow external callers to dial additional numeric codes. These additional numeric codes should be specified as an extension.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -213,15 +220,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "9"
+                "valueInteger": 9
               },
               {
                 "url": "noTruncate",
@@ -235,6 +242,7 @@
         "id": "XTN.8",
         "path": "XTN.8",
         "short": "Extension",
+        "defintion": "*Definition:* The numeric code to contact the called party used within an organization, e.g., the number used if both caller and called party are located within the same organization. The extension is often the same as the last few digits of the Local Number. The use of extensions is country and site specific, and may depend on the type of phone system (PBX) used by the organization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -244,15 +252,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "5"
+                "valueInteger": 5
               },
               {
                 "url": "noTruncate",
@@ -266,6 +274,7 @@
         "id": "XTN.9",
         "path": "XTN.9",
         "short": "Any Text",
+        "defintion": "*Definition:* Contains comments with respect to the telephone number.\n\n\n\nExample:\n|\\^^\\^^\\^^\\^^Do not use after 5PM|\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -275,15 +284,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -297,6 +306,7 @@
         "id": "XTN.10",
         "path": "XTN.10",
         "short": "Extension Prefix",
+        "defintion": "*Definition:* The characters established within a company’s internal telephone system network used as a prefix to the Extension component for internal dialing.\n\n\n\n*NOTE:* The use of Extension Prefix requires that the Extension component be valued and that digits, as well as special characters (e.g., *, #) may be used.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -306,15 +316,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "4"
+                "valueInteger": 4
               },
               {
                 "url": "noTruncate",
@@ -328,6 +338,7 @@
         "id": "XTN.11",
         "path": "XTN.11",
         "short": "Speed Dial Code",
+        "defintion": "*Definition:* The characters established within a company’s internal telephone system used in place of the (external) telephone number to facilitate calling because its length is shorter than that of the telephone number.\n\n\n\n*NOTE:* Digits, as well as special characters (e.g., *, #) may be used.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -337,15 +348,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "6"
+                "valueInteger": 6
               },
               {
                 "url": "noTruncate",
@@ -359,6 +370,7 @@
         "id": "XTN.12",
         "path": "XTN.12",
         "short": "Unformatted Telephone Number",
+        "defintion": "*Definition:* An expression of the telephone number as an unparsable string. The Unformatted Telephone number is required when, and allowed only if, _XTN.4_ and _XTN.7_ are not populated.\n\n\n\nThe phone number was entered as free text and sending system does not know how to parse it.\n\n\n\nExample:\n|\\^^\\^^\\^^\\^^\\^^^1-800-Dentist|\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -368,15 +380,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -390,6 +402,7 @@
         "id": "XTN.13",
         "path": "XTN.13",
         "short": "Effective Start Date",
+        "defintion": "*Definition:* The first date, if known, on which the telecommunication number is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -399,7 +412,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -408,6 +421,7 @@
         "id": "XTN.14",
         "path": "XTN.14",
         "short": "Expiration Date",
+        "defintion": "*Definition:* The last date, if known, on which the telecommunication number is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -417,7 +431,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -426,6 +440,7 @@
         "id": "XTN.15",
         "path": "XTN.15",
         "short": "Expiration Reason",
+        "defintion": "*Definition:* Indicates why this contact number/e-mail was marked as \"ended\". Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70868[User-defined Table 0868 – Telecommunication Expiration Reason] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -439,7 +454,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -448,6 +463,7 @@
         "id": "XTN.16",
         "path": "XTN.16",
         "short": "Protection Code",
+        "defintion": "*Definition:* Indicates whether this information is considered sensitive or should be protected in some way. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70618[_User-defined table 0618 - Protection Code_] for suggested values.\n\n\n\nThe specific set of codes and appropriate handling of such telecommunications addresses will vary by jurisdiction and is subject to site-specific negotiation. For example, a provider address marked as 'unlisted' might not be printed in an internal address listing.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -461,7 +477,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -470,6 +486,7 @@
         "id": "XTN.17",
         "path": "XTN.17",
         "short": "Shared Telecommunication Identifier",
+        "defintion": "*Definition:* A unique identifier for the phone number or e-mail address.\n\n\n\nThis component allows a phone number to be uniquely identified, and enables the linking of a single phone number to multiple people and contexts. For example, each member of a family living at the same location would share the same phone number, having the same identifier. A correction to the phone number of one family member could be automatically propagated to other members of the family.\n\n\n\nHL7 does not assume responsibility for the processing rules for this component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -479,7 +496,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -488,6 +505,7 @@
         "id": "XTN.18",
         "path": "XTN.18",
         "short": "Preference Order",
+        "defintion": "*Definition:* For an entity having multiple telecommunication addresses, indicates which is the \"most preferred\" (lowest number) to \"least preferred\" (highest number).\n\n\n\nIf the preference order is unique across all usages for a given type, then it indicates the preference across all usages, (e.g. first try my home number, then my business number). If the preference order is unique across all usages and types, then it indicates the preference across all types of telecommunication addresses. (E.g., first try my phone; if that doesn't work, use my pager.) Otherwise, the preference order is assumed to only apply within a specific type and usage.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -497,15 +515,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "2"
+                "valueInteger": 2
               },
               {
                 "url": "noTruncate",

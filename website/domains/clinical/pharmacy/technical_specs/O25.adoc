@@ -6,6 +6,7 @@
 The RDE/RRE is used to communicate a refill authorization request originating with the pharmacy. This message replicates the standard RDE message with a different trigger event code to indicate the specific use case of a refill authorization request.
 
 [tabset]
+O25
 
 
 

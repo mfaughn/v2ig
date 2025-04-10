@@ -12,6 +12,8 @@ This is a notification of the creation of a document without the accompanying co
 *Scenario C:* A provider orders a series of three X-rays. The radiologist dictates a single document which covers all three orders. Multiple placer numbers are used to identify each of these orders.
 
 [tabset]
+T01
+
 
 
 

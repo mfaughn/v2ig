@@ -6,3 +6,4 @@
 This trigger event occurs when the inquirer specifies a request for a name lookup listing. Generally, this request is used by the responder when insufficient data is on hand for a positive match. In this case, the requester may ask for a list of possible candidates from which to make a selection. This event code is also used by the responder to signify that the return information contains a list of information rather than information specific to a single patient.
 
 [tabset]
+I02

@@ -1,0 +1,1442 @@
+== QUERY/RESPONSE PROFILE
+[v291_section="5.3"]
+
+The introduction of the Query/Response Profilefootnote:[Formerly known as the Conformance Statement, this artifact will be referred to throughout the rest of this document as the *Query Profile* to distinguish it from an implementor assertion of conformance to a particular profile. The Query Profile is understood to include the definition of the appropriate response message(s).] concept is not intended to imply system certification. It is intended to promote the definition and implementation of well-specified queries. As in previous versions, support for queries is not required for HL7 conformance.
+
+In the introduction, the data owner describes the data being made available and the purpose of the query. He specifies the exact coded value for the Query Name which the Client SHALL use to invoke this query.
+
+The Query Grammar defines the exact segments the Client MAY send. For each field of those segments, the Query Profile SHALL define how the Server will interpret client values. (For example, the patient name field is interpreted as a regular expression match.)
+
+The Response Grammar defines the exact pattern of segments that the Server will return. Each Segment Pattern Response will specify its own pattern of segments. (For example, lab data queries will return patterns of OBR and OBX, while demographic queries might respond with patterns of PID, PV1,... segments.) When a data owner defines a tabular response query, the response grammar might simply be a list of RDT segments that carry rows of data. The user selects columns from a Virtual Table to define the output for the Query by Parameter/Tabular Response (QBP/RTB).
+
+[NOTE]
+that in the case of an HL7-defined query, a specific section of the HL7 Standard will define a Query Profile. By contrast, in the case of a site defined query, the Query Profile is written by analysts and programmers of the Server application/system, and is available to the analysts and programmers of the Client application/system.
+
+Although the Query Profile was a new construct with Version 2.4, it may also be used with the previous generation queries.
+
+[NOTE]
+Version 2.5 introduced a new, use-case-based mechanism for conformance in Chapter 2. Query implementers are encouraged to review and, where appropriate, adopt the profiling structures outlined in that chapter. Current Query Profile structures are retained in Chapter 5 pending revision to the new structures in the next version of the Standard.
+
+=== Using the Query Profile
+[v291_section="5.3.1"]
+
+Critical to the proper usage of the new query/response pairs is the Query Profile concept. In the absence of a Query Profile, the Client might not be aware of the existence of a query, or might not know how to use it or what to expect from it.
+
+The Server advertises the existence of, and support for, a query by publishing a *_Query Profile_*. The Query Profile identifies the query, specifies what items can be queried and describes what the response will look like.
+
+*Query Profile:* A declaration which sets forth the name of the query supported by the Server, the logical structure of the information that can be queried, and the logical structure of what can be returned.
+
+A number of examples of Query Profiles can be found in section _5.9_, "_QUERY/RESPONSE MESSAGE EXAMPLES_."
+
+==== Query with tabular response example
+[v291_section="5.3.1.1"]
+
+The user wishes to know the identity of the patient whose medical record number is "555444222111".
+
+[er7]
+MSH|^~\&|PCR|GenHosp|MPI||199811201400-0800||QBP^Q40^QBP_Q13|8699|P|2.8||||||||
+QPD|Q40^WhoAmI^HL7nnnn|Q0001|555444222111^^^MPI^MR|||19980531|19990531|
+RCP|I|
+RDF|6|PatientList^CX^20~PatientName^XPN^48~Mother'sMaidenName^XPN^48~DOB^DTM^24~Sex^IS^1~Race^CWE^80|
+
+
+The MPI system returns the following RTB message
+
+[er7]
+MSH|^~\&|MPI|GenHosp|PCR||199811201400-0800||RTB^K13^RTB_K13|ACK9901|P|2.8||||||||
+MSA|AA|8699|
+QAK|Q0001|OK|Q40^WhoAmI^HL7nnnn|1|
+QPD|Q28^WhoAmI^HL7nnnn|Q0001|555444222111^^^MPI^MR|||19980531|19990531|
+RDF|6|PatientList^CX^20~PatientName^XPN^48~Mother'sMaidenName^XPN^48~DOB^DTM^24~Sex^IS^1~Race^CWE^80|
+RDT|555444222111^^^MPI^MR|Everyman^Adam||19600614|M||
+
+==== Example of Query Profile with tabular response
+[v291_section="5.3.1.2"]
+
+Query Profile
+
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Query Statement ID (Query ID=Z99): |Z99
+|Type: |Query (or Publish)
+|Query Name: |Who Am I
+|Query Trigger (= MSH-9): |QBP^Z99^QBP_Q13
+|Query Mode: |Both
+|Response Trigger (= MSH-9): |RSP^Z84^RSP_Z84
+|Query Characteristics: |Returns response sorted by PatientLastName unless otherwise specified. Note that neither the PID nor the RDF segments are used.
+|Purpose: |Find the identity of the patient for specified medical record number(s)
+|Response Characteristics: |Returns response sorted by PatientLastName unless otherwise specified.
+|Based on Segment Pattern: |
+|===
+
+[tabset, "QBP^Z99^QBP_Q13"]
+
+*QPD Input Parameter Specification*
+
+[width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
+|===
+|Field Seq (Query ID=Z99) |Field Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+|1 |MessageQueryName | | |60 |CWE |R | | | | | |
+|2 |QueryTag | | |32 |ST |R | | | | | |
+|3 |PatientList |S |Y |20 |CX |O | | | |PID-3 | |PID-3 Patient Identifier List
+|===
+
+*QPD Input Parameter Field Description and Commentary*
+
+[width="100%",cols="20%,11%,6%,63%",options="header",]
+|===
+|Input Parameter (Query ID=Z99) |Comp. Name |DT |Description
+|MessageQueryName | |CWE |SHALL be valued *Z99^WhoAmI^HL7nnnn*.
+|QueryTag | |ST |Unique to each query message instance.
+|PatientList | |CX |
+| | | |Components: <ID (ST)> ^ <check digit (ST)> ^ <code identifying the check digit scheme employed (ID)> ^ < assigning authority (HD)> ^ <identifier type code (IS)> ^ < assigning facility (HD)>
+| | | |The combination of values for _PatientID, and PatientIDAssigningAuthority,_ are intended to identify a unique entry on the PATIENT_MASTER table. The PatientIDTypeCode is useful for further filtering or to supply uniqueness in the event that the assigning authority may have more than one coding system. (The PATIENT_MASTER table contains a constraint that prevents multiple patients from being identified by the same combination of field values.) This PATIENT_MASTER entry will be searched against on the PHARMACY_DISPENSE_TRANSACTION table to retrieve the rows fulfilling the query conditions.
+| | | |If this field is not valued, all values for this field are considered to be a match.
+| | | |
+| |ID |ST |If this field, PID.3.1, is not valued, all values for this field are considered to be a match.
+| |Assigning Authority |HD |If this field, PID.3.4, is not valued, all values for this field are considered to be a match.
+| |Identifier Type Code |CWE |If this field, PID.3.5, is not valued, all values for this field are considered to be a match.
+|===
+
+*RCP Response Control Parameter Field Description and Commentary*
+
+[width="100%",cols="13%,25%,13%,6%,7%,36%",options="header",]
+|===
+|Field Seq (Query ID=Z99) |Name |Com­po­nent Name |LEN |DT |Description
+|1 |Query Priority | |1 |ID |(*D*)eferred or (*I*)mmediate. Default is *I*.
+|2 |Quantity Limited Request | |10 |CQ |
+| | |Quantity | |NM |Number of units (specified by the following component) that will be returned in each increment of the response. If no value is given, the entire response will be returned in a single increment.
+| | |Units | |CWE |**CH**aracters, **LI**nes, **P**a**G**es, or **R**ecor**D**s. Default is *LI*.
+|3 |Response Modality | |60 |CWE |**R**eal time or **B**atch. Default is *R*.
+|6 |Sort-by Field | |256 |SRT |
+| | |Sort-by Field | |ST |Segment field name of an output column by which the response may be sorted. SHALL contain a *Y* in the Sort column of the output specification table.
+| | |Sequencing | |ID |As specified in HL7 Table 0397- Sequencing. Default is **A**scending.
+|===
+
+*Output Specification and Commentary: Virtual Table*
+
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Z99) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+|PatientList |S |Y |20 |CX |O | | | |PID.3 | |PID-3: Patient Identifier List
+|PatientName | | |48 |XPN | | | | |PID.5 | |PID-5 Patient Name
+|Mother'sMaidenName | | |48 |XPN | | | | |PID.6 | |PID-6 Mother's Maiden Name
+|DOB | | |24 |DTM | | | | |PID.7 | |PID-7 Date/Time of Birth
+|Sex | | |1 |CWE | | | | |PID.8 | |PID-8 Sex
+|Race | | |80 |CWE | | | | |PID.10 | |PID-10 Race
+|===
+
+=== Formal specification of the Query Profile
+[v291_section="5.3.2"]
+
+The Query Profile contains the following information:
+
+[.bold-box]
+--
+Query Profile ID: The unique identifier applying to this query's Query Profile. This value is transmitted as the first component of _QPD-1-Message query name_. For sites implementing the Conformance SIG's Implementation Guide, this value shall also be transmitted in _MSH-21-Query Profile ID_.
+
+Formal Query Name: identifies a unique query or publication, e.g., PharmacyDispenseHistory.
+
+Query Trigger: identifies the trigger event for the query. Note that more than one Query Profile may map to the same generic trigger event (Q10 through Q15). If a non-generic trigger event is used, it should correspond to exactly one Query Profile.
+
+The use of Q for HL7-standard query trigger events is conventional; another letter may be used if the supply of Q triggers is exhausted.
+
+The assignment of a trigger event, while mandatory, is intended to facilitate processing rather than to identify a query uniquely. A query is uniquely identified by the value transmitted in _QPD-1-Message query name_. This value SHALL be the same in both the query and response messages, even though the trigger event for the query differs from the trigger event for the response.
+
+Response Trigger: identifies the unique trigger event for the response. Note that more than one Query Profile may map to the same generic trigger event (K10 through K15). If a non-generic trigger event is used, it should correspond to exactly one Query Profile.
+
+The use of K for HL7-standard response trigger events is conventional; another letter may be used if the supply of K triggers is exhausted.
+
+Query Priority: Specifies if the query is immediate, deferred or selectable.
+
+Query Characteristics: Narrative describing general feature of the query.
+
+Purpose: Describes intent of query.
+
+Query Grammar: defines the logical structure of what can be sent by the Client. The structure of this part of the Query Profile is very similar in appearance to a message syntax.
+
+Response Grammar: defines the logical structure of what can be returned by the Server. The structure of this part of the Query Profile is very similar in appearance to a message syntax with two additional columns: Comment and Support Indicator.
+
+Data Model: the logical structure of the information that can be queried. It can be thought of as a set of rows or a list of items having the same format as the Virtual Table structure described in the next section. This works for both tabular and segment pattern queries. A display query can be considered as orthogonal to the tabular and segment pattern queries and follows the same input structure. This is not always included in the Query Profile.
+
+Input Parameter Field Specification and Commentary: Cites the allowable parameters that can be passed to the recipient. The structure of this part of the Query Profile is very similar in appearance to an HL7 Segment Attribute Table with several additional columns: ColName, Key/Search, Sort, MatchOp, SegmentFieldName, and Service Identifier Code.
+
+A QPD Input Parameters table and corresponding explanation table is always provided. These tables discuss all the fields of the QPD segment, including _QPD-1-Message query name_ and _QPD-2-Query tag_. If the query is a Query by Example, additional input parameters and explanation tables are provided for all the fields that may be populated in the example segments.
+
+Response Control: Specifies execution date and time, restrictions on amount of data, and query modality. This is not always included in the Query Profile.
+
+Output Specification and Commentary: Used for tabular and display response. For the tabular response, it specifies the column names that will be returned. The structure of this part of the Query Profile is very similar in appearance to an Attribute Table with several additional columns: ColName, Key/Search, Sort, MatchOp, SegmentFieldName, and Service Identifier Code. For the display response, it describes the format of the data that will be returned.
+--
+
+Note that in the case of an HL7-defined query, a specific section of the HL7 standard will define a Query Profile. The existence of a standard Query Profile for any given query does *not* mean that a system SHALL implement this particular query to be conformant to the HL7 Standard. However, systems that do implement the query SHALL follow the specifications as given in the Query Profile.
+
+Sites that wish to offer queries not specified by the Standard may create their own Query Profiles. By contrast to an HL7-standard query, in the case of a site defined query, the Query Profile is written by the Server, and is available to the analysts and programmers of the Client system to enable them to know the exact behavior of the Server.
+
+Although the Query Profile was a new construct with version 2.4, it may also be used with the previous generation queries.
+
+Input Parameter Specification and Input Field Description and Commentary are always included for the QPD segment. When the Query by Example variant is used, they are provided for the QBE as well. An Output Specification and Commentary showing a Virtual Table is provided for queries that accommodate a tabular response.
+
+For Query Profiles published in the HL7 Standard, each table includes the Query Profile ID in parentheses in the upper left-hand cell. This allows the table to be imported automatically into the HL7 database.
+
+==== Steps for developing a Query Profile
+[v291_section="5.3.2.1"]
+
+____
+{empty}1) Before composing the Query Profile, express the query in ordinary English sentences.
+
+{empty}2) Transform the query into a mathematical or pseudo-language statement. A syntax such as SQL provides a useful mechanism.
+
+{empty}3) From the pseudo-statement, extract the parameters and the operations upon the parameters.
+
+{empty}4) Advertise the parameters in the Query Profile.
+
+{empty}5) Within the Query Profile, explain the operations that will be performed upon the parameters: relational conjunctions, equality/inequality, etc. Use examples to aid the user in understanding how the query might be invoked in specific instances.
+____
+
+==== Query Profile introduction
+[v291_section="5.3.2.2"]
+
+The Query Profile begins with a table that summarizes the characteristics and identifying information about the query to which the Query Profile applies.
+
+.Query Profile
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Query Statement ID (Query ID=Znn): |Znn
+|Type: |
+|Query Name: |
+|Query Trigger (= MSH-9): |
+|Query Mode: |
+|Response Trigger (= MSH-9): |
+|Query Characteristics: |
+|Purpose: |
+|Response Characteristics: |
+|Based on Segment Pattern: |
+|===
+
+*Query Statement ID*: The unique identifier applying to this Query Profile. This value is transmitted as the first component of _QPD-1-Message query name_.
+
+*Type*: Usually *Query*, except for publish-and subscribe Query Profiles (see section _5.7.3.1_, "_Example of a publish and subscribe Query Profile_") for which the value should be *Publish*.
+
+*Query Name*: The name corresponding to the identifier in *Query Statement ID*. This value is transmitted as the second component of _QPD-1-Message query name_.
+
+*Query Trigger (= MSH-9)*: The exact value that the Client will transmit in the _MSH-9-Message type_ field of the query message.
+
+*Query Mode*: Whether the query may be sent in *Real time* (including Bolus) or in *Batch*; see section _5.5.6.3_, "_Interactive continuation of response messages_." The value *Both* indicates that both real-time/bolus and batch modes are acceptable.
+
+*Response Trigger (= MSH-9)*: The exact value that the Server will transmit in the _MSH-9-Message type_ field of the response message.
+
+*Query Characteristics*: Particular features of this query. This is free text intended to help the query implementor in selecting among queries.
+
+*Purpose*: The end result that this query is intended to accomplish. Free text.
+
+*Response Characteristics*: Particular features of this response. This is free text intended to help the query implementor in selecting among queries.
+
+*Based on Segment Pattern*: For queries that return a segment pattern response, this is the (non-query response) message type upon which the segment pattern is based.
+
+==== Query grammar
+[v291_section="5.3.2.3"]
+
+The Query Profile shows a query grammar. This is a brief model of the segments used in the query message.
+
+[tabset, "QBP^Znn^QBP_Qnn"]
+
+*Query Grammar*: This and the following column specify the HL7 code name and full name of each segment sent in the query. Braces specify that the segment or segment group is repeatable; brackets specify the optionality of the segment or segment group.
+
+*Section Reference*: Specifies where in the standard further information about the segment can be found.
+
+When the Query by Example variant is used, the Query Grammar shows the segments that may be used to transmit parameters and the order in which they appear. Segments used to transmit parameters are always sent immediately following the QPD segment.
+
+==== Response grammar
+[v291_section="5.3.2.4"]
+
+The Query Profile always shows a response grammar. If the query response is segment pattern, the response grammar should specify the segments, order, optionality, and repetition as do message specifications within the HL7 Standard.
+
+[tabset, "RTB^Znn^RTB_Knn"]
+
+*Response Grammar*: This and the following column specify the HL7 code name and full name of each segment returned in the response. Braces specify that the segment or segment group is repeatable; brackets specify the optionality of the segment or segment group.
+
+For Query Profiles published in the HL7 Standard, the Response Grammar table includes the Query Profile ID in parentheses in the upper left-hand cell. This allows the table to be imported automatically into the HL7 database.
+
+*Message Description*: The full text name of the segment.
+
+*Group Control*: The name of a segment group.
+
+*Comment*: Specifies in English: 1) the opening or closing of a segment group, and 2) the relevance of the segment in a Hit Count. (Only positive value is noted.)
+
+*Support Indicator*: Allows the Server to indicate: 1) whether an optional segment or segment group will be supported, or 2) that the segment or segment group is dependent on an input parameter. The default understanding is that if the Server knows the information, it will be sent.
+
+*Sec Ref*: Specifies where in the standard further information about the segment can be found.
+
+==== Response grammar for display response
+[v291_section="5.3.2.5"]
+
+The response grammar for a display response lists the segment names, descriptions, and section references for the segments to be returned by the Server, as described in the previous section. In addition, the print text is displayed, as in the following example.
+
+[tabset, "RDY^Znn^RDY_K15"]
+
+[width="100%",cols="100%",options="header",]
+|===
+|The data will display as follows: (Query ID=Z99)
+|DSP\|\|\| GENERAL HOSPITAL – PHARMACY DEPARTMENT DATE:mm-dd-yy
+|DSP\|\|\| DISPENSE HISTORY REPORT PAGE n
+|DSP\|\|\|MRN Patient Name MEDICATION DISPENSED DISP-DATE
+|DSP\|\|\|XXXXX XXXXXx, XXXXX XXXXXXXXXXXXXXXX mm/dd/ccyy
+|...
+|DSP\|\|\| << END OF REPORT >>
+|===
+
+==== QPD input parameter specification
+[v291_section="5.3.2.6"]
+
+The Input Parameter Specification section of the Query Profile looks very much like an attribute table and is followed by a commentary on the fields. Each row of the QPD Input Parameter Specification specifies one user parameter within the QPD segment. Values for user parameters are transmitted in successive fields of the QPD segment, beginning at QPD-3.
+
+When the QSC variant is employed (see section _5.2.5.1.3_, "_Expression as a complex expression_"), a complex query expression may be used as the only input parameter, or may be combined with other (simple) input parameters.
+
+.*QPD Input Parameter Specification*
+[width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
+|===
+|Field Seq (Query ID=Z99) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | | |
+|===
+
+The following is a description of the attributes of the above table.
+
+*Field Seq*: The ordinal number of the element being discussed. Sequence 1 is [.underline]#always# Message Query Name, and sequence 2 is [.underline]#always# Query Tag. Sequence 3 and above are reserved for user parameters.
+
+*Name*: the user-defined name for the element as will be used in the query. Example: MedicationDispensed. When *Name* is derived from an actual HL7 element (segment and field), the segment field name and element name appear in the columns headed by those names. When *Name* is not derived from an actual HL7 element (segment and field), the source system defines the values they expect in this field.
+
+For Query Profiles published in the HL7 Standard, the Input Parameter Specification table includes the Query Profile ID in parentheses in the upper left-hand cell. This allows the table to be imported automatically into the HL7 database.
+
+*Key/Search*: This field identifies which element is the key and which elements are searchable. The key field is designated by a value of 'K'. A value of 'S' designates fields upon which an indexed search can be performed by the source. 'L' designates non-indexed fields. (Note that searching on a non-indexed field requires the Server to perform a linear scan of the data base.) If this column is left blank, the field may not be searched.
+
+*Sort*: valued as "Y" if the output of the query can be sorted on this field. This column should only be valued in Virtual Tables that are used as output specifications.
+
+*Len*: the maximum field length that will be transmitted by the source.
+
+*Type*: the data type of this user parameter. The values available for this field are described in Chapter 2, section 2.16 of this standard. Data types QIP and QSC are available for transmitting complex user parameters.
+
+*Opt*: defines whether the field is required ('R'), optional ('O'), conditionally required ('C'), or required for backward compatibility ('B').
+
+*Rep*: valued as 'Y' if the field may repeat (i.e., be multiply valued).
+
+*Match Op*: the relational operator that will be applied against the value that the querying system specifies for this field.
+
+[NOTE]
+These are defined by file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70209[_HL7 Table 0209 – Relatio__nal Operator_], a component of the QSC data type
+
+*TBL*: identifies the HL7 table from which the values are derived.
+
+*Segment Field Name*: identifies the HL7 segment and field from which the new definition is derived. This field will be blank if the Name is NOT derived from an actual HL7 segment and field.
+
+*Service Identifier Code:* a value of data type CWE that contains the applicable LOINC code, if it exists, or the applicable HL7 code, if it exists, if no Segment Field Name has been identified. If a Segment Field Name has been identified, this field is not populated.
+
+*Element Name*: the name of the element identified by Segment Field Name. This may also be a user-defined 'Z'-element.
+
+==== QPD input parameter field description and commentary
+[v291_section="5.3.2.7"]
+
+.The QPD Input Parameter Field Description and Commentary provides a more detailed description of each of the fields transmitted in the QPD segment.
+[width="100%",cols="21%,11%,6%,62%",options="header",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+|MessageQueryName | |CWE |SHALL be valued *Z99^WhoAmI^HL7nnnn*.
+|QueryTag | |ST |Unique to each query message instance.
+|InputItem... | |CX |
+|===
+
+*Input Parameter*: The name of the field whose value is being transmitted.
+
+*Comp. Name*: When the *Input Parameter* is of a composite data type (e.g._,_ XPN), this is the name of an individual component of the composite input parameter. Only those components that may be valued should be listed in this column.
+
+*DT*: The data type of the parameter or component.
+
+*Description*: A narrative description of the parameter or component and how it is to be used.
+
+==== QBE input parameter specification
+[v291_section="5.3.2.8"]
+
+In the Query by Example variant, discussed below in section _5.9.7_, "_ +
+Query by example (QBP) / tabular response (RTB_)," the Query Profile may specify that the client may use fields within actual message segments, such as the PID segment, to transmit parameter information. Where this is permitted, the Query Profile includes a "QBE Input Parameter Specification" table to specify which fields may be used to transmit the parameters.
+
+.*QBE Input Parameter Specification*
+[width="99%",cols="13%,14%,9%,3%,6%,7%,5%,5%,8%,6%,12%,12%",options="header",]
+|===
+|Segment Field Name (Query ID=Z99) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+Fields are indicated by their actual Segment Field Name, which specifies both segment and position. Except for this distinguishing feature, the remaining columns in this table are identical in meaning to their counterparts in the "_QPD input parameter specification_" in section _5.3.2.6_ above.
+
+Each row of the QBE Input Parameter Specification specifies one field that may be used to transmit user parameters within the example segment(s).
+
+==== QBE input parameter field description and commentary
+[v291_section="5.3.2.9"]
+
+The QPD Input Parameter Field Description and Commentary provides a more detailed description of each of the fields transmitted in the example segments sent in a Query by Example.
+
+.*QBE Input Parameter Field Description and Commentary*
+[width="100%",cols="17%,11%,8%,64%",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+Fields are indicated by their actual Segment Field Name, which specifies both segment and position. Except for this distinguishing feature, the remaining columns in this table are identical in meaning to their counterparts in the "_QPD input parameter field description and commentary_" in section _5.3.2.7_ above.
+
+==== RCP input parameter field description and commentary
+[v291_section="5.3.2.10"]
+
+The RCP Input Parameter Field Description and Commentary provides a more detailed description of each of the fields transmitted in the RCP (Response Control Parameters) segment.
+
+.*RCP Response Control Parameter Field Description and Commentary*
+[width="100%",cols="19%,22%,11%,5%,5%,38%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name |Com­po­nent Name |LEN |DT |Description
+| | | | | |
+|===
+
+*Field Seq*: The position within the RCP segment that the field occupies.
+
+*Name*: The name of the field whose value is being transmitted.
+
+*Component Name*: When the field referenced by *Name* is of a composite data type (e.g., XPN), this is the name of an individual component of the composite input parameter. Only those components that may be valued should be listed in this column.
+
+*LEN*: The maximum length of the field.
+
+*DT*: The data type of the parameter or component.
+
+*Description*: A narrative description of the parameter or component and how it is to be used.
+
+==== Input specification: virtual table
+[v291_section="5.3.2.11"]
+
+When the QSC variant is in use, the Query Profile includes a Virtual Table specification listing the fields that the Client may include in the complex expression parameter.
+
+.*Input Specification: Virtual Table*
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Znn) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+The *ColName* column identifies each field name that the Client may include in the complex query expression. Other columns in this table are defined as in section _5.3.2.6_ above.
+
+When both the QSC variant and a tabular response are specified, this table is labeled "Input/Output Specification: Virtual Table" and no separate output specification is provided.
+
+==== Virtual table field description and commentary
+[v291_section="5.3.2.12"]
+
+The Virtual Table Field Description and Commentary provides a more detailed description of each of the fields listed in the Virtual Table.
+
+.*Virtual Table Field Description and Commentary*
+[width="100%",cols="19%,11%,6%,64%",options="header",]
+|===
+|ColName (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+*ColName*: The name used to identify the column, or field, in the complex expression.
+
+*Comp. Name*: When the *ColName* is of a composite data type (e.g., XPN), this is the name of an individual component of the column. Only those components that may be valued should be listed.
+
+When specifying a field in the complex expression, both the *ColName* and *Comp. Name* attributes should be sent if only a single component is being identified. For instance, *PatientList.ID* would specify the ID component of the *PatientList* field.
+
+*DT*: The data type of the field or component.
+
+*Description*: A narrative description of the field or component and how it is to be used.
+
+==== Output specification for tabular response
+[v291_section="5.3.2.13"]
+
+The output specification for the tabular response consists of the Virtual Table description, i.e., the columns and rows. It has the same columns as the input specification, but the rows reflect all of the available rows in the table, not just those that can be filtered upon input.
+
+.*Output Specification and Commentary: Virtual Table*
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Z99) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+The usage of the columns in this table is as described in section _5.3.2.8_, "_QBE input parameter specification_." Note that the Key/Search and Match Op fields are only meaningful when a virtual table is used in the input specification (QSC variant).
+
+When the QSC variant is in use, the "Input/Output Specification and Commentary" virtual table is used for selection of output fields. No separate table is specified for output.
+
+=== Query Profile templates
+[v291_section="5.3.3"]
+
+==== Query Profile template for query with tabular response
+[v291_section="5.3.3.1"]
+
+Query Profile
+
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Query Statement ID (Query ID=Znn): |
+|Type: |
+|Query Name: |
+|Query Trigger (= MSH-9): |
+|Query Mode: |
+|Response Trigger (= MSH-9): |
+|Query Characteristics: |
+|Purpose: |
+|Response Characteristics: |
+|Based on Segment Pattern: |
+|===
+
+The message structure for QBP^Znn^QPB_Q13 can be found in 5.3.1.2. Use the QBP^Q13^QPB_Q13 Message structure.
+
+[tabset, "RTB^Znn^RTB_K13"]
+
+*QPD Input Parameter Specification*
+
+[width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+|1 |MessageQueryName | | |60 |CWE |R | | | | | |
+|2 |QueryTag | | |32 |ST |R | | | | | |
+|*3* |*InputItem . . .* | | | | | | | | | | |
+|===
+
+*QPD Input Parameter Field Description and Commentary*
+
+[width="100%",cols="20%,12%,9%,59%",options="header",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+|*MessageQueryName* | |CWE |SHALL be valued *Znn^<query name>^HL7nnnn*.
+|*QueryTag* | |ST |Unique to each query message instance.
+|*InputItem1* | |DataType |
+| | | |Components: (if applicable)
+| | | |(Description)
+| | | |(Valuation note)
+| | | |
+| |*Component1* (if applicable) |DataType |(Valuation note)
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+*Input Specification: Virtual Table*
+
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Znn) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+*Virtual Table Field Description and Commentary*
+
+[width="100%",cols="19%,11%,6%,64%",options="header",]
+|===
+|ColName (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+{empty}[The following table is used only for the Query by Example variant.]
+
+*QBE Input Parameter Specification*
+
+[width="100%",cols="19%,18%,8%,6%,6%,7%,3%,3%,7%,5%,9%,9%",]
+|===
+|Segment Field Name (Query ID=Znn) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Query by Example (QBE) variant.]
+
+*QBE Input Parameter Field Description and Commentary*
+
+[width="100%",cols="17%,11%,8%,64%",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+*RCP Response Control Parameter Field Description and Commentary*
+
+[width="100%",cols="18%,23%,11%,5%,5%,38%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name |Com­po­nent Name |LEN |DT |Description
+| | | | | |
+|===
+
+*Output Specification and Commentary: Virtual Table*
+
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Znn) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+==== Query Profile template for query with segment pattern response
+[v291_section="5.3.3.2"]
+
+Query Profile
+
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Query Statement ID (Query ID=Znn): |
+|Type: |
+|Query Name: |
+|Query Trigger (= MSH-9): |
+|Query Mode: |
+|Response Trigger (= MSH-9): |
+|Query Characteristics: |
+|Purpose: |
+|Response Characteristics: |
+|Based on Segment Pattern: |
+|===
+
+[tabset, "QBP^Znn^QBP_Q11 RSP^Znn^RSP_Znn"]
+
+*QPD Input Parameter Specification*
+
+[width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Col Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+|1 |MessageQueryName | | |60 |CWE |R | | | | | |
+|2 |QueryTag | | |32 |ST |R | | | | | |
+|3 |InputItem . . . | | | | | | | | | | |
+|===
+
+*QPD Input Parameter Field Description and Commentary*
+
+[width="100%",cols="19%,12%,9%,60%",options="header",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+|MessageQueryName | |CWE |SHALL be valued *Znn^<query name>^HL7nnnn*.
+|QueryTag | |ST |Unique to each query message instance.
+|*InputItem1* | |DataType |
+| | | |Components: (if applicable)
+| | | |(Description)
+| | | |(Valuation note)
+| | | |
+| |*Component1* (if applicable) |DataType |(Valuation note)
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+*Input Specification: Virtual Table*
+
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Znn) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+*Virtual Table Field Description and Commentary*
+
+[width="100%",cols="19%,11%,6%,64%",options="header",]
+|===
+|ColName (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+{empty}[The following table is used only for the Query by Example (QBE) variant.]
+
+*QBE Input Parameter Specification*
+
+[width="100%",cols="19%,18%,8%,6%,6%,7%,3%,3%,7%,5%,9%,9%",]
+|===
+|Segment Field Name (Query ID=Znn) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Query by Example variant.]
+
+*QBE Input Parameter Field Description and Commentary*
+
+[width="100%",cols="17%,11%,8%,64%",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+*RCP Response Control Parameter Field Description and Commentary*
+
+[width="100%",cols="13%,28%,11%,5%,5%,38%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name |Com­po­nent Name |LEN |DT |Description
+| | | | | |
+|===
+
+==== Query Profile for query with display response
+[v291_section="5.3.3.3"]
+
+Query Profile
+
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Query Statement ID (Query ID=Znn): |
+|Type: |
+|Query Name: |
+|Query Trigger (= MSH-9): |
+|Query Mode: |
+|Response Trigger (= MSH-9): |
+|Query Characteristics: |
+|Purpose: |
+|Response Characteristics: |
+|Based on Segment Pattern: |
+|===
+
+The message structure for QBP^Znn^QPB_Q15 can be found in 5.4.3. Use the QBP^Q15^QPB_Q15 Message structure.
+
+[tabset, "RDY^Znn^RDY_K15"
+
+[width="100%",cols="100%",options="header",]
+|===
+|The data will display as follows: (Query ID=Znn)
+|DSP\|\|\| (data in actual display format)
+|===
+
+*QPD Input Parameter Specification*
+
+[width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+|1 |MessageQueryName | | |60 |CWE |R | | | | | |
+|2 |QueryTag | | |32 |ST |R | | | | | |
+| |*InputItem* | | | | | | | | | | |
+|===
+
+*QPD Input Parameter Field Description and Commentary*
+
+[width="100%",cols="19%,12%,9%,60%",options="header",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+|MessageQueryName | |CWE |SHALL be valued *Znn^<query name>^HL7nnnn*.
+|QueryTag | |ST |Unique to each query message instance.
+|*InputItem1* | |DataType |
+| | | |Components: (if applicable)
+| | | |(Description)
+| | | |(Valuation note)
+| | | |
+| |*Component1* (if applicable) |DataType |(Valuation note)
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+*Input Specification: Virtual Table*
+
+[width="99%",cols="19%,9%,3%,6%,8%,3%,6%,8%,8%,10%,11%,9%",options="header",]
+|===
+|ColName (Query ID=Znn) a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Segment Field Name |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Complex Expression (QSC) variant.]
+
+[width="100%",cols="19%,11%,6%,64%",options="header",]
+|===
+|ColName (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+{empty}[The following table is used only for the Query by Example (QBE) variant.]
+
+*QBE Input Parameter Specification*
+
+[width="100%",cols="19%,18%,8%,6%,6%,7%,3%,3%,7%,5%,9%,9%",]
+|===
+|Segment Field Name (Query ID=Znn) |Name a|
+Key/
+
+Search
+
+|Sort |LEN |TYPE |Opt |Rep |Match Op |TBL |Service Identifier Code |Element Name
+| | | | | | | | | | | |
+|===
+
+{empty}[The following table is used only for the Query by Example variant.]
+
+*QBE Input Parameter Field Description and Commentary*
+
+[width="100%",cols="17%,11%,8%,64%",]
+|===
+|Input Parameter (Query ID=Znn) |Comp. Name |DT |Description
+| | | |
+|===
+
+*RCP Response Control Parameter Field Description and Commentary*
+
+[width="100%",cols="13%,28%,11%,5%,5%,38%",options="header",]
+|===
+|Field Seq (Query ID=Znn) |Name |Com­po­nent Name |LEN |DT |Description
+| | | | | |
+|===
+
+==== Query Profile table summaries
+[v291_section="5.3.3.4"]
+
+.The following table lists the tables that are to be included in each Query Profile. The differences arise both from the query variant used and the response type provided.
+[width="100%",cols="17%,14%,49%,20%",]
+|===
+|Response Type |Query Variant |Table Included |Section Reference
+|Display |None (QPD) |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar for display response |5.3.2.5
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |RCP input parameter field description and commentary |5.3.2.10
+|Display |QBE |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar for display response |5.3.2.5
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |QBE input parameter specification |5.3.2.8
+| | |QBE input parameter field description and commentary |5.3.2.9
+| | |RCP input parameter field description and commentary |5.3.2.10
+|Display |QSC |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar for display response |5.3.2.5
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |Input specification: virtual table |5.3.2.11
+| | |Virtual table field description and commentary |5.3.2.12
+|Tabular |None (QPD) |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |RCP input parameter field description and commentary |5.3.2.10
+| | |Output specification for tabular response |5.3.2.13
+|Tabular |QBE |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |QBE input parameter specification |5.3.2.8
+| | |QBE input parameter field description and commentary |5.3.2.9
+| | |RCP input parameter field description and commentary |5.3.2.10
+| | |Output specification for tabular response |5.3.2.13
+|Tabular |QSC |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |Input/output specification: virtual table |5.3.2.11
+| | |Virtual table field description and commentary |5.3.2.12
+| | |RCP input parameter field description and commentary |5.3.2.10
+|Segment pattern |None (QPD) |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |RCP input parameter field description and commentary |5.3.2.10
+|Segment pattern |QBE |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |QBE input parameter specification |5.3.2.8
+| | |QBE input parameter field description and commentary |5.3.2.9
+| | |RCP input parameter field description and commentary |5.3.2.10
+|Segment pattern |QSC |Query Profile introduction |5.3.2.2
+| | |Query grammar |5.3.2.3
+| | |Response grammar |5.3.2.4
+| | |QPD input parameter specification |5.3.2.6
+| | |QPD input parameter field description and commentary |5.3.2.7
+| | |Input specification: virtual table |5.3.2.11
+| | |Virtual table field description and commentary |5.3.2.12
+| | |RCP input parameter field description and commentary |5.3.2.10
+|===
+
+== QUERY/RESPONSE MESSAGE PAIRS
+[v291_section="5.4"]
+
+The query recommended for use in v 2.4 and later is the Query by Parameter (QBP). The query/response message pairs that follow in this section supersede the previous generation of original mode and enhanced queries that are described in sections _5.10.2_, "_Original mode queries_," and, in v 2.6 and preceding, 5.10.3, "Originally Mode Deferred Access," and 5.10.4, "Other Query/Response Message Segments."
+
+All queries SHALL have a Query Name. The Query Name field, which is a CWE data type, uniquely identifies a Query Profile.
+
+The QBP allows for several variants in defining the selection criteria.
+
+The first variant, the Query by (Simple) Parameter, is to declare a sequence of one to many HL7 fields. Each of these fields will retain its data type as defined in the original HL7 usage. Each field corresponds to a parameter in the Query Profile.
+
+[NOTE]
+It is the responsibility of the Server to declare explicitly the purpose of the query, the meaning of each of the query parameters, and the relationships among the parameters. These declarations are made in the Query Profile.
+
+A second variant, the Query by Example, allows the specification of parameters within actual HL7 segments other than the QPD. For example, the Query Profile might permit the use of the PID segment to transmit specific patient identification parameters. Each such parameter is specified in *the QBE Input Parameter Specification* and *QBE Input Parameter Field Description and Commentary* tables.
+
+The third variant uses a single QPD parameter in the form of a complex query selection expression. This field with its QSC data type allows the defining segment to be broader in scope and allows any field in the target data to be selected and filtered unless constrained through the Query Profile. It explicitly states any relational operators such as AND and OR. It is intended to support a wide range of combinations of parameters.
+
+The difference in how parameters are passed in each of these three variants is as follows:
+
+Query by Simple Parameter passes each client value to the Server positionally using only the third and successive fields of the QPD segment.
+
+Query by Example passes parameters using HL7 segments, such as PID, that are defined in the endpoint application chapters. The third and successive fields of the QPD segment also may be used in this variant.
+
+In the QSC Selection Criteria variant, the parameter values are all contained within a single complex query selection expression that is passed in QPD-3.
+
+Each generic query has a specific message syntax, a unique trigger event, and a unique message structure. Each generic response also has a specific message syntax, a unique trigger event, and a unique message structure.
+
+There are three generic message structures, each of which accommodates the specific detail needed in each of the three response types.
+
+The QBP_Q11 structure supports a Segment Pattern Response and contains the MSH, QPD, RCP, and DSC segments. Its default trigger event is Q11. A standard or site-defined query may use this trigger event or may specify a unique trigger event value in its Query Profile. If a unique trigger event value is chosen for a site-defined query, that value SHALL begin with Z.
+
+The QBP_Q13 structure supports a Tabular Response and contains the MSH, RCP, RDF, and DSC segments. Its default trigger event is Q13. A standard or site-defined query may use this trigger event or may specify a unique trigger event value in its Query Profile. If a unique trigger event value is chosen for a site-defined query, that value SHALL begin with Z.
+
+The QBP_Q15 structure supports a Display Response and contains the MSH, QPD, RCP, and DSC segments. Its default trigger event is Q15. A standard or site-defined query may use this trigger event or may specify a unique trigger event value in its Query Profile. If a unique trigger event value is chosen for a site-defined query, that value SHALL begin with Z.
+
+The new queries support both immediate and deferred response. This information is carried in the RCP segment along with the execution date and time.
+
+The query definition segment is echoed back in the response. This is particularly important in a continuation situation. Otherwise, the sender might conceivably have to manage a queue of queries.
+
+== AUXILIARY QUERY PROTOCOLS
+[v291_section="5.6"]
+
+This section discusses properties of queries that can be described as global properties. These properties enable the Client and Server to deal with timing and sizing issues and to handle exceptions.
+
+=== Immediate vs. deferred response
+[v291_section="5.6.1"]
+
+Responses to queries can be either immediate or deferred. In the immediate mode, the responding process gives the response immediately or in a short period during which the requesting process will wait for the response. In the deferred mode, the response is returned asynchronously, as a separate message pair. Also, a time interval for the deferred transaction may be specified.
+
+In the case of immediate mode query, the Server does NOT send a General Acknowledgement (ACK). The acknowledgement of the query is contained within the response message. In the case of deferred mode, the query is acknowledged immediately by an ACK. The Server sends the deferred response at the appropriate time. The Client acknowledges the response with an ACK. In short, the deferred query transaction consists of 2 "round trips."
+
+If an immediate mode query message is malformed, a negative ACK is immediately sent.
+
+Use cases for Deferred Response include:
+
+{empty}1) evaluate the query conditions at a certain point in time and then return the response. For example, "At 9 AM tomorrow, evaluate query and return response";
+
+{empty}2) produce a large report to be communicated to the Server at an off-peak hour. For example, a response which contains all admissions records for the month to be sent at 4:00 a.m., or a reference lab results listing to be sent at noon. A deferred response can benefit both Server and Client in such cases, especially where the generation, communication, and receipt of segments can all be done at times of otherwise low-volume processing.
+
+If the Query Profile indicates that the Server will support both immediate and deferred responses, then the Client may indicate the desired value of this property by sending it in the _RCP-1 Response priority_ field. If the Server supports only one response type, then the value specified by the Client SHALL agree.
+
+image::immediate_query.png[immediate_query]
+
+The following examples demonstrate how the same query could be invoked in either immediate or deferred mode.
+
+==== Immediate response
+[v291_section="5.6.1.1"]
+
+The Client submits the following query and indicates that an immediate response is desired by setting _RCP-1-Response priority_ to "I".
+
+[er7]
+MSH|^~\&|PCR|Gen Hosp|PIMS||199811201400-0800||QBP^Q42^QBP_Q13|ACK9901|P|2.8||||||||
+QPD|Q42^Tabular Dispense History^HL70471|Q0010|555444222111^^^MPI^MR| |19980531|19990531|
+RCP|I|999^RD|
+RDF|3|PatientList^ST^20~PatientName^XPN^48~MedicationDispensed^ST^40~RXD.3^DTM^24
+
+The Server responds one minute later.
+
+[er7]
+MSH|^~\&|PIMS|Gen Hosp|PCR||199811201401-0800||RTB^K42^RTB_K13|8858|P|2.8||||||||
+MSA|AA|8699|
+QAK|Q010|OK|Q42^Tabular Dispense History^HL7nnn|4
+QPD|Q42^Tabular Dispense History^HL7nnn|Q0010|555444222111^^^MPI^MR||19980531|19990531|
+RDF|7|PatientId^CX^20~PatientName^XPN^48~OrderControlCode^ID^2~ MedicationDispensed^CWE^100~DispenseDate^DTM^24~QuantityDispensed^NM^20~ OrderingProvider^XCN^120
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|525440345^Verapamil Hydrochloride 120 mg TAB^NDC |199805291115-0700|100|77^Hippocrates^Harold^H^III^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00182196901^VERAPAMIL HCL ER TAB 180MG ER^NDC |19980821-0700|100|77^Hippocrates^Harold^H^III^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00172409660^BACLOFEN 10MG TABS^NDC |199809221415-0700|10|88^Seven^Henry^^^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00054384163^THEOPHYLLINE 80MG/15ML SOLN^NDC|199810121145-0700|10|99^Assigned^Amanda^^^DR^MD
+
+==== Deferred response example
+[v291_section="5.6.1.2"]
+
+The Client submits the following query and indicates that a deferred response is desired by setting _RCP-1-Response priority_ to "D".
+
+[er7]
+MSH|^~\&|PCR|Gen Hosp|PIMS||199811201400-0800||QBP^Q42^QBP_Q13|ACK9901|P|2.8||||||||
+QPD|Q42^Tabular Dispense History^HL7nnn|Q0010|555444222111^^^MPI^MR| |19980531|19990531|
+RCP|D|999^RD|
+RDF|3|PatientList^ST^20~PatientName^XPN^48~MedicationDispensed^ST^40~RXD.3^DTM^24
+
+The Server responds one minute later with a general acknowledgement.
+
+[er7]
+MSH|^~\&|PIMS|Gen Hosp|PCR||199811201401-0800||ACK^Q42^ACK|8875|P|2.8||||||||
+MSA|AA|8699|
+
+The Server responds the following morning with the desired data.
+
+[er7]
+MSH|^~\&|PIMS|Gen Hosp|PCR||199811210300-0800||RTB^K42^RTB_K13|9950|P|2.8||||||||
+QAK|Q010|OK|Q42^Tabular Dispense History^HL7nnn|4
+QPD|Q42^Tabular Dispense History^HL7nnn|Q0010|555444222111^^^MPI^MR||19980531|19990531|
+RDF|7|PatientId^CX^20~PatientName^XPN^48~OrderControlCode^ID^2~ MedicationDispensed^CWE^100~DispenseDate^DTM^24~QuantityDispensed^NM^20~ OrderingProvider^XCN^120
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|525440345^Verapamil Hydrochloride 120 mg TAB^NDC |199805291115-0700|100|77^Hippocrates^Harold^H^III^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00182196901^VERAPAMIL HCL ER TAB 180MG ER^NDC |19980821-0700|100|77^Hippocrates^Harold^H^III^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00172409660^BACLOFEN 10MG TABS^NDC |199809221415-0700|10|88^Seven^Henry^^^DR^MD
+RDT|555444222111^^^MPI^MR|Everyman^Adam|RE|00054384163^THEOPHYLLINE 80MG/15ML SOLN^NDC|199810121145-0700|10|99^Assigned^Amanda^^^DR^MD
+
+The Client responds immediately with a general acknowledgement.
+
+[er7]
+MSH|^~\&|PCR|Gen Hosp|PIMS||199811210300-0800||ACK^K42^ACK|8750|P|2.8||||||||
+MSA|AA|9950|
+
+=== Query cancellation
+[v291_section="5.6.2"]
+
+Canceling a query is equivalent to canceling an order in that it is asking the discontinuation of a request for which a response may already be on its way. In the case of an interactive query, a cancellation request is a courtesy on the part of the Client, but not strictly required. How long the query will stay open is an implementation issue.
+
+Although the effect to the Client is the same as if it had not sent any message (no further query data is received), receipt of this message by the Server enables it to discard any unsent continuation data that might be queued.
+
+[er7]
+MSH|^~\&|||||||QCN^Jnn^QCN_J01|...
+QID|Q001|Q99^SomeQuery^0003|...
+...
+
+=== Interactive continuation of response messages
+[v291_section="5.6.3"]
+
+The Interactive Continuation Protocol defines the methodology for the intentional transmission of a large query-response payload over multiple HL7 messages. Without this protocol, the response would be returned in a single large logical message.
+
+The protocol is called interactive because there is an ongoing dialog between the Client and the Server. The dialog commences when the Client issues a query for a potentially large amount of data, but specifies in the _RCP-2-Quantity limited request,_ that only a limited amount of data is to be returned in each continued response. The Server then returns one response message containing data up to the requested quantity. The Client may continue to ask for further subsets of the data until the entire set is exhausted or may choose to cancel the query.
+
+This use of the term "continuation" responses in queries should not be confused with its use in continuing an unsolicited fragmented message. In the case of continuing a response to query the control is on the side of the querying application and there is an explicit cancellation event. In the case of continuation of an unsolicited message, the control is on the part of the sending application and there is no concept of canceling the message transmission.
+
+Segment fragmentation and message fragmentation are discussed in Chapter 2.
+
+==== Interactive continuation algorithm and rules
+[v291_section="5.6.3.1"]
+
+The rules for the interactive continuation (of a query response) are as follows:
+
+[.bold-block]
+--
+If the Server is sending a subset of the data, the message is terminated with a DSC segment with the _DSC-1-Continuation pointer_ set to the appropriate pointer value and the _DSC-2 -Continuation type_ set to "I".
+
+If the Client wishes to receive the next installment, the query is sent again with a DSC segment following the RCP. The _DSC-1-Continuation pointer_ echoes the value sent by the Server.
+
+The Server continues to send installments in response to the Client's request until there is no more data. The end of data is signified by the absence of the DSC segment OR an empty value in _DSC-1-Continuation pointer_.
+
+If the Client wishes to cancel the query before the end of the data is reached, a Cancel query is sent.
+--
+
+In addition to _DSC-1-Continuation pointer_, _QAK-1-Query tag_ may be used to confirm to the Client which query instance the Server is responding to, since the Client may not be relied upon to have retained the text of each query message and continuation request.
+
+The value of _MSH-10-Message control ID_ will be different for every message sent by the Client (i.e., the initial query and each continuation request). Thus the value of _MSA-2-Message control ID_ for each message sent by the Server (which echoes the value of _MSH-10-Message control ID_ from the Client) will vary among multiple response payload messages. By contrast, _QAK-1-Query tag_ will remain the same across all response payload messages to a given query instance.
+
+==== Use case
+[v291_section="5.6.3.2"]
+
+One use of queries is to retrieve data from one application for presentation to users of another. This approach might be used for users of a patient care system retrieving data from lab or other ancillaries. It also might permit users of a pharmacy system to retrieve a patient's lab results from the lab system or non-pharmacy order data from the patient care system. Almost any other application system could be the source of data or the system initiating the query for its users.
+
+Of particular interest is the case where the inquiring user formulates the query online at the terminal of one system and waits while that system sends the query to another. The inquiring user gets the response and displays it at their terminal. The user formulating such a query may only have limited understanding of what data is available for a given patient. Sometimes the user's preference would be to make a simple query such as "give me recent data in reverse chronological sequence" rather than "give me data for yesterday," since there may be some data available for today, or there may be data from two days ago that is of interest. The user will look at the data returned and simply quit looking at it after finding the part that is of interest. (The time frames or the sort sequence may differ, or the user may wish to impose some selectivity on the response, but the general principle remains the same. The user would prefer to make a vague statement of the interest, have the data presented in order of decreasing likelihood of interest, and quit when he or she has seen enough.)
+
+While beneficial to the user, this way of requesting data could be very burdensome when the resulting query takes place over an inter-application interface. If the Server were to retrieve, format, and send all the data the user might like to see, the processing load would be extremely high and the response time unacceptable.
+
+The interactive continuation protocol provides a way to permit the users to formulate queries loosely while limiting the processing burden on the Server. The Client specifies the general constraints of the query and an amount of data to be returned. (For example, the query might be for lab results for patient #12379 and 44 lines would be requested.) The Server retrieves and formats the specified amount of data and returns it with a special key field, _DSC-1-Continuation pointer_. The Server presents the requested data to the user and retains the continuation pointer field for use if another query is needed. The internal structure of the value is not known to the Client.
+
+If, after viewing the data, the user requests more, the Client sends the query again in a format that is identical with the first, except that _DSC-1-Continuation pointer_ value is included and the requested amount of data may be changed. The Server may use the continuation pointer field as a key into its database to continue retrieval and formatting of the results. If the user does not request more data, no further messages are exchanged.
+
+The initiating system may also explicitly terminate the query by sending a QCN^J01 (cancel query) message. Receipt of the QCN^J01 message by the responding system enables it to discard any unsent continuation data that might be queued.
+
+==== Example of interactive continuation protocol
+[v291_section="5.6.3.3"]
+
+The user wishes to know all the medications dispensed for the period between January 1, 1998, and December 31, 1999, for the patient whose medical record number is "555444222111". The Client submits the following query and invokes the interactive continuation protocol. Note that the quantity has been limited to 8 lines.
+
+[er7]
+MSH|^~\&|PCR|Gen Hosp|IE||200009171400-0800||QBP^Q41^QBP_Q15|8699|P|2.8||||||||
+QPD|Q41^DispenseHistory^HL7nnnn|Q001|555444222111^^^MPI ^MR||19980101|19991231|
+RCP|I|8^LI|
+
+The pharmacy system identifies medical record number "555444222111" as belonging to Adam Everyman and locates 7 prescription dispenses meeting the criteria. As shown in the following response, eight lines of data are returned as requested. The response ends with a DSC segment showing the continuation pointer and the indication that this is a logical breaking point.
+
+[er7]
+MSH|^~\&|PIMS|Gen Hosp|PCR||200009171401-0800||RDY^R41^RDY_K15|8858|P|2.8||||||||
+MSA|AA|8699|
+QAK|Q001|OK|Q41^DispenseHistory^HL7nnnn|^8
+QPD|Q41^DispenseHistory^HL7nnnn|Q001|555444222111^^^MPI^MR||19980101|19991231|
+DSP||| GENERAL HOSPITAL – PHARMACY DEPARTMENT DATE:09-17-00
+DSP||| DISPENSE HISTORY REPORT PAGE 1
+DSP|||MRN Patient Name MEDICATION DISPENSED DISP-DATE
+DSP|||555444222111 Everyman,Adam VERAPAMIL HCL 120 mg TAB 10/12/1999
+DSP|||555444222111 Everyman,Adam VERAPAMIL HCL ER TAB 180MG 09/21/1999
+DSP|||555444222111 Everyman,Adam BACLOFEN 10MG TABS 08/22/1999
+DSP|||555444222111 Everyman,Adam THEOPHYLLINE 80MG/15ML SOL 05/29/1999
+DSP||| << END OF Screen>>
+DSC|77|I|
+
+The Client wishes to receive another payload. [multiblock footnote omitted]
+
+[er7]
+MSH|^~\&|PCR|Gen Hosp|IE||199811201405-0800||QBP^Q41^QBP_Q15|8890|P|2.8||||||||
+QPD|Q41^DispenseHistory^HL7nnnn|Q001|555444222111^^^MPI^MR||19980101|19991231|
+RCP|I|8^LI|
+DSC|77|I|
+
+The Server returns the next payload and indicates in _QAK-4-Hit count_ that this is the last of the data..
+
+[er7]
+MSH|^~\&|PIMS|Gen Hosp|PCR||199811201407-0800||RDY^K15^RDY_K15|8898|P|2.8||||||||
+MSA|AA|8890|
+QAK|Q001|OK|Q41^DispenseHistory^HL7nnnn|^7^^Y|
+QPD|Q41^DispenseHistory^HL7nnnn|Q001|555444222111^^^MPI^MR||19980101|19991231|
+DSP||| GENERAL HOSPITAL – PHARMACY DEPARTMENT DATE:09-17-99
+DSP||| DISPENSE HISTORY REPORT PAGE 1
+DSP|||MRN Patient Name MEDICATION DISPENSED DISP-DATE
+DSP|||555444222111 Everyman,Adam VERAPAMIL HCL 120 mg TAB 05/29/1998
+DSP|||555444222111 Everyman,Adam VERAPAMIL HCL ER TAB 180MG 04/21/1998
+DSP|||555444222111 Everyman,Adam BACLOFEN 10MG TABS 04/22/1998
+DSP||| << END OF REPORT>>
+
+The query/response is now completed.
+
+==== Message fragmentation example
+[v291_section="5.6.3.4"]
+
+Query responses, like unsolicited updates, may need to force the continuation of a message, or even a segment, across multiple physical messages. This is more precisely described as fragmenting. Fragmentation is discussed in detail in Chapter 2. Those aspects pertaining to how this would apply to a query response are repeated here for the reader's convenience.
+
+The Client requests the last chest x-ray for the patient whose medical record number is 555444222111. The following query is submitted.
+
+[er7]
+MSH|^~\&|CIS||RAD||199910180900-0700||QBP^Q61^QBP_Q11|7777|P|2.7|
+QPD|Q61^Radiology Result^HL7nnnn|Q98|555444222111^^^^MR|
+RCP|I|
+
+The Server returns the following response but the OBX segment that contains a DICOM image overflows its buffer. The segment is fragmented as follows:
+
+[er7]
+MSH|^~\&|RAD||CIS||||RSP^K61^RSP_K61|5555|P|2.8|
+MSA|AA|7777|
+QAK|Q98|OK|Q61^Radiology Result^HL7nnnn|
+QPD|Q61^Radiology Result^HL7nnnn|Q98|555444222111^^^^MR|
+PID|||5554442221111^^^^MR|
+ORC
+OBR
+OBX||ED|13^^L||abcdefghij|
+ADD|
+DSC|99|F|
+
+The Client returns an ACK upon receipt of the response.
+
+[er7]
+MSH|^~\&|CIS||RAD||||ACK^K61^ACK|7780|P|2.8|
+MSA|AA|5555|
+
+The Server sends the following continued response. Note that the ADD segment will contain the remainder of the data from the fragmented segment. The response then continues on as normal.
+
+[er7]
+MSH|^~\&|RAD||CIS||||RSP^K61^RSP_K61|5560|P|2.7||99|
+ADD|klmnop|
+OBX|
+...
+
+The Client returns an ACK upon receipt of the response.
+
+[er7]
+MSH|^~\&|CIS||RAD||||ACK^K61|7782|P|2.8|
+MSA|AA|5560|
+
+=== Batch message as a query response
+[v291_section="5.6.4"]
+
+The HL7 query also can be used to query for a batch in the following manner:
+
+{empty}a) Use the value B of _RCP-3-Response modality_ to specify a batch response.
+
+[NOTE]
+If using old style query mode, the value BB or BL of _QRD-5-Deferred response type_ may be used to specify a batch response. The query will be acknowledged with a general acknowledgment as in the Deferred Access example above
+
+// FIXME I'm sure this isn't getting rendered nicely...
+.{empty}b) In addition, insert into the batch file the query defining and RCP segments as follows:
+[width="100%",cols="24%,76%",]
+|===
+|[FHS] |(file header segment)
+|\{ |
+|[BHS] |(batch header segment)
+|QPD |Query defining segment Note: if using old style query mode, the QRD and QRF segments may be used.
+|[RCP] |
+|\{ |
+|MSH |(one or more HL7 messages)
+|.... |
+|.... |
+|.... |
+|} |
+|[BTS] |(batch trailer segment)
+|} |
+|[FTS] |(file trailer segment)
+|===
+
+{empty}c) The acknowledgment of a batch is described in Chapter 2.
+
+{empty}d) The Query Profile should stipulate if the batch modality is supported.
+
+=== Query error response
+[v291_section="5.6.5"]
+
+A query/response error can occur at 3 levels:
+
+[.bold-block]
+--
+Communication failure (broken connection, timeout)
+
+Malformed message (message reject)
+
+Malformed query (application error)
+--
+
+If the application receiving the query detects an error while processing the query, the preferred method of response is to return an Application Error (AE) or Application Reject (AR) condition in the _MSA-1-Acknowledgement code_ of the applicable query response message. Further description of the error code is to be included in _ERR-1-Error code and location_. Note that _MSA-6-Error condition_ is retained for backward compatibility for those applications not using the ERR segment. Thus far, this method is consistent with the methods used elsewhere for reporting errors in acknowledgement messages, irrespective of the type of message being acknowledged. In addition, because this is a query response, it is important to include the QAK segment because it specifies the query tag that will identify the particular query instance that was in error. This is of particular importance where a query response may span more than one message.
+
+In summary, use the ERR segment to describe the error if the message fails because of
+
+[.bold-block]
+--
+a malformed message
+
+a malformed query – problem with query tag, problems with parameters
+--
+
+The ERR segment supersedes _QAK-2-Query response status_.
+
+There are 3 common situations that can arise in a query error response:
+
+*Situation 1: Malformed Message*
+
+The query message itself is bad. The parser does not get to the actual query content. Something is wrong with the envelope, i.e., the message is malformed.
+
+The only response is a negative ACK message containing the MSH, MSA and the ERR. That is, the Server creates an ACK message with AR in _MSA-1-Acknowledgement code_ in the above sentence. The dialogue is ended.
+
+*Situation 2: Malformed Query*
+
+The query message got to the Server and is legitimate, but the Server cannot process the query for some reason, i.e., the query is malformed.
+
+The Response message indicates a negative acknowledgement and shows the problem in the ERR. The response message contains the MSH, MSA, ERR, QAK and the query defining segment if available. That is, the Server creates an ACK message with AE in _MSA-1-Acknowledgement code_ in the above sentence. The rest of the message is absent.
+
+Note that the continuation (DSC) segment is not sent or, if it is, its continuation pointer field (_DSC-1-Continuation pointer_) is null.
+
+[NOTE]
+The use of AE (application error) and AR (application reject) codes in _QAK-2-Query response status_ has been deprecated in favor of the ERR segment.
+
+*Situation 3: No data found*
+
+The query is well formed, but there is no data to be returned by the query. This is not strictly an error condition. This example clarifies the protocol to be followed.
+
+The Response message contains MSH, MSA, QAK, and query defining segment. The QAK would indicate "no records found". The rest of the message is absent, i.e., no blank rows or segments are sent.
+
+[NOTE]
+If the responding application successfully processes the query, but is unable to find any qualifying data, this is not an error condition. The responding application returns an Application Accept (AA) in the MSA segment of the query response message, but does not return any data segments (DSP, RDT, or iterations of the items that are counted in hit counts). The continuation (DSC) segment is not sent or, if it is, its continuation pointer field (_DSC-1- Continuation pointer_) is null. If the QAK segment is being used, the field _QAK-2-Query response_ status is valued with NF (no data found, no errors).
+
+== PUBLISH AND SUBSCRIBE
+[v291_section="5.7"]
+
+This section outlines the framework/process of the publish and subscribe machinery.
+
+=== Introduction
+[v291_section="5.7.1"]
+
+"Publish and subscribe" refers to the ability of one system, the "Publisher", to offer a data stream that can be sent to recipient systems upon subscription. In one sense, the entire HL7 unsolicited update paradigm, in which the sender sends out a stream of messages to recipients, is a kind of publish and subscribe mechanism. Subscriptions to unsolicited updates are established at interface set-up time when analysts on both sides agree to start sending a stream of data.
+
+This section describes a mechanism by which the Publisher defines a stream of data, but also agrees to selectively subset the message stream based on query-like data constraints. In the normal case, the right of the Subscriber to subscribe is decided at interface setup time. At runtime, the Subscriber controls the data rules under which it sends messages.
+
+Runtime subscription has existed in earlier versions of HL7, but little attention has been drawn to it. Original mode queries could define an open ended time interval in _QRF-9-When quantity/timing qualifier_. The unexplained semantics of this field had been interpreted to mean: If the QRF-9 specified an end time in the future, then the source system would keep sending results using the query continuation protocol.
+
+This section elaborates on such a mechanism, and more cleanly ties the selective filtering into the whole query facility.
+
+=== Details
+[v291_section="5.7.2"]
+
+Subscription is a process/protocol that allows one system to request that prospective data be sent for a specified period of time, or for an open-ended period of time until further notice. It allows a message stream to be selectively filtered by a query-like mechanism. Specific messages have been defined for subscription and the canceling of a subscription.
+
+A Publisher is one who possesses and transmits streams of data. The Publisher might be a mediator or a broker, such as an interface engine. The Publisher is not necessarily the system that collected the data, but it is the system willing to transmit it
+
+With traditional "unsolicited update subscriptions" a Publisher sends the entire data stream to the recipients. A Publisher normally transmits unfiltered data. However, the Publisher may agree to selectively filter the stream of data within parameters as defined by analysts. For each filterable stream, the Publisher defines a Query Profile that lists the data values that may be used in the filter expression, and defines the segment pattern for the messages that are selected.
+
+If supported in the Query Profile, a subscription may be modified at a later date. _RCP-6-Modify indicator_ is set to "M", and the Action Code parameter is set to "A" or "D" as appropriate. If modification is allowed, the Server bears responsibility for maintaining the filter list. If, as is usually the case, the onus of retaining the filters is on the Client, modification is not allowed and would not be part of the Query Profile.
+
+=== Examples
+[v291_section="5.7.3"]
+
+A lab system normally sends all reports to the central archive. To provide better service to other departments, the Lab decides to offer a filtered stream in addition to the full stream going to the archive.
+
+The lab decides that it will allow recipients to select based on the MRN of the patient, on the type of study (OBR-4), and on the ordering provider (OBR-16). It names this filtered stream "ORU-Subscription" and writes a conformance specification.
+
+At interface setup time, permission is given for four systems, CommunityNorth, CommunitySouth, CommunityEast and CommunityWest to receive this filtered stream.
+
+The Query Profile for this published filtered stream might be:
+
+==== Example of a publish and subscribe Query Profile
+[v291_section="5.7.3.1"]
+
+Query Profile
+
+[width="100%",cols="39%,61%",options="header",]
+|===
+|Publication ID (Query ID=Z83): |Z83
+|Type: |Publish
+|Publication Name: |ORU Subscription
+|Query Trigger (= MSH-9): |QSB^Z83^QSB_Q16
+|Query Mode: |Both
+|Response Trigger (= MSH-9): |ORU^R01^ORU_R01
+|Query Characteristics: |Returns lab results reports for the patient(s) as constrained in the input parameters.
+|Purpose: |Sends Lab Results, either filtered or unfiltered, as specified in the input parameters.
+|Response Characteristics: a|
+A standard query response is not received from the server. Instead, actual ORU messages are returned corresponding to the constraints expressed in the input parameters.
+
+The input parameters are ANDed when selecting data to be returned. That is, all input parameters that are specified SHALL be satisfied in order for a result report to be sent.
+
+|Based on Segment Pattern: |R01
+|===
+
+[message-structure, "QSB^Z83^QSB_Q16"]
+
+See the definition of the ORU^R01 Message Structure in Chapter 7, section 7.3.1, ORU – Unsolicited Observation Message (Event R01).
+
+*QPD Input Parameter Specification*
+
+[width="100%",cols="15%,17%,7%,5%,5%,5%,4%,5%,6%,5%,8%,8%,10%",options="header",]
+|===
+|Field Seq (Query ID=Z83) |ColName a|
+Key/
+
+Search
+
+|Sort |LEN |DT |Opt |RP/# |Match Op |TBL # |Segment Field Name |Service Identifier Code |Element Name
+|1 |MessageQueryName | | |60 |CWE |R | | | | | |Message Query Name
+|2 |QueryTag | | |32 |ST |R | | | | | |Query Tag
+|3 |MRN | | | |CX |O |Y | | |PID.3 | |
+|4 |ActionCode | | | |ID |O | | |0323 | | |
+|5 |PatientLocation | | | |PL |O |Y | | |PV1.3 | |
+|6 |HospitalService | | | |CWE |O |Y | | |PV1.10 | |
+|7 |SRVC | | | |CWE |O |Y | | |OBR.4 | |
+|8 |PVDR | | | |CN |O |Y | | |OBR.16 | |
+|===
+
+*QPD Input Parameter Field Description and Commentary*
+
+[width="100%",cols="20%,11%,6%,63%",options="header",]
+|===
+|Input Parameter (Query ID=Z83) |Comp. Name |DT |Description
+|MessageQueryName | |CWE |SHALL be valued *Z83^ORU Subscription^HL7nnnn*.
+|QueryTag | |ST |Unique to each query message instance.
+|MRN | |CX |One or more patient identifiers may be sent. When a list is provided, results will be sent if any parameter matches any ID known for a patient. Sending no value matches all patients
+|ActionCode | |ID |If the subscription is being modified, the desired action e.g., Add or Delete is carried in this field.
+|PatientLocation | |PL |When a list is provided, results will be sent if any parameter matches PV1.3 for any result. Sending no value matches all results.
+|HospitalService | |CWE |When a list is provided, results will be sent if any parameter matches PV1.10 for any result. Sending no value matches all results.
+|SRVC | |CWE |When a list is provided, results will be sent if any parameter matches OBR.4 for any result.. Sending no value matches all results.
+|PVDR | |CN |When a list is provided, results will be sent if any parameter matches OBR.16 for any result.. Sending no value matches all results.
+|===
+
+*RCP Response Control Parameter Field Description and Commentary*
+
+[width="100%",cols="13%,26%,11%,6%,7%,37%",options="header",]
+|===
+|Field Seq (Query ID=Z99) |Name |Com­po­nent Name |LEN |DT |Description
+|1 |Query Priority | |1 |ID |(*D*)eferred or (*I*)mmediate. Default is *I*.
+|2 |Quantity Limited Request | |10 |CQ |
+| | |Quantity | |NM |Number of units (specified by the following component) that will be returned in each increment of the response. If no value is given, the entire response will be returned in a single increment.
+| | |Units | |CWE |**Ch**aracters, **Li**nes, **P**a**G**es, or **R**ecor**D**s. Default is *LI*.
+|3 |Response Modality | |60 |CWE |**R**eal time or **B**atch. Default is *R*.
+|7 |Segment group inclusion | |256 |ID |What segment group(s) are to be included. If this field is not valued, all segment groups will be included.
+|===
+
+=== Establishing a subscription
+[v291_section="5.7.4"]
+
+To establish the subscription to see lab results for two patients, an authorized Subscriber (e.g., CommunityWest) would send a query message with event code Q99:
+
+[er7]
+MSH|^~\&|CPR|COMWEST|PS^LAB||||QSB^Q99^QSB_Q16|8888|P|2.8|
+QPD|Q99^ORU_Subscription^HL7nnnn|Q0044|1234^^^MPI^MR~4567^^^MPI^MR|
+RCP||||||N|
+
+As results are generated by the Lab, they are all sent to the archive. In addition, the Lab has a list of all subscription requests (such as the message, above). For each message, it checks the query filters associated with the subscription against the message being considered. If the message matches the query, it is sent to the recipient.
+
+For example, a hit on patient 4567 would result in the message:
+
+[er7]
+MSH|^~\&|PS^LAB||CPR|COMWEST||||ORU^R01^ORU_R01|4409|P|2.8|
+PID|||4567^^^MPI^MR|....
+OBR|....
+OBX|...
+
+[NOTE]
+The result message has message type ORU^R01^ORU_R01 (as specified by the Query Profile).
+
+=== Canceling a subscription
+[v291_section="5.7.5"]
+
+Canceling a subscription is analogous to canceling a query. See sections 5.4.6 and 0.
+
+The template would be as follows:
+
+[er7]
+MSH|^~\&|||||||QSX^Jnn^QSX_J01|
+QID...
+
+To cancel the subscription cited in the previous section, CommunityWest would send a cancel message with event code J99:
+
+[er7]
+MSH|^~\&|CPR|COMWEST|PS^LAB||||QSX^J99^QSX_J01|
+QID|Q0044|Q99^ORU_Subscription^HL70003|

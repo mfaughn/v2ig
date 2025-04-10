@@ -6,6 +6,7 @@
 An event B06 signals that the formal relationship between a staff member and the institution has ended (i.e., upon termination).
 
 [tabset]
+B06
 
 
 

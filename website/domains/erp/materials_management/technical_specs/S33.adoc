@@ -6,6 +6,8 @@
 This message is sent from a filler application to notify other applications of a new sterilization configuration. The information in the STC segment describes the detail of the new sterilization configuration.
 
 [tabset]
+S33
+
 
 
 

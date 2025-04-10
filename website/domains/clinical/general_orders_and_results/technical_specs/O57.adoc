@@ -12,6 +12,7 @@ Once the order manager determines to initiate a new order using this message, th
 When one wants to convey with the detailed order message a supporting document, such as a CDA, one can transmit that document using the OBX associated with the ORC/OBR(s) using OBX-11 = "O" Order Detail Description Only, using either OBX-2 = "ED" or "RP".
 
 [tabset]
+O57
 
 
 

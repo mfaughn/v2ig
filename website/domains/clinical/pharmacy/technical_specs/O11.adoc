@@ -10,6 +10,7 @@ The RDE/RRE message pair can also be used to communicate a refill authorization 
 The event O11 represents an encoding of an order. To communicate explicit dispense requests, which are different event types, the RDE^O11/RRE^O12 message pair is also used, but the event O49 is preferred. See section 4A.3.23 "RDE - Pharmacy/Treatment Refill Authorization Request Message (Event O25)." As a site-specific variant, the original order segments (RXO, RXRs, associated RXCs, and any NTEs) may be sent optionally (for comparison).
 
 [tabset]
+O11
 
 [NOTE]
 The RXCs which follow the RXO may not be fully encoded, but those that follow the RXE must be fully encoded.

@@ -8,6 +8,7 @@ The RAS message may be created by the administering application (e.g., nursing a
 In the most common case, the RAS messages would be sent from a nursing application to the pharmacy or treatment application (or to the ordering application or another clinical application), which could use the data to generate the medication administration reports. Multiple RXA segments, each corresponding to a separate administration instance for a given order, may be sent with a single ORC.
 
 [tabset]
+O17
 
 
 

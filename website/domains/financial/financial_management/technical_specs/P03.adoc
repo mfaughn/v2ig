@@ -16,6 +16,7 @@ If common order information is sent related to the entire message or a specific 
 If order detail information is sent related to the entire message or a specific financial transaction, the required fields for that detail segment must accompany that information.
 
 [tabset]
+P03
 
 
 

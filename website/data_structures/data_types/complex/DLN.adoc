@@ -4,7 +4,7 @@
 :code: DLN
 :name: driver’s license number
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]
 This field contains the driver’s license information. For state or province refer to official postal codes for that country; for country refer to ISO 3166 for codes.

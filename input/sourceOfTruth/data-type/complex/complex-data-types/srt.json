@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "SRT",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/SRT",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "SRT",
         "path": "SRT",
         "short": "sort order",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b7d3180>",
+        "definition": "Definition: Specifies those parameters by which the response will be sorted and by what method.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "SRT.1",
         "path": "SRT.1",
         "short": "Sort-by Field",
+        "defintion": "*Definition:* Identifies the field by which the response will be sorted. In a tabular response, this will be the column name to sort by. In the Segment Pattern and the Display Response, this will be the segment field name to sort by. See QIP in Section _2A.2.60.1_, \"_Segment Field Name (ST)_\" for segment field name definition.\n\n\n\nSee Chapter 5, \"Query\", for a complete discussion of queries and their responses.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,11 +40,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -61,6 +62,7 @@
         "id": "SRT.2",
         "path": "SRT.2",
         "short": "Sequencing",
+        "defintion": "*Definition:* Identifies how the field or parameter will be sorted; and, if sorted, whether the sort will be case sensitive (the default) or not. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70397[_HL7 Table 0__397 –_ _Sequencing_] for valid values\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -74,11 +76,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

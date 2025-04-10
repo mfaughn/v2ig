@@ -1,8 +1,19 @@
 = Personnel Management
 
 == Introduction
+[v291_section="15.2"]
 
-FIXME
+The Personnel Management transactions set provides for the transmission of new or updated administration information about individual healthcare practitioners and supporting staff members. Since many systems (e.g., security, scheduling, orders, etc.), must be able to closely monitor changes in certain information regarding individual healthcare practitioners, the Personnel Management transaction set is used to clearly identify these events. For example, it is important to a Security System to be aware of when a staff member was hired or specific role has been terminated. Prior to Version 2.4, master file updates were the only method to update this information. However, when any of these changes are reported as master file update notifications, it is not obvious which of the data has been changed, and is cumbersome to process efficiently. It should be noted that Personnel Management functions that do not affect healthcare administration (e.g., benefits) are not addressed in this chapter.
+
+Generally, information is entered into a Personnel Management system and passed to other systems requiring individual healthcare practitioner data either in the form of an unsolicited update or a response to a record-oriented query.
+
+This document defines the transactions that occur at the application layer (the seventh level of the ISO-OSI models), that is, the abstract messages. The examples included in this chapter were constructed using the HL7 Encoding Rules, Trigger Events and Messages.
+
+Each trigger event is documented below, along with the applicable form of the message exchange. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, section 2.12, "Chapter Formats for Defining HL7 Messages."
+
+The trigger events that follow are served by the unsolicited Personnel Management update (PMU) and General Acknowledgment (ACK) response.
+
+The information that is included in any of these trigger event transactions can be more than the minimum necessary to communicate that event. Any of the fields occurring in the segments listed for the message can be used. A few or many fields can be used as agreed upon during implementation. However, please note, that when the contents of a field change for a field that is not necessarily related to the trigger event, it is a matter for implementation negotiation as to whether the receiving systems can capture this changed data.
 
 == Technical Specs
 
@@ -18,8 +29,27 @@ xref:technical_specs/B05.adoc[Message - B05 Deactivate Practicing Person]
 
 xref:technical_specs/B06.adoc[Message - B06 Terminate Practicing Person]
 
+xref:technical_specs/Q25_K25.adoc[Message - Q25/K25 Query Personnel Information]
+
 xref:technical_specs/B07.adoc[Message - B07 Grant Certificate/Permission]
 
 xref:technical_specs/B08.adoc[Message - B08 Revoke Certificate/Permission]
 
-xref:technical_specs/Q25_K25.adoc[Message - Q25/K25 Query Personnel Information]
+== Examples
+
+=== Add Personnel Record - Event B01
+[v291_section="15.5.1"]
+
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|199902280700||PMU^B01^PMU_B01|MSGID002|P|2.8|<cr>
+EVN|B01|199902280700|<cr>
+STF||U2246^^^PLW~111223333^^^USSSA^SS|HIPPOCRATES^HAROLD^H^JR^DR^M.D.|P|M|19511004|A|^ICU|^MED|(555)555-1003X345CO~(555)555-3334CH(555)555-1345X789CB|1003 HEALTHCARE DRIVE^SUITE 200^ANNARBOR^MI^98199^U.S.A.^H~3029 HEALTHCARE DRIVE^^ANN ARBOR, MI^98198^U.S.A.^O |19890125^DOCTORSAREUS MEDICAL SCHOOL&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
+GSP|1|S||76691-5^Gender identity^LN |446151000124109^Identifies as male gender^SCT|20210101
+GSP|2|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/himself^LN|20210101
+PRA||^HIPPOCRATES FAMILY PRACTICE|ST|I|OB/GYN^STATE BOARD OF OBSTETRICS AND GYNECOLOGY^C^19790123|1234887609^UPIN~1234987^CTY^MECOSTA~223987654^TAX~1234987757^DEA~12394433879^MDD^CA|ADMIT&&ADT^MED&&L2^19941231~DISCH&&ADT^MED&&L2^19941231|
+AFF|1|AMERICAN MEDICAL ASSOCIATION|123 MAIN STREET^^OUR TOWN^CA^98765^U.S.A.^M |19900101|
+LAN|1|ESL^SPANISH^ISO639|1^READ^HL70403|1^EXCELLENT^HL70404|
+LAN|2|ESL^SPANISH^ISO639|2^WRITE^HL70403|2^GOOD^HL70404|
+LAN|3|FRE^FRENCH^ISO639|3^SPEAK^HL70403|3^FAIR^HL70404|
+EDU|1|BA^BACHELOR OF ARTS^HL70360|19810901^19850601|19810901^19850601|19850701|YALE UNIVERSITY^L|U^HL70402|456 CONNECTICUT AVENUE^^NEW HAVEN^CO^87654^U.S.A.^M|
+EDU|2|MD^DOCTOR OF MEDICINE^HL70360|19850901^19890601|19850901^19890601|19850701|HARVARD MEDICAL SCHOOL^L |M^HL70402|123 MASSACHUSETTS AVENUE^^CAMBRIDGE^MA^76543^U.S.A.^M|

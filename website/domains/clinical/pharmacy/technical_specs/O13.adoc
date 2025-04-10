@@ -47,6 +47,7 @@ FT1|2|||200607211055||CP|00340024110^VERAPAMIL 120MG TABLET ^NDC|||100|5.00&USD|
 The use of RDS with the trigger of O01 and RRD with the trigger O02 is maintained for backward compatibility as of v 2.4 *_and is withdrawn as of v 2.7_*.
 
 [tabset]
+O13
 
 [NOTE]
 The NTE segment(s) following the PD1 segment are intended to communicate notes and comments relative to the patient.

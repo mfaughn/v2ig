@@ -10,6 +10,8 @@ The fields included when this message is sent should be the fields pertinent to 
 As there is no specific field for the LOA start date/time, it is recommended that field _EVN-6 - Event Occurred_ contain the date/time the patient actually returned from LOA. _PV2-47 - Expected LOA Return Date/Time_ is used to communicate the date/time the patient was expected to return from LOA.
 
 [tabset]
+A22
+
 
 
 

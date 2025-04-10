@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "VID",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/VID",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "VID",
         "path": "VID",
         "short": "version identifier",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b755a00>",
+        "definition": "",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "VID.1",
         "path": "VID.1",
         "short": "Version ID",
+        "defintion": "*Definition:* Used to identify the HL7 version. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70104[_HL7 Table 0__104 - V__ersion ID_] in Chapter 2C for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,11 +44,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -65,6 +66,7 @@
         "id": "VID.2",
         "path": "VID.2",
         "short": "Internationalization Code",
+        "defintion": "*Definition:* Used to identify the international affiliate country code. The values to be used are those of ISO 3166 -1:1977. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70399[_HL7 Table 0__399 - Country Code_] in Chapter 2C for the 3-character codes as defined by ISO 3166 table.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -78,7 +80,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -87,6 +89,7 @@
         "id": "VID.3",
         "path": "VID.3",
         "short": "International Version ID",
+        "defintion": "*Definition:* This field component identifies international affiliate’s version; it is especially important when the international affiliate has more than a single local version associated with a single US version.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,7 +99,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

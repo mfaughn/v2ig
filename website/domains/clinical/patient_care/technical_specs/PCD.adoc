@@ -1,9 +1,11 @@
 = Message - PCD Patient Pathway Delete
 :v291_section: "12.3.3"
-:v2_section_name: "PPP/ACK - Patient Pathway Message (Events PCB, PCC, PCD)"
+:v2_section_name: "PPP/ACK - Patient Pathway Message (Event PCD)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 [tabset]
+PCD
+
 
 
 

@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "EI",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/EI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "EI",
         "path": "EI",
         "short": "entity identifier",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9114c0>",
+        "definition": "*Definition:* The entity identifier defines a given entity within a specified series of identifiers.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "EI.1",
         "path": "EI.1",
         "short": "Entity Identifier",
+        "defintion": "*Definition:* The first component, <entity identifier>, is usually defined to be unique within the series of identifiers created by the <assigning authority>, defined by a hierarchic designator, represented by components 2 through 4. See Section _2A.2.33_, \"_HD - hierarchic designator_\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "EI.2",
         "path": "EI.2",
         "short": "Namespace ID",
+        "defintion": "*Definition:* See Section _2A.2.33.1_, \"_Namespace ID (IS)_\" for definition. The component intentionally remains associated with the IS data type in v 2.7.\n\n\n\nThe assigning authority is a unique identifier of the system (or organization or agency or department) that creates the data. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0__363 – Assigning Authority_] for suggested values.\n\n\n\n*NOTE:* When the HD is used as a part of another data type, in this case as part of the EI data type, this table may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementers may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[User-defined Table 0300 – Namespace ID] for the first component\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -74,15 +76,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -96,6 +98,7 @@
         "id": "EI.3",
         "path": "EI.3",
         "short": "Universal ID",
+        "defintion": "*Definition:* See Section _2A.2.33.2_, \"_Universal ID (ST)_\" for definition.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -105,15 +108,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -127,6 +130,7 @@
         "id": "EI.4",
         "path": "EI.4",
         "short": "Universal ID Type",
+        "defintion": "*Definition:* Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70301[_HL7 Table 0301 - Universal ID Type_] for valid values. See Section _2A.2.33.3_, \"_Universal ID Type (ID)_,\" for definition.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -140,11 +144,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

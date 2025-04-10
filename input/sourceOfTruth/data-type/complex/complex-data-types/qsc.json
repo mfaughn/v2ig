@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "QSC",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/QSC",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "QSC",
         "path": "QSC",
         "short": "query selection criteria",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b9fd488>",
+        "definition": "*Definition:* This field indicates the conditions that qualify the rows to be returned in the query response.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "QSC.1",
         "path": "QSC.1",
         "short": "Segment Field Name",
+        "defintion": "*Definition:* The name of the field that is participating as a qualifier (usually the \"key\"). Refer to Section _2A.2.60.1_, “_Segment Field Name (ST)_,” for segment field name conventions.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "QSC.2",
         "path": "QSC.2",
         "short": "Relational Operator",
+        "defintion": "*Definition:* Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70209[_HL7 Table 0209 - Relational Operator_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -61,11 +63,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -83,6 +85,7 @@
         "id": "QSC.3",
         "path": "QSC.3",
         "short": "Value",
+        "defintion": "*Definition:* The value to which the field will be compared.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,15 +95,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -114,6 +117,7 @@
         "id": "QSC.4",
         "path": "QSC.4",
         "short": "Relational Conjunction",
+        "defintion": "*Definition:* Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70210[_HL7 Table 0210 - Relational Conjunction_] for valid values. The relational conjunction is defined as follows: If more than one comparison is to be made to select qualifying rows, a conjunction relates this repetition of the field to the next.\n\n\n\n• When applied to strings, the relational operators LT, GT, LE, and GE imply an alphabetic comparison.\n\n\n\n• A \"generic\" comparison selects a record for inclusion in the response when the beginning of the designated field matches the select string.\n\n\n\n• Where a repeating field is specified as an operand, a match on any instance of that field qualifies the row for inclusion in the response message.\n\n\n\n• AND takes precedence over OR. More sophisticated precedence rules require that the query be expressed as an embedded query language message or a stored procedure query message (see Chapter 5, \"Query\").\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,11 +131,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

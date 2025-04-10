@@ -6,6 +6,7 @@
 An event B04 signals that a staff member is available for work (e.g., schedules can be created) and has a relationship with the institution. This message applies to STF-7.
 
 [tabset]
+B04
 
 
 

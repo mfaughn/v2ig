@@ -18,11 +18,9 @@ This query/response is designed for interaction between a client system and an M
 |Purpose: |Request that an MPI allocate an identifier for a given domain.
 |===
 
-[query_message_structure-table]
-
-
-
-[response_message_structure-table]
+[tabset]
+Q24
+K24
 
 
 

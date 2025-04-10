@@ -1,13 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ST"
+  "id" : "ST",
   "meta" : {
     "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
   },
-  "text" : {
-    "status" : "generated",
-    "div" : "<p>FIXME</p>"
-  },
+
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -29,10 +26,9 @@
   "url" : "http://hl7.org/v2/StructureDefinition/ST",
   "version" : "0.0.1",
   "name" : "ST",
-  "title" : " HL7 v2 String Primitive Type",
+  "title" : "HL7 v2 String Primitive Type",
   "status" : "active",
-  "experimental" : "true",
-  "date" : "2024-06-01T12:00:00+11:00"
+  "date" : "2024-06-01T12:00:00+11:00",
   "description" : "FIXME add from v2",
   "kind" : "primitive-type",
   "abstract" : false,
@@ -50,7 +46,7 @@
           "human" : {
             "value" : "The value must include at least one non-whitespace character. Leading whitespace is forbidden."
           },
-          "expression" : "string.value.matches('^\S.*')"
+          "expression" : "string.value.matches('^\\S.*')"
         }
       },
       {

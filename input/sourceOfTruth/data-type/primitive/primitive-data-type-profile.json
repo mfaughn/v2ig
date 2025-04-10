@@ -4,7 +4,7 @@
   "id" : "v2-primitive-data-type-profile",
   "version" : "0.0.1",
   "name" : "V2DataTypeDefinition",
-  "title" : " HL7 v2 Data Type Definition",
+  "title" : "HL7 v2 Data Type Definition",
   "status" : "active",
   "kind" : "resource",
   "abstract" : false,
@@ -19,7 +19,7 @@
         "path" : "StructureDefinition.url",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/DataTypes"
+          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-primitive-data-type-urls"
         }
       },
       {
@@ -35,7 +35,7 @@
       {
         "id" : "StructureDefinition.derivation",
         "path" : "StructureDefinition.derivation",
-        "fixedCode" : "constraint" // I don't think this can always be true
+        "fixedCode" : "constraint"
       }
     ]
   }

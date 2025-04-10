@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "RPT",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/RPT",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "RPT",
         "path": "RPT",
         "short": "repeat pattern",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b93b900>",
+        "definition": "Definition: The repeat pattern data type should be used where it is necessary to define the frequency at which an event is to take place. This data type provides a way to define repeat pattern codes \"on the fly\". The repeat pattern code is equivalent to the TQ data type, component 2, sub-component 1 (repeat pattern). The additional components define the meaning of the repeat pattern code. Components 2 - 10 are used to define relatively simple repeat patterns. Component 11 is provided to define complex repeat patterns. This data type forms a bridge between the 2.x Repeat Pattern concept from Quantity/Timing, and the Version 3.0 GTS General Timing Specification. Component 1 is the 2.x concept of repeat pattern. Components 2-7 are derived from the version 3.0 data type PIVL. Components 8-10 are derived from the version 3.0 EIVL data type. If a repeat pattern cannot be defined using components 2-10, then component 11, General Timing Specification is provided. This allows the full literal form of the version 3.0 GTS to be specified.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "RPT.1",
         "path": "RPT.1",
         "short": "Repeat Pattern Code",
+        "defintion": "*Definition:* A code representing the repeat pattern defined by the other components of this data type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70335[_User-defined Table 0335 – Repeat Pattern_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "RPT.2",
         "path": "RPT.2",
         "short": "Calendar Alignment",
+        "defintion": "*Definition:* Specifies an alignment of the repetition to a calendar (e.g., to distinguish every 30 days from “the 5^th^ of every month”). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[_HL7 Table 0527 - Calendar Alignment_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -65,11 +67,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -87,6 +89,7 @@
         "id": "RPT.3",
         "path": "RPT.3",
         "short": "Phase Range Begin Value",
+        "defintion": "*Definition:* Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular _RPT.2 - Calendar Alignment_ to the beginning of the phase. If Calendar Alignment is DW (days of week), then this would be the offset from the beginning of the week.\n\n\n\nIf Phase Range Begin Value is populated, but Phase Range End Value is not populated, then this component defines when the period (RPT.5, 6) begins.\n\n\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the earliest point in time at which the period (RPT.5, 6) will begin.\n\n\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[HL7 Table 0527 - Calendar Alignment]_ for the units of measure associated with a particular calendar alignment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,15 +99,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "10"
+                "valueInteger": 10
               },
               {
                 "url": "noTruncate",
@@ -118,6 +121,7 @@
         "id": "RPT.4",
         "path": "RPT.4",
         "short": "Phase Range End Value",
+        "defintion": "*Definition:* Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular _RPT.2 - Calendar Alignment_ to the end of the phase.\n\n\n\nIf Phase Range End Value is populated, but Phase Range Begin Value is not populated, then this component defines when the timing period (RPT.5, 6) begins.\n\n\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the latest point in time at which the period (RPT.5, 6) will begin.\n\n\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[HL7 Table 0527 - Calendar Alignment]_ for the units of measure associated with a particular calendar alignment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,15 +131,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "10"
+                "valueInteger": 10
               },
               {
                 "url": "noTruncate",
@@ -149,6 +153,7 @@
         "id": "RPT.5",
         "path": "RPT.5",
         "short": "Period Quantity",
+        "defintion": "*Definition:* A time duration specifying the frequency at which the periodic interval repeats. _RPT.6 - Period Units_ defines the units of time for this component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -158,15 +163,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "10"
+                "valueInteger": 10
               },
               {
                 "url": "noTruncate",
@@ -180,6 +185,7 @@
         "id": "RPT.6",
         "path": "RPT.6",
         "short": "Period Units",
+        "defintion": "*Definition:* Defines the units used for _RPT.5 - Period Quantity_. Constrained to units of time. Best practice is to use UCUM. Refer to External table the Unified Code for Units of Measure (UCUM) [https://ucum.org/] for valid values.\n\n\n\nCondition Rule: This component is required if _RPT.5 - Period Quantity_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -189,7 +195,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -198,6 +204,7 @@
         "id": "RPT.7",
         "path": "RPT.7",
         "short": "Institution Specified Time",
+        "defintion": "*Definition:* A code that indicates whether the exact timing is up to the party executing the schedule (e.g., to distinguish “every 8 hours” from “3 times a day”). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] for valid values.\n\n\n\n• Y - exact timing up to party executing schedule.\n\n\n\n• N - exact timing as specified.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -211,11 +218,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -233,6 +240,7 @@
         "id": "RPT.8",
         "path": "RPT.8",
         "short": "Event",
+        "defintion": "*Definition:* A code for a common (periodical) activity of daily living. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70528[_HL7 Table 0528 - Event-Related Period_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -246,11 +254,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -268,6 +276,7 @@
         "id": "RPT.9",
         "path": "RPT.9",
         "short": "Event Offset Quantity",
+        "defintion": "*Definition:* An interval that marks the offsets for the beginning, width and end of the event-related periodic interval measured from the time each such event actually occurred. A positive numeric value indicates the amount of time after the event in RPT.8. A negative numeric value indicates the amount of time prior to the event in _RPT.8_. _RPT.10 - Event Offset Units_ defines the units of time for this component.\n\n\n\n*Usage Note:* This component should not be valued unless there is a value in RPT-8 (Event).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -277,15 +286,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "10"
+                "valueInteger": 10
               },
               {
                 "url": "noTruncate",
@@ -299,6 +308,7 @@
         "id": "RPT.10",
         "path": "RPT.10",
         "short": "Event Offset Units",
+        "defintion": "*Definition:* Defines the units used for RPT-9 (Event Offset Quantity). Constrained to units of time. The codes for unit of measure are specified in the Unified Code for Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].\n\n\n\nCondition Rule: This component is required if _RPT.9 - Event Offset Quantity_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -308,7 +318,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -317,6 +327,7 @@
         "id": "RPT.11",
         "path": "RPT.11",
         "short": "General Timing Specification",
+        "defintion": "*Definition:* The General Timing Specification as defined by the Version 3 Data Types document.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -326,7 +337,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

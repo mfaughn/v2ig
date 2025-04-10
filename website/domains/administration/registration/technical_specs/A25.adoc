@@ -8,6 +8,8 @@ The A25 event is sent when an A16 (pending discharge) event is cancelled, either
 The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
 
 [tabset]
+A25
+
 
 
 

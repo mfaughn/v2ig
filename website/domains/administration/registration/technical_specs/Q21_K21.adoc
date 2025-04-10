@@ -16,11 +16,9 @@
 |Purpose: |Returns demographics information for a specified person
 |===
 
-[query_message_structure-table]
-
-
-
-[response_message_structure-table]
+[tabset]
+Q21
+K21
 
 
 

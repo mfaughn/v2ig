@@ -18,6 +18,7 @@ An alert observation reporting application may also derive a new alertable obser
 If the reporting application can identify a preferred recipient for the alert, that may be conveyed in the PRT segment related to the OBR or OBX (with PRT-4 value RCT "Results Copies To"). This recipient may not be the same as the recipient(s) identified in a source observation. There is no expectation that the reporting application will _a priori_ know a preferred recipient, nor that the receiving application will deliver the alert to the identified recipient (e.g., it may be delivered to an "on-call" clinician in lieu of the identified recipient).
 
 [tabset]
+R40
 
 
 

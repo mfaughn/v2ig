@@ -1,8 +1,9 @@
 = Message - Stock Supply Requisition
 :v291_section: "4.10.1"
-:v2_section_name: "OMS - stock requisition order message (event O05)"
+:v2_section_name: "OMS - stock requisition order message (Event O05)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 Stock requisition orders use the ORM where RQD is the detail segment for backward compatibility or can use the OMS and ORS messages described below.
 
 [tabset]
+O05

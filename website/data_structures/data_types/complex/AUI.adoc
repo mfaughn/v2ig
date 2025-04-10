@@ -4,7 +4,7 @@
 :code: AUI
 :name: authorization information
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [datatype-definition]
 This data type specifies the identifier or code for an insurance authorization instance and its associated detail.

@@ -6,4 +6,4 @@ FIXME
 
 == Technical Specs
 
-xref:technical_specs/Unsolicited_Specimen_Shipment_Manifest.adoc[Message - Unsolicited Specimen Shipment Manifest]
+xref:technical_specs/R26.adoc[Message - R26 Unsolicited Specimen Shipment Manifest]

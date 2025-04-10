@@ -4,7 +4,7 @@
 :code: MA
 :name: multiplexed array
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 This data type is used to represent channel-multiplexed waveform data. Assuming that fields that utilize this data type repeat and that Y represents the specific repetition, the components of the repetition will reflect sample Y from each channel.

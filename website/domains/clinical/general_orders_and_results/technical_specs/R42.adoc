@@ -22,6 +22,7 @@ The OBX-8 field for these messages should be left blank or set to “N” for no
 The ORU^R40 message is outside of the order-fulfilling cycle of the ORU and OUL messages with other trigger events, and is supplemental to those order-fulfilling observations. As such, the results conveyed in the ORU^R40 message do not replace, edit, or override the results of messages with other trigger events.
 
 [tabset]
+Obs
 
 
 

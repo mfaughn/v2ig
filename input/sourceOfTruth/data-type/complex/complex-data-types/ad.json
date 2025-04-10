@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "AD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/AD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "AD",
         "path": "AD",
         "short": "address",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1be100>",
+        "definition": "Definition: This data type specifies the address of a person, place or organization.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "AD.1",
         "path": "AD.1",
         "short": "Street Address",
+        "defintion": "*Definition:* This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "120"
+                "valueInteger": 120
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "AD.2",
         "path": "AD.2",
         "short": "Other Designation",
+        "defintion": "*Definition:* This component specifies the second line of address. In general, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,15 +72,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "120"
+                "valueInteger": 120
               },
               {
                 "url": "noTruncate",
@@ -92,6 +94,7 @@
         "id": "AD.3",
         "path": "AD.3",
         "short": "City",
+        "defintion": "*Definition:* This component specifies the city, district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -101,15 +104,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "50"
+                "valueInteger": 50
               },
               {
                 "url": "noTruncate",
@@ -123,6 +126,7 @@
         "id": "AD.4",
         "path": "AD.4",
         "short": "State or Province",
+        "defintion": "*Definition:* This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -132,15 +136,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "50"
+                "valueInteger": 50
               },
               {
                 "url": "noTruncate",
@@ -154,6 +158,7 @@
         "id": "AD.5",
         "path": "AD.5",
         "short": "Zip or Postal Code",
+        "defintion": "*Definition:* This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9 and the Australian Postcode takes the form 9999.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -163,15 +168,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "12"
+                "valueInteger": 12
               },
               {
                 "url": "noTruncate",
@@ -185,6 +190,7 @@
         "id": "AD.6",
         "path": "AD.6",
         "short": "Country",
+        "defintion": "*Definition:* This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70399[HL7 Table 0399 - Country Code] in Chapter 2C, Code Tables, for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -198,11 +204,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -220,6 +226,7 @@
         "id": "AD.7",
         "path": "AD.7",
         "short": "Address Type",
+        "defintion": "*Definition:* This component specifies the kind or type of address. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70190[_HL7 Table_ _0190 - Add__ress Type_] in Chapter 2C, Code Tables, for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -233,11 +240,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -255,6 +262,7 @@
         "id": "AD.8",
         "path": "AD.8",
         "short": "Other Geographic Designation",
+        "defintion": "*Definition:* This component specifies any other geographic designation that may be necessary. It includes county, bioregion, SMSA, etc.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -264,15 +272,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "50"
+                "valueInteger": 50
               },
               {
                 "url": "noTruncate",

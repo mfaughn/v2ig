@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DR",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DR",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DR",
         "path": "DR",
         "short": "date/time range",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b952588>",
+        "definition": "",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DR.1",
         "path": "DR.1",
         "short": "Range Start Date/Time",
+        "defintion": "*Definition:* The first component contains the earliest date/time (time stamp) in the specified range.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,7 +40,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -48,6 +49,7 @@
         "id": "DR.2",
         "path": "DR.2",
         "short": "Range End Date/Time",
+        "defintion": "The second component contains the latest date/time in the specified range.\n\n\n\n*NOTE:* The DTM (time stamp) data type allows the specification of precision.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -57,7 +59,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

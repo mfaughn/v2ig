@@ -7,3 +7,5 @@ A notification that a patient did not show up for an appointment. For example, i
 
 Patient Administration events defined in Chapter 3 can be used to indicate that a patient has arrived for an appointment, e.g., A01 (admit/visit notification), A04 (register a patient), A05 (pre-admit a patient), or A10 (patient arriving - tracking) as possible examples. Similarly, Patient Administration transactions can be used to identify the end of an appointment, e.g., A03 (discharge/end visit) or A09 (patient departing - tracking) as possible examples.
 
+[tabset]
+S26

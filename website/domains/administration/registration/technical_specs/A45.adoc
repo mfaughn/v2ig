@@ -14,6 +14,8 @@ All of the identifiers superior to the visit number or alternate visit ID should
 See sections link:#merging-patientperson-information[_3.6.2_&#44;] "link:#merging-patientperson-information[_Merging patient/person information_]," and link:#move[_3.6.2.1.3_], "link:#move[_Move_]," for a discussion of issues related to the implementation of move messages. The fields included when this message is sent should be the fields pertinent to communicate this event. When demographic data in other fields change, it is recommended that the A08 (update patient information) event be used in conjunction with this message. However, all PID data associated with the "correct target visit ID" are treated as updated information.
 
 [tabset]
+A45
+
 
 
 

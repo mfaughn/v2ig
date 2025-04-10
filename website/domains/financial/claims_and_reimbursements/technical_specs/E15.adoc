@@ -1,6 +1,6 @@
 = Message - E15 Payment/Remittance Advice
 :v291_section: "16.3.9"
-:v2_section_name: "EHC^E15 – Payment/Remittance Advice (event E15) "
+:v2_section_name: "EHC^E15 – Payment/Remittance Advice (Event E15) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to send a payment/ remittance advice to a Payee for the payment of HealthCare Services Invoices and/or other adjustments. The Payment/Remittance Advice can be sent to the originating Provider Application (Network Application ID) or alternately to the Payee's Network Application ID, depending on how the Payee has been configured by the Payer. If a Payment/Remittance Advice is paid by check, it typically has a 1 to 1 correspondence with a check number. However, there are occasions when one check number covers multiple Payment/Remittance Advices. This message does not enforce a 1 to 1 relationship between check number and Payment/Remittance Advice. That is, the same check number (Check Number on PMT) can be used on multiple Payment/Remittance Advices.
@@ -24,6 +24,7 @@ The Provider Tracking Number and Payer Tracking Number must be echoed on any sub
 {empty}5) The Payment/Remittance Amount on PMT must equal to the sum of all Adjudicated/Paid Amount for all IPR segments PLUS the sum of all Adjudication/Paid Amounts for all ADJ segments in the Payment/Re­mittance Advice, excluding information adjustment types (Adjustment Category on ADJ = "IN").
 
 [tabset]
+E15
 
 
 

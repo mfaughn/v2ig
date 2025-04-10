@@ -1,11 +1,9 @@
 = Message - U03 Specimen Status Update 
-:v291_section: "13.3.3"
+:v291_section: "13.2.3"
 :v2_section_name: "SSU/ACK - Specimen Status Update (Event U03)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The container detail segment is the data necessary to maintain the containers that are being used throughout the Laboratory Automation System.
+This message is used to send information concerning the location and status of specimens from one application to another (e.g., automated equipment to a Laboratory Automation System). The OBX segments attached to the SAC should be used for transfer of information not included in the SAC segment, but relevant for automating processing (e.g., additional characteristics of the specimen container). The NTE segments attached to the SAC should be used for transfer of descriptive information not included in the SAC segment, but relevant for the users (e.g., aliquot groups for an aliquot sample container).
 
-The specimens in many laboratories are transported and processed in containers (e.g., sample tubes). When SPM and SAC are used in the same message, then the conceptually duplicate attributes will be valued only in the SPM. This applies to _SAC-6 Specimen Source_, _SAC-27 Additives_, and _SAC-43 Special Handling Considerations_.
-
-[segment_definition-table]
-
+[tabset]
+U03

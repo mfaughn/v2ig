@@ -1,6 +1,6 @@
 = Message - Q32/K32 Find Candidates including Visit Information (QBP) and Response (RSP)
 :v291_section: "3.3.63"
-:v2_section_name: "QBP/RSP - Find Candidates including Visit Information (QBP) and Response (RSP) (Events Q32  and K32 ) "
+:v2_section_name: "QBP/RSP - Find Candidates including Visit Information (QBP) and Response (RSP) (Events Q32 and K32)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This query/response is designed for interaction between a client system and an MPI (Master Person Index). The query consists of a set of demographic and/or visit attribute values for a person, and the response is the list of candidates considered by the MPI to match that set.
@@ -18,11 +18,9 @@ This query/response is designed for interaction between a client system and an M
 |Purpose: |Returns list of candidates matching demographic and/or visit data specified by the input parameters.
 |===
 
-[query_message_structure-table]
-
-
-
-[response_message_structure-table]
+[tabset]
+Q32
+K32
 
 
 

@@ -6,6 +6,7 @@
 This message contains information from the blood unit collection procedure from the donor.
 
 [tabset]
+O48
 
 
 

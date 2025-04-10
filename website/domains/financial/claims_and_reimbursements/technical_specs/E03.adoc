@@ -1,6 +1,7 @@
 = Message - E03 Query HealthCare Services Invoice Status
 :v291_section: "16.3.4"
-:v2_section_name: "QBP^E03 – Query HealthCare Services Invoice Status (event E03); RSP^E03 – HealthCare Services Invoice Status Query Response (event E03) "
+:v2_section_name: "QBP^E03 – Query HealthCare Services Invoice Status (Event E03)"
+// and RSP^E03 – HealthCare Services Invoice Status Query Response (Event E03)
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to respond to a QPB^E03 – Query HealthCare Services Invoice. It provides Invoice and invoice processing information to a Provider.
@@ -15,7 +16,5 @@ Processing Rules:
 
 {empty}3) A unique query identifier (Query Tag on QPD) must be generated for each query.
 
-[response_message_structure-table]
-
-
-
+[tabset]
+E03

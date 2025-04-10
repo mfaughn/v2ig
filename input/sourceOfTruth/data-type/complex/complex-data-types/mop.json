@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "MOP",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/MOP",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "MOP",
         "path": "MOP",
         "short": "money or percentage",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b498b78>",
+        "definition": "Definition: This data type specifies an amount that may be either currency or a percentage. It is a variation on the MO data type that is limited to currency.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "MOP.1",
         "path": "MOP.1",
         "short": "Money or Percentage Indicator",
+        "defintion": "*Definition:* Specifies whether the amount is currency or a percentage.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70148[_HL7 Table 0__148 –_ _Money or Percentage Indicato_]r for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "MOP.2",
         "path": "MOP.2",
         "short": "Money or Percentage Quantity",
+        "defintion": "*Definition:* Specifies the currency or percentage quantity.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -61,7 +63,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -70,6 +72,7 @@
         "id": "MOP.3",
         "path": "MOP.3",
         "short": "Monetary Denomination",
+        "defintion": "*Definition:* the denomination in which the quantity is expressed where the amount is currency. The values for the denomination component are the three-character codes specified in ISO-4217. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#ISO0913[Externally-defined Table 0913 – Monetary Denomination Code].\n\n\n\nIf the denomination is not specified, the context of the message or _MSH-17 Country Code_, in Chapter 2, section 2.14.9.17, is used to determine the default.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,11 +86,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",

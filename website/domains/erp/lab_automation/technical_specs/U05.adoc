@@ -1,9 +1,9 @@
 = Message - U05 Automated Equipment Inventory Update
-:v291_section: "13.3.5"
+:v291_section: "13.2.5"
 :v2_section_name: "INU/ACK – Automated Equipment Inventory Update (Event U05)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The equipment command segment contains the information required to notify the receiving component what is to happen.
+This message is used to request information about inventory items from one application to another (e.g., Laboratory Automation System to automated equipment). The equipment specified in the EQU segment should respond with the information about inventory item requested in the INV segment (or all items).
 
-[segment_definition-table]
-
+[tabset]
+U05

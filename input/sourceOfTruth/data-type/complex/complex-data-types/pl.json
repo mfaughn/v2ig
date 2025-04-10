@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "PL",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/PL",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "PL",
         "path": "PL",
         "short": "person location",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b779ce8>",
+        "definition": "Definition: This data type is used to specify a patient location within a healthcare institution. Which components are valued depends on the needs of the site. For example for a patient treated at home, only the person location type is valued. It is most commonly used for specifying patient locations, but may refer to other types of locations within a healthcare setting.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "PL.1",
         "path": "PL.1",
         "short": "Point of Care",
+        "defintion": "*Definition:* This component specifies the code for the point where patient care is administered. It is conditional on PL.6 Person Location Type (e.g., nursing unit or department or clinic). After floor, it is the most general patient location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70302[_User-defined Table 0302 - P__oint of Care_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "C"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "PL.2",
         "path": "PL.2",
         "short": "Room",
+        "defintion": "*Definition:* This component specifies the code for the patient's room. After point of care, it is the most general person location designation. Refer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29_CH02C_Tables.docx#HL70303[_User-defined Table 0303 - Room_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -65,7 +67,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -74,6 +76,7 @@
         "id": "PL.3",
         "path": "PL.3",
         "short": "Bed",
+        "defintion": "*Definition:* This component specifies the code for the patient's bed. After room, it is the most general person location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70304[_User-defined Table 03__04 - Bed_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -87,7 +90,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -96,6 +99,7 @@
         "id": "PL.4",
         "path": "PL.4",
         "short": "Facility",
+        "defintion": "*Definition:* This component is subject to site interpretation but generally describes the highest level physical designation of an institution, medical center or enterprise. It is the most general person location designation.\n\n\n\nSee Section _2A.2.33_, “_HD - hierarchic designator_” for discussion of data type.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Na__mespace ID_] (referenced by the first sub-component of the HD component) may be redefined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -105,7 +109,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -114,6 +118,7 @@
         "id": "PL.5",
         "path": "PL.5",
         "short": "Location Status",
+        "defintion": "*Definition:* This component specifies the code for the status or availability of the location. For example, it may convey bed status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70306[_User-defined Table 0306 - L__ocation Status_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,15 +132,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -149,6 +154,7 @@
         "id": "PL.6",
         "path": "PL.6",
         "short": "Person Location Type",
+        "defintion": "*Definition:* Person location type is the categorization of the person’s location defined by facility, building, floor, point of care, room or bed. Although not a required field, when used, it may be the only populated field. It usually includes values such as nursing unit, department, clinic, SNF, physician’s office. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70305[_User-defined Table 0305 - Person lo__cation type_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -162,15 +168,15 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -184,6 +190,7 @@
         "id": "PL.7",
         "path": "PL.7",
         "short": "Building",
+        "defintion": "*Definition:* This component specifies the code for the building where the person is located. After facility, it is the most general person location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70307[_User-defined Table 0307 - Building_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -197,7 +204,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -206,6 +213,7 @@
         "id": "PL.8",
         "path": "PL.8",
         "short": "Floor",
+        "defintion": "*Definition:* This component specifies the code for the floor where the person is located. After building, it is the most general person location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70308[_User-defined Table 0308 - Floor_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -219,7 +227,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -228,6 +236,7 @@
         "id": "PL.9",
         "path": "PL.9",
         "short": "Location Description",
+        "defintion": "*Definition:* This component describes the location in free text.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -237,15 +246,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",
@@ -259,6 +268,7 @@
         "id": "PL.10",
         "path": "PL.10",
         "short": "Comprehensive Location Identifier",
+        "defintion": "*Definition:* The unique identifier that represents the physical location as a whole without regard for the individual components. This accommodates sites that may have a different method of defining physical units or who may code at a less granular level. For example, point of care, room, and bed may be 1 indivisible code.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -268,7 +278,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -277,6 +287,7 @@
         "id": "PL.11",
         "path": "PL.11",
         "short": "Assigning Authority for Location",
+        "defintion": "*Definition:* The entity that creates the data for the individual physical location components. If populated, it should be the authority for all components populated. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Authority_] for suggested values for the first sub-component of the HD component, <namespace ID>.\n\n\n\nThis component makes it possible for codes to be differentiated when the field in which this data type is used repeats.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Namespace ID_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementors may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 – Namespace ID_] for the first sub-component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -290,7 +301,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

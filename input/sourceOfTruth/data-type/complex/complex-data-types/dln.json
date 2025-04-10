@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "DLN",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/DLN",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "DLN",
         "path": "DLN",
         "short": "driver’s license number",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b995298>",
+        "definition": "Definition: This field contains the driver’s license information. For state or province refer to official postal codes for that country; for country refer to ISO 3166 for codes.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "DLN.1",
         "path": "DLN.1",
         "short": "Driver's License Number",
+        "defintion": "*Definition:* This field contains the driver’s license number.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "20"
+                "valueInteger": 20
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "DLN.2",
         "path": "DLN.2",
         "short": "Issuing State, Province, Country",
+        "defintion": "*Definition:* Issuing authority for driver’s license. For state or province, refer to official postal codes for that country; for country, refer to ISO 3166 for codes. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70333[_User-defined Table 0333 - Driver’s License Issuing Authorit__y_] is used as the HL7 identifier for the user-defined table of values for this component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -74,7 +76,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -83,6 +85,7 @@
         "id": "DLN.3",
         "path": "DLN.3",
         "short": "Expiration Date",
+        "defintion": "*Definition:* Expiration date (DT) for driver’s license.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,7 +95,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

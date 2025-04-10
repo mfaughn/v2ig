@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "AUI",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/AUI",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "AUI",
         "path": "AUI",
         "short": "authorization information",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b176418>",
+        "definition": "Definition: This data type specifies the identifier or code for an insurance authorization instance and its associated detail.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "AUI.1",
         "path": "AUI.1",
         "short": "Authorization Number",
+        "defintion": "*Definition:* Identifier assigned to the authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -39,15 +40,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "30"
+                "valueInteger": 30
               },
               {
                 "url": "noTruncate",
@@ -61,6 +62,7 @@
         "id": "AUI.2",
         "path": "AUI.2",
         "short": "Date",
+        "defintion": "*Definition:* Date of authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,7 +72,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -79,6 +81,7 @@
         "id": "AUI.3",
         "path": "AUI.3",
         "short": "Source",
+        "defintion": "*Definition:* Source of authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,15 +91,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "199"
+                "valueInteger": 199
               },
               {
                 "url": "noTruncate",

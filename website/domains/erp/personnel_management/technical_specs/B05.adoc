@@ -6,6 +6,7 @@
 An event B05 indicates that a staff member is temporarily unavailable for work, while maintaining a relationship with the institution. This message applies to STF-7.
 
 [tabset]
+B05
 
 
 

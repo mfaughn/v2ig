@@ -4,7 +4,7 @@
 :code: ERL
 :name: Message location
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]
 This data type identifies the segment and its constituent , if applicable, where the context of the element in which it is used applies.

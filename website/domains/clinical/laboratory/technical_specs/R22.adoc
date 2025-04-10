@@ -20,6 +20,7 @@ Refer to Chapter 13 Laboratory Automation for additional examples of usage of SA
 The Device segment (DEV) provides additional device information for a device referenced in one or more of the PRT segments in the message (using PRT-10 Participation Device to match DEV-2 Unique Device Identifier or PRT-22 Participation Device Type using DEV-3 Device Type).
 
 [tabset]
+R22
 
 
 

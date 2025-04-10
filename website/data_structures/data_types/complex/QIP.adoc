@@ -4,7 +4,7 @@
 :code: QIP
 :name: query input parameter list
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 This data type contains a segment field name and the list of values to be passed to the query processor.

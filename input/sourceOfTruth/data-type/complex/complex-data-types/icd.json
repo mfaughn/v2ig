@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "ICD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/ICD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "ICD",
         "path": "ICD",
         "short": "insurance certification definition",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b778b68>",
+        "definition": "Definition: This data type specifies whether insurance certification is required for particular patient types, and the time window for obtaining the certification.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "ICD.1",
         "path": "ICD.1",
         "short": "Certification Patient Type",
+        "defintion": "*Definition:* Specifies the category or type of patient for which this certification is requested. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70150[_User-defined Table 01__50_ _- Certification patient typ__e_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "ICD.2",
         "path": "ICD.2",
         "short": "Certification Required",
+        "defintion": "*Definition:* Specifies whether or not a certification is required. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -65,11 +67,11 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-length",
             "extension": [
               {
                 "url": "min",
@@ -87,6 +89,7 @@
         "id": "ICD.3",
         "path": "ICD.3",
         "short": "Date/Time Certification Required",
+        "defintion": "*Definition:* The date/time by which the certification must be obtained.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,7 +99,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "O"
           }
         ]

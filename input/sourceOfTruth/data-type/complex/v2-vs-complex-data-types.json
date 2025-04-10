@@ -1,11 +1,27 @@
 {
   "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/v2/ValueSet/ComplexDataTypes",
+  "url" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-types",
   "id": "v2-vs-complex-data-types",
   "status" : "active",
+  "meta" : {
+    "lastUpdated" : "2024-05-04T00:00:00+00:00",
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "experimental" : false,
+  "name" : "V2ComplexDataTypesVS",
+  "title" : "HL7 v2 Complex Data Types ValueSet",
+  "description" : "HL7 v2 Complex Data Types",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "inm"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/v2/CodeSystem/ComplexDataTypes"
+      "system" : "http://hl7.org/v2/CodeSystem/v2-cs-complex-data-types"
     }]
   }
 }

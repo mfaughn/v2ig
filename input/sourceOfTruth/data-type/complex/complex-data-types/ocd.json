@@ -13,8 +13,8 @@
   "status": "active",
   "kind": "logical",
   "abstract": false,
-  "type": "OCD",
-  "baseDefinition": "http://hl7.org/v2/StructureDefinition/ComplexDataType",
+  "type": "http://hl7.org/v2/StructureDefinition/OCD",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/v2-complex-data-type",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -22,7 +22,7 @@
         "id": "OCD",
         "path": "OCD",
         "short": "occurrence code and date",
-        "definition": "#<Gui_Builder_Profile::RichText:0x000000011b1d1408>",
+        "definition": "Definition: The code and associated date defining a significant event relating to a bill that may affect payer processing.",
         "min": 0,
         "max": "*"
       },
@@ -30,6 +30,7 @@
         "id": "OCD.1",
         "path": "OCD.1",
         "short": "Occurrence Code",
+        "defintion": "*Definition:* The NUBC code for the event or occurrence relating to a bill that may affect payer processing.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70350[_HL7-defined Table 03__50 – Occurrence Code_] for valid values.\n\n\n\nValues for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,7 +44,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           }
         ]
@@ -52,6 +53,7 @@
         "id": "OCD.2",
         "path": "OCD.2",
         "short": "Occurrence Date",
+        "defintion": "*Definition:* The date the event, relating to a bill that may affect payer processing, occurred.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -61,15 +63,15 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-optionality",
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
             "extension": [
               {
                 "url": "length",
-                "valueInteger": "8"
+                "valueInteger": 8
               },
               {
                 "url": "noTruncate",

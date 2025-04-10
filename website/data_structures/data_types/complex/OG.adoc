@@ -4,7 +4,7 @@
 :code: OG
 :name: observation grouper
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]
 The components that can be used to define the structure of the observation/result segments (OBX) within an observation report segment (OBR).

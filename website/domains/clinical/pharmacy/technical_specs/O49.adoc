@@ -10,6 +10,7 @@ This message is also not required to contain the order in its entirety: for exam
 The order to dispense refers to the “clinical” order, the original RDE^O25 (or OMP^O09) by means of a parent-child hierarchy, where ORC-8 of the OXX message refers to the ORC-2 of the RDE^025 order.
 
 [tabset]
+O49
 
 [NOTE]
 

@@ -7,3 +7,5 @@ This message is sent from a filler application to notify other applications that
 
 This transaction should not be used to reschedule an appointment that has begun but has not been completed. In such cases, and only if it logical to do so, the appointment should be discontinued and a new schedule request should be submitted. Likewise, this transaction should not be used to reschedule a parent appointment, in which one or more children have begun or have already taken place. Again, the parent appointment should be discontinued, and a new schedule request should be made. This procedure removes any ambiguity between applications that may arise with an attempt to modify an appointment that is in progress.
 
+[tabset]
+S13

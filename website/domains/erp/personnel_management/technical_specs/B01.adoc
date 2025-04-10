@@ -8,6 +8,7 @@ An event B01 signals to add a new record for healthcare administration informati
 The EVN segment is used to indicate the effective or planned date.
 
 [tabset]
+B01
 
 
 

@@ -10,6 +10,7 @@ A permission is issued by an organization and documented in form of a certificat
 The EVN segment is used to indicate the effective or planned date.
 
 [tabset]
+B07
 
 
 

@@ -8,6 +8,8 @@ This is a notification of a cancellation of a document. This trigger event shoul
 *Scenario:* When the author dictated a document, the wrong patient identification was given, and the document was transcribed and sent to the wrong patient's record. When the error is discovered, a cancellation notice is sent to remove the document from general access in the wrong patient's record. In these cases, a reason should be supplied in the cancellation message. To protect patient privacy, the correct patient's identifying information should not be placed on the erroneous document that is retained in the wrong patient's record for historical reference. A new document notification and content will be created using a T02 (original document notification and content) event and sent for association with the correct patient's record.
 
 [tabset]
+T11
+
 
 
 

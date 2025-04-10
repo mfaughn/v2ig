@@ -12,19 +12,19 @@
 
 The following diagram depicts the message flow of the blood product messages.
 
-image::extracted-media/media/image3.wmf[]
+image::blood_product_message_flow_1.png[blood_product_message_flow_1.png]
 
-image::extracted-media/media/image4.emf[]
+image::blood_product_order_message.png[blood_product_order_message]
 
-image::extracted-media/media/image5.wmf[]
+// image::extracted-media/media/image5.wmf[] // duplicate of above
 
-image::extracted-media/media/image6.wmf[]
+// image::extracted-media/media/image6.wmf[] // duplicate of above
 
-image::extracted-media/media/image7.wmf[]
+image::blood_product_message_flow_2.png[blood_product_message_flow_2]
 
-image::extracted-media/media/image8.wmf[]
+image::blood_product_dispense_message_part1.png[blood_product_dispense_message_part1]
 
-image::extracted-media/media/image9.emf[]
+image::blood_product_dispense_message_part2.png[blood_product_dispense_message_part2]
 
 === Usage Notes for Donation Service (Blood Bank)
 [v291_section="4.16.1"]

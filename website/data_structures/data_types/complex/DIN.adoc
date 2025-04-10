@@ -4,7 +4,7 @@
 :code: DIN
 :name: date and institution name
 :primitive: false
-:generated: Wed, 31 Jul 2024 17:32:26 -0600
+:generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]
 Specifies the date and institution information where a staff member became active or inactive.

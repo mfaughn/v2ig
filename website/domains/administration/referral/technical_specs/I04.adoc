@@ -6,3 +6,4 @@
 This event triggers a request from one healthcare provider to another for patient demographic information, including insurance and billing information. Typically, this transaction would occur between one provider to another, but it could also be directed to a payor.
 
 [tabset]
+I04

@@ -14,6 +14,7 @@ The OBX segment at the visit level provides the reason for submission. The repea
 The NK1 segment contains owner and/or responsible party information for the patient and/or specimen.
 
 [tabset]
+R25
 
 
 

@@ -1,6 +1,6 @@
 = Message - E01 Submit HealthCare Services Invoice 
 :v291_section: "16.3.1"
-:v2_section_name: "EHC^E01 – Submit HealthCare Services Invoice (event E01)"
+:v2_section_name: "EHC^E01 – Submit HealthCare Services Invoice (Event E01)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to submit a HealthCare Services Invoice to a TPA/Payer for processing and payment. A HealthCare Services Invoice may have 1 or more Product/Service Line Items (detail lines), grouped as a Product/Service Group. Each Product/Service Line Item represents a specific fee item. Refer to the beginning of this section for more information on the structure of a HealthCare Services Invoice.
@@ -53,6 +53,7 @@ The Product/Service Billed Amount on PSL should be the amount the Provider is bi
 {empty}12) A single group cannot have both multiple Patients and multiple Product/Service Line Items for the same Product/Service Group. In this situation, the multiple Patient and Product/Service Line Item must be split into multiple Product/Service Groups.
 
 [tabset]
+E01
 
 
 

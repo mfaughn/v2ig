@@ -8,6 +8,7 @@ An event B03 signals to delete the record with the healthcare administration inf
 The EVN segment is used to indicate the effective or planned date.
 
 [tabset]
+B03
 
 
 

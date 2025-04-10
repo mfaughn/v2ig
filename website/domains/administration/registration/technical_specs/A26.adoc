@@ -8,6 +8,8 @@ The A26 event is sent when an A15 (pending transfer) event is cancelled, either 
 The fields included when this message is sent should be the fields pertinent to communicate this event. When other important fields change, it is recommended that the A08 (update patient information) event be used in addition.
 
 [tabset]
+A26
+
 
 
 

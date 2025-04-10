@@ -1,6 +1,6 @@
 = Message - E22 Query Authorization Request Statu
 :v291_section: "16.3.13"
-:v2_section_name: "QBP^E22 – Query Authorization Request Status (event E22); RSP^E22 – Authorization Request Status Query Response (event E22) "
+:v2_section_name: "QBP^E22 – Query Authorization Request Status (Event E22); RSP^E22 – Authorization Request Status Query Response (Event E22) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 This message is used to respond to a QPB^E22 – Query Authorization Request Status. It provides Authorization status information to a Provider.
@@ -15,7 +15,8 @@ Processing Rules:
 
 {empty}3) A unique query identifier (Query Tag on QPD) must be generated for each query.
 
-[response_message_structure-table]
+[tabset]
+E22
 
 
 

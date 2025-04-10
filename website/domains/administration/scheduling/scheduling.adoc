@@ -176,9 +176,9 @@ Often, a placer application will also act as an auxiliary application. A placer 
 
 In a messaging environment, these four application roles communicate using specific types of messages and trigger events. The following figure illustrates the relationships between these application roles in a messaging environment:
 
-Figure 10-2. Application role messaging relationships
-
-image::extracted-media/media/image1.wmf[]
+.Application role messaging relationships
+image::application_role_scheduling_relationships.png[application_role_scheduling_relationships]
+// Figure 10-2
 
 The relationship between placer and filler applications revolves around request messages and response messages to those requests. Placer applications trigger request messages to filler applications, which respond to those requests with request response messages.
 

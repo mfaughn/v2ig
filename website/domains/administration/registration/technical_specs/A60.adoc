@@ -6,6 +6,8 @@
 This trigger event is used when person/patient allergy information has changed. It is used in conjunction with a new allergy segment, the _IAM - Patient Allergy Information Segment-Unique Identifier_, which supports Action code/unique identifier mode update for repeating segments as defined in _2.10.4_, "_Protocol for interpreting repeating segments or segment groups in an update Message_."
 
 [tabset]
+A60
+
 
 
 

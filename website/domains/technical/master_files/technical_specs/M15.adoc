@@ -13,8 +13,7 @@ This message is not intended to act as a complete inventory management system. V
 The IIM segment has been moved to Chapter 17.
 
 [tabset]
-
-
+M15
 
 Master Files Query Response: Refer to Section 8.4.4.
 

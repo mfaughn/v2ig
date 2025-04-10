@@ -1,14 +1,10 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
-  <!-- <ul class="nav nav-tabs">
-    <li><a href="codesystems.html">All Code Systems</a></li>
-    <li class="active"><a href="#">CDA</a></li>
-    <li><a href="codesystems-fhir.html">FHIR</a></li>
-    <li><a href="codesystems-fhir.html">V2</a></li>
-    <li><a href="codesystems-v3.html">V3</a></li>
-    <li><a href="codesystems-unified.html">Unified</a></li>
-    <li><a href="codesystems-deprecated.html">Deprecated</a></li>
-    <li><a href="codesystems-retired.html">Retired</a></li>
-  </ul> -->
-  <h3>HL7 v2+ Primitive Data Types</h3>
-  
+  <div>
+    <h3>HL7 v2+ Primitive Data Types</h3>
+    {% include primitive-data-types-list.html %}
+  </div>
+  <div>
+    <h3>HL7 v2+ Complex Data Types</h3>
+    {% include complex-data-types-list.html %}
+  </div>
 </div>
