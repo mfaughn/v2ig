@@ -134,7 +134,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0667"
         },
         "extension": [
@@ -164,7 +164,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0669"
         },
         "extension": [
@@ -257,5 +257,5 @@
   "title": "HL7 v2 SDD Segment Definition",
   "name": "SDD",
   "type": "SDD",
-  "date": "2024-07-24T19:13:15Z"
+  "date": "2025-03-06T16:07:41Z"
 }

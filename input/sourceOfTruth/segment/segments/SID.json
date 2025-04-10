@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0783"
         },
         "extension": [
@@ -151,7 +151,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0385"
         },
         "extension": [
@@ -166,5 +166,5 @@
   "title": "HL7 v2 SID Segment Definition",
   "name": "SID",
   "type": "SID",
-  "date": "2024-07-24T19:13:14Z"
+  "date": "2025-03-06T16:07:39Z"
 }

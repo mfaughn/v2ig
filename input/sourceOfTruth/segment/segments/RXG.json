@@ -140,7 +140,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0292"
         },
         "extension": [
@@ -222,7 +222,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0735"
         },
         "extension": [
@@ -252,7 +252,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0736"
         },
         "extension": [
@@ -282,7 +282,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0737"
         },
         "extension": [
@@ -312,7 +312,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0167"
         },
         "extension": [
@@ -376,7 +376,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0136"
         },
         "extension": [
@@ -419,7 +419,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0738"
         },
         "extension": [
@@ -540,7 +540,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0740"
         },
         "extension": [
@@ -596,7 +596,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0741"
         },
         "extension": [
@@ -717,7 +717,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0743"
         },
         "extension": [
@@ -782,7 +782,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0744"
         },
         "extension": [
@@ -812,7 +812,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0745"
         },
         "extension": [
@@ -842,7 +842,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0480"
         },
         "extension": [
@@ -1027,7 +1027,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0746"
         },
         "extension": [
@@ -1042,5 +1042,5 @@
   "title": "HL7 v2 RXG Segment Definition",
   "name": "RXG",
   "type": "RXG",
-  "date": "2024-07-24T19:13:11Z"
+  "date": "2025-03-06T16:07:36Z"
 }

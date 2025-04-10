@@ -82,7 +82,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0510"
         },
         "extension": [
@@ -112,7 +112,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0511"
         },
         "extension": [
@@ -207,7 +207,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0577"
         },
         "extension": [
@@ -237,7 +237,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0578"
         },
         "extension": [
@@ -267,7 +267,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0512"
         },
         "extension": [
@@ -349,7 +349,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0579"
         },
         "extension": [
@@ -379,7 +379,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0580"
         },
         "extension": [
@@ -513,7 +513,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0581"
         },
         "extension": [
@@ -673,7 +673,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0206"
         },
         "extension": [
@@ -701,5 +701,5 @@
   "title": "HL7 v2 BPX Segment Definition",
   "name": "BPX",
   "type": "BPX",
-  "date": "2024-07-24T19:13:11Z"
+  "date": "2025-03-06T16:07:35Z"
 }

@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0091"
         },
         "extension": [
@@ -86,7 +86,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0126"
         },
         "extension": [
@@ -116,7 +116,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0394"
         },
         "extension": [
@@ -172,7 +172,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0395"
         },
         "extension": [
@@ -241,7 +241,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0391"
         },
         "extension": [
@@ -269,5 +269,5 @@
   "title": "HL7 v2 RCP Segment Definition",
   "name": "RCP",
   "type": "RCP",
-  "date": "2024-07-24T19:13:11Z"
+  "date": "2025-03-06T16:07:36Z"
 }

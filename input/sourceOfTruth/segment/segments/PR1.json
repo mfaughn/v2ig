@@ -101,7 +101,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0088"
         },
         "extension": [
@@ -176,7 +176,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0230"
         },
         "extension": [
@@ -264,7 +264,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0019"
         },
         "extension": [
@@ -371,7 +371,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0059"
         },
         "extension": [
@@ -401,7 +401,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0418"
         },
         "extension": [
@@ -444,7 +444,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0051"
         },
         "extension": [
@@ -474,7 +474,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0340"
         },
         "extension": [
@@ -504,7 +504,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0416"
         },
         "extension": [
@@ -534,7 +534,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0417"
         },
         "extension": [
@@ -586,7 +586,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0206"
         },
         "extension": [
@@ -629,7 +629,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0761"
         },
         "extension": [
@@ -659,7 +659,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0763"
         },
         "extension": [
@@ -715,7 +715,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0136"
         },
         "extension": [
@@ -767,5 +767,5 @@
   "title": "HL7 v2 PR1 Segment Definition",
   "name": "PR1",
   "type": "PR1",
-  "date": "2024-07-24T19:13:11Z"
+  "date": "2025-03-06T16:07:36Z"
 }

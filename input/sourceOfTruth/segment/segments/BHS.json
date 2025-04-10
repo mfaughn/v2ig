@@ -498,7 +498,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0952"
         },
         "extension": [
@@ -528,7 +528,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0953"
         },
         "extension": [
@@ -569,5 +569,5 @@
   "title": "HL7 v2 BHS Segment Definition",
   "name": "BHS",
   "type": "BHS",
-  "date": "2024-07-24T19:13:09Z"
+  "date": "2025-03-06T16:07:34Z"
 }

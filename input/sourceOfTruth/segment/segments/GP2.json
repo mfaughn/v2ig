@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0456"
         },
         "extension": [
@@ -138,7 +138,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0459"
         },
         "extension": [
@@ -168,7 +168,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0460"
         },
         "extension": [
@@ -198,7 +198,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0458"
         },
         "extension": [
@@ -228,7 +228,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0466"
         },
         "extension": [
@@ -258,7 +258,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0467"
         },
         "extension": [
@@ -288,7 +288,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0468"
         },
         "extension": [
@@ -318,7 +318,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0469"
         },
         "extension": [
@@ -374,7 +374,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0470"
         },
         "extension": [
@@ -454,5 +454,5 @@
   "title": "HL7 v2 GP2 Segment Definition",
   "name": "GP2",
   "type": "GP2",
-  "date": "2024-07-24T19:13:12Z"
+  "date": "2025-03-06T16:07:37Z"
 }

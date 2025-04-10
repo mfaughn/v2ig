@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0587"
         },
         "extension": [
@@ -125,7 +125,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0588"
         },
         "extension": [
@@ -140,5 +140,5 @@
   "title": "HL7 v2 CSP Segment Definition",
   "name": "CSP",
   "type": "CSP",
-  "date": "2024-07-24T19:13:12Z"
+  "date": "2025-03-06T16:07:37Z"
 }

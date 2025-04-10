@@ -108,7 +108,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0536"
         },
         "extension": [
@@ -242,7 +242,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0946"
         },
         "extension": [
@@ -272,7 +272,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0965"
         },
         "extension": [
@@ -302,7 +302,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0532"
         },
         "extension": [
@@ -358,7 +358,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0532"
         },
         "extension": [
@@ -518,7 +518,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0966"
         },
         "extension": [
@@ -574,7 +574,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0947"
         },
         "extension": [
@@ -615,5 +615,5 @@
   "title": "HL7 v2 CTR Segment Definition",
   "name": "CTR",
   "type": "CTR",
-  "date": "2024-07-24T19:13:13Z"
+  "date": "2025-03-06T16:07:38Z"
 }

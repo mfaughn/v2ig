@@ -121,7 +121,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0361"
         },
         "extension": [
@@ -151,7 +151,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0362"
         },
         "extension": [
@@ -181,7 +181,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0361"
         },
         "extension": [
@@ -211,7 +211,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0362"
         },
         "extension": [
@@ -488,7 +488,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0155"
         },
         "extension": [
@@ -531,7 +531,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0155"
         },
         "extension": [
@@ -574,7 +574,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0399"
         },
         "extension": [
@@ -617,7 +617,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0211"
         },
         "extension": [
@@ -660,7 +660,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0609"
         },
         "extension": [
@@ -690,7 +690,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0356"
         },
         "extension": [
@@ -863,7 +863,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0952"
         },
         "extension": [
@@ -893,7 +893,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0953"
         },
         "extension": [
@@ -934,5 +934,5 @@
   "title": "HL7 v2 MSH Segment Definition",
   "name": "MSH",
   "type": "MSH",
-  "date": "2024-07-24T19:13:09Z"
+  "date": "2025-03-06T16:07:34Z"
 }

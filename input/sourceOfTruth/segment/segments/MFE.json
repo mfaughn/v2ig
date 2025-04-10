@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0180"
         },
         "extension": [
@@ -151,7 +151,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0608"
         },
         "extension": [
@@ -181,7 +181,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0355"
         },
         "extension": [
@@ -261,5 +261,5 @@
   "title": "HL7 v2 MFE Segment Definition",
   "name": "MFE",
   "type": "MFE",
-  "date": "2024-07-24T19:13:13Z"
+  "date": "2025-03-06T16:07:38Z"
 }

@@ -69,7 +69,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0675"
         },
         "extension": [
@@ -177,7 +177,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0676"
         },
         "extension": [
@@ -324,7 +324,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0677"
         },
         "extension": [
@@ -354,7 +354,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0330"
         },
         "extension": [
@@ -525,5 +525,5 @@
   "title": "HL7 v2 PDC Segment Definition",
   "name": "PDC",
   "type": "PDC",
-  "date": "2024-07-24T19:13:13Z"
+  "date": "2025-03-06T16:07:38Z"
 }

@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0427"
         },
         "extension": [
@@ -99,7 +99,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0428"
         },
         "extension": [
@@ -114,5 +114,5 @@
   "title": "HL7 v2 RMI Segment Definition",
   "name": "RMI",
   "type": "RMI",
-  "date": "2024-07-24T19:13:12Z"
+  "date": "2025-03-06T16:07:37Z"
 }

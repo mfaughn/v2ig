@@ -69,7 +69,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0105"
         },
         "extension": [
@@ -138,7 +138,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0364"
         },
         "extension": [
@@ -272,7 +272,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0611"
         },
         "extension": [
@@ -287,5 +287,5 @@
   "title": "HL7 v2 NTE Segment Definition",
   "name": "NTE",
   "type": "NTE",
-  "date": "2024-07-24T19:13:09Z"
+  "date": "2025-03-06T16:07:34Z"
 }

@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0681"
         },
         "extension": [
@@ -73,7 +73,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0358"
         },
         "extension": [
@@ -103,7 +103,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0186"
         },
         "extension": [
@@ -133,7 +133,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0187"
         },
         "extension": [
@@ -176,7 +176,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0337"
         },
         "extension": [
@@ -206,7 +206,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0338"
         },
         "extension": [
@@ -288,7 +288,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0537"
         },
         "extension": [
@@ -344,7 +344,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0401"
         },
         "extension": [
@@ -398,5 +398,5 @@
   "title": "HL7 v2 PRA Segment Definition",
   "name": "PRA",
   "type": "PRA",
-  "date": "2024-07-24T19:13:14Z"
+  "date": "2025-03-06T16:07:40Z"
 }

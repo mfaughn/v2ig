@@ -82,7 +82,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0503"
         },
         "extension": [
@@ -203,7 +203,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0504"
         },
         "extension": [
@@ -246,7 +246,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0505"
         },
         "extension": [
@@ -354,7 +354,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0506"
         },
         "extension": [
@@ -382,5 +382,5 @@
   "title": "HL7 v2 TQ2 Segment Definition",
   "name": "TQ2",
   "type": "TQ2",
-  "date": "2024-07-24T19:13:10Z"
+  "date": "2025-03-06T16:07:35Z"
 }

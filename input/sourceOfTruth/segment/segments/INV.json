@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0451"
         },
         "extension": [
@@ -73,7 +73,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0383"
         },
         "extension": [
@@ -103,7 +103,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0384"
         },
         "extension": [
@@ -133,7 +133,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0599"
         },
         "extension": [
@@ -163,7 +163,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0600"
         },
         "extension": [
@@ -193,7 +193,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0601"
         },
         "extension": [
@@ -379,7 +379,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0602"
         },
         "extension": [
@@ -480,7 +480,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0603"
         },
         "extension": [
@@ -549,7 +549,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0385"
         },
         "extension": [
@@ -579,7 +579,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0386"
         },
         "extension": [
@@ -661,7 +661,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0942"
         },
         "extension": [
@@ -702,5 +702,5 @@
   "title": "HL7 v2 INV Segment Definition",
   "name": "INV",
   "type": "INV",
-  "date": "2024-07-24T19:13:14Z"
+  "date": "2025-03-06T16:07:39Z"
 }

@@ -43,7 +43,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0119"
         },
         "extension": [
@@ -164,7 +164,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0038"
         },
         "extension": [
@@ -207,7 +207,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0121"
         },
         "extension": [
@@ -462,7 +462,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0949"
         },
         "extension": [
@@ -487,7 +487,7 @@
         "min": 0,
         "max": "*",
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0666"
         },
         "extension": [
@@ -512,7 +512,7 @@
         "min": 0,
         "max": "*",
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0668"
         },
         "extension": [
@@ -563,7 +563,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0339"
         },
         "extension": [
@@ -677,7 +677,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0950"
         },
         "extension": [
@@ -707,7 +707,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0552"
         },
         "extension": [
@@ -763,7 +763,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0177"
         },
         "extension": [
@@ -793,7 +793,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0482"
         },
         "extension": [
@@ -823,7 +823,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0483"
         },
         "extension": [
@@ -924,7 +924,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0934"
         },
         "extension": [
@@ -954,7 +954,7 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0206"
         },
         "extension": [
@@ -1060,5 +1060,5 @@
   "title": "HL7 v2 ORC Segment Definition",
   "name": "ORC",
   "type": "ORC",
-  "date": "2024-07-24T19:13:10Z"
+  "date": "2025-03-06T16:07:35Z"
 }
