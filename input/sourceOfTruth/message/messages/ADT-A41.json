@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "ADT"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "A41"
+      },
+      {
+        "id": "Message.structure",
+        "path": "Message.structure",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MessageStructure/ADT-A39-B"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Message.acknowledgementChoreography.originalModeAck",
+        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-A41"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-A41"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-A41"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "ADT-A41",
+  "title": "HL7 v2 ADT^A41^ADT_A39 Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/ADT-A41",
+  "name": "ADT^A41^ADT_A39",
+  "date": "2025-03-06T16:07:51Z"
+}

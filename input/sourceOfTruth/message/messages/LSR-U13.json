@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "LSR"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "U13"
+      },
+      {
+        "id": "Message.structure",
+        "path": "Message.structure",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MessageStructure/LSU-U12-B"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Message.acknowledgementChoreography.originalModeAck",
+        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/LSU-U12"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-U13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/LSU-U12"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "LSR-U13",
+  "title": "HL7 v2 LSR^U13^LSU_U12 Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/LSR-U13",
+  "name": "LSR^U13^LSU_U12",
+  "date": "2025-03-06T16:07:53Z"
+}

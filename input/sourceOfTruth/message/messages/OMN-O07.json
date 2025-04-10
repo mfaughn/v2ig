@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "OMN"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "O07"
+      },
+      {
+        "id": "Message.structure",
+        "path": "Message.structure",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MessageStructure/OMN-O07"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Message.acknowledgementChoreography.originalModeAck",
+        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ORN-O08",
+              "http://hl7.org/fhir/StructureDefinition/Message/OSU-O52"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-O07"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ORN-O08",
+              "http://hl7.org/fhir/StructureDefinition/Message/OSU-O52"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "OMN-O07",
+  "title": "HL7 v2 OMN^O07^OMN_O07 Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/OMN-O07",
+  "name": "OMN^O07^OMN_O07",
+  "date": "2025-03-06T16:07:51Z"
+}

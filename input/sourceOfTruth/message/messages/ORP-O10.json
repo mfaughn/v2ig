@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "ORP"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "O10"
+      },
+      {
+        "id": "Message.structure",
+        "path": "Message.structure",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MessageStructure/ORP-O10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Message.acknowledgementChoreography.originalModeAck",
+        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-O10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-O10"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "ORP-O10",
+  "title": "HL7 v2 ORP^O10^ORP_O10 Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/ORP-O10",
+  "name": "ORP^O10^ORP_O10",
+  "date": "2025-03-06T16:07:51Z"
+}

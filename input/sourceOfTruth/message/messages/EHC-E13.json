@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "EHC"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "E13"
+      },
+      {
+        "id": "Message.structure",
+        "path": "Message.structure",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MessageStructure/EHC-E13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Message.acknowledgementChoreography.originalModeAck",
+        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-E13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-E13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Message/ACK-E13"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "EHC-E13",
+  "title": "HL7 v2 EHC^E13^EHC_E13 Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/EHC-E13",
+  "name": "EHC^E13^EHC_E13",
+  "date": "2025-03-06T16:07:53Z"
+}
