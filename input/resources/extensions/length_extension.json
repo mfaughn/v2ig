@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "v2-length",
+  "id": "length",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
     "valueCode" : "v2"
@@ -13,7 +13,7 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-bind"
   }],
-  "url" : "http://hl7.org/fhir/StructureDefinition/v2-length",
+  "url" : "http://hl7.org/fhir/StructureDefinition/length",
   "name" : "V2Length",
   "title" : "HL7 v2 Length Extension",
   "status" : "draft",
@@ -55,7 +55,7 @@
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/v2-length"
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/length"
       },
       {
         "id" : "Extension.extension",

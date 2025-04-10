@@ -1,6 +1,6 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "v2-optionality",
+  "id" : "optionality",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -15,7 +15,7 @@
       "valueCode" : "can-bind"
     }
   ],
-  "url" : "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+  "url" : "http://hl7.org/fhir/StructureDefinition/optionality",
   "name" : "V2Optionality",
   "title" : "HL7 v2 Optionality Extension",
   "status" : "draft",
@@ -57,7 +57,7 @@
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/v2-optionality"
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/optionality"
       },
       {
         "id" : "Extension.extension",
@@ -80,7 +80,7 @@
           ],
           "strength" : "required",
           "description" : "The optionality of the element where optionality is defined in Chapter 2 of version HL7 v2.9.1.",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-optionality"
+          "valueSet" : "http://hl7.org/v2/ValueSet/optionality"
         }
       }
     ]

@@ -1,6 +1,6 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "v2-conformance-length",
+  "id" : "conformance-length",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -15,7 +15,7 @@
       "valueCode" : "can-bind"
     }
   ],
-  "url" : "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+  "url" : "http://hl7.org/fhir/StructureDefinition/conformance-length",
   "name" : "V2ConformanceLength",
   "title" : "HL7 v2 Conformance Length Extension",
   "status" : "draft",
@@ -51,7 +51,7 @@
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/v2-conformance-length"
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/conformance-length"
       },
       {
         "id" : "Extension.extension",

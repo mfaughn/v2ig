@@ -1,7 +1,7 @@
 {
   "resourceType" : "ValueSet",
   "url" : "http://hl7.org/v2/ValueSet/AcknowlegementChoreographies",
-  "id": "v2-cs-acknowledgement-choreographies",
+  "id": "acknowledgement-choreographies",
   "status" : "active",
   "compose" : {
     "include" : [{

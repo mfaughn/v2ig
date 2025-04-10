@@ -44,7 +44,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "R"
           }
         ]
@@ -70,7 +70,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -96,11 +96,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -135,7 +135,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -161,7 +161,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -187,7 +187,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -217,7 +217,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -247,7 +247,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -273,11 +273,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -312,7 +312,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -338,7 +338,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -364,11 +364,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -403,7 +403,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -429,11 +429,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -468,7 +468,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "R"
           }
         ]
@@ -494,7 +494,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -520,7 +520,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -546,7 +546,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -572,7 +572,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "R"
           }
         ]
@@ -598,7 +598,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -624,7 +624,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -650,7 +650,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -676,7 +676,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -702,7 +702,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -728,7 +728,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -754,7 +754,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]

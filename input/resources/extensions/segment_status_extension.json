@@ -76,7 +76,7 @@
           ],
           "strength" : "required",
           "description" : "The status of a segment or collection of segments within a MessageStructure.",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-segment-status"
+          "valueSet" : "http://hl7.org/v2/ValueSet/segment-status"
         }
       }
     ]
