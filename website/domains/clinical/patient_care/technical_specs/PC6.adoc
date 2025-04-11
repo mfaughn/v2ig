@@ -14,5 +14,6 @@ PC6
 
 
 
+
 This error segment indicates the fields that caused a transaction to be rejected.
 

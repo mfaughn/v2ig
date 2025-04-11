@@ -18,5 +18,6 @@ P01
 
 
 
+
 The error segment will indicate the fields that caused a transaction to be rejected.
 

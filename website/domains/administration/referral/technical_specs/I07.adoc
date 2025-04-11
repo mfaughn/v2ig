@@ -7,10 +7,3 @@ This trigger event is used by an entity or organization to transmit to a healthc
 
 [tabset]
 I07
-
-
-
-
-
-
-

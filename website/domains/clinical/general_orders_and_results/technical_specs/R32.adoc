@@ -24,5 +24,6 @@ R32
 
 
 
+
 There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 SHALL always be set to NE (Never).
 

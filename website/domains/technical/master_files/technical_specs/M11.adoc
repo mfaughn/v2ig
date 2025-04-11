@@ -8,11 +8,8 @@ include::general_approach.adoc[]
 
 :leveloffset: -1
 
-[tabset]
-M11
-
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
 
-
-
+[tabset]
+M11

@@ -16,7 +16,7 @@ Use cases for this query are as follows: 1) to populate a database initially, 2)
 [NOTE]
 If there is a concern that it will be difficult to distinguish these messages from any current realtime messages, e.g., if they are going down the same pipe, the data offerer might choose to designate a unique _MSH-3 Sending application_ for the messages it sends in response to a QVR. This would allow downstream systems to recognize which messages were the result of the QVR, versus which are the result of current realtime activity on the sending system. For example, there may be 2 systems receiving pharmacy dispense messages. If system A wishes to issue a QVR to receive a historical load, system B might misinterpret the QVR results coming over the pipe as actual live data. A separate Sending Application name would allow for easy differentiation.
 
+The QVR message segments are identical to those of the QBP. A QVR Query Profile may use either the QSC or query by example syntactic variants as well as the query by simple parameter.
+
 [tabset]
 Q17
-
-The QVR message segments are identical to those of the QBP. A QVR Query Profile may use either the QSC or query by example syntactic variants as well as the query by simple parameter.

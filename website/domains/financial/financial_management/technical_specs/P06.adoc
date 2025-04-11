@@ -14,6 +14,7 @@ P06
 
 
 
+
 The error segment indicates the fields that caused a transaction to be rejected.
 
 [NOTE]
