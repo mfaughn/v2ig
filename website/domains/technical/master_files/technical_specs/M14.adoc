@@ -13,6 +13,6 @@ The Site defined master file notification is defined as follows:
 [tabset]
 M14
 
+// This note should probably be on the tab for the ACK Choreographies
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
-

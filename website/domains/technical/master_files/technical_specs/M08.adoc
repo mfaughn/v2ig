@@ -8,14 +8,14 @@ include::general_approach.adoc[]
 
 :leveloffset: -1
 
-[tabset]
-M08
-
 [NOTE]
 The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
 
 [NOTE]
 _MFI-1 -_ Master _File Identifier_ = OMA for numeric observations.
+
+[tabset]
+M08
 
 
 
