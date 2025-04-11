@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "url": "http://hl7.org/v2/CodeSystem/Segments",
-  "id": "v2-cs-segments",
+  "id": "segments",
   "status": "active",
   "content": "complete",
   "concept": [

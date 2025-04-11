@@ -43,12 +43,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0747"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -74,7 +74,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -100,7 +100,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -125,12 +125,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0748"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -155,12 +155,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0750"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -185,12 +185,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0751"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -215,12 +215,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0752"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -239,7 +239,7 @@
         "max": "*",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -264,16 +264,16 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0161"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -307,12 +307,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0753"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -338,7 +338,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -363,12 +363,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0754"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -394,11 +394,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -426,7 +426,7 @@
         "max": "*",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "W"
           }
         ]
@@ -452,7 +452,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -477,16 +477,16 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0136"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -521,11 +521,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -560,7 +560,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -585,12 +585,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0756"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -615,12 +615,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0758"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -646,11 +646,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -684,12 +684,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0760"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -715,7 +715,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -738,12 +738,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0762"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -767,11 +767,11 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-conformance-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
             "extension": [
               {
                 "url": "length",
@@ -803,12 +803,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0764"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -833,16 +833,16 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0480"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -877,7 +877,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -903,7 +903,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -929,7 +929,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -954,12 +954,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0725"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "C"
           }
         ]
@@ -982,12 +982,12 @@
           }
         ],
         "binding": {
-          "strength": "TBD",
+          "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0765"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "B"
           }
         ]
@@ -1011,7 +1011,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "B"
           }
         ]
@@ -1037,7 +1037,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -1063,7 +1063,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -1089,7 +1089,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/v2-optionality",
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
             "valueCode": "O"
           }
         ]
@@ -1099,5 +1099,5 @@
   "title": "HL7 v2 RXO Segment Definition",
   "name": "RXO",
   "type": "RXO",
-  "date": "2024-07-24T19:13:11Z"
+  "date": "2025-03-06T16:07:36Z"
 }

@@ -1,7 +1,7 @@
 {
   "resourceType" : "ValueSet",
   "url" : "http://hl7.org/v2/ValueSet/Segments",
-  "id": "v2-vs-segments",
+  "id": "segments",
   "status" : "active",
   "compose" : {
     "include" : [{

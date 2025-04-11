@@ -1,7 +1,6 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "v2-conformance-length",
-  "url" : "http://hl7.org/v2/StructureDefinition/v2-conformance-length",
+  "id" : "conformance-length",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -16,12 +15,13 @@
       "valueCode" : "can-bind"
     }
   ],
+  "url" : "http://hl7.org/fhir/StructureDefinition/conformance-length",
   "name" : "V2ConformanceLength",
   "title" : "HL7 v2 Conformance Length Extension",
   "status" : "draft",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2024-04-21T19:47:28+00:00",
-  "publisher" : "HL7 International / V2 Management",
+  "publisher" : "HL7 International / V2 Management Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
@@ -32,16 +32,10 @@
   "fhirVersion" : "5.0.0",
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [    
-    {
-      "type" : "element",
-      "expression" : "ElementDefinition"
-    },
-    {
+  "context" : [{
     "type" : "element",
     "expression" : "ComplexDataType"
-    }
-  ],
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
@@ -55,9 +49,13 @@
         "max" : "1"
       },
       {
+        "id" : "Extension.url",
+        "path" : "Extension.url",
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/conformance-length"
+      },
+      {
         "id" : "Extension.extension",
         "path" : "Extension.extension",
-        "min" : 2,
         "max" : "2"
       },
       {
@@ -70,25 +68,18 @@
         "max" : "1"
       },
       {
-        "id" : "Extension.extension:length.extension",
+        "id" : "Extension.extension:min.extension",
         "path" : "Extension.extension.extension",
         "max" : "0"
-      },
-      {
-        "id": "Extension.extension:length.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "length"
       },
       {
         "id" : "Extension.extension:length.value[x]",
         "path" : "Extension.extension.value[x]",
         "min" : 1,
         "max" : "1",
-        "type" : [
-          {
-            "code" : "integer"
-          }
-        ]
+        "type" : [{
+          "code" : "integer"
+        }]
       },
       {
         "id" : "Extension.extension:noTruncate",
@@ -96,8 +87,7 @@
         "sliceName" : "noTruncate",
         "short" : "Whether truncation is forbidden",
         "definition" : "Whether truncation is forbidden",
-        "min" : 1,
-        "max" : "1"
+        "min" : 0    
       },
       {
         "id" : "Extension.extension:noTruncate.extension",
@@ -105,29 +95,12 @@
         "max" : "0"
       },
       {
-        "id": "Extension.extension:noTruncate.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "noTruncate"
-      },
-      {
         "id" : "Extension.extension:noTruncate.value[x]",
         "path" : "Extension.extension.value[x]",
         "min" : 1,
-        "type" : [
-          {
-            "code" : "boolean"
-          }
-        ]
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/v2/StructureDefinition/v2-conformance-length"
-      },      
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "max" : "0"
+        "type" : [{
+          "code" : "boolean"
+        }]
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-types",
-  "id": "v2-vs-complex-data-types",
+  "url" : "http://hl7.org/v2/ValueSet/complex-data-types",
+  "id": "complex-data-types",
   "status" : "active",
   "meta" : {
     "lastUpdated" : "2024-05-04T00:00:00+00:00",
@@ -21,7 +21,7 @@
   }],
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/v2/CodeSystem/v2-cs-complex-data-types"
+      "system" : "http://hl7.org/v2/CodeSystem/complex-data-types"
     }]
   }
 }

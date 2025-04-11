@@ -11,5 +11,136 @@
   "type" : "Message",
   "description" : "Abstract base for all messages",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
-  "derivation" : "specialization"
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "Message",
+        "path" : "Message",
+        "short" : "Defines a V2 Message",
+        "definition" : "TBD",
+        "min" : 0,
+        "max" : "*"
+      },
+      {
+        "id" : "Message.messageType",
+        "path" : "Message.messageType",
+        "short" : "The message type of this V2 Message",
+        "definition" : "The message type of this V2 Message",
+        "min" : 1,
+        "max" : "1",
+        "type" : [{
+          "code" : "code"
+        }],
+      },
+      {
+        "id" : "Message.triggerEvent",
+        "path" : "Message.triggerEvent",
+        "short" : "The event that triggers the initiation of this kind of V2 Message",
+        "definition" : "The event that triggers the initiation of this kind of V2 Message",
+        "min" : 0,
+        "max" : "1",
+        "type" : [{
+          "code" : "code"
+        }],
+      },
+      {
+        "id" : "Message.structure",
+        "path" : "Message.structure",
+        "short" : "The message structure used by this kind of V2 Message",
+        "definition" : "The message structure used by this kind of V2 Message",
+        "min" : 1,
+        "max" : "1",
+        "type" : [{
+          "code" : "Reference",
+          "targetProfile" : [
+            "http://hl7.org/fhir/StructureDefinition/MessageStructure"
+          ]
+        }],
+      },
+      {
+        "id" : "Message.status",
+        "path" : "Message.status",
+        "short" : "active | deprecated | withdrawn",
+        "definition" : "The status of this V2 Message definition",
+        "min" : 1,
+        "max" : "1",
+        "type" : [{
+          "code" : "code"
+        }],
+        "binding" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+            "valueString" : "V2MessageStatus"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+            "valueBoolean" : true
+          }],
+          "strength" : "required",
+          "description" : "The lifecycle status of an artifact.",
+          "valueSet" : "http://hl7.org/v2/ValueSet/message-status"
+        },
+      },
+      {
+        "id" : "Message.acknowledgementChoreography",
+        "path" : "Message.acknowledgementChoreography",
+        "short" : "FIXME",
+        "definition" : "FIXME",
+        "min" : 0,
+        "max" : "1",
+        "type" : [{
+          "code" : "BackboneElement"
+        }],
+      },
+      {
+        "id" : "Message.acknowledgementChoreography.originalModeAck",
+        "path" : "Message.acknowledgementChoreography.originalModeAck",
+        "short" : "FIXME",
+        "definition" : "FIXME",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/StructureDefinition/Message"
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "path" : "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "short" : "FIXME",
+        "definition" : "FIXME",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/StructureDefinition/Message"
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "Message.acknowledgementChoreography.enhancedModeApplicationAck",
+        "path" : "Message.acknowledgementChoreography.enhancedModeApplicationAck",
+        "short" : "FIXME",
+        "definition" : "FIXME",
+        "min" : 0,
+        "max" : "*",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/StructureDefinition/Message"
+            ]
+          }
+        ]
+      },
+    ]
+  }
 }

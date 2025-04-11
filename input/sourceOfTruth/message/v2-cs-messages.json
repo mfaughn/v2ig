@@ -1,2357 +1,77 @@
 {
   "resourceType": "CodeSystem",
   "url": "http://hl7.org/v2/CodeSystem/Messages",
-  "id": "v2-cs-messages",
+  "id": "messages",
   "status": "active",
   "content": "complete",
   "concept": [
     {
-      "code": "--ADT_A01",
-      "display": "^^ADT_A01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A02",
-      "display": "^^ADT_A02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A03",
-      "display": "^^ADT_A03"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A01",
-      "display": "^^ADT_A01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A05",
-      "display": "^^ADT_A05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A06",
-      "display": "^^ADT_A06"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A06",
-      "display": "^^ADT_A06"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A01",
-      "display": "^^ADT_A01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A09",
-      "display": "^^ADT_A09"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A09",
-      "display": "^^ADT_A09"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A09",
-      "display": "^^ADT_A09"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A12",
-      "display": "^^ADT_A12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A01",
-      "display": "^^ADT_A01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A05",
-      "display": "^^ADT_A05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A15",
-      "display": "^^ADT_A15"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A16",
-      "display": "^^ADT_A16"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A17",
-      "display": "^^ADT_A17"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A20",
-      "display": "^^ADT_A20"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A24",
-      "display": "^^ADT_A24"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A05",
-      "display": "^^ADT_A05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A05",
-      "display": "^^ADT_A05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A21",
-      "display": "^^ADT_A21"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A37",
-      "display": "^^ADT_A37"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A38",
-      "display": "^^ADT_A38"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A39",
-      "display": "^^ADT_A39"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A39",
-      "display": "^^ADT_A39"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A39",
-      "display": "^^ADT_A39"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A43",
-      "display": "^^ADT_A43"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A44",
-      "display": "^^ADT_A44"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A45",
-      "display": "^^ADT_A45"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A44",
-      "display": "^^ADT_A44"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ADT_A43",
-      "display": "^^ADT_A43"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A50",
-      "display": "^^ADT_A50"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A50",
-      "display": "^^ADT_A50"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A52",
-      "display": "^^ADT_A52"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A52",
-      "display": "^^ADT_A52"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A54",
-      "display": "^^ADT_A54"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A54",
-      "display": "^^ADT_A54"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K21",
-      "display": "^^RSP_K21"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K22",
-      "display": "^^RSP_K22"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K23",
-      "display": "^^RSP_K23"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K23",
-      "display": "^^RSP_K23"
-    },
-    {
-      "code": "--ADT_A60",
-      "display": "^^ADT_A60"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A61",
-      "display": "^^ADT_A61"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ADT_A61",
-      "display": "^^ADT_A61"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K32",
-      "display": "^^RSP_K32"
-    },
-    {
-      "code": "--OMG_O19",
-      "display": "^^OMG_O19"
-    },
-    {
-      "code": "--ORG_O20",
-      "display": "^^ORG_O20"
-    },
-    {
-      "code": "--OML_O21",
-      "display": "^^OML_O21"
-    },
-    {
-      "code": "--ORL_O22",
-      "display": "^^ORL_O22"
-    },
-    {
-      "code": "--ORL_O53",
-      "display": "^^ORL_O53"
-    },
-    {
-      "code": "--OML_O33",
-      "display": "^^OML_O33"
-    },
-    {
-      "code": "--ORL_O34",
-      "display": "^^ORL_O34"
-    },
-    {
-      "code": "--ORL_O54",
-      "display": "^^ORL_O54"
-    },
-    {
-      "code": "--OML_O35",
-      "display": "^^OML_O35"
-    },
-    {
-      "code": "--ORL_O36",
-      "display": "^^ORL_O36"
-    },
-    {
-      "code": "--ORL_O55",
-      "display": "^^ORL_O55"
-    },
-    {
-      "code": "--OML_O39",
-      "display": "^^OML_O39"
-    },
-    {
-      "code": "--ORL_O40",
-      "display": "^^ORL_O40"
-    },
-    {
-      "code": "--ORL_O56",
-      "display": "^^ORL_O56"
-    },
-    {
-      "code": "--OMI_O23",
-      "display": "^^OMI_O23"
-    },
-    {
-      "code": "--ORI_O24",
-      "display": "^^ORI_O24"
-    },
-    {
-      "code": "--OPL_O37",
-      "display": "^^OPL_O37"
-    },
-    {
-      "code": "--OPR_O38",
-      "display": "^^OPR_O38"
-    },
-    {
-      "code": "--OSU_O51",
-      "display": "^^OSU_O51"
-    },
-    {
-      "code": "--OSU_O52",
-      "display": "^^OSU_O52"
-    },
-    {
-      "code": "--OMQ_O57",
-      "display": "^^OMQ_O57"
-    },
-    {
-      "code": "--ORX_O58",
-      "display": "^^ORX_O58"
-    },
-    {
-      "code": "--OML_O59",
-      "display": "^^OML_O59"
-    },
-    {
-      "code": "--QBP_Z73",
-      "display": "^^QBP_Z73"
-    },
-    {
-      "code": "--RTB_Z74",
-      "display": "^^RTB_Z74"
-    },
-    {
-      "code": "--OMD_O03",
-      "display": "^^OMD_O03"
-    },
-    {
-      "code": "--ORD_O04",
-      "display": "^^ORD_O04"
-    },
-    {
-      "code": "--OMS_O05",
-      "display": "^^OMS_O05"
-    },
-    {
-      "code": "--ORS_O06",
-      "display": "^^ORS_O06"
-    },
-    {
-      "code": "--OMN_O07",
-      "display": "^^OMN_O07"
-    },
-    {
-      "code": "--ORN_O08",
-      "display": "^^ORN_O08"
-    },
-    {
-      "code": "--OMB_O27",
-      "display": "^^OMB_O27"
-    },
-    {
-      "code": "--ORB_O28",
-      "display": "^^ORB_O28"
-    },
-    {
-      "code": "--BPS_O29",
-      "display": "^^BPS_O29"
-    },
-    {
-      "code": "--BRP_O30",
-      "display": "^^BRP_O30"
-    },
-    {
-      "code": "--BTS_O31",
-      "display": "^^BTS_O31"
-    },
-    {
-      "code": "--BRT_O32",
-      "display": "^^BRT_O32"
-    },
-    {
-      "code": "--DBC_O41",
-      "display": "^^DBC_O41"
-    },
-    {
-      "code": "--DBC_O42",
-      "display": "^^DBC_O42"
-    },
-    {
-      "code": "--QBP_O33",
-      "display": "^^QBP_O33"
-    },
-    {
-      "code": "--RSP_O33",
-      "display": "^^RSP_O33"
-    },
-    {
-      "code": "--QBP_O34",
-      "display": "^^QBP_O34"
-    },
-    {
-      "code": "--RSP_O34",
-      "display": "^^RSP_O34"
-    },
-    {
-      "code": "--DRG_O43",
-      "display": "^^DRG_O43"
-    },
-    {
-      "code": "--DER_O44",
-      "display": "^^DER_O44"
-    },
-    {
-      "code": "--DEO_O45",
-      "display": "^^DEO_O45"
-    },
-    {
-      "code": "--DEL_O46",
-      "display": "^^DEL_O46"
-    },
-    {
-      "code": "--DRC_O47",
-      "display": "^^DRC_O47"
-    },
-    {
-      "code": "--DPR_O48",
-      "display": "^^DPR_O48"
-    },
-    {
-      "code": "--OMP_O09",
-      "display": "^^OMP_O09"
-    },
-    {
-      "code": "--ORP_O10",
-      "display": "^^ORP_O10"
-    },
-    {
-      "code": "--RDE_O11",
-      "display": "^^RDE_O11"
-    },
-    {
-      "code": "--RRE_O12",
-      "display": "^^RRE_O12"
-    },
-    {
-      "code": "--RDS_O13",
-      "display": "^^RDS_O13"
-    },
-    {
-      "code": "--RRD_O14",
-      "display": "^^RRD_O14"
-    },
-    {
-      "code": "--RGV_O15",
-      "display": "^^RGV_O15"
-    },
-    {
-      "code": "--RRG_O16",
-      "display": "^^RRG_O16"
-    },
-    {
-      "code": "--RAS_O17",
-      "display": "^^RAS_O17"
-    },
-    {
-      "code": "--RRA_O18",
-      "display": "^^RRA_O18"
-    },
-    {
-      "code": "--RDE_O11",
-      "display": "^^RDE_O11"
-    },
-    {
-      "code": "--RRE_O12",
-      "display": "^^RRE_O12"
-    },
-    {
-      "code": "--QBP_Q11",
-      "display": "^^QBP_Q11"
-    },
-    {
-      "code": "--RSP_K31",
-      "display": "^^RSP_K31"
-    },
-    {
-      "code": "--RDE_O49",
-      "display": "^^RDE_O49"
-    },
-    {
-      "code": "--RRE_O50",
-      "display": "^^RRE_O50"
-    },
-    {
-      "code": "--RCV_O59",
-      "display": "^^RCV_O59"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--VXU_V04",
-      "display": "^^VXU_V04"
-    },
-    {
-      "code": "--QBP_Q13",
-      "display": "^^QBP_Q13"
-    },
-    {
-      "code": "--RSP_Z84",
-      "display": "^^RSP_Z84"
-    },
-    {
-      "code": "--QBP_Qnn",
-      "display": "^^QBP_Qnn"
-    },
-    {
-      "code": "--RTB_Knn",
-      "display": "^^RTB_Knn"
-    },
-    {
-      "code": "--RDY_K15",
-      "display": "^^RDY_K15"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--QBP_Q11",
-      "display": "^^QBP_Q11"
-    },
-    {
-      "code": "--RSP_Znn",
-      "display": "^^RSP_Znn"
-    },
-    {
-      "code": "--RDY_K15",
-      "display": "^^RDY_K15"
-    },
-    {
-      "code": "--QBP_Q11",
-      "display": "^^QBP_Q11"
-    },
-    {
-      "code": "--RSP_K11",
-      "display": "^^RSP_K11"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--QBP_Q15",
-      "display": "^^QBP_Q15"
-    },
-    {
-      "code": "--RDY_K15",
-      "display": "^^RDY_K15"
-    },
-    {
-      "code": "--QSB_Q16",
-      "display": "^^QSB_Q16"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QVR_Q17",
-      "display": "^^QVR_Q17"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QCN_J01",
-      "display": "^^QCN_J01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QCN_J01",
-      "display": "^^QCN_J01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QSB_Q16",
-      "display": "^^QSB_Q16"
-    },
-    {
-      "code": "--RSP_Z82",
-      "display": "^^RSP_Z82"
-    },
-    {
-      "code": "--RSP_Z86",
-      "display": "^^RSP_Z86"
-    },
-    {
-      "code": "--QBP_Q11",
-      "display": "^^QBP_Q11"
-    },
-    {
-      "code": "--RSP_Z88",
-      "display": "^^RSP_Z88"
-    },
-    {
-      "code": "--QBP_Q11",
-      "display": "^^QBP_Q11"
-    },
-    {
-      "code": "--RSP_Z90",
-      "display": "^^RSP_Z90"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--RDY_K15",
-      "display": "^^RDY_K15"
-    },
-    {
-      "code": "--RDY_Z80",
-      "display": "^^RDY_Z80"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--RTB_K13",
-      "display": "^^RTB_K13"
-    },
-    {
-      "code": "--BAR_P01",
-      "display": "^^BAR_P01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--BAR_P02",
-      "display": "^^BAR_P02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--DFT_P03",
-      "display": "^^DFT_P03"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--BAR_P05",
-      "display": "^^BAR_P05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--BAR_P06",
-      "display": "^^BAR_P06"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--BAR_P10",
-      "display": "^^BAR_P10"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--DFT_P11",
-      "display": "^^DFT_P11"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--BAR_P12",
-      "display": "^^BAR_P12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ORU_R01",
-      "display": "^^ORU_R01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ORU_R30",
-      "display": "^^ORU_R30"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ORU_R30",
-      "display": "^^ORU_R30"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ORU_R30",
-      "display": "^^ORU_R30"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ORA_R33",
-      "display": "^^ORA_R33"
-    },
-    {
-      "code": "--OUL_R22",
-      "display": "^^OUL_R22"
-    },
-    {
-      "code": "--OUL_R23",
-      "display": "^^OUL_R23"
-    },
-    {
-      "code": "--OUL_R24",
-      "display": "^^OUL_R24"
-    },
-    {
-      "code": "--OPU_R25",
-      "display": "^^OPU_R25"
-    },
-    {
-      "code": "--ORU_R01",
-      "display": "^^ORU_R01"
-    },
-    {
-      "code": "--ORA_R41",
-      "display": "^^ORA_R41"
-    },
-    {
-      "code": "--ORU_R01",
-      "display": "^^ORU_R01"
-    },
-    {
-      "code": "--ORU_R01",
-      "display": "^^ORU_R01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--CRM_C01",
-      "display": "^^CRM_C01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--CSU_C09",
-      "display": "^^CSU_C09"
-    },
-    {
-      "code": "--CSU_C09",
-      "display": "^^CSU_C09"
-    },
-    {
-      "code": "--CSU_C09",
-      "display": "^^CSU_C09"
-    },
-    {
-      "code": "--CSU_C09",
-      "display": "^^CSU_C09"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PEX_P07",
-      "display": "^^PEX_P07"
-    },
-    {
-      "code": "--PEX_P07",
-      "display": "^^PEX_P07"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--OSM_R26",
-      "display": "^^OSM_R26"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--MFN_M13",
-      "display": "^^MFN_M13"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_Znn",
-      "display": "^^MFN_Znn"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M02",
-      "display": "^^MFN_M02"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--MFN_M08",
-      "display": "^^MFN_M08"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M09",
-      "display": "^^MFN_M09"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M10",
-      "display": "^^MFN_M10"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M11",
-      "display": "^^MFN_M11"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M12",
-      "display": "^^MFN_M12"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M18",
-      "display": "^^MFN_M18"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M05",
-      "display": "^^MFN_M05"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M04",
-      "display": "^^MFN_M04"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M06",
-      "display": "^^MFN_M06"
-    },
-    {
-      "code": "--MFN_M07",
-      "display": "^^MFN_M07"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MFN_M15",
-      "display": "^^MFN_M15"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M16",
-      "display": "^^MFN_M16"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M17",
-      "display": "^^MFN_M17"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MFN_M19",
-      "display": "^^MFN_M19"
-    },
-    {
-      "code": "--MFK_M01",
-      "display": "^^MFK_M01"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T02",
-      "display": "^^MDM_T02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T02",
-      "display": "^^MDM_T02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T02",
-      "display": "^^MDM_T02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T02",
-      "display": "^^MDM_T02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T02",
-      "display": "^^MDM_T02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--MDM_T01",
-      "display": "^^MDM_T01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SRM_S01",
-      "display": "^^SRM_S01"
-    },
-    {
-      "code": "--SRR_S01",
-      "display": "^^SRR_S01"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SIU_S12",
-      "display": "^^SIU_S12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--RQI_I01",
-      "display": "^^RQI_I01"
-    },
-    {
-      "code": "--RPI_I01",
-      "display": "^^RPI_I01"
-    },
-    {
-      "code": "--RQI_I01",
-      "display": "^^RQI_I01"
-    },
-    {
-      "code": "--RPL_I02",
-      "display": "^^RPL_I02"
-    },
-    {
-      "code": "--RQI_I01",
-      "display": "^^RQI_I01"
-    },
-    {
-      "code": "--RPR_I03",
-      "display": "^^RPR_I03"
-    },
-    {
-      "code": "--RQP_I04",
-      "display": "^^RQP_I04"
-    },
-    {
-      "code": "--RPI_I04",
-      "display": "^^RPI_I04"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--RQI_I01",
-      "display": "^^RQI_I01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--RQA_I08",
-      "display": "^^RQA_I08"
-    },
-    {
-      "code": "--RPA_I08",
-      "display": "^^RPA_I08"
-    },
-    {
-      "code": "--RQA_I08",
-      "display": "^^RQA_I08"
-    },
-    {
-      "code": "--RPA_I08",
-      "display": "^^RPA_I08"
-    },
-    {
-      "code": "--RQA_I08",
-      "display": "^^RQA_I08"
-    },
-    {
-      "code": "--RPA_I08",
-      "display": "^^RPA_I08"
-    },
-    {
-      "code": "--RQA_I08",
-      "display": "^^RQA_I08"
-    },
-    {
-      "code": "--RPA_I08",
-      "display": "^^RPA_I08"
-    },
-    {
-      "code": "--CCM_I21",
-      "display": "^^CCM_I21"
-    },
-    {
-      "code": "--CCR_I16",
-      "display": "^^CCR_I16"
-    },
-    {
-      "code": "--CCR_I16",
-      "display": "^^CCR_I16"
-    },
-    {
-      "code": "--CCR_I16",
-      "display": "^^CCR_I16"
-    },
-    {
-      "code": "--CCU_I20",
-      "display": "^^CCU_I20"
-    },
-    {
-      "code": "--CCQ_I19",
-      "display": "^^CCQ_I19"
-    },
-    {
-      "code": "--CQU_I19",
-      "display": "^^CQU_I19"
-    },
-    {
-      "code": "--CCF_I22",
-      "display": "^^CCF_I22"
-    },
-    {
-      "code": "--CCI_I22",
-      "display": "^^CCI_I22"
-    },
-    {
-      "code": "--PGL_PC6",
-      "display": "^^PGL_PC6"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PGL_PC6",
-      "display": "^^PGL_PC6"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PGL_PC6",
-      "display": "^^PGL_PC6"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPR_PC1",
-      "display": "^^PPR_PC1"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPR_PC1",
-      "display": "^^PPR_PC1"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPR_PC1",
-      "display": "^^PPR_PC1"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPP_PCB",
-      "display": "^^PPP_PCB"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPP_PCB",
-      "display": "^^PPP_PCB"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPP_PCB",
-      "display": "^^PPP_PCB"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPG_PCG",
-      "display": "^^PPG_PCG"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPG_PCG",
-      "display": "^^PPG_PCG"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PPG_PCG",
-      "display": "^^PPG_PCG"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--ESU_U01",
-      "display": "^^ESU_U01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--ESR_U02",
-      "display": "^^ESR_U02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SSU_U03",
-      "display": "^^SSU_U03"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SSR_U04",
-      "display": "^^SSR_U04"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--INU_U05",
-      "display": "^^INU_U05"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--INR_U06",
-      "display": "^^INR_U06"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--EAC_U07",
-      "display": "^^EAC_U07"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--EAR_U08",
-      "display": "^^EAR_U08"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--EAN_U09",
-      "display": "^^EAN_U09"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--TCU_U10",
-      "display": "^^TCU_U10"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--TCU_U10",
-      "display": "^^TCU_U10"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--LSU_U12",
-      "display": "^^LSU_U12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--LSU_U12",
-      "display": "^^LSU_U12"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--INR_U14",
-      "display": "^^INR_U14"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--NMD_N02",
-      "display": "^^NMD_N02"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B01",
-      "display": "^^PMU_B01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B01",
-      "display": "^^PMU_B01"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B03",
-      "display": "^^PMU_B03"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B04",
-      "display": "^^PMU_B04"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B04",
-      "display": "^^PMU_B04"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B04",
-      "display": "^^PMU_B04"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--QBP_Q21",
-      "display": "^^QBP_Q21"
-    },
-    {
-      "code": "--RSP_K25",
-      "display": "^^RSP_K25"
-    },
-    {
-      "code": "--PMU_B07",
-      "display": "^^PMU_B07"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--PMU_B08",
-      "display": "^^PMU_B08"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--EHC_E01",
-      "display": "^^EHC_E01"
-    },
-    {
-      "code": "--EHC_E02",
-      "display": "^^EHC_E02"
-    },
-    {
-      "code": "--QBP_E03",
-      "display": "^^QBP_E03"
-    },
-    {
-      "code": "--RSP_E03",
-      "display": "^^RSP_E03"
-    },
-    {
-      "code": "--EHC_E04",
-      "display": "^^EHC_E04"
-    },
-    {
-      "code": "--EHC_E10",
-      "display": "^^EHC_E10"
-    },
-    {
-      "code": "--EHC_E12",
-      "display": "^^EHC_E12"
-    },
-    {
-      "code": "--EHC_E13",
-      "display": "^^EHC_E13"
-    },
-    {
-      "code": "--EHC_E15",
-      "display": "^^EHC_E15"
-    },
-    {
-      "code": "--EHC_E20",
-      "display": "^^EHC_E20"
-    },
-    {
-      "code": "--EHC_E21",
-      "display": "^^EHC_E21"
-    },
-    {
-      "code": "--QBP_E22",
-      "display": "^^QBP_E22"
-    },
-    {
-      "code": "--RSP_E22",
-      "display": "^^RSP_E22"
-    },
-    {
-      "code": "--EHC_E24",
-      "display": "^^EHC_E24"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--",
-      "display": "^^"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--SDR_S31",
-      "display": "^^SDR_S31"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SDR_S31",
-      "display": "^^SDR_S31"
-    },
-    {
-      "code": "--SDR_S32",
-      "display": "^^SDR_S32"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SDR_S32",
-      "display": "^^SDR_S32"
-    },
-    {
-      "code": "--STC_S33",
-      "display": "^^STC_S33"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SLR_S28",
-      "display": "^^SLR_S28"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SDR_S31",
-      "display": "^^SDR_S31"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
-      "code": "--SDR_S32",
-      "display": "^^SDR_S32"
-    },
-    {
-      "code": "--ACK",
-      "display": "^^ACK"
-    },
-    {
       "code": "ADT-A01-ADT_A01",
       "display": "ADT^A01^ADT_A01"
-    },
-    {
-      "code": "ACK-A01-ACK",
-      "display": "ACK^A01^ACK"
     },
     {
       "code": "ADT-A02-ADT_A02",
       "display": "ADT^A02^ADT_A02"
     },
     {
-      "code": "ACK-A02-ACK",
-      "display": "ACK^A02^ACK"
-    },
-    {
       "code": "ADT-A03-ADT_A03",
       "display": "ADT^A03^ADT_A03"
-    },
-    {
-      "code": "ACK-A03-ACK",
-      "display": "ACK^A03^ACK"
     },
     {
       "code": "ADT-A04-ADT_A01",
       "display": "ADT^A04^ADT_A01"
     },
     {
-      "code": "ACK-A04-ACK",
-      "display": "ACK^A04^ACK"
-    },
-    {
       "code": "ADT-A05-ADT_A05",
       "display": "ADT^A05^ADT_A05"
-    },
-    {
-      "code": "ACK-A05-ACK",
-      "display": "ACK^A05^ACK"
     },
     {
       "code": "ADT-A06-ADT_A06",
       "display": "ADT^A06^ADT_A06"
     },
     {
-      "code": "ACK-A06-ACK",
-      "display": "ACK^A06^ACK"
-    },
-    {
       "code": "ADT-A07-ADT_A06",
       "display": "ADT^A07^ADT_A06"
-    },
-    {
-      "code": "ACK-A07-ACK",
-      "display": "ACK^A07^ACK"
     },
     {
       "code": "ADT-A08-ADT_A01",
       "display": "ADT^A08^ADT_A01"
     },
     {
-      "code": "ACK-A08-ACK",
-      "display": "ACK^A08^ACK"
-    },
-    {
       "code": "ADT-A09-ADT_A09",
       "display": "ADT^A09^ADT_A09"
-    },
-    {
-      "code": "ACK-A09-ACK",
-      "display": "ACK^A09^ACK"
     },
     {
       "code": "ADT-A10-ADT_A09",
       "display": "ADT^A10^ADT_A09"
     },
     {
-      "code": "ACK-A10-ACK",
-      "display": "ACK^A10^ACK"
-    },
-    {
       "code": "ADT-A11-ADT_A09",
       "display": "ADT^A11^ADT_A09"
-    },
-    {
-      "code": "ACK-A11-ACK",
-      "display": "ACK^A11^ACK"
     },
     {
       "code": "ADT-A12-ADT_A12",
       "display": "ADT^A12^ADT_A12"
     },
     {
-      "code": "ACK-A12-ACK",
-      "display": "ACK^A12^ACK"
-    },
-    {
       "code": "ADT-A13-ADT_A01",
       "display": "ADT^A13^ADT_A01"
-    },
-    {
-      "code": "ACK-A13-ACK",
-      "display": "ACK^A13^ACK"
     },
     {
       "code": "ADT-A14-ADT_A05",
       "display": "ADT^A14^ADT_A05"
     },
     {
-      "code": "ACK-A14-ACK",
-      "display": "ACK^A14^ACK"
-    },
-    {
       "code": "ADT-A15-ADT_A15",
       "display": "ADT^A15^ADT_A15"
-    },
-    {
-      "code": "ACK-A15-ACK",
-      "display": "ACK^A15^ACK"
     },
     {
       "code": "ADT-A16-ADT_A16",
       "display": "ADT^A16^ADT_A16"
     },
     {
-      "code": "ACK-A16-ACK",
-      "display": "ACK^A16^ACK"
-    },
-    {
       "code": "ADT-A17-ADT_A17",
       "display": "ADT^A17^ADT_A17"
-    },
-    {
-      "code": "ACK-A17-ACK",
-      "display": "ACK^A17^ACK"
     },
     {
       "code": "ADT-A18-",
@@ -2366,80 +86,40 @@
       "display": "ADT^A20^ADT_A20"
     },
     {
-      "code": "ACK-A20-ACK",
-      "display": "ACK^A20^ACK"
-    },
-    {
       "code": "ADT-A21-ADT_A21",
       "display": "ADT^A21^ADT_A21"
-    },
-    {
-      "code": "ACK-A21-ACK",
-      "display": "ACK^A21^ACK"
     },
     {
       "code": "ADT-A22-ADT_A21",
       "display": "ADT^A22^ADT_A21"
     },
     {
-      "code": "ACK-A22-ACK",
-      "display": "ACK^A22^ACK"
-    },
-    {
       "code": "ADT-A23-ADT_A21",
       "display": "ADT^A23^ADT_A21"
-    },
-    {
-      "code": "ACK-A23-ACK",
-      "display": "ACK^A23^ACK"
     },
     {
       "code": "ADT-A24-ADT_A24",
       "display": "ADT^A24^ADT_A24"
     },
     {
-      "code": "ACK-A24-ACK",
-      "display": "ACK^A24^ACK"
-    },
-    {
       "code": "ADT-A25-ADT_A21",
       "display": "ADT^A25^ADT_A21"
-    },
-    {
-      "code": "ACK-A25-ACK",
-      "display": "ACK^A25^ACK"
     },
     {
       "code": "ADT-A26-ADT_A21",
       "display": "ADT^A26^ADT_A21"
     },
     {
-      "code": "ACK-A26-ACK",
-      "display": "ACK^A26^ACK"
-    },
-    {
       "code": "ADT-A27-ADT_A21",
       "display": "ADT^A27^ADT_A21"
-    },
-    {
-      "code": "ACK-A27-ACK",
-      "display": "ACK^A27^ACK"
     },
     {
       "code": "ADT-A28-ADT_A05",
       "display": "ADT^A28^ADT_A05"
     },
     {
-      "code": "ACK-A28-ACK",
-      "display": "ACK^A28^ACK"
-    },
-    {
       "code": "ADT-A29-ADT_A21",
       "display": "ADT^A29^ADT_A21"
-    },
-    {
-      "code": "ACK-A29-ACK",
-      "display": "ACK^A29^ACK"
     },
     {
       "code": "ADT-A30-",
@@ -2450,24 +130,12 @@
       "display": "ADT^A31^ADT_A05"
     },
     {
-      "code": "ACK-A31-ACK",
-      "display": "ACK^A31^ACK"
-    },
-    {
       "code": "ADT-A32-ADT_A21",
       "display": "ADT^A32^ADT_A21"
     },
     {
-      "code": "ACK-A32-ACK",
-      "display": "ACK^A32^ACK"
-    },
-    {
       "code": "ADT-A33-ADT_A21",
       "display": "ADT^A33^ADT_A21"
-    },
-    {
-      "code": "ACK-A33-ACK",
-      "display": "ACK^A33^ACK"
     },
     {
       "code": "ADT-A34-",
@@ -2486,16 +154,8 @@
       "display": "ADT^A37^ADT_A37"
     },
     {
-      "code": "ACK-A37-ACK",
-      "display": "ACK^A37^ACK"
-    },
-    {
       "code": "ADT-A38-ADT_A38",
       "display": "ADT^A38^ADT_A38"
-    },
-    {
-      "code": "ACK-A38-ACK",
-      "display": "ACK^A38^ACK"
     },
     {
       "code": "ADT-A39-",
@@ -2506,48 +166,24 @@
       "display": "ADT^A40^ADT_A39"
     },
     {
-      "code": "ACK-A40-ACK",
-      "display": "ACK^A40^ACK"
-    },
-    {
       "code": "ADT-A41-ADT_A39",
       "display": "ADT^A41^ADT_A39"
-    },
-    {
-      "code": "ACK-A41-ACK",
-      "display": "ACK^A41^ACK"
     },
     {
       "code": "ADT-A42-ADT_A39",
       "display": "ADT^A42^ADT_A39"
     },
     {
-      "code": "ACK-A42-ACK",
-      "display": "ACK^A42^ACK"
-    },
-    {
       "code": "ADT-A43-ADT_A43",
       "display": "ADT^A43^ADT_A43"
-    },
-    {
-      "code": "ACK-A43-ACK",
-      "display": "ACK^A43^ACK"
     },
     {
       "code": "ADT-A44-ADT_A44",
       "display": "ADT^A44^ADT_A44"
     },
     {
-      "code": "ACK-A44-ACK",
-      "display": "ACK^A44^ACK"
-    },
-    {
       "code": "ADT-A45-ADT_A45",
       "display": "ADT^A45^ADT_A45"
-    },
-    {
-      "code": "ACK-A45-ACK",
-      "display": "ACK^A45^ACK"
     },
     {
       "code": "ADT-A46-",
@@ -2558,10 +194,6 @@
       "display": "ADT^A47^ADT_A44"
     },
     {
-      "code": "ACK-A47-ACK",
-      "display": "ACK^A47^ACK"
-    },
-    {
       "code": "ADT-A48-",
       "display": "ADT^A48^"
     },
@@ -2570,64 +202,32 @@
       "display": "ADT^A49^ADT_A43"
     },
     {
-      "code": "ACK-A49-ACK",
-      "display": "ACK^A49^ACK"
-    },
-    {
       "code": "ADT-A50-ADT_A50",
       "display": "ADT^A50^ADT_A50"
-    },
-    {
-      "code": "ACK-A50-ACK",
-      "display": "ACK^A50^ACK"
     },
     {
       "code": "ADT-A51-ADT_A50",
       "display": "ADT^A51^ADT_A50"
     },
     {
-      "code": "ACK-A51-ACK",
-      "display": "ACK^A51^ACK"
-    },
-    {
       "code": "ADT-A52-ADT_A52",
       "display": "ADT^A52^ADT_A52"
-    },
-    {
-      "code": "ACK-A52-ACK",
-      "display": "ACK^A52^ACK"
     },
     {
       "code": "ADT-A53-ADT_A52",
       "display": "ADT^A53^ADT_A52"
     },
     {
-      "code": "ACK-A53-ACK",
-      "display": "ACK^A53^ACK"
-    },
-    {
       "code": "ADT-A54-ADT_A54",
       "display": "ADT^A54^ADT_A54"
-    },
-    {
-      "code": "ACK-A54-ACK",
-      "display": "ACK^A54^ACK"
     },
     {
       "code": "ADT-A55-ADT_A54",
       "display": "ADT^A55^ADT_A54"
     },
     {
-      "code": "ACK-A55-ACK",
-      "display": "ACK^A55^ACK"
-    },
-    {
       "code": "QBP-Q21-QBP_Q21",
       "display": "QBP^Q21^QBP_Q21"
-    },
-    {
-      "code": "RSP-Q21-RSP_K21",
-      "display": "RSP^Q21^RSP_K21"
     },
     {
       "code": "RSP-K21-RSP_K21",
@@ -2638,20 +238,12 @@
       "display": "QBP^Q22^QBP_Q21"
     },
     {
-      "code": "RSP-Q22-RSP_K22",
-      "display": "RSP^Q22^RSP_K22"
-    },
-    {
       "code": "RSP-K22-RSP_K22",
       "display": "RSP^K22^RSP_K22"
     },
     {
       "code": "QBP-Q23-QBP_Q21",
       "display": "QBP^Q23^QBP_Q21"
-    },
-    {
-      "code": "RSP-Q23-RSP_K23",
-      "display": "RSP^Q23^RSP_K23"
     },
     {
       "code": "RSP-K23-RSP_K23",
@@ -2662,10 +254,6 @@
       "display": "QBP^Q24^QBP_Q21"
     },
     {
-      "code": "RSP-Q24-RSP_K23",
-      "display": "RSP^Q24^RSP_K23"
-    },
-    {
       "code": "RSP-K24-RSP_K23",
       "display": "RSP^K24^RSP_K23"
     },
@@ -2674,32 +262,16 @@
       "display": "ADT^A60^ADT_A60"
     },
     {
-      "code": "ACK-A60-ACK",
-      "display": "ACK^A60^ACK"
-    },
-    {
       "code": "ADT-A61-ADT_A61",
       "display": "ADT^A61^ADT_A61"
-    },
-    {
-      "code": "ACK-A61-ACK",
-      "display": "ACK^A61^ACK"
     },
     {
       "code": "ADT-A62-ADT_A61",
       "display": "ADT^A62^ADT_A61"
     },
     {
-      "code": "ACK-A62-ACK",
-      "display": "ACK^A62^ACK"
-    },
-    {
       "code": "QBP-Q32-QBP_Q21",
       "display": "QBP^Q32^QBP_Q21"
-    },
-    {
-      "code": "RSP-Q32-RSP_K32",
-      "display": "RSP^Q32^RSP_K32"
     },
     {
       "code": "RSP-K32-RSP_K32",
@@ -2804,10 +376,6 @@
     {
       "code": "QBP-Z73-QBP_Z73",
       "display": "QBP^Z73^QBP_Z73"
-    },
-    {
-      "code": "RTB-Z73-RTB_Z74",
-      "display": "RTB^Z73^RTB_Z74"
     },
     {
       "code": "RTB-Z74-RTB_Z74",
@@ -2962,10 +530,6 @@
       "display": "QBP^Q31^QBP_Q11"
     },
     {
-      "code": "RSP-Q31-RSP_K31",
-      "display": "RSP^Q31^RSP_K31"
-    },
-    {
       "code": "RSP-K31-RSP_K31",
       "display": "RSP^K31^RSP_K31"
     },
@@ -2998,10 +562,6 @@
       "display": "QBP^Z99^QBP_Q13"
     },
     {
-      "code": "RSP-Z99-RSP_Z84",
-      "display": "RSP^Z99^RSP_Z84"
-    },
-    {
       "code": "RSP-Z84-RSP_Z84",
       "display": "RSP^Z84^RSP_Z84"
     },
@@ -3026,20 +586,12 @@
       "display": "QBP^Znn_E^QBP_Q11"
     },
     {
-      "code": "RSP-Znn_E-RSP_Znn",
-      "display": "RSP^Znn_E^RSP_Znn"
-    },
-    {
       "code": "RDY-Znn_F-RDY_K15",
       "display": "RDY^Znn_F^RDY_K15"
     },
     {
       "code": "QBP-Q11-QBP_Q11",
       "display": "QBP^Q11^QBP_Q11"
-    },
-    {
-      "code": "RSP-Q11-RSP_K11",
-      "display": "RSP^Q11^RSP_K11"
     },
     {
       "code": "RSP-K11-RSP_K11",
@@ -3054,10 +606,6 @@
       "display": "QBP^Q15^QBP_Q15"
     },
     {
-      "code": "RDY-Q15-RDY_K15",
-      "display": "RDY^Q15^RDY_K15"
-    },
-    {
       "code": "RDY-K15-RDY_K15",
       "display": "RDY^K15^RDY_K15"
     },
@@ -3066,32 +614,16 @@
       "display": "QSB^Q16^QSB_Q16"
     },
     {
-      "code": "ACK-Q16-ACK",
-      "display": "ACK^Q16^ACK"
-    },
-    {
       "code": "QVR-Q17-QVR_Q17",
       "display": "QVR^Q17^QVR_Q17"
-    },
-    {
-      "code": "ACK-Q17-ACK",
-      "display": "ACK^Q17^ACK"
     },
     {
       "code": "QCN-J01-QCN_J01",
       "display": "QCN^J01^QCN_J01"
     },
     {
-      "code": "ACK-J01-ACK",
-      "display": "ACK^J01^ACK"
-    },
-    {
       "code": "QSX-J02-QCN_J01",
       "display": "QSX^J02^QCN_J01"
-    },
-    {
-      "code": "ACK-J02-ACK",
-      "display": "ACK^J02^ACK"
     },
     {
       "code": "QSB-Z83-QSB_Q16",
@@ -3110,20 +642,12 @@
       "display": "QBP^Z87^QBP_Q11"
     },
     {
-      "code": "RSP-Z87-RSP_Z88",
-      "display": "RSP^Z87^RSP_Z88"
-    },
-    {
       "code": "RSP-Z88-RSP_Z88",
       "display": "RSP^Z88^RSP_Z88"
     },
     {
       "code": "QBP-Z89-QBP_Q11",
       "display": "QBP^Z89^QBP_Q11"
-    },
-    {
-      "code": "RSP-Z89-RSP_Z90",
-      "display": "RSP^Z89^RSP_Z90"
     },
     {
       "code": "RSP-Z90-RSP_Z90",
@@ -3162,24 +686,12 @@
       "display": "BAR^P01^BAR_P01"
     },
     {
-      "code": "ACK-P01-ACK",
-      "display": "ACK^P01^ACK"
-    },
-    {
       "code": "BAR-P02-BAR_P02",
       "display": "BAR^P02^BAR_P02"
     },
     {
-      "code": "ACK-P02-ACK",
-      "display": "ACK^P02^ACK"
-    },
-    {
       "code": "DFT-P03-DFT_P03",
       "display": "DFT^P03^DFT_P03"
-    },
-    {
-      "code": "ACK-P03-ACK",
-      "display": "ACK^P03^ACK"
     },
     {
       "code": "QRY-P04-",
@@ -3190,48 +702,24 @@
       "display": "BAR^P05^BAR_P05"
     },
     {
-      "code": "ACK-P05-ACK",
-      "display": "ACK^P05^ACK"
-    },
-    {
       "code": "BAR-P06-BAR_P06",
       "display": "BAR^P06^BAR_P06"
-    },
-    {
-      "code": "ACK-P06-ACK",
-      "display": "ACK^P06^ACK"
     },
     {
       "code": "BAR-P10-BAR_P10",
       "display": "BAR^P10^BAR_P10"
     },
     {
-      "code": "ACK-P10-ACK",
-      "display": "ACK^P10^ACK"
-    },
-    {
       "code": "DFT-P11-DFT_P11",
       "display": "DFT^P11^DFT_P11"
-    },
-    {
-      "code": "ACK-P11-ACK",
-      "display": "ACK^P11^ACK"
     },
     {
       "code": "BAR-P12-BAR_P12",
       "display": "BAR^P12^BAR_P12"
     },
     {
-      "code": "ACK-P12-ACK",
-      "display": "ACK^P12^ACK"
-    },
-    {
       "code": "ORU-R01-ORU_R01",
       "display": "ORU^R01^ORU_R01"
-    },
-    {
-      "code": "ACK-R01-ACK",
-      "display": "ACK^R01^ACK"
     },
     {
       "code": "OUL-R21-",
@@ -3250,24 +738,12 @@
       "display": "ORU^R30^ORU_R30"
     },
     {
-      "code": "ACK-R30-ACK",
-      "display": "ACK^R30^ACK"
-    },
-    {
       "code": "ORU-R31-ORU_R30",
       "display": "ORU^R31^ORU_R30"
     },
     {
-      "code": "ACK-R31-ACK",
-      "display": "ACK^R31^ACK"
-    },
-    {
       "code": "ORU-R32-ORU_R30",
       "display": "ORU^R32^ORU_R30"
-    },
-    {
-      "code": "ACK-R32-ACK",
-      "display": "ACK^R32^ACK"
     },
     {
       "code": "ORA-R33-ORA_R33",
@@ -3310,96 +786,48 @@
       "display": "CRM^C01^CRM_C01"
     },
     {
-      "code": "ACK-C01-ACK",
-      "display": "ACK^C01^ACK"
-    },
-    {
       "code": "CRM-C02-CRM_C01",
       "display": "CRM^C02^CRM_C01"
-    },
-    {
-      "code": "ACK-C02-ACK",
-      "display": "ACK^C02^ACK"
     },
     {
       "code": "CRM-C03-CRM_C01",
       "display": "CRM^C03^CRM_C01"
     },
     {
-      "code": "ACK-C03-ACK",
-      "display": "ACK^C03^ACK"
-    },
-    {
       "code": "CRM-C04-CRM_C01",
       "display": "CRM^C04^CRM_C01"
-    },
-    {
-      "code": "ACK-C04-ACK",
-      "display": "ACK^C04^ACK"
     },
     {
       "code": "CRM-C05-CRM_C01",
       "display": "CRM^C05^CRM_C01"
     },
     {
-      "code": "ACK-C05-ACK",
-      "display": "ACK^C05^ACK"
-    },
-    {
       "code": "CRM-C06-CRM_C01",
       "display": "CRM^C06^CRM_C01"
-    },
-    {
-      "code": "ACK-C06-ACK",
-      "display": "ACK^C06^ACK"
     },
     {
       "code": "CRM-C07-CRM_C01",
       "display": "CRM^C07^CRM_C01"
     },
     {
-      "code": "ACK-C07-ACK",
-      "display": "ACK^C07^ACK"
-    },
-    {
       "code": "CRM-C08-CRM_C01",
       "display": "CRM^C08^CRM_C01"
-    },
-    {
-      "code": "ACK-C08-ACK",
-      "display": "ACK^C08^ACK"
     },
     {
       "code": "CSU-C09-CSU_C09",
       "display": "CSU^C09^CSU_C09"
     },
     {
-      "code": "ACK-C09-ACK",
-      "display": "ACK^C09^ACK"
-    },
-    {
       "code": "CSU-C10-CSU_C09",
       "display": "CSU^C10^CSU_C09"
-    },
-    {
-      "code": "ACK-C10-ACK",
-      "display": "ACK^C10^ACK"
     },
     {
       "code": "CSU-C11-CSU_C09",
       "display": "CSU^C11^CSU_C09"
     },
     {
-      "code": "ACK-C11-ACK",
-      "display": "ACK^C11^ACK"
-    },
-    {
       "code": "CSU-C12-CSU_C09",
       "display": "CSU^C12^CSU_C09"
-    },
-    {
-      "code": "ACK-C12-ACK",
-      "display": "ACK^C12^ACK"
     },
     {
       "code": "PEX-P07-PEX_P07",
@@ -3426,24 +854,12 @@
       "display": "MFN^M13^MFN_M13"
     },
     {
-      "code": "MFK-M13-MFK_M01",
-      "display": "MFK^M13^MFK_M01"
-    },
-    {
       "code": "MFN-M14-MFN_Znn",
       "display": "MFN^M14^MFN_Znn"
     },
     {
-      "code": "MFK-M14-MFK_M01",
-      "display": "MFK^M14^MFK_M01"
-    },
-    {
       "code": "MFN-M02-MFN_M02",
       "display": "MFN^M02^MFN_M02"
-    },
-    {
-      "code": "MFK-M02-MFK_M01",
-      "display": "MFK^M02^MFK_M01"
     },
     {
       "code": "MFN-M03-",
@@ -3454,200 +870,100 @@
       "display": "MFN^M08^MFN_M08"
     },
     {
-      "code": "MFK-M08-MFK_M01",
-      "display": "MFK^M08^MFK_M01"
-    },
-    {
       "code": "MFN-M09-MFN_M09",
       "display": "MFN^M09^MFN_M09"
-    },
-    {
-      "code": "MFK-M09-MFK_M01",
-      "display": "MFK^M09^MFK_M01"
     },
     {
       "code": "MFN-M10-MFN_M10",
       "display": "MFN^M10^MFN_M10"
     },
     {
-      "code": "MFK-M10-MFK_M01",
-      "display": "MFK^M10^MFK_M01"
-    },
-    {
       "code": "MFN-M11-MFN_M11",
       "display": "MFN^M11^MFN_M11"
-    },
-    {
-      "code": "MFK-M11-MFK_M01",
-      "display": "MFK^M11^MFK_M01"
     },
     {
       "code": "MFN-M12-MFN_M12",
       "display": "MFN^M12^MFN_M12"
     },
     {
-      "code": "MFK-M12-MFK_M01",
-      "display": "MFK^M12^MFK_M01"
-    },
-    {
       "code": "MFN-M18-MFN_M18",
       "display": "MFN^M18^MFN_M18"
-    },
-    {
-      "code": "MFK-M18-MFK_M01",
-      "display": "MFK^M18^MFK_M01"
     },
     {
       "code": "MFN-M05-MFN_M05",
       "display": "MFN^M05^MFN_M05"
     },
     {
-      "code": "MFK-M05-MFK_M01",
-      "display": "MFK^M05^MFK_M01"
-    },
-    {
       "code": "MFN-M04-MFN_M04",
       "display": "MFN^M04^MFN_M04"
-    },
-    {
-      "code": "MFK-M04-MFK_M01",
-      "display": "MFK^M04^MFK_M01"
     },
     {
       "code": "MFN-M06-MFN_M06",
       "display": "MFN^M06^MFN_M06"
     },
     {
-      "code": "MFK-M06-MFK_M01",
-      "display": "MFK^M06^MFK_M01"
-    },
-    {
       "code": "MFN-M07-MFN_M07",
       "display": "MFN^M07^MFN_M07"
-    },
-    {
-      "code": "MFK-M07-MFK_M01",
-      "display": "MFK^M07^MFK_M01"
     },
     {
       "code": "MFN-M15-MFN_M15",
       "display": "MFN^M15^MFN_M15"
     },
     {
-      "code": "MFK-M15-MFK_M01",
-      "display": "MFK^M15^MFK_M01"
-    },
-    {
       "code": "MFN-M16-MFN_M16",
       "display": "MFN^M16^MFN_M16"
-    },
-    {
-      "code": "MFK-M16-MFK_M01",
-      "display": "MFK^M16^MFK_M01"
     },
     {
       "code": "MFN-M17-MFN_M17",
       "display": "MFN^M17^MFN_M17"
     },
     {
-      "code": "MFK-M17-MFK_M01",
-      "display": "MFK^M17^MFK_M01"
-    },
-    {
       "code": "MFN-M19-MFN_M19",
       "display": "MFN^M19^MFN_M19"
-    },
-    {
-      "code": "MFK-M19-MFK_M01",
-      "display": "MFK^M19^MFK_M01"
     },
     {
       "code": "MDM-T01-MDM_T01",
       "display": "MDM^T01^MDM_T01"
     },
     {
-      "code": "ACK-T01-ACK",
-      "display": "ACK^T01^ACK"
-    },
-    {
       "code": "MDM-T02-MDM_T02",
       "display": "MDM^T02^MDM_T02"
-    },
-    {
-      "code": "ACK-T02-ACK",
-      "display": "ACK^T02^ACK"
     },
     {
       "code": "MDM-T03-MDM_T01",
       "display": "MDM^T03^MDM_T01"
     },
     {
-      "code": "ACK-T03-ACK",
-      "display": "ACK^T03^ACK"
-    },
-    {
       "code": "MDM-T04-MDM_T02",
       "display": "MDM^T04^MDM_T02"
-    },
-    {
-      "code": "ACK-T04-ACK",
-      "display": "ACK^T04^ACK"
     },
     {
       "code": "MDM-T05-MDM_T01",
       "display": "MDM^T05^MDM_T01"
     },
     {
-      "code": "ACK-T05-ACK",
-      "display": "ACK^T05^ACK"
-    },
-    {
       "code": "MDM-T06-MDM_T02",
       "display": "MDM^T06^MDM_T02"
-    },
-    {
-      "code": "ACK-T06-ACK",
-      "display": "ACK^T06^ACK"
     },
     {
       "code": "MDM-T07-MDM_T01",
       "display": "MDM^T07^MDM_T01"
     },
     {
-      "code": "ACK-T07-ACK",
-      "display": "ACK^T07^ACK"
-    },
-    {
       "code": "MDM-T08-MDM_T02",
       "display": "MDM^T08^MDM_T02"
-    },
-    {
-      "code": "ACK-T08-ACK",
-      "display": "ACK^T08^ACK"
     },
     {
       "code": "MDM-T09-MDM_T01",
       "display": "MDM^T09^MDM_T01"
     },
     {
-      "code": "ACK-T09-ACK",
-      "display": "ACK^T09^ACK"
-    },
-    {
       "code": "MDM-T10-MDM_T02",
       "display": "MDM^T10^MDM_T02"
     },
     {
-      "code": "ACK-T10-ACK",
-      "display": "ACK^T10^ACK"
-    },
-    {
       "code": "MDM-T11-MDM_T01",
       "display": "MDM^T11^MDM_T01"
-    },
-    {
-      "code": "ACK-T11-ACK",
-      "display": "ACK^T11^ACK"
     },
     {
       "code": "QRY-T12-",
@@ -3658,208 +974,104 @@
       "display": "SRM^S01^SRM_S01"
     },
     {
-      "code": "SRR-S01-SRR_S01",
-      "display": "SRR^S01^SRR_S01"
-    },
-    {
       "code": "SRM-S02-SRM_S01",
       "display": "SRM^S02^SRM_S01"
-    },
-    {
-      "code": "SRR-S02-SRR_S01",
-      "display": "SRR^S02^SRR_S01"
     },
     {
       "code": "SRM-S03-SRM_S01",
       "display": "SRM^S03^SRM_S01"
     },
     {
-      "code": "SRR-S03-SRR_S01",
-      "display": "SRR^S03^SRR_S01"
-    },
-    {
       "code": "SRM-S04-SRM_S01",
       "display": "SRM^S04^SRM_S01"
-    },
-    {
-      "code": "SRR-S04-SRR_S01",
-      "display": "SRR^S04^SRR_S01"
     },
     {
       "code": "SRM-S05-SRM_S01",
       "display": "SRM^S05^SRM_S01"
     },
     {
-      "code": "SRR-S05-SRR_S01",
-      "display": "SRR^S05^SRR_S01"
-    },
-    {
       "code": "SRM-S06-SRM_S01",
       "display": "SRM^S06^SRM_S01"
-    },
-    {
-      "code": "SRR-S06-SRR_S01",
-      "display": "SRR^S06^SRR_S01"
     },
     {
       "code": "SRM-S07-SRM_S01",
       "display": "SRM^S07^SRM_S01"
     },
     {
-      "code": "SRR-S07-SRR_S01",
-      "display": "SRR^S07^SRR_S01"
-    },
-    {
       "code": "SRM-S08-SRM_S01",
       "display": "SRM^S08^SRM_S01"
-    },
-    {
-      "code": "SRR-S08-SRR_S01",
-      "display": "SRR^S08^SRR_S01"
     },
     {
       "code": "SRM-S09-SRM_S01",
       "display": "SRM^S09^SRM_S01"
     },
     {
-      "code": "SRR-S09-SRR_S01",
-      "display": "SRR^S09^SRR_S01"
-    },
-    {
       "code": "SRM-S10-SRM_S01",
       "display": "SRM^S10^SRM_S01"
-    },
-    {
-      "code": "SRR-S10-SRR_S01",
-      "display": "SRR^S10^SRR_S01"
     },
     {
       "code": "SRM-S11-SRM_S01",
       "display": "SRM^S11^SRM_S01"
     },
     {
-      "code": "SRR-S11-SRR_S01",
-      "display": "SRR^S11^SRR_S01"
-    },
-    {
       "code": "SIU-S12-SIU_S12",
       "display": "SIU^S12^SIU_S12"
-    },
-    {
-      "code": "ACK-S12-ACK",
-      "display": "ACK^S12^ACK"
     },
     {
       "code": "SIU-S13-SIU_S12",
       "display": "SIU^S13^SIU_S12"
     },
     {
-      "code": "ACK-S13-ACK",
-      "display": "ACK^S13^ACK"
-    },
-    {
       "code": "SIU-S14-SIU_S12",
       "display": "SIU^S14^SIU_S12"
-    },
-    {
-      "code": "ACK-S14-ACK",
-      "display": "ACK^S14^ACK"
     },
     {
       "code": "SIU-S15-SIU_S12",
       "display": "SIU^S15^SIU_S12"
     },
     {
-      "code": "ACK-S15-ACK",
-      "display": "ACK^S15^ACK"
-    },
-    {
       "code": "SIU-S16-SIU_S12",
       "display": "SIU^S16^SIU_S12"
-    },
-    {
-      "code": "ACK-S16-ACK",
-      "display": "ACK^S16^ACK"
     },
     {
       "code": "SIU-S17-SIU_S12",
       "display": "SIU^S17^SIU_S12"
     },
     {
-      "code": "ACK-S17-ACK",
-      "display": "ACK^S17^ACK"
-    },
-    {
       "code": "SIU-S18-SIU_S12",
       "display": "SIU^S18^SIU_S12"
-    },
-    {
-      "code": "ACK-S18-ACK",
-      "display": "ACK^S18^ACK"
     },
     {
       "code": "SIU-S19-SIU_S12",
       "display": "SIU^S19^SIU_S12"
     },
     {
-      "code": "ACK-S19-ACK",
-      "display": "ACK^S19^ACK"
-    },
-    {
       "code": "SIU-S20-SIU_S12",
       "display": "SIU^S20^SIU_S12"
-    },
-    {
-      "code": "ACK-S20-ACK",
-      "display": "ACK^S20^ACK"
     },
     {
       "code": "SIU-S21-SIU_S12",
       "display": "SIU^S21^SIU_S12"
     },
     {
-      "code": "ACK-S21-ACK",
-      "display": "ACK^S21^ACK"
-    },
-    {
       "code": "SIU-S22-SIU_S12",
       "display": "SIU^S22^SIU_S12"
-    },
-    {
-      "code": "ACK-S22-ACK",
-      "display": "ACK^S22^ACK"
     },
     {
       "code": "SIU-S23-SIU_S12",
       "display": "SIU^S23^SIU_S12"
     },
     {
-      "code": "ACK-S23-ACK",
-      "display": "ACK^S23^ACK"
-    },
-    {
       "code": "SIU-S24-SIU_S12",
       "display": "SIU^S24^SIU_S12"
-    },
-    {
-      "code": "ACK-S24-ACK",
-      "display": "ACK^S24^ACK"
     },
     {
       "code": "SIU-S26-SIU_S12",
       "display": "SIU^S26^SIU_S12"
     },
     {
-      "code": "ACK-S26-ACK",
-      "display": "ACK^S26^ACK"
-    },
-    {
       "code": "SIU-S27-SIU_S12",
       "display": "SIU^S27^SIU_S12"
-    },
-    {
-      "code": "ACK-S27-ACK",
-      "display": "ACK^S27^ACK"
     },
     {
       "code": "SQM-S25-",
@@ -3870,32 +1082,16 @@
       "display": "RQI^I01^RQI_I01"
     },
     {
-      "code": "RPI-I01-RPI_I01",
-      "display": "RPI^I01^RPI_I01"
-    },
-    {
       "code": "RQI-I02-RQI_I01",
       "display": "RQI^I02^RQI_I01"
-    },
-    {
-      "code": "RPL-I02-RPL_I02",
-      "display": "RPL^I02^RPL_I02"
     },
     {
       "code": "RQI-I03-RQI_I01",
       "display": "RQI^I03^RQI_I01"
     },
     {
-      "code": "RPR-I03-RPR_I03",
-      "display": "RPR^I03^RPR_I03"
-    },
-    {
       "code": "RQP-I04-RQP_I04",
       "display": "RQP^I04^RQP_I04"
-    },
-    {
-      "code": "RPI-I04-RPI_I04",
-      "display": "RPI^I04^RPI_I04"
     },
     {
       "code": "RQC-I05-",
@@ -3910,40 +1106,20 @@
       "display": "PIN^I07^RQI_I01"
     },
     {
-      "code": "ACK-I07-ACK",
-      "display": "ACK^I07^ACK"
-    },
-    {
       "code": "RQA-I08-RQA_I08",
       "display": "RQA^I08^RQA_I08"
-    },
-    {
-      "code": "RPA-I08-RPA_I08",
-      "display": "RPA^I08^RPA_I08"
     },
     {
       "code": "RQA-I09-RQA_I08",
       "display": "RQA^I09^RQA_I08"
     },
     {
-      "code": "RPA-I09-RPA_I08",
-      "display": "RPA^I09^RPA_I08"
-    },
-    {
       "code": "RQA-I10-RQA_I08",
       "display": "RQA^I10^RQA_I08"
     },
     {
-      "code": "RPA-I10-RPA_I08",
-      "display": "RPA^I10^RPA_I08"
-    },
-    {
       "code": "RQA-I11-RQA_I08",
       "display": "RQA^I11^RQA_I08"
-    },
-    {
-      "code": "RPA-I11-RPA_I08",
-      "display": "RPA^I11^RPA_I08"
     },
     {
       "code": "CCM-I21-CCM_I21",
@@ -3970,112 +1146,56 @@
       "display": "CCQ^I19^CCQ_I19"
     },
     {
-      "code": "CQU-I19-CQU_I19",
-      "display": "CQU^I19^CQU_I19"
-    },
-    {
       "code": "CCF-I22-CCF_I22",
       "display": "CCF^I22^CCF_I22"
-    },
-    {
-      "code": "CCI-I22-CCI_I22",
-      "display": "CCI^I22^CCI_I22"
     },
     {
       "code": "PGL-PC6-PGL_PC6",
       "display": "PGL^PC6^PGL_PC6"
     },
     {
-      "code": "ACK-PC6-ACK",
-      "display": "ACK^PC6^ACK"
-    },
-    {
       "code": "PGL-PC7-PGL_PC6",
       "display": "PGL^PC7^PGL_PC6"
-    },
-    {
-      "code": "ACK-PC7-ACK",
-      "display": "ACK^PC7^ACK"
     },
     {
       "code": "PGL-PC8-PGL_PC6",
       "display": "PGL^PC8^PGL_PC6"
     },
     {
-      "code": "ACK-PC8-ACK",
-      "display": "ACK^PC8^ACK"
-    },
-    {
       "code": "PPR-PC1-PPR_PC1",
       "display": "PPR^PC1^PPR_PC1"
-    },
-    {
-      "code": "ACK-PC1-ACK",
-      "display": "ACK^PC1^ACK"
     },
     {
       "code": "PPR-PC2-PPR_PC1",
       "display": "PPR^PC2^PPR_PC1"
     },
     {
-      "code": "ACK-PC2-ACK",
-      "display": "ACK^PC2^ACK"
-    },
-    {
       "code": "PPR-PC3-PPR_PC1",
       "display": "PPR^PC3^PPR_PC1"
-    },
-    {
-      "code": "ACK-PC3-ACK",
-      "display": "ACK^PC3^ACK"
     },
     {
       "code": "PPP-PCB-PPP_PCB",
       "display": "PPP^PCB^PPP_PCB"
     },
     {
-      "code": "ACK-PCB-ACK",
-      "display": "ACK^PCB^ACK"
-    },
-    {
       "code": "PPP-PCC-PPP_PCB",
       "display": "PPP^PCC^PPP_PCB"
-    },
-    {
-      "code": "ACK-PCC-ACK",
-      "display": "ACK^PCC^ACK"
     },
     {
       "code": "PPP-PCD-PPP_PCB",
       "display": "PPP^PCD^PPP_PCB"
     },
     {
-      "code": "ACK-PCD-ACK",
-      "display": "ACK^PCD^ACK"
-    },
-    {
       "code": "PPG-PCG-PPG_PCG",
       "display": "PPG^PCG^PPG_PCG"
-    },
-    {
-      "code": "ACK-PCG-ACK",
-      "display": "ACK^PCG^ACK"
     },
     {
       "code": "PPG-PCH-PPG_PCG",
       "display": "PPG^PCH^PPG_PCG"
     },
     {
-      "code": "ACK-PCH-ACK",
-      "display": "ACK^PCH^ACK"
-    },
-    {
       "code": "PPG-PCJ-PPG_PCG",
       "display": "PPG^PCJ^PPG_PCG"
-    },
-    {
-      "code": "ACK-PCJ-ACK",
-      "display": "ACK^PCJ^ACK"
     },
     {
       "code": "QRY-PC4-",
@@ -4114,112 +1234,56 @@
       "display": "ESU^U01^ESU_U01"
     },
     {
-      "code": "ACK-U01-ACK",
-      "display": "ACK^U01^ACK"
-    },
-    {
       "code": "ESR-U02-ESR_U02",
       "display": "ESR^U02^ESR_U02"
-    },
-    {
-      "code": "ACK-U02-ACK",
-      "display": "ACK^U02^ACK"
     },
     {
       "code": "SSU-U03-SSU_U03",
       "display": "SSU^U03^SSU_U03"
     },
     {
-      "code": "ACK-U03-ACK",
-      "display": "ACK^U03^ACK"
-    },
-    {
       "code": "SSR-U04-SSR_U04",
       "display": "SSR^U04^SSR_U04"
-    },
-    {
-      "code": "ACK-U04-ACK",
-      "display": "ACK^U04^ACK"
     },
     {
       "code": "INU-U05-INU_U05",
       "display": "INU^U05^INU_U05"
     },
     {
-      "code": "ACK-U05-ACK",
-      "display": "ACK^U05^ACK"
-    },
-    {
       "code": "INR-U06-INR_U06",
       "display": "INR^U06^INR_U06"
-    },
-    {
-      "code": "ACK-U06-ACK",
-      "display": "ACK^U06^ACK"
     },
     {
       "code": "EAC-U07-EAC_U07",
       "display": "EAC^U07^EAC_U07"
     },
     {
-      "code": "ACK-U07-ACK",
-      "display": "ACK^U07^ACK"
-    },
-    {
       "code": "EAR-U08-EAR_U08",
       "display": "EAR^U08^EAR_U08"
-    },
-    {
-      "code": "ACK-U08-ACK",
-      "display": "ACK^U08^ACK"
     },
     {
       "code": "EAN-U09-EAN_U09",
       "display": "EAN^U09^EAN_U09"
     },
     {
-      "code": "ACK-U09-ACK",
-      "display": "ACK^U09^ACK"
-    },
-    {
       "code": "TCU-U10-TCU_U10",
       "display": "TCU^U10^TCU_U10"
-    },
-    {
-      "code": "ACK-U10-ACK",
-      "display": "ACK^U10^ACK"
     },
     {
       "code": "TCR-U11-TCU_U10",
       "display": "TCR^U11^TCU_U10"
     },
     {
-      "code": "ACK-U11-ACK",
-      "display": "ACK^U11^ACK"
-    },
-    {
       "code": "LSU-U12-LSU_U12",
       "display": "LSU^U12^LSU_U12"
-    },
-    {
-      "code": "ACK-U12-ACK",
-      "display": "ACK^U12^ACK"
     },
     {
       "code": "LSR-U13-LSU_U12",
       "display": "LSR^U13^LSU_U12"
     },
     {
-      "code": "ACK-U13-ACK",
-      "display": "ACK^U13^ACK"
-    },
-    {
       "code": "INR-U14-INR_U14",
       "display": "INR^U14^INR_U14"
-    },
-    {
-      "code": "ACK-U14-ACK",
-      "display": "ACK^U14^ACK"
     },
     {
       "code": "NMQ-N01-",
@@ -4230,64 +1294,32 @@
       "display": "NMD^N02^NMD_N02"
     },
     {
-      "code": "ACK-N02-ACK",
-      "display": "ACK^N02^ACK"
-    },
-    {
       "code": "PMU-B01-PMU_B01",
       "display": "PMU^B01^PMU_B01"
-    },
-    {
-      "code": "ACK-B01-ACK",
-      "display": "ACK^B01^ACK"
     },
     {
       "code": "PMU-B02-PMU_B01",
       "display": "PMU^B02^PMU_B01"
     },
     {
-      "code": "ACK-B02-ACK",
-      "display": "ACK^B02^ACK"
-    },
-    {
       "code": "PMU-B03-PMU_B03",
       "display": "PMU^B03^PMU_B03"
-    },
-    {
-      "code": "ACK-B03-ACK",
-      "display": "ACK^B03^ACK"
     },
     {
       "code": "PMU-B04-PMU_B04",
       "display": "PMU^B04^PMU_B04"
     },
     {
-      "code": "ACK-B04-ACK",
-      "display": "ACK^B04^ACK"
-    },
-    {
       "code": "PMU-B05-PMU_B04",
       "display": "PMU^B05^PMU_B04"
-    },
-    {
-      "code": "ACK-B05-ACK",
-      "display": "ACK^B05^ACK"
     },
     {
       "code": "PMU-B06-PMU_B04",
       "display": "PMU^B06^PMU_B04"
     },
     {
-      "code": "ACK-B06-ACK",
-      "display": "ACK^B06^ACK"
-    },
-    {
       "code": "QBP-Q25-QBP_Q21",
       "display": "QBP^Q25^QBP_Q21"
-    },
-    {
-      "code": "RSP-Q25-RSP_K25",
-      "display": "RSP^Q25^RSP_K25"
     },
     {
       "code": "RSP-K25-RSP_K25",
@@ -4298,16 +1330,8 @@
       "display": "PMU^B07^PMU_B07"
     },
     {
-      "code": "ACK-B07-ACK",
-      "display": "ACK^B07^ACK"
-    },
-    {
       "code": "PMU-B08-PMU_B08",
       "display": "PMU^B08^PMU_B08"
-    },
-    {
-      "code": "ACK-B08-ACK",
-      "display": "ACK^B08^ACK"
     },
     {
       "code": "EHC-E01-EHC_E01",
@@ -4320,10 +1344,6 @@
     {
       "code": "QBP-E03-QBP_E03",
       "display": "QBP^E03^QBP_E03"
-    },
-    {
-      "code": "RSP-E03-RSP_E03",
-      "display": "RSP^E03^RSP_E03"
     },
     {
       "code": "EHC-E04-EHC_E04",
@@ -4358,16 +1378,784 @@
       "display": "QBP^E22^QBP_E22"
     },
     {
-      "code": "RSP-E22-RSP_E22",
-      "display": "RSP^E22^RSP_E22"
-    },
-    {
       "code": "EHC-E24-EHC_E24",
       "display": "EHC^E24^EHC_E24"
     },
     {
+      "code": "EHC-E30-",
+      "display": "EHC^E30^"
+    },
+    {
+      "code": "EHC-E31-",
+      "display": "EHC^E31^"
+    },
+    {
       "code": "SLR-S28-SLR_S28",
       "display": "SLR^S28^SLR_S28"
+    },
+    {
+      "code": "SLR-S29-SLR_S28",
+      "display": "SLR^S29^SLR_S28"
+    },
+    {
+      "code": "STI-S30-SLR_S28",
+      "display": "STI^S30^SLR_S28"
+    },
+    {
+      "code": "SDR-S31-SDR_S31",
+      "display": "SDR^S31^SDR_S31"
+    },
+    {
+      "code": "SMD-S32-SDR_S32",
+      "display": "SMD^S32^SDR_S32"
+    },
+    {
+      "code": "STC-S33-STC_S33",
+      "display": "STC^S33^STC_S33"
+    },
+    {
+      "code": "SLN-S34-SLR_S28",
+      "display": "SLN^S34^SLR_S28"
+    },
+    {
+      "code": "SLN-S35-SLR_S28",
+      "display": "SLN^S35^SLR_S28"
+    },
+    {
+      "code": "SDN-S36-SDR_S31",
+      "display": "SDN^S36^SDR_S31"
+    },
+    {
+      "code": "SCN-S37-SDR_S32",
+      "display": "SCN^S37^SDR_S32"
+    },
+    {
+      "code": "ACK-A01-ACK",
+      "display": "ACK^A01^ACK"
+    },
+    {
+      "code": "ACK-A02-ACK",
+      "display": "ACK^A02^ACK"
+    },
+    {
+      "code": "ACK-A03-ACK",
+      "display": "ACK^A03^ACK"
+    },
+    {
+      "code": "ACK-A04-ACK",
+      "display": "ACK^A04^ACK"
+    },
+    {
+      "code": "ACK-A05-ACK",
+      "display": "ACK^A05^ACK"
+    },
+    {
+      "code": "ACK-A06-ACK",
+      "display": "ACK^A06^ACK"
+    },
+    {
+      "code": "ACK-A07-ACK",
+      "display": "ACK^A07^ACK"
+    },
+    {
+      "code": "ACK-A08-ACK",
+      "display": "ACK^A08^ACK"
+    },
+    {
+      "code": "ACK-A09-ACK",
+      "display": "ACK^A09^ACK"
+    },
+    {
+      "code": "ACK-A10-ACK",
+      "display": "ACK^A10^ACK"
+    },
+    {
+      "code": "ACK-A11-ACK",
+      "display": "ACK^A11^ACK"
+    },
+    {
+      "code": "ACK-A12-ACK",
+      "display": "ACK^A12^ACK"
+    },
+    {
+      "code": "ACK-A13-ACK",
+      "display": "ACK^A13^ACK"
+    },
+    {
+      "code": "ACK-A14-ACK",
+      "display": "ACK^A14^ACK"
+    },
+    {
+      "code": "ACK-A15-ACK",
+      "display": "ACK^A15^ACK"
+    },
+    {
+      "code": "ACK-A16-ACK",
+      "display": "ACK^A16^ACK"
+    },
+    {
+      "code": "ACK-A17-ACK",
+      "display": "ACK^A17^ACK"
+    },
+    {
+      "code": "ACK-A20-ACK",
+      "display": "ACK^A20^ACK"
+    },
+    {
+      "code": "ACK-A21-ACK",
+      "display": "ACK^A21^ACK"
+    },
+    {
+      "code": "ACK-A22-ACK",
+      "display": "ACK^A22^ACK"
+    },
+    {
+      "code": "ACK-A23-ACK",
+      "display": "ACK^A23^ACK"
+    },
+    {
+      "code": "ACK-A24-ACK",
+      "display": "ACK^A24^ACK"
+    },
+    {
+      "code": "ACK-A25-ACK",
+      "display": "ACK^A25^ACK"
+    },
+    {
+      "code": "ACK-A26-ACK",
+      "display": "ACK^A26^ACK"
+    },
+    {
+      "code": "ACK-A27-ACK",
+      "display": "ACK^A27^ACK"
+    },
+    {
+      "code": "ACK-A28-ACK",
+      "display": "ACK^A28^ACK"
+    },
+    {
+      "code": "ACK-A29-ACK",
+      "display": "ACK^A29^ACK"
+    },
+    {
+      "code": "ACK-A31-ACK",
+      "display": "ACK^A31^ACK"
+    },
+    {
+      "code": "ACK-A32-ACK",
+      "display": "ACK^A32^ACK"
+    },
+    {
+      "code": "ACK-A33-ACK",
+      "display": "ACK^A33^ACK"
+    },
+    {
+      "code": "ACK-A37-ACK",
+      "display": "ACK^A37^ACK"
+    },
+    {
+      "code": "ACK-A38-ACK",
+      "display": "ACK^A38^ACK"
+    },
+    {
+      "code": "ACK-A40-ACK",
+      "display": "ACK^A40^ACK"
+    },
+    {
+      "code": "ACK-A41-ACK",
+      "display": "ACK^A41^ACK"
+    },
+    {
+      "code": "ACK-A42-ACK",
+      "display": "ACK^A42^ACK"
+    },
+    {
+      "code": "ACK-A43-ACK",
+      "display": "ACK^A43^ACK"
+    },
+    {
+      "code": "ACK-A44-ACK",
+      "display": "ACK^A44^ACK"
+    },
+    {
+      "code": "ACK-A45-ACK",
+      "display": "ACK^A45^ACK"
+    },
+    {
+      "code": "ACK-A47-ACK",
+      "display": "ACK^A47^ACK"
+    },
+    {
+      "code": "ACK-A49-ACK",
+      "display": "ACK^A49^ACK"
+    },
+    {
+      "code": "ACK-A50-ACK",
+      "display": "ACK^A50^ACK"
+    },
+    {
+      "code": "ACK-A51-ACK",
+      "display": "ACK^A51^ACK"
+    },
+    {
+      "code": "ACK-A52-ACK",
+      "display": "ACK^A52^ACK"
+    },
+    {
+      "code": "ACK-A53-ACK",
+      "display": "ACK^A53^ACK"
+    },
+    {
+      "code": "ACK-A54-ACK",
+      "display": "ACK^A54^ACK"
+    },
+    {
+      "code": "ACK-A55-ACK",
+      "display": "ACK^A55^ACK"
+    },
+    {
+      "code": "ACK-A60-ACK",
+      "display": "ACK^A60^ACK"
+    },
+    {
+      "code": "ACK-A61-ACK",
+      "display": "ACK^A61^ACK"
+    },
+    {
+      "code": "ACK-A62-ACK",
+      "display": "ACK^A62^ACK"
+    },
+    {
+      "code": "RSP-Znn_E-RSP_Znn",
+      "display": "RSP^Znn_E^RSP_Znn"
+    },
+    {
+      "code": "ACK-Q16-ACK",
+      "display": "ACK^Q16^ACK"
+    },
+    {
+      "code": "ACK-Q17-ACK",
+      "display": "ACK^Q17^ACK"
+    },
+    {
+      "code": "ACK-J01-ACK",
+      "display": "ACK^J01^ACK"
+    },
+    {
+      "code": "ACK-J02-ACK",
+      "display": "ACK^J02^ACK"
+    },
+    {
+      "code": "ACK-P01-ACK",
+      "display": "ACK^P01^ACK"
+    },
+    {
+      "code": "ACK-P02-ACK",
+      "display": "ACK^P02^ACK"
+    },
+    {
+      "code": "ACK-P03-ACK",
+      "display": "ACK^P03^ACK"
+    },
+    {
+      "code": "ACK-P05-ACK",
+      "display": "ACK^P05^ACK"
+    },
+    {
+      "code": "ACK-P06-ACK",
+      "display": "ACK^P06^ACK"
+    },
+    {
+      "code": "ACK-P10-ACK",
+      "display": "ACK^P10^ACK"
+    },
+    {
+      "code": "ACK-P11-ACK",
+      "display": "ACK^P11^ACK"
+    },
+    {
+      "code": "ACK-P12-ACK",
+      "display": "ACK^P12^ACK"
+    },
+    {
+      "code": "ACK-R01-ACK",
+      "display": "ACK^R01^ACK"
+    },
+    {
+      "code": "ACK-R30-ACK",
+      "display": "ACK^R30^ACK"
+    },
+    {
+      "code": "ACK-R31-ACK",
+      "display": "ACK^R31^ACK"
+    },
+    {
+      "code": "ACK-R32-ACK",
+      "display": "ACK^R32^ACK"
+    },
+    {
+      "code": "ACK-C01-ACK",
+      "display": "ACK^C01^ACK"
+    },
+    {
+      "code": "ACK-C02-ACK",
+      "display": "ACK^C02^ACK"
+    },
+    {
+      "code": "ACK-C03-ACK",
+      "display": "ACK^C03^ACK"
+    },
+    {
+      "code": "ACK-C04-ACK",
+      "display": "ACK^C04^ACK"
+    },
+    {
+      "code": "ACK-C05-ACK",
+      "display": "ACK^C05^ACK"
+    },
+    {
+      "code": "ACK-C06-ACK",
+      "display": "ACK^C06^ACK"
+    },
+    {
+      "code": "ACK-C07-ACK",
+      "display": "ACK^C07^ACK"
+    },
+    {
+      "code": "ACK-C08-ACK",
+      "display": "ACK^C08^ACK"
+    },
+    {
+      "code": "ACK-C09-ACK",
+      "display": "ACK^C09^ACK"
+    },
+    {
+      "code": "ACK-C10-ACK",
+      "display": "ACK^C10^ACK"
+    },
+    {
+      "code": "ACK-C11-ACK",
+      "display": "ACK^C11^ACK"
+    },
+    {
+      "code": "ACK-C12-ACK",
+      "display": "ACK^C12^ACK"
+    },
+    {
+      "code": "MFK-M13-MFK_M01",
+      "display": "MFK^M13^MFK_M01"
+    },
+    {
+      "code": "MFK-M14-MFK_M01",
+      "display": "MFK^M14^MFK_M01"
+    },
+    {
+      "code": "MFK-M02-MFK_M01",
+      "display": "MFK^M02^MFK_M01"
+    },
+    {
+      "code": "MFK-M08-MFK_M01",
+      "display": "MFK^M08^MFK_M01"
+    },
+    {
+      "code": "MFK-M09-MFK_M01",
+      "display": "MFK^M09^MFK_M01"
+    },
+    {
+      "code": "MFK-M10-MFK_M01",
+      "display": "MFK^M10^MFK_M01"
+    },
+    {
+      "code": "MFK-M11-MFK_M01",
+      "display": "MFK^M11^MFK_M01"
+    },
+    {
+      "code": "MFK-M12-MFK_M01",
+      "display": "MFK^M12^MFK_M01"
+    },
+    {
+      "code": "MFK-M18-MFK_M01",
+      "display": "MFK^M18^MFK_M01"
+    },
+    {
+      "code": "MFK-M05-MFK_M01",
+      "display": "MFK^M05^MFK_M01"
+    },
+    {
+      "code": "MFK-M04-MFK_M01",
+      "display": "MFK^M04^MFK_M01"
+    },
+    {
+      "code": "MFK-M06-MFK_M01",
+      "display": "MFK^M06^MFK_M01"
+    },
+    {
+      "code": "ACK-M06-ACK",
+      "display": "ACK^M06^ACK"
+    },
+    {
+      "code": "MFK-M07-MFK_M01",
+      "display": "MFK^M07^MFK_M01"
+    },
+    {
+      "code": "ACK-M07-ACK",
+      "display": "ACK^M07^ACK"
+    },
+    {
+      "code": "MFK-M15-MFK_M01",
+      "display": "MFK^M15^MFK_M01"
+    },
+    {
+      "code": "MFK-M16-MFK_M01",
+      "display": "MFK^M16^MFK_M01"
+    },
+    {
+      "code": "MFK-M17-MFK_M01",
+      "display": "MFK^M17^MFK_M01"
+    },
+    {
+      "code": "MFK-M19-MFK_M01",
+      "display": "MFK^M19^MFK_M01"
+    },
+    {
+      "code": "ACK-T01-ACK",
+      "display": "ACK^T01^ACK"
+    },
+    {
+      "code": "ACK-T02-ACK",
+      "display": "ACK^T02^ACK"
+    },
+    {
+      "code": "ACK-T03-ACK",
+      "display": "ACK^T03^ACK"
+    },
+    {
+      "code": "ACK-T04-ACK",
+      "display": "ACK^T04^ACK"
+    },
+    {
+      "code": "ACK-T05-ACK",
+      "display": "ACK^T05^ACK"
+    },
+    {
+      "code": "ACK-T06-ACK",
+      "display": "ACK^T06^ACK"
+    },
+    {
+      "code": "ACK-T07-ACK",
+      "display": "ACK^T07^ACK"
+    },
+    {
+      "code": "ACK-T08-ACK",
+      "display": "ACK^T08^ACK"
+    },
+    {
+      "code": "ACK-T09-ACK",
+      "display": "ACK^T09^ACK"
+    },
+    {
+      "code": "ACK-T10-ACK",
+      "display": "ACK^T10^ACK"
+    },
+    {
+      "code": "ACK-T11-ACK",
+      "display": "ACK^T11^ACK"
+    },
+    {
+      "code": "SRR-S01-SRR_S01",
+      "display": "SRR^S01^SRR_S01"
+    },
+    {
+      "code": "SRR-S02-SRR_S01",
+      "display": "SRR^S02^SRR_S01"
+    },
+    {
+      "code": "SRR-S03-SRR_S01",
+      "display": "SRR^S03^SRR_S01"
+    },
+    {
+      "code": "SRR-S04-SRR_S01",
+      "display": "SRR^S04^SRR_S01"
+    },
+    {
+      "code": "SRR-S05-SRR_S01",
+      "display": "SRR^S05^SRR_S01"
+    },
+    {
+      "code": "SRR-S06-SRR_S01",
+      "display": "SRR^S06^SRR_S01"
+    },
+    {
+      "code": "SRR-S07-SRR_S01",
+      "display": "SRR^S07^SRR_S01"
+    },
+    {
+      "code": "SRR-S08-SRR_S01",
+      "display": "SRR^S08^SRR_S01"
+    },
+    {
+      "code": "SRR-S09-SRR_S01",
+      "display": "SRR^S09^SRR_S01"
+    },
+    {
+      "code": "SRR-S10-SRR_S01",
+      "display": "SRR^S10^SRR_S01"
+    },
+    {
+      "code": "SRR-S11-SRR_S01",
+      "display": "SRR^S11^SRR_S01"
+    },
+    {
+      "code": "ACK-S12-ACK",
+      "display": "ACK^S12^ACK"
+    },
+    {
+      "code": "ACK-S13-ACK",
+      "display": "ACK^S13^ACK"
+    },
+    {
+      "code": "ACK-S14-ACK",
+      "display": "ACK^S14^ACK"
+    },
+    {
+      "code": "ACK-S15-ACK",
+      "display": "ACK^S15^ACK"
+    },
+    {
+      "code": "ACK-S16-ACK",
+      "display": "ACK^S16^ACK"
+    },
+    {
+      "code": "ACK-S17-ACK",
+      "display": "ACK^S17^ACK"
+    },
+    {
+      "code": "ACK-S18-ACK",
+      "display": "ACK^S18^ACK"
+    },
+    {
+      "code": "ACK-S19-ACK",
+      "display": "ACK^S19^ACK"
+    },
+    {
+      "code": "ACK-S20-ACK",
+      "display": "ACK^S20^ACK"
+    },
+    {
+      "code": "ACK-S21-ACK",
+      "display": "ACK^S21^ACK"
+    },
+    {
+      "code": "ACK-S22-ACK",
+      "display": "ACK^S22^ACK"
+    },
+    {
+      "code": "ACK-S23-ACK",
+      "display": "ACK^S23^ACK"
+    },
+    {
+      "code": "ACK-S24-ACK",
+      "display": "ACK^S24^ACK"
+    },
+    {
+      "code": "ACK-S26-ACK",
+      "display": "ACK^S26^ACK"
+    },
+    {
+      "code": "ACK-S27-ACK",
+      "display": "ACK^S27^ACK"
+    },
+    {
+      "code": "RPI-I01-RPI_I01",
+      "display": "RPI^I01^RPI_I01"
+    },
+    {
+      "code": "RPL-I02-RPL_I02",
+      "display": "RPL^I02^RPL_I02"
+    },
+    {
+      "code": "RPR-I03-RPR_I03",
+      "display": "RPR^I03^RPR_I03"
+    },
+    {
+      "code": "RPI-I04-RPI_I04",
+      "display": "RPI^I04^RPI_I04"
+    },
+    {
+      "code": "ACK-I07-ACK",
+      "display": "ACK^I07^ACK"
+    },
+    {
+      "code": "RPA-I08-RPA_I08",
+      "display": "RPA^I08^RPA_I08"
+    },
+    {
+      "code": "RPA-I09-RPA_I08",
+      "display": "RPA^I09^RPA_I08"
+    },
+    {
+      "code": "RPA-I10-RPA_I08",
+      "display": "RPA^I10^RPA_I08"
+    },
+    {
+      "code": "RPA-I11-RPA_I08",
+      "display": "RPA^I11^RPA_I08"
+    },
+    {
+      "code": "CQU-I19-CQU_I19",
+      "display": "CQU^I19^CQU_I19"
+    },
+    {
+      "code": "CCI-I22-CCI_I22",
+      "display": "CCI^I22^CCI_I22"
+    },
+    {
+      "code": "ACK-PC6-ACK",
+      "display": "ACK^PC6^ACK"
+    },
+    {
+      "code": "ACK-PC7-ACK",
+      "display": "ACK^PC7^ACK"
+    },
+    {
+      "code": "ACK-PC8-ACK",
+      "display": "ACK^PC8^ACK"
+    },
+    {
+      "code": "ACK-PC1-ACK",
+      "display": "ACK^PC1^ACK"
+    },
+    {
+      "code": "ACK-PC2-ACK",
+      "display": "ACK^PC2^ACK"
+    },
+    {
+      "code": "ACK-PC3-ACK",
+      "display": "ACK^PC3^ACK"
+    },
+    {
+      "code": "ACK-PCB-ACK",
+      "display": "ACK^PCB^ACK"
+    },
+    {
+      "code": "ACK-PCC-ACK",
+      "display": "ACK^PCC^ACK"
+    },
+    {
+      "code": "ACK-PCD-ACK",
+      "display": "ACK^PCD^ACK"
+    },
+    {
+      "code": "ACK-PCG-ACK",
+      "display": "ACK^PCG^ACK"
+    },
+    {
+      "code": "ACK-PCH-ACK",
+      "display": "ACK^PCH^ACK"
+    },
+    {
+      "code": "ACK-PCJ-ACK",
+      "display": "ACK^PCJ^ACK"
+    },
+    {
+      "code": "ACK-U01-ACK",
+      "display": "ACK^U01^ACK"
+    },
+    {
+      "code": "ACK-U02-ACK",
+      "display": "ACK^U02^ACK"
+    },
+    {
+      "code": "ACK-U03-ACK",
+      "display": "ACK^U03^ACK"
+    },
+    {
+      "code": "ACK-U04-ACK",
+      "display": "ACK^U04^ACK"
+    },
+    {
+      "code": "ACK-U05-ACK",
+      "display": "ACK^U05^ACK"
+    },
+    {
+      "code": "ACK-U06-ACK",
+      "display": "ACK^U06^ACK"
+    },
+    {
+      "code": "ACK-U07-ACK",
+      "display": "ACK^U07^ACK"
+    },
+    {
+      "code": "ACK-U08-ACK",
+      "display": "ACK^U08^ACK"
+    },
+    {
+      "code": "ACK-U09-ACK",
+      "display": "ACK^U09^ACK"
+    },
+    {
+      "code": "ACK-U10-ACK",
+      "display": "ACK^U10^ACK"
+    },
+    {
+      "code": "ACK-U11-ACK",
+      "display": "ACK^U11^ACK"
+    },
+    {
+      "code": "ACK-U12-ACK",
+      "display": "ACK^U12^ACK"
+    },
+    {
+      "code": "ACK-U13-ACK",
+      "display": "ACK^U13^ACK"
+    },
+    {
+      "code": "ACK-U14-ACK",
+      "display": "ACK^U14^ACK"
+    },
+    {
+      "code": "ACK-N02-ACK",
+      "display": "ACK^N02^ACK"
+    },
+    {
+      "code": "ACK-B01-ACK",
+      "display": "ACK^B01^ACK"
+    },
+    {
+      "code": "ACK-B02-ACK",
+      "display": "ACK^B02^ACK"
+    },
+    {
+      "code": "ACK-B03-ACK",
+      "display": "ACK^B03^ACK"
+    },
+    {
+      "code": "ACK-B04-ACK",
+      "display": "ACK^B04^ACK"
+    },
+    {
+      "code": "ACK-B05-ACK",
+      "display": "ACK^B05^ACK"
+    },
+    {
+      "code": "ACK-B06-ACK",
+      "display": "ACK^B06^ACK"
+    },
+    {
+      "code": "ACK-B07-ACK",
+      "display": "ACK^B07^ACK"
+    },
+    {
+      "code": "ACK-B08-ACK",
+      "display": "ACK^B08^ACK"
+    },
+    {
+      "code": "RSP-E03-RSP_E03",
+      "display": "RSP^E03^RSP_E03"
+    },
+    {
+      "code": "RSP-E22-RSP_E22",
+      "display": "RSP^E22^RSP_E22"
     },
     {
       "code": "SLS-S28-SLR_S28",
@@ -4378,20 +2166,12 @@
       "display": "ACK^S28^ACK"
     },
     {
-      "code": "SLR-S29-SLR_S28",
-      "display": "SLR^S29^SLR_S28"
-    },
-    {
       "code": "SLS-S29-SLR_S28",
       "display": "SLS^S29^SLR_S28"
     },
     {
       "code": "ACK-S29-ACK",
       "display": "ACK^S29^ACK"
-    },
-    {
-      "code": "STI-S30-SLR_S28",
-      "display": "STI^S30^SLR_S28"
     },
     {
       "code": "STS-S30-SLR_S28",
@@ -4402,20 +2182,12 @@
       "display": "ACK^S30^ACK"
     },
     {
-      "code": "SDR-S31-SDR_S31",
-      "display": "SDR^S31^SDR_S31"
-    },
-    {
       "code": "SDS-S31-SDR_S31",
       "display": "SDS^S31^SDR_S31"
     },
     {
       "code": "ACK-S31-ACK",
       "display": "ACK^S31^ACK"
-    },
-    {
-      "code": "SMD-S32-SDR_S32",
-      "display": "SMD^S32^SDR_S32"
     },
     {
       "code": "SMS-S32-SDR_S32",
@@ -4426,740 +2198,588 @@
       "display": "ACK^S32^ACK"
     },
     {
-      "code": "STC-S33-STC_S33",
-      "display": "STC^S33^STC_S33"
-    },
-    {
       "code": "ACK-S33-ACK",
       "display": "ACK^S33^ACK"
-    },
-    {
-      "code": "SLN-S34-SLR_S28",
-      "display": "SLN^S34^SLR_S28"
     },
     {
       "code": "ACK-S34-ACK",
       "display": "ACK^S34^ACK"
     },
     {
-      "code": "SLN-S35-SLR_S28",
-      "display": "SLN^S35^SLR_S28"
-    },
-    {
       "code": "ACK-S35-ACK",
       "display": "ACK^S35^ACK"
-    },
-    {
-      "code": "SDN-S36-SDR_S31",
-      "display": "SDN^S36^SDR_S31"
     },
     {
       "code": "ACK-S36-ACK",
       "display": "ACK^S36^ACK"
     },
     {
-      "code": "SCN-S37-SDR_S32",
-      "display": "SCN^S37^SDR_S32"
-    },
-    {
       "code": "ACK-S37-ACK",
       "display": "ACK^S37^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q21-ACK",
+      "display": "ACK^Q21^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K21-ACK",
+      "display": "ACK^K21^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q22-ACK",
+      "display": "ACK^Q22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K22-ACK",
+      "display": "ACK^K22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q23-ACK",
+      "display": "ACK^Q23^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K23-ACK",
+      "display": "ACK^K23^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q24-ACK",
+      "display": "ACK^Q24^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K24-ACK",
+      "display": "ACK^K24^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q32-ACK",
+      "display": "ACK^Q32^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K32-ACK",
+      "display": "ACK^K32^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O19-ACK",
+      "display": "ACK^O19^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O20-ACK",
+      "display": "ACK^O20^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O21-ACK",
+      "display": "ACK^O21^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O22-ACK",
+      "display": "ACK^O22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O53-ACK",
+      "display": "ACK^O53^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O33-ACK",
+      "display": "ACK^O33^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O34-ACK",
+      "display": "ACK^O34^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O54-ACK",
+      "display": "ACK^O54^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O35-ACK",
+      "display": "ACK^O35^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O36-ACK",
+      "display": "ACK^O36^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O55-ACK",
+      "display": "ACK^O55^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O39-ACK",
+      "display": "ACK^O39^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O40-ACK",
+      "display": "ACK^O40^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O56-ACK",
+      "display": "ACK^O56^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O23-ACK",
+      "display": "ACK^O23^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O24-ACK",
+      "display": "ACK^O24^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O37-ACK",
+      "display": "ACK^O37^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O38-ACK",
+      "display": "ACK^O38^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O51-ACK",
+      "display": "ACK^O51^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O52-ACK",
+      "display": "ACK^O52^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O57-ACK",
+      "display": "ACK^O57^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O58-ACK",
+      "display": "ACK^O58^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O59_A-ACK",
+      "display": "ACK^O59_A^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Z73-ACK",
+      "display": "ACK^Z73^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O03-ACK",
+      "display": "ACK^O03^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O04-ACK",
+      "display": "ACK^O04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O05-ACK",
+      "display": "ACK^O05^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O06-ACK",
+      "display": "ACK^O06^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O07-ACK",
+      "display": "ACK^O07^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O08-ACK",
+      "display": "ACK^O08^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O27-ACK",
+      "display": "ACK^O27^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O28-ACK",
+      "display": "ACK^O28^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O29-ACK",
+      "display": "ACK^O29^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O30-ACK",
+      "display": "ACK^O30^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O31-ACK",
+      "display": "ACK^O31^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O32-ACK",
+      "display": "ACK^O32^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O41-ACK",
+      "display": "ACK^O41^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O42-ACK",
+      "display": "ACK^O42^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K33-ACK",
+      "display": "ACK^K33^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K34-ACK",
+      "display": "ACK^K34^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O43-ACK",
+      "display": "ACK^O43^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O44-ACK",
+      "display": "ACK^O44^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O45-ACK",
+      "display": "ACK^O45^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O46-ACK",
+      "display": "ACK^O46^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O47-ACK",
+      "display": "ACK^O47^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O48-ACK",
+      "display": "ACK^O48^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O09-ACK",
+      "display": "ACK^O09^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O10-ACK",
+      "display": "ACK^O10^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O11-ACK",
+      "display": "ACK^O11^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O12-ACK",
+      "display": "ACK^O12^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O13-ACK",
+      "display": "ACK^O13^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O14-ACK",
+      "display": "ACK^O14^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O15-ACK",
+      "display": "ACK^O15^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O16-ACK",
+      "display": "ACK^O16^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O17-ACK",
+      "display": "ACK^O17^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O18-ACK",
+      "display": "ACK^O18^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O25-ACK",
+      "display": "ACK^O25^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O26-ACK",
+      "display": "ACK^O26^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q31-ACK",
+      "display": "ACK^Q31^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K31-ACK",
+      "display": "ACK^K31^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O49-ACK",
+      "display": "ACK^O49^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-O50-ACK",
+      "display": "ACK^O50^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-V04-ACK",
+      "display": "ACK^V04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Z84-ACK",
+      "display": "ACK^Z84^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R33-ACK",
+      "display": "ACK^R33^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R22-ACK",
+      "display": "ACK^R22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R23-ACK",
+      "display": "ACK^R23^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R24-ACK",
+      "display": "ACK^R24^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R25-ACK",
+      "display": "ACK^R25^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R40-ACK",
+      "display": "ACK^R40^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R41-ACK",
+      "display": "ACK^R41^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R42-ACK",
+      "display": "ACK^R42^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R43-ACK",
+      "display": "ACK^R43^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-P07-ACK",
+      "display": "ACK^P07^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-P08-ACK",
+      "display": "ACK^P08^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-R26-ACK",
+      "display": "ACK^R26^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M13-ACK",
+      "display": "ACK^M13^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M14-ACK",
+      "display": "ACK^M14^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M02-ACK",
+      "display": "ACK^M02^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M08-ACK",
+      "display": "ACK^M08^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M09-ACK",
+      "display": "ACK^M09^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M10-ACK",
+      "display": "ACK^M10^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M11-ACK",
+      "display": "ACK^M11^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M12-ACK",
+      "display": "ACK^M12^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M18-ACK",
+      "display": "ACK^M18^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M05-ACK",
+      "display": "ACK^M05^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M04-ACK",
+      "display": "ACK^M04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M15-ACK",
+      "display": "ACK^M15^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M16-ACK",
+      "display": "ACK^M16^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M17-ACK",
+      "display": "ACK^M17^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-M19-ACK",
+      "display": "ACK^M19^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S01-ACK",
+      "display": "ACK^S01^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S02-ACK",
+      "display": "ACK^S02^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S03-ACK",
+      "display": "ACK^S03^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S04-ACK",
+      "display": "ACK^S04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S05-ACK",
+      "display": "ACK^S05^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S06-ACK",
+      "display": "ACK^S06^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S07-ACK",
+      "display": "ACK^S07^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S08-ACK",
+      "display": "ACK^S08^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S09-ACK",
+      "display": "ACK^S09^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S10-ACK",
+      "display": "ACK^S10^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-S11-ACK",
+      "display": "ACK^S11^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I01-ACK",
+      "display": "ACK^I01^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I02-ACK",
+      "display": "ACK^I02^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I03-ACK",
+      "display": "ACK^I03^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I04-ACK",
+      "display": "ACK^I04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I08-ACK",
+      "display": "ACK^I08^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I09-ACK",
+      "display": "ACK^I09^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I10-ACK",
+      "display": "ACK^I10^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I11-ACK",
+      "display": "ACK^I11^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I21-ACK",
+      "display": "ACK^I21^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I16-ACK",
+      "display": "ACK^I16^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I17-ACK",
+      "display": "ACK^I17^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I18-ACK",
+      "display": "ACK^I18^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I20-ACK",
+      "display": "ACK^I20^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I19-ACK",
+      "display": "ACK^I19^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-I22-ACK",
+      "display": "ACK^I22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-Q25-ACK",
+      "display": "ACK^Q25^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-K25-ACK",
+      "display": "ACK^K25^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E01-ACK",
+      "display": "ACK^E01^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E02-ACK",
+      "display": "ACK^E02^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E03-ACK",
+      "display": "ACK^E03^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E04-ACK",
+      "display": "ACK^E04^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E10-ACK",
+      "display": "ACK^E10^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E12-ACK",
+      "display": "ACK^E12^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E13-ACK",
+      "display": "ACK^E13^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E15-ACK",
+      "display": "ACK^E15^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E20-ACK",
+      "display": "ACK^E20^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E21-ACK",
+      "display": "ACK^E21^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E22-ACK",
+      "display": "ACK^E22^ACK"
     },
     {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
-    },
-    {
-      "code": "ACK--ACK",
-      "display": "ACK^^ACK"
+      "code": "ACK-E24-ACK",
+      "display": "ACK^E24^ACK"
     }
   ]
 }

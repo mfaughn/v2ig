@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "url": "http://hl7.org/v2/CodeSystem/MessageStructures",
-  "id": "v2-cs-message-structures",
+  "id": "message-structures",
   "status": "active",
   "content": "complete",
   "concept": [

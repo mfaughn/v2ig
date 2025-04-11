@@ -2,7 +2,7 @@
   "resourceType" : "StructureDefinition",
   "id" : "IS",
   "meta" : {
-    "profile" : [ "http://hl7.org/v2/StructureDefinition/Primitive-Profile" ]
+    "profile" : [ "http://hl7.org/v2/StructureDefinition/primitive-data-type-profile" ]
   },
 
   "extension" : [

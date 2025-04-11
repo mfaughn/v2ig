@@ -1,7 +1,7 @@
 {
   "resourceType" : "StructureDefinition",
-  "url" : "http://hl7.org/v2/StructureDefinition/ComplexDataType-Profile",
-  "id" : "ComplexDataType-Profile",
+  "url" : "http://hl7.org/v2/StructureDefinition/complex-data-type-profile",
+  "id" : "complex-data-type-profile",
   "version" : "0.0.1",
   "name" : "ComplexDataType-Profile",
   "title" : "HL7 v2 Complex Data Type Profile",
@@ -19,7 +19,7 @@
         "path" : "StructureDefinition.url",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-type-urls"
+          "valueSet" : "http://hl7.org/v2/ValueSet/complex-data-types"
         }
       },
       {
@@ -37,13 +37,13 @@
         "path" : "StructureDefinition.type",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-types"
+          "valueSet" : "http://hl7.org/v2/ValueSet/complex-data-types"
         }
       },
       {
         "id" : "StructureDefinition.baseDefinition",
         "path" : "StructureDefinition.baseDefinition",
-        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/v2-complex-data-type"
+        "fixedCanonical" : "http://hl7.org/v2/StructureDefinition/complex-data-type"
       },
       {
         "id" : "StructureDefinition.derivation",
@@ -78,7 +78,7 @@
         "min" : 1,
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-complex-data-type-urls"
+          "valueSet" : "http://hl7.org/v2/ValueSet/data-types"
         }
       }
     ]

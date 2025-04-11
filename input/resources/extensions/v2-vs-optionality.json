@@ -1,7 +1,7 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "v2-vs-optionality",
-  "url" : "http://hl7.org/v2/ValueSet/v2-vs-optionality",
+  "id" : "optionality",
+  "url" : "http://hl7.org/v2/ValueSet/optionality",
   "status" : "active",
   "meta" : {
     "lastUpdated" : "2024-05-04T00:00:00+00:00",
@@ -21,7 +21,7 @@
   }],
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/v2/CodeSystem/v2-cs-optionality"
+      "system" : "http://hl7.org/v2/CodeSystem/optionality"
     }]
   }
 }

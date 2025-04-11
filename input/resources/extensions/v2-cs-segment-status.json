@@ -1,9 +1,9 @@
 {
   "resourceType" : "CodeSystem",
-  "id" : "v2-cs-segment-status",
+  "id" : "segment-status",
   "name" : "V2SegmentStatus",
   "title" : "HL7 v2 Segment Status",
-  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-segment-status",
+  "url" : "http://hl7.org/v2/CodeSystem/segment-status",
   "status" : "active",
   "content" : "complete",
   "experimental" : false,

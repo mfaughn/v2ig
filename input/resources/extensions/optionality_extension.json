@@ -1,7 +1,6 @@
 {
   "resourceType" : "StructureDefinition",
-  "url" : "http://hl7.org/v2/StructureDefinition/v2-optionality",
-  "id" : "v2-optionality",
+  "id" : "optionality",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -16,12 +15,13 @@
       "valueCode" : "can-bind"
     }
   ],
+  "url" : "http://hl7.org/fhir/StructureDefinition/optionality",
   "name" : "V2Optionality",
   "title" : "HL7 v2 Optionality Extension",
   "status" : "draft",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2024-06-05T12:00:00+00:00",
-  "publisher" : "HL7 International / V2 Management",
+  "publisher" : "HL7 International / V2 Management Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
@@ -35,15 +35,11 @@
   "context" : [
     {
       "type" : "element",
-      "expression" : "ElementDefinition"
+      "expression" : "ComplexDataType"
     },
     {
-      "type" : "fhirpath",
-      "expression" : "ComplexDataType.element"
-    },
-    {
-      "type" : "fhirpath",
-      "expression" : "Segment.element"
+      "type" : "element",
+      "expression" : "Segment"
     }
   ],
   "type" : "Extension",
@@ -59,14 +55,14 @@
         "max" : "1"
       },
       {
+        "id" : "Extension.url",
+        "path" : "Extension.url",
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/optionality"
+      },
+      {
         "id" : "Extension.extension",
         "path" : "Extension.extension",
         "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hl7.org/v2/StructureDefinition/v2-optionality"
       },
       {
         "id" : "Extension.value[x]",
@@ -76,13 +72,15 @@
           "code" : "code"
         }],
         "binding" : {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-            "valueString" : "V2 Optionality"
-          }],
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString" : "V2 Optionality"
+            }
+          ],
           "strength" : "required",
           "description" : "The optionality of the element where optionality is defined in Chapter 2 of version HL7 v2.9.1.",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-optionality"
+          "valueSet" : "http://hl7.org/v2/ValueSet/optionality"
         }
       }
     ]

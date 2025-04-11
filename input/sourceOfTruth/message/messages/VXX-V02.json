@@ -1,0 +1,35 @@
+{
+  "resourceType": "StructureDefinition",
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Message",
+  "description": "FIXME",
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Message",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Message.messageType",
+        "path": "Message.messageType",
+        "patternCode": "VXX"
+      },
+      {
+        "id": "Message.triggerEvent",
+        "path": "Message.triggerEvent",
+        "patternCode": "V02"
+      },
+      {
+        "id": "Message.status",
+        "path": "Message.status",
+        "patternCode": "withdrawn"
+      }
+    ]
+  },
+  "id": "VXX-V02",
+  "title": "HL7 v2 VXX^V02^ Message Definition",
+  "url": "http://hl7.org/v2/StructureDefinition/Message/VXX-V02",
+  "name": "VXX^V02^",
+  "date": "2025-03-06T16:07:52Z"
+}

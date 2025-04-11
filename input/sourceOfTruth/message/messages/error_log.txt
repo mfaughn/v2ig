@@ -1,0 +1,93 @@
+No Application ACK in Enhanced Mode: ORG^O20^ORG_O20 from v2.9.1 Ch4.4.5
+No Application ACK in Enhanced Mode: ORL^O22^ORL_O22 from v2.9.1 Ch4.4.7.1
+No Application ACK in Enhanced Mode: ORL^O53^ORL_O53 from v2.9.1 Ch4.4.7.2
+No Application ACK in Enhanced Mode: ORL^O34^ORL_O34 from v2.9.1 Ch4.4.9.1
+No Application ACK in Enhanced Mode: ORL^O54^ORL_O54 from v2.9.1 Ch4.4.9.2
+No Application ACK in Enhanced Mode: ORL^O36^ORL_O36 from v2.9.1 Ch4.4.11.1
+No Application ACK in Enhanced Mode: ORL^O55^ORL_O55 from v2.9.1 Ch4.4.11.2
+No Application ACK in Enhanced Mode: ORL^O40^ORL_O40 from v2.9.1 Ch4.4.13.1
+No Application ACK in Enhanced Mode: ORL^O56^ORL_O56 from v2.9.1 Ch4.4.13.2
+No Application ACK in Enhanced Mode: ORI^O24^ORI_O24 from v2.9.1 Ch4.4.15
+No Application ACK in Enhanced Mode: OPR^O38^OPR_O38 from v2.9.1 Ch4.4.17
+No Application ACK in Enhanced Mode: OSU^O52^OSU_O52 from v2.9.1 Ch4.4.19
+No Application ACK in Enhanced Mode: ORX^O58^ORX_O58 from v2.9.1 Ch4.4.21
+No Application ACK in Enhanced Mode: QBP^Z73^QBP_Z73 from v2.9.1 Ch4.6.2
+No Application ACK in Enhanced Mode: ORD^O04^ORD_O04 from v2.9.1 Ch4.7.2
+No Application ACK in Enhanced Mode: ORS^O06^ORS_O06 from v2.9.1 Ch4.10.2
+No Application ACK in Enhanced Mode: ORN^O08^ORN_O08 from v2.9.1 Ch4.10.4
+No Application ACK in Enhanced Mode: ORB^O28^ORB_O28 from v2.9.1 Ch4.13.3
+No Application ACK in Enhanced Mode: BRP^O30^BRP_O30 from v2.9.1 Ch4.13.5
+No Application ACK in Enhanced Mode: BRT^O32^BRT_O32 from v2.9.1 Ch4.13.7
+No Application ACK in Enhanced Mode: RSP^K33^RSP_O33 from v2.9.1 Ch4.16.7
+No Application ACK in Enhanced Mode: RSP^K34^RSP_O34 from v2.9.1 Ch4.16.9
+No Application ACK in Enhanced Mode: ORP^O10^ORP_O10 from v2.9.1 Ch4A.3.4
+No Application ACK in Enhanced Mode: RRE^O12^RRE_O12 from v2.9.1 Ch4A.3.7
+No Application ACK in Enhanced Mode: RRD^O14^RRD_O14 from v2.9.1 Ch4A.3.9
+No Application ACK in Enhanced Mode: RRG^O16^RRG_O16 from v2.9.1 Ch4A.3.12
+No Application ACK in Enhanced Mode: RRA^O18^RRA_O18 from v2.9.1 Ch4A.3.15
+No Application ACK in Enhanced Mode: RRE^O26^RRE_O12 from v2.9.1 Ch4A.3.17
+No Application ACK in Enhanced Mode: RRE^O50^RRE_O50 from v2.9.1 Ch4A.3.25
+No Immediate ACK in Enhanced Mode: QBP^Z99^QBP_Q13 from v2.9.1 Ch5.3.1.2
+No Application ACK in Enhanced Mode: QBP^Z99^QBP_Q13 from v2.9.1 Ch5.3.1.2
+No Immediate ACK in Enhanced Mode: QBP^Znn_A^QBP_Qnn from v2.9.1 Ch5.3.2.3
+No Application ACK in Enhanced Mode: QBP^Znn_A^QBP_Qnn from v2.9.1 Ch5.3.2.3
+No acks for RTB^Znn_B^RTB_Knn from v2.9.1 Ch5.3.2.4 -- message status is 'active'
+No acks for RDY^Znn_C^RDY_K15 from v2.9.1 Ch5.3.2.5 -- message status is 'active'
+No acks for RTB^Znn_D^RTB_K13 from v2.9.1 Ch5.3.3.1 -- message status is 'active'
+No acks for QBP^Znn_E^QBP_Q11 from v2.9.1 Ch5.3.3.2 -- message status is 'active'
+No acks for RDY^Znn_F^RDY_K15 from v2.9.1 Ch5.3.3.3 -- message status is 'active'
+No Immediate ACK in Enhanced Mode: QBP^Q11^QBP_Q11 from v2.9.1 Ch5.4.1
+No Application ACK in Enhanced Mode: QBP^Q11^QBP_Q11 from v2.9.1 Ch5.4.1
+No acks for RSP^K11^RSP_K11 from v2.9.1 Ch5.4.1 -- message status is 'active'
+No acks for RTB^K13^RTB_K13 from v2.9.1 Ch5.4.2 -- message status is 'active'
+No Immediate ACK in Enhanced Mode: QBP^Q15^QBP_Q15 from v2.9.1 Ch5.4.3
+No Application ACK in Enhanced Mode: QBP^Q15^QBP_Q15 from v2.9.1 Ch5.4.3
+No acks for RDY^K15^RDY_K15 from v2.9.1 Ch5.4.3 -- message status is 'active'
+No Immediate ACK in Enhanced Mode: QSB^Q16^QSB_Q16 from v2.9.1 Ch5.4.4
+No Application ACK in Enhanced Mode: QSB^Q16^QSB_Q16 from v2.9.1 Ch5.4.4
+No Immediate ACK in Enhanced Mode: QVR^Q17^QVR_Q17 from v2.9.1 Ch5.4.5
+No Application ACK in Enhanced Mode: QVR^Q17^QVR_Q17 from v2.9.1 Ch5.4.5
+No Immediate ACK in Enhanced Mode: QCN^J01^QCN_J01 from v2.9.1 Ch5.4.6
+No Application ACK in Enhanced Mode: QCN^J01^QCN_J01 from v2.9.1 Ch5.4.6
+No Immediate ACK in Enhanced Mode: QSX^J02^QCN_J01 from v2.9.1 Ch5.4.7
+No Application ACK in Enhanced Mode: QSX^J02^QCN_J01 from v2.9.1 Ch5.4.7
+No acks for QSB^Z83^QSB_Q16 from v2.9.1 Ch5.7.3.1 -- message status is 'active'
+No Application ACK in Enhanced Mode: ORA^R33^ORA_R33 from v2.9.1 Ch7.3.7
+No Application ACK in Enhanced Mode: ORA^R41^ORA_R41 from v2.9.1 Ch7.3.13
+No Immediate ACK in Enhanced Mode: RQI^I01^RQI_I01 from v2.9.1 Ch11.3.1
+No Application ACK in Enhanced Mode: RQI^I01^RQI_I01 from v2.9.1 Ch11.3.1
+No Immediate ACK in Enhanced Mode: RQI^I02^RQI_I01 from v2.9.1 Ch11.3.2
+No Application ACK in Enhanced Mode: RQI^I02^RQI_I01 from v2.9.1 Ch11.3.2
+No Immediate ACK in Enhanced Mode: RQI^I03^RQI_I01 from v2.9.1 Ch11.3.3
+No Application ACK in Enhanced Mode: RQI^I03^RQI_I01 from v2.9.1 Ch11.3.3
+No Immediate ACK in Enhanced Mode: RQP^I04^RQP_I04 from v2.9.1 Ch11.3.4
+No Application ACK in Enhanced Mode: RQP^I04^RQP_I04 from v2.9.1 Ch11.3.4
+No Immediate ACK in Enhanced Mode: PIN^I07^RQI_I01 from v2.9.1 Ch11.3.7
+No Application ACK in Enhanced Mode: PIN^I07^RQI_I01 from v2.9.1 Ch11.3.7
+No Immediate ACK in Enhanced Mode: RQA^I08^RQA_I08 from v2.9.1 Ch11.4.2
+No Application ACK in Enhanced Mode: RQA^I08^RQA_I08 from v2.9.1 Ch11.4.2
+No Immediate ACK in Enhanced Mode: RQA^I09^RQA_I08 from v2.9.1 Ch11.4.3
+No Application ACK in Enhanced Mode: RQA^I09^RQA_I08 from v2.9.1 Ch11.4.3
+No Immediate ACK in Enhanced Mode: RQA^I10^RQA_I08 from v2.9.1 Ch11.4.4
+No Application ACK in Enhanced Mode: RQA^I10^RQA_I08 from v2.9.1 Ch11.4.4
+No Immediate ACK in Enhanced Mode: RQA^I11^RQA_I08 from v2.9.1 Ch11.4.5
+No Application ACK in Enhanced Mode: RQA^I11^RQA_I08 from v2.9.1 Ch11.4.5
+No Original ACK: CCM^I21^CCM_I21 from v2.9.1 Ch11.6.1.
+No Application ACK in Enhanced Mode: CCM^I21^CCM_I21 from v2.9.1 Ch11.6.1
+No Original ACK: CCR^I16^CCR_I16 from v2.9.1 Ch11.6.3.
+No Application ACK in Enhanced Mode: CCR^I16^CCR_I16 from v2.9.1 Ch11.6.3
+No Original ACK: CCR^I17^CCR_I16 from v2.9.1 Ch11.6.4.
+No Application ACK in Enhanced Mode: CCR^I17^CCR_I16 from v2.9.1 Ch11.6.4
+No Original ACK: CCR^I18^CCR_I16 from v2.9.1 Ch11.6.5.
+No Application ACK in Enhanced Mode: CCR^I18^CCR_I16 from v2.9.1 Ch11.6.5
+No Application ACK in Enhanced Mode: CCU^I20^CCU_I20 from v2.9.1 Ch11.6.6
+No Immediate ACK in Enhanced Mode: CCQ^I19^CCQ_I19 from v2.9.1 Ch11.7.1
+No Application ACK in Enhanced Mode: CCQ^I19^CCQ_I19 from v2.9.1 Ch11.7.1
+No Immediate ACK in Enhanced Mode: CCF^I22^CCF_I22 from v2.9.1 Ch11.7.2
+No Application ACK in Enhanced Mode: CCF^I22^CCF_I22 from v2.9.1 Ch11.7.2
+No Application ACK in Enhanced Mode: NMD^N02^NMD_N02 from v2.9.1 Ch14.3.2
+No structure for EHC^E30^ from v2.9.1 Ch16.3.15
+No acks for EHC^E30^ from v2.9.1 Ch16.3.15 -- message status is 'active'
+No structure for EHC^E31^ from v2.9.1 Ch16.3.16
+No acks for EHC^E31^ from v2.9.1 Ch16.3.16 -- message status is 'active'
+No acks for RSP^Znn_E^RSP_Znn from v2.9.1 Ch5.3.3.2 -- message status is 'active'

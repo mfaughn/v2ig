@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "url": "http://hl7.org/v2/CodeSystem/AcknowlegementChoreographies",
-  "id": "v2-cs-acknowledgement-choreographies",
+  "id": "acknowledgement-choreographies",
   "status": "active",
   "content": "complete",
   "concept": [

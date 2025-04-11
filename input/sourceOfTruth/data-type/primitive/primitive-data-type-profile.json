@@ -1,10 +1,10 @@
 {
   "resourceType" : "StructureDefinition",
-  "url" : "http://hl7.org/v2/StructureDefinition/Primitive-Profile",
-  "id" : "v2-primitive-data-type-profile",
+  "url" : "http://hl7.org/v2/StructureDefinition/primitive-data-type-profile",
+  "id" : "primitive-data-type-profile",
   "version" : "0.0.1",
   "name" : "V2DataTypeDefinition",
-  "title" : "HL7 v2 Data Type Definition",
+  "title" : " HL7 v2 Data Type Definition",
   "status" : "active",
   "kind" : "resource",
   "abstract" : false,
@@ -19,7 +19,7 @@
         "path" : "StructureDefinition.url",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/v2-vs-primitive-data-type-urls"
+          "valueSet" : "http://hl7.org/v2/ValueSet/primitive-data-types"
         }
       },
       {

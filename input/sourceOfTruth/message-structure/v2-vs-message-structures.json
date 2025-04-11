@@ -1,7 +1,7 @@
 {
   "resourceType" : "ValueSet",
   "url" : "http://hl7.org/v2/ValueSet/MessageStructures",
-  "id": "v2-vs-message-structures",
+  "id": "message-structures",
   "status" : "active",
   "compose" : {
     "include" : [{

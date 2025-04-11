@@ -1,9 +1,9 @@
 {
   "resourceType" : "CodeSystem",
-  "id" : "v2-cs-optionality",
+  "id" : "optionality",
   "name" : "V2Optionality",
   "title" : "HL7 v2 Optionality",
-  "url" : "http://hl7.org/v2/CodeSystem/v2-cs-optionality",
+  "url" : "http://hl7.org/v2/CodeSystem/optionality",
   "status" : "active",
   "content" : "complete",
   "experimental" : false,
