@@ -1,3 +1,6 @@
+# Build the html so we can view it locally.  Not part of the production pipeline
+
+
 require 'asciidoctor'
 
 module V2AsciiDoctor

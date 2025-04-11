@@ -1,0 +1,14 @@
+= TODO and Questions
+
+This file contains a TODO list for tasks related to setting up the v2+ editing environment.  It also includes a list of related questions.
+
+== TODO
+
+* todo item
+
+
+  
+
+== Questions
+
+* Should the links to tech_specs really not include the event(s) identifiers??
