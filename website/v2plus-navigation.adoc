@@ -1,0 +1,21 @@
+= v2+ Editorial Navigation Home
+
+== Link to Data Types
+
+xref:data_structures/data_types/data_types_navigation.adoc[Data Types]
+
+== Link to Domains Page
+
+xref:domains/domains_navigation.adoc[Domains]
+
+== Direct Links to each Domain
+
+xref:domains/administration/administration.adoc[Administration]
+
+xref:domains/clinical/clinical.adoc[Clinical]
+
+xref:domains/financial/financial.adoc[Financial]
+
+xref:domains/erp/erp.adoc[ERP]
+
+xref:domains/technical/technical.adoc[Technical]
