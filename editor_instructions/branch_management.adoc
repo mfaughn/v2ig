@@ -20,11 +20,11 @@ It may be possible to manually build branches so that they can be viewed.  Ask t
 
 == Creating Or Selecting A Branch
 
-In order to create a branch, visit the main https://github.com/HL7/v2ig[v2ig] page.
+In order to create a branch, visit the link:../[root v2ig page].
 
 From this page, click the branch button as shown in the image below.
 
-image::create_a_branch.png[Click the Branch Button]
+image::images/create_a_branch.png[Click the Branch Button]
 
 Next you can either create a new branch or select an existing branch
 
@@ -32,11 +32,11 @@ Next you can either create a new branch or select an existing branch
 
 To create a new branch, simply type a name for the branch into the input field as shown in the image below.
 
-image::create_a_branch_name_the_branch.png[Name the Branch]
+image::images/create_a_branch_name_the_branch.png[Name the Branch]
 
 After typing the name of the branch in the input field, click below the field as shown in the image below.
 
-image::create_a_branch_click_here.png[Click Create Branch]
+image::images/create_a_branch_click_here.png[Click Create Branch]
 
 You will be automatically switched to the newly created branch and you are ready to begin editing.
 
@@ -44,17 +44,17 @@ You will be automatically switched to the newly created branch and you are ready
 
 In order to make changes within an already existing branch, you will need to select that branch.  Simply click on the branch button and select your desired branch from the dropdown list.  Selecting a branch will automatically switch you to that branch and you will be ready to make edits.
 
-image::select_branch.png[Select A Branch]
+image::images/select_branch.png[Select A Branch]
 
 === View All Branches
 
 You can view all of the branches by clicking on the Branch button and then selecting "View all branches" as shown in the image below.
 
-image::view_all_branches.png[View All Branches]
+image::images/view_all_branches.png[View All Branches]
 
 This will take you to the https://github.com/HL7/v2ig/branches[branches page].  You can also create new branches from this page by clicking on the "New" button in the upper right.
 
-image::alternative_create_new_branch.png[Create a new branch from the Branches page]
+image::images/alternative_create_new_branch.png[Create a new branch from the Branches page]
 
 == Merging A Branch Into The Main v2+ Branch - TODO
 

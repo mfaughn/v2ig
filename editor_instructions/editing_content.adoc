@@ -11,7 +11,7 @@ This page explains the navigation and editing of v2+ textual content.  It does n
 
 === Directory Structure
 
-The directories in the [website](website] directory do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the [website](website] directory and its subdirectories. 
+The directories in the link:../website[website directory] do not define the structure of the website from the standpoint of the user.  They do serve as a convenient aid to help authors find content that needs to be edited.  The also dictate the structure of the output html, which means that linked files adhere to this directory structure.  The actual structure of the website is defined by the links and inclusions found in the .adoc files found within the link:../website[website directory] and its subdirectories. 
 
 NOTE: Whitespace is not allowed in the names of directories.  If you need to create a directory, please use underscore characters instead of whitespace characters.
 
@@ -19,7 +19,7 @@ NOTE: Whitespace is not allowed in the names of directories.  If you need to cre
 
 === Selecting a Branch
 
-When you are editing v2+, the first thing you must do is to create a branch of this project.  If you have already created a branch for the set of changes you wish to make, please make sure that you check out that branch before continuing to make any changes.  It is *important* that you familiarize yourself with the [Instructions](branch_management.adoc).
+When you are editing v2+, the first thing you must do is to create a branch of this project.  If you have already created a branch for the set of changes you wish to make, please make sure that you check out that branch before continuing to make any changes.  It is *important* that you familiarize yourself with the instructions found on the xref:branch_management.adoc[Using Git Branches While Editing v2+] page.
 
 === Editing Content
 
@@ -39,7 +39,7 @@ TODO - add further documentation
 
 ==== Using AsciiDoc with v2+
 
-Please visit the [using_asciidoc.adoc](Using AsciiDoc with v2+) page.
+Please visit the xref:using_asciidoc.adoc[Using AsciiDoc with v2+] page.
 
 === Saving Changes
 
@@ -49,19 +49,8 @@ Whenever you make changes to any file, you [red]*MUST* commit your changes in or
 To commit your changes when using the basic, built-in editor, find the `Commit` button in the upper right of the window and click it.  Follow the directions shown in the images below.  Make sure to enter sufficiently descriptive information about the commit.  The commit message may include information that describes what you did, why you did it, what work still remains to be done, a reference to a Jira ticket, or whatever you deem appropriate.
 
 .Click Commit Button
-image:commit_button.png[]
+image::images/commit_button.png[]
 
 .Add Commit Message and Complete Commit
-image:commit_finish.png[]
+image::images/commit_finish.png[]
 
-
-
-
-
-  
-
-== Questions
-
-TODO: Move questions to a different file
-
-- Should the links to tech_specs really not include the event(s) identifiers??
