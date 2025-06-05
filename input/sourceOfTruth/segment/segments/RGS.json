@@ -26,9 +26,8 @@
       {
         "id": "RGS.1",
         "path": "RGS.1",
-        "short": "- RGS.1 - ",
+        "short": "RGS-1",
         "definition": "Definition: This field contains a number that uniquely identifies the information represented by this segment in this transaction for the purposes of addition, change or deletion.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -48,7 +47,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -65,9 +64,9 @@
       {
         "id": "RGS.2",
         "path": "RGS.2",
-        "short": "- RGS.2 - ",
+        "short": "RGS-2",
         "definition": "Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[HL7 Table 0206 - Segment Action Code]_ in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "This field is conditionally required. It is required for all updating or modifying trigger events.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +74,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -91,7 +90,7 @@
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -108,9 +107,8 @@
       {
         "id": "RGS.3",
         "path": "RGS.3",
-        "short": "- RGS.3 - ",
+        "short": "RGS-3",
         "definition": "Definition: This field contains an identifier code describing the group of resources following this RGS segment.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +116,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -136,5 +134,5 @@
   "title": "HL7 v2 RGS Segment Definition",
   "name": "RGS",
   "type": "RGS",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T18:07:32Z"
 }

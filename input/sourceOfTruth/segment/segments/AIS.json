@@ -26,9 +26,8 @@
       {
         "id": "AIS.1",
         "path": "AIS.1",
-        "short": "- AIS.1 - ",
+        "short": "AIS-1",
         "definition": "Definition: This field contains a number that uniquely identifies the information represented by this segment in this transaction for the purposes of addition, change or deletion.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -48,7 +47,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -65,9 +64,9 @@
       {
         "id": "AIS.2",
         "path": "AIS.2",
-        "short": "- AIS.2 - ",
+        "short": "AIS-2",
         "definition": "Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 - Segment Action Code_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "This field is conditionally required. It is required for all updating or modifying trigger events.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +74,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -91,7 +90,7 @@
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -108,9 +107,8 @@
       {
         "id": "AIS.3",
         "path": "AIS.3",
-        "short": "- AIS.3 - ",
+        "short": "AIS-3",
         "definition": "Definition: This field contains an identifier code for a service to be scheduled. This field may contain a universal service identifier describing the observation/test/battery/procedure or other activity that is to be performed during the requested appointment, similar to the universal service identifier defined for the OBR segment in the Order Entry chapter (Chapter 4). This code can be based on local and/or universal codes. The use of universal codes is recommended.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +116,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -134,9 +132,9 @@
       {
         "id": "AIS.4",
         "path": "AIS.4",
-        "short": "- AIS.4 - ",
+        "short": "AIS-4",
         "definition": "Definition: This field contains the date and time this service needs for the appointment. This field allows the application to identify that the service is required for the appointment at a different time than the appointment's start date/time.",
-        "description": null,
+        "comment": "This field is conditionally required. If a value for _AIS-5-Start Date/Time Offset_ is not provided, then a value is required for this field. To specify that there is no difference between the appointment's start date/time and the resource's start date/time either replicate the appointment's start date/time into this field, or specify an offset of zero (0) in _AIS-5-Start Date/Time Offset_ and any valid time unit code in _AIS-6-Start Date/Time Offset Units_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +142,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -160,9 +158,9 @@
       {
         "id": "AIS.5",
         "path": "AIS.5",
-        "short": "- AIS.5 - ",
+        "short": "AIS-5",
         "definition": "Definition: This field contains the offset this service needs for the appointment, expressed in units of time relative to the scheduled start date/time. This field allows the application to identify that the service is required for the appointment at a different time than the appointment's start date/time. The first component contains the offset amount. An offset of zero (0), or an unvalued field indicates that the service is required at the start date/time of the appointment.",
-        "description": null,
+        "comment": "A positive offset (an unsigned or positive number) indicates that the service is required after the appointment's start date/time. Specifying a negative offset indicates that the service is required prior to the specified start date/time of the appointment. Negative offsets are allowed, and sites should clearly define the effect of a negative offset on the appointment's start date/time.\n\nThis field is conditionally required. If a value for _AIS-5-Start Date/Time Offset_ is not provided, then a value is required for this field. To specify that there is no difference between the appointment's start date/time and the resource's start date/time either replicate the appointment's start date/time into this field, or specify an offset of zero (0) in _AIS-5-Start Date/Time Offset_ and any valid time unit code in _AIS-6-Start Date/Time Offset Units_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -170,7 +168,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -186,9 +184,9 @@
       {
         "id": "AIS.6",
         "path": "AIS.6",
-        "short": "- AIS.6 - ",
+        "short": "AIS-6",
         "definition": "Definition: This field contains a code describing the units of time used for expressing the start date/time offset. This field should be valued according to the recommendations in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code \"_s_\") will be assumed. Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.",
-        "description": null,
+        "comment": "This field is conditionally required. If a value for _AIS-5-Start Date/Time Offset_ is provided, then a value is required for this field.\n\nAs of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.\n\nUnit of Measure Coding Systems from HL7 Table 0396\n\nUnit of Measure Coding Systems from HL7 Table 0396\n|===\n|Coding System |Description |Comment\n|ISO+ |ISO 2955.83 (units of measure) with HL7 extensions |See chapter 7.\n|ANS+ |HL7 set of units of measure |HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.\n|===",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -196,7 +194,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -212,9 +210,9 @@
       {
         "id": "AIS.7",
         "path": "AIS.7",
-        "short": "- AIS.7 - ",
+        "short": "AIS-7",
         "definition": "Definition: This field contains the duration for which the resource is requested/scheduled for this appointment, if different from the overall duration of the requested/scheduled appointment. This field indicates to the application that a resource is required for a different amount of time than the appointment's overall duration. An unvalued duration indicates that the resource is required from its start date/time offset (specified in the previous two fields) until the end of the appointment. If no start date/time offset is specified, then the resource is required for the full duration of the appointment.",
-        "description": null,
+        "comment": "This field must be a positive, non-zero number. A negative number or zero (0) is nonsensical in the context of a duration.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -222,7 +220,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -238,9 +236,9 @@
       {
         "id": "AIS.8",
         "path": "AIS.8",
-        "short": "- AIS.8 - ",
+        "short": "AIS-8",
         "definition": "Definition: This field contains a code describing the units of time used for expressing the duration. This field should be valued according to the recommendations in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code _\"s_\") will be assumed. Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.",
-        "description": null,
+        "comment": "As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.\n\nUnit of Measure Coding Systems from HL7 Table 0396\n\nUnit of Measure Coding Systems from HL7 Table 0396\n|===\n|Coding System |Description |Comment\n|ISO+ |ISO 2955.83 (units of measure) with HL7 extensions |See chapter 7.\n|ANS+ |HL7 set of units of measure |HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.\n|===",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -248,7 +246,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -264,9 +262,8 @@
       {
         "id": "AIS.9",
         "path": "AIS.9",
-        "short": "- AIS.9 - ",
+        "short": "AIS-9",
         "definition": "Definition: This field contains a code indicating whether the identified resource can be substituted with an equivalent resource by the filler application. This field is conditionally required. It is required for all request messages. It is optional for all unsolicited transactions, and for all query messages. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70279[_User-Defined Table 0279 - Allow Substitution Codes_] in Chapter 2C, Code Tables, for suggested codes.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -274,7 +271,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -294,9 +291,9 @@
       {
         "id": "AIS.10",
         "path": "AIS.10",
-        "short": "- AIS.10 - ",
+        "short": "AIS-10",
         "definition": "Definition: This field contains a code that describes the requested/scheduled status of the resource or activity, from the point of view of the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70278[_User-Defined Table 0278 - Filler Status Codes_] in Chapter 2C, Code Tables, for suggested codes.",
-        "description": null,
+        "comment": "This is a conditionally required field. Because the information contained in this field is only appropriate in transactions originating from a filler application, it is required for those messages. This includes all unsolicited transactions originating from a filler application, as well as all response messages originating from a filler application. This field is optional for all transactions originating from placer, querying and auxiliary applications. It is recommended that this field be left unvalued in transactions originating from applications other than the filler application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -304,7 +301,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -324,9 +321,8 @@
       {
         "id": "AIS.11",
         "path": "AIS.11",
-        "short": "- AIS.11 - ",
+        "short": "AIS-11",
         "definition": "Definition: This field contains supplemental service and/or logistical information sent from the placer system to the filler system for the universal procedure code reported in field AIS-3. This field will be used to provide scheduling information detail that is not available in other, specific fields in the AIS segment. Multiple supplemental service information elements may be reported. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70411[User-defined Table 0411 – Supplemental Service Information Values]_ in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -334,7 +330,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -354,9 +350,8 @@
       {
         "id": "AIS.12",
         "path": "AIS.12",
-        "short": "- AIS.12 - ",
+        "short": "AIS-12",
         "definition": "Definition: This field contains supplemental service and/or logistical information sent from the filler system to the placer system for the procedure code reported in field AIS-3. This field will be used to report scheduling information details that is not available in other, specific fields in the AIS segment. Typically it will reflect the same information as was sent to the filler system in _AIS-11-Placer Supplemental_ information unless the scheduling was modified in which case the filler system will report what was actually performed using this field. Multiple supplemental service information elements may be reported. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70411[_User-defined Table 0411 - Supplemental service information values_] in Chapter 2C, Code Tables, for valid values..",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -364,7 +359,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -386,5 +381,5 @@
   "title": "HL7 v2 AIS Segment Definition",
   "name": "AIS",
   "type": "AIS",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T18:07:32Z"
 }

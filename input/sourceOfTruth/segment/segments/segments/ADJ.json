@@ -1,0 +1,476 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ADJ",
+  "id": "ADJ",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ADJ",
+        "path": "ADJ",
+        "short": "Adjustment",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ADJ.1",
+        "path": "ADJ.1",
+        "short": "ADJ-1",
+        "definition": "Unique Adjustment Number assigned by the Provider Application.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2003
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.2",
+        "path": "ADJ.2",
+        "short": "ADJ-2",
+        "definition": "Unique Adjustment Number assigned by the Payer Application.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2004
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.3",
+        "path": "ADJ.3",
+        "short": "ADJ-3",
+        "definition": "Unique sequence number for this adjustment – starts with 1, then 2, etc., for each unique adjustment for the Product/Service Line Item.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2005
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ADJ.4",
+        "path": "ADJ.4",
+        "short": "ADJ-4",
+        "definition": "Indicates the category of adjustment and is used to assist in determining which table is used for Adjustment Reason. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70564[_User-defined Table 0564 – Adjustment Category Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2006
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0564"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.5",
+        "path": "ADJ.5",
+        "short": "ADJ-5",
+        "definition": "Adjustment amount, such as taxes, deductibles, previously paid amount.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2007
+          }
+        ],
+        "min": 0,
+        "max": 5,
+        "type": [
+          {
+            "code": "CP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.6",
+        "path": "ADJ.6",
+        "short": "ADJ-6",
+        "definition": "Adjustment quantity.",
+        "comment": "X12 REF: table 673 Quantity Qualifier. New values from X12 673 can be added as required. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70560[_User-defined Table 0560 – Quantity Units_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2008
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CQ"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0560"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.7",
+        "path": "ADJ.7",
+        "short": "ADJ-7",
+        "definition": "Reason for this adjustment. Codes used to explain a Provider adjustment to a Product/Service Group or Product/Service Line Item by a Provider. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70565[_User-defined Table 0565 – Provider Adjustment Reason Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2009
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0565"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.8",
+        "path": "ADJ.8",
+        "short": "ADJ-8",
+        "definition": "Description of adjustment, such as client instructions.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2010
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "250"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ADJ.9",
+        "path": "ADJ.9",
+        "short": "ADJ-9",
+        "definition": "Original value of data item noted in this adjustment.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2011
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "16"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ADJ.10",
+        "path": "ADJ.10",
+        "short": "ADJ-10",
+        "definition": "Substituted value of data item noted in this adjustment.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2012
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "16"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ADJ.11",
+        "path": "ADJ.11",
+        "short": "ADJ-11",
+        "definition": "Action requested of party that receives this adjustment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70569[_User-defined Table 0569 – Adjustment Action_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2013
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0569"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.12",
+        "path": "ADJ.12",
+        "short": "ADJ-12",
+        "definition": "Unique Provider Adjustment Number assigned by the Provider Application that is referenced by this Payer Adjustment.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2014
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.13",
+        "path": "ADJ.13",
+        "short": "ADJ-13",
+        "definition": "Unique Provider Product/Service Line Item Number assigned by the Provider Application that is referenced by this Payer Adjustment; used for groups with multiple line items that need to be singled out by a Payer Adjustment.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2015
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.14",
+        "path": "ADJ.14",
+        "short": "ADJ-14",
+        "definition": "Date/Time adjustment was made. May also be synonymous with Adjudication Date.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2016
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ADJ.15",
+        "path": "ADJ.15",
+        "short": "ADJ-15",
+        "definition": "Business organization that is responsible for the adjustment (e.g., Payer organization); can be used for a Payment/Remittance Advice for 1 Payee from multiple Payers.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2017
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 ADJ Segment Definition",
+  "name": "ADJ",
+  "type": "ADJ",
+  "date": "2025-06-05T19:10:59Z"
+}

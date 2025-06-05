@@ -26,9 +26,8 @@
       {
         "id": "PRC.1",
         "path": "PRC.1",
-        "short": "- PRC.1 - ",
+        "short": "PRC-1",
         "definition": "Definition: This field contains the code assigned by the institution for the purpose of uniquely identifying the thing that can be charged. The key field of the entry. For example, this field would be used to uniquely identify a procedure, item, or test for charging purposes. Probably the same set of values as used in _FT1-7 - Transaction Code_ in financial messages. Must match _MFE-4 - Primary Key - MFE_ and _CDM-1 - Primary Key - CDM_. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70132[User-defined Table 0132 - Transaction code] in Chapter 2C, Code Tables, for suggested values. See Chapter 7 for discussion of the universal service ID.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,9 @@
       {
         "id": "PRC.2",
         "path": "PRC.2",
-        "short": "- PRC.2 - ",
+        "short": "PRC-2",
         "definition": "Definition: This field contains the facility of the institution for which this price (for the preceding CDM entry) is valid. For use when needing multi-facility pricing. If null, assume all facilities. In a multi-facility environment, the facility associated with this chargeable item may not be the same as the sending or receiving facility identified in the MSH segment. Use only when the price is not the same for all facilities, that is, a null value indicates that this pricing is valid for all facilities.",
-        "description": null,
+        "comment": "When two PRC segments are sent with the same key values but different facility identifiers, the second is sent in addition to the first, not to replace the first. The effective unique identifier is the charge code (_PRC-1 - Primary Key Value - PRC_) plus the facility ID (_PRC-2 - Facility ID_). Multiple facility identifiers can be sent in the same segment to indicate that those facilities use the same pricing. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70464[User-defined Table 0464 - Facility ID] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +65,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -86,9 +85,9 @@
       {
         "id": "PRC.3",
         "path": "PRC.3",
-        "short": "- PRC.3 - ",
+        "short": "PRC-3",
         "definition": "Definition: This field contains the department of the facility which accrues revenue/cost for this type of charge. When pricing is different for different departments within the same facility, this will indicate for which department the following pricing information is valid. Use only when the price is not the same for all departments, that is, a null value indicates that this pricing is valid for all departments.",
-        "description": null,
+        "comment": "When two PRC segments are sent the same key values but with different departments, the second is sent in addition to the first, not to replace the first. The effective unique identifier is the charge code _(PRC-1 - Primary Key - PRC_) plus the facility ID (_PRC-2 - Facility ID_) plus the department (_PRC-3 - Department_). Multiple departments can be sent in the same segment to indicate that those departments use the same pricing. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70184[User-defined Table 0184 - Department] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -96,7 +95,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -116,9 +115,9 @@
       {
         "id": "PRC.4",
         "path": "PRC.4",
-        "short": "- PRC.4 - ",
+        "short": "PRC-4",
         "definition": "Definition: This field contains the patient types for which this charge description is valid. For example, Inpatient, Outpatient, Series, Clinic, ER, Ambulatory, Observation, etc. These values should be the same set of values as those used for _PV1-3 - Patient Class_, which is site defined. Use only when the price is not valid for all patient types, that is, a null value indicates that this pricing is valid for all patient classes. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70004[User-defined Table 0004 - Patient Class] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "comment": "When two PRC segments are sent the same key values but with different valid patient classes, the second is sent in addition to the first, not to replace the first. The effective unique identifier is the charge code (_PRC-1 - PRC Primary Key_) plus the facility ID (_PRC-2 - Facility ID_) plus the department (_PRC-3 - Department_) plus the patient class (_PRC-4 - Valid Patient Classes_). Multiple patient classes can be sent in the same segment to indicate that those patient classes use the same pricing.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -126,7 +125,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -159,9 +158,8 @@
       {
         "id": "PRC.5",
         "path": "PRC.5",
-        "short": "- PRC.5 - ",
+        "short": "PRC-5",
         "definition": "Definition: This field contains the price to be charged for service, item, or procedure. If CDM price will always be overridden when charges are posted, then this field is optional. Otherwise, price would be a required field. The formula or calculation that is to be used to get total price from these price components is left to implementation negotiations agreed upon by the participating institutions. See Chapter 2, section 2.8.8, \"CP - composite price,\" for a description of the use of the composite price (CP) data type.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -169,7 +167,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CP"
@@ -185,9 +183,8 @@
       {
         "id": "PRC.6",
         "path": "PRC.6",
-        "short": "- PRC.6 - ",
+        "short": "PRC-6",
         "definition": "Definition: This field contains the mathematical formula to apply to _PRC-5 - Price_ in order to compute total price. The syntax of this formula must conform to Arden Syntax rules.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -195,7 +192,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ST"
@@ -224,9 +221,8 @@
       {
         "id": "PRC.7",
         "path": "PRC.7",
-        "short": "- PRC.7 - ",
+        "short": "PRC-7",
         "definition": "Definition: This field contains the minimum number of identical charges allowed on one patient account for this CDM entry.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -234,7 +230,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -263,9 +259,8 @@
       {
         "id": "PRC.8",
         "path": "PRC.8",
-        "short": "- PRC.8 - ",
+        "short": "PRC-8",
         "definition": "Definition: This field contains the maximum number of identical charges allowed on one patient account for this CDM entry.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -273,7 +268,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -302,9 +297,8 @@
       {
         "id": "PRC.9",
         "path": "PRC.9",
-        "short": "- PRC.9 - ",
+        "short": "PRC-9",
         "definition": "Definition: This field contains the minimum total price (after computation of components of price) that can be charged for this item.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -312,7 +306,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "MO"
@@ -328,9 +322,8 @@
       {
         "id": "PRC.10",
         "path": "PRC.10",
-        "short": "- PRC.10 - ",
+        "short": "PRC-10",
         "definition": "Definition: This field contains the maximum total price (after computation of components of price) that can be charged for this item.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -338,7 +331,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "MO"
@@ -354,9 +347,8 @@
       {
         "id": "PRC.11",
         "path": "PRC.11",
-        "short": "- PRC.11 - ",
+        "short": "PRC-11",
         "definition": "Definition: This field contains the date/time when this CDM entry becomes effective.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -364,7 +356,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -380,9 +372,8 @@
       {
         "id": "PRC.12",
         "path": "PRC.12",
-        "short": "- PRC.12 - ",
+        "short": "PRC-12",
         "definition": "Definition: This field contains the date/time when this CDM entry is no longer effective.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -390,7 +381,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -406,9 +397,8 @@
       {
         "id": "PRC.13",
         "path": "PRC.13",
-        "short": "- PRC.13 - ",
+        "short": "PRC-13",
         "definition": "Definition: This field indicates whether this CDM entry's price can be overridden. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70268[User-defined Table 0268 - Override] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -416,7 +406,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -449,9 +439,8 @@
       {
         "id": "PRC.14",
         "path": "PRC.14",
-        "short": "- PRC.14 - ",
+        "short": "PRC-14",
         "definition": "Definition: This field contains the billing category codes for any classification systems needed, for example, general ledger codes and UB92 categories. Repeating field with coded entry made up of category code plus category system. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70293[User-defined Table 0293 - Billing category] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -459,7 +448,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -479,9 +468,9 @@
       {
         "id": "PRC.15",
         "path": "PRC.15",
-        "short": "- PRC.15 - ",
+        "short": "PRC-15",
         "definition": "Definition: This field contains a chargeable indicator. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "N charge is not billable, that is, do not create charges for this CDM entry; this is zero price item\n\nY item is billable (this is also the default when NULL)",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -489,7 +478,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -505,7 +494,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -522,9 +511,8 @@
       {
         "id": "PRC.16",
         "path": "PRC.16",
-        "short": "- PRC.16 - ",
+        "short": "PRC-16",
         "definition": "Definition: This indicates whether this is a usable CDM entry. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70183[HL7 Table 0183 - Active/Inactive] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -532,7 +520,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -548,7 +536,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -565,9 +553,8 @@
       {
         "id": "PRC.17",
         "path": "PRC.17",
-        "short": "- PRC.17 - ",
+        "short": "PRC-17",
         "definition": "Definition: This field contains the institution's calculation of how much it costs to provide this item, that is, what the institution had to pay for the material plus any specified payment expenditure, effort or loss due to performing or providing the chargeable item.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -575,7 +562,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "MO"
@@ -591,9 +578,8 @@
       {
         "id": "PRC.18",
         "path": "PRC.18",
-        "short": "- PRC.18 - ",
+        "short": "PRC-18",
         "definition": "Definition: This field contains the user-defined table of values which indicates when a charge for services or procedures should be accrued. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70269[User-defined Table 0269 - Charge On Indicator] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -601,7 +587,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -636,5 +622,5 @@
   "title": "HL7 v2 PRC Segment Definition",
   "name": "PRC",
   "type": "PRC",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T18:07:31Z"
 }

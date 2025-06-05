@@ -26,9 +26,8 @@
       {
         "id": "RFI.1",
         "path": "RFI.1",
-        "short": "- RFI.1 - ",
+        "short": "RFI-1",
         "definition": "Definition:",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -52,9 +51,8 @@
       {
         "id": "RFI.2",
         "path": "RFI.2",
-        "short": "- RFI.2 - ",
+        "short": "RFI-2",
         "definition": "Definition: The latest date by which the additional information is to be returned to requestor.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -78,9 +76,8 @@
       {
         "id": "RFI.3",
         "path": "RFI.3",
-        "short": "- RFI.3 - ",
+        "short": "RFI-3",
         "definition": "Definition: Code indicating if the Payer has obtained patient consent for release of information (1) – Optional. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -104,7 +101,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -121,9 +118,8 @@
       {
         "id": "RFI.4",
         "path": "RFI.4",
-        "short": "- RFI.4 - ",
+        "short": "RFI-4",
         "definition": "Definition: The date on which the information was assembled for transmission to the Payer. Not necessarily the same as the message date.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -131,7 +127,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -149,5 +145,5 @@
   "title": "HL7 v2 RFI Segment Definition",
   "name": "RFI",
   "type": "RFI",
-  "date": "2025-03-06T16:07:40Z"
+  "date": "2025-06-05T18:07:33Z"
 }

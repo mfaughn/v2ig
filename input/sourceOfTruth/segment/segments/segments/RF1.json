@@ -1,0 +1,860 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RF1",
+  "id": "RF1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RF1",
+        "path": "RF1",
+        "short": "Referral Information",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RF1.1",
+        "path": "RF1.1",
+        "short": "RF1-1",
+        "definition": "This field contains the status of the referral as defined by either the referred-to or the referred-by provider. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70283[_User-defined Table_ _0283 - Referral Status_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1137
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0283"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.2",
+        "path": "RF1.2",
+        "short": "RF1-2",
+        "definition": "This field contains the urgency of the referral. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70280[_User-defined Table 0280 - Referral Priority_] in Chapter 2C, Code Tables, for suggested values__.__",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1138
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0280"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.3",
+        "path": "RF1.3",
+        "short": "RF1-3",
+        "definition": "This field contains the type of referral. It is loosely associated with a clinical specialty or type of resource. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70281[_User-defined Table 0281 - Referral Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1139
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0281"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.4",
+        "path": "RF1.4",
+        "short": "RF1-4",
+        "definition": "This field contains the type of response or action that the referring provider would like from the referred-to provider. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70282[_User-defined Table 0282 - Referral Disposition_] for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1140
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0282"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.5",
+        "path": "RF1.5",
+        "short": "RF1-5",
+        "definition": "This field contains the location at which the referral will take place. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70284[User-defined Table 0284 - Referral Categor]y_ for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1141
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0284"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.6",
+        "path": "RF1.6",
+        "short": "RF1-6",
+        "definition": "This field contains the originating application's permanent identifier for the referral. This is a composite field.",
+        "comment": "The first component is a string of up to 15 characters that identifies an individual referral. It is assigned by the originating application, and it identifies a referral, and the subsequent referral transactions, uniquely among all such referrals from a particular processing application.\n\nThe second component is optional because this field, itself, is already defined as a _referral identifier_.\n\nThe third component is optional. If used, it should contain the application identifier for the referred-to or external applications (i.e., _not_ the originating application). The application identifier is a string of up to 15 characters that is uniquely associated with an application. A given healthcare provider facility, or group of intercommunicating healthcare provider facilities, should establish a unique list of applications that may be potential originators and recipients, and then assign unique application identifiers to each of those applications. This list of application identifiers becomes one of the healthcare provider facility's master dictionary lists. Since applications fulfilling different application roles can send and receive referral messages, the assigning authority application identifier may not identify the application sending or receiving a particular message. Data elements on the Message Header (MSH) segment are available to identify the actual sending and receiving applications.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1142
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "RF1.7",
+        "path": "RF1.7",
+        "short": "RF1-7",
+        "definition": "This field contains the date on which the referral is effective.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1143
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.8",
+        "path": "RF1.8",
+        "short": "RF1-8",
+        "definition": "This field contains the date on which the referral expires.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1144
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.9",
+        "path": "RF1.9",
+        "short": "RF1-9",
+        "definition": "This field contains the date on which the referral originated. It is used in cases of retroactive approval.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1145
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.10",
+        "path": "RF1.10",
+        "short": "RF1-10",
+        "definition": "This field contains the reason for which the referral will take place. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70336[_User-defined Table 0336 - Referral Reason_] for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1228
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0336"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.11",
+        "path": "RF1.11",
+        "short": "RF1-11",
+        "definition": "This field contains an external application's permanent identifier for the referral. That is, this referral identifier does not belong to the application that originated the referral and assigned the originating referral identifier.",
+        "comment": "The first component is a string of up to 15 characters that identifies an individual referral. It is typically assigned by the referred-to provider application responding to a referral originating from a referring provider application, and it identifies a referral, and the subsequent referral transactions, uniquely among all such referrals for a particular referred-to provider processing application. For example, when a primary care provider (referring provider) sends a referral to a specialist (referred-to provider), the specialist's application system may accept the referral and assign it a new referral identifier which uniquely identifies that particular referral within the specialist's application system. This new referral identifier would be placed in the external referral identifier field when the specialist responds to the primary care physician.\n\nThe second component is optional because this field, itself, is already defined as a _referral identifier_.\n\nThe third component is optional. If used, it should contain the application identifier for the referred-to or external application (i.e., not the originating application). The application identifier is a string of up to 15 characters that is uniquely associated with an application. A given healthcare provider facility, or group of intercommunicating healthcare provider facilities, should establish a unique list of applications that may be potential originators and recipients, and then assign unique application identifiers to each of those applications. This list of application identifiers becomes one of the healthcare provider facility's master dictionary lists. Since applications fulfilling different application roles can send and receive referral messages, the assigning authority application identifier may not identify the application sending or receiving a particular message. Data elements on the Message Header (MSH) segment are available to identify the actual sending and receiving applications.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1300
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.12",
+        "path": "RF1.12",
+        "short": "RF1-12",
+        "definition": "This field can be used to indicate to the receiving provider that the clinical history in the message is incomplete and that more will follow. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70865[_User-defined Table 0865 - Referral Documentation Completion Status_] for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2262
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0865"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "RF1.13",
+        "path": "RF1.13",
+        "short": "RF1-13",
+        "definition": "The planned treatment stop date is the date that the patient's treatment from this referral is expected to complete, based on procedural protocols. This value can be used to indicate that an extension to an authorization is necessary, if the treatment continues longer than expected.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3400
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 24
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.14",
+        "path": "RF1.14",
+        "short": "RF1-14",
+        "definition": "The referral reason is a free text field allowing a user to capture, in a non-coded format, the reason for the referral. Typically this would describe the patient's condition or illness for which the referral is recorded.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3401
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 60
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.15",
+        "path": "RF1.15",
+        "short": "RF1-15",
+        "definition": "The authorized duration is the amount of time, in days or visits, that the patient has been authorized for treatment for this referral. The duration of \"days\" is reserved for inpatient authorizations.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3402
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CQ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 721
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.16",
+        "path": "RF1.16",
+        "short": "RF1-16",
+        "definition": "The used duration is the amount of time, in days or visits that the patient has used of the originally authorized duration. The duration of \"days\" is reserved for inpatient authorizations.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3403
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CQ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 721
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.17",
+        "path": "RF1.17",
+        "short": "RF1-17",
+        "definition": "The scheduled treatments is the amount of time, in days or visits that the patient has planned treatments scheduled. The duration of \"days\" is reserved for inpatient authorizations.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3404
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CQ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 721
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.18",
+        "path": "RF1.18",
+        "short": "RF1-18",
+        "definition": "The remaining benefit amount is the amount remaining from the insurance company related to this referral.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3405
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "MO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 20
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.19",
+        "path": "RF1.19",
+        "short": "RF1-19",
+        "definition": "This represents the organization to which the patient was referred to perform the procedure(s). The authorized provider represents the organization recognized by the insurance carrier that is authorized to perform the services for the patient specified on the referral.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3406
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 250
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.20",
+        "path": "RF1.20",
+        "short": "RF1-20",
+        "definition": "The authorized HP represents the specific health professional authorized to perform the services for the patient. This is a less frequently used field, as most often the authorization is for a group/organization and not a specific HP within that group.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3407
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XCN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 250
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.21",
+        "path": "RF1.21",
+        "short": "RF1-21",
+        "definition": "The source text allows a user to capture information (such as the name) of the person contacted regarding the specific referral.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3408
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 60
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.22",
+        "path": "RF1.22",
+        "short": "RF1-22",
+        "definition": "The source date allows a user to capture the date the person was contacted regarding the specific referral.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3409
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 24
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.23",
+        "path": "RF1.23",
+        "short": "RF1-23",
+        "definition": "The source phone number allows a user to capture the phone number of the person contacted regarding the specific referral.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3410
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XTN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 250
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.24",
+        "path": "RF1.24",
+        "short": "RF1-24",
+        "definition": "The comment allows for a free text capture of any notes the user wishes to capture related to the referral. This is a single notes field that allows the user to add additional text over time, or replace the text that already exists.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3411
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 250
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RF1.25",
+        "path": "RF1.25",
+        "short": "RF1-25",
+        "definition": "This field defines the action to be taken for this referral. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 - Segment Action Code_] in Chapter 2, Code Tables, for valid values. When this field is valued, the AUT segment is not in \"snapshot mode\", rather in \"action mode\".",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3412
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0206"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 RF1 Segment Definition",
+  "name": "RF1",
+  "type": "RF1",
+  "date": "2025-06-05T19:10:58Z"
+}

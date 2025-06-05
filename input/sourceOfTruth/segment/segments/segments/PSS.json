@@ -1,0 +1,183 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PSS",
+  "id": "PSS",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PSS",
+        "path": "PSS",
+        "short": "Product/Service Section",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PSS.1",
+        "path": "PSS.1",
+        "short": "PSS-1",
+        "definition": "Unique Product/Service Section Number assigned by the Provider Application.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1946
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "PSS.2",
+        "path": "PSS.2",
+        "short": "PSS-2",
+        "definition": "Unique Product/Service Section Number assigned by the Payer Application.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1947
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PSS.3",
+        "path": "PSS.3",
+        "short": "PSS-3",
+        "definition": "Unique sequence number for the Product/Service Section (3) – starts with 1, then 2, etc. for each unique Product/Service Section in this Invoice.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1948
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PSS.4",
+        "path": "PSS.4",
+        "short": "PSS-4",
+        "definition": "Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Section.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1949
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "PSS.5",
+        "path": "PSS.5",
+        "short": "PSS-5",
+        "definition": "Section description or heading.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2043
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "254"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 PSS Segment Definition",
+  "name": "PSS",
+  "type": "PSS",
+  "date": "2025-06-05T19:10:59Z"
+}

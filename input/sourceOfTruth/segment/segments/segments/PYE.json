@@ -1,0 +1,237 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PYE",
+  "id": "PYE",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PYE",
+        "path": "PYE",
+        "short": "Payee Information",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PYE.1",
+        "path": "PYE.1",
+        "short": "PYE-1",
+        "definition": "Sequence Number.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1939
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYE.2",
+        "path": "PYE.2",
+        "short": "PYE-2",
+        "definition": "Type of Payee (e.g., Organization, Person). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70557[_User-defined Table 0557 – Payee Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1940
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0557"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "PYE.3",
+        "path": "PYE.3",
+        "short": "PYE-3",
+        "definition": "Conditional or empty: if Payee Type in list (\"PERS\", \"PPER\"), then Required, else Not Permitted.",
+        "comment": "For Person Payee Types, the relationship to Invoice. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70558[_User-defined Table 0558 – Payee Relationship to Invoice_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1941
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0558"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "PYE.4",
+        "path": "PYE.4",
+        "short": "PYE-4",
+        "definition": "Conditional or empty: if Payee Type in list (\"PPER\", \"ORG\"), then Required, else Not Permitted.",
+        "comment": "Payee or Business Arrangement identification information; up to 5; defined by Payer/Provider agreement.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1942
+          }
+        ],
+        "min": 0,
+        "max": 5,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "PYE.5",
+        "path": "PYE.5",
+        "short": "PYE-5",
+        "definition": "Conditional or empty: if Payee Type = (\"PERS\", \"PPER), then Required, else Not Permitted.",
+        "comment": "Individual's name; may be a patient's name or other individual.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1943
+          }
+        ],
+        "min": 0,
+        "max": 4,
+        "type": [
+          {
+            "code": "XPN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "PYE.6",
+        "path": "PYE.6",
+        "short": "PYE-6",
+        "definition": "Conditional or empty: if Payee Type = (\"PERS\", \"PPER), then Required, else Not Permitted.",
+        "comment": "Address for payee. If not specified, then Payer will use address on file for this Payee, if applicable. If Payee is an individual, then this address can be used to send a check.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1944
+          }
+        ],
+        "min": 0,
+        "max": 4,
+        "type": [
+          {
+            "code": "XAD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "PYE.7",
+        "path": "PYE.7",
+        "short": "PYE-7",
+        "definition": "For Payee organizations that have more than one payment method.",
+        "comment": "If for individual, then we may also need to indicate EFT, bank info, etc.\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70570[_User-defined Table 0570 – Payment Method Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1945
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0570"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 PYE Segment Definition",
+  "name": "PYE",
+  "type": "PYE",
+  "date": "2025-06-05T19:10:59Z"
+}

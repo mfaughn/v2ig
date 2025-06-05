@@ -1,0 +1,141 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/CSP",
+  "id": "CSP",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CSP",
+        "path": "CSP",
+        "short": "Clinical Study Phase",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CSP.1",
+        "path": "CSP.1",
+        "short": "CSP-1",
+        "definition": "This field identifies the phase of the study that a patient has entered. The set of codes will generally be developed for each clinical trial, although there are patterns that trials in particular disease or prevention categories may follow. The phase structure will be based on data collation and reporting needs for the study. It is an operational structure and need not be discussed in the clinical trial protocol documentation or even made known to patient care or data collection personnel. The coding system will usually be developed by the sponsor for multicentered clinical trials to standardize the receipt of automated data. Local codes could be added if an additional local message is desired. Otherwise, local coding conventions will be used. Refer to Table 0587 - Study Phase Identifier in Chapter 2C for valid values.",
+        "comment": "Example:\n\n2^Init Rx, Crs 1^NCI T93‑0807 Phases",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1022
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0587"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CSP.2",
+        "path": "CSP.2",
+        "short": "CSP-2",
+        "definition": "This field contains the date the patient began this phase interval. The time is optional.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1052
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CSP.3",
+        "path": "CSP.3",
+        "short": "CSP-3",
+        "definition": "This field contains the date the patient ended this phase interval.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1053
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CSP.4",
+        "path": "CSP.4",
+        "short": "CSP-4",
+        "definition": "This field contains the disposition of the patient's data for this phase interval for quality control and data analysis purposes. The set of codes will vary across clinical trials. An example answer set: *Complete, Adverse Events Only, Outcome Only, None, Unknown*. Refer to Table 0588 - Study Phase Evaluability in Chapter 2C for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1054
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0588"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 CSP Segment Definition",
+  "name": "CSP",
+  "type": "CSP",
+  "date": "2025-06-05T19:10:56Z"
+}

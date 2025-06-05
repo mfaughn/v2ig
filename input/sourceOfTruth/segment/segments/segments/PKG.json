@@ -1,0 +1,341 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/PKG",
+  "id": "PKG",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PKG",
+        "path": "PKG",
+        "short": "Packaging",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PKG.1",
+        "path": "PKG.1",
+        "short": "PKG-1",
+        "definition": "This field contains a sequential number that identifies this segment within a given Purchasing Vendor segment group. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2221
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PKG.2",
+        "path": "PKG.2",
+        "short": "PKG-2",
+        "definition": "This field contains the packaging unit that this inventory supply item can be ordered or issued in when purchased from the vendor in the related vendor segment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70818[_User-defined Table 0818 – Package_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2222
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0818"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.3",
+        "path": "PKG.3",
+        "short": "PKG-3",
+        "definition": "This field contains an indicator that determines whether or not the unit of measure present in the PKG-2 is considered the default Order unit of measure. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2223
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CNE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0532"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.4",
+        "path": "PKG.4",
+        "short": "PKG-4",
+        "definition": "This field contains the number of units present within a unit of measure.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2224
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "12"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PKG.5",
+        "path": "PKG.5",
+        "short": "PKG-5",
+        "definition": "This field contains the price of the item when purchased from the vendor in the associated VND segment, for the unit of measure present in this PKG segment.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2225
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.6",
+        "path": "PKG.6",
+        "short": "PKG-6",
+        "definition": "This field contains a future price for the item based on the packaging unit in PKG-2.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2226
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.7",
+        "path": "PKG.7",
+        "short": "PKG-7",
+        "definition": "This field contains the date and time that a price change for the item becomes effective.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2227
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.8",
+        "path": "PKG.8",
+        "short": "PKG-8",
+        "definition": "This field contains the GTIN assigned to an item by the item manufacturer used for unique supply item identification by unit of measure within the GS1 standard.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3307
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.9",
+        "path": "PKG.9",
+        "short": "PKG-9",
+        "definition": "This field contains the contract price of this item UOM for the vendor sent in VND.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2426
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "MO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.10",
+        "path": "PKG.10",
+        "short": "PKG-10",
+        "definition": "This field contains the Quantity of the lowest UOM in the UOM sent in sequence 3 (Default Order Unit of Measure).",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2427
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "PKG.11",
+        "path": "PKG.11",
+        "short": "PKG-11",
+        "definition": "This field contains the vendor catalog number of the item UM sent in sequence 3 (Default Order Unit of Measure).",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2428
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 PKG Segment Definition",
+  "name": "PKG",
+  "type": "PKG",
+  "date": "2025-06-05T19:11:00Z"
+}

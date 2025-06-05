@@ -26,9 +26,9 @@
       {
         "id": "SID.1",
         "path": "SID.1",
-        "short": "- SID.1 - ",
+        "short": "SID-1",
         "definition": "Definition: This field identifies the application/method used for the analysis. Refer to Table 0783 - Application/Method Identifier in Chapter 2C for valid values.",
-        "description": null,
+        "comment": "Example: GLUCOSE is an orderable test. GLUCOSE can be analyzed using various applications/methods, which have manufacturer specific identifiers.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +56,8 @@
       {
         "id": "SID.2",
         "path": "SID.2",
-        "short": "- SID.2 - ",
+        "short": "SID-2",
         "definition": "Definition: This field specifies the lot number assigned by the manufacturer during production of the substance.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +65,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -95,9 +94,8 @@
       {
         "id": "SID.3",
         "path": "SID.3",
-        "short": "- SID.3 - ",
+        "short": "SID-3",
         "definition": "Definition: This field specifies the container assigned by the manufacturer during production of the substance. This identifier should be unique within specific lot of specific application / method.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +103,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -134,9 +132,8 @@
       {
         "id": "SID.4",
         "path": "SID.4",
-        "short": "- SID.4 - ",
+        "short": "SID-4",
         "definition": "Definition: This field identifies the manufacturer of this substance. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70385[_User-defined Table 0385 - Manufacturer Identifier_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +141,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -166,5 +163,5 @@
   "title": "HL7 v2 SID Segment Definition",
   "name": "SID",
   "type": "SID",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T18:07:33Z"
 }

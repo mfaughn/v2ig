@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/CM2",
+  "id": "CM2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CM2",
+        "path": "CM2",
+        "short": "Clinical Study Schedule Master",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CM2.1",
+        "path": "CM2.1",
+        "short": "CM2-1",
+        "definition": "This field contains a number that uniquely identifies this transaction for the purpose of adding, changing, or deleting the transaction. For those messages that permit segments to repeat, the Set ID field is used to identify the repetitions.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1024
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CM2.2",
+        "path": "CM2.2",
+        "short": "CM2-2",
+        "definition": "This field should correspond to the scheduled time point coding system in Chapter 7, section 7.8.3.1, \"Study scheduled time point.\"",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1025
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CM2.3",
+        "path": "CM2.3",
+        "short": "CM2-3",
+        "definition": "This field contains a brief explanation so recipients will understand what the time point represents.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1026
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "300"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CM2.4",
+        "path": "CM2.4",
+        "short": "CM2-4",
+        "definition": "This field contains a study-specific event. Coding systems may be developed for this field or applications may use facility-wide or standardized orders and procedures coding systems. This enables integration of procedures or events ordered for clinical trials with medical order entry systems.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1027
+          }
+        ],
+        "min": 1,
+        "max": 200,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 CM2 Segment Definition",
+  "name": "CM2",
+  "type": "CM2",
+  "date": "2025-06-05T19:10:57Z"
+}

@@ -1,0 +1,86 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/NPU",
+  "id": "NPU",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NPU",
+        "path": "NPU",
+        "short": "Bed Status Update",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NPU.1",
+        "path": "NPU.1",
+        "short": "NPU-1",
+        "definition": "This field contains the bed location that is a valid bed location.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 209
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "NPU.2",
+        "path": "NPU.2",
+        "short": "NPU-2",
+        "definition": "This field contains the bed status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70116[_User-defined Table 0116 - Bed Status_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 170
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0116"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 NPU Segment Definition",
+  "name": "NPU",
+  "type": "NPU",
+  "date": "2025-06-05T19:10:53Z"
+}

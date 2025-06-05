@@ -26,9 +26,8 @@
       {
         "id": "STZ.1",
         "path": "STZ.1",
-        "short": "- STZ.1 - ",
+        "short": "STZ-1",
         "definition": "Definition: This field contains the type of sterilization used for sterilizing the inventory supply item in the ITM segment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70806[_User-defined Table 0806 – Sterilization Type_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,8 @@
       {
         "id": "STZ.2",
         "path": "STZ.2",
-        "short": "- STZ.2 - ",
+        "short": "STZ-2",
         "definition": "Definition: This field contains the sterilization cycle used for sterilization of the inventory supply item. The AAMI Standard defines steam sterilization cycles – cycle names: pressure, temperature, dry time. Refer to _SCD-28 Cycle Type_ (CWE) 02131 which references file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70702[_User-defined Table 0702 – Cycle Type_] in Chapter 2C, Code Tables, providing suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +64,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -86,9 +84,8 @@
       {
         "id": "STZ.3",
         "path": "STZ.3",
-        "short": "- STZ.3 - ",
+        "short": "STZ-3",
         "definition": "Definition: This field contains the maintenance cycle used for the inventory supply item, such as the number of times to sharpen after five uses. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70809[_User-defined Table 0809 – Maintenance Cycle_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -96,7 +93,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -116,9 +113,8 @@
       {
         "id": "STZ.4",
         "path": "STZ.4",
-        "short": "- STZ.4 - ",
+        "short": "STZ-4",
         "definition": "Definition: This field contains the type of maintenance performed on the inventory supply item. This is different than the maintenance cycle in the sense that it can describe the number of maintenance cycles that can be performed before disposing of the inventory supply item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70811[_User-defined Table 0811 – Maintenance Type_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -126,7 +122,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -148,5 +144,5 @@
   "title": "HL7 v2 STZ Segment Definition",
   "name": "STZ",
   "type": "STZ",
-  "date": "2025-03-06T16:07:41Z"
+  "date": "2025-06-05T18:07:34Z"
 }

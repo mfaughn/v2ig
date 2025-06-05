@@ -1,0 +1,111 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/ECR",
+  "id": "ECR",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ECR",
+        "path": "ECR",
+        "short": "Equipment Command Response",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ECR.1",
+        "path": "ECR.1",
+        "short": "ECR-1",
+        "definition": "This field identifies the response of the previously issued command. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70387[_User-defined Table 0387 – Command Response_] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1395
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0387"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ECR.2",
+        "path": "ECR.2",
+        "short": "ECR-2",
+        "definition": "This field contains the date and time that the receiving component completed the requested command.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1396
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "ECR.3",
+        "path": "ECR.3",
+        "short": "ECR-3",
+        "definition": "This field identifies any associated parameters that relate to the returned response command message.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1397
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "TX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 ECR Segment Definition",
+  "name": "ECR",
+  "type": "ECR",
+  "date": "2025-06-05T19:10:58Z"
+}

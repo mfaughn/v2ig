@@ -26,9 +26,8 @@
       {
         "id": "RMI.1",
         "path": "RMI.1",
-        "short": "- RMI.1 - ",
+        "short": "RMI-1",
         "definition": "Definition: A code depicting the incident that occurred during a patient's stay. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70427[_User-defined Table 0427 - Risk Management Incident Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,8 @@
       {
         "id": "RMI.2",
         "path": "RMI.2",
-        "short": "- RMI.2 - ",
+        "short": "RMI-2",
         "definition": "Definition: This field contains the date and time the Risk Management Incident identified in link:#rmi-1-risk-management-incident-code-cwe-01530[_RMI-1 - Risk Management Incident Code_] occurred.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +64,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -82,9 +80,8 @@
       {
         "id": "RMI.3",
         "path": "RMI.3",
-        "short": "- RMI.3 - ",
+        "short": "RMI-3",
         "definition": "Definition: A code depicting a classification of the incident type. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70428[_User-defined Table 0428 - Incident Type Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -92,7 +89,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -114,5 +111,5 @@
   "title": "HL7 v2 RMI Segment Definition",
   "name": "RMI",
   "type": "RMI",
-  "date": "2025-03-06T16:07:37Z"
+  "date": "2025-06-05T18:07:30Z"
 }

@@ -26,9 +26,8 @@
       {
         "id": "NPU.1",
         "path": "NPU.1",
-        "short": "- NPU.1 - ",
+        "short": "NPU-1",
         "definition": "Definition: This field contains the bed location that is a valid bed location.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "PL"
@@ -52,9 +51,8 @@
       {
         "id": "NPU.2",
         "path": "NPU.2",
-        "short": "- NPU.2 - ",
+        "short": "NPU-2",
         "definition": "Definition: This field contains the bed status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70116[_User-defined Table 0116 - Bed Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -84,5 +82,5 @@
   "title": "HL7 v2 NPU Segment Definition",
   "name": "NPU",
   "type": "NPU",
-  "date": "2025-03-06T16:07:35Z"
+  "date": "2025-06-05T18:07:27Z"
 }

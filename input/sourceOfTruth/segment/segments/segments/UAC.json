@@ -1,0 +1,86 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/UAC",
+  "id": "UAC",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "UAC",
+        "path": "UAC",
+        "short": "User Authentication Credential",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "UAC.1",
+        "path": "UAC.1",
+        "short": "UAC-1",
+        "definition": "This an identifier code for the type of user authentication credential. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70615[_HL7 Table 0615 – User Authentication Credential Type Code_] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2267
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0615"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "UAC.2",
+        "path": "UAC.2",
+        "short": "UAC-2",
+        "definition": "This is user credential data as supplied by the sender's operating platform. The content and structure of this is defined by other standards and contain no HL7-relevant data.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2268
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "ED"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 UAC Segment Definition",
+  "name": "UAC",
+  "type": "UAC",
+  "date": "2025-06-05T19:10:52Z"
+}

@@ -1,0 +1,113 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/DSC",
+  "id": "DSC",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DSC",
+        "path": "DSC",
+        "short": "Continuation Pointer",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DSC.1",
+        "path": "DSC.1",
+        "short": "DSC-1",
+        "definition": "This field contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete indicator or not present, then there is no more data to fulfill any future continuation requests. For use with continuations of unsolicited messages, see chapter 5 and section _2.9.2_, \"_Continuation messages and segments_.\" Note that continuation protocols work with both display- and record-oriented messages.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 14
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "180"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DSC.2",
+        "path": "DSC.2",
+        "short": "DSC-2",
+        "definition": "Indicates whether this is a fragmented message (see Section _2.9.2_, \"_Continuation messages and segments_\"), or if it is part of an interactive continuation message (see Section 5.6.3, \"Interactive continuation of response messages\").",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70398[_HL7 Table 0398 – Continuation Style Code_] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1354
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0398"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 DSC Segment Definition",
+  "name": "DSC",
+  "type": "DSC",
+  "date": "2025-06-05T19:10:52Z"
+}

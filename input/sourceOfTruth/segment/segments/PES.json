@@ -26,9 +26,8 @@
       {
         "id": "PES.1",
         "path": "PES.1",
-        "short": "- PES.1 - ",
+        "short": "PES-1",
         "definition": "Definition: This field contains the name of the organization sending the message. Coded lists of manufacturers such as that from the World Health Organization database might be used in the component of the coded name to identify the source code type. If sent from an individual, this field may not be sent.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XON"
@@ -52,9 +51,8 @@
       {
         "id": "PES.2",
         "path": "PES.2",
-        "short": "- PES.2 - ",
+        "short": "PES-2",
         "definition": "Definition: This field contains the name of the contact individual. If sent by an organization, the individuals in the organization who serve as primary contact points correspondence regarding this event.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -78,9 +76,8 @@
       {
         "id": "PES.3",
         "path": "PES.3",
-        "short": "- PES.3 - ",
+        "short": "PES-3",
         "definition": "Definition: This field contains the postal address of the message sender to which correspondence regarding the experience being reported should be directed.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XAD"
@@ -104,9 +101,8 @@
       {
         "id": "PES.4",
         "path": "PES.4",
-        "short": "- PES.4 - ",
+        "short": "PES-4",
         "definition": "Definition: This field contains the telephone number of the message sender to which telephone communications regarding the experience being reported should be directed. An electronic mail address can be specified in this field.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -114,7 +110,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -130,9 +126,8 @@
       {
         "id": "PES.5",
         "path": "PES.5",
-        "short": "- PES.5 - ",
+        "short": "PES-5",
         "definition": "Definition: The first component of this field contains the product manufacturer's unique alphanumeric identifier for this specific event. This identifier will be used on all subsequent communications regarding this event. For events reported to the FDA, the identifier is: the FDA assigned manufacturer or distributor number; a hyphen; the 4-digit year; a hyphen; and a consecutive 5-digit sequence number for each report filled by the sender that year. For example, the event identifier for the third event reported in 1996 by a manufacturer whose FDA-assigned registration number is 1234567 would be 1234567-1993-3. Organizations without a FDA-assigned registration number should use 0000000 until assigned a number. Reports from other facilities should use the 10-digit HCFA number left padded with zeros in place of the FDA-assigned registration number. The second through fourth components are defined in exactly the same way as the three components of the hierarchic designator (HD) data type (Section 2.8.18, \"HD - hierarchic designator\").",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +135,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -156,9 +151,8 @@
       {
         "id": "PES.6",
         "path": "PES.6",
-        "short": "- PES.6 - ",
+        "short": "PES-6",
         "definition": "Definition: This field contains sequentially assigned integer values which distinguish messages which share the same sender event identification element. 0 for initial report, 1 for second, and so on.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -166,7 +160,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -195,9 +189,8 @@
       {
         "id": "PES.7",
         "path": "PES.7",
-        "short": "- PES.7 - ",
+        "short": "PES-7",
         "definition": "Definition: This field contains the summary narrative text description of the event that occurred written by the sender, which may include a description of the nature of the event, how the product was involved, any environmental conditions that may have influenced the event, and patient follow-up or required treatment. Note that laboratory results can be encoded as OBX segments rather then including them in the narrative. By representing clinical information in OBX segments rather than in the narrative, these data become much more useful and flexible.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -205,7 +198,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "FT"
@@ -234,9 +227,8 @@
       {
         "id": "PES.8",
         "path": "PES.8",
-        "short": "- PES.8 - ",
+        "short": "PES-8",
         "definition": "Definition: This field contains the text commentary regarding the report being made, such as disclaimers, which is not necessarily part of the report.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -244,7 +236,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "FT"
@@ -273,9 +265,8 @@
       {
         "id": "PES.9",
         "path": "PES.9",
-        "short": "- PES.9 - ",
+        "short": "PES-9",
         "definition": "Definition: This field identifies the date the sender became aware of the event.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -283,7 +274,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -299,9 +290,8 @@
       {
         "id": "PES.10",
         "path": "PES.10",
-        "short": "- PES.10 - ",
+        "short": "PES-10",
         "definition": "Definition: This field contains the date the message was originally sent to the regulatory agency.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -309,7 +299,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -325,9 +315,8 @@
       {
         "id": "PES.11",
         "path": "PES.11",
-        "short": "- PES.11 - ",
+        "short": "PES-11",
         "definition": "Definition: This field contains the timing type of report as required by regulatory agency. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70234[_HL7 Table 0234 - Report Timing_] for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -335,7 +324,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "ID"
@@ -351,7 +340,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -368,9 +357,9 @@
       {
         "id": "PES.12",
         "path": "PES.12",
-        "short": "- PES.12 - ",
+        "short": "PES-12",
         "definition": "Definition: This field identifies the source from which the sender learned about the event. Multiple sources may be reported by repeating the element.",
-        "description": null,
+        "comment": "If the source of the report is a clinical trial, the CSR and CSP segments can be included to define the study. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70235[_HL7 Table 0235 - Report Source_] for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -378,7 +367,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -394,7 +383,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -411,9 +400,8 @@
       {
         "id": "PES.13",
         "path": "PES.13",
-        "short": "- PES.13 - ",
+        "short": "PES-13",
         "definition": "Definition: This field indicates all the entities to whom the entity submitting the report has reported the event. Repeat the element if the report was submitted to more than one entity. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70236[_HL7 Table 0236 - Event reported to_] for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -421,7 +409,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ID"
@@ -437,7 +425,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -456,5 +444,5 @@
   "title": "HL7 v2 PES Segment Definition",
   "name": "PES",
   "type": "PES",
-  "date": "2025-03-06T16:07:37Z"
+  "date": "2025-06-05T18:07:30Z"
 }

@@ -1,0 +1,383 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/TQ2",
+  "id": "TQ2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TQ2",
+        "path": "TQ2",
+        "short": "Timing/Quantity Relationship",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "TQ2.1",
+        "path": "TQ2.1",
+        "short": "TQ2-1",
+        "definition": "For the first timing specification transmitted, the sequence number shall be 1; for the second timing specification, it shall be 2; and so on.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1648
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TQ2.2",
+        "path": "TQ2.2",
+        "short": "TQ2-2",
+        "definition": "This flag defines the sequencing relationship between the current service request, and the related service request(s) specified in this TQ2 segment. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70503[HL7 Table 0503 – Sequence/Results Flag] in Chapter 2C, Code Tables, for values. If not value is present, the S - Sequential is the default value.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1649
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0503"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TQ2.3",
+        "path": "TQ2.3",
+        "short": "TQ2-3",
+        "definition": "The placer numbers of the service request(s) to which this TQ2 segment links the current service request. This field should be populated with the appropriate \"Placer number\" from the current service request. For orders, the Placer Order Number from ORC-2 is the appropriate \"Placer number\". Repeats of this field indicate the current service request is related to multiple service requests.",
+        "comment": "Conditional Rule: At least one of TQ2-3, TQ2-4, TQ2-5 must contain a value.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1650
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "TQ2.4",
+        "path": "TQ2.4",
+        "short": "TQ2-4",
+        "definition": "The filler numbers of the service request(s) to which this TQ2 segment links the current service request. This field should be populated with the appropriate \"Filler number\" from the current service request. For orders, the Filler Order Number from ORC-3 is the appropriate \"Filler number\". Repeats of this field indicate the current service request is related to multiple service requests.",
+        "comment": "Conditional Rule: At least one of TQ2-3, TQ2-4, TQ2-5 must contain a value.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1651
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "TQ2.5",
+        "path": "TQ2.5",
+        "short": "TQ2-5",
+        "definition": "The placer group numbers of the service request(s) to which this TQ2 segment links the current service request. This field should be populated with the appropriate \"Placer group number\" from the current service request. For orders, the Placer Group Number from ORC-4 is the appropriate \"Placer group number\". Repeats of this field indicate that the current service request is related to multiple groups of service requests.",
+        "comment": "Conditional Rule: At least one of TQ2-3, TQ2-4, TQ2-5 must contain a value.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1652
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "TQ2.6",
+        "path": "TQ2.6",
+        "short": "TQ2-6",
+        "definition": "Defines the relationship between the start/end of the related service request(s) (from TQ2-3, TQ2-4, or TQ2-5) and the current service request from ORC-2, 3 or 4. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70504[HL7 Table 0504 – Sequence Condition Code] in Chapter 2C Code Tables, for allowed values.",
+        "comment": "Conditional Rule: Either this field or TQ2-10 must be present.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1653
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0504"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 2
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TQ2.7",
+        "path": "TQ2.7",
+        "short": "TQ2-7",
+        "definition": "Indicates if this service request is the first, last, service request in a cyclic series of service requests. If null or not present, this field indicates that the current service request is neither the first or last service request in a cyclic series of service requests. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70505[HL7 Table 0505 – Cyclic Entry/Exit Indicator] in Chapter 2C, Code Tables, for allowed values.",
+        "comment": "Conditional Rule: Should not be populated when TQ2-2 (Sequence/Results Flag) is not equal to a 'C' (cyclic service request).\n\nExample of TQ2 - 6, 7, & 8 Usage:\n\nExample of TQ2 - 6, 7, & 8 Usage:\n|===\n|Example |Translation\n|...\\|ES\\|*\\|+10^min\\|... |translates to: execute this service request the first time without evaluating the condition specified in the TQ2 segment; but repeat only its execution when the specified external service request's start or finish date/time has met this condition. This specification generates a repetition of the service request for each iteration of the cycle.\n|===\n\n*Note:* This requires that the requesting application be able to specify the placer/filler/placer group number of the last service request in the cycle in the first service request's quantity/timing specification.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1654
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0505"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TQ2.8",
+        "path": "TQ2.8",
+        "short": "TQ2-8",
+        "definition": "Defines the interval of time between the start/end of the related service request(s) and the start/end of the current service request. The unit's component is constrained to units of time. If this field is not populated, then there should be no interruption between start/ending the current service request, and the related service request(s).",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1655
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CQ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "TQ2.9",
+        "path": "TQ2.9",
+        "short": "TQ2-9",
+        "definition": "The maximum number of repeats for a cyclic group.",
+        "comment": "The total number of repeats is constrained by the end date/time of the last repeat or the end date/time of the parent, whichever is first. For example, if the total number or repeats is valued at 10 and the group has already repeated 5 times, the current order will not be repeated again if either the current order, or the prior order in the cycle, has reached its end date/time.\n\nThis field is meaningful only when TQ2-2 Sequence/Results Flag is valued with 'C'. However, even in this case this field is optional.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1656
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "10"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TQ2.10",
+        "path": "TQ2.10",
+        "short": "TQ2-10",
+        "definition": "This defines an additional or alternate relationship between this service request and other service requests. Its primary intended use is for Pharmacy administration service requests, but it may be useful for other domains. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70506[HL7 Table 0506 – Service Request Relationship] in Chapter 2C, Code Tables, for allowed values.",
+        "comment": "Conditional Rule: Either this field or TQ2-6 must be present.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 1657
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ID"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0506"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 1
+              },
+              {
+                "url": "max",
+                "valueInteger": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 TQ2 Segment Definition",
+  "name": "TQ2",
+  "type": "TQ2",
+  "date": "2025-06-05T19:10:53Z"
+}

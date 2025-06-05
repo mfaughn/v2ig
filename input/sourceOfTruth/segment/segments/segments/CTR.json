@@ -1,0 +1,602 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/CTR",
+  "id": "CTR",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CTR",
+        "path": "CTR",
+        "short": "Contract Master Outbound",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CTR.1",
+        "path": "CTR.1",
+        "short": "CTR-1",
+        "definition": "The Contract Identifier is a unique code assigned to the contract by the manufacturer or distributor to identify the contract.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2392
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CTR.2",
+        "path": "CTR.2",
+        "short": "CTR-2",
+        "definition": "The Contract Description is a description of the contract identified in CTR-1.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2393
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "999"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CTR.3",
+        "path": "CTR.3",
+        "short": "CTR-3",
+        "definition": "The status (useful for determining whether the contract price should be used for ordering) that applies to the contract. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70536[_User-defined Table 0536 – Certificate Status_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2394
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0536"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.4",
+        "path": "CTR.4",
+        "short": "CTR-4",
+        "definition": "The Effective Date is the date that the contract becomes available to purchase from.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2395
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CTR.5",
+        "path": "CTR.5",
+        "short": "CTR-5",
+        "definition": "Definition: The Expiration Date is the date that the contract becomes unavailable to purchase from.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2396
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CTR.6",
+        "path": "CTR.6",
+        "short": "CTR-6",
+        "definition": "This field contains the name of the person who manages the contract.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2397
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XPN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.7",
+        "path": "CTR.7",
+        "short": "CTR-7",
+        "definition": "This field contains the name of the person who created the contract.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2398
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XPN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.8",
+        "path": "CTR.8",
+        "short": "CTR-8",
+        "definition": "This field contains the type of supplier associated to the contract. Suggested values ‘Distributor’ or ‘Manufacturer’.",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70946[_User-defined Table 0946 – Supplier Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2399
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0946"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      },
+      {
+        "id": "CTR.9",
+        "path": "CTR.9",
+        "short": "CTR-9",
+        "definition": "The Contract Type is an identifier of the contract which designates the source of the contract. Suggested values: L=Local, G=Global, and values can be defined by the source (user defined) such as the GPO or the distributor. Refer to User Defined Table 0965 – Contract Types in Chapter 2 C for examples.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2400
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0965"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.10",
+        "path": "CTR.10",
+        "short": "CTR-10",
+        "definition": "This field indicates whether or not Free On Board freight terms are applicable to the contract.",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[HL7 Table 0532 - Expanded Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2401
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CNE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0532"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.11",
+        "path": "CTR.11",
+        "short": "CTR-11",
+        "definition": "This field contains the date through which the contract item prices are protected by an agreement with the vendor.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2402
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "DTM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.12",
+        "path": "CTR.12",
+        "short": "CTR-12",
+        "definition": "This field indicates whether the items selected for the contract are purchased at the price indicated in the Contract Price or not. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[HL7 Table 0532 - Expanded Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2403
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CNE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0532"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.13",
+        "path": "CTR.13",
+        "short": "CTR-13",
+        "definition": "This field contains the identifier which identifies the GPO organization.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2404
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.14",
+        "path": "CTR.14",
+        "short": "CTR-14",
+        "definition": "This field contains the highest percentage that can be applied to each item’s Product Cost.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2405
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "MOP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.15",
+        "path": "CTR.15",
+        "short": "CTR-15",
+        "definition": "This field contains the actual percentage (markup or discount) applied to each item’s Product Cost.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2406
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "MOP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.16",
+        "path": "CTR.16",
+        "short": "CTR-16",
+        "definition": "This field contains a corporation identifier (code and name) of the entity allowed to purchase from this contract.",
+        "comment": "Condition: This field shall be valued if CRT-17 Parent of Corporation is valued.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2407
+          }
+        ],
+        "min": 0,
+        "max": 0,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "C"
+          }
+        ]
+      },
+      {
+        "id": "CTR.17",
+        "path": "CTR.17",
+        "short": "CTR-17",
+        "definition": "This field contains the parent of the corporation sent in CTR-17 such as an integrated delivery network.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2408
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "XON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.18",
+        "path": "CTR.18",
+        "short": "CTR-18",
+        "definition": "This field contains the tier level at which this contract is priced. Pricing Tier level determines the price of the item on the contract. Tier Level can be assigned to an IDN or at a corporation level and is typically based on volume purchased (determined by $ or a %). The larger the volume purchased, the lower priced tier level is assigned to the contract. This value can change over the life of the contract if purchasing volume changes after initial contract signing. Example 01^Tier One, 02^Tier 2, etc. Refer to User Defined Table 0966 – Pricing Tier Level in Chapter2C for examples.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2409
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0966"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.19",
+        "path": "CTR.19",
+        "short": "CTR-19",
+        "definition": "This field contains the a value which represents the priority of this contract. In some cases there are multiple contracts associated to a given supply item, each needs a priority to determine which price to default to when ordering items on this contract. This field could be text or numeric.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2410
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.20",
+        "path": "CTR.20",
+        "short": "CTR-20",
+        "definition": "This field contains an indicator signifying whether the purchasing channel such as a hospital or retail, etc.",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70947[_User-defined Table 0947 – Supplier Type Class of Trade_] in Chapter 2C, Code Tables, for suggested values.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2411
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "CWE"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0947"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      },
+      {
+        "id": "CTR.21",
+        "path": "CTR.21",
+        "short": "CTR-21",
+        "definition": "This field contains an indicator signifying contract IDs of related contracts. An example is a vendor contract which (supplier type = D) could be associated to a manufacturer (supplier type = M) contract; this field would contain the manufacturer contract ID.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 2412
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "EI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 CTR Segment Definition",
+  "name": "CTR",
+  "type": "CTR",
+  "date": "2025-06-05T19:10:57Z"
+}

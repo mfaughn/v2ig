@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/RDF",
+  "id": "RDF",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "RDF",
+        "path": "RDF",
+        "short": "Table Row Definition",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "RDF.1",
+        "path": "RDF.1",
+        "short": "RDF-1",
+        "definition": "This field specifies the number of data columns (and therefore the number of fields) contained within each row of returned data.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 701
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "NM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "3"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RDF.2",
+        "path": "RDF.2",
+        "short": "RDF-2",
+        "definition": "Each repetition of this field consists of three components:",
+        "comment": "The segment field name that identifies the field occupying the column. The segment field name SHALL agree with the column name as it appears in the Query Profile. Use of the @ sign as prefix to the column name is optional.\n\nThe 2 or 3 character HL7 data type, as defined in Chapter 2. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70440[_HL7 Table 0440 – Data types_] in Chapter 2C, Code Tables, for valid values.\n\nThe maximum width of the column, as dictated by the responding system. (This may vary from the HL7-defined maximum field length.)",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 702
+          }
+        ],
+        "min": 1,
+        "max": 0,
+        "type": [
+          {
+            "code": "RCD"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0440"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 RDF Segment Definition",
+  "name": "RDF",
+  "type": "RDF",
+  "date": "2025-06-05T19:10:55Z"
+}

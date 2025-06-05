@@ -26,9 +26,8 @@
       {
         "id": "VAR.1",
         "path": "VAR.1",
-        "short": "- VAR.1 - ",
+        "short": "VAR-1",
         "definition": "Definition: This field contains the unique identifier of the specific variance record.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "VAR.2",
         "path": "VAR.2",
-        "short": "- VAR.2 - ",
+        "short": "VAR-2",
         "definition": "Definition: This field contains the time stamp that identifies the timed occurrence of the variance documentation.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -78,9 +76,8 @@
       {
         "id": "VAR.3",
         "path": "VAR.3",
-        "short": "- VAR.3 - ",
+        "short": "VAR-3",
         "definition": "Definition: This field contains the time stamp that identifies a stated time of the variance which may be different than the time it was documented.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -104,9 +101,8 @@
       {
         "id": "VAR.4",
         "path": "VAR.4",
-        "short": "- VAR.4 - ",
+        "short": "VAR-4",
         "definition": "Definition: This field contains the originator (person or system) documenting the variance.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -114,7 +110,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -130,9 +126,8 @@
       {
         "id": "VAR.5",
         "path": "VAR.5",
-        "short": "- VAR.5 - ",
+        "short": "VAR-5",
         "definition": "Definition: This field identifies a categorical set of variances. Classification may be used by applications for presentation and processing functions.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +135,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -156,9 +151,8 @@
       {
         "id": "VAR.6",
         "path": "VAR.6",
-        "short": "- VAR.6 - ",
+        "short": "VAR-6",
         "definition": "Definition: This field specifies the details of a variance. The content of the field is a string with optional formatting.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -166,7 +160,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ST"
@@ -197,5 +191,5 @@
   "title": "HL7 v2 VAR Segment Definition",
   "name": "VAR",
   "type": "VAR",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T18:07:32Z"
 }

@@ -26,9 +26,8 @@
       {
         "id": "PID.1",
         "path": "PID.1",
-        "short": "- PID.1 - ",
+        "short": "PID-1",
         "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one, for the second occurrence, the sequence number shall be two, etc.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -48,7 +47,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -65,7 +64,8 @@
       {
         "id": "PID.2",
         "path": "PID.2",
-        "short": "- PID.2 - ",
+        "short": "PID-2",
+        "comment": "*Attention:* The PID-2 field was retained for backward compatibility only as of v2.3.1 and was withdrawn and removed from this message structure as of v2.7. It is recommended to use _PID-3 - Patient Identifier List_ for all patient identifiers.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -84,9 +84,8 @@
       {
         "id": "PID.3",
         "path": "PID.3",
-        "short": "- PID.3 - ",
+        "short": "PID-3",
         "definition": "Definition: This field contains the list of identifiers (one or more) used by the healthcare facility to uniquely identify a patient (e.g., medical record number, billing number, birth registry, national unique individual identifier, etc.). In Canada, the Canadian Provincial Healthcare Number should be sent in this field. The arbitrary term of \"internal ID\" has been removed from the name of this field for clarity.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -94,7 +93,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CX"
@@ -110,7 +109,8 @@
       {
         "id": "PID.4",
         "path": "PID.4",
-        "short": "- PID.4 - ",
+        "short": "PID-4",
+        "comment": "*Attention:* The PID-4 field was retained for backward compatibility only as of v2.3.1 and was withdrawn and removed from this message structure as of v2.7. It is recommended to use _PID-3 - Patient Identifier List_ for all patient identifiers.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +118,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -129,9 +129,9 @@
       {
         "id": "PID.5",
         "path": "PID.5",
-        "short": "- PID.5 - ",
+        "short": "PID-5",
         "definition": "Definition: This field contains one or more of the names of the patient. The XPN.7 Name Type Code, and not the order, conveys how the name should be interpreted. As of v2.7, Name Type Code is Required. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Name_ _Type_] in Chaper 2C, Code Tables, for valid values. Specification of meaning based on sequence is deprecated.",
-        "description": null,
+        "comment": "In addition to allowing repetition of this field for transmitting multiple names with different Name Type Codes, repetition also allows for representing the same name in different character sets based on the value in XPN.8 Name Representation Code.\n\nIn order to support “name to use” to indicate how to address the patient, when that does not match their legal name, include an occurrence of Patient Name (PID-5), where the nametype code (PID-5.7) is valued ‘N’.Multiple given names and/or initials are separated by spaces.\n\nFor animals, if a Name Type of \"R\" is used, use \"Name Context\" to identify the authority with which the animal's name is registered.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -139,7 +139,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XPN"
@@ -159,9 +159,8 @@
       {
         "id": "PID.6",
         "path": "PID.6",
-        "short": "- PID.6 - ",
+        "short": "PID-6",
         "definition": "Definition: This field contains the family name under which the mother was born (i.e., before marriage). It is used to distinguish between patients with the same last name.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -169,7 +168,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XPN"
@@ -185,9 +184,8 @@
       {
         "id": "PID.7",
         "path": "PID.7",
-        "short": "- PID.7 - ",
+        "short": "PID-7",
         "definition": "Definition: This field contains the patient's date and time of birth.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -195,7 +193,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -211,9 +209,9 @@
       {
         "id": "PID.8",
         "path": "PID.8",
-        "short": "- PID.8 - ",
+        "short": "PID-8",
         "definition": "Definition: This field contains the patient's sex. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70001[_User-defined_ _Table 0001 -_ _Administrative Sex_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "comment": "This field has historically been used to variably exchange both sex and gender values and therefore this field is not clearly defined. This field is expected to continue to be used as it has been in existing implementations and use of this field is subject to local existing interpretation and/or implementation guides. The GSP and GSR segments should be used to exchange more rigorously defined sex or gender concept.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -221,7 +219,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -241,7 +239,8 @@
       {
         "id": "PID.9",
         "path": "PID.9",
-        "short": "- PID.9 - ",
+        "short": "PID-9",
+        "comment": "*Attention:* The PID-9 field was retained for backward compatibility only as of v2.4 and was withdrawn and removed from this message structure as of v2.7. it is recommended to use _PID-5 - Patient Name_ for all patient names.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -249,7 +248,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -260,9 +259,8 @@
       {
         "id": "PID.10",
         "path": "PID.10",
-        "short": "- PID.10 - ",
+        "short": "PID-10",
         "definition": "Definition: This field refers to the patient's race. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70005[_User-defined Table 0005 -_ _Race_] in Chapter 2C, Code Tables, for suggested values. The second triplet of the CWE data type for race (alternate identifier, alternate text, and name of alternate coding system) is reserved for governmentally assigned codes.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -270,7 +268,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -290,9 +288,8 @@
       {
         "id": "PID.11",
         "path": "PID.11",
-        "short": "- PID.11 - ",
+        "short": "PID-11",
         "definition": "Definition: This field contains the address of the patient. Multiple addresses for the same person may be sent. As of v2.7 the \"primary mailing address\" constraint as the first sequence has been removed...",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -300,7 +297,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XAD"
@@ -316,7 +313,8 @@
       {
         "id": "PID.12",
         "path": "PID.12",
-        "short": "- PID.12 - ",
+        "short": "PID-12",
+        "comment": "*Attention:* The PID-12 field was retained for backward compatibility only as of v2.3 and was withdrawn and removed from this message structure as of v2.7. The county can now be supported in the county/parish code component of the XAD data type (_PID-11 - Patient Address_).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -324,7 +322,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -335,7 +333,8 @@
       {
         "id": "PID.13",
         "path": "PID.13",
-        "short": "- PID.13 - ",
+        "short": "PID-13",
+        "comment": "*Attention:* The PID13 field has been retained for backward compatibility as of v 2.7 and withdrawn as of v 2.9. The reader is referrred to section _3.4.2.40_, _PID-40 – Patient Telecommunication Information_ instead, which replaces _PID-13 – Phone Number - Home_ with the intention that the components of the XTN data type be used to identify phone usage (Telecommunication use code) and type of equipment (telecommunication equipment type).\n\nThis field contains the patient's personal phone numbers. All personal phone numbers for the patient are sent in the following sequence. The first sequence is considered the primary number (for backward compatibility). If the primary number is not sent, then a repeat delimiter is sent in the first sequence. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70201[_HL7 Table 0201 - Telecommunication Use Code_] and file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70202[_HL7 Table 0202 - Telecommunication Equipment Type_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -343,7 +342,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -359,7 +358,8 @@
       {
         "id": "PID.14",
         "path": "PID.14",
-        "short": "- PID.14 - ",
+        "short": "PID-14",
+        "comment": "*Attention:* The PID-14 field has been retained for backward compatibility only as of v2.7 and withdrawn as of v 2.9.. The reader is referred to section _3.4.2.40_, _PID-40 – Patient Telecommunication Information_ instead, which replaces _PID-14 – Phone Number - Business_ with the intention that the components of the XTN data type be used to identify phone usage (Telecommunication use code) and type of equipment (telecommunication equipment type).\n\nThis field contains the patient's business telephone numbers. All business numbers for the patient are sent in the following sequence. The first sequence is considered the patient's primary business phone number (for backward compatibility). If the primary business phone number is not sent, then a repeat delimiter must be sent in the first sequence. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70201[_HL7 Table 0201 - Telecommunication Use Code_] and file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70202[_HL7 Table 0202 - Telecommunication Equipment Type_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -367,7 +367,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -383,9 +383,8 @@
       {
         "id": "PID.15",
         "path": "PID.15",
-        "short": "- PID.15 - ",
+        "short": "PID-15",
         "definition": "Definition: This field contains the patient's primary language. HL7 recommends using ISO table 639 as the suggested values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70296[_User-defined Table 0296 - Primary Language_] within Chapter 2C, Code Tables.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -393,7 +392,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -413,9 +412,8 @@
       {
         "id": "PID.16",
         "path": "PID.16",
-        "short": "- PID.16 - ",
+        "short": "PID-16",
         "definition": "Definition: This field contains the patient's marital (civil) status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70002[_User-defined Table 0002 - Marital Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -423,7 +421,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -443,9 +441,8 @@
       {
         "id": "PID.17",
         "path": "PID.17",
-        "short": "- PID.17 - ",
+        "short": "PID-17",
         "definition": "Definition: This field contains the patient's religion. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70006[_User-defined Table 0006 - Religion_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -453,7 +450,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -473,9 +470,8 @@
       {
         "id": "PID.18",
         "path": "PID.18",
-        "short": "- PID.18 - ",
+        "short": "PID-18",
         "definition": "Definition: This field contains the patient account number assigned by accounting to which all charges, payments, etc., are recorded. It is used to identify the patient's account. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 Table 0061 - Check Digit Scheme_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -483,7 +479,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CX"
@@ -503,7 +499,8 @@
       {
         "id": "PID.19",
         "path": "PID.19",
-        "short": "- PID.19 - ",
+        "short": "PID-19",
+        "comment": "*Attention:* The PID-19 field was retained for backward compatibility only as of v 2.3.1 and was withdrawn and removed from this message structure as of v 2.7. It is recommended to use _PID-3 - Patient Identifier List_ for all patient identifiers.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -511,7 +508,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -522,7 +519,8 @@
       {
         "id": "PID.20",
         "path": "PID.20",
-        "short": "- PID.20 - ",
+        "short": "PID-20",
+        "comment": "*Attention:* The PID-20 field was retained for backward compatibility only as of v 2.5 and was withdrawn and removed from this message structure as of v 2.7. It is recommended to use _PID-3 - Patient Identifier List_ for all patient identifiers.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -530,7 +528,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -541,9 +539,8 @@
       {
         "id": "PID.21",
         "path": "PID.21",
-        "short": "- PID.21 - ",
+        "short": "PID-21",
         "definition": "Definition: This field is used, for example, as a link field for newborns. Typically a patient ID or account number may be used. This field can contain multiple identifiers for the same mother. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 Table 0061 - Check Digit Scheme_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -551,7 +548,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CX"
@@ -571,9 +568,8 @@
       {
         "id": "PID.22",
         "path": "PID.22",
-        "short": "- PID.22 - ",
+        "short": "PID-22",
         "definition": "Definition: This field further defines the patient's ancestry. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70189[_User-defined Table 0189 - Ethnic Group_] in Chapter 2C, Code Tables, for suggested values. The second triplet of the CWE data type for ethnic group (alternate identifier, alternate text, and name of alternate coding system) is reserved for governmentally assigned codes. In the US, a current use is to report ethnicity in line with US federal standards for Hispanic origin.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -581,7 +577,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -601,9 +597,8 @@
       {
         "id": "PID.23",
         "path": "PID.23",
-        "short": "- PID.23 - ",
+        "short": "PID-23",
         "definition": "Definition: This field indicates the location of the patient's birth, for example \"St. Francis Community Hospital of Lower South Side\". The actual address is reported in PID-11 with an identifier of \"N\".",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -611,7 +606,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -640,9 +635,9 @@
       {
         "id": "PID.24",
         "path": "PID.24",
-        "short": "- PID.24 - ",
+        "short": "PID-24",
         "definition": "Definition: This field indicates whether the patient was part of a multiple birth. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "Y the patient was part of a multiple birth\n\nN the patient was a single birth",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -650,7 +645,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -666,7 +661,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -683,9 +678,8 @@
       {
         "id": "PID.25",
         "path": "PID.25",
-        "short": "- PID.25 - ",
+        "short": "PID-25",
         "definition": "Definition: When a patient was part of a multiple birth, a value (number) indicating the patient's birth order is entered in this field.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -693,7 +687,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -722,7 +716,8 @@
       {
         "id": "PID.26",
         "path": "PID.26",
-        "short": "- PID.26 - ",
+        "short": "PID-26",
+        "comment": "This field contains the information related to a person's country citizenship. For country citizenship HL7 recommends using ISO table 3166. For a local definition, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70171[_User-defined Table 0171 - Citizenship_] in Chapter 2C, Code Tables, should be used.\n\nThis field repeats since persons can be citizens of more than one country. The Name of Coding System component(s) of the CWE datatype should be used to identify the table from which citizenship membership is drawn.\n\nIn the Netherlands, this field is used for \"Nationaliteit\".",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -730,7 +725,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -750,9 +745,8 @@
       {
         "id": "PID.27",
         "path": "PID.27",
-        "short": "- PID.27 - ",
+        "short": "PID-27",
         "definition": "Definition: This field contains the military status assigned to a veteran. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70172[_User-defined Table 0172 - Veterans Military Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -760,7 +754,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -780,7 +774,8 @@
       {
         "id": "PID.28",
         "path": "PID.28",
-        "short": "- PID.28 - ",
+        "short": "PID-28",
+        "comment": "*Attention:* The PID-28 field was retained for backward compatibility only as of v 2.4 and was withdrawn and removed from this message structure as of v 2.7. It is recommended to refer to _PID-10 - Race_, _PID-22 - Ethnic group_ and _PID-26 - Citizenship_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -788,7 +783,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -799,9 +794,8 @@
       {
         "id": "PID.29",
         "path": "PID.29",
-        "short": "- PID.29 - ",
+        "short": "PID-29",
         "definition": "Definition: This field contains the date and time at which the patient death occurred.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -809,7 +803,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -825,9 +819,9 @@
       {
         "id": "PID.30",
         "path": "PID.30",
-        "short": "- PID.30 - ",
+        "short": "PID-30",
         "definition": "Definition: This field indicates whether the patient is deceased. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "Y the patient is deceased\n\nN the patient is not deceased",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -835,7 +829,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -851,7 +845,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -868,9 +862,9 @@
       {
         "id": "PID.31",
         "path": "PID.31",
-        "short": "- PID.31 - ",
+        "short": "PID-31",
         "definition": "Definition: This field indicates whether or not the patient's/person's identity is known. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "comment": "Y the patient's/person's identity is unknown\n\nN the patient's/person's identity is known",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -878,7 +872,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -894,7 +888,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -911,9 +905,8 @@
       {
         "id": "PID.32",
         "path": "PID.32",
-        "short": "- PID.32 - ",
+        "short": "PID-32",
         "definition": "Definition: This field contains a coded value used to communicate information regarding the reliability of patient/person identifying data transmitted via a transaction. Values could indicate that certain fields on a PID segment for a given patient/person are known to be false (e.g., use of default or system-generated values for Date of Birth or Social Security Number). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70445[_User-defined Table 0445 - Identity Reliability Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -921,7 +914,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -941,9 +934,8 @@
       {
         "id": "PID.33",
         "path": "PID.33",
-        "short": "- PID.33 - ",
+        "short": "PID-33",
         "definition": "Definition: This field contains the last update date and time for the patient's/person's identifying and demographic data, as defined in the PID segment. Receiving systems will use this field to determine how to apply the transaction to their systems. If the receiving system (such as an enterprise master patient index) already has a record for the person with a later last update date/time, then the EMPI could decide not to apply the patient's/person's demographic and identifying data from this transaction.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -951,7 +943,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -967,9 +959,9 @@
       {
         "id": "PID.34",
         "path": "PID.34",
-        "short": "- PID.34 - ",
+        "short": "PID-34",
         "definition": "Definition: This field identifies the facility of the last update to a patient's/person's identifying and demographic data, as defined in the PID segment. Receiving systems or users will use this field to determine how to apply the transaction to their systems. If the receiving system (such as a hospital's patient management system) already has a record for the patient/person, then it may decide to only update its data if the source is a \"trusted\" source. A hospital might consider other hospitals trusted sources, but not \"trust\" updates from non-acute care facilities. For example:",
-        "description": null,
+        "comment": "...|GOOD HEALTH Hospital|...",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -977,7 +969,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "HD"
@@ -993,9 +985,9 @@
       {
         "id": "PID.35",
         "path": "PID.35",
-        "short": "- PID.35 - ",
+        "short": "PID-35",
         "definition": "Definition: A code representing the taxonomic classification (e.g. species and/or breed) of an organism. This may include the common or scientific name in the description component, based on the coding system(s) used. SNOMED-CT is the recommended coding system. If this field is not valued, a human is assumed. If the specificity of the coding system is insufficient to represent the organism to the degree desired, the most detailed coded value available may be used in this field and additional information sent in the text field, _PID-37 – Strain_.",
-        "description": null,
+        "comment": "For example:\n\n...|L-80700^Canine, NOS^SNM3|...\n\n...|L-80100^Bovine^SNM3|...\n\n...|L-80A00^Feline^SNM3|...",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1003,7 +995,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -1019,9 +1011,9 @@
       {
         "id": "PID.36",
         "path": "PID.36",
-        "short": "- PID.36 - ",
+        "short": "PID-36",
         "definition": "Definition: *From v 2.8 onward, this field has been retained for backward compatibility only.* The specific breed of animal. This field, unlike Species and Strain is specific to animals and cannot be generally used for all living organisms. SNOMED is the recommended coding system. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70447[_User-defined Table 0447 - Breed Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "comment": "Conditionality Rule: This field must be valued if _PID-37 - Strain_ is valued.\n\nFor example, (showing primary and alternative coding systems, using locally defined \"American Kennel Club\" nomenclature):\n\n...|L-80733^ Staffordshire bull terrier^SNM3^^American Staffordshire Terrier^99AKC|...\n\n...|L-80900^Weimaraner^SNM3|...\n\n...|L-80439^Peruvian Paso Horse^SNM3|...",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1029,7 +1021,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -1049,9 +1041,9 @@
       {
         "id": "PID.37",
         "path": "PID.37",
-        "short": "- PID.37 - ",
+        "short": "PID-37",
         "definition": "Definition: This field contains the specific strain of animal. It can also be expanded to include strain of any living organism and is not restricted to animals.",
-        "description": null,
+        "comment": "Example:\n\n...|DeKalb|...\n\n...|Balb/c|...\n\n...|DXL|...",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1059,7 +1051,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -1088,9 +1080,9 @@
       {
         "id": "PID.38",
         "path": "PID.38",
-        "short": "- PID.38 - ",
+        "short": "PID-38",
         "definition": "Definition: This field contains the code and/or text indicating the primary use for which the living subject was bred or grown. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70429[_User-defined Table 0429 - Production Class Code_] in Chapter 2C, Code Tables, for suggested values. For example:",
-        "description": null,
+        "comment": "...|DA^Dairy^L|...\n\n...|MT^Meat^L|...\n\n...|RA^Racing^L|...",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1098,7 +1090,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "CWE"
@@ -1118,7 +1110,8 @@
       {
         "id": "PID.39",
         "path": "PID.39",
-        "short": "- PID.39 - ",
+        "short": "PID-39",
+        "comment": "This field contains the information related to a person's tribal citizenship. For tribal citizenship, in the United States, HL7 recommends using the Bureau of Indian Affairs (BIA) Tribal Identity List. For a local definition, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70171[_User-defined Table 0171 - Citizenship_] in Chapter 2C, Code Tables should be used.\n\nThis field repeats since persons can have tribal membership(s) and can be members of more than one tribe. The Name of Coding System component(s) of the CWE datatype should be used to identify the table from which tribal membership is drawn.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1126,7 +1119,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -1146,9 +1139,8 @@
       {
         "id": "PID.40",
         "path": "PID.40",
-        "short": "- PID.40 - ",
+        "short": "PID-40",
         "definition": "Definition: This field contains the patient's personal telecommunication contact information. This field replaces _PID-13 – Phone Number - Home_ and _PID-14 – Phone Number – Business_ with the intention that the components of the XTN data type be used to identify phone usage (Telecommunication use code) and type of equipment (telecommunication equipment type). Jointly, these components will describe the nature of the telecommunication data contained in this field and removes the sequenced-based assumptions in PID-13 and PID-14.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1156,7 +1148,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -1174,5 +1166,5 @@
   "title": "HL7 v2 PID Segment Definition",
   "name": "PID",
   "type": "PID",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T18:07:27Z"
 }

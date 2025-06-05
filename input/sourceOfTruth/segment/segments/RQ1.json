@@ -26,9 +26,8 @@
       {
         "id": "RQ1.1",
         "path": "RQ1.1",
-        "short": "- RQ1.1 - ",
+        "short": "RQ1-1",
         "definition": "Definition: This field contains the reference price for the requisition unit of measure that is known to the requisition application. It may or may not be the actual cost of acquiring the item from a supplier. It is also not the price charged to the patient.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -65,9 +64,9 @@
       {
         "id": "RQ1.2",
         "path": "RQ1.2",
-        "short": "- RQ1.2 - ",
+        "short": "RQ1-2",
         "definition": "Definition: This field contains the unique code that identifies the manufacturer on the application receiving the requisition. This field is conditional because either RQ1-2-manufacturer ID and RQ1-3-manufacturer's catalog or RQ1-4-vendor ID and RQ1-5-vendor catalog must be valued.",
-        "description": null,
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70385[User-defined Table 0385 – Manufacturer identifier] in Chapter 2C, Code Tables, for suggested values, or relevant external code sets may be used (e.g., HIBCC Manufacturers Labeler ID Code (LIC), UPC, NDC).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +74,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -95,9 +94,8 @@
       {
         "id": "RQ1.3",
         "path": "RQ1.3",
-        "short": "- RQ1.3 - ",
+        "short": "RQ1-3",
         "definition": "Definition: This field is the manufacturer's catalog number or code for this item. This field is conditional because either RQ1-2-manufacturer ID and RQ1-3-manufacturer's catalog or RQ1-4-vendor ID and RQ1-5-vendor catalog must be valued.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +103,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -134,9 +132,9 @@
       {
         "id": "RQ1.4",
         "path": "RQ1.4",
-        "short": "- RQ1.4 - ",
+        "short": "RQ1-4",
         "definition": "Definition: This field is the unique code that identifies the vendor on the application receiving the requisition. This field is conditional because either RQ1-2-manufacturer ID and RQ1-3-manufacturer's catalog or RQ1-4-vendor ID and RQ1-5-vendor catalog must be valued. Refer to Table 0683 - Vendor ID in Chapter 2C for valid values.",
-        "description": null,
+        "comment": "Because of this, it is recommended that each non-stock item have RQ1-2-manufacturers ID and RQ1-3-manufacturer's catalog, or RQ1-4-vendor ID and RQ1-5-vendor catalog. It is also possible that the requisitioning application will not know the identifier, as listed in the Manufacturer's or Vendor's catalog. In this case, it is important to include the name portion of this coded element field.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +142,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -164,9 +162,8 @@
       {
         "id": "RQ1.5",
         "path": "RQ1.5",
-        "short": "- RQ1.5 - ",
+        "short": "RQ1-5",
         "definition": "Definition: This field is the vendor's catalog number, name, or code for this item. This field is conditional because either RQ1-2-manufacturer ID and RQ1-3-manufacturer's catalog or RQ1-4-vendor ID and RQ1-5-vendor catalog must be valued.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -174,7 +171,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -203,9 +200,9 @@
       {
         "id": "RQ1.6",
         "path": "RQ1.6",
-        "short": "- RQ1.6 - ",
+        "short": "RQ1-6",
         "definition": "Definition: This field indicates whether this item is subject to tax.",
-        "description": null,
+        "comment": "In general, non-stock requisitioned items will be printed by the receiving application and then processed by a human. In other words, the human will use the information to call the vendor or manufacturer to get pricing and other related purchasing information before placing the order with an outside vendor. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 -Yes/No Indicator] as defined in Chapter 2C, Code Tables.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -213,7 +210,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -229,7 +226,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -246,9 +243,8 @@
       {
         "id": "RQ1.7",
         "path": "RQ1.7",
-        "short": "- RQ1.7 - ",
+        "short": "RQ1-7",
         "definition": "Definition: This field indicates whether the ancillary department may substitute an equivalent version of the item(s) ordered. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/No Indicator] as defined in Chapter 2C, Code Tables.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -256,7 +252,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -272,7 +268,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -291,5 +287,5 @@
   "title": "HL7 v2 RQ1 Segment Definition",
   "name": "RQ1",
   "type": "RQ1",
-  "date": "2025-03-06T16:07:35Z"
+  "date": "2025-06-05T18:07:28Z"
 }

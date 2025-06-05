@@ -26,9 +26,8 @@
       {
         "id": "PSS.1",
         "path": "PSS.1",
-        "short": "- PSS.1 - ",
+        "short": "PSS-1",
         "definition": "Definition: Unique Product/Service Section Number assigned by the Provider Application.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "PSS.2",
         "path": "PSS.2",
-        "short": "- PSS.2 - ",
+        "short": "PSS-2",
         "definition": "Definition: Unique Product/Service Section Number assigned by the Payer Application.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -78,9 +76,8 @@
       {
         "id": "PSS.3",
         "path": "PSS.3",
-        "short": "- PSS.3 - ",
+        "short": "PSS-3",
         "definition": "Definition: Unique sequence number for the Product/Service Section (3) – starts with 1, then 2, etc. for each unique Product/Service Section in this Invoice.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -100,7 +97,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -117,9 +114,8 @@
       {
         "id": "PSS.4",
         "path": "PSS.4",
-        "short": "- PSS.4 - ",
+        "short": "PSS-4",
         "definition": "Definition: Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Section.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +123,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -143,9 +139,8 @@
       {
         "id": "PSS.5",
         "path": "PSS.5",
-        "short": "- PSS.5 - ",
+        "short": "PSS-5",
         "definition": "Definition: Section description or heading.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +148,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -184,5 +179,5 @@
   "title": "HL7 v2 PSS Segment Definition",
   "name": "PSS",
   "type": "PSS",
-  "date": "2025-03-06T16:07:40Z"
+  "date": "2025-06-05T18:07:33Z"
 }

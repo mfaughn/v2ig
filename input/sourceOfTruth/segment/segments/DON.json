@@ -26,9 +26,8 @@
       {
         "id": "DON.1",
         "path": "DON.1",
-        "short": "- DON.1 - ",
+        "short": "DON-1",
         "definition": "Definition: This field contains a unique identifier, Donation Identification Number (DIN), for the specific donation and is therefore mandatory except when using an eligibility message type in which only DON-9, DON-10, and DON-11 are populated. DON-2 Donation Type (CNE) 03341",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "DON.2",
         "path": "DON.2",
-        "short": "- DON.2 - ",
+        "short": "DON-2",
         "definition": "Definition: The type of donation. This element is mandatory except when using an eligibility message type in which only DON-9, DON-10, and DON-11 are populated. The values for this field are defined in Table RT008 - Type of Donation or Collection in 6th Position of Product Code in the ISBT 128 Standard Technical Specification, which is maintained by ICCBBA. Link: _http://iccbba.org/technicalspecification.pdf._ Table 5 Data Structure 002.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -78,9 +76,8 @@
       {
         "id": "DON.3",
         "path": "DON.3",
-        "short": "- DON.3 - ",
+        "short": "DON-3",
         "definition": "Definition: The start date and time of the phlebotomy.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -104,9 +101,8 @@
       {
         "id": "DON.4",
         "path": "DON.4",
-        "short": "- DON.4 - ",
+        "short": "DON-4",
         "definition": "Definition: The end date and time of the phlebotomy.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -114,7 +110,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -130,9 +126,8 @@
       {
         "id": "DON.5",
         "path": "DON.5",
-        "short": "- DON.5 - ",
+        "short": "DON-5",
         "definition": "Definition: The duration of the phlebotomy or the length of time that elapsed between the phlebotomy start date and time and the phlebotomy end date and time.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +135,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -156,9 +151,8 @@
       {
         "id": "DON.6",
         "path": "DON.6",
-        "short": "- DON.6 - ",
+        "short": "DON-6",
         "definition": "Definition: The duration units. The duration units and duration are restricted to minutes and seconds. Concepts are pulled from the UCUM code system (_http://www.unitsofmeasure.org[www.unitsofmeasure.org])._ Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70932[HL7-Defined Table 0932 – Donation Duration Units] in Chapter 2C, Code Tables, for valid entries__.__",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -166,7 +160,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -186,9 +180,8 @@
       {
         "id": "DON.7",
         "path": "DON.7",
-        "short": "- DON.7 - ",
+        "short": "DON-7",
         "definition": "Definition: The procedure(s) intended to be performed on the donor. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70933[HL7-Defined Table 0933 – Intended Procedure Type] in Chapter 2C, Code Tables, for valid entries__.__",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -196,7 +189,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CNE"
@@ -216,9 +209,8 @@
       {
         "id": "DON.8",
         "path": "DON.8",
-        "short": "- DON.8 - ",
+        "short": "DON-8",
         "definition": "Definition: The actual procedure(s) performed on the donor. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70933[HL7-Defined Table 0933 – Intended Procedure Type] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -226,7 +218,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CNE"
@@ -246,9 +238,8 @@
       {
         "id": "DON.9",
         "path": "DON.9",
-        "short": "- DON.9 - ",
+        "short": "DON-9",
         "definition": "Definition: Is the Donor eligible for donation? Yes or No. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 -Yes/No Indicator] as defined in Chapter 2C, Code Tables.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -256,7 +247,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -276,9 +267,8 @@
       {
         "id": "DON.10",
         "path": "DON.10",
-        "short": "- DON.10 - ",
+        "short": "DON-10",
         "definition": "Definition: The procedure(s) for which the donor is eligible. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70933[HL7-Defined Table 0933 – Intended Procedure Type] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -286,7 +276,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CNE"
@@ -306,9 +296,8 @@
       {
         "id": "DON.11",
         "path": "DON.11",
-        "short": "- DON.11 - ",
+        "short": "DON-11",
         "definition": "Definition: The date and time on which the donor is eligible to donate.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -316,7 +305,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -332,9 +321,8 @@
       {
         "id": "DON.12",
         "path": "DON.12",
-        "short": "- DON.12 - ",
+        "short": "DON-12",
         "definition": "Definition: Was the donation process interrupted after it began? Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70923[HL7-Defined Table 0923 – Process Interruption] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -342,7 +330,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -362,9 +350,8 @@
       {
         "id": "DON.13",
         "path": "DON.13",
-        "short": "- DON.13 - ",
+        "short": "DON-13",
         "definition": "Definition: Reason that the donation process was interrupted. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70935[HL7-Defined Table 0935 – Process Interruption Reason] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -372,7 +359,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -392,9 +379,8 @@
       {
         "id": "DON.14",
         "path": "DON.14",
-        "short": "- DON.14 - ",
+        "short": "DON-14",
         "definition": "Definition: Indicates whether there is a problem or issue with the phlebotomy itself. This may be due to an incorrect needle procedure, needle defect, tube blockage, problem with the apheresis machine, or improper action by the phlebotomist. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70925[HL7-Defined Table 0925 – Phlebotomy Issue] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -402,7 +388,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CNE"
@@ -422,9 +408,8 @@
       {
         "id": "DON.15",
         "path": "DON.15",
-        "short": "- DON.15 - ",
+        "short": "DON-15",
         "definition": "Definition: If this donation has an intended recipient (directed, dedicated, designated), is the intended recipient a blood relative of the donor? Yes or No. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 -Yes/No Indicator] as defined in Chapter 2C, Code Tables.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -432,7 +417,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -452,9 +437,8 @@
       {
         "id": "DON.16",
         "path": "DON.16",
-        "short": "- DON.16 - ",
+        "short": "DON-16",
         "definition": "Definition: If this is donation has an intended recipient (autologous, directed, dedicated, designated), the intended recipient’s name.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -462,7 +446,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XPN"
@@ -478,9 +462,8 @@
       {
         "id": "DON.17",
         "path": "DON.17",
-        "short": "- DON.17 - ",
+        "short": "DON-17",
         "definition": "Definition: If this donation has an intended recipient (autologous, directed, dedicated, designated), the intended recipient’s date of birth.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -488,7 +471,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -504,9 +487,8 @@
       {
         "id": "DON.18",
         "path": "DON.18",
-        "short": "- DON.18 - ",
+        "short": "DON-18",
         "definition": "Definition: If this donation has an intended recipient (autologous, directed, dedicated, designated), the facility where the intended recipient is expected to receive the transfusion.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -514,7 +496,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XON"
@@ -530,9 +512,8 @@
       {
         "id": "DON.19",
         "path": "DON.19",
-        "short": "- DON.19 - ",
+        "short": "DON-19",
         "definition": "Definition: If this donation has an intended recipient (autologous, directed, dedicated, designated), the date the intended recipient is expected to receive the transfusion.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -540,7 +521,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -556,9 +537,8 @@
       {
         "id": "DON.20",
         "path": "DON.20",
-        "short": "- DON.20 - ",
+        "short": "DON-20",
         "definition": "Definition: If this is donation has an intended recipient (autologous, directed, dedicated, designated), the provider who ordered the directed donation for the intended recipient.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -566,7 +546,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XPN"
@@ -582,9 +562,8 @@
       {
         "id": "DON.21",
         "path": "DON.21",
-        "short": "- DON.21 - ",
+        "short": "DON-21",
         "definition": "Definition: Whether the phlebotomy was successful, not drawn, or unsuccessful, and if unsuccessful, the extent to which it was unsuccessful. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70926[HL7-Defined Table 0926 – Phlebotomy Status] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -592,7 +571,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -612,9 +591,8 @@
       {
         "id": "DON.22",
         "path": "DON.22",
-        "short": "- DON.22 - ",
+        "short": "DON-22",
         "definition": "Definition: The arm(s) stuck for the donation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70927[HL7-Defined Table 0927 – Arm Stick] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -622,7 +600,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -642,9 +620,8 @@
       {
         "id": "DON.23",
         "path": "DON.23",
-        "short": "- DON.23 - ",
+        "short": "DON-23",
         "definition": "Definition: The Phlebotomist who starts the blood flow into the container.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -652,7 +629,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XPN"
@@ -668,9 +645,8 @@
       {
         "id": "DON.24",
         "path": "DON.24",
-        "short": "- DON.24 - ",
+        "short": "DON-24",
         "definition": "Definition: The Phlebotomist who ends the blood flow into the container.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -678,7 +654,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XPN"
@@ -694,9 +670,8 @@
       {
         "id": "DON.25",
         "path": "DON.25",
-        "short": "- DON.25 - ",
+        "short": "DON-25",
         "definition": "Definition: The type of aphaeresis machine, if used, for the donation. It will be the specific product name of the machine (e.g. Trima, Amicus, Alyx, Symal, etc.).",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -704,7 +679,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -733,9 +708,8 @@
       {
         "id": "DON.26",
         "path": "DON.26",
-        "short": "- DON.26 - ",
+        "short": "DON-26",
         "definition": "Definition: The serial number of the aphaeresis machine, if used, for the donation.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -743,7 +717,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -772,9 +746,8 @@
       {
         "id": "DON.27",
         "path": "DON.27",
-        "short": "- DON.27 - ",
+        "short": "DON-27",
         "definition": "Definition: Did the donor have any adverse reaction during the donation procedure? Yes or No. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 -Yes/No Indicator] as defined in Chapter 2C, Code Tables. If this element is valued \"Y\"es, there should be OBX segments following the Donation segment which details the adverse reactions.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -782,7 +755,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -802,9 +775,8 @@
       {
         "id": "DON.28",
         "path": "DON.28",
-        "short": "- DON.28 - ",
+        "short": "DON-28",
         "definition": "Definition: The Staff member conducting the final review and reconciliation of all documentation created during the collection process.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -812,7 +784,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XPN"
@@ -828,9 +800,8 @@
       {
         "id": "DON.29",
         "path": "DON.29",
-        "short": "- DON.29 - ",
+        "short": "DON-29",
         "definition": "Definition: The date and time a final review of all documentation and labeling of the blood material is completed.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -838,7 +809,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -854,9 +825,8 @@
       {
         "id": "DON.30",
         "path": "DON.30",
-        "short": "- DON.30 - ",
+        "short": "DON-30",
         "definition": "Definition: The number of samples collected during the donation which will be used for subsequent testing.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -864,7 +834,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -880,9 +850,8 @@
       {
         "id": "DON.31",
         "path": "DON.31",
-        "short": "- DON.31 - ",
+        "short": "DON-31",
         "definition": "Definition: The sample identifier for the sample collected during a donation for the purpose of testing. This is a field for sample or specimen identifiers.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -890,7 +859,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "EI"
@@ -906,9 +875,8 @@
       {
         "id": "DON.32",
         "path": "DON.32",
-        "short": "- DON.32 - ",
+        "short": "DON-32",
         "definition": "Definition: The staff member who reviewed all the intake materials, assessments and determined the donor can undergo a donation procedure at this time.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -916,7 +884,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XCN"
@@ -932,9 +900,8 @@
       {
         "id": "DON.33",
         "path": "DON.33",
-        "short": "- DON.33 - ",
+        "short": "DON-33",
         "definition": "Definition: The staff member who performs review on all documentation subsequent to donation procedure.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -942,7 +909,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -958,9 +925,9 @@
       {
         "id": "DON.34",
         "path": "DON.34",
-        "short": "- DON.34 - ",
+        "short": "DON-34",
         "definition": "Definition: This field reveals the intent of the message. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[HL7 Table 0206 - Segment Action Code] for valid values.",
-        "description": null,
+        "comment": "The action code can only be used when an DON is uniquely identified sufficiently within the specific implementation using DON-1 in accordance with Chapter 2, Section 2.10.4.2.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -968,7 +935,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -984,7 +951,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/length",
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
             "extension": [
               {
                 "url": "min",
@@ -1003,5 +970,5 @@
   "title": "HL7 v2 DON Segment Definition",
   "name": "DON",
   "type": "DON",
-  "date": "2025-03-06T16:07:35Z"
+  "date": "2025-06-05T18:07:28Z"
 }

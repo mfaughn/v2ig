@@ -1,0 +1,108 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/v2/StructureDefinition/SGT",
+  "id": "SGT",
+  "meta": {
+    "profile": [
+      "http://hl7.org/v2/StructureDefinition/Segment-Profile"
+    ]
+  },
+  "version": "0.0.1",
+  "status": "active",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/v2/StructureDefinition/Segment",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SGT",
+        "path": "SGT",
+        "short": "Segment Group Trailer",
+        "definition": null,
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SGT.1",
+        "path": "SGT.1",
+        "short": "SGT-1",
+        "definition": "For the first segment group transmitted, the sequence number SHALL be 1; for the second , it SHALL be 2; and so on.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3394
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "R"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "extension": [
+              {
+                "url": "min",
+                "valueInteger": 4
+              },
+              {
+                "url": "max",
+                "valueInteger": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SGT.2",
+        "path": "SGT.2",
+        "short": "SGT-2",
+        "definition": "This field contains the name of the segment group.",
+        "code": [
+          {
+            "system": "http://hl7.org/v2/CodeSystem/DataElements",
+            "code": 3395
+          }
+        ],
+        "min": 0,
+        "max": 1,
+        "type": [
+          {
+            "code": "ST"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/optionality",
+            "valueCode": "O"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/conformance-length",
+            "extension": [
+              {
+                "url": "length",
+                "valueInteger": "60"
+              },
+              {
+                "url": "noTruncate",
+                "valueInteger": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HL7 v2 SGT Segment Definition",
+  "name": "SGT",
+  "type": "SGT",
+  "date": "2025-06-05T19:10:52Z"
+}

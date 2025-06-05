@@ -26,9 +26,8 @@
       {
         "id": "EQP.1",
         "path": "EQP.1",
-        "short": "- EQP.1 - ",
+        "short": "EQP-1",
         "definition": "Definition: This field identifies the type of event of the message. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70450[HL7 Table 0450 – Event Type] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,8 @@
       {
         "id": "EQP.2",
         "path": "EQP.2",
-        "short": "- EQP.2 - ",
+        "short": "EQP-2",
         "definition": "Definition: This field is the physical file name that is being used to store information about the transmitted log and/or service event.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +64,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -95,9 +93,8 @@
       {
         "id": "EQP.3",
         "path": "EQP.3",
-        "short": "- EQP.3 - ",
+        "short": "EQP-3",
         "definition": "Definition: This field is the date/time that the event started.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +102,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -121,9 +118,8 @@
       {
         "id": "EQP.4",
         "path": "EQP.4",
-        "short": "- EQP.4 - ",
+        "short": "EQP-4",
         "definition": "Definition: This field is the date/time that the event was completed.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -131,7 +127,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -147,9 +143,8 @@
       {
         "id": "EQP.5",
         "path": "EQP.5",
-        "short": "- EQP.5 - ",
+        "short": "EQP-5",
         "definition": "Definition: This field is the data that the log and/or service event was about and is to be logged.",
-        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -157,7 +152,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "FT"
@@ -175,5 +170,5 @@
   "title": "HL7 v2 EQP Segment Definition",
   "name": "EQP",
   "type": "EQP",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T18:07:33Z"
 }
