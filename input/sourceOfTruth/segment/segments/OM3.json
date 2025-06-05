@@ -26,9 +26,8 @@
       {
         "id": "OM3.1",
         "path": "OM3.1",
-        "short": "- OM3.1 - ",
-        "definition": "Definition: This field contains the same value as the sequence number of the associated OM1 segment.",
-        "description": null,
+        "short": "OM3-1",
+        "definition": "This field contains the same value as the sequence number of the associated OM1 segment.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -65,9 +64,8 @@
       {
         "id": "OM3.2",
         "path": "OM3.2",
-        "short": "- OM3.2 - ",
-        "definition": "Definition: This field contains the observations whose categorical responses are taken from a specified table of codes (e.g., CWE data types). Record the preferred coding system for these responses as observations (e.g., ICD10, HGVS, ISCN, SNOMED CT). Refer to Table 0650 - Preferred Coding System in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM3-2",
+        "definition": "This field contains the observations whose categorical responses are taken from a specified table of codes (e.g., CWE data types). Record the preferred coding system for these responses as observations (e.g., ICD10, HGVS, ISCN, SNOMED CT). Refer to Table 0650 - Preferred Coding System in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -95,9 +93,8 @@
       {
         "id": "OM3.3",
         "path": "OM3.3",
-        "short": "- OM3.3 - ",
-        "definition": "Definition: This field contains a list of valid coded answers. In the case that the list of coded answers is easily enumerated, list the valid coded answers for this observation here using the preferred coding system given in _OM3-2 - Preferred Coding System_. If, for example, the given observation was VDRL, the valid answers might be \"non-reactive\", \"86^ intermediate\", and \"87^ reactive\".Refer to Table 0652 - Valid Coded \"Answers\" in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM3-3",
+        "definition": "This field contains a list of valid coded answers. In the case that the list of coded answers is easily enumerated, list the valid coded answers for this observation here using the preferred coding system given in _OM3-2 - Preferred Coding System_. If, for example, the given observation was VDRL, the valid answers might be \"non-reactive\", \"86^ intermediate\", and \"87^ reactive\".Refer to Table 0652 - Valid Coded \"Answers\" in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +102,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -125,9 +122,9 @@
       {
         "id": "OM3.4",
         "path": "OM3.4",
-        "short": "- OM3.4 - ",
-        "definition": "Definition: Certain observations/tests with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_) have text (alpha) results (e.g., reactive, nonreactive). Alpha normals for those tests should be entered in this field (e.g., \"nonreactive\"). Refer to Table 0654 - Normal Text/Codes for Categorical Observations in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM3-4",
+        "definition": "Certain observations/tests with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_) have text (alpha) results (e.g., reactive, nonreactive). Alpha normals for those tests should be entered in this field (e.g., \"nonreactive\"). Refer to Table 0654 - Normal Text/Codes for Categorical Observations in Chapter 2C for valid values.",
+        "comment": "The format of this field is:\n\nThe first component is a code taken from a standard code source list. The second component is the text associated with the code. The third component is the identification of the code table source. When only a text description of a possible answer is available, it is recorded as ^<text>.\n\nCare should be taken to transmit only those results that are considered normal for that test. A drug screen may have possible results of \"negative\" and \"positive.\" However, only a result of \"negative\" is considered to be normal. When an observation has more than one \"normal\" result, multiple values in this field should be separated with a repeat delimiter.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -135,7 +132,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -155,9 +152,8 @@
       {
         "id": "OM3.5",
         "path": "OM3.5",
-        "short": "- OM3.5 - ",
-        "definition": "Definition: This field contains the list of the text answers that are abnormal for the test. Refer to Table 0655 - Abnormal Text/Codes for Categorical Observations in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM3-5",
+        "definition": "This field contains the list of the text answers that are abnormal for the test. Refer to Table 0655 - Abnormal Text/Codes for Categorical Observations in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -165,7 +161,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -185,9 +181,8 @@
       {
         "id": "OM3.6",
         "path": "OM3.6",
-        "short": "- OM3.6 - ",
-        "definition": "Definition: This field contains the list of coded results that are critically abnormal for this observation. Refer to Table 0656 - Critical Text/Codes for Categorical Observations in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM3-6",
+        "definition": "This field contains the list of coded results that are critically abnormal for this observation. Refer to Table 0656 - Critical Text/Codes for Categorical Observations in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -195,7 +190,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -215,9 +210,8 @@
       {
         "id": "OM3.7",
         "path": "OM3.7",
-        "short": "- OM3.7 - ",
-        "definition": "Definition: This field contains the allowed data type for a single categorical observation (code A or C in _OM1-18 - Nature of Observation_). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70125[HL7 Table 0125 – Value Type] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "OM3-7",
+        "definition": "This field contains the allowed data type for a single categorical observation (code A or C in _OM1-18 - Nature of Observation_). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70125[HL7 Table 0125 – Value Type] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -225,7 +219,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -260,5 +254,5 @@
   "title": "HL7 v2 OM3 Segment Definition",
   "name": "OM3",
   "type": "OM3",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:32Z"
 }

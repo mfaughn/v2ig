@@ -26,9 +26,8 @@
       {
         "id": "UAC.1",
         "path": "UAC.1",
-        "short": "- UAC.1 - ",
-        "definition": "Definition: This an identifier code for the type of user authentication credential. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70615[_HL7 Table 0615 – User Authentication Credential Type Code_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "UAC-1",
+        "definition": "This an identifier code for the type of user authentication credential. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70615[_HL7 Table 0615 – User Authentication Credential Type Code_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,8 @@
       {
         "id": "UAC.2",
         "path": "UAC.2",
-        "short": "- UAC.2 - ",
-        "definition": "Definition: This is user credential data as supplied by the sender's operating platform. The content and structure of this is defined by other standards and contain no HL7-relevant data.",
-        "description": null,
+        "short": "UAC-2",
+        "definition": "This is user credential data as supplied by the sender's operating platform. The content and structure of this is defined by other standards and contain no HL7-relevant data.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +64,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ED"
@@ -84,5 +82,5 @@
   "title": "HL7 v2 UAC Segment Definition",
   "name": "UAC",
   "type": "UAC",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T23:00:28Z"
 }

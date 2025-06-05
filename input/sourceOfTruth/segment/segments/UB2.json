@@ -26,9 +26,8 @@
       {
         "id": "UB2.1",
         "path": "UB2.1",
-        "short": "- UB2.1 - ",
-        "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment the sequence number shall be 1, for the second occurrence it shall be 2, etc.",
-        "description": null,
+        "short": "UB2-1",
+        "definition": "This field contains the number that identifies this transaction. For the first occurrence of the segment the sequence number shall be 1, for the second occurrence it shall be 2, etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,8 @@
       {
         "id": "UB2.2",
         "path": "UB2.2",
-        "short": "- UB2.2 - ",
-        "definition": "Definition: This field contains the number of inpatient days exceeding defined benefit coverage. In the US, this corresponds to Uniform Billing form locator 9. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-2",
+        "definition": "This field contains the number of inpatient days exceeding defined benefit coverage. In the US, this corresponds to Uniform Billing form locator 9. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -104,9 +102,8 @@
       {
         "id": "UB2.3",
         "path": "UB2.3",
-        "short": "- UB2.3 - ",
-        "definition": "Definition: This field contains a code reporting conditions that may affect payer processing; for example, the condition is related to employment (Patient covered by insurance not reflected here, treatment of non-terminal condition for hospice patient). The code in this field can repeat up to seven times to correspond to Uniform Billing form locators 24-30. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70043[_User-defined Table 0043 - Condition Code_] in Chapter 2C, Code Tables, for suggested values. Refer to a UB specification for additional information. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-3",
+        "definition": "This field contains a code reporting conditions that may affect payer processing; for example, the condition is related to employment (Patient covered by insurance not reflected here, treatment of non-terminal condition for hospice patient). The code in this field can repeat up to seven times to correspond to Uniform Billing form locators 24-30. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70043[_User-defined Table 0043 - Condition Code_] in Chapter 2C, Code Tables, for suggested values. Refer to a UB specification for additional information. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -114,7 +111,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 7,
         "type": [
           {
             "code": "CWE"
@@ -134,9 +131,8 @@
       {
         "id": "UB2.4",
         "path": "UB2.4",
-        "short": "- UB2.4 - ",
-        "definition": "Definition: This field contains Uniform Billing field 7. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-4",
+        "definition": "This field contains Uniform Billing field 7. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +140,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -173,9 +169,8 @@
       {
         "id": "UB2.5",
         "path": "UB2.5",
-        "short": "- UB2.5 - ",
-        "definition": "Definition: This field contains Uniform Billing field 8. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-5",
+        "definition": "This field contains Uniform Billing field 8. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -183,7 +178,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -212,9 +207,8 @@
       {
         "id": "UB2.6",
         "path": "UB2.6",
-        "short": "- UB2.6 - ",
-        "definition": "Definition: This field contains a monetary amount and an associated billing code. The pair in this field can repeat up to twelve times to represent/contain UB92 form locators 39a, 39b, 39c, 39d, 40a, 40b, 40c, 40d, 41a, 41b, 41c, and 41d. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-6",
+        "definition": "This field contains a monetary amount and an associated billing code. The pair in this field can repeat up to twelve times to represent/contain UB92 form locators 39a, 39b, 39c, 39d, 40a, 40b, 40c, 40d, 41a, 41b, 41c, and 41d. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -222,7 +216,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 12,
         "type": [
           {
             "code": "UVC"
@@ -238,9 +232,8 @@
       {
         "id": "UB2.7",
         "path": "UB2.7",
-        "short": "- UB2.7 - ",
-        "definition": "Definition: The set of values in this field can repeat up to eight times. Uniform Billing fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-7",
+        "definition": "The set of values in this field can repeat up to eight times. Uniform Billing fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -248,7 +241,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 8,
         "type": [
           {
             "code": "OCD"
@@ -264,7 +257,7 @@
       {
         "id": "UB2.8",
         "path": "UB2.8",
-        "short": "- UB2.8 - ",
+        "short": "UB2-8",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -272,7 +265,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "OSP"
@@ -288,9 +281,8 @@
       {
         "id": "UB2.9",
         "path": "UB2.9",
-        "short": "- UB2.9 - ",
-        "definition": "Definition: This field contains an occurrence span code and an associated date. This field can repeat up to two times to represent/contain Uniform Billing form locators 36a and 36b. This field is defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-9",
+        "definition": "This field contains an occurrence span code and an associated date. This field can repeat up to two times to represent/contain Uniform Billing form locators 36a and 36b. This field is defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -298,7 +290,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "ST"
@@ -327,9 +319,8 @@
       {
         "id": "UB2.10",
         "path": "UB2.10",
-        "short": "- UB2.10 - ",
-        "definition": "Definition: The value in this field may repeat up to two times.",
-        "description": null,
+        "short": "UB2-10",
+        "definition": "The value in this field may repeat up to two times.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -337,7 +328,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "ST"
@@ -366,9 +357,8 @@
       {
         "id": "UB2.11",
         "path": "UB2.11",
-        "short": "- UB2.11 - ",
-        "definition": "Definition: Defined by CMS or other regulatory agencies.",
-        "description": null,
+        "short": "UB2-11",
+        "definition": "Defined by CMS or other regulatory agencies.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -376,7 +366,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -405,9 +395,8 @@
       {
         "id": "UB2.12",
         "path": "UB2.12",
-        "short": "- UB2.12 - ",
-        "definition": "Definition: This field contains the number assigned by payor that is used for rebilling/adjustment purposes. It may repeat up to three times. Refer Uniform Billing field 37.",
-        "description": null,
+        "short": "UB2-12",
+        "definition": "This field contains the number assigned by payor that is used for rebilling/adjustment purposes. It may repeat up to three times. Refer Uniform Billing field 37.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -415,7 +404,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 3,
         "type": [
           {
             "code": "ST"
@@ -444,9 +433,8 @@
       {
         "id": "UB2.13",
         "path": "UB2.13",
-        "short": "- UB2.13 - ",
-        "definition": "Definition: This field is defined by CMS or other regulatory agencies. This field may repeat up to twenty-three times.",
-        "description": null,
+        "short": "UB2-13",
+        "definition": "This field is defined by CMS or other regulatory agencies. This field may repeat up to twenty-three times.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -454,7 +442,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 23,
         "type": [
           {
             "code": "ST"
@@ -483,9 +471,8 @@
       {
         "id": "UB2.14",
         "path": "UB2.14",
-        "short": "- UB2.14 - ",
-        "definition": "Definition: This field may repeat up to five times.",
-        "description": null,
+        "short": "UB2-14",
+        "definition": "This field may repeat up to five times.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -493,7 +480,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 5,
         "type": [
           {
             "code": "ST"
@@ -522,9 +509,8 @@
       {
         "id": "UB2.15",
         "path": "UB2.15",
-        "short": "- UB2.15 - ",
-        "definition": "Definition: Defined by Uniform Billing CMS specification.",
-        "description": null,
+        "short": "UB2-15",
+        "definition": "Defined by Uniform Billing CMS specification.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -532,7 +518,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -561,9 +547,8 @@
       {
         "id": "UB2.16",
         "path": "UB2.16",
-        "short": "- UB2.16 - ",
-        "definition": "Definition: This field may repeat up to two times.",
-        "description": null,
+        "short": "UB2-16",
+        "definition": "This field may repeat up to two times.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -571,7 +556,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 2,
         "type": [
           {
             "code": "ST"
@@ -600,9 +585,8 @@
       {
         "id": "UB2.17",
         "path": "UB2.17",
-        "short": "- UB2.17 - ",
-        "definition": "Definition: This field contains the total number of special therapy visits.",
-        "description": null,
+        "short": "UB2-17",
+        "definition": "This field contains the total number of special therapy visits.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -610,7 +594,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -641,5 +625,5 @@
   "title": "HL7 v2 UB2 Segment Definition",
   "name": "UB2",
   "type": "UB2",
-  "date": "2025-03-06T16:07:37Z"
+  "date": "2025-06-05T23:00:31Z"
 }

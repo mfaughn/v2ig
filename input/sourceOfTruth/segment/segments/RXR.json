@@ -26,9 +26,9 @@
       {
         "id": "RXR.1",
         "path": "RXR.1",
-        "short": "- RXR.1 - ",
-        "definition": "Definition: This field is the route of administration.",
-        "description": null,
+        "short": "RXR-1",
+        "definition": "This field is the route of administration.",
+        "comment": "Some current \"route codes,\" such as some of the NDC-derived codes include the site already. In such cases, the entire code can be included in this field as a \"locally-defined code\" for the CWE data type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70162[_User-Defined Table 0162 - Route of Administration_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +56,9 @@
       {
         "id": "RXR.2",
         "path": "RXR.2",
-        "short": "- RXR.2 - ",
-        "definition": "Definition: This field contains the site of the administration route. When using a post-coordinated code table in this field, RXR-6 Administration Site may be used to modify the meaning of this field.",
-        "description": null,
+        "short": "RXR-2",
+        "definition": "This field contains the site of the administration route. When using a post-coordinated code table in this field, RXR-6 Administration Site may be used to modify the meaning of this field.",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70550[_HL7 Table 0550 – Body_] _Parts_ in Chapter 2C, Code Tables, for valid values. Other appropriate external code sets (e.g., SNOMED) may also be employed.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +66,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -86,9 +86,8 @@
       {
         "id": "RXR.3",
         "path": "RXR.3",
-        "short": "- RXR.3 - ",
-        "definition": "Definition: This field contains the mechanical device used to aid in the administration of the drug or other treatment. Common examples are IV-sets of different types. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70164[_User-defined Table 0164 - Administration device_] in Chapter 2C, Code Tables, for valid entries.",
-        "description": null,
+        "short": "RXR-3",
+        "definition": "This field contains the mechanical device used to aid in the administration of the drug or other treatment. Common examples are IV-sets of different types. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70164[_User-defined Table 0164 - Administration device_] in Chapter 2C, Code Tables, for valid entries.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -96,7 +95,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -116,9 +115,8 @@
       {
         "id": "RXR.4",
         "path": "RXR.4",
-        "short": "- RXR.4 - ",
-        "definition": "Definition: This field identifies the specific method requested for the administration of the drug or treatment to the patient. Refer To _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70165[User-defined Table 0165 – Administration M]ethod_ in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "RXR-4",
+        "definition": "This field identifies the specific method requested for the administration of the drug or treatment to the patient. Refer To _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70165[User-defined Table 0165 – Administration M]ethod_ in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -126,7 +124,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -146,9 +144,8 @@
       {
         "id": "RXR.5",
         "path": "RXR.5",
-        "short": "- RXR.5 - ",
-        "definition": "Definition: This field provides instruction on administration routing, especially in cases where more than one route of administration is possible. A typical case would be designating which IV line should be used when more than one IV line is a possible route for injection. Refer to Table 0766 - Routing Instruction in Chapter 2C for valid values.",
-        "description": null,
+        "short": "RXR-5",
+        "definition": "This field provides instruction on administration routing, especially in cases where more than one route of administration is possible. A typical case would be designating which IV line should be used when more than one IV line is a possible route for injection. Refer to Table 0766 - Routing Instruction in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -156,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -176,9 +173,9 @@
       {
         "id": "RXR.6",
         "path": "RXR.6",
-        "short": "- RXR.6 - ",
-        "definition": "Definition: This field contains a modifier which modifies the meaning of _RXR-2 Administration Site_.",
-        "description": null,
+        "short": "RXR-6",
+        "definition": "This field contains a modifier which modifies the meaning of _RXR-2 Administration Site_.",
+        "comment": "The code table used in this field is dependent upon the code table used in _RXR-2 Administration site_. If RXR-2 employs file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70550[_HL7 Table 0550 – Body_] _Parts_, then this field may only be populated with values from file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70495[_HL7 Table 0495 – Body Parts Modifier_]. In the case of other code sets (e.g., SNOMED) in RXR-2, RXR-6 may only be populated if modifiers are defined within, or related to, that code set.\n\nCondition Rule: This field may only be populated if _RXR-2 Administration Site_ is populated. This field is not required if RXR-2 is populated.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -186,7 +183,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -208,5 +205,5 @@
   "title": "HL7 v2 RXR Segment Definition",
   "name": "RXR",
   "type": "RXR",
-  "date": "2025-03-06T16:07:36Z"
+  "date": "2025-06-05T23:00:30Z"
 }

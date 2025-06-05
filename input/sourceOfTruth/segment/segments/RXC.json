@@ -26,9 +26,9 @@
       {
         "id": "RXC.1",
         "path": "RXC.1",
-        "short": "- RXC.1 - ",
-        "definition": "Definition: Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70166[_HL7 Table 0166 – RX Component Type_] in Chapter 2C, Code Tables for valide values.",
-        "description": null,
+        "short": "RXC-1",
+        "definition": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70166[_HL7 Table 0166 – RX Component Type_] in Chapter 2C, Code Tables for valide values.",
+        "comment": "For the non-IV case, the \"B\" value may still apply. For example, if a custom dermatologic salve is being prepared, the \"B\" item might be a standard base ointment into which other components are mixed.\n\nThe amount of the \"base\" specified in the \"B\" segment(s) is defined to be the quantity into which amounts specified in the \"A\" components are mixed. Thus the RXC segments as a group define the \"recipe\" for a particular amount (defined by the base segment(s)). The give amount, as defined in the RXO, does not need to correspond to this base amount. For example, the RXC segments may specify a recipe for a liter of a standard type of saline with 1 gram of a particular antimicrobial, while the give amount (from the RXO) may specify the administration of 2 liters of this IV-solution every 24 hours.\n\nThe amount specified in each \"A\" segment is defined to be the quantity to be added to the amount of the base as specified in its RXC segment.\n\nIf any \"base\" components are present then these should be transmitted first. The first \"base\" component in the transmission should be considered the \"primary base\" if such a distinction is necessary. Similarly, the first \"additive\" in the transmission should be considered the \"primary additive\" if such a distinction is necessary.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -69,9 +69,8 @@
       {
         "id": "RXC.2",
         "path": "RXC.2",
-        "short": "- RXC.2 - ",
-        "definition": "Definition: This field is equivalent to _OBR-4-universal service ID_. It defines the base or component in the same manner as the give and dispense codes. As with the give and dispense codes, it may contain text only, code only, text + code, or text + code + units (implied or explicit). As with the give and dispense codes, if _RXC-4-component units_ is present, this overrides the units implied by the code. If only text is present, the pharmacy or treatment application must include a manual review or reentering of the component drug or treatment. Refer to Table 0697 - Component Code in Chapter 2C for valid values.",
-        "description": null,
+        "short": "RXC-2",
+        "definition": "This field is equivalent to _OBR-4-universal service ID_. It defines the base or component in the same manner as the give and dispense codes. As with the give and dispense codes, it may contain text only, code only, text + code, or text + code + units (implied or explicit). As with the give and dispense codes, if _RXC-4-component units_ is present, this overrides the units implied by the code. If only text is present, the pharmacy or treatment application must include a manual review or reentering of the component drug or treatment. Refer to Table 0697 - Component Code in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -79,7 +78,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -99,9 +98,8 @@
       {
         "id": "RXC.3",
         "path": "RXC.3",
-        "short": "- RXC.3 - ",
-        "definition": "Definition: This field identifies the amount of this component to be added to the specified amount of the base.",
-        "description": null,
+        "short": "RXC-3",
+        "definition": "This field identifies the amount of this component to be added to the specified amount of the base.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -109,7 +107,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -125,9 +123,8 @@
       {
         "id": "RXC.4",
         "path": "RXC.4",
-        "short": "- RXC.4 - ",
-        "definition": "Definition: This field identifies the units for the component amount. If present, this overrides the units implied by _RXC-2-component code_. This must be in simple units that reflect the actual quantity of the component being added. It does not include compound units. Refer to Table 0698 - Component Units in Chapter 2C for valid values.",
-        "description": null,
+        "short": "RXC-4",
+        "definition": "This field identifies the units for the component amount. If present, this overrides the units implied by _RXC-2-component code_. This must be in simple units that reflect the actual quantity of the component being added. It does not include compound units. Refer to Table 0698 - Component Units in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -135,7 +132,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -155,9 +152,8 @@
       {
         "id": "RXC.5",
         "path": "RXC.5",
-        "short": "- RXC.5 - ",
-        "definition": "Definition: Use when _RXC-2-component code_ does not specify the strength. This is the numeric part of the strength, used in combination with _RXC-6-component strength units._",
-        "description": null,
+        "short": "RXC-5",
+        "definition": "Use when _RXC-2-component code_ does not specify the strength. This is the numeric part of the strength, used in combination with _RXC-6-component strength units._",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -165,7 +161,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -181,9 +177,8 @@
       {
         "id": "RXC.6",
         "path": "RXC.6",
-        "short": "- RXC.6 - ",
-        "definition": "Definition: Use when _RXC-2-component code_ does not specify the strength. This is the unit of the strength, used in combination with _RXC-5-component strength_. Refer to Table 0699 - Component Strength Units in Chapter 2C for valid values.*Note:* These units can be a \"compound quantity;\" i.e., the units may express a quantity per unit of time. For example, micrograms per hour (micg/h) is an acceptable value. These compound units are contained in the ISO+ table. See Chapter 7 for full definition of ISO+ units.",
-        "description": null,
+        "short": "RXC-6",
+        "definition": "Use when _RXC-2-component code_ does not specify the strength. This is the unit of the strength, used in combination with _RXC-5-component strength_. Refer to Table 0699 - Component Strength Units in Chapter 2C for valid values.*Note:* These units can be a \"compound quantity;\" i.e., the units may express a quantity per unit of time. For example, micrograms per hour (micg/h) is an acceptable value. These compound units are contained in the ISO+ table. See Chapter 7 for full definition of ISO+ units.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -191,7 +186,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -211,9 +206,8 @@
       {
         "id": "RXC.7",
         "path": "RXC.7",
-        "short": "- RXC.7 - ",
-        "definition": "Definition: This field accommodates the identification of any codes that might be associated with the pharmaceutical or other treatment substance. Common codes include: the Generic Product Identifier (GPI), Generic Code Number_Sequence Number (GCN_SEQNO), National Drug Code (NDC)_._ _Refer to Table 0700 - Supplementary Code in Chapter 2C for valid values._",
-        "description": null,
+        "short": "RXC-7",
+        "definition": "This field accommodates the identification of any codes that might be associated with the pharmaceutical or other treatment substance. Common codes include: the Generic Product Identifier (GPI), Generic Code Number_Sequence Number (GCN_SEQNO), National Drug Code (NDC)_._ _Refer to Table 0700 - Supplementary Code in Chapter 2C for valid values._",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -221,7 +215,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -241,9 +235,9 @@
       {
         "id": "RXC.8",
         "path": "RXC.8",
-        "short": "- RXC.8 - ",
-        "definition": "Definition: This numeric field defines the volume measurement in which the drug strength concentration is contained. For example, Acetaminophen 120 MG/5ML Elixir means that 120 MG of the drug is in a solution with a volume of 5, which would be encoded in RXC-5, RXC-6, RXC-8 and RXC-9 as",
-        "description": null,
+        "short": "RXC-8",
+        "definition": "This numeric field defines the volume measurement in which the drug strength concentration is contained. For example, Acetaminophen 120 MG/5ML Elixir means that 120 MG of the drug is in a solution with a volume of 5, which would be encoded in RXC-5, RXC-6, RXC-8 and RXC-9 as",
+        "comment": "RXC|||||120|mg^^ISO||5|ml^^ISO ...<cr>",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -251,7 +245,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -280,9 +274,8 @@
       {
         "id": "RXC.9",
         "path": "RXC.9",
-        "short": "- RXC.9 - ",
-        "definition": "Definition: This field indicates the volumetric unit associated with _RXC-8 Component Drug Strength Volume_. See example in RXC-8. Refer to Table 0701 - Component Drug Strength Volume Units in Chapter 2C for valid values.",
-        "description": null,
+        "short": "RXC-9",
+        "definition": "This field indicates the volumetric unit associated with _RXC-8 Component Drug Strength Volume_. See example in RXC-8. Refer to Table 0701 - Component Drug Strength Volume Units in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -290,7 +283,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -310,9 +303,8 @@
       {
         "id": "RXC.10",
         "path": "RXC.10",
-        "short": "- RXC.10 - ",
-        "definition": "Definition: This field contains the amount to be dispensed as encoded by the pharmacy or treatment supplier.",
-        "description": null,
+        "short": "RXC-10",
+        "definition": "This field contains the amount to be dispensed as encoded by the pharmacy or treatment supplier.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -320,7 +312,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -336,9 +328,8 @@
       {
         "id": "RXC.11",
         "path": "RXC.11",
-        "short": "- RXC.11 - ",
-        "definition": "Definition: This field contains the units for the dispense amount as encoded by the pharmacy or treatment supplier. This field is required if the units are not implied by the actual dispense code. This must be in simple units that reflect the actual quantity of the substance dispensed. It does not include compound units. Refer to Table 0703 - Dispense Units in Chapter 2C for valid values.",
-        "description": null,
+        "short": "RXC-11",
+        "definition": "This field contains the units for the dispense amount as encoded by the pharmacy or treatment supplier. This field is required if the units are not implied by the actual dispense code. This must be in simple units that reflect the actual quantity of the substance dispensed. It does not include compound units. Refer to Table 0703 - Dispense Units in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -346,7 +337,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -368,5 +359,5 @@
   "title": "HL7 v2 RXC Segment Definition",
   "name": "RXC",
   "type": "RXC",
-  "date": "2025-03-06T16:07:36Z"
+  "date": "2025-06-05T23:00:30Z"
 }

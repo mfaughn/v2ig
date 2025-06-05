@@ -26,9 +26,8 @@
       {
         "id": "SGH.1",
         "path": "SGH.1",
-        "short": "- SGH.1 - ",
-        "definition": "Definition: For the first segment group transmitted, the sequence number SHALL be 1; for the second , it SHALL be 2; and so on.",
-        "description": null,
+        "short": "SGH-1",
+        "definition": "For the first segment group transmitted, the sequence number SHALL be 1; for the second , it SHALL be 2; and so on.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,8 @@
       {
         "id": "SGH.2",
         "path": "SGH.2",
-        "short": "- SGH.2 - ",
-        "definition": "Definition: This field contains the name of the segment group.",
-        "description": null,
+        "short": "SGH-2",
+        "definition": "This field contains the name of the segment group.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -106,5 +104,5 @@
   "title": "HL7 v2 SGH Segment Definition",
   "name": "SGH",
   "type": "SGH",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T23:00:28Z"
 }

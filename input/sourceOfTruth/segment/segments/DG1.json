@@ -26,9 +26,8 @@
       {
         "id": "DG1.1",
         "path": "DG1.1",
-        "short": "- DG1.1 - ",
-        "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment the sequence number shall be 1, for the second occurrence it shall be 2, etc.",
-        "description": null,
+        "short": "DG1-1",
+        "definition": "This field contains the number that identifies this transaction. For the first occurrence of the segment the sequence number shall be 1, for the second occurrence it shall be 2, etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,7 +64,8 @@
       {
         "id": "DG1.2",
         "path": "DG1.2",
-        "short": "- DG1.2 - ",
+        "short": "DG1-2",
+        "comment": "*Attention: _DG1-2 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6 ._*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -84,9 +84,9 @@
       {
         "id": "DG1.3",
         "path": "DG1.3",
-        "short": "- DG1.3 - ",
-        "definition": "Definition: _link:++#dg1-3-diagnosis-code---dg1-cwe-00377++[DG1-3 - Diagnosis Code - DG1]_ contains the diagnosis code assigned to this diagnosis. Refer to E:\\\\V2\\\\V29_CH02C_Tables.docx#HL70051[_User-defined Table 0051 - Diagnosis Code_] in Chapter 2C, Code Tables, for suggested values. This field is a CWE data type for compatibility with clinical and ancillary systems. Either _DG1-3.1-Identifier_ or _DG1-3.2-Text_ is required. When a code is used in _DG1-3.1-Identifier_, a coding system is required in _DG1-3.3-Name of Coding System_.",
-        "description": null,
+        "short": "DG1-3",
+        "definition": "_link:++#dg1-3-diagnosis-code---dg1-cwe-00377++[DG1-3 - Diagnosis Code - DG1]_ contains the diagnosis code assigned to this diagnosis. Refer to E:\\\\V2\\\\V29_CH02C_Tables.docx#HL70051[_User-defined Table 0051 - Diagnosis Code_] in Chapter 2C, Code Tables, for suggested values. This field is a CWE data type for compatibility with clinical and ancillary systems. Either _DG1-3.1-Identifier_ or _DG1-3.2-Text_ is required. When a code is used in _DG1-3.1-Identifier_, a coding system is required in _DG1-3.3-Name of Coding System_.",
+        "comment": "Names of various diagnosis coding systems are listed in Chapter 2, Section 2.16.4, \"Coding system table.\"",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -94,7 +94,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -114,7 +114,8 @@
       {
         "id": "DG1.4",
         "path": "DG1.4",
-        "short": "- DG1.4 - ",
+        "short": "DG1-4",
+        "comment": "*Attention: _DG1-4 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -122,7 +123,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -133,9 +134,8 @@
       {
         "id": "DG1.5",
         "path": "DG1.5",
-        "short": "- DG1.5 - ",
-        "definition": "Definition: This field contains the date/time that the diagnosis was determined.",
-        "description": null,
+        "short": "DG1-5",
+        "definition": "This field contains the date/time that the diagnosis was determined.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -143,7 +143,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -159,9 +159,8 @@
       {
         "id": "DG1.6",
         "path": "DG1.6",
-        "short": "- DG1.6 - ",
-        "definition": "Definition: This field contains a code that identifies the type of diagnosis being sent. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70052[_User-defined Table 0052 - Diagnosis Type_] in Chapter 2C, Code Tables, for suggested values. This field should no longer be used to indicate \"DRG\" because the DRG fields have moved to the new DRG segment.",
-        "description": null,
+        "short": "DG1-6",
+        "definition": "This field contains a code that identifies the type of diagnosis being sent. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70052[_User-defined Table 0052 - Diagnosis Type_] in Chapter 2C, Code Tables, for suggested values. This field should no longer be used to indicate \"DRG\" because the DRG fields have moved to the new DRG segment.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -169,7 +168,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -189,7 +188,8 @@
       {
         "id": "DG1.7",
         "path": "DG1.7",
-        "short": "- DG1.7 - ",
+        "short": "DG1-7",
+        "comment": "*Attention: _DG1-7 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6 ._*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -197,7 +197,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "binding": {
           "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0118"
@@ -212,7 +212,8 @@
       {
         "id": "DG1.8",
         "path": "DG1.8",
-        "short": "- DG1.8 - ",
+        "short": "DG1-8",
+        "comment": "*Attention: _DG1-8 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6. _*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -220,7 +221,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -231,7 +232,8 @@
       {
         "id": "DG1.9",
         "path": "DG1.9",
-        "short": "- DG1.9 - ",
+        "short": "DG1-9",
+        "comment": "*Attention: _DG1-9 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -239,7 +241,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -250,7 +252,8 @@
       {
         "id": "DG1.10",
         "path": "DG1.10",
-        "short": "- DG1.10 - ",
+        "short": "DG1-10",
+        "comment": "*Attention: _DG1-10 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -258,7 +261,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -269,7 +272,8 @@
       {
         "id": "DG1.11",
         "path": "DG1.11",
-        "short": "- DG1.11 - ",
+        "short": "DG1-11",
+        "comment": "*Attention: _DG1-11 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -277,7 +281,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -288,7 +292,8 @@
       {
         "id": "DG1.12",
         "path": "DG1.12",
-        "short": "- DG1.12 - ",
+        "short": "DG1-12",
+        "comment": "*Attention: _DG1-12 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -296,7 +301,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -307,7 +312,8 @@
       {
         "id": "DG1.13",
         "path": "DG1.13",
-        "short": "- DG1.13 - ",
+        "short": "DG1-13",
+        "comment": "*Attention: _DG1-13 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -315,7 +321,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -326,7 +332,8 @@
       {
         "id": "DG1.14",
         "path": "DG1.14",
-        "short": "- DG1.14 - ",
+        "short": "DG1-14",
+        "comment": "*Attention: _DG1-14 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6_*",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -334,7 +341,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -345,9 +352,9 @@
       {
         "id": "DG1.15",
         "path": "DG1.15",
-        "short": "- DG1.15 - ",
-        "definition": "Definition: This field contains the number that identifies the significance or priority of the diagnosis code. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70359[_HL7 Table 03__59 - Diagnosis Priorit__y_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "DG1-15",
+        "definition": "This field contains the number that identifies the significance or priority of the diagnosis code. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70359[_HL7 Table 03__59 - Diagnosis Priorit__y_] in Chapter 2C, Code Tables, for suggested values.",
+        "comment": "*Note*: As of v 2.7, the data type has been changed to numeric. The meaning of the values remains the same as those in file:///E:\\V2\\V29_CH02C_Tables.docx#HL70418[_HL7 Table 0418 – Procedure Priority_], The value 0 conveys that this procedure is not included in the ranking. The value 1 means that this is the primary procedure. Values 2-99 convey ranked secondary procedures.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -355,7 +362,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -388,9 +395,8 @@
       {
         "id": "DG1.16",
         "path": "DG1.16",
-        "short": "- DG1.16 - ",
-        "definition": "Definition: This field contains the individual responsible for generating the diagnosis information. As of v 2.7, if _XCN.1 - ID Number_ is populated, then the _XCN.13 - Identifier Type Code_ and the _XCN.9 - Assigning Authority_ or _XCN.22 - Assigning Jurisdiction_ or _XCN.23 - Assigning Agency or Department_ are required. If _XCN.2 - Family Name_ is populated, then the _XCN.10 - Name Type Code_ is required. No assumptions can be safely made based on position or sequence. Specification of meaning based on sequence is deprecated.",
-        "description": null,
+        "short": "DG1-16",
+        "definition": "This field contains the individual responsible for generating the diagnosis information. As of v 2.7, if _XCN.1 - ID Number_ is populated, then the _XCN.13 - Identifier Type Code_ and the _XCN.9 - Assigning Authority_ or _XCN.22 - Assigning Jurisdiction_ or _XCN.23 - Assigning Agency or Department_ are required. If _XCN.2 - Family Name_ is populated, then the _XCN.10 - Name Type Code_ is required. No assumptions can be safely made based on position or sequence. Specification of meaning based on sequence is deprecated.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -398,7 +404,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -414,9 +420,8 @@
       {
         "id": "DG1.17",
         "path": "DG1.17",
-        "short": "- DG1.17 - ",
-        "definition": "Definition: This field indicates if the patient information is for a diagnosis or a non-diagnosis code. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70228[_User-defined Table 0228 - Diagnosis Classification_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "DG1-17",
+        "definition": "This field indicates if the patient information is for a diagnosis or a non-diagnosis code. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70228[_User-defined Table 0228 - Diagnosis Classification_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -424,7 +429,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -444,9 +449,9 @@
       {
         "id": "DG1.18",
         "path": "DG1.18",
-        "short": "- DG1.18 - ",
-        "definition": "Definition: This field indicates whether the diagnosis is confidential. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] in Chapter 2C, \"Code Tables\", for valid values.",
-        "description": null,
+        "short": "DG1-18",
+        "definition": "This field indicates whether the diagnosis is confidential. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] in Chapter 2C, \"Code Tables\", for valid values.",
+        "comment": "Y the diagnosis is a confidential diagnosis\n\nN the diagnosis does not contain a confidential diagnosis",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -454,7 +459,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -487,9 +492,8 @@
       {
         "id": "DG1.19",
         "path": "DG1.19",
-        "short": "- DG1.19 - ",
-        "definition": "Definition: This field contains the time stamp that indicates the date and time that the attestation was signed.",
-        "description": null,
+        "short": "DG1-19",
+        "definition": "This field contains the time stamp that indicates the date and time that the attestation was signed.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -497,7 +501,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -513,9 +517,8 @@
       {
         "id": "DG1.20",
         "path": "DG1.20",
-        "short": "- DG1.20 - ",
-        "definition": "Definition: This field contains a value that uniquely identifies a single diagnosis for an encounter. It is unique across all segments and messages for an encounter. This field is required in all implementations employing Update Diagnosis/Procedures (P12) messages.",
-        "description": null,
+        "short": "DG1-20",
+        "definition": "This field contains a value that uniquely identifies a single diagnosis for an encounter. It is unique across all segments and messages for an encounter. This field is required in all implementations employing Update Diagnosis/Procedures (P12) messages.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -523,7 +526,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -539,9 +542,8 @@
       {
         "id": "DG1.21",
         "path": "DG1.21",
-        "short": "- DG1.21 - ",
-        "definition": "Definition: This field defines the action to be taken for this diagnosis. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0__206 - Segment Action Code_] in Chapter 2C, \"Code Tables\", for valid values. This field is required for the update diagnosis/procedures (P12) message. In all other events it is optional.",
-        "description": null,
+        "short": "DG1-21",
+        "definition": "This field defines the action to be taken for this diagnosis. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0__206 - Segment Action Code_] in Chapter 2C, \"Code Tables\", for valid values. This field is required for the update diagnosis/procedures (P12) message. In all other events it is optional.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -549,7 +551,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -582,9 +584,8 @@
       {
         "id": "DG1.22",
         "path": "DG1.22",
-        "short": "- DG1.22 - ",
-        "definition": "Definition: This field contains the entity identifier for the parent diagnosis. This field links the \"current\" manifestation diagnosis (\"*\") to the entity identifier of the \"parent\" etiological diagnosis (\"+\").",
-        "description": null,
+        "short": "DG1-22",
+        "definition": "This field contains the entity identifier for the parent diagnosis. This field links the \"current\" manifestation diagnosis (\"*\") to the entity identifier of the \"parent\" etiological diagnosis (\"+\").",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -592,7 +593,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -608,9 +609,8 @@
       {
         "id": "DG1.23",
         "path": "DG1.23",
-        "short": "- DG1.23 - ",
-        "definition": "Definition: This field indicates the CCL value for the determined DRG for this diagnosis. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70728[_Externally-defined Table 0728 - CCL Value_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "DG1-23",
+        "definition": "This field indicates the CCL value for the determined DRG for this diagnosis. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70728[_Externally-defined Table 0728 - CCL Value_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -618,7 +618,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -638,9 +638,9 @@
       {
         "id": "DG1.24",
         "path": "DG1.24",
-        "short": "- DG1.24 - ",
-        "definition": "Definition: This field identifies whether this particular diagnosis has been used for the DRG determination. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values. The values have the following meaning for this field:",
-        "description": null,
+        "short": "DG1-24",
+        "definition": "This field identifies whether this particular diagnosis has been used for the DRG determination. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values. The values have the following meaning for this field:",
+        "comment": "Y Yes - Indicates that the diagnosis has been used for the DRG determination\n\nN No – Indicates that the diagnosis has not been used for the DRG determination",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -648,7 +648,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -681,9 +681,8 @@
       {
         "id": "DG1.25",
         "path": "DG1.25",
-        "short": "- DG1.25 - ",
-        "definition": "Definition: This field contains the status of this particular diagnosis for the DRG determination. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70731[_User-defined Table 0731 – DRG Diagnosis Determination Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "DG1-25",
+        "definition": "This field contains the status of this particular diagnosis for the DRG determination. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70731[_User-defined Table 0731 – DRG Diagnosis Determination Status_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -691,7 +690,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -711,9 +710,8 @@
       {
         "id": "DG1.26",
         "path": "DG1.26",
-        "short": "- DG1.26 - ",
-        "definition": "Definition: This field contains the present on admission indicator for this particular diagnosis. US reimbursement formulas for some states and Medicare have mandated that each diagnosis code be flagged as to whether it was present on admission or not. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70895[_User-defined Table 0895 – Present On Admission (POA) Indicator_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "DG1-26",
+        "definition": "This field contains the present on admission indicator for this particular diagnosis. US reimbursement formulas for some states and Medicare have mandated that each diagnosis code be flagged as to whether it was present on admission or not. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70895[_User-defined Table 0895 – Present On Admission (POA) Indicator_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -721,7 +719,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -743,5 +741,5 @@
   "title": "HL7 v2 DG1 Segment Definition",
   "name": "DG1",
   "type": "DG1",
-  "date": "2025-03-06T16:07:36Z"
+  "date": "2025-06-05T23:00:31Z"
 }

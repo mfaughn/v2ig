@@ -26,9 +26,8 @@
       {
         "id": "MFI.1",
         "path": "MFI.1",
-        "short": "- MFI.1 - ",
-        "definition": "Definition: This field is a CWE data type that identifies a standard HL7 master file. This table may be extended by local agreement during implementation to cover site-specific master files (z-master files). HL7 recommends use of the HL7 assigned table number as the master file identifier code if one is not specified in Table 0175. For example, a master file of Marital Status codes would be identified by HL70002 as the _MFI-1 - Master file identifier_. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70175[HL7 Table 0175 – Master File Identifier Code] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "MFI-1",
+        "definition": "This field is a CWE data type that identifies a standard HL7 master file. This table may be extended by local agreement during implementation to cover site-specific master files (z-master files). HL7 recommends use of the HL7 assigned table number as the master file identifier code if one is not specified in Table 0175. For example, a master file of Marital Status codes would be identified by HL70002 as the _MFI-1 - Master file identifier_. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70175[HL7 Table 0175 – Master File Identifier Code] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -56,9 +55,8 @@
       {
         "id": "MFI.2",
         "path": "MFI.2",
-        "short": "- MFI.2 - ",
-        "definition": "Definition: This field contains an optional code of up to 180 characters which (if applicable) uniquely identifies the application responsible for maintaining this file at a particular site. A group of intercommunicating applications may use more than a single instance of a master file of certain type (e.g., charge master or physician master). The particular instance of the file is identified by this field. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70361[User-defined table 0361 - Applications].",
-        "description": null,
+        "short": "MFI-2",
+        "definition": "This field contains an optional code of up to 180 characters which (if applicable) uniquely identifies the application responsible for maintaining this file at a particular site. A group of intercommunicating applications may use more than a single instance of a master file of certain type (e.g., charge master or physician master). The particular instance of the file is identified by this field. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70361[User-defined table 0361 - Applications].",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +64,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "HD"
@@ -86,9 +84,9 @@
       {
         "id": "MFI.3",
         "path": "MFI.3",
-        "short": "- MFI.3 - ",
-        "definition": "Definition: This field defines the file-level event code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70178[HL7 Table 0178 – File Level Event Code] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "MFI-3",
+        "definition": "This field defines the file-level event code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70178[HL7 Table 0178 – File Level Event Code] in Chapter 2C, Code Tables, for valid values.",
+        "comment": "*Note*: The replace option allows the sending system to replace a file without sending delete record-level events for each record in that file. UPD means that the events are defined according to the record-level event code contained in each MFE segment in that message.\n\nIf the _MFI-3 - File-Level Event Code_ is \"REP\" (replace file), then each MFE segment must have an _MFE-1 - Record-Level Event Code_ of \"MAD\" (add record to master file).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -96,7 +94,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -129,9 +127,8 @@
       {
         "id": "MFI.4",
         "path": "MFI.4",
-        "short": "- MFI.4 - ",
-        "definition": "Definition: This field contains the date/time for the file-level event on originating system.",
-        "description": null,
+        "short": "MFI-4",
+        "definition": "This field contains the date/time for the file-level event on originating system.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -139,7 +136,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -155,9 +152,8 @@
       {
         "id": "MFI.5",
         "path": "MFI.5",
-        "short": "- MFI.5 - ",
-        "definition": "Definition: This optional field contains the effective date/time, which can be included for file-level action specified. It is the date/time the originating system expects that the event is to have been completed on the receiving system. If this field is not present, the action date/time should default to the current date/time (when the message is received).",
-        "description": null,
+        "short": "MFI-5",
+        "definition": "This optional field contains the effective date/time, which can be included for file-level action specified. It is the date/time the originating system expects that the event is to have been completed on the receiving system. If this field is not present, the action date/time should default to the current date/time (when the message is received).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -165,7 +161,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -181,9 +177,8 @@
       {
         "id": "MFI.6",
         "path": "MFI.6",
-        "short": "- MFI.6 - ",
-        "definition": "Definition: These codes specify the application response level defined for a given Master File Message at the MFE segment level as defined in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70179[HL7 Table 0179 – Response Level] in Chapter 2C, Code Tables. Required for MFN-Master File Notification message. Specifies additional detail (beyond _MSH-15 - Accept Acknowledgment Type_ and _MSH-16 - Application Acknowledgment Type_) for application-level acknowledgment paradigms for Master Files transactions. _MSH-15 - Accept Acknowledgment Type_ and _MSH-16 - Application Acknowledgment Type_ operate as defined in Chapter 2.",
-        "description": null,
+        "short": "MFI-6",
+        "definition": "These codes specify the application response level defined for a given Master File Message at the MFE segment level as defined in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70179[HL7 Table 0179 – Response Level] in Chapter 2C, Code Tables. Required for MFN-Master File Notification message. Specifies additional detail (beyond _MSH-15 - Accept Acknowledgment Type_ and _MSH-16 - Application Acknowledgment Type_) for application-level acknowledgment paradigms for Master Files transactions. _MSH-15 - Accept Acknowledgment Type_ and _MSH-16 - Application Acknowledgment Type_ operate as defined in Chapter 2.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -191,7 +186,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -226,5 +221,5 @@
   "title": "HL7 v2 MFI Segment Definition",
   "name": "MFI",
   "type": "MFI",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:32Z"
 }

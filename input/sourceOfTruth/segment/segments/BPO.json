@@ -26,9 +26,8 @@
       {
         "id": "BPO.1",
         "path": "BPO.1",
-        "short": "- BPO.1 - ",
-        "definition": "Definition: This field contains the sequence number for the BPO segment within the message. For the first order transmitted, the sequence number shall be 1; for the second order, it shall be 2; and so on.",
-        "description": null,
+        "short": "BPO-1",
+        "definition": "This field contains the sequence number for the BPO segment within the message. For the first order transmitted, the sequence number shall be 1; for the second order, it shall be 2; and so on.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,9 @@
       {
         "id": "BPO.2",
         "path": "BPO.2",
-        "short": "- BPO.2 - ",
-        "definition": "Definition: This field contains the identifier code for the requested blood product. This can be based on local and/or \"universal\" codes. We recommend the \"universal\" procedure identifier. The structure of this CWE data type is described in the control section. The preferred coding system is the _ISBT 128 Product Code._ _Refer to Table 0575 - BP Universal Service Identifier in Chapter 2C for valid values._",
-        "description": null,
+        "short": "BPO-2",
+        "definition": "This field contains the identifier code for the requested blood product. This can be based on local and/or \"universal\" codes. We recommend the \"universal\" procedure identifier. The structure of this CWE data type is described in the control section. The preferred coding system is the _ISBT 128 Product Code._ _Refer to Table 0575 - BP Universal Service Identifier in Chapter 2C for valid values._",
+        "comment": "Blood Product Orders for commercial products, such as Rh Immune Globulin or Factor VIII concentrate, are not at this time defined in an international or national coding system as are blood products. Therefore, locally defined codes can be used for the Universal Service Identifier for commercial products.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +74,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -95,9 +94,8 @@
       {
         "id": "BPO.3",
         "path": "BPO.3",
-        "short": "- BPO.3 - ",
-        "definition": "Definition: This field contains additional information about the blood component class associated with the Universal Service ID. The placer of the order can specify any required processing of the blood product that must be completed prior to transfusion to the intended recipient. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70508[User-Defined Table 0508 - Blood Product Processing Requirements] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "BPO-3",
+        "definition": "This field contains additional information about the blood component class associated with the Universal Service ID. The placer of the order can specify any required processing of the blood product that must be completed prior to transfusion to the intended recipient. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70508[User-Defined Table 0508 - Blood Product Processing Requirements] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +103,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -125,9 +123,8 @@
       {
         "id": "BPO.4",
         "path": "BPO.4",
-        "short": "- BPO.4 - ",
-        "definition": "Definition: This field contains the number of blood products ordered.",
-        "description": null,
+        "short": "BPO-4",
+        "definition": "This field contains the number of blood products ordered.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -135,7 +132,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -164,9 +161,8 @@
       {
         "id": "BPO.5",
         "path": "BPO.5",
-        "short": "- BPO.5 - ",
-        "definition": "Definition: This field contains the ordered amount (volume) associated with each quantity of blood product.",
-        "description": null,
+        "short": "BPO-5",
+        "definition": "This field contains the ordered amount (volume) associated with each quantity of blood product.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -174,7 +170,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -203,9 +199,8 @@
       {
         "id": "BPO.6",
         "path": "BPO.6",
-        "short": "- BPO.6 - ",
-        "definition": "Definition: This field contains the units of measure for the blood product amount. (See Chapter 7 for more details about reporting units.) This field specifies the units of measure for volume of a blood component (i.e., 50 ml) or the units of measure or dosage of a commercial product (i.e., 910 I.U. - International Units - of Factor VIII Concentrate). Use of UCUM is strongly recommended as one of the delivered units (could be in addition to the local units). Refer to Table 0576 - BP Units in Chapter 2C for valid values.",
-        "description": null,
+        "short": "BPO-6",
+        "definition": "This field contains the units of measure for the blood product amount. (See Chapter 7 for more details about reporting units.) This field specifies the units of measure for volume of a blood component (i.e., 50 ml) or the units of measure or dosage of a commercial product (i.e., 910 I.U. - International Units - of Factor VIII Concentrate). Use of UCUM is strongly recommended as one of the delivered units (could be in addition to the local units). Refer to Table 0576 - BP Units in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -213,7 +208,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -233,9 +228,9 @@
       {
         "id": "BPO.7",
         "path": "BPO.7",
-        "short": "- BPO.7 - ",
-        "definition": "Definition: This field specifies the date/time that the placer intends to use the blood product that is being ordered.",
-        "description": null,
+        "short": "BPO-7",
+        "definition": "This field specifies the date/time that the placer intends to use the blood product that is being ordered.",
+        "comment": "This is the time when the placer expects the product to be available within the transfusion service. For example, the product should be available for use, but not dispensed, on this date/time.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -243,7 +238,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -259,9 +254,8 @@
       {
         "id": "BPO.8",
         "path": "BPO.8",
-        "short": "- BPO.8 - ",
-        "definition": "Definition: This field contains the location from which the blood component is to be dispensed.",
-        "description": null,
+        "short": "BPO-8",
+        "definition": "This field contains the location from which the blood component is to be dispensed.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -269,7 +263,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "PL"
@@ -285,9 +279,8 @@
       {
         "id": "BPO.9",
         "path": "BPO.9",
-        "short": "- BPO.9 - ",
-        "definition": "Definition: This field contains the actual address of the location from which the blood component is to be dispensed.",
-        "description": null,
+        "short": "BPO-9",
+        "definition": "This field contains the actual address of the location from which the blood component is to be dispensed.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -295,7 +288,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XAD"
@@ -311,9 +304,8 @@
       {
         "id": "BPO.10",
         "path": "BPO.10",
-        "short": "- BPO.10 - ",
-        "definition": "Definition: This field specifies the date/time that the requested blood products must be ready to dispense. This date/time may be different from the intended use date/time. For example, the patient may be scheduled to come in for a transfusion at a specified time. However, the placer would request that the blood product be ready to dispense prior to that time in order to have the blood component ready for transfusion at the scheduled time. The field may also be used to indicate that the placer is now ready to pick up the ordered blood product and is requesting the blood product be ready to dispense at that time.",
-        "description": null,
+        "short": "BPO-10",
+        "definition": "This field specifies the date/time that the requested blood products must be ready to dispense. This date/time may be different from the intended use date/time. For example, the patient may be scheduled to come in for a transfusion at a specified time. However, the placer would request that the blood product be ready to dispense prior to that time in order to have the blood component ready for transfusion at the scheduled time. The field may also be used to indicate that the placer is now ready to pick up the ordered blood product and is requesting the blood product be ready to dispense at that time.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -321,7 +313,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -337,9 +329,8 @@
       {
         "id": "BPO.11",
         "path": "BPO.11",
-        "short": "- BPO.11 - ",
-        "definition": "Definition: This field contains the inpatient or outpatient location to which the blood component is to be dispensed. The default dispense to location is the current census location for the patient.",
-        "description": null,
+        "short": "BPO-11",
+        "definition": "This field contains the inpatient or outpatient location to which the blood component is to be dispensed. The default dispense to location is the current census location for the patient.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -347,7 +338,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "PL"
@@ -363,9 +354,8 @@
       {
         "id": "BPO.12",
         "path": "BPO.12",
-        "short": "- BPO.12 - ",
-        "definition": "Definition: This field contains the actual address of the location to which the blood component is to be dispensed. The default dispense to location is the current census location for the patient.",
-        "description": null,
+        "short": "BPO-12",
+        "definition": "This field contains the actual address of the location to which the blood component is to be dispensed. The default dispense to location is the current census location for the patient.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -373,7 +363,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XAD"
@@ -389,9 +379,8 @@
       {
         "id": "BPO.13",
         "path": "BPO.13",
-        "short": "- BPO.13 - ",
-        "definition": "Definition: This is a coded optional field. The value indicates the reason that the blood product was ordered. This information is helpful for prospective review or retrospective studies of blood product ordering practices of the ordering provider by the Quality Assurance Department and/or Transfusion Committee. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70509[User-Defined Table 0509 - Indication for Use] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "BPO-13",
+        "definition": "This is a coded optional field. The value indicates the reason that the blood product was ordered. This information is helpful for prospective review or retrospective studies of blood product ordering practices of the ordering provider by the Quality Assurance Department and/or Transfusion Committee. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70509[User-Defined Table 0509 - Indication for Use] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -399,7 +388,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -419,7 +408,8 @@
       {
         "id": "BPO.14",
         "path": "BPO.14",
-        "short": "- BPO.14 - ",
+        "short": "BPO-14",
+        "comment": "This field indicates whether consent for the transfusion has been obtained. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 table 0136 -Yes/No indicator] as defined in Chapter 2C, Code Tables.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -427,7 +417,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -462,5 +452,5 @@
   "title": "HL7 v2 BPO Segment Definition",
   "name": "BPO",
   "type": "BPO",
-  "date": "2025-03-06T16:07:35Z"
+  "date": "2025-06-05T23:00:30Z"
 }

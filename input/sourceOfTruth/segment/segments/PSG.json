@@ -26,9 +26,8 @@
       {
         "id": "PSG.1",
         "path": "PSG.1",
-        "short": "- PSG.1 - ",
-        "definition": "Definition: Unique Product/Service Group Number assigned by the Provider Application.",
-        "description": null,
+        "short": "PSG-1",
+        "definition": "Unique Product/Service Group Number assigned by the Provider Application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "PSG.2",
         "path": "PSG.2",
-        "short": "- PSG.2 - ",
-        "definition": "Definition: Unique Product/Service Group Number assigned by the Payer Application",
-        "description": null,
+        "short": "PSG-2",
+        "definition": "Unique Product/Service Group Number assigned by the Payer Application",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -78,9 +76,8 @@
       {
         "id": "PSG.3",
         "path": "PSG.3",
-        "short": "- PSG.3 - ",
-        "definition": "Definition: Unique sequence number for the Product/Service Group (3) – starts with 1, then 2, etc. for each unique Product/Service Group in this Invoice.",
-        "description": null,
+        "short": "PSG-3",
+        "definition": "Unique sequence number for the Product/Service Group (3) – starts with 1, then 2, etc. for each unique Product/Service Group in this Invoice.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -117,9 +114,8 @@
       {
         "id": "PSG.4",
         "path": "PSG.4",
-        "short": "- PSG.4 - ",
-        "definition": "Definition: Adjudicate all Product/Service Line Items together as a group (IPRs will be reported against the Product/Service Group). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSG-4",
+        "definition": "Adjudicate all Product/Service Line Items together as a group (IPRs will be reported against the Product/Service Group). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +123,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -160,9 +156,8 @@
       {
         "id": "PSG.5",
         "path": "PSG.5",
-        "short": "- PSG.5 - ",
-        "definition": "Definition: Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Group.",
-        "description": null,
+        "short": "PSG-5",
+        "definition": "Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Group.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -170,7 +165,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -186,9 +181,8 @@
       {
         "id": "PSG.6",
         "path": "PSG.6",
-        "short": "- PSG.6 - ",
-        "definition": "Definition: Product/Service Group description or heading",
-        "description": null,
+        "short": "PSG-6",
+        "definition": "Product/Service Group description or heading",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -196,7 +190,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -227,5 +221,5 @@
   "title": "HL7 v2 PSG Segment Definition",
   "name": "PSG",
   "type": "PSG",
-  "date": "2025-03-06T16:07:40Z"
+  "date": "2025-06-05T23:00:35Z"
 }

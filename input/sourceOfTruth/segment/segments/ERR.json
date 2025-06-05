@@ -26,7 +26,8 @@
       {
         "id": "ERR.1",
         "path": "ERR.1",
-        "short": "- ERR.1 - ",
+        "short": "ERR-1",
+        "comment": "Attention: The ERR-1 field *was deprecated in V2.4 and is withdrawn in V2.7*. Please refer to ERR-2 and ERR-3 instead.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -34,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -45,9 +46,8 @@
       {
         "id": "ERR.2",
         "path": "ERR.2",
-        "short": "- ERR.2 - ",
-        "definition": "Definition: Identifies the location in a message related to the identified error, warning or message. If multiple repetitions are present, the error results from the values in a combination of places.",
-        "description": null,
+        "short": "ERR-2",
+        "definition": "Identifies the location in a message related to the identified error, warning or message. If multiple repetitions are present, the error results from the values in a combination of places.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -55,7 +55,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ERL"
@@ -71,9 +71,8 @@
       {
         "id": "ERR.3",
         "path": "ERR.3",
-        "short": "- ERR.3 - ",
-        "definition": "Definition: Identifies the HL7 (communications) error code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70357[_HL7_ _Tabl__e_ _0357 – Message Error Condition Codes_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "ERR-3",
+        "definition": "Identifies the HL7 (communications) error code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70357[_HL7_ _Tabl__e_ _0357 – Message Error Condition Codes_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -81,7 +80,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -101,9 +100,9 @@
       {
         "id": "ERR.4",
         "path": "ERR.4",
-        "short": "- ERR.4 - ",
-        "definition": "Definition: Identifies the severity of an application error. Knowing if something is Error, Warning or Information is intrinsic to how an application handles the content. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70516[_HL7 Table 0516 - Error Severity_] in Chapter 2C, Code Tables, for valid values. If ERR-3 has a value of \"0\", ERR-4 will have a value of \"I\".",
-        "description": null,
+        "short": "ERR-4",
+        "definition": "Identifies the severity of an application error. Knowing if something is Error, Warning or Information is intrinsic to how an application handles the content. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70516[_HL7 Table 0516 - Error Severity_] in Chapter 2C, Code Tables, for valid values. If ERR-3 has a value of \"0\", ERR-4 will have a value of \"I\".",
+        "comment": "Example: a Warning could be used to indicate that notes were present, but ignored because they could not be automatically processed, and therefore information could have been missed.\n\nExample of Information: When submitting a claim, a payor might indicate remaining coverage under limit.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -111,7 +110,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -144,9 +143,9 @@
       {
         "id": "ERR.5",
         "path": "ERR.5",
-        "short": "- ERR.5 - ",
-        "definition": "Definition: Application specific code identifying the specific error that occurred. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70533[_User-Defined Table 0533 – Application Error Cod__e_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "ERR-5",
+        "definition": "Application specific code identifying the specific error that occurred. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70533[_User-Defined Table 0533 – Application Error Cod__e_] in Chapter 2C, Code Tables, for suggested values.",
+        "comment": "If the message associated with the code has parameters, it is recommended that the message be indicated in the format of the java.text.MessageFormat approach.footnote:[Details on MessageFormat can be found at _http://liveweb.archive.org/http://docs.oracle.com/javase/1.5.0/docs/api/java/text/MessageFormat.html_.] This style provides information on the parameter type to allow numbers, dates and times to be formatted appropriately for the language.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -154,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -174,9 +173,9 @@
       {
         "id": "ERR.6",
         "path": "ERR.6",
-        "short": "- ERR.6 - ",
-        "definition": "Definition: Additional information to be used, together with the Application Error Code, to understand a particular error condition/warning/etc. This field can repeat to allow for up to 10 parameters.",
-        "description": null,
+        "short": "ERR-6",
+        "definition": "Additional information to be used, together with the Application Error Code, to understand a particular error condition/warning/etc. This field can repeat to allow for up to 10 parameters.",
+        "comment": "Example: If the application error code specified in ERR.5 corresponded with the English message \"The patient has a remaining deductible of \\{0, number, currency} for the period ending \\{1, date, medium}.\", and the first two repetitions of ERR.6 were \"250\" and \"20021231\", then a receiving application in the U.S. would display the message as \"The patient has a remaining deductible of $250.00 for the period ending Dec 31, 2002.\"",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -184,7 +183,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 10,
         "type": [
           {
             "code": "ST"
@@ -213,9 +212,8 @@
       {
         "id": "ERR.7",
         "path": "ERR.7",
-        "short": "- ERR.7 - ",
-        "definition": "Definition: Information that MAY be used by help desk or other support personnel to diagnose a problem.",
-        "description": null,
+        "short": "ERR-7",
+        "definition": "Information that MAY be used by help desk or other support personnel to diagnose a problem.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -223,7 +221,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "TX"
@@ -252,9 +250,9 @@
       {
         "id": "ERR.8",
         "path": "ERR.8",
-        "short": "- ERR.8 - ",
-        "definition": "Definition: The text message to be displayed to the application user.",
-        "description": null,
+        "short": "ERR-8",
+        "definition": "The text message to be displayed to the application user.",
+        "comment": "Example:\n\n|This program is having trouble communicating with another system. Please contact the help desk.|\n\nThis differs from the actual error code and could provide more diagnostic information.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -262,7 +260,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "TX"
@@ -291,9 +289,8 @@
       {
         "id": "ERR.9",
         "path": "ERR.9",
-        "short": "- ERR.9 - ",
-        "definition": "Definition: A code to indicate who (if anyone) SHOULD be informed of the error. This field MAY also be used to indicate that a particular person SHOULD NOT be informed of the error (e.g., Do not inform patient). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70517[_User-defined table 0517- Inform Person Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "ERR-9",
+        "definition": "A code to indicate who (if anyone) SHOULD be informed of the error. This field MAY also be used to indicate that a particular person SHOULD NOT be informed of the error (e.g., Do not inform patient). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70517[_User-defined table 0517- Inform Person Code_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -301,7 +298,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -321,9 +318,8 @@
       {
         "id": "ERR.10",
         "path": "ERR.10",
-        "short": "- ERR.10 - ",
-        "definition": "Definition: Identifies what type of override can be used to override the specific error identified. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70518[_User-defined Table 0518 - Override Type_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "ERR-10",
+        "definition": "Identifies what type of override can be used to override the specific error identified. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70518[_User-defined Table 0518 - Override Type_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -331,7 +327,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -351,9 +347,8 @@
       {
         "id": "ERR.11",
         "path": "ERR.11",
-        "short": "- ERR.11 - ",
-        "definition": "Definition: Provides a list of potential override codes that can be used to override enforcement of the application rule that generated the error. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70519[_User-defined table 0519 – Override Reason_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "ERR-11",
+        "definition": "Provides a list of potential override codes that can be used to override enforcement of the application rule that generated the error. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70519[_User-defined table 0519 – Override Reason_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -361,7 +356,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -381,9 +376,8 @@
       {
         "id": "ERR.12",
         "path": "ERR.12",
-        "short": "- ERR.12 - ",
-        "definition": "Definition: Lists phone, e-mail, fax, and other relevant numbers for helpdesk support related to the specified error.",
-        "description": null,
+        "short": "ERR-12",
+        "definition": "Lists phone, e-mail, fax, and other relevant numbers for helpdesk support related to the specified error.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -391,7 +385,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -409,5 +403,5 @@
   "title": "HL7 v2 ERR Segment Definition",
   "name": "ERR",
   "type": "ERR",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T23:00:28Z"
 }

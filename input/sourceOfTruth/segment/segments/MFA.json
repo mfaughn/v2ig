@@ -26,9 +26,9 @@
       {
         "id": "MFA.1",
         "path": "MFA.1",
-        "short": "- MFA.1 - ",
-        "definition": "Definition: This field defines record-level event for the master file record identified by the MFI segment and the primary key in this segment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70180[HL7 Table 0180 - Record-level Event Code] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "MFA-1",
+        "definition": "This field defines record-level event for the master file record identified by the MFI segment and the primary key in this segment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70180[HL7 Table 0180 - Record-level Event Code] in Chapter 2C, Code Tables, for valid values.",
+        "comment": "*Note:* If the _MFI-3 - File-level event code_ is \"REP\" (replace file), then each MFA segment must have an _MFA-1 - Record-level event code_ of \"MAD\" (add record to master file).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -69,9 +69,8 @@
       {
         "id": "MFA.2",
         "path": "MFA.2",
-        "short": "- MFA.2 - ",
-        "definition": "Definition: This field contains a number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. This field uniquely identifies the particular record (identified by the MFE segment) being acknowledged by this MFA segment. When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if _MFI-6 - Response Level Code_ requires responses at the record level (any value other than NE).",
-        "description": null,
+        "short": "MFA-2",
+        "definition": "This field contains a number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. This field uniquely identifies the particular record (identified by the MFE segment) being acknowledged by this MFA segment. When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if _MFI-6 - Response Level Code_ requires responses at the record level (any value other than NE).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -79,7 +78,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -108,9 +107,8 @@
       {
         "id": "MFA.3",
         "path": "MFA.3",
-        "short": "- MFA.3 - ",
-        "definition": "Definition: This field may be required or optional depending on the site specifications for the given master file, master file event, and receiving facility.",
-        "description": null,
+        "short": "MFA-3",
+        "definition": "This field may be required or optional depending on the site specifications for the given master file, master file event, and receiving facility.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +116,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -134,9 +132,9 @@
       {
         "id": "MFA.4",
         "path": "MFA.4",
-        "short": "- MFA.4 - ",
-        "definition": "Definition: This field contains the status of the requested update. Site-defined table, specific to each master file being updated via this transaction.",
-        "description": null,
+        "short": "MFA-4",
+        "definition": "This field contains the status of the requested update. Site-defined table, specific to each master file being updated via this transaction.",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70181[User-defined Table 0181 - MFN Record-level Error Return] in Chapter 2C, Code Tables, for suggested values. All such tables will have at least the following two return code values: \"S\" for successful and \"U\" for unsuccessful.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +142,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -164,9 +162,9 @@
       {
         "id": "MFA.5",
         "path": "MFA.5",
-        "short": "- MFA.5 - ",
-        "definition": "Definition: This field uniquely identifies the record of the master file (identified in the MFI segment) for which the update status is being acknowledged (as defined by the field _MFN-4 - Record Level Error Return_). The data type of this field is defined by the value of _MFA-6 - Value Type - MFA_, and may take on the format of any of the HL7 data types defined in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70355[HL7 Table 0355 - Primary Key Value Type] in Chapter 2C, Code Tables. The PL data type is used only on location master transactions. Refer to Table 0607 - Primary Key Value - MFA in Chapter 2C for valid values.",
-        "description": null,
+        "short": "MFA-5",
+        "definition": "This field uniquely identifies the record of the master file (identified in the MFI segment) for which the update status is being acknowledged (as defined by the field _MFN-4 - Record Level Error Return_). The data type of this field is defined by the value of _MFA-6 - Value Type - MFA_, and may take on the format of any of the HL7 data types defined in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70355[HL7 Table 0355 - Primary Key Value Type] in Chapter 2C, Code Tables. The PL data type is used only on location master transactions. Refer to Table 0607 - Primary Key Value - MFA in Chapter 2C for valid values.",
+        "comment": "The repetition of the primary key permits the identification of an individual component of a complex record as the object of the record-level event code. This feature allows the Master Files protocol to be used for modifications of single components of complex records. If this field repeats, the field _MFA-6 - Primary Key Value Type - MFA_ must also repeat (with the same number of repetitions), and the data type of each repetition of _MFA-5 - Primary Key Value - MFA_ is specified by the corresponding repetition of _MFA-6 - Value Type - MFA_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -174,7 +172,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "Varies"
@@ -194,9 +192,8 @@
       {
         "id": "MFA.6",
         "path": "MFA.6",
-        "short": "- MFA.6 - ",
-        "definition": "Definition: This field contains the HL7 data type of _MFA-5 - Primary Key Value - MFA_. The valid HL7 data types are listed in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70355[HL7 Table 0355 - Primary Key Value Type] in Chapter 2C, Code Tables.",
-        "description": null,
+        "short": "MFA-6",
+        "definition": "This field contains the HL7 data type of _MFA-5 - Primary Key Value - MFA_. The valid HL7 data types are listed in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70355[HL7 Table 0355 - Primary Key Value Type] in Chapter 2C, Code Tables.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -204,7 +201,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ID"
@@ -239,5 +236,5 @@
   "title": "HL7 v2 MFA Segment Definition",
   "name": "MFA",
   "type": "MFA",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:32Z"
 }
