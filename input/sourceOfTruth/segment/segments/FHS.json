@@ -26,8 +26,9 @@
       {
         "id": "FHS.1",
         "path": "FHS.1",
-        "short": "FHS-1",
+        "short": "- FHS.1 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -47,7 +48,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "FHS.2",
         "path": "FHS.2",
-        "short": "FHS-2",
+        "short": "- FHS.2 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -85,7 +87,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -102,8 +104,9 @@
       {
         "id": "FHS.3",
         "path": "FHS.3",
-        "short": "FHS-3",
+        "short": "- FHS.3 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -111,7 +114,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -127,8 +130,9 @@
       {
         "id": "FHS.4",
         "path": "FHS.4",
-        "short": "FHS-4",
+        "short": "- FHS.4 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -136,7 +140,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -152,8 +156,9 @@
       {
         "id": "FHS.5",
         "path": "FHS.5",
-        "short": "FHS-5",
+        "short": "- FHS.5 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -161,7 +166,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -177,8 +182,9 @@
       {
         "id": "FHS.6",
         "path": "FHS.6",
-        "short": "FHS-6",
+        "short": "- FHS.6 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -186,7 +192,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -202,8 +208,9 @@
       {
         "id": "FHS.7",
         "path": "FHS.7",
-        "short": "FHS-7",
+        "short": "- FHS.7 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -211,7 +218,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -227,8 +234,9 @@
       {
         "id": "FHS.8",
         "path": "FHS.8",
-        "short": "FHS-8",
+        "short": "- FHS.8 - ",
         "definition": "Definition: This field has the same definition as the corresponding field in the MSH segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -236,7 +244,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -265,8 +273,9 @@
       {
         "id": "FHS.9",
         "path": "FHS.9",
-        "short": "FHS-9",
+        "short": "- FHS.9 - ",
         "definition": "Definition: This field can be used by the application processing file. Its use is not further specified.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -274,7 +283,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -303,8 +312,9 @@
       {
         "id": "FHS.10",
         "path": "FHS.10",
-        "short": "FHS-10",
+        "short": "- FHS.10 - ",
         "definition": "Definition: This field contains the free text field, the use of which is not further specified.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -312,7 +322,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -341,8 +351,9 @@
       {
         "id": "FHS.11",
         "path": "FHS.11",
-        "short": "FHS-11",
+        "short": "- FHS.11 - ",
         "definition": "Definition: This field is used to identify a particular file uniquely. It can be echoed back in FHS-12-reference file control ID.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -350,7 +361,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -379,8 +390,9 @@
       {
         "id": "FHS.12",
         "path": "FHS.12",
-        "short": "FHS-12",
+        "short": "- FHS.12 - ",
         "definition": "Definition: This field contains the value of FHS-11-file control ID when this file was originally transmitted. Not present if this file is being transmitted for the first time.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -388,7 +400,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -417,8 +429,9 @@
       {
         "id": "FHS.13",
         "path": "FHS.13",
-        "short": "FHS-13",
+        "short": "- FHS.13 - ",
         "definition": "Definition: Identifier of the network location the message was transmitted from. Identified by an OID or text string (e.g., URI). The reader is referred to the \"Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations\".footnote:[The URI is: http://www.ietf.org/rfc/rfc3305.txt. Note: All IETF documents are available online, and RFCs are available through URIs using this format.]",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -426,7 +439,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -442,9 +455,9 @@
       {
         "id": "FHS.14",
         "path": "FHS.14",
-        "short": "FHS-14",
+        "short": "- FHS.14 - ",
         "definition": "Definition: Identifier of the network location the message was transmitted to. Identified by an OID or text string. (e.g., URL).",
-        "comment": "This is analogous with the Sending Network Address, however in the receiving role.\n\nThis field SHOULD only be populated when the underlying communication protocol does not support identification receiving network locations.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -452,7 +465,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "HD"
@@ -468,9 +481,9 @@
       {
         "id": "FHS.15",
         "path": "FHS.15",
-        "short": "FHS-15",
+        "short": "- FHS.15 - ",
         "definition": "Definition: This field defines the security classification (as defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995) of an IT resource, in this case the message, which MAY be used to make access control decisions. It is conditionally required when MSH-27 or MSH-28 are used.",
-        "comment": "Conditionality Predicate: Required if FHS-16 or FHS-17 is valued, or any contained MSH-26 is valued, Optional if neither FHS-16 nor FHS-17 or any contained MSH-26 is valued.\n\nUse of this field supports the business requirement for declaring the level of confidentiality (classification) for a given message.\n\nNote: This field is used to declare the ‘high watermark’, meaning the most restrictive handling that needs to be applied to the message based on its content requiring a certain security classification level and SHOULD be viewed as the v2 equivalent of the document header in CDA, in v3 models, and in FHIR Security Labels on Resources and Bundles. The use of confidentiality codes to classify message content and its inclusion in the high water mark in the header of message content is -described in the Guide to the HL7 Healthcare Privacy and Security Classification System, Release 1, which is platform independent.\n\nRefer to _Externally-defined HL7 Table 0952 – HL7 Confidentiality Code_ in Chapter 2C, Code Tables, for suggested values. Use of this table is recommended. The codes in this table are comprehensive, non-overlapping hierarchical codes: Very Restricted > Restricted > Normal > Moderate > Low > Unrestricted. Restrictions to a comprehensive, non-overlapping set of codes is required for purposes of access control system algorithms such as Bell–LaPadula Mode, which isl used to adjudicate access requests against privacy policies.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -478,7 +491,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -498,9 +511,9 @@
       {
         "id": "FHS.16",
         "path": "FHS.16",
-        "short": "FHS-16",
+        "short": "- FHS.16 - ",
         "definition": "Definition: This field is repeatable and conveys instructions to users and receivers for secure distribution, transmission, and storage; dictate obligations or mandated actions; specify any action prohibited by refrain policy such as dissemination controls; and stipulate the permissible purpose of use of an IT resource.",
-        "comment": "Refer to _HL7 Table 0953 – Security Control_ in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -508,7 +521,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -528,9 +541,9 @@
       {
         "id": "FHS.17",
         "path": "FHS.17",
-        "short": "FHS-17",
+        "short": "- FHS.17 - ",
         "definition": "Definition: Used to convey specific instructions about the protection of the patient's data , which must be rendered to end users in accordance with patient consent directive, organizational policy, or jurisdictional law. For example, in US law 42 CFR Part 2, disclosed information made with patient consent must include a renderable “Prohibition on re-disclosure” warning (§ 2.32[multiblock footnote omitted]) In addition, organizational policy might require that some or all of the ARV field privacy tag values be rendered to end users, e.g., marking a consult note with “Restricted Confidentiality” or with sensitivity tags such as “VIP” or “EMP” for employee of the organization.",
-        "comment": "This field MAY also be used to specify instructions about the release of information to family and friends (e.g., \"Do not release information to patient's brother, Adam Everyman\"). These instructions MAY be in conjunction with other fields (as elected by the system).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -538,7 +551,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -556,5 +569,5 @@
   "title": "HL7 v2 FHS Segment Definition",
   "name": "FHS",
   "type": "FHS",
-  "date": "2025-06-05T18:07:26Z"
+  "date": "2025-03-06T16:07:34Z"
 }

@@ -26,8 +26,9 @@
       {
         "id": "PV1.1",
         "path": "PV1.1",
-        "short": "PV1-1",
+        "short": "- PV1.1 - ",
         "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one, for the second occurrence, the sequence number shall be two, etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,9 +65,9 @@
       {
         "id": "PV1.2",
         "path": "PV1.2",
-        "short": "PV1-2",
+        "short": "- PV1.2 - ",
         "definition": "Definition: This field is used by systems to categorize patients by site. It does not have a consistent industry-wide definition. It is subject to site‑specific variations. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70004[_User-defined Table 0004 - Patient Class_] in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "\"Commercial Account\" is used by reference labs for specimen processing when the service is billed back to a third party. A registration is processed for the specimen to facilitate the subsequent billing. The identity of the patient may be known or unknown. In either case, for billing and statistical purposes, the patient class is considered a commercial account due to the third party billing responsibility.\n\n\"Not Applicable\" is used only in cases where the PV1 segment itself is not applicable but is retained in the message definitions for backwards compatibility (for example when a managed care system sends A28, A29, or A31 messages to indicate the enrolment of a patient in the system and there is no scheduled \"visit\" or \"encounter\" and hence the entire PV1 segment is not applicable).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -74,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -94,8 +95,9 @@
       {
         "id": "PV1.3",
         "path": "PV1.3",
-        "short": "PV1-3",
+        "short": "- PV1.3 - ",
         "definition": "Definition: This field contains the patient's initial assigned location or the location to which the patient is being moved. The first component may be the nursing station for inpatient locations, or clinic or department, for locations other than inpatient. For canceling a transaction or discharging a patient, the current location (after the cancellation event or before the discharge event) should be in this field. If a value exists in the fifth component (location status), it supersedes the value in _PV1-40 - Bed Status_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -103,7 +105,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -119,9 +121,9 @@
       {
         "id": "PV1.4",
         "path": "PV1.4",
-        "short": "PV1-4",
+        "short": "- PV1.4 - ",
         "definition": "Definition: This field indicates the circumstances under which the patient was or will be admitted. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70007[_User-defined Table 0007 - Admission Type_] in Chapter 2C, Code Tables, for suggested values. In the US, entities required to be compliant with the US Healthcare Information Technology Standards Panel (HITSP) are required to use the Official Universal Billing (UB) 04 2008 numeric codes found on form locator 14. Refer to External Table UB04FL14 for valid values.",
-        "comment": "For example:\n\nNon-US |E^Emergency^HL70007|\n\nUS: |1^Emergency^UB04FL14^^^^2008, v 2.0|\n\nTo report that information is not available:\n\nNon-US: |NI^No Information^HL70532|\n\nUS: |9^Information not available^ UB04FL14^^^^2008, v 2.0|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -129,7 +131,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -149,8 +151,9 @@
       {
         "id": "PV1.5",
         "path": "PV1.5",
-        "short": "PV1-5",
+        "short": "- PV1.5 - ",
         "definition": "Definition: This field uniquely identifies the patient's pre‑admit account. Some systems will continue to use the pre‑admit number as the billing number after the patient has been admitted. For backward compatibility, a ST data type can be sent; however, HL7 recommends use of the CX data type, like the account number, for new implementations. The assigning authority and identifier type codes are strongly recommended for all CX data types.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -158,7 +161,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -174,8 +177,9 @@
       {
         "id": "PV1.6",
         "path": "PV1.6",
-        "short": "PV1-6",
+        "short": "- PV1.6 - ",
         "definition": "Definition: This field contains the prior patient location if the patient is being transferred. The old location is null if the patient is new. If a value exists in the fifth component (location status), it supersedes the value in _PV1-40 - Bed Status_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -183,7 +187,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -199,8 +203,9 @@
       {
         "id": "PV1.7",
         "path": "PV1.7",
-        "short": "PV1-7",
+        "short": "- PV1.7 - ",
         "definition": "Definition: This field contains the attending physician information. Multiple names and identifiers for the same physician may be sent. The field sequences are not used to indicate multiple attending doctors. As of v2.7, if _XCN.1 ID Number_ is populated, then the _XCN.13 Identifier Type Code_ and the _XCN.9 Assigning Authority_ or _XCN.22 Assigning Jurisdiction_ or _XCN.23 Assigning Agency or Department_ are required. If _XCN.2 Family Name_ is populated, then the _XCN.10 Name Type Code_ is required. No assumptions can be safely made based on position or sequence. Specification of meaning based on sequence is deprecated. Depending on local agreements, either ID or the name may be absent in this field. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70010[_User-defined Table 0010 - Physician ID_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -208,7 +213,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -228,8 +233,9 @@
       {
         "id": "PV1.8",
         "path": "PV1.8",
-        "short": "PV1-8",
+        "short": "- PV1.8 - ",
         "definition": "Definition: This field contains the referring physician information. Multiple names and identifiers for the same physician may be sent. The field sequences are not used to indicate multiple referring doctors. As of v 2.7 if _XCN.1 ID Number_ is populated, then the _XCN.13 Identifier Type Code_ and the _XCN.9 Assigning Authority_ or _XCN.22 Assigning Jurisdiction_ or _XCN.23 Assigning Agency or Department_ are required. If _XCN.2 Family Name_ is populated, then the _XCN.10 Name Type Code_ is required. No assumptions can be safely made based on position or sequence. Specification of meaning based on sequence is deprecated. Depending on local agreements, either the ID or the name may be absent from this field. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70010[User-defined Table 0010 - Physician ID]_ in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -237,7 +243,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -257,8 +263,7 @@
       {
         "id": "PV1.9",
         "path": "PV1.9",
-        "short": "PV1-9",
-        "comment": "*From V2.4 onward, this field has been retained for backward compatibility only.* It is recommended to use the PRT - Participation segment for consulting physicians instead.",
+        "short": "- PV1.9 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -266,7 +271,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -282,8 +287,9 @@
       {
         "id": "PV1.10",
         "path": "PV1.10",
-        "short": "PV1-10",
+        "short": "- PV1.10 - ",
         "definition": "Definition: This field contains the treatment or type of surgery that the patient is scheduled to receive. It is a required field with trigger events A01 (admit/visit notification), A02 (transfer a patient), A14 (pending admit), A15 (pending transfer). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70069[_User-defined Table 0069 - Hospital Service_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -291,7 +297,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -311,8 +317,9 @@
       {
         "id": "PV1.11",
         "path": "PV1.11",
-        "short": "PV1-11",
+        "short": "- PV1.11 - ",
         "definition": "Definition: This field contains a location other than the assigned location required for a temporary period of time (e.g., OR, operating theatre, etc.). If a value exists in the fifth component (location status), it supersedes the value in _PV1-40 - Bed Status_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -320,7 +327,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -336,8 +343,9 @@
       {
         "id": "PV1.12",
         "path": "PV1.12",
-        "short": "PV1-12",
+        "short": "- PV1.12 - ",
         "definition": "Definition: This field indicates whether the patient must have pre‑admission testing done in order to be admitted. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70087[_User-defined Table 0087 - Pre-Admit Test Indicator_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -345,7 +353,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -365,8 +373,9 @@
       {
         "id": "PV1.13",
         "path": "PV1.13",
-        "short": "PV1-13",
+        "short": "- PV1.13 - ",
         "definition": "Definition: This field indicates that a patient is being re‑admitted to the healthcare facility and gives the circumstances. We suggest using \"*R*\" for readmission or else null. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70092[_User-defined Table 0092 - Re-Admission Indi__cator_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -374,7 +383,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -394,9 +403,9 @@
       {
         "id": "PV1.14",
         "path": "PV1.14",
-        "short": "PV1-14",
+        "short": "- PV1.14 - ",
         "definition": "Definition: This field indicates from where the patient was admitted. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70023[_User-defined Table 0023 - Admit Source_] in Chapter 2C, Code Tables, for suggested values. In the US, this field should use the Official Uniform Billing (UB) 04 2008 numeric codes found on form locator 15. Refer to _External Table UB04FL15 Source of Origin_ for valid values. The UB has redefined the Admission Source as the Point of Origin for Admission or Visit. The new UB definition is the code indicating the Point of Origin for this Admission or Visit",
-        "comment": "For Example:\n\nUS: |1^Physician Referral^UB04FL15^^^^2008, v 2.0|\n\nTo report that information is not available:\n\nUS: |9^Information not available^ UB04FL15^^^^2008, v 2.0|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -404,7 +413,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -424,8 +433,9 @@
       {
         "id": "PV1.15",
         "path": "PV1.15",
-        "short": "PV1-15",
+        "short": "- PV1.15 - ",
         "definition": "Definition: This field indicates any permanent or transient handicapped conditions. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70009[_User-defined Table 0009 - Ambulatory Status_] in Chapter 2C, Code Tables, for suggested entries.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -433,7 +443,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -453,8 +463,9 @@
       {
         "id": "PV1.16",
         "path": "PV1.16",
-        "short": "PV1-16",
+        "short": "- PV1.16 - ",
         "definition": "Definition: This field identifies the type of VIP. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70099[_User-defined Table 0099 - VIP Indicator_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -462,7 +473,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -482,8 +493,9 @@
       {
         "id": "PV1.17",
         "path": "PV1.17",
-        "short": "PV1-17",
+        "short": "- PV1.17 - ",
         "definition": "Definition: This field contains the admitting physician information. Multiple names and identifiers for the same physician may be sent. The field sequences are not used to indicate multiple admitting doctors. As of v2.7 if _XCN.1 ID Number_ is populated, then the _XCN.13 Identifier Type Code_ and the _XCN.9 Assigning Authority_ or _XCN.22 Assigning Jurisdiction_ or _XCN.23 Assigning Agency or Department_ are required. If _XCN.2 Family Name_ is populated, then the _XCN.10 Name Type Code_ is required. No assumptions can be safely made based on position or sequence. Specification of meaning based on sequence is deprecated. By local agreement, the name or ID may be absent in this field. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70010[_User-defined Table 0010 - Physician ID_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -491,7 +503,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -511,8 +523,9 @@
       {
         "id": "PV1.18",
         "path": "PV1.18",
-        "short": "PV1-18",
+        "short": "- PV1.18 - ",
         "definition": "Definition: This field contains site-specific values that identify the patient type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70018[_User-defined Table 0018 - Patient Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -520,7 +533,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -540,8 +553,9 @@
       {
         "id": "PV1.19",
         "path": "PV1.19",
-        "short": "PV1-19",
+        "short": "- PV1.19 - ",
         "definition": "Definition: For backward compatibility, a NM data type may be sent, but HL7 recommends that new implementations use the CX data type**.** This field contains the unique number assigned to each patient visit. The assigning authority and identifier type code are strongly recommended for all CX data types.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -549,7 +563,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -565,8 +579,9 @@
       {
         "id": "PV1.20",
         "path": "PV1.20",
-        "short": "PV1-20",
+        "short": "- PV1.20 - ",
         "definition": "Definition: This field contains the financial class(es) assigned to the patient for the purpose of identifying sources of reimbursement. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70064[_User-defined Table 0064 - Financial Class_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -574,7 +589,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "FC"
@@ -594,8 +609,9 @@
       {
         "id": "PV1.21",
         "path": "PV1.21",
-        "short": "PV1-21",
+        "short": "- PV1.21 - ",
         "definition": "Definition: This field contains the code used to determine which price schedule is to be used for room and bed charges. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70032[_User-defined Table 0032 - Charge/Price Indi__c__at__or_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -603,7 +619,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -623,8 +639,9 @@
       {
         "id": "PV1.22",
         "path": "PV1.22",
-        "short": "PV1-22",
+        "short": "- PV1.22 - ",
         "definition": "Definition: This field indicates whether the patient will be extended certain special courtesies. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70045[_User-defined Table 0045 - Courtesy Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -632,7 +649,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -652,8 +669,9 @@
       {
         "id": "PV1.23",
         "path": "PV1.23",
-        "short": "PV1-23",
+        "short": "- PV1.23 - ",
         "definition": "Definition: This field contains the user-defined code to determine past credit experience. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70046[_User-defined Table 0046 - Credit Rati__ng_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -661,7 +679,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -681,8 +699,9 @@
       {
         "id": "PV1.24",
         "path": "PV1.24",
-        "short": "PV1-24",
+        "short": "- PV1.24 - ",
         "definition": "Definition: This field identifies the type of contract entered into by the healthcare facility and the guarantor for the purpose of settling outstanding account balances. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70044[_User-defined Table 0044 - Contract Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -690,7 +709,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -710,8 +729,9 @@
       {
         "id": "PV1.25",
         "path": "PV1.25",
-        "short": "PV1-25",
+        "short": "- PV1.25 - ",
         "definition": "Definition: This field contains the date that the contract is to start or started.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -719,7 +739,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -735,8 +755,9 @@
       {
         "id": "PV1.26",
         "path": "PV1.26",
-        "short": "PV1-26",
+        "short": "- PV1.26 - ",
         "definition": "Definition: This field contains the amount to be paid by the guarantor each period according to the contract.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -744,7 +765,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -773,8 +794,9 @@
       {
         "id": "PV1.27",
         "path": "PV1.27",
-        "short": "PV1-27",
+        "short": "- PV1.27 - ",
         "definition": "Definition: This field specifies the duration of the contract for user-defined periods.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -782,7 +804,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -811,8 +833,9 @@
       {
         "id": "PV1.28",
         "path": "PV1.28",
-        "short": "PV1-28",
+        "short": "- PV1.28 - ",
         "definition": "Definition: This field indicates the amount of interest that will be charged the guarantor on any outstanding amounts. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70073[_User-defined Table 0073 - Interest Rate Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -820,7 +843,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -840,8 +863,9 @@
       {
         "id": "PV1.29",
         "path": "PV1.29",
-        "short": "PV1-29",
+        "short": "- PV1.29 - ",
         "definition": "Definition: This field indicates that the account was transferred to bad debts and gives the reason. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70110[_User-defined Table 0110 - Transfer to Bad Debt Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -849,7 +873,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -869,8 +893,9 @@
       {
         "id": "PV1.30",
         "path": "PV1.30",
-        "short": "PV1-30",
+        "short": "- PV1.30 - ",
         "definition": "Definition: This field contains the date that the account was transferred to a bad debt status.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -878,7 +903,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -894,8 +919,9 @@
       {
         "id": "PV1.31",
         "path": "PV1.31",
-        "short": "PV1-31",
+        "short": "- PV1.31 - ",
         "definition": "Definition: This field can be used as a ST type for backward compatibility. This field uniquely identifies the bad debt agency to which the account was transferred. This code is site defined. One possible implementation would be to edit against a table such as file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70021[_User-defined Table 0021 - Bad Debt Agency Code_]; in chapter 2C, however, this is not required.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -903,7 +929,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -923,8 +949,9 @@
       {
         "id": "PV1.32",
         "path": "PV1.32",
-        "short": "PV1-32",
+        "short": "- PV1.32 - ",
         "definition": "Definition: This field contains the amount that was transferred to a bad debt status.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -932,7 +959,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -961,8 +988,9 @@
       {
         "id": "PV1.33",
         "path": "PV1.33",
-        "short": "PV1-33",
+        "short": "- PV1.33 - ",
         "definition": "Definition: This field contains the amount recovered from the guarantor on the account.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -970,7 +998,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -999,8 +1027,9 @@
       {
         "id": "PV1.34",
         "path": "PV1.34",
-        "short": "PV1-34",
+        "short": "- PV1.34 - ",
         "definition": "Definition: This field indicates that the account was deleted from the file and gives the reason. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70111[_User-defined Table 0111 - Delete Account Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1008,7 +1037,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1028,8 +1057,9 @@
       {
         "id": "PV1.35",
         "path": "PV1.35",
-        "short": "PV1-35",
+        "short": "- PV1.35 - ",
         "definition": "Definition: This field contains the date that the account was deleted from the file.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1037,7 +1067,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -1053,9 +1083,9 @@
       {
         "id": "PV1.36",
         "path": "PV1.36",
-        "short": "PV1-36",
+        "short": "- PV1.36 - ",
         "definition": "Definition: This field contains the disposition of the patient at time of discharge (i.e., discharged to home, expired, etc.). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70112[_User-defined Table 0112 - Discharge Dispos__ition_] in Chapter 2C, Code Tables, for suggested values. In the US, this field should use the Official Uniform Billing (UB) 04 2008 numeric codes found on form locator 17. Refer to _External Table UB04FL17 Patient Discharge Status_ for valid values.",
-        "comment": "Examples:\n\nUS: |01^ Discharged to home or self care (routine discharge)^UB04FL17^^^^2008, v 2.0|\n\n*Usage Note:* NUBC does not supply a null value for this field.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1063,7 +1093,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1083,8 +1113,9 @@
       {
         "id": "PV1.37",
         "path": "PV1.37",
-        "short": "PV1-37",
+        "short": "- PV1.37 - ",
         "definition": "Definition: This field indicates the healthcare facility to which the patient was discharged and the date. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70113[_User-defined Table 0113 - Discharged to Location_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1092,7 +1123,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DLD"
@@ -1112,8 +1143,9 @@
       {
         "id": "PV1.38",
         "path": "PV1.38",
-        "short": "PV1-38",
+        "short": "- PV1.38 - ",
         "definition": "Definition: This field indicates a special diet type for a patient. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70114[_User-defined Table 0114 - Diet Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1121,7 +1153,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1141,9 +1173,9 @@
       {
         "id": "PV1.39",
         "path": "PV1.39",
-        "short": "PV1-39",
+        "short": "- PV1.39 - ",
         "definition": "Definition: This field is used in a multiple facility environment, e.g., multiple campuses or buildings, to indicate the healthcare facility with which this visit is associated. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70115[_User-defined Table 0115 - Servicing Facility_] in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "An optional sixth component, the facility ID, may be valued in each individual location field in PV1, instead of placing it here.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1151,7 +1183,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1171,8 +1203,9 @@
       {
         "id": "PV1.40",
         "path": "PV1.40",
-        "short": "PV1-40",
+        "short": "- PV1.40 - ",
         "definition": "Definition: *The PV1-40 field was retained for backward compatibility only as of v 2.3, and the field withdrawn as of v 2.7*. The information is now held in the fifth component of the PL datatype in PV1-3.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1180,7 +1213,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -1191,8 +1224,9 @@
       {
         "id": "PV1.41",
         "path": "PV1.41",
-        "short": "PV1-41",
+        "short": "- PV1.41 - ",
         "definition": "Definition: This field contains the account status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70117[_User-defined Table 0117 - Account Status_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1200,7 +1234,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1220,8 +1254,9 @@
       {
         "id": "PV1.42",
         "path": "PV1.42",
-        "short": "PV1-42",
+        "short": "- PV1.42 - ",
         "definition": "Definition: This field indicates the point of care, room, bed, healthcare facility ID, and bed status to which the patient may be moved. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient. If a value exists in the fifth component (location status), it supersedes the value in _PV1-40 - Bed Status_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1229,7 +1264,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -1245,8 +1280,9 @@
       {
         "id": "PV1.43",
         "path": "PV1.43",
-        "short": "PV1-43",
+        "short": "- PV1.43 - ",
         "definition": "Definition: This field is used to reflect the patient's temporary location (such as the operating room/theatre or x-ray) prior to a transfer from a temporary location to an actual location, or from a temporary location to another temporary location. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1254,7 +1290,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -1270,8 +1306,9 @@
       {
         "id": "PV1.44",
         "path": "PV1.44",
-        "short": "PV1-44",
+        "short": "- PV1.44 - ",
         "definition": "Definition: This field contains the admit date/time. It is to be used if the event date/time is different than the admit date and time, i.e., a retroactive update. This field is also used to reflect the date/time of an outpatient/emergency patient registration.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1279,7 +1316,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -1295,8 +1332,9 @@
       {
         "id": "PV1.45",
         "path": "PV1.45",
-        "short": "PV1-45",
+        "short": "- PV1.45 - ",
         "definition": "Definition: This field contains the discharge date/time. It is to be used if the event date/time is different than the discharge date and time, that is, a retroactive update. This field is also used to reflect the date/time of an outpatient/emergency patient discharge.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1304,7 +1342,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -1320,8 +1358,9 @@
       {
         "id": "PV1.46",
         "path": "PV1.46",
-        "short": "PV1-46",
+        "short": "- PV1.46 - ",
         "definition": "Definition: This field contains the visit balance due.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1329,7 +1368,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -1358,8 +1397,9 @@
       {
         "id": "PV1.47",
         "path": "PV1.47",
-        "short": "PV1-47",
+        "short": "- PV1.47 - ",
         "definition": "Definition: This field contains the total visit charges.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1367,7 +1407,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -1396,8 +1436,9 @@
       {
         "id": "PV1.48",
         "path": "PV1.48",
-        "short": "PV1-48",
+        "short": "- PV1.48 - ",
         "definition": "Definition: This field contains the total adjustments for visit.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1405,7 +1446,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -1434,8 +1475,9 @@
       {
         "id": "PV1.49",
         "path": "PV1.49",
-        "short": "PV1-49",
+        "short": "- PV1.49 - ",
         "definition": "Definition: This field contains the total payments for visit.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1443,7 +1485,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -1472,8 +1514,9 @@
       {
         "id": "PV1.50",
         "path": "PV1.50",
-        "short": "PV1-50",
+        "short": "- PV1.50 - ",
         "definition": "Definition: This field contains the alternative, temporary, or pending optional visit ID number to be used if needed. Multiple alternate identifiers may be sent. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 Table 0061 - Check Digit Scheme_] in Chapter 2C, Code Tables, for valid values. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70203[_HL7 Table 0203 - Identifier Type_] in Chapter 2C, Code Tables, for valid values. The assigning authority and identifier type codes are strongly recommended for all CX data types.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1481,7 +1524,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -1501,9 +1544,9 @@
       {
         "id": "PV1.51",
         "path": "PV1.51",
-        "short": "PV1-51",
+        "short": "- PV1.51 - ",
         "definition": "Definition: This field specifies the level on which data are being sent. It is the indicator used to send data at two levels, visit and account. HL7 recommends sending an 'A' or no value when the data in the message are at the account level, or 'V' to indicate that the data sent in the message are at the visit level. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70326[_User-defined Table 0326 - Visit Indicator_] in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "The value of this element affects the context of data sent in PV1, PV2 and any associated hierarchical segments (e.g., DB1, AL1, DG1, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1511,7 +1554,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -1531,8 +1574,9 @@
       {
         "id": "PV1.52",
         "path": "PV1.52",
-        "short": "PV1-52",
+        "short": "- PV1.52 - ",
         "definition": "Definition: *The PV1-52 field was retained for backward compatibility only as of v 2.4 and withdrawn as of v 2.7.* The reader is advised to use the PRT segment to communicate providers not specified elsewhere. Refer to Chapter 7 for the definition of the PRT segment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1540,7 +1584,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -1551,8 +1595,9 @@
       {
         "id": "PV1.53",
         "path": "PV1.53",
-        "short": "PV1-53",
+        "short": "- PV1.53 - ",
         "definition": "Definition: This field contains a brief user-defined description of a Service Episode in or for which the visit occurs. A Service Episode is the context in which the treatment or management of an arbitrary subset of a Patient’s medical conditions occurs. The definition of the start time, stop time, and included events of a Service Episode is entirely arbitrary; it may include a single outpatient visit or a hospitalization, or extend over significant period of time, e.g., the duration of a pregnancy, or an oncology treatment regimen, or a cardiac episode from infarction through rehabilitation. A Service Episode may involve one or more Healthcare Organizations.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1560,7 +1605,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -1589,8 +1634,9 @@
       {
         "id": "PV1.54",
         "path": "PV1.54",
-        "short": "PV1-54",
+        "short": "- PV1.54 - ",
         "definition": "Definition: This field contains the identifier of a Service Episode in or for which the visit occurs.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1598,7 +1644,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -1616,5 +1662,5 @@
   "title": "HL7 v2 PV1 Segment Definition",
   "name": "PV1",
   "type": "PV1",
-  "date": "2025-06-05T18:07:27Z"
+  "date": "2025-03-06T16:07:34Z"
 }

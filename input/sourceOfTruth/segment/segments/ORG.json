@@ -26,8 +26,9 @@
       {
         "id": "ORG.1",
         "path": "ORG.1",
-        "short": "ORG-1",
+        "short": "- ORG.1 - ",
         "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,9 +65,9 @@
       {
         "id": "ORG.2",
         "path": "ORG.2",
-        "short": "ORG-2",
+        "short": "- ORG.2 - ",
         "definition": "Definition: This field contains the hierarchical components of the organization unit, as defined by the institution. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70405[_User-defined Table 0405 - Organization Unit_] for suggested values.",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL700405[_User-defined Table 0405 – Organization Unit_] in Chapter 2C, Code Tables, for valid values. This table contains no suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -74,7 +75,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -94,9 +95,9 @@
       {
         "id": "ORG.3",
         "path": "ORG.3",
-        "short": "ORG-3",
+        "short": "- ORG.3 - ",
         "definition": "Definition: This field contains a code indicating the classification of the organization unit. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70474[_User-defined Table 0474 - Organization Unit Type_].",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70474[_User-defined Table 0474 – Organization Unit Type_] in Chapter 2C, Code Tables, for valid values. This table contains values for department, facility etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -104,7 +105,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -124,9 +125,9 @@
       {
         "id": "ORG.4",
         "path": "ORG.4",
-        "short": "ORG-4",
+        "short": "- ORG.4 - ",
         "definition": "Definition: This field contains an indicator for whether this organization unit is the primary organization unit for this practitioner. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] for valid values.",
-        "comment": "Y this is the primary organization unit\n\nN this is not the primary organization unit",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -134,7 +135,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -150,7 +151,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -167,8 +168,9 @@
       {
         "id": "ORG.5",
         "path": "ORG.5",
-        "short": "ORG-5",
+        "short": "- ORG.5 - ",
         "definition": "Definition: This field contains an identification code used by the institution to identify this person at this specific organization unit. If the person is identified with the same code at all organization units, then this data should be coded in _STF-2 Staff ID Codes_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -176,7 +178,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -192,9 +194,9 @@
       {
         "id": "ORG.6",
         "path": "ORG.6",
-        "short": "ORG-6",
+        "short": "- ORG.6 - ",
         "definition": "Definition: This field contains the major grouping of the service or occupation of the practitioner at a specific organization unit, for example, Behavioral Health & Social Service. HL7 suggests using values derived from the ANSI ASC X12 Health Care Provider Taxonomy, Level 1 - Type.",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70452[_HL7 Table 0452 – Health Care Provider Type Code_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -202,7 +204,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -222,9 +224,9 @@
       {
         "id": "ORG.7",
         "path": "ORG.7",
-        "short": "ORG-7",
+        "short": "- ORG.7 - ",
         "definition": "Definition: This field contains the more specific service or occupation within the health care provider type of the practitioner at a specific organization unit, for example, Counselor. HL7 suggests using values derived from the ANSI ASC X12 Health Care Provider Taxonomy, Level 2 – Classification.",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70453[_HL7 Table 0453 – Health Care Provider Classification_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -232,7 +234,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -252,9 +254,9 @@
       {
         "id": "ORG.8",
         "path": "ORG.8",
-        "short": "ORG-8",
+        "short": "- ORG.8 - ",
         "definition": "Definition: This field contains the segment of the population that a health care provider chooses to service, a specific medical service, a specialization in treating a specific disease, or any other descriptive characteristic about the provider's practice relating to the services rendered of the practitioner at a specific organization unit, for example, Mental Health. HL7 suggests using values derived from the ANSI ASC X12 Health Care Provider Taxonomy, Level 3 - specialization.",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70454[_HL7 Table 0454 – Health Care Provider Area of Specialization_] in chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -262,7 +264,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -282,8 +284,9 @@
       {
         "id": "ORG.9",
         "path": "ORG.9",
-        "short": "ORG-9",
+        "short": "- ORG.9 - ",
         "definition": "Definition: This field contains the date range in which the practitioner started and ended working at the specific organization unit in the specific practicing specialty category.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -291,7 +294,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DR"
@@ -307,8 +310,9 @@
       {
         "id": "ORG.10",
         "path": "ORG.10",
-        "short": "ORG-10",
+        "short": "- ORG.10 - ",
         "definition": "Definition: This field contains a code indicating the working relationship of the practitioner at this organization unit. It may be different than the work status specified in _STF-20_. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70066[_User-defined Table 0066 - Employment Status_], in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -316,7 +320,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -336,9 +340,9 @@
       {
         "id": "ORG.11",
         "path": "ORG.11",
-        "short": "ORG-11",
+        "short": "- ORG.11 - ",
         "definition": "Definition: This field contains an indicator for whether this practice specialty requires board approval. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] for valid values.",
-        "comment": "Y this practice specialty requires board approval\n\nN this practice specialty does not require board approval",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -346,7 +350,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -362,7 +366,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -379,9 +383,9 @@
       {
         "id": "ORG.12",
         "path": "ORG.12",
-        "short": "ORG-12",
+        "short": "- ORG.12 - ",
         "definition": "Definition: This field contains an indicator for whether this practice specialty may act as a primary care physician (PCP). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] for valid values.",
-        "comment": "Y this practice specialty may act as a primary care physician\n\nN this practice specialty may not act as a primary care physician",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -389,7 +393,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -405,7 +409,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -422,8 +426,9 @@
       {
         "id": "ORG.13",
         "path": "ORG.13",
-        "short": "ORG-13",
+        "short": "- ORG.13 - ",
         "definition": "Definition: This field contains the cost center name or code assigned to this organization unit. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70539[HL7 User-defined Table 0539 – Cost Center Code]_ for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -431,7 +436,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -453,5 +458,5 @@
   "title": "HL7 v2 ORG Segment Definition",
   "name": "ORG",
   "type": "ORG",
-  "date": "2025-06-05T18:07:33Z"
+  "date": "2025-03-06T16:07:39Z"
 }

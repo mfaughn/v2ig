@@ -26,8 +26,9 @@
       {
         "id": "ABS.1",
         "path": "ABS.1",
-        "short": "ABS-1",
+        "short": "- ABS.1 - ",
         "definition": "Definition: Identification number of the provider responsible for the discharge of the patient from his/her care. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70010[_User-defined Table 0010 - Physician ID_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -55,8 +56,9 @@
       {
         "id": "ABS.2",
         "path": "ABS.2",
-        "short": "ABS-2",
+        "short": "- ABS.2 - ",
         "definition": "Definition: Medical code representing the patient's medical services when they are transferred. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70069[_User-defined Table 0069 - Hospital Service_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -64,7 +66,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -84,8 +86,9 @@
       {
         "id": "ABS.3",
         "path": "ABS.3",
-        "short": "ABS-3",
+        "short": "- ABS.3 - ",
         "definition": "Definition: Code representing the ranking of a patient's illness. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70421[_User-defi__ned Table 0421 - Severity of Ill__ness Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -93,7 +96,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -113,8 +116,9 @@
       {
         "id": "ABS.4",
         "path": "ABS.4",
-        "short": "ABS-4",
+        "short": "- ABS.4 - ",
         "definition": "Definition: Date/time that the medical record was reviewed and accepted.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -122,7 +126,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -138,8 +142,9 @@
       {
         "id": "ABS.5",
         "path": "ABS.5",
-        "short": "ABS-5",
+        "short": "- ABS.5 - ",
         "definition": "Definition: Identification number of the person (usually a provider) who reviewed and accepted the abstract of the medical record.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -147,7 +152,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -163,8 +168,9 @@
       {
         "id": "ABS.6",
         "path": "ABS.6",
-        "short": "ABS-6",
+        "short": "- ABS.6 - ",
         "definition": "Definition: Code representing a patient's prioritization within the context of this abstract. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70422[_User-defined Table 0422 - Triage Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -172,7 +178,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -192,8 +198,9 @@
       {
         "id": "ABS.7",
         "path": "ABS.7",
-        "short": "ABS-7",
+        "short": "- ABS.7 - ",
         "definition": "Definition: Date/time the abstraction was completed.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -201,7 +208,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -217,8 +224,9 @@
       {
         "id": "ABS.8",
         "path": "ABS.8",
-        "short": "ABS-8",
+        "short": "- ABS.8 - ",
         "definition": "Definition: Identification number of the person completing the Abstract.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -226,7 +234,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -242,8 +250,9 @@
       {
         "id": "ABS.9",
         "path": "ABS.9",
-        "short": "ABS-9",
+        "short": "- ABS.9 - ",
         "definition": "Definition: Code indicating the reason a non-urgent patient presents to the Emergency Room for treatment instead of a clinic or physician office. Refer to E:\\\\V2\\\\V29_CH02C_Tables.docx#HL70423[_User-defined Table 0423 - Case Category Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -251,7 +260,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -271,9 +280,9 @@
       {
         "id": "ABS.10",
         "path": "ABS.10",
-        "short": "ABS-10",
+        "short": "- ABS.10 - ",
         "definition": "Definition: Indicates if the delivery was by Caesarian Section. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Delivery was by Caesarian Section.\n\nN Delivery was not by Caesarian Section.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -281,7 +290,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -297,7 +306,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -314,8 +323,9 @@
       {
         "id": "ABS.11",
         "path": "ABS.11",
-        "short": "ABS-11",
+        "short": "- ABS.11 - ",
         "definition": "Definition: The gestation category code is used to indicate the status of the birth in relation to the gestation. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70424[_User-defined Table 0424 - Gestation Category Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -323,7 +333,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -343,8 +353,9 @@
       {
         "id": "ABS.12",
         "path": "ABS.12",
-        "short": "ABS-12",
+        "short": "- ABS.12 - ",
         "definition": "Definition: Newborn's gestation period expressed as a number of weeks.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -352,7 +363,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -381,8 +392,9 @@
       {
         "id": "ABS.13",
         "path": "ABS.13",
-        "short": "ABS-13",
+        "short": "- ABS.13 - ",
         "definition": "Definition: The newborn code is used to indicate whether the baby was born in or out of the facility. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70425[_User-defined Table 0425 - Newborn Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -390,7 +402,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -410,9 +422,9 @@
       {
         "id": "ABS.14",
         "path": "ABS.14",
-        "short": "ABS-14",
+        "short": "- ABS.14 - ",
         "definition": "Definition: Indicates whether or not a newborn was stillborn. Refer to file:///E:\\V2\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Stillborn.\n\nN Not stillborn.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -420,7 +432,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -436,7 +448,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -455,5 +467,5 @@
   "title": "HL7 v2 ABS Segment Definition",
   "name": "ABS",
   "type": "ABS",
-  "date": "2025-06-05T18:07:30Z"
+  "date": "2025-03-06T16:07:37Z"
 }

@@ -26,9 +26,9 @@
       {
         "id": "PRT.1",
         "path": "PRT.1",
-        "short": "PRT-1",
+        "short": "- PRT.1 - ",
         "definition": "Definition: This field contains a unique identifier of the specific participation record.",
-        "comment": "In the case of waypoints tracked for a shipment, it identifies the waypoint.\n\nCondition: The identifier is required when known, but there are times we may only know a name but do not have an identifier.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -48,7 +48,7 @@
             "valueCode": "C"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -65,8 +65,9 @@
       {
         "id": "PRT.2",
         "path": "PRT.2",
-        "short": "PRT-2",
+        "short": "- PRT.2 - ",
         "definition": "Definition: This field reveals the intent of the message. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70287[_HL7 Table 0287 – Problem/goal action code_] for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -74,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -90,7 +91,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -107,8 +108,9 @@
       {
         "id": "PRT.3",
         "path": "PRT.3",
-        "short": "PRT-3",
+        "short": "- PRT.3 - ",
         "definition": "Definition: This field indicates the reason why the person, organization, location, or device is assuming (or changing) the role (e.g., shift change, new primary nurse, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -116,7 +118,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -132,8 +134,9 @@
       {
         "id": "PRT.4",
         "path": "PRT.4",
-        "short": "PRT-4",
+        "short": "- PRT.4 - ",
         "definition": "Definition: This field indicates the functional involvement with the activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70912[_HL7 Table 0912 – Participation_] for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -141,7 +144,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -161,9 +164,9 @@
       {
         "id": "PRT.5",
         "path": "PRT.5",
-        "short": "PRT-5",
+        "short": "- PRT.5 - ",
         "definition": "Definition: This field contains the identity of the person who is represented in the participation that is being transmitted.",
-        "comment": "If this attribute repeats, all instances must represent the same person.\n\nCondition: At least one of PRT-5 Person, PRT-8 Organization, PRT-9 Location, or PRT-10 Device or PRT-22 Device Type fields must be valued.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -171,7 +174,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -187,9 +190,9 @@
       {
         "id": "PRT.6",
         "path": "PRT.6",
-        "short": "PRT-6",
+        "short": "- PRT.6 - ",
         "definition": "Definition: This field contains a code identifying the provider type for the participating person. This attribute correlates to the following master file attribute: _STF-4 Staff Type_. Coded values from the correlated master file table are used; the user defined master file table is used as the coding system for this attribute. For example, if you are using values from _STF-2 Staff Type_, the coding system would be HL70182 which is the table number for the user defined Staff Type table. This field is included in this segment to support international requirements. When ROL is used in an encounter message, it is not intended as a master file update.",
-        "comment": "Condition: This field may only be valued if _PRT-5 Person_ is valued.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -197,7 +200,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -213,9 +216,9 @@
       {
         "id": "PRT.7",
         "path": "PRT.7",
-        "short": "PRT-7",
+        "short": "- PRT.7 - ",
         "definition": "Definition: This field identifies the environment in which the participant acts in the role specified in _PRT-3 Action Reason_. In the case of a person, the environment is not the specialty for the provider. The specialty information for the provider is defined in the PRA segment.",
-        "comment": "This attribute is included in the PRT segment to allow communication of this data when the participant information may not have been communicated previously in a master file or to provide better context. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70406[_User-defined table 0406 - Organization unit type_]. This field is included in this segment to support international requirements, and is not intended as a master file update.\n\nCondition: This field may only be valued if PRT-5 Person is valued.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -223,7 +226,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -243,9 +246,9 @@
       {
         "id": "PRT.8",
         "path": "PRT.8",
-        "short": "PRT-8",
+        "short": "- PRT.8 - ",
         "definition": "Definition: The organization that is involved in the participation. If _PRT-5 Person_ is valued, it reflects the affiliation of the individual participating as identified in _PRT-4 Role of Participation_. Otherwise the organization is directly participating as identified in _PRT-4 Role of Participation_.",
-        "comment": "If this attribute repeats, all instances must represent the same organization.\n\nCondition: At least one of the PRT-5 Person, PRT-8 Organization, PRT-9 Location, or PRT-10 Device or PRT-22 Device Type fields must be valued.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -253,7 +256,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XON"
@@ -269,9 +272,9 @@
       {
         "id": "PRT.9",
         "path": "PRT.9",
-        "short": "PRT-9",
+        "short": "- PRT.9 - ",
         "definition": "Definition: This field specifies the physical location (e.g., nurse station, ancillary service location, clinic, or floor) that is participating. If either _PRT-5 Person_ or _PRT-8 Organization_ is valued, it reflects the location of the individual or organization participating as identified in _PRT-4 Role of Participation_. Otherwise the location is directly participating as identified in _PRT-4 Role of Participation_.",
-        "comment": "If this attribute repeats, all instances must represent the same organization.\n\nCondition: At least one of the PRT-5 Person, PRT-8 Organization, PRT-9 Location, or PRT-10 Device or PRT-22 Device Type fields must be valued.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -279,7 +282,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -295,9 +298,9 @@
       {
         "id": "PRT.10",
         "path": "PRT.10",
-        "short": "PRT-10",
+        "short": "- PRT.10 - ",
         "definition": "Definition: Identifier for the device participating. This may reflect an unstructured or a structured identifier such as FDA UDI, RFID, IEEE EUI-64 identifiers, or bar codes.",
-        "comment": "Example: The device used to register the shipment at the waypoint.\n\nIf this attribute repeats, all instances must represent the same device.\n\nCondition: At least one of the PRT-5 Person, PRT-8 Organization, PRT-9 Location, or PRT-10 Device or PRT-22 Device Type fields must be valued.\n\nIf this field contains an FDA UDI, it shall contain the entire Human Readable Form of the UDI. For example, a GS1-based UDI would be represented as follows:\n\n|(01)00643169001763(17)160712(21)21A11F4855^^2.16.840.1.113883.3.3719^ISO|\n\nA HIBCC-based example would be represented as follows:\n\n|+H123PARTNO1234567890120/$$420020216LOT123456789012345/SXYZ4567890123 45678/16D20130202C^^2.16.840.1.113883.3.3719^ISO\n\nAn ICCBBA-based example would be represented as follows:\n\n|=/A9999XYZ100T0944=,000025=A99971312345600=>014032=}013032\\T\\,1000000000000XYZ123^^2.16.840.1.113883.3.3719^ISO|\n\nOr for ICCBBA (for blood bags only) an example would be represented as follows:\n\n|=)1TE123456A\\T\\)RZ12345678^^2.16.840.1.113883.3.3719^ISO|\n\nThe identifier root shall be the OID assigned to UDI. For example, for FDA UDIs the root shall be 2.16.840.1.113883.3.3719, and the extension shall be the Human Readable Form appropriate for the style of content. When captured as a simple string, the string shall be the Human Readable Form appropriate for the style of content. The content style can be determined from the leading characters of the content:\n\nUDIs beginning with:\n\n‘(‘ are in the GS1 Human Readable style;\n\n‘0-9’ are a GS1 DI (containing only the DI value, no PI or GS1 AI);\n\n‘+‘ are in the HIBCC Human Readable style;\n\n‘=‘ or ‘&’ are in the ICCBBA Human Readable style.\n\nNote: If “&” is used in the UDI while one of the delimiters in MSH.2 includes “&” as well, it must be properly escaped per Chapter 2.7.\n\nThe exchange of UDI sub-elements in PRT-16 through PRT-21 is not required when the full UDI string is provided in PRT-10. Whether to include some or all these fields as well when PRT-10 is present with a UDI that the rules are subject to specific implementation guides that will have to consider the patient safety implications of potentially conflicting data.\n\nWhen a UDI is provided and sub-elements are also provided, then for those sub-elements that are valued, the content must match the content encoded in the UDI if it is encoded within the UDI.\n\nWhen communicating a UDI, the UDI may either be uniquely identifying an instance of a device, or a type of device. This can be asserted based on the inclusion or absence of a serial number in the Product Identifier section of the UDI. When the serial number is present, PRT-10 must be used, while if it is absent, PRT-22 must be used.\n\n*Caution:* The UDI may contain personally identifying information in the form of the device *serial number* which may be used to link to other information on a patient. Security and privacy consideration should be addressed, particularly when sending a UDI with a serial number, as that may inadvertently be able to identify a patient. Note: In the US realm that would be addressed by HIPAA.\n\nNote: PRT-10 Device is a repeating field. Additional device identifiers, such as an IEEE EUI-64 may also be contained in this field.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -305,7 +308,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -321,9 +324,9 @@
       {
         "id": "PRT.11",
         "path": "PRT.11",
-        "short": "PRT-11",
+        "short": "- PRT.11 - ",
         "definition": "Definition: This field contains the date/time when the participation began.",
-        "comment": "In the case of waypoints, this reflects the time a shipment arrives at the waypoint.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -331,7 +334,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -347,9 +350,9 @@
       {
         "id": "PRT.12",
         "path": "PRT.12",
-        "short": "PRT-12",
+        "short": "- PRT.12 - ",
         "definition": "Definition: This field contains the date/time when the participation ended.",
-        "comment": "In the case of waypoints, this reflects the time a shipment departs from the waypoint.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -357,7 +360,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -373,8 +376,9 @@
       {
         "id": "PRT.13",
         "path": "PRT.13",
-        "short": "PRT-13",
+        "short": "- PRT.13 - ",
         "definition": "Definition: This field contains the qualitative length of time for participation (e.g., until the next assessment, four days, until discharge, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -382,7 +386,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -398,9 +402,9 @@
       {
         "id": "PRT.14",
         "path": "PRT.14",
-        "short": "PRT-14",
+        "short": "- PRT.14 - ",
         "definition": "Definition: This field contains addresses associated with the participation. The address can repeat to indicate alternate addresses or an alternate expression of the same address.",
-        "comment": "Condition: The address must be present if the Participation is Performing Organization Medical Director.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -408,7 +412,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XAD"
@@ -424,8 +428,9 @@
       {
         "id": "PRT.15",
         "path": "PRT.15",
-        "short": "PRT-15",
+        "short": "- PRT.15 - ",
         "definition": "Definition: The waypoint telecommunication address field carries telecommunications addresses for the waypoint. These telecommunications addresses are used to contact the waypoint for additional information regarding the receipt of the shipment. The address can repeat to indicate alternate addresses or an alternate expression of the same address.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -433,7 +438,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XTN"
@@ -449,9 +454,9 @@
       {
         "id": "PRT.16",
         "path": "PRT.16",
-        "short": "PRT-16",
+        "short": "- PRT.16 - ",
         "definition": "Definition: Provides the U.S. FDA UDI _device identifier_ (DI) element.",
-        "comment": "This is the first component in the UDI and acts as the look up key for the Global Unique Device Identification Database (GUDIDfootnote:[See www.fda.gov/udi]), and may be used for retrieving additional attributes.\n\nWhen exchanging Device Identifiers (DI) the root shall be the OID, or standards’ appropriate corollary to the OID, assigned to DI and the extension shall be the Human Readable Form of the content. For example, for DIs the root shall be:\n\nGS1 DIs: 2.51.1.1\n\nHIBCC DIs: 1.0.15961.10.816\n\nICCBBA DIs: 2.16.840.1.113883.6.18.1.17 for Blood containers and 2.16.840.1.113883.6.18.1.34 otherwise.\n\nExample: |00643169001763^^2.51.1.1^ISO|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -459,7 +464,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -475,9 +480,9 @@
       {
         "id": "PRT.17",
         "path": "PRT.17",
-        "short": "PRT-17",
+        "short": "- PRT.17 - ",
         "definition": "Definition: Date and time when the device was manufacturered.",
-        "comment": "Note: The user system may need to convert the date and optional hour from the UDI Human Readable Form to a timestamp style data type, augmenting the date as required to provide for a complete date and optionally the hour.\n\nExample: |20140401|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -485,7 +490,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -501,9 +506,9 @@
       {
         "id": "PRT.18",
         "path": "PRT.18",
-        "short": "PRT-18",
+        "short": "- PRT.18 - ",
         "definition": "Definition: Date and time when the device is no longer approved for use.",
-        "comment": "Note: The user system may need to convert the date and optional hour from the UDI Human Readable Form to a timestamp style data type, augmenting the date as required to provide for a complete date and optionally the hour.\n\nExample: |20160712|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -511,7 +516,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -527,9 +532,9 @@
       {
         "id": "PRT.19",
         "path": "PRT.19",
-        "short": "PRT-19",
+        "short": "- PRT.19 - ",
         "definition": "Definition: Alphanumeric string that identifies the device’s production lot number.",
-        "comment": "Example: |123ABC|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -537,7 +542,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -553,9 +558,9 @@
       {
         "id": "PRT.20",
         "path": "PRT.20",
-        "short": "PRT-20",
+        "short": "- PRT.20 - ",
         "definition": "Definition: Manufacturer’s serial number for this device.",
-        "comment": "CAUTION: See the related privacy considerations discussion in PRT-10.\n\nExample: |21A11F4855|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -563,7 +568,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -579,9 +584,9 @@
       {
         "id": "PRT.21",
         "path": "PRT.21",
-        "short": "PRT-21",
+        "short": "- PRT.21 - ",
         "definition": "Definition: Identifies a device related to a donation (e.g., whole blood).",
-        "comment": "When exchanging Donation Identification Numbers (DIN) the root shall be the OID assigned to DIN and the extension shall be the Human Readable Form of the content. For example, for DINs the root shall be:\n\nICCBBA DINs: 2.16.840.1.113883.6.18.2.1\n\nAn ICCBBA DIN OID is available for reference where required, but is not required when the specific data element is scoped to ICCBBA DINs.\n\nExample: | RA12345678BA123^^2.16.840.1.113883.6.18.1.34^ISO|",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -589,7 +594,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -605,9 +610,9 @@
       {
         "id": "PRT.22",
         "path": "PRT.22",
-        "short": "PRT-22",
+        "short": "- PRT.22 - ",
         "definition": "Definition: This field contains the type of device used in the participation.",
-        "comment": "When communicating a UDI, the UDI may either be uniquely identifying an instance of a device, or a type of device. This can be asserted based on the inclusion or absence of a serial number in the Product Identifier section of the UDI. When the serial number is present, PRT-10 must be used, while if it is absent, PRT-22 must be used.\n\nWhen communicating a UDI in this field, the coding system used is limited to FDA (FDAUDI), HIBCC (HIBUDI), ICCBBA (ICCUDI), and GS1 (GS1UDI) coding systems defined in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70396[HL7 Table 0396].\n\nCondition: At least one of the PRT-5 Person, PRT-8 Organization, PRT-9 Location, or PRT-10 Device or PRT-22 Device Type fields must be valued.\n\nSee Externally HL7 defined HL70961 in Chapter 2C for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -615,7 +620,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -635,8 +640,9 @@
       {
         "id": "PRT.23",
         "path": "PRT.23",
-        "short": "PRT-23",
+        "short": "- PRT.23 - ",
         "definition": "Definition: This field contains the preferred method to use when communicating particularly when the contact is a person or organization This is typically used in combination with PRT-5 Person, and/or PRT-8 Organization. Refer to User-defined Table 0185 - Preferred Method of Contact in Chapter 2C, \"Code Tables\", for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -644,7 +650,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -664,8 +670,9 @@
       {
         "id": "PRT.24",
         "path": "PRT.24",
-        "short": "PRT-24",
+        "short": "- PRT.24 - ",
         "definition": "Definition: This field contains the contact identifier to use when communicating particularly when the contact is a person or organization This is typically used in combination with PRT-5 Person, and/or PRT-8 Organization. This repeating field contains the contact's unique identifiers such as UPIN, Medicare and Medicaid numbers.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -673,7 +680,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "PLN"
@@ -691,5 +698,5 @@
   "title": "HL7 v2 PRT Segment Definition",
   "name": "PRT",
   "type": "PRT",
-  "date": "2025-06-05T18:07:30Z"
+  "date": "2025-03-06T16:07:37Z"
 }

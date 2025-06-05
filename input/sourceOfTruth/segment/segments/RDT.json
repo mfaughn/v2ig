@@ -26,8 +26,9 @@
       {
         "id": "RDT.1",
         "path": "RDT.1",
-        "short": "RDT-1",
+        "short": "- RDT.1 - ",
         "definition": "Definition: This field is a requested field. Fields occur in the position order defined for the query or table (unless overridden by an optional RDF segment on a stored procedure request or Virtual Table query message), separated by field delimiters.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "Varies"
@@ -53,5 +54,5 @@
   "title": "HL7 v2 RDT Segment Definition",
   "name": "RDT",
   "type": "RDT",
-  "date": "2025-06-05T18:07:29Z"
+  "date": "2025-03-06T16:07:36Z"
 }

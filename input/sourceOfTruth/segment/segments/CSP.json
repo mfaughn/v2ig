@@ -26,9 +26,9 @@
       {
         "id": "CSP.1",
         "path": "CSP.1",
-        "short": "CSP-1",
+        "short": "- CSP.1 - ",
         "definition": "Definition: This field identifies the phase of the study that a patient has entered. The set of codes will generally be developed for each clinical trial, although there are patterns that trials in particular disease or prevention categories may follow. The phase structure will be based on data collation and reporting needs for the study. It is an operational structure and need not be discussed in the clinical trial protocol documentation or even made known to patient care or data collection personnel. The coding system will usually be developed by the sponsor for multicentered clinical trials to standardize the receipt of automated data. Local codes could be added if an additional local message is desired. Otherwise, local coding conventions will be used. Refer to Table 0587 - Study Phase Identifier in Chapter 2C for valid values.",
-        "comment": "Example:\n\n2^Init Rx, Crs 1^NCI T93‑0807 Phases",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -56,8 +56,9 @@
       {
         "id": "CSP.2",
         "path": "CSP.2",
-        "short": "CSP-2",
+        "short": "- CSP.2 - ",
         "definition": "Definition: This field contains the date the patient began this phase interval. The time is optional.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -65,7 +66,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -81,8 +82,9 @@
       {
         "id": "CSP.3",
         "path": "CSP.3",
-        "short": "CSP-3",
+        "short": "- CSP.3 - ",
         "definition": "Definition: This field contains the date the patient ended this phase interval.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -90,7 +92,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -106,8 +108,9 @@
       {
         "id": "CSP.4",
         "path": "CSP.4",
-        "short": "CSP-4",
+        "short": "- CSP.4 - ",
         "definition": "Definition: This field contains the disposition of the patient's data for this phase interval for quality control and data analysis purposes. The set of codes will vary across clinical trials. An example answer set: *Complete, Adverse Events Only, Outcome Only, None, Unknown*. Refer to Table 0588 - Study Phase Evaluability in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -115,7 +118,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -137,5 +140,5 @@
   "title": "HL7 v2 CSP Segment Definition",
   "name": "CSP",
   "type": "CSP",
-  "date": "2025-06-05T18:07:30Z"
+  "date": "2025-03-06T16:07:37Z"
 }

@@ -26,8 +26,9 @@
       {
         "id": "SCD.1",
         "path": "SCD.1",
-        "short": "SCD-1",
+        "short": "- SCD.1 - ",
         "definition": "Definition: The time that the load cycle begins.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "TM"
@@ -51,8 +52,9 @@
       {
         "id": "SCD.2",
         "path": "SCD.2",
-        "short": "SCD-2",
+        "short": "- SCD.2 - ",
         "definition": "Definition: The number of cycles that have been completed.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +62,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -89,8 +91,9 @@
       {
         "id": "SCD.3",
         "path": "SCD.3",
-        "short": "SCD-3",
+        "short": "- SCD.3 - ",
         "definition": "Definition: The maximum temperature achieved during a specific cycle.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -98,7 +101,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -114,8 +117,9 @@
       {
         "id": "SCD.4",
         "path": "SCD.4",
-        "short": "SCD-4",
+        "short": "- SCD.4 - ",
         "definition": "Definition: The minimum temperature achieved during a specific cycle.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -123,7 +127,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -139,8 +143,9 @@
       {
         "id": "SCD.5",
         "path": "SCD.5",
-        "short": "SCD-5",
+        "short": "- SCD.5 - ",
         "definition": "Definition: A number assigned to the load by the anti-microbial device. This number is incremented by the machine per cycle during the day and reset at midnight.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -148,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -177,8 +182,9 @@
       {
         "id": "SCD.6",
         "path": "SCD.6",
-        "short": "SCD-6",
+        "short": "- SCD.6 - ",
         "definition": "Definition: The actual amount of cycle time spent in the conditioning phase. For example, in a pre-vac sterilizer the condition phase is achieved by pulsing the machine six times to create a vacuum.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -186,7 +192,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -202,8 +208,9 @@
       {
         "id": "SCD.7",
         "path": "SCD.7",
-        "short": "SCD-7",
+        "short": "- SCD.7 - ",
         "definition": "Definition: The actual amount of cycle time spent sterilizing supplies.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -211,7 +218,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -227,8 +234,9 @@
       {
         "id": "SCD.8",
         "path": "SCD.8",
-        "short": "SCD-8",
+        "short": "- SCD.8 - ",
         "definition": "Definition: The actual amount of cycle time spent draining pressure from the sterilizer chamber.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -236,7 +244,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -252,8 +260,9 @@
       {
         "id": "SCD.9",
         "path": "SCD.9",
-        "short": "SCD-9",
+        "short": "- SCD.9 - ",
         "definition": "Definition: The sum of time spent in all phases of a cycle.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -261,7 +270,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -277,8 +286,9 @@
       {
         "id": "SCD.10",
         "path": "SCD.10",
-        "short": "SCD-10",
+        "short": "- SCD.10 - ",
         "definition": "Definition: The status of a device. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70682[_User-defined Table 0682 – Device Status_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -286,7 +296,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -306,8 +316,9 @@
       {
         "id": "SCD.11",
         "path": "SCD.11",
-        "short": "SCD-11",
+        "short": "- SCD.11 - ",
         "definition": "Definition: The date and time that the cycle started.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -315,7 +326,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -331,8 +342,9 @@
       {
         "id": "SCD.12",
         "path": "SCD.12",
-        "short": "SCD-12",
+        "short": "- SCD.12 - ",
         "definition": "Definition: The amount of cycle time spent drying the load.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -340,7 +352,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -356,8 +368,9 @@
       {
         "id": "SCD.13",
         "path": "SCD.13",
-        "short": "SCD-13",
+        "short": "- SCD.13 - ",
         "definition": "Definition: The amount of pressure that the chamber can hold expressed as barometric pressure.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -365,7 +378,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -381,8 +394,9 @@
       {
         "id": "SCD.14",
         "path": "SCD.14",
-        "short": "SCD-14",
+        "short": "- SCD.14 - ",
         "definition": "Definition: Amount of overdrive above the sterilize temperature.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -390,7 +404,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -406,8 +420,9 @@
       {
         "id": "SCD.15",
         "path": "SCD.15",
-        "short": "SCD-15",
+        "short": "- SCD.15 - ",
         "definition": "Definition: The current temperature in the anti-microbial device.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -415,7 +430,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -431,8 +446,9 @@
       {
         "id": "SCD.16",
         "path": "SCD.16",
-        "short": "SCD-16",
+        "short": "- SCD.16 - ",
         "definition": "Definition: The time of day that the cycle completed.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -440,7 +456,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "TM"
@@ -456,8 +472,9 @@
       {
         "id": "SCD.17",
         "path": "SCD.17",
-        "short": "SCD-17",
+        "short": "- SCD.17 - ",
         "definition": "Definition: The temperature reached during a cycle, which fell below the required temperature range.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -465,7 +482,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -481,8 +498,9 @@
       {
         "id": "SCD.18",
         "path": "SCD.18",
-        "short": "SCD-18",
+        "short": "- SCD.18 - ",
         "definition": "Definition: The temperature reached during a cycle, which exceeded the required temperature.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -490,7 +508,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -506,8 +524,9 @@
       {
         "id": "SCD.19",
         "path": "SCD.19",
-        "short": "SCD-19",
+        "short": "- SCD.19 - ",
         "definition": "Definition: A notification that the cycle was aborted. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -515,7 +534,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -535,8 +554,9 @@
       {
         "id": "SCD.20",
         "path": "SCD.20",
-        "short": "SCD-20",
+        "short": "- SCD.20 - ",
         "definition": "Definition: A notification that the time, temperature, or pressure reached is invalid for a specific phase of a cycle. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -544,7 +564,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -564,8 +584,9 @@
       {
         "id": "SCD.21",
         "path": "SCD.21",
-        "short": "SCD-21",
+        "short": "- SCD.21 - ",
         "definition": "Definition: A notification that the charge phase in the cycle has exceeded the maximum time allowed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -573,7 +594,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -593,8 +614,9 @@
       {
         "id": "SCD.22",
         "path": "SCD.22",
-        "short": "SCD-22",
+        "short": "- SCD.22 - ",
         "definition": "Definition: A notification that the exhaust phase in the cycle has exceeded the maximum time allowed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -602,7 +624,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -622,8 +644,9 @@
       {
         "id": "SCD.23",
         "path": "SCD.23",
-        "short": "SCD-23",
+        "short": "- SCD.23 - ",
         "definition": "Definition: A notification that the fast exhaust phase in the cycle has exceeded the maximum time allowed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -631,7 +654,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -651,8 +674,9 @@
       {
         "id": "SCD.24",
         "path": "SCD.24",
-        "short": "SCD-24",
+        "short": "- SCD.24 - ",
         "definition": "Definition: An indicator that specific anti-microbial device parameters have been set to system defaults. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -660,7 +684,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -680,8 +704,9 @@
       {
         "id": "SCD.25",
         "path": "SCD.25",
-        "short": "SCD-25",
+        "short": "- SCD.25 - ",
         "definition": "Definition: The name of the operator that unloaded the anti-microbial device.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -689,7 +714,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -705,8 +730,9 @@
       {
         "id": "SCD.26",
         "path": "SCD.26",
-        "short": "SCD-26",
+        "short": "- SCD.26 - ",
         "definition": "Definition: An indicator that the door is open. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -714,7 +740,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -734,8 +760,9 @@
       {
         "id": "SCD.27",
         "path": "SCD.27",
-        "short": "SCD-27",
+        "short": "- SCD.27 - ",
         "definition": "Definition: A notification that an error was encountered while reading the cycle data for a specific cycle. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -743,7 +770,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -763,8 +790,9 @@
       {
         "id": "SCD.28",
         "path": "SCD.28",
-        "short": "SCD-28",
+        "short": "- SCD.28 - ",
         "definition": "Definition: The type of cycle that is being executed. A cycle type is a specific sterilization method used for a specific type of supply item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70702[_User-defined Table 0702 – Cycle Type_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -772,7 +800,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -792,8 +820,9 @@
       {
         "id": "SCD.29",
         "path": "SCD.29",
-        "short": "SCD-29",
+        "short": "- SCD.29 - ",
         "definition": "Definition: The amount of time spent in the thermal rinse phase of a decontamination cycle.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -801,7 +830,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -817,8 +846,9 @@
       {
         "id": "SCD.30",
         "path": "SCD.30",
-        "short": "SCD-30",
+        "short": "- SCD.30 - ",
         "definition": "Definition: The amount of time spent in the wash phase of a decontamination cycle.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -826,7 +856,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -842,8 +872,9 @@
       {
         "id": "SCD.31",
         "path": "SCD.31",
-        "short": "SCD-31",
+        "short": "- SCD.31 - ",
         "definition": "Definition: The injection rate of a wash or dry agent.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -851,7 +882,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -867,9 +898,9 @@
       {
         "id": "SCD.32",
         "path": "SCD.32",
-        "short": "SCD-32",
+        "short": "- SCD.32 - ",
         "definition": "Definition: The unique identifier indicating the type of procedure performed on the patient with the supplies being sterilized.",
-        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70088[_HL7 Table 0088 – Procedure Code_] in Chapter 2C, Code Tables, for suggested values.\n\nAs of v2.6, the known applicable external coding systems include those in the referenced table. If the code set you are using is in this table, then you must use that designation.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -877,7 +908,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -897,8 +928,9 @@
       {
         "id": "SCD.33",
         "path": "SCD.33",
-        "short": "SCD-33",
+        "short": "- SCD.33 - ",
         "definition": "Definition: The unique identifier associating the patient with the supplies being sterilized.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -906,7 +938,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -922,8 +954,9 @@
       {
         "id": "SCD.34",
         "path": "SCD.34",
-        "short": "SCD-34",
+        "short": "- SCD.34 - ",
         "definition": "Definition: The unique identifier associating the physician with the supplies being sterilized, used for the procedure and patient identified in this message. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70010[_User-defined Table 0010 - Physician ID_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -931,7 +964,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -951,8 +984,9 @@
       {
         "id": "SCD.35",
         "path": "SCD.35",
-        "short": "SCD-35",
+        "short": "- SCD.35 - ",
         "definition": "Definition: The dilution ratio of peracetic acid to water.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -960,7 +994,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SN"
@@ -976,8 +1010,9 @@
       {
         "id": "SCD.36",
         "path": "SCD.36",
-        "short": "SCD-36",
+        "short": "- SCD.36 - ",
         "definition": "Definition: The amount of time spent in filling the sterilizer chamber with dilutant.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -985,7 +1020,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -1001,8 +1036,9 @@
       {
         "id": "SCD.37",
         "path": "SCD.37",
-        "short": "SCD-37",
+        "short": "- SCD.37 - ",
         "definition": "Definition: The temperature of the dilutant upon entering the sterilizer chamber.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1010,7 +1046,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -1028,5 +1064,5 @@
   "title": "HL7 v2 SCD Segment Definition",
   "name": "SCD",
   "type": "SCD",
-  "date": "2025-06-05T18:07:34Z"
+  "date": "2025-03-06T16:07:41Z"
 }

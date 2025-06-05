@@ -26,8 +26,9 @@
       {
         "id": "LAN.1",
         "path": "LAN.1",
-        "short": "LAN-1",
+        "short": "- LAN.1 - ",
         "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "LAN.2",
         "path": "LAN.2",
-        "short": "LAN-2",
+        "short": "- LAN.2 - ",
         "definition": "Definition: This field contains the language about which the Staff Member's has some knowledge. HL7 recommends using ISO table 639 as the suggested values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70296[_User-defined Table 0296 – Primary Language_].",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -93,9 +95,9 @@
       {
         "id": "LAN.3",
         "path": "LAN.3",
-        "short": "LAN-3",
+        "short": "- LAN.3 - ",
         "definition": "Definition: This field contains the ability the Staff Member possesses with respect to the language. HL7 recommends using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70403[_HL7 Table 0403 - Language Ability_].",
-        "comment": "[#_Hlt489245616 .anchor]####Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70403[_HL7 Table 0403 – Language Ability_] in Chapter 2C, Code Tables, for valid values. This table contains values for the Staff Member's ability to read, write, understand, etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -103,7 +105,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -123,9 +125,9 @@
       {
         "id": "LAN.4",
         "path": "LAN.4",
-        "short": "LAN-4",
+        "short": "- LAN.4 - ",
         "definition": "Definition: This field contains the level of knowledge the Staff Member possesses with respect to the language ability. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70404[_HL7 Table 0404 - Language Proficiency_].",
-        "comment": "[#_Hlt489245619 .anchor]####Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70404[_HL7 Table 0404 – Language Proficiency_] in Chapter 2C, Code Tables, for valid values. This table contains values for excellent, poor, fair etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -133,7 +135,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -155,5 +157,5 @@
   "title": "HL7 v2 LAN Segment Definition",
   "name": "LAN",
   "type": "LAN",
-  "date": "2025-06-05T18:07:33Z"
+  "date": "2025-03-06T16:07:39Z"
 }

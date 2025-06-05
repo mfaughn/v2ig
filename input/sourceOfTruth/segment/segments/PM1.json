@@ -26,9 +26,9 @@
       {
         "id": "PM1.1",
         "path": "PM1.1",
-        "short": "PM1-1",
+        "short": "- PM1.1 - ",
         "definition": "Definition: This field contains a unique identifier for the insurance plan. Refer to _User-defined Table 0072 - Insurance Plan ID_ in Chapter 2C, Code Tables, for suggested values. To eliminate a plan, the plan could be sent with null values in each subsequent element. If the respective systems can support it, a null value can be sent in the plan field.",
-        "comment": "The assigning authority for PM1-1, Health Plan ID is assumed to be the Entity named in PM1-2, Insurance Company ID.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -56,8 +56,9 @@
       {
         "id": "PM1.2",
         "path": "PM1.2",
-        "short": "PM1-2",
+        "short": "- PM1.2 - ",
         "definition": "Definition: This field contains unique identifiers for the insurance company. The assigning authority and identifier type code are strongly recommended for all CX data types.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -65,7 +66,7 @@
           }
         ],
         "min": 1,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -81,8 +82,9 @@
       {
         "id": "PM1.3",
         "path": "PM1.3",
-        "short": "PM1-3",
+        "short": "- PM1.3 - ",
         "definition": "Definition: This field contains the name of the insurance company. Multiple names for the same insurance company may be sent in this field.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -90,7 +92,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XON"
@@ -106,8 +108,9 @@
       {
         "id": "PM1.4",
         "path": "PM1.4",
-        "short": "PM1-4",
+        "short": "- PM1.4 - ",
         "definition": "Definition: This field contains the address of the insurance company. Multiple addresses for the same insurance company may be sent in this field. As of v 2.7, no assumptions can be made based on position or sequence. Specification of meaning based on sequence is deprecated.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -115,7 +118,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XAD"
@@ -131,8 +134,9 @@
       {
         "id": "PM1.5",
         "path": "PM1.5",
-        "short": "PM1-5",
+        "short": "- PM1.5 - ",
         "definition": "Definition: This field contains the name of the person who should be contacted at the insurance company. Multiple names for the same contact person may be sent in this field. As of v 2.7, no assumptions can be made based on position or sequence. Specification of meaning based on sequence is deprecated.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +144,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XPN"
@@ -156,8 +160,9 @@
       {
         "id": "PM1.6",
         "path": "PM1.6",
-        "short": "PM1-6",
+        "short": "- PM1.6 - ",
         "definition": "Definition: This field contains the phone number of the insurance company. Multiple phone numbers for the same insurance company may be sent in this field. As of v 2.7, no assumptions can be made based on position or sequence. Specification of meaning based on sequence is deprecated.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -165,7 +170,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XTN"
@@ -181,8 +186,9 @@
       {
         "id": "PM1.7",
         "path": "PM1.7",
-        "short": "PM1-7",
+        "short": "- PM1.7 - ",
         "definition": "Definition: This field contains the group number of the insured's insurance.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -190,7 +196,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -202,7 +208,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -219,8 +225,9 @@
       {
         "id": "PM1.8",
         "path": "PM1.8",
-        "short": "PM1-8",
+        "short": "- PM1.8 - ",
         "definition": "Definition: This field contains the group name of the insured's insurance.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -228,7 +235,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XON"
@@ -244,8 +251,9 @@
       {
         "id": "PM1.9",
         "path": "PM1.9",
-        "short": "PM1-9",
+        "short": "- PM1.9 - ",
         "definition": "Definition: This field contains the date that the insurance goes into effect.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -253,7 +261,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -269,8 +277,9 @@
       {
         "id": "PM1.10",
         "path": "PM1.10",
-        "short": "PM1-10",
+        "short": "- PM1.10 - ",
         "definition": "Definition: This field indicates the last date of service that the insurance will cover or be responsible for.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -278,7 +287,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -294,9 +303,9 @@
       {
         "id": "PM1.11",
         "path": "PM1.11",
-        "short": "PM1-11",
+        "short": "- PM1.11 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires the patient DOB. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y DOB Required\n\nN DOB Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -304,7 +313,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -324,9 +333,9 @@
       {
         "id": "PM1.12",
         "path": "PM1.12",
-        "short": "PM1-12",
+        "short": "- PM1.12 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires the patient Gender. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Patient Gender Required\n\nN Patient Gender Not Rquired",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -334,7 +343,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -354,9 +363,9 @@
       {
         "id": "PM1.13",
         "path": "PM1.13",
-        "short": "PM1-13",
+        "short": "- PM1.13 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires the patient’s Relationship to insured. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Patient’s relationship to insured Required\n\nN Patient’s relationship to insured Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -364,7 +373,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -384,9 +393,9 @@
       {
         "id": "PM1.14",
         "path": "PM1.14",
-        "short": "PM1-14",
+        "short": "- PM1.14 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires the patient Signature. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Patient’s relationship to insured Required\n\nN Patient’s relationship to insured Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -394,7 +403,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -414,9 +423,9 @@
       {
         "id": "PM1.15",
         "path": "PM1.15",
-        "short": "PM1-15",
+        "short": "- PM1.15 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires a diagnosis. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Diagnosis Required\n\nN Diagnosis Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -424,7 +433,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -444,9 +453,9 @@
       {
         "id": "PM1.16",
         "path": "PM1.16",
-        "short": "PM1-16",
+        "short": "- PM1.16 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires services to be listed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Services Required\n\nN Services Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -454,7 +463,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -474,9 +483,9 @@
       {
         "id": "PM1.17",
         "path": "PM1.17",
-        "short": "PM1-17",
+        "short": "- PM1.17 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires a patient name on all requests. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Patient’s name Required\n\nN Patient’s name Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -484,7 +493,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -504,9 +513,9 @@
       {
         "id": "PM1.18",
         "path": "PM1.18",
-        "short": "PM1-18",
+        "short": "- PM1.18 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires a patient address on all requests. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Patient’s Address Required\n\nN Patient’s Address Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -514,7 +523,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -534,9 +543,9 @@
       {
         "id": "PM1.19",
         "path": "PM1.19",
-        "short": "PM1-19",
+        "short": "- PM1.19 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires subscribers name on all requests. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Subscribers name Required\n\nN Subscribers name Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -544,7 +553,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -564,9 +573,9 @@
       {
         "id": "PM1.20",
         "path": "PM1.20",
-        "short": "PM1-20",
+        "short": "- PM1.20 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires workman compensation to be identified. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Workman compensation idenfication Required\n\nN Workman compensation idenfication Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -574,7 +583,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -594,9 +603,9 @@
       {
         "id": "PM1.21",
         "path": "PM1.21",
-        "short": "PM1-21",
+        "short": "- PM1.21 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires subscribers bill type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Subscribers bill type Required\n\nN Subscribers bill type Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -604,7 +613,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -624,9 +633,9 @@
       {
         "id": "PM1.22",
         "path": "PM1.22",
-        "short": "PM1-22",
+        "short": "- PM1.22 - ",
         "definition": "Definition: This field indicates whether this insurance carrier requires commerical carrier name and address. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[HL7 Table 0136 - Yes/no Indicator] in Chapter 2C, Code Tables, for valid values.",
-        "comment": "Y Commerical carrier name and address Required\n\nN Commerical carrier name and address Not Required",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -634,7 +643,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -654,9 +663,9 @@
       {
         "id": "PM1.23",
         "path": "PM1.23",
-        "short": "PM1-23",
+        "short": "- PM1.23 - ",
         "definition": "Definition: This field contains the policy number pattern. This describes what the policy number should look like. There will likely be multiple patterns to identify the Policy number. It is recommended that Edit patterns are a sequence of the characters ‘A’ for alpha, ‘N’ for numeric, ‘X’ for alphanumeric, ‘B’ for blank, and ‘*’ for wildcard. Digits positionally refer to the two-character edit pattern list in the corresponding list field.",
-        "comment": "Edit pattern lists are a sequence characters to respresent the format and size of the Policy Number.\n\nExample 1: The policy number has 3 numbers, 1 blank, 5 numbers and it would be defined in a Pattern as NNNBNNNNN\n\nExample 2: The policy number has 2 numerics, 2 characters for state, 1 blank 5 Alphanumerics and would be represented as NNCCBXXXXX",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -664,7 +673,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -680,9 +689,9 @@
       {
         "id": "PM1.24",
         "path": "PM1.24",
-        "short": "PM1-24",
+        "short": "- PM1.24 - ",
         "definition": "Definition: This field contains the Group number pattern. This describes what the group number should look like. There will likely be multiple patterns to identify the group number. It is recommended that Edit patterns are a sequence of the characters ‘A’ for alpha, ‘N’ for numeric, ‘X’ for alphanumeric, ‘B’ for blank, and ‘*’ for wildcard. Digits positionally refer to the two-character edit pattern list in the corresponding list field.",
-        "comment": "Edit pattern lists are a sequence characters to respresent the format and size of the Group Number.\n\nExample 1: The group number has 3 numbers, 1 blank, 5 numbers and it would be defined in a Pattern as NNNBNNNNN\n\nExample 2: The group number has 2 numerics, 2 characters for state, 1 blank 5 Alphanumerics and would be represented as NNCCBXXXXX",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -690,7 +699,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -708,5 +717,5 @@
   "title": "HL7 v2 PM1 Segment Definition",
   "name": "PM1",
   "type": "PM1",
-  "date": "2025-06-05T18:07:31Z"
+  "date": "2025-03-06T16:07:38Z"
 }

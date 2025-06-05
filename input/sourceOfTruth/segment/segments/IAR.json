@@ -26,8 +26,9 @@
       {
         "id": "IAR.1",
         "path": "IAR.1",
-        "short": "IAR-1",
+        "short": "- IAR.1 - ",
         "definition": "Definition: This field identifies the specific allergic reaction that was documented. This element may conform to some external, standard coding system, or it may conform to local, largely textual or mnemonic descriptions (e.g., convulsions, sneeze, rash, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -51,8 +52,9 @@
       {
         "id": "IAR.2",
         "path": "IAR.2",
-        "short": "IAR-2",
+        "short": "- IAR.2 - ",
         "definition": "Definition: This field indicates the general severity of the allergy. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70128[_User-defined Table 0128 - Allergy severity code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +62,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -80,8 +82,9 @@
       {
         "id": "IAR.3",
         "path": "IAR.3",
-        "short": "IAR-3",
+        "short": "- IAR.3 - ",
         "definition": "Definition: This field contains the reason why the patient should not be exposed to a substance. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70436[_User-defined Table 0436 - Sensitivity to causative Agent code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -89,7 +92,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -109,8 +112,9 @@
       {
         "id": "IAR.4",
         "path": "IAR.4",
-        "short": "IAR-4",
+        "short": "- IAR.4 - ",
         "definition": "Definition: This field contains a textual description of the actions that were performed in response to the reaction.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +122,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -149,5 +153,5 @@
   "title": "HL7 v2 IAR Segment Definition",
   "name": "IAR",
   "type": "IAR",
-  "date": "2025-06-05T18:07:27Z"
+  "date": "2025-03-06T16:07:35Z"
 }

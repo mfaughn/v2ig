@@ -26,8 +26,9 @@
       {
         "id": "PDC.1",
         "path": "PDC.1",
-        "short": "PDC-1",
+        "short": "- PDC.1 - ",
         "definition": "Definition: This field contains the identity of the manufacturer/distributor.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XON"
@@ -51,8 +52,9 @@
       {
         "id": "PDC.2",
         "path": "PDC.2",
-        "short": "PDC-2",
+        "short": "- PDC.2 - ",
         "definition": "Definition: This field contains the country to which this product detail is relevant. ISO 3166 provides a list of country codes that may be used. Refer to Table 0675 - Country in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +62,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -80,8 +82,9 @@
       {
         "id": "PDC.3",
         "path": "PDC.3",
-        "short": "PDC-3",
+        "short": "- PDC.3 - ",
         "definition": "Definition: This field contains the name under which the product is marketed by this manufacturer.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -89,7 +92,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -118,8 +121,9 @@
       {
         "id": "PDC.4",
         "path": "PDC.4",
-        "short": "PDC-4",
+        "short": "- PDC.4 - ",
         "definition": "Definition: This field contains the name used by the manufacturer to describe the family of products to which this product belongs.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +131,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -156,8 +160,9 @@
       {
         "id": "PDC.5",
         "path": "PDC.5",
-        "short": "PDC-5",
+        "short": "- PDC.5 - ",
         "definition": "Definition: This field contains the name generically used to identify the product. Refer to Table 0676 - Generic Name in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -165,7 +170,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -185,8 +190,9 @@
       {
         "id": "PDC.6",
         "path": "PDC.6",
-        "short": "PDC-6",
+        "short": "- PDC.6 - ",
         "definition": "Definition: This field contains the manufacturer's model identifier for the product.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -194,7 +200,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -223,8 +229,9 @@
       {
         "id": "PDC.7",
         "path": "PDC.7",
-        "short": "PDC-7",
+        "short": "- PDC.7 - ",
         "definition": "Definition: This field contains the manufacturer's catalogue identifier for the product.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -232,7 +239,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -261,8 +268,9 @@
       {
         "id": "PDC.8",
         "path": "PDC.8",
-        "short": "PDC-8",
+        "short": "- PDC.8 - ",
         "definition": "Definition: This field contains any other identifier used to for the product.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -270,7 +278,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -299,8 +307,9 @@
       {
         "id": "PDC.9",
         "path": "PDC.9",
-        "short": "PDC-9",
+        "short": "- PDC.9 - ",
         "definition": "Definition: This field contains the product code from an external coding system such as that used by the CDRH at the FDA. Refer to Table 0677 - Product Code in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -308,7 +317,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -328,8 +337,9 @@
       {
         "id": "PDC.10",
         "path": "PDC.10",
-        "short": "PDC-10",
+        "short": "- PDC.10 - ",
         "definition": "Definition: This field contains the basis for marketing approval. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70330[_HL7 Table 0330 - Marketing Basis_] for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -337,7 +347,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -353,7 +363,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -370,8 +380,9 @@
       {
         "id": "PDC.11",
         "path": "PDC.11",
-        "short": "PDC-11",
+        "short": "- PDC.11 - ",
         "definition": "Definition: This field contains the designation or description of the marketing basis.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -379,7 +390,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -408,8 +419,9 @@
       {
         "id": "PDC.12",
         "path": "PDC.12",
-        "short": "PDC-12",
+        "short": "- PDC.12 - ",
         "definition": "Definition: This field contains the shelf life of the product as labeled. This will usually be in months or years. If there is no shelf life indicated in the product labeling, this field will be empty.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -417,7 +429,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -433,8 +445,9 @@
       {
         "id": "PDC.13",
         "path": "PDC.13",
-        "short": "PDC-13",
+        "short": "- PDC.13 - ",
         "definition": "Definition: This field contains the shelf life of the product expected by the manufacturer. This will usually be in months or years.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -442,7 +455,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -458,8 +471,9 @@
       {
         "id": "PDC.14",
         "path": "PDC.14",
-        "short": "PDC-14",
+        "short": "- PDC.14 - ",
         "definition": "Definition: This field contains the date the product was first marketed in the country.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -467,7 +481,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -483,8 +497,9 @@
       {
         "id": "PDC.15",
         "path": "PDC.15",
-        "short": "PDC-15",
+        "short": "- PDC.15 - ",
         "definition": "Definition: This field contains the date the product was last marketed in the country. This field will be omitted if the product is still being marketed.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -492,7 +507,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -510,5 +525,5 @@
   "title": "HL7 v2 PDC Segment Definition",
   "name": "PDC",
   "type": "PDC",
-  "date": "2025-06-05T18:07:31Z"
+  "date": "2025-03-06T16:07:38Z"
 }

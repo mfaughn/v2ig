@@ -26,8 +26,9 @@
       {
         "id": "ADJ.1",
         "path": "ADJ.1",
-        "short": "ADJ-1",
+        "short": "- ADJ.1 - ",
         "definition": "Definition: Unique Adjustment Number assigned by the Provider Application.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -51,8 +52,9 @@
       {
         "id": "ADJ.2",
         "path": "ADJ.2",
-        "short": "ADJ-2",
+        "short": "- ADJ.2 - ",
         "definition": "Definition: Unique Adjustment Number assigned by the Payer Application.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +62,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -76,8 +78,9 @@
       {
         "id": "ADJ.3",
         "path": "ADJ.3",
-        "short": "ADJ-3",
+        "short": "- ADJ.3 - ",
         "definition": "Definition: Unique sequence number for this adjustment – starts with 1, then 2, etc., for each unique adjustment for the Product/Service Line Item.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -85,7 +88,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -97,7 +100,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -114,8 +117,9 @@
       {
         "id": "ADJ.4",
         "path": "ADJ.4",
-        "short": "ADJ-4",
+        "short": "- ADJ.4 - ",
         "definition": "Definition: Indicates the category of adjustment and is used to assist in determining which table is used for Adjustment Reason. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70564[_User-defined Table 0564 – Adjustment Category Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -123,7 +127,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -143,8 +147,9 @@
       {
         "id": "ADJ.5",
         "path": "ADJ.5",
-        "short": "ADJ-5",
+        "short": "- ADJ.5 - ",
         "definition": "Definition: Adjustment amount, such as taxes, deductibles, previously paid amount.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -152,7 +157,7 @@
           }
         ],
         "min": 0,
-        "max": 5,
+        "max": "*",
         "type": [
           {
             "code": "CP"
@@ -168,9 +173,9 @@
       {
         "id": "ADJ.6",
         "path": "ADJ.6",
-        "short": "ADJ-6",
+        "short": "- ADJ.6 - ",
         "definition": "Definition: Adjustment quantity.",
-        "comment": "X12 REF: table 673 Quantity Qualifier. New values from X12 673 can be added as required. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70560[_User-defined Table 0560 – Quantity Units_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -178,7 +183,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -198,8 +203,9 @@
       {
         "id": "ADJ.7",
         "path": "ADJ.7",
-        "short": "ADJ-7",
+        "short": "- ADJ.7 - ",
         "definition": "Definition: Reason for this adjustment. Codes used to explain a Provider adjustment to a Product/Service Group or Product/Service Line Item by a Provider. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70565[_User-defined Table 0565 – Provider Adjustment Reason Code_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -207,7 +213,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -227,8 +233,9 @@
       {
         "id": "ADJ.8",
         "path": "ADJ.8",
-        "short": "ADJ-8",
+        "short": "- ADJ.8 - ",
         "definition": "Definition: Description of adjustment, such as client instructions.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -236,7 +243,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -265,8 +272,9 @@
       {
         "id": "ADJ.9",
         "path": "ADJ.9",
-        "short": "ADJ-9",
+        "short": "- ADJ.9 - ",
         "definition": "Definition: Original value of data item noted in this adjustment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -274,7 +282,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -303,8 +311,9 @@
       {
         "id": "ADJ.10",
         "path": "ADJ.10",
-        "short": "ADJ-10",
+        "short": "- ADJ.10 - ",
         "definition": "Definition: Substituted value of data item noted in this adjustment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -312,7 +321,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -341,8 +350,9 @@
       {
         "id": "ADJ.11",
         "path": "ADJ.11",
-        "short": "ADJ-11",
+        "short": "- ADJ.11 - ",
         "definition": "Definition: Action requested of party that receives this adjustment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70569[_User-defined Table 0569 – Adjustment Action_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -350,7 +360,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -370,8 +380,9 @@
       {
         "id": "ADJ.12",
         "path": "ADJ.12",
-        "short": "ADJ-12",
+        "short": "- ADJ.12 - ",
         "definition": "Definition: Unique Provider Adjustment Number assigned by the Provider Application that is referenced by this Payer Adjustment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -379,7 +390,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -395,8 +406,9 @@
       {
         "id": "ADJ.13",
         "path": "ADJ.13",
-        "short": "ADJ-13",
+        "short": "- ADJ.13 - ",
         "definition": "Definition: Unique Provider Product/Service Line Item Number assigned by the Provider Application that is referenced by this Payer Adjustment; used for groups with multiple line items that need to be singled out by a Payer Adjustment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -404,7 +416,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -420,8 +432,9 @@
       {
         "id": "ADJ.14",
         "path": "ADJ.14",
-        "short": "ADJ-14",
+        "short": "- ADJ.14 - ",
         "definition": "Definition: Date/Time adjustment was made. May also be synonymous with Adjudication Date.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -429,7 +442,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -445,8 +458,9 @@
       {
         "id": "ADJ.15",
         "path": "ADJ.15",
-        "short": "ADJ-15",
+        "short": "- ADJ.15 - ",
         "definition": "Definition: Business organization that is responsible for the adjustment (e.g., Payer organization); can be used for a Payment/Remittance Advice for 1 Payee from multiple Payers.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -454,7 +468,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XON"
@@ -472,5 +486,5 @@
   "title": "HL7 v2 ADJ Segment Definition",
   "name": "ADJ",
   "type": "ADJ",
-  "date": "2025-06-05T18:07:33Z"
+  "date": "2025-03-06T16:07:40Z"
 }

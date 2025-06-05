@@ -26,8 +26,9 @@
       {
         "id": "CM1.1",
         "path": "CM1.1",
-        "short": "CM1-1",
+        "short": "- CM1.1 - ",
         "definition": "Definition: This field contains a number that uniquely identifies this transaction for the purpose of adding, changing, or deleting the transaction. For those messages that permit segments to repeat, the Set IF field is used to identify the repetitions.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "CM1.2",
         "path": "CM1.2",
-        "short": "CM1-2",
+        "short": "- CM1.2 - ",
         "definition": "Definition: This field should correspond to the study phase ID coding system in Chapter 7, section 7.7.2.1, \"Study Phase ID.\"",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -89,8 +91,9 @@
       {
         "id": "CM1.3",
         "path": "CM1.3",
-        "short": "CM1-3",
+        "short": "- CM1.3 - ",
         "definition": "Definition: This field contains a brief explanation for recipients to understand what the phase represents.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -98,7 +101,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -129,5 +132,5 @@
   "title": "HL7 v2 CM1 Segment Definition",
   "name": "CM1",
   "type": "CM1",
-  "date": "2025-06-05T18:07:31Z"
+  "date": "2025-03-06T16:07:38Z"
 }

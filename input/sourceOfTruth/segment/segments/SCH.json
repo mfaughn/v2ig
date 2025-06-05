@@ -26,9 +26,9 @@
       {
         "id": "SCH.1",
         "path": "SCH.1",
-        "short": "SCH-1",
+        "short": "- SCH.1 - ",
         "definition": "Definition: This field contains the placer application's permanent identifier for the appointment request (and the scheduled appointment itself, when it has been confirmed as a booked slot by the filler application). This is a composite field.",
-        "comment": "The first component is a string that identifies an individual appointment request, or a booked appointment. It is assigned by the placer application, and identifies an appointment request, and the subsequent scheduled appointment, uniquely among all such requests and/or booked appointments from a particular requesting application. If _SCH-1-Placer Appointment ID_ identifies a parent of a repeating schedule request, then the individual child scheduled appointments can be uniquely identified either by a new _SCH-1-Placer Appointment ID_ or by _SCH-23-Parent Placer Appointment ID_ plus an _SCH-3-Occurrence Number_.\n\nIf a schedule request originates from a placer it MUST have a placer appointment ID. If the filler sends responses, it may use the placer appointment ID and/or assign a filler appointment ID (which it would echo back to the placer to enable the placer application to associate the two). If the placer appointment ID is not present, the filler appointment ID must be present and vice versa.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -52,9 +52,9 @@
       {
         "id": "SCH.2",
         "path": "SCH.2",
-        "short": "SCH-2",
+        "short": "- SCH.2 - ",
         "definition": "Definition: This field contains the filler application's permanent identifier for the appointment request (and the scheduled appointment itself, when it has been confirmed as a booked slot by the filler application). This is a composite field.",
-        "comment": "The first component is a string of up to fifteen characters that identifies an individual appointment request, or a booked appointment. It is assigned by the filler application, and identifies an appointment request, and the subsequent scheduled appointment, uniquely among all such requests and/or booked appointments from a particular processing application. If _SCH-2-Filler Appointment ID_ identifies a parent of a repeating schedule request, then the individual child scheduled appointments can be uniquely identified either by a new _SCH-2-Filler Appointment ID_ or by _SCH-25-Parent Filler Appointment ID_ plus an _SCH-3-Occurrence Number_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +62,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -78,9 +78,9 @@
       {
         "id": "SCH.3",
         "path": "SCH.3",
-        "short": "SCH-3",
+        "short": "- SCH.3 - ",
         "definition": "Definition: This field is used in conjunction with _SCH-1-Placer Appointment ID_ and/or _SCH-2-Filler Appointment ID_ to uniquely identify an individual occurrence (a child) of a parent repeating schedule appointment.",
-        "comment": "This field is conditionally required. If the transaction using this segment is intended to apply only to one occurrence of a repeating appointment, and an occurrence number is required to uniquely identify the child appointment (that is, the child does not have a separate and unique _SCH-1-Placer Appointment ID_ or _SCH-2-Filler Appointment ID_), then this field is required.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +88,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -117,9 +117,9 @@
       {
         "id": "SCH.4",
         "path": "SCH.4",
-        "short": "SCH-4",
+        "short": "- SCH.4 - ",
         "definition": "Definition: This field contains a unique identifier for the Placer Group as referenced by the Placer application, the Filler application, or both. A Placer Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application and/or by the filler application.",
-        "comment": "Within each of the two subcomponents, the first component is a string that identifies a group of appointment requests. It is assigned by the Placer or Filler application, and it identifies an appointment group uniquely among all such groups of requests from a particular requesting application.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +127,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -143,9 +143,9 @@
       {
         "id": "SCH.5",
         "path": "SCH.5",
-        "short": "SCH-5",
+        "short": "- SCH.5 - ",
         "definition": "Definition: This field contains an identifier code for the schedule in which this appointment is (or will be) booked. This field is provided for instances in which filler applications maintain multiple schedules, and when a particular resource or set of resources is controlled by more than one of those schedules.",
-        "comment": "This field is provided on the SCH segment for informational purposes to applications fulfilling the placer, querying and auxiliary roles.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -169,9 +169,9 @@
       {
         "id": "SCH.6",
         "path": "SCH.6",
-        "short": "SCH-6",
+        "short": "- SCH.6 - ",
         "definition": "Definition: This field contains an identifier code for the reason that the notification event was triggered. This field may contain a code describing the cancel reason, the delete reason, the discontinue reason, the add reason, the block reason or any other code describing the reason that a specific event will occur.",
-        "comment": "This field should not have been made required but is retained as such for reasons of backwards compatibility.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -179,7 +179,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -195,8 +195,9 @@
       {
         "id": "SCH.7",
         "path": "SCH.7",
-        "short": "SCH-7",
+        "short": "- SCH.7 - ",
         "definition": "Definition: This field contains an identifier code for the reason that the appointment is to take place. This field may contain a Universal Service ID describing the observation/test/battery/procedure or other activity that is to take place during the requested appointment, similar to the Universal Service ID defined for the OBR segment in the Order Entry chapter (Chapter 4). It may also contain a site-specific code describing a pre-defined set of reasons that an appointment may be set to occur. This code can be based on local and/or universal codes. The use of universal codes is recommended. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70276[User-Defined Table 0276 - Appointment Reason Code]s_ in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -204,7 +205,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -224,8 +225,9 @@
       {
         "id": "SCH.8",
         "path": "SCH.8",
-        "short": "SCH-8",
+        "short": "- SCH.8 - ",
         "definition": "Definition: This field contains the identifier code for the type of appointment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70277[_User-Defined Table 0277 - Appointment Type Codes_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -233,7 +235,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -253,8 +255,7 @@
       {
         "id": "SCH.9",
         "path": "SCH.9",
-        "short": "SCH-9",
-        "comment": "*_As of version 2.5, this field was retained for backward compatibility only and withdrawn and removed as of v2.7._* Refer to the TQ1 segment described in Chapter 4.",
+        "short": "- SCH.9 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -262,7 +263,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -273,9 +274,9 @@
       {
         "id": "SCH.10",
         "path": "SCH.10",
-        "short": "SCH-10",
+        "short": "- SCH.10 - ",
         "definition": "Definition: This field contains a code describing the units of time used for expressing the _ARQ-9-Appointment Duration_ field. This field should be valued according to the recommendations in Chapters 2 and 7. If this component is not valued, the ISO base unit of seconds (code \"_s_\") is assumed. Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.",
-        "comment": "*_As of version 2.5, this field is retained for backward compatibility only._* Refer to the TQ1 segment described in Chapter 4.\n\nAs of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.\n\nUnit of Measure Coding Systems from HL7 Table 0396\n\nUnit of Measure Coding Systems from HL7 Table 0396\n|===\n|Coding System |Description |Comment\n|ISO+ |ISO 2955.83 (units of measure) with HL7 extensions |See chapter 7.\n|ANS+ |HL7 set of units of measure |HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.\n|===",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -283,7 +284,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -299,8 +300,7 @@
       {
         "id": "SCH.11",
         "path": "SCH.11",
-        "short": "SCH-11",
-        "comment": "*_As of version 2.5, this field was retained for backward compatibility only and withdrawn and removed as of v2.7._* Refer to the TQ1 segment described in Chapter 4.",
+        "short": "- SCH.11 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -308,7 +308,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -319,8 +319,9 @@
       {
         "id": "SCH.12",
         "path": "SCH.12",
-        "short": "SCH-12",
+        "short": "- SCH.12 - ",
         "definition": "Definition: This field identifies the person responsible for requesting the scheduling of a requested appointment. Most often, this person will be the same person responsible for executing the appointment.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -328,7 +329,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -344,8 +345,9 @@
       {
         "id": "SCH.13",
         "path": "SCH.13",
-        "short": "SCH-13",
+        "short": "- SCH.13 - ",
         "definition": "Definition: This field contains the phone number used to contact the _SCH-12-Placer Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -353,7 +355,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XTN"
@@ -369,8 +371,9 @@
       {
         "id": "SCH.14",
         "path": "SCH.14",
-        "short": "SCH-14",
+        "short": "- SCH.14 - ",
         "definition": "Definition: This field contains the address used to contact the _SCH-12-Placer Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -378,7 +381,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XAD"
@@ -394,8 +397,9 @@
       {
         "id": "SCH.15",
         "path": "SCH.15",
-        "short": "SCH-15",
+        "short": "- SCH.15 - ",
         "definition": "Definition: This field contains a code that identifies the location of the _SCH-12-Placer Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -403,7 +407,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -419,9 +423,9 @@
       {
         "id": "SCH.16",
         "path": "SCH.16",
-        "short": "SCH-16",
+        "short": "- SCH.16 - ",
         "definition": "Definition: This field identifies the person responsible for the scheduling of the requested appointment. Most often, this person will be the same person responsible for maintaining the schedule and for reviewing appointment requests.",
-        "comment": "This field should not have been made required but is retained as such for reasons of backward compatibility.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -429,7 +433,7 @@
           }
         ],
         "min": 1,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -445,8 +449,9 @@
       {
         "id": "SCH.17",
         "path": "SCH.17",
-        "short": "SCH-17",
+        "short": "- SCH.17 - ",
         "definition": "Definition: This field contains the phone number used to contact the _SCH-16-Filler Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -454,7 +459,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XTN"
@@ -470,8 +475,9 @@
       {
         "id": "SCH.18",
         "path": "SCH.18",
-        "short": "SCH-18",
+        "short": "- SCH.18 - ",
         "definition": "Definition: This field contains the address used to contact the _SCH-16-Filler Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -479,7 +485,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XAD"
@@ -495,8 +501,9 @@
       {
         "id": "SCH.19",
         "path": "SCH.19",
-        "short": "SCH-19",
+        "short": "- SCH.19 - ",
         "definition": "Definition: This field contains a code that identifies the location of the _SCH-16-Filler Contact Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -504,7 +511,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -520,9 +527,9 @@
       {
         "id": "SCH.20",
         "path": "SCH.20",
-        "short": "SCH-20",
+        "short": "- SCH.20 - ",
         "definition": "Definition: This field identifies the person responsible for entering the request for the scheduling of an appointment. It is included to provide an audit trail of persons responsible for the request. This person may be someone other than the placer contact person, who is responsible for entering orders and requests.",
-        "comment": "This field should not have been made required but is retained as such for reasons of backwards compatibility.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -530,7 +537,7 @@
           }
         ],
         "min": 1,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -546,8 +553,9 @@
       {
         "id": "SCH.21",
         "path": "SCH.21",
-        "short": "SCH-21",
+        "short": "- SCH.21 - ",
         "definition": "Definition: This field contains the phone number used to contact the _ARQ-19-Entered by Person_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -555,7 +563,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XTN"
@@ -571,8 +579,9 @@
       {
         "id": "SCH.22",
         "path": "SCH.22",
-        "short": "SCH-22",
+        "short": "- SCH.22 - ",
         "definition": "Definition: This field contains a code that identifies the location of the entered by person.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -580,7 +589,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "PL"
@@ -596,9 +605,9 @@
       {
         "id": "SCH.23",
         "path": "SCH.23",
-        "short": "SCH-23",
+        "short": "- SCH.23 - ",
         "definition": "Definition: This field relates a child to its parent, when a parent-child relationship exists. It contains the placer application's permanent identifier for the parent of the appointment request. This is a composite field.",
-        "comment": "The first component is a string that identifies the parent appointment request. It is assigned by the placer application, and identifies an appointment request uniquely among all such requests from a particular requesting application.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -606,7 +615,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -622,9 +631,9 @@
       {
         "id": "SCH.24",
         "path": "SCH.24",
-        "short": "SCH-24",
+        "short": "- SCH.24 - ",
         "definition": "Definition: This field relates a child to its parent, when a parent-child relationship exists. It contains the filler application's permanent identifier for the parent of the appointment request. This is a composite field.",
-        "comment": "The first component is a string that identifies the parent appointment request. It is assigned by the filler application, and it identifies an appointment request uniquely among all such requests on a particular processing application.\n\nThis is a conditionally required field. On initial messages where a filler has not yet assigned a filler appointment ID, this field should not contain a value. In all other subsequent messages, where a filler application has assigned a filler appointment ID, this field is required.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -632,7 +641,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -648,8 +657,9 @@
       {
         "id": "SCH.25",
         "path": "SCH.25",
-        "short": "SCH-25",
+        "short": "- SCH.25 - ",
         "definition": "Definition: This field contains a code describing the status of the appointment with respect to the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70278[_User-Defined Table 0278 - Filler Status Codes_] in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -657,7 +667,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -677,9 +687,9 @@
       {
         "id": "SCH.26",
         "path": "SCH.26",
-        "short": "SCH-26",
+        "short": "- SCH.26 - ",
         "definition": "Definition: This field is the placer application's order number for the order associated with this scheduling filler application response.",
-        "comment": "This field is described in detail in Section 4.5.1.2. It is an optional field, but if a Placer order number is present, then a Filler order number (Section 10.6.2.27) must also be present. Both this field and the Filler order number below may have been sent as part of the appointment request in the ARQ segment or they may be assigned by the scheduling filler application only.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -687,7 +697,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -703,9 +713,9 @@
       {
         "id": "SCH.27",
         "path": "SCH.27",
-        "short": "SCH-27",
+        "short": "- SCH.27 - ",
         "definition": "Definition: This field is the order number assigned by the filler application for the order associated with this scheduling filler response.",
-        "comment": "This field is described in detail in Chapter 4, Orders, section 4.5.1.3. It is conditionally mandatory depending on the presence of the placer order number (section _10.6.2.26_). This conditionally mandatory requirement addresses the concern that a Scheduling system cannot and should not create or fill an order. Therefore, an order must have been accepted by the order filler application before scheduling the resources associated with that order.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -713,7 +723,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -729,9 +739,9 @@
       {
         "id": "SCH.28",
         "path": "SCH.28",
-        "short": "SCH-28",
+        "short": "- SCH.28 - ",
         "definition": "Definition: This field contains a unique identifier for the Placer Group as referenced by the Placer application, the Filler application, or both. A Placer Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application and/or by the filler application.",
-        "comment": "Within each of the two Subcomponents, the first component is a string that identifies a group of appointment requests. It is assigned by the placer or filler application, and it identifies an appointment group uniquely among all such groups of requests from a particular requesting application.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -739,7 +749,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EIP"
@@ -757,5 +767,5 @@
   "title": "HL7 v2 SCH Segment Definition",
   "name": "SCH",
   "type": "SCH",
-  "date": "2025-06-05T18:07:32Z"
+  "date": "2025-03-06T16:07:39Z"
 }

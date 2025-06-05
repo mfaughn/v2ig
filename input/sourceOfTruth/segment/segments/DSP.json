@@ -26,8 +26,9 @@
       {
         "id": "DSP.1",
         "path": "DSP.1",
-        "short": "DSP-1",
+        "short": "- DSP.1 - ",
         "definition": "Definition: This field is used optionally to number multiple display segments.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "DSP.2",
         "path": "DSP.2",
-        "short": "DSP-2",
+        "short": "- DSP.2 - ",
         "definition": "Definition: This field contains numbering to define groups of fields as assigned by the individual sites or applications.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -85,7 +87,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -102,8 +104,9 @@
       {
         "id": "DSP.3",
         "path": "DSP.3",
-        "short": "DSP-3",
+        "short": "- DSP.3 - ",
         "definition": "Definition: This field contains an actual line as it should be displayed. As described for the TX data type, highlighting and other special display characteristics may be included.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -111,7 +114,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "TX"
@@ -140,9 +143,9 @@
       {
         "id": "DSP.4",
         "path": "DSP.4",
-        "short": "DSP-4",
+        "short": "- DSP.4 - ",
         "definition": "Definition: This field is non‑null if this line is the last line of a logical break point in the response as defined by the responding system.",
-        "comment": "Often the lines of display text will fall into logical groups that differ from the physical size of a screen or printer page. For example, a complete battery or an entire radiology report might be thought of as comprising a logical group, though it might have as few as six or as many as 120 lines. Knowledge of the logical break points in the display data can be useful to the application system that is displaying or printing data. For this reason, _DSP-4-Logical break point_ is used. The sending application (the one that formats the data) places the logical break points where appropriate. If there is a particular ancillary result ID associated with the data delineated by _DSP-4-Logical break point_, the value of this ID also can be returned in _DSP-5-Result ID_. Then if the user selects the area of the display delineated by _DSP-4-Logical break point_, the displaying system can query for the associated _DSP-5-Result ID_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -150,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -179,8 +182,9 @@
       {
         "id": "DSP.5",
         "path": "DSP.5",
-        "short": "DSP-5",
+        "short": "- DSP.5 - ",
         "definition": "Definition: When the user selects a result ID (defined by _DSP-4-Logical break point_) from the screen display corresponding to a record in which _DSP-5-Result ID_ is non-null, the application can initiate a second query (a separate session) to the ancillary with the _QRD-10-What department data code_ filled in with this non-null value (e.g., the ancillary accession number or its equivalent). The ancillary response will contain the report referenced by this result ID (e.g., accession number). The ancillary should correlate the result ID with _DSP-4-Logical break point_ as follows: If more than one line of text is sent per result, _DSP-5-Result ID_ should be only non-null for a DSP segment that contains a non-null _DSP-4-Logical break point_. This field may be broken into components by local agreement. A common example might be to include placer order number, filler order number, and universal service identifier. Whenever such fields are used as components of the result ID, their components will be sent as subcomponents.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -188,7 +192,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "TX"
@@ -219,5 +223,5 @@
   "title": "HL7 v2 DSP Segment Definition",
   "name": "DSP",
   "type": "DSP",
-  "date": "2025-06-05T18:07:29Z"
+  "date": "2025-03-06T16:07:36Z"
 }

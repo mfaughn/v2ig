@@ -26,8 +26,9 @@
       {
         "id": "GOL.1",
         "path": "GOL.1",
-        "short": "GOL-1",
+        "short": "- GOL.1 - ",
         "definition": "Definition: The action code field gives the intent of the problem or goal. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70287[_HL7 Table 0287 – Problem/Goal Action Co__de_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -51,7 +52,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -68,8 +69,9 @@
       {
         "id": "GOL.2",
         "path": "GOL.2",
-        "short": "GOL-2",
+        "short": "- GOL.2 - ",
         "definition": "Definition: This field contains the date/time that the operation represented by the action code was performed.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -77,7 +79,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -93,8 +95,9 @@
       {
         "id": "GOL.3",
         "path": "GOL.3",
-        "short": "GOL-3",
+        "short": "- GOL.3 - ",
         "definition": "Definition: This field identifies the goal. This is the identifier from an institution's master list of goals.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -102,7 +105,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -118,9 +121,9 @@
       {
         "id": "GOL.4",
         "path": "GOL.4",
-        "short": "GOL-4",
+        "short": "- GOL.4 - ",
         "definition": "Definition: This field contains the unique identifier assigned by an initiating system to this instance of the goal.",
-        "comment": "*Note:* It is required that the value in this field be unique over time. This instance ID identifies a specific instance for a specific patient and is unique across all patients. See entity ID data type description in Chapter 2.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -128,7 +131,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -144,9 +147,9 @@
       {
         "id": "GOL.5",
         "path": "GOL.5",
-        "short": "GOL-5",
+        "short": "- GOL.5 - ",
         "definition": "Definition: This field uniquely identifies the episode of care to which this goal applies. See note under \"Ongoing issues.\"",
-        "comment": "*Note*: Based on application use, this field is required to be unique over time.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -154,7 +157,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -170,8 +173,9 @@
       {
         "id": "GOL.6",
         "path": "GOL.6",
-        "short": "GOL-6",
+        "short": "- GOL.6 - ",
         "definition": "Definition: This field prioritizes this goal on a list that is maintained for an individual.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -179,7 +183,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -208,8 +212,9 @@
       {
         "id": "GOL.7",
         "path": "GOL.7",
-        "short": "GOL-7",
+        "short": "- GOL.7 - ",
         "definition": "Definition: This field identifies the date/time when the stated goal was initially created.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -217,7 +222,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -233,8 +238,9 @@
       {
         "id": "GOL.8",
         "path": "GOL.8",
-        "short": "GOL-8",
+        "short": "- GOL.8 - ",
         "definition": "Definition: This field contains the projected date/time for achieving the stated goal.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -242,7 +248,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -258,9 +264,9 @@
       {
         "id": "GOL.9",
         "path": "GOL.9",
-        "short": "GOL-9",
+        "short": "- GOL.9 - ",
         "definition": "Definition: This field indicates the kind of goal. This field can be used to categorize goals so that they may be managed and viewed independently within different applications (e.g., admission, final, post-operative, pre-operative, outpatient, discharge, etc.).",
-        "comment": "*Note:* This field can be used to differentiate separate goal lists that may be managed independently within applications.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -268,7 +274,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -284,8 +290,9 @@
       {
         "id": "GOL.10",
         "path": "GOL.10",
-        "short": "GOL-10",
+        "short": "- GOL.10 - ",
         "definition": "Definition: This field indicates the category of caregiver with responsibility for managing this specific goal (e.g., care team, nursing, medicine, respiratory therapy, occupational therapy, dietary etc.). This is a repeating field to allow identification of all disciplines that may have the responsibility for this goal.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -293,7 +300,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -309,8 +316,9 @@
       {
         "id": "GOL.11",
         "path": "GOL.11",
-        "short": "GOL-11",
+        "short": "- GOL.11 - ",
         "definition": "Definition: This field contains the current point in the continuum of a goal review cycle (e.g., due, initiated, reviewed, overdue, verified, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -318,7 +326,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -334,8 +342,9 @@
       {
         "id": "GOL.12",
         "path": "GOL.12",
-        "short": "GOL-12",
+        "short": "- GOL.12 - ",
         "definition": "Definition: This field contains the date/time of the current review of the goal.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -343,7 +352,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -359,8 +368,9 @@
       {
         "id": "GOL.13",
         "path": "GOL.13",
-        "short": "GOL-13",
+        "short": "- GOL.13 - ",
         "definition": "Definition: This field contains the date/time of the next scheduled goal review.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -368,7 +378,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -384,8 +394,9 @@
       {
         "id": "GOL.14",
         "path": "GOL.14",
-        "short": "GOL-14",
+        "short": "- GOL.14 - ",
         "definition": "Definition: This field contains the date/time that the goal was reviewed prior to the current review.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -393,7 +404,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -409,8 +420,7 @@
       {
         "id": "GOL.15",
         "path": "GOL.15",
-        "short": "GOL-15",
-        "comment": "*_As of Version 2.5, this field was retained for backward compatibility only and withdrawn and removed as of v2.7._* Refer to the TQ1 segment described in Chapter 4.",
+        "short": "- GOL.15 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -418,7 +428,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -429,8 +439,9 @@
       {
         "id": "GOL.16",
         "path": "GOL.16",
-        "short": "GOL-16",
+        "short": "- GOL.16 - ",
         "definition": "Definition: This field provides an indicator of progress towards achievement of the goal (e.g., achieved, ahead of schedule, delayed, failed to achieve, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -438,7 +449,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -454,8 +465,9 @@
       {
         "id": "GOL.17",
         "path": "GOL.17",
-        "short": "GOL-17",
+        "short": "- GOL.17 - ",
         "definition": "Definition: This field contains the comments associated with the goal evaluation. Examples of comments that might be entered in this field include: a reason for delay in achieving goal, or a clinical footnote about progress made towards the goal, etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -463,7 +475,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -492,8 +504,9 @@
       {
         "id": "GOL.18",
         "path": "GOL.18",
-        "short": "GOL-18",
+        "short": "- GOL.18 - ",
         "definition": "Definition: This field contains an indication of the state of the goal (e.g., Active, Canceled, Inactive, Suspended, etc.).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -501,7 +514,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -517,8 +530,9 @@
       {
         "id": "GOL.19",
         "path": "GOL.19",
-        "short": "GOL-19",
+        "short": "- GOL.19 - ",
         "definition": "Definition: This field contains the effective date/time of the current goal life cycle status.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -526,7 +540,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -542,9 +556,9 @@
       {
         "id": "GOL.20",
         "path": "GOL.20",
-        "short": "GOL-20",
+        "short": "- GOL.20 - ",
         "definition": "Definition: This field contains the individual/group for whom the goal has been established (e.g., family group, family member, patient, etc.).",
-        "comment": "*Note*: This field is focused on a specific person/group that is directly patient-related.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -552,7 +566,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -568,8 +582,9 @@
       {
         "id": "GOL.21",
         "path": "GOL.21",
-        "short": "GOL-21",
+        "short": "- GOL.21 - ",
         "definition": "Definition: This field contains the identification of the person(s) on whom the goal is focused. This is a repeating field which allows for the identification of a group of individuals.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -577,7 +592,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "XPN"
@@ -593,9 +608,9 @@
       {
         "id": "GOL.22",
         "path": "GOL.22",
-        "short": "GOL-22",
+        "short": "- GOL.22 - ",
         "definition": "Definition: This field indicates the Mood of the Goal. It allows expression of the context of the problem.",
-        "comment": "*Note:* As Mood Code changes the meaning of the segment it must only be used in new messages as of v2.6.\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70725[_HL7 Table 0725 – Mood Codes_] in Chapter 2C, Code Tables, for allowed values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -603,7 +618,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -625,5 +640,5 @@
   "title": "HL7 v2 GOL Segment Definition",
   "name": "GOL",
   "type": "GOL",
-  "date": "2025-06-05T18:07:32Z"
+  "date": "2025-03-06T16:07:39Z"
 }

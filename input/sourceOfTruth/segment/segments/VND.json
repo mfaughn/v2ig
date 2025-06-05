@@ -26,8 +26,9 @@
       {
         "id": "VND.1",
         "path": "VND.1",
-        "short": "VND-1",
+        "short": "- VND.1 - ",
         "definition": "Definition: This field contains a sequential number that identifies this segment within a given PURCHASING_VENDOR segment group. For the first occurrence of the segment in a given group, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "VND.2",
         "path": "VND.2",
-        "short": "VND-2",
+        "short": "- VND.2 - ",
         "definition": "Definition: This field contains the identifier of the vendor in the system.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -89,8 +91,9 @@
       {
         "id": "VND.3",
         "path": "VND.3",
-        "short": "VND-3",
+        "short": "- VND.3 - ",
         "definition": "Definition: This field contains the name of the vendor identified in _VND-2_.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -98,7 +101,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -127,8 +130,9 @@
       {
         "id": "VND.4",
         "path": "VND.4",
-        "short": "VND-4",
+        "short": "- VND.4 - ",
         "definition": "Definition: This field contains the catalog number assigned to the item by a purchasing vendor.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -136,7 +140,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -152,8 +156,9 @@
       {
         "id": "VND.5",
         "path": "VND.5",
-        "short": "VND-5",
+        "short": "- VND.5 - ",
         "definition": "Definition: This field contains an indicator to communicate whether this purchasing vendor is the primary vendor used to place orders for inventory supply item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 - Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -161,7 +166,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CNE"
@@ -181,8 +186,9 @@
       {
         "id": "VND.6",
         "path": "VND.6",
-        "short": "VND-6",
+        "short": "- VND.6 - ",
         "definition": "Definition: This field contains a corporation indentifier (code and name) of the entity allowed to purchase from this contract for this vendor.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -190,7 +196,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -206,8 +212,9 @@
       {
         "id": "VND.7",
         "path": "VND.7",
-        "short": "VND-7",
+        "short": "- VND.7 - ",
         "definition": "Definition: This field contains the primary contact person of this vendor item.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -215,7 +222,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "XCN"
@@ -231,8 +238,9 @@
       {
         "id": "VND.8",
         "path": "VND.8",
-        "short": "VND-8",
+        "short": "- VND.8 - ",
         "definition": "Definition: This field contains the markup amount for this contract item and vendor combination.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -240,7 +248,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "MOP"
@@ -256,8 +264,9 @@
       {
         "id": "VND.9",
         "path": "VND.9",
-        "short": "VND-9",
+        "short": "- VND.9 - ",
         "definition": "Definition: This field contains a contract that is linked to the contract sent in the CTR segment (described in Chapter 8). For example, the contract in CTR maybe of supplier type M (manufacturer); a contract sent in VND may be a linked distributor contract for a supplier authoized so distribute this item.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -265,7 +274,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "EI"
@@ -281,8 +290,9 @@
       {
         "id": "VND.10",
         "path": "VND.10",
-        "short": "VND-10",
+        "short": "- VND.10 - ",
         "definition": "Definition: This field contains the class of trade if identified at the vendor item level.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -290,7 +300,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -306,8 +316,9 @@
       {
         "id": "VND.11",
         "path": "VND.11",
-        "short": "VND-11",
+        "short": "- VND.11 - ",
         "definition": "Definition: This field contains the tier level at which this contract is priced for the vendor sent in this segment. Pricing Tier level determines the price of the item on the contract. Tier Level can be assigned to an IDN or at a corporation level and is typically based on volume purchased (determined by $ or a %). The larger the volume purchased, the lower priced tier level is assigned to the contract. This value can change over the life of the contract if purchasing volume changes after initial contract signing.Example 01^Tier One, 02^Tier 2, etc No HL7 table is defined here, because it needs to be defined by trading partner agreement, including the identification of code system to use.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -315,7 +326,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -333,5 +344,5 @@
   "title": "HL7 v2 VND Segment Definition",
   "name": "VND",
   "type": "VND",
-  "date": "2025-06-05T18:07:34Z"
+  "date": "2025-03-06T16:07:41Z"
 }

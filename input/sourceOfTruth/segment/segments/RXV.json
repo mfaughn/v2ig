@@ -26,8 +26,9 @@
       {
         "id": "RXV.1",
         "path": "RXV.1",
-        "short": "RXV-1",
+        "short": "- RXV.1 - ",
         "definition": "Definition: For the first timing specification transmitted, the sequence number shall be 1; for the second timing specification, it shall be 2; and so on.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -51,8 +52,9 @@
       {
         "id": "RXV.2",
         "path": "RXV.2",
-        "short": "RXV-2",
+        "short": "- RXV.2 - ",
         "definition": "Definition: This field identifies the type of bolus being ordered. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70917[_HL7 Defined Table 0917 – Bolus Type_] in Chapter 2C, Code Tables, for example values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +62,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -76,7 +78,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -93,8 +95,9 @@
       {
         "id": "RXV.3",
         "path": "RXV.3",
-        "short": "RXV-3",
+        "short": "- RXV.3 - ",
         "definition": "Definition: This field contains the ordered bolus amount. For example, if the ordered bolus is 50 mg, this field contains the value of 50.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -102,7 +105,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -118,9 +121,9 @@
       {
         "id": "RXV.4",
         "path": "RXV.4",
-        "short": "RXV-4",
+        "short": "- RXV.4 - ",
         "definition": "Definition: This field indicates the amount units associated with the bolus dose amount. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0767 - Bolus Dose Amount Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -128,7 +131,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -148,8 +151,9 @@
       {
         "id": "RXV.5",
         "path": "RXV.5",
-        "short": "RXV-5",
+        "short": "- RXV.5 - ",
         "definition": "Definition: This field defines the volume measurement for the ordered bolus amount. For example, if the ordered bolus is 5 ml, this field contains the value of 5.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -157,7 +161,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -186,9 +190,9 @@
       {
         "id": "RXV.6",
         "path": "RXV.6",
-        "short": "RXV-6",
+        "short": "- RXV.6 - ",
         "definition": "Definition: This field indicates the amount units associated with the bolus dose volume. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0768 - Bolus Dose Volume Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -196,7 +200,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -216,8 +220,9 @@
       {
         "id": "RXV.7",
         "path": "RXV.7",
-        "short": "RXV-7",
+        "short": "- RXV.7 - ",
         "definition": "Definition: This field identifies the type of bolus being ordered. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70918[_HL7 Defined Table 0918 – PCA Type_] in Chapter 2C, Code Tables, for example values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -225,7 +230,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -241,7 +246,7 @@
             "valueCode": "R"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -258,8 +263,9 @@
       {
         "id": "RXV.8",
         "path": "RXV.8",
-        "short": "RXV-8",
+        "short": "- RXV.8 - ",
         "definition": "Definition: This field contains the order’s PCA dose amount. Example: if the ordered bolus is 3 mg, this field contains the value of 3.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -267,7 +273,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -296,9 +302,9 @@
       {
         "id": "RXV.9",
         "path": "RXV.9",
-        "short": "RXV-9",
+        "short": "- RXV.9 - ",
         "definition": "Definition: This field indicates the amount units associated with the PCA dose amount. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0769 - PCA Dose Amount Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -306,7 +312,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -326,8 +332,9 @@
       {
         "id": "RXV.10",
         "path": "RXV.10",
-        "short": "RXV-10",
+        "short": "- RXV.10 - ",
         "definition": "Definition: This field defines the volume measurement for the ordered PCA amount volume. For example, if the ordered bolus is 5 ml, this field contains the value of 5.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -335,7 +342,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -364,9 +371,9 @@
       {
         "id": "RXV.11",
         "path": "RXV.11",
-        "short": "RXV-11",
+        "short": "- RXV.11 - ",
         "definition": "Definition: This field indicates the amount units associated with the PCA dose volume. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0770 - PCA Dose Amount Volume Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -374,7 +381,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -394,8 +401,9 @@
       {
         "id": "RXV.12",
         "path": "RXV.12",
-        "short": "RXV-12",
+        "short": "- RXV.12 - ",
         "definition": "Definition: This field contains the order’s maximum dose amount. For example, if the ordered bolus is 50 mg, this field contains the value of 50.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -403,7 +411,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -432,9 +440,9 @@
       {
         "id": "RXV.13",
         "path": "RXV.13",
-        "short": "RXV-13",
+        "short": "- RXV.13 - ",
         "definition": "Definition: This field indicates the amount units associated with the maximum dose volume. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0772 - Max Dose Amount Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -442,7 +450,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -462,8 +470,9 @@
       {
         "id": "RXV.14",
         "path": "RXV.14",
-        "short": "RXV-14",
+        "short": "- RXV.14 - ",
         "definition": "Definition: This field defines the volume measurement for the ordered max dose amount. For example, if the ordered bolus is 5 ml, this field contains the value of 5.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -471,7 +480,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -500,9 +509,9 @@
       {
         "id": "RXV.15",
         "path": "RXV.15",
-        "short": "RXV-15",
+        "short": "- RXV.15 - ",
         "definition": "Definition: This field indicates the amount units associated with the maximum dose volume. The preferred coding system is MDC; UCUM are also acceptable. Refer to Table 0773 - Max Dose Amount Volume Units in Chapter 2C for valid values.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -510,7 +519,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -530,8 +539,9 @@
       {
         "id": "RXV.16",
         "path": "RXV.16",
-        "short": "RXV-16",
+        "short": "- RXV.16 - ",
         "definition": "Definition: This field contains the time unit expression of the lock out parameter. For example, if the ordered max dose per time is 4 hours, this field format is \"4^h&hours&UCUM\".",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -539,7 +549,7 @@
           }
         ],
         "min": 1,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -555,8 +565,9 @@
       {
         "id": "RXV.17",
         "path": "RXV.17",
-        "short": "RXV-17",
+        "short": "- RXV.17 - ",
         "definition": "Definition: This field contains the length of time that must expire between deliveries of PCA doses. For example, if the ordered max dose per time is 10 minutes, this field format is \"10^min&minute&UCUM\".",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -564,7 +575,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -580,8 +591,9 @@
       {
         "id": "RXV.18",
         "path": "RXV.18",
-        "short": "RXV-18",
+        "short": "- RXV.18 - ",
         "definition": "Definition: This field contains the manufacturer of the syringe containing the ordered medication.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -589,7 +601,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -605,8 +617,9 @@
       {
         "id": "RXV.19",
         "path": "RXV.19",
-        "short": "RXV-19",
+        "short": "- RXV.19 - ",
         "definition": "Definition: This field contains the model number of the syringe containing the ordered medication.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -614,7 +627,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -630,8 +643,9 @@
       {
         "id": "RXV.20",
         "path": "RXV.20",
-        "short": "RXV-20",
+        "short": "- RXV.20 - ",
         "definition": "Definition: This field contains the syringe’s numeric total volume size.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -639,7 +653,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -668,9 +682,9 @@
       {
         "id": "RXV.21",
         "path": "RXV.21",
-        "short": "RXV-21",
+        "short": "- RXV.21 - ",
         "definition": "Definition: This field indicates the amount units associated with the syringe size. The preferred coding system is MDC; UCUM are also acceptable.",
-        "comment": "Examples:\n\n263890^MDC_DIM_MILLI_G^MDC\n\nmg^milligram^UCUM",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -678,7 +692,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -694,8 +708,9 @@
       {
         "id": "RXV.22",
         "path": "RXV.22",
-        "short": "RXV-22",
+        "short": "- RXV.22 - ",
         "definition": "Definition: The intended handling by the receiver of the infusion order is represented by this segment. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 – Segment Action Code_] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -703,7 +718,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ID"
@@ -719,7 +734,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -738,5 +753,5 @@
   "title": "HL7 v2 RXV Segment Definition",
   "name": "RXV",
   "type": "RXV",
-  "date": "2025-06-05T18:07:29Z"
+  "date": "2025-03-06T16:07:36Z"
 }

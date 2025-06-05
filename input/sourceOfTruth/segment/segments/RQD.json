@@ -26,8 +26,9 @@
       {
         "id": "RQD.1",
         "path": "RQD.1",
-        "short": "RQD-1",
+        "short": "- RQD.1 - ",
         "definition": "Definition: This field contains the number that identifies this line in the requisition.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -47,7 +48,7 @@
             "valueCode": "O"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition//length",
+            "url": "http://hl7.org/fhir/StructureDefinition/length",
             "extension": [
               {
                 "url": "min",
@@ -64,8 +65,9 @@
       {
         "id": "RQD.2",
         "path": "RQD.2",
-        "short": "RQD-2",
+        "short": "- RQD.2 - ",
         "definition": "Definition: This field contains the identifier and description that uniquely identify the item on the application sending the requisition. This field is conditional because at least one of the three fields – RQD-2-item code- internal__,__ RQD-3-item code-external, or RQD-4-hospital item code – must be valued. Refer to Table 0684 - Item Code - Internal in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -73,7 +75,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -93,8 +95,9 @@
       {
         "id": "RQD.3",
         "path": "RQD.3",
-        "short": "RQD-3",
+        "short": "- RQD.3 - ",
         "definition": "Definition: This field contains the identifier and description that uniquely identify the item on the application receiving the requisition. This field is conditional because at least one of the three fields – RQD-2-item code-internal, RQD-3-item code-external or RQD-4-hospital item code – must be valued. Refer to Table 0685 - Item Code - External in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -102,7 +105,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -122,9 +125,9 @@
       {
         "id": "RQD.4",
         "path": "RQD.4",
-        "short": "RQD-4",
+        "short": "- RQD.4 - ",
         "definition": "Definition: This field contains the identifier and description that uniquely identify the item on all applications in the hospital. The identifier is usually controlled by the hospital financial application in the charge description master file. This field is conditional because at least one of the three fields – RQD-2-item code-internal, RQD-3-item code-external or RQD-4-hospital item code _--_ must be valued. Refer to Table 0686 - Hospital Item Code in Chapter 2C for valid values.",
-        "comment": "*Note:* At least one of the three fields 4.11.1.2 through 4.11.1.4 must be non-null.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -132,7 +135,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -152,8 +155,9 @@
       {
         "id": "RQD.5",
         "path": "RQD.5",
-        "short": "RQD-5",
+        "short": "- RQD.5 - ",
         "definition": "Definition: This field contains the quantity requisitioned for this item.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -161,7 +165,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -190,8 +194,9 @@
       {
         "id": "RQD.6",
         "path": "RQD.6",
-        "short": "RQD-6",
+        "short": "- RQD.6 - ",
         "definition": "Definition: This field contains the unit of measure for this item. Refer to Table 0687 - Requisition Unit of Measure in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -199,7 +204,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -219,8 +224,9 @@
       {
         "id": "RQD.7",
         "path": "RQD.7",
-        "short": "RQD-7",
+        "short": "- RQD.7 - ",
         "definition": "Definition: This field contains the general ledger cost center account number associated with a department that may issue or charge for this item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70319[HL7 Table 0319 – Department Cost Center] in Chapter 2C, Code Tables, for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -228,7 +234,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CX"
@@ -248,8 +254,9 @@
       {
         "id": "RQD.8",
         "path": "RQD.8",
-        "short": "RQD-8",
+        "short": "- RQD.8 - ",
         "definition": "Definition: This field contains the accounting code that identifies this item in order to charge for this item. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70320[User-Defined Table 0320 - Item Natural Account Code] in Chapter 2C, Code Tables, is used as the HL7 identifier for the user-defined table of values for this field.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -257,7 +264,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -277,8 +284,9 @@
       {
         "id": "RQD.9",
         "path": "RQD.9",
-        "short": "RQD-9",
+        "short": "- RQD.9 - ",
         "definition": "Definition: This field contains the unique identifier and descriptive name of the department/location where the item should be delivered. Refer to Table 0688 - Deliver To ID in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -286,7 +294,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -306,9 +314,9 @@
       {
         "id": "RQD.10",
         "path": "RQD.10",
-        "short": "RQD-10",
+        "short": "- RQD.10 - ",
         "definition": "Definition: This field contains the date this item is required.",
-        "comment": "*Note:* Although none of the fields are required, one of the three identifying codes—RQD-2-item code-internal, RQD-3-item code-external, or RQD-4-hospital item code—must be specified in order for the receiving application to process the request.\n\nIt is left to the vendors to determine which will be used as the common link between the two applications. HL7 recommends using the RQD-4-Hospital Item Code.\n\nHospital accounting requires an identifier to charge a particular cost center or patient for a requisitioned supply. If the supply is for a patient, then this identifier comes from the PID segment; otherwise, from RQD-7-Dept. Cost Center and RQD-8-Item Natural Account Code must be used. It is recommended that the \"final\" cost center responsible for providing the supply to the patient be included, even when the patient ID is provided.\n\nHospital accounting applications use RQD-7-Dept. Cost Center concatenated with RQD-8-Item Natural Account Code in order to post this transaction to the General Ledger. This concatenated value should correspond to a valid entry in the accounting applications \"Chart of Accounts.\"",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -316,7 +324,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DT"
@@ -334,5 +342,5 @@
   "title": "HL7 v2 RQD Segment Definition",
   "name": "RQD",
   "type": "RQD",
-  "date": "2025-06-05T18:07:28Z"
+  "date": "2025-03-06T16:07:35Z"
 }

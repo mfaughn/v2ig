@@ -26,8 +26,7 @@
       {
         "id": "UB1.1",
         "path": "UB1.1",
-        "short": "UB1-1",
-        "comment": "*Attention: _UB1-2 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.1 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -35,7 +34,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "SI"
@@ -51,8 +50,7 @@
       {
         "id": "UB1.2",
         "path": "UB1.2",
-        "short": "UB1-2",
-        "comment": "*Attention: _UB1-2 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.2 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -60,7 +58,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -71,8 +69,7 @@
       {
         "id": "UB1.3",
         "path": "UB1.3",
-        "short": "UB1-3",
-        "comment": "*Attention: _UB1-3 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.3 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -80,7 +77,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -91,8 +88,7 @@
       {
         "id": "UB1.4",
         "path": "UB1.4",
-        "short": "UB1-4",
-        "comment": "*Attention: _UB1-4 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.4 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -100,7 +96,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -111,8 +107,7 @@
       {
         "id": "UB1.5",
         "path": "UB1.5",
-        "short": "UB1-5",
-        "comment": "*Attention: _UB1-5 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.5 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -120,7 +115,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -131,8 +126,7 @@
       {
         "id": "UB1.6",
         "path": "UB1.6",
-        "short": "UB1-6",
-        "comment": "*Attention: _UB1-6 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.6 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +134,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -151,8 +145,7 @@
       {
         "id": "UB1.7",
         "path": "UB1.7",
-        "short": "UB1-7",
-        "comment": "*Attention: _UB1-7 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.7 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -160,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": 5,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -171,8 +164,7 @@
       {
         "id": "UB1.8",
         "path": "UB1.8",
-        "short": "UB1-8",
-        "comment": "*Attention: _UB1-8 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.8 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -180,7 +172,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -191,8 +183,7 @@
       {
         "id": "UB1.9",
         "path": "UB1.9",
-        "short": "UB1-9",
-        "comment": "*Attention: _UB1-9 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.9 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -200,7 +191,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -211,8 +202,7 @@
       {
         "id": "UB1.10",
         "path": "UB1.10",
-        "short": "UB1-10",
-        "comment": "*Attention: _UB1-10 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.10 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -220,7 +210,7 @@
           }
         ],
         "min": 0,
-        "max": 8,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -231,8 +221,7 @@
       {
         "id": "UB1.11",
         "path": "UB1.11",
-        "short": "UB1-11",
-        "comment": "*Attention: _UB1-11 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.11 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -240,7 +229,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -251,8 +240,7 @@
       {
         "id": "UB1.12",
         "path": "UB1.12",
-        "short": "UB1-12",
-        "comment": "*Attention: _UB1-12 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.12 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -260,7 +248,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -271,8 +259,7 @@
       {
         "id": "UB1.13",
         "path": "UB1.13",
-        "short": "UB1-13",
-        "comment": "*Attention: _UB1-13 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.13 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -280,7 +267,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -291,8 +278,7 @@
       {
         "id": "UB1.14",
         "path": "UB1.14",
-        "short": "UB1-14",
-        "comment": "*Attention: _UB1-14 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.14 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -300,7 +286,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -311,8 +297,7 @@
       {
         "id": "UB1.15",
         "path": "UB1.15",
-        "short": "UB1-15",
-        "comment": "*Attention: _UB1-15 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.15 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -320,7 +305,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -331,8 +316,7 @@
       {
         "id": "UB1.16",
         "path": "UB1.16",
-        "short": "UB1-16",
-        "comment": "*Attention: _UB1-16 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.16 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -340,7 +324,7 @@
           }
         ],
         "min": 0,
-        "max": 5,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -351,8 +335,7 @@
       {
         "id": "UB1.17",
         "path": "UB1.17",
-        "short": "UB1-17",
-        "comment": "*Attention: _UB1-17 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.17 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -360,7 +343,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -371,8 +354,7 @@
       {
         "id": "UB1.18",
         "path": "UB1.18",
-        "short": "UB1-18",
-        "comment": "*Attention: _UB1-18 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.18 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -380,7 +362,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -391,8 +373,7 @@
       {
         "id": "UB1.19",
         "path": "UB1.19",
-        "short": "UB1-19",
-        "comment": "*Attention: _UB1-19 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.19 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -400,7 +381,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -411,8 +392,7 @@
       {
         "id": "UB1.20",
         "path": "UB1.20",
-        "short": "UB1-20",
-        "comment": "*Attention: _UB1-20 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.20 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -420,7 +400,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -431,8 +411,7 @@
       {
         "id": "UB1.21",
         "path": "UB1.21",
-        "short": "UB1-21",
-        "comment": "*Attention: _UB1-21 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.21 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -440,7 +419,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -451,8 +430,7 @@
       {
         "id": "UB1.22",
         "path": "UB1.22",
-        "short": "UB1-22",
-        "comment": "*Attention: _UB1-22 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.22 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -460,7 +438,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -471,8 +449,7 @@
       {
         "id": "UB1.23",
         "path": "UB1.23",
-        "short": "UB1-23",
-        "comment": "*Attention: _UB1-23 was deprecated as of v 2.3 and the detail was withdrawn and removed from the standard as of v 2.6._*",
+        "short": "- UB1.23 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -480,7 +457,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -493,5 +470,5 @@
   "title": "HL7 v2 UB1 Segment Definition",
   "name": "UB1",
   "type": "UB1",
-  "date": "2025-06-05T18:07:30Z"
+  "date": "2025-03-06T16:07:37Z"
 }

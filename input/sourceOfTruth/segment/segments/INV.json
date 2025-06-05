@@ -26,9 +26,9 @@
       {
         "id": "INV.1",
         "path": "INV.1",
-        "short": "INV-1",
+        "short": "- INV.1 - ",
         "definition": "Definition: Unique identifier for the substance that is in inventory. This is a manufacturer-specific identifier. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70451[_User-defined Table 0451 – Substance Identifier_] in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "This field is conditional. It is optional in queries INR^U14 and required in all other messages. Absence of this field in a query means that the result shall be not filtered on inventory item ID.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +36,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -56,9 +56,9 @@
       {
         "id": "INV.2",
         "path": "INV.2",
-        "short": "INV-2",
+        "short": "- INV.2 - ",
         "definition": "Definition: The status of the inventoried item. The status indicates the current status of the substance. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70383[_HL7 Table 0383 – Substance Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "This field is conditional. It is optional in queries INR^U14 and required in all other messages. Absence of this field in a query means that the result shall be not filtered on inventory item status.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -66,7 +66,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -86,8 +86,9 @@
       {
         "id": "INV.3",
         "path": "INV.3",
-        "short": "INV-3",
+        "short": "- INV.3 - ",
         "definition": "Definition: The type of substance. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70384[_HL7 Table 0384 – Substance Type_] in chapter 2C for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -95,7 +96,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -115,8 +116,9 @@
       {
         "id": "INV.4",
         "path": "INV.4",
-        "short": "INV-4",
+        "short": "- INV.4 - ",
         "definition": "Definition: Identifies the inventory container, e.g., unique identifier of a specific package instance of a specific substance. This is a manufacturer-specific identifier.Refer to Table 0599 - Inventory Container Identifier in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -124,7 +126,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -144,8 +146,9 @@
       {
         "id": "INV.5",
         "path": "INV.5",
-        "short": "INV-5",
+        "short": "- INV.5 - ",
         "definition": "Definition: This is the carrier used to transport the substance containers (e.g., a removable rotor with reagent bottles). Refer to Table 0600 - Container Carrier Identifier in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +156,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -173,8 +176,9 @@
       {
         "id": "INV.6",
         "path": "INV.6",
-        "short": "INV-6",
+        "short": "- INV.6 - ",
         "definition": "Definition: Identifies the position (e.g., index) on the carrier. Refer to Table 0601 - Position on Carrier in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -182,7 +186,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -202,8 +206,9 @@
       {
         "id": "INV.7",
         "path": "INV.7",
-        "short": "INV-7",
+        "short": "- INV.7 - ",
         "definition": "Definition: This field identifies the initial quantity of the substance in inventory.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -211,7 +216,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -240,8 +245,9 @@
       {
         "id": "INV.8",
         "path": "INV.8",
-        "short": "INV-8",
+        "short": "- INV.8 - ",
         "definition": "Definition: This field is the current quantity, i.e., initial quantity minus what has been actually used.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -249,7 +255,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -278,8 +284,9 @@
       {
         "id": "INV.9",
         "path": "INV.9",
-        "short": "INV-9",
+        "short": "- INV.9 - ",
         "definition": "Definition: This field is the available quantity of substance. This is the current quantity minus any planned consumption (e.g., tests that are planned).",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -287,7 +294,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -316,8 +323,9 @@
       {
         "id": "INV.10",
         "path": "INV.10",
-        "short": "INV-10",
+        "short": "- INV.10 - ",
         "definition": "Definition: This field is the consumption that is used each time the equipment uses this substance.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -325,7 +333,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "NM"
@@ -354,8 +362,9 @@
       {
         "id": "INV.11",
         "path": "INV.11",
-        "short": "INV-11",
+        "short": "- INV.11 - ",
         "definition": "Definition: This field is the units of measure of the available quantity. If the units are ISO+ units, they should be recorded as single case abbreviations. If the units are ANS+ or L (local), the units and the source code table must be recorded, except that in this case, component delimiters should be replaced by sub-component delimiters. For example, \"l\" indicates liters, whereas pt&&ANS+ indicates pints (ANSI units). The default unit is milliliters (ml), which should be assumed if no units are reported. Refer to Table 0602 - Quantity Units in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -363,7 +372,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -383,8 +392,9 @@
       {
         "id": "INV.12",
         "path": "INV.12",
-        "short": "INV-12",
+        "short": "- INV.12 - ",
         "definition": "Definition: This field is the expiration date/time of the substance.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -392,7 +402,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -408,8 +418,9 @@
       {
         "id": "INV.13",
         "path": "INV.13",
-        "short": "INV-13",
+        "short": "- INV.13 - ",
         "definition": "Definition: This field is the time and date when the substance was first used. This date and time can be necessary to determine the stability of the substance. The meaning of the \"first used\" element depends on the substance. In certain cases it means the time when the substance was put on board of the instrument or prepared (mixed), without actually using it in the analysis.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -417,7 +428,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "DTM"
@@ -433,8 +444,7 @@
       {
         "id": "INV.14",
         "path": "INV.14",
-        "short": "INV-14",
-        "comment": "*_Attention: As of v2.5 this field was retained for backward compatibility only and withdrawn and removed as of v2.7._* The TQ data type was deprecated; see Chapter 2A, section 2.A.81.",
+        "short": "- INV.14 - ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -442,7 +452,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/optionality",
@@ -453,8 +463,9 @@
       {
         "id": "INV.15",
         "path": "INV.15",
-        "short": "INV-15",
+        "short": "- INV.15 - ",
         "definition": "Definition: This field is the list of tests and body fluids that relate or correspond to this inventory item . This is a repeating field. An empty field means that this inventory item is not test specific, i.e., it applies to all tests. Refer to Table 0603 - Test/Fluid Identifier(s) in Chapter 2C for valid values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -462,7 +473,7 @@
           }
         ],
         "min": 0,
-        "max": 0,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -482,8 +493,9 @@
       {
         "id": "INV.16",
         "path": "INV.16",
-        "short": "INV-16",
+        "short": "- INV.16 - ",
         "definition": "Definition: This field specifies the lot number assigned by the manufacturer during production of the substance.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -491,7 +503,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "ST"
@@ -520,8 +532,9 @@
       {
         "id": "INV.17",
         "path": "INV.17",
-        "short": "INV-17",
+        "short": "- INV.17 - ",
         "definition": "Definition: This field identifies the manufacturer of this substance. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70385[_User-defined Table 0385 – Manufacturer Identifier_] in Chapter 2C, Code Tables, for suggested values. Relevant external code systems may be used, e.g., HIBCC Manufacturers Labeler ID Code (LIC), UPC, NDC, etc.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -529,7 +542,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -549,8 +562,9 @@
       {
         "id": "INV.18",
         "path": "INV.18",
-        "short": "INV-18",
+        "short": "- INV.18 - ",
         "definition": "Definition: This field identifies the supplier of this substance. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70386[User-defined Table 0386 – Supplier Identifie]r_ in Chapter 2C, Code Tables, for suggested values.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -558,7 +572,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -578,9 +592,9 @@
       {
         "id": "INV.19",
         "path": "INV.19",
-        "short": "INV-19",
+        "short": "- INV.19 - ",
         "definition": "Definition: This field is the duration of time that the calibration/usability of the substance is stable. The duration is used to calculate the date/time when this calibration is no longer valid by adding this \"On board stability time\" (INV-19) to the \"First used date / time\" (INV-13).",
-        "comment": "The 1^st^ component defines the time quantity and the 2^nd^ component the time units (see file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70255[_HL7 Table 0255 – Duration Categories_]). Recommended accuracy is \"minutes\", \"hours\" and \"days\".",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -588,7 +602,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -604,9 +618,9 @@
       {
         "id": "INV.20",
         "path": "INV.20",
-        "short": "INV-20",
+        "short": "- INV.20 - ",
         "definition": "Definition: This field is the target analytical value for a particular test for a specific lot of a manufactured material. Target values for QC purposes are usually selected for their relevance to a reference (normal) range or to a clinically significant decision level.",
-        "comment": "The 1^st^ component defines the value and the 2^nd^ component the measurement units.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -614,7 +628,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -630,9 +644,9 @@
       {
         "id": "INV.21",
         "path": "INV.21",
-        "short": "INV-21",
+        "short": "- INV.21 - ",
         "definition": "Definition: The type code of an equipment state indicator. Refer to _HL7 Table 0942 – Equipment State Indicator Type Code_ in Chapter 2C, Code Tables, for suggested values.",
-        "comment": "Due to its dynamic nature, an equipment state indicator is considered to be a [non-material] inventory item. Its value usually can be derived from the material inventory — in that way, a state indicator differs from static configuration parameters and master data stored on the equipment.\n\nThis field is conditional. It is optional when INV‑3 “Substance Type” is not populated and prohibited otherwise.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -640,7 +654,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CWE"
@@ -660,9 +674,9 @@
       {
         "id": "INV.22",
         "path": "INV.22",
-        "short": "INV-22",
+        "short": "- INV.22 - ",
         "definition": "Definition: The numeric value of the equipment state indicator specified in INV-21. The 1^st^ component defines the number and the 2^nd^ component the units of measurement.",
-        "comment": "This field is conditional. It is optional when INV‑21 “Equipment State Indicator Type Code” is populated and prohibited otherwise.",
+        "description": null,
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -670,7 +684,7 @@
           }
         ],
         "min": 0,
-        "max": 1,
+        "max": "*",
         "type": [
           {
             "code": "CQ"
@@ -688,5 +702,5 @@
   "title": "HL7 v2 INV Segment Definition",
   "name": "INV",
   "type": "INV",
-  "date": "2025-06-05T18:07:32Z"
+  "date": "2025-03-06T16:07:39Z"
 }
