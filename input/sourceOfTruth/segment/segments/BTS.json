@@ -26,9 +26,8 @@
       {
         "id": "BTS.1",
         "path": "BTS.1",
-        "short": "- BTS.1 - ",
-        "definition": "Definition: This field contains the count of the individual messages contained within the batch.",
-        "description": null,
+        "short": "BTS-1",
+        "definition": "This field contains the count of the individual messages contained within the batch.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -65,9 +64,8 @@
       {
         "id": "BTS.2",
         "path": "BTS.2",
-        "short": "- BTS.2 - ",
-        "definition": "Definition: This field is a comment field that is not further defined in the HL7 protocol.",
-        "description": null,
+        "short": "BTS-2",
+        "definition": "This field is a comment field that is not further defined in the HL7 protocol.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -104,9 +102,9 @@
       {
         "id": "BTS.3",
         "path": "BTS.3",
-        "short": "- BTS.3 - ",
-        "definition": "Definition: We encourage new users of this field to use the HL7 Version 2.3 data type of NM and to define it as \"repeating.\" This field contains the batch total. If more than a single batch total exists, this field MAY be repeated.",
-        "description": null,
+        "short": "BTS-3",
+        "definition": "We encourage new users of this field to use the HL7 Version 2.3 data type of NM and to define it as \"repeating.\" This field contains the batch total. If more than a single batch total exists, this field MAY be repeated.",
+        "comment": "Prior to v2.5 this field might have been defined as a CM data type for backward compatibility with HL7 Versions 2.2 and 2.1 with each total being carried as a separate component. Each component in this case is an NM data type.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -114,7 +112,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "NM"
@@ -132,5 +130,5 @@
   "title": "HL7 v2 BTS Segment Definition",
   "name": "BTS",
   "type": "BTS",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T23:00:28Z"
 }

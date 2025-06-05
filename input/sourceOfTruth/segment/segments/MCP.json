@@ -26,9 +26,8 @@
       {
         "id": "MCP.1",
         "path": "MCP.1",
-        "short": "- MCP.1 - ",
-        "definition": "Definition: _MCP-1 - set ID - MCP_ contains the number that identifies this transaction. For the first occurrence the sequence number shall be 1, for the second occurrence it shall be 2, etc. The Set ID in the MCP segment is used to uniquely identify the segment. There are likely multiple instances of Universal Service Identifier, Diagnosis and Procedure code.",
-        "description": null,
+        "short": "MCP-1",
+        "definition": "_MCP-1 - set ID - MCP_ contains the number that identifies this transaction. For the first occurrence the sequence number shall be 1, for the second occurrence it shall be 2, etc. The Set ID in the MCP segment is used to uniquely identify the segment. There are likely multiple instances of Universal Service Identifier, Diagnosis and Procedure code.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,8 @@
       {
         "id": "MCP.2",
         "path": "MCP.2",
-        "short": "- MCP.2 - ",
-        "definition": "Definition: This field contains the producer's usual or preferred identification of the test or observation. Only three components should be included: <ID code>^<service text name/description>^<source list of code>. All components should be non-null.",
-        "description": null,
+        "short": "MCP-2",
+        "definition": "This field contains the producer's usual or preferred identification of the test or observation. Only three components should be included: <ID code>^<service text name/description>^<source list of code>. All components should be non-null.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -91,9 +89,9 @@
       {
         "id": "MCP.3",
         "path": "MCP.3",
-        "short": "- MCP.3 - ",
-        "definition": "Definition: Specifies the lowest price for the Universal Service that needs to be disclosed on the payer notification to the patient (for example Medicare ABN). If there is a single price for this Universal Service Identifier, MCP-3 is not valued.",
-        "description": null,
+        "short": "MCP-3",
+        "definition": "Specifies the lowest price for the Universal Service that needs to be disclosed on the payer notification to the patient (for example Medicare ABN). If there is a single price for this Universal Service Identifier, MCP-3 is not valued.",
+        "comment": "Components:  <Quantity (NM)> ^ <Denomination (ID)>\n\nExample: MCP|||35.00^USD|75.00^USD",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -101,7 +99,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "MO"
@@ -117,9 +115,9 @@
       {
         "id": "MCP.4",
         "path": "MCP.4",
-        "short": "- MCP.4 - ",
-        "definition": "Definition: Specifies the highest price for the Universal Service that needs to be disclosed on the payer notification to the patient (for example Medicare ABN). If there is a single price for this Universal Service Identifier, it is valued in this field.",
-        "description": null,
+        "short": "MCP-4",
+        "definition": "Specifies the highest price for the Universal Service that needs to be disclosed on the payer notification to the patient (for example Medicare ABN). If there is a single price for this Universal Service Identifier, it is valued in this field.",
+        "comment": "Components:  <Quantity (NM)> ^ <Denomination (ID)>\n\nExample of MCP-4 where price of test is $65.00 and there are no variants to the cost:\n\nMCP||||65.00^USD\n\nExample of MCP-3 and MCP-4 value when the price of test is variable and can range from $35.00 (low) to $75.00 (high)\n\nMCP||||$35.00^USD|75.00^USD",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +125,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "MO"
@@ -143,9 +141,9 @@
       {
         "id": "MCP.5",
         "path": "MCP.5",
-        "short": "- MCP.5 - ",
-        "definition": "Definition: Specifies the reason for the interval between the lowest and the highest price for the Universal Service, for example additional testing (reflex test) that is added based on values of the initial test. There maybe some instances when the value between MCP-3 and MCP-4 is not significant enough to warrant a reason as defined by health authorities.",
-        "description": null,
+        "short": "MCP-5",
+        "definition": "Specifies the reason for the interval between the lowest and the highest price for the Universal Service, for example additional testing (reflex test) that is added based on values of the initial test. There maybe some instances when the value between MCP-3 and MCP-4 is not significant enough to warrant a reason as defined by health authorities.",
+        "comment": "Condition: This is conditionally required when MCP-3 is valued.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +151,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -171,5 +169,5 @@
   "title": "HL7 v2 MCP Segment Definition",
   "name": "MCP",
   "type": "MCP",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:33Z"
 }

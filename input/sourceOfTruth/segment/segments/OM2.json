@@ -26,9 +26,8 @@
       {
         "id": "OM2.1",
         "path": "OM2.1",
-        "short": "- OM2.1 - ",
-        "definition": "Definition: This field contains the same value as the sequence number of the associated OM1 segment. Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM2-1",
+        "definition": "This field contains the same value as the sequence number of the associated OM1 segment. Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -65,9 +64,8 @@
       {
         "id": "OM2.2",
         "path": "OM2.2",
-        "short": "- OM2.2 - ",
-        "definition": "Definition: This field contains the single tests/observations (those with a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) that have numeric values. This field contains their customary units of measure. Use of UCUM is strongly recommended as one of the specified units (either alone or in addition to the local units).",
-        "description": null,
+        "short": "OM2-2",
+        "definition": "This field contains the single tests/observations (those with a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) that have numeric values. This field contains their customary units of measure. Use of UCUM is strongly recommended as one of the specified units (either alone or in addition to the local units).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -95,9 +93,8 @@
       {
         "id": "OM2.3",
         "path": "OM2.3",
-        "short": "- OM2.3 - ",
-        "definition": "Definition: This field contains the numerically valued single observations (code A or C as described in _OM1-18 - Nature of Service/Test/Observation_), specifies the total length in characters of the field needed to display the observation, and the number of digits displayed to the right of the decimal point. This is coded as a single number in the format <length>.<decimal-digits>. For example, a value of 6.2 implies 6 characters total (including the sign and decimal point) with 2 digits after the decimal point. For integer values, the period and <decimal-digits> portion may be omitted (that is, 5.0 and 5 are equivalent). More than one such mask may be transmitted (separated by repeat delimiters) when it is necessary to define multiple display formats that are possible.",
-        "description": null,
+        "short": "OM2-3",
+        "definition": "This field contains the numerically valued single observations (code A or C as described in _OM1-18 - Nature of Service/Test/Observation_), specifies the total length in characters of the field needed to display the observation, and the number of digits displayed to the right of the decimal point. This is coded as a single number in the format <length>.<decimal-digits>. For example, a value of 6.2 implies 6 characters total (including the sign and decimal point) with 2 digits after the decimal point. For integer values, the period and <decimal-digits> portion may be omitted (that is, 5.0 and 5 are equivalent). More than one such mask may be transmitted (separated by repeat delimiters) when it is necessary to define multiple display formats that are possible.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +102,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "NM"
@@ -134,9 +131,8 @@
       {
         "id": "OM2.4",
         "path": "OM2.4",
-        "short": "- OM2.4 - ",
-        "definition": "Definition: This field contains the single tests/observations - the corresponding SI units of measure in the format, when these differ from the customary units of measure given in the previous field. Refer to Table 0649 - Corresponding SI Units of Measure in Chapter 2C for valid values.",
-        "description": null,
+        "short": "OM2-4",
+        "definition": "This field contains the single tests/observations - the corresponding SI units of measure in the format, when these differ from the customary units of measure given in the previous field. Refer to Table 0649 - Corresponding SI Units of Measure in Chapter 2C for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +140,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -164,9 +160,9 @@
       {
         "id": "OM2.5",
         "path": "OM2.5",
-        "short": "- OM2.5 - ",
-        "definition": "Definition: This field contains the continuous, numerically valued tests/observations, with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). This is a factor for converting the customary units to SI units.",
-        "description": null,
+        "short": "OM2-5",
+        "definition": "This field contains the continuous, numerically valued tests/observations, with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). This is a factor for converting the customary units to SI units.",
+        "comment": "In the case that the observation units are not SI units, this field provides the formula needed to convert from the reported units to SI units, this shall include the equation needed to convert from the reporting to the SI units.\n\nIn the case that the relation is simply multiplicative, this field shall include only the conversion factor. For example, if (results SI units) = c * (results reporting units), then only c would be stored in this field. In the case of any other functional relationship, the entire equation would be stored as a test.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -174,7 +170,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "TX"
@@ -203,9 +199,9 @@
       {
         "id": "OM2.6",
         "path": "OM2.6",
-        "short": "- OM2.6 - ",
-        "definition": "Definition: This field contains the reference (normal) ranges for \"numeric\" observations/tests with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). It can identify different reference (normal) ranges for different categories of patients according to age, sex, race, and other conditions.",
-        "description": null,
+        "short": "OM2-6",
+        "definition": "This field contains the reference (normal) ranges for \"numeric\" observations/tests with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). It can identify different reference (normal) ranges for different categories of patients according to age, sex, race, and other conditions.",
+        "comment": "In the first component of this field (Normal Range (NR)), the units are assumed to be identical to the reporting units given in _OM2-2 - Units of Measure_.\n\nWhen two different methods result in two different reference ranges, two different observations and corresponding OMx segments should be defined.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -213,7 +209,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "RFR"
@@ -229,9 +225,8 @@
       {
         "id": "OM2.7",
         "path": "OM2.7",
-        "short": "- OM2.7 - ",
-        "definition": "Definition: This field applies only to single tests/observations (i.e., a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) with numeric results). When a critical range is defined for such observations, it should be recorded here in the same format as the normal range (see _OM2-6 - Reference (Normal) Range - Ordinal and Continuous Observations_).",
-        "description": null,
+        "short": "OM2-7",
+        "definition": "This field applies only to single tests/observations (i.e., a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) with numeric results). When a critical range is defined for such observations, it should be recorded here in the same format as the normal range (see _OM2-6 - Reference (Normal) Range - Ordinal and Continuous Observations_).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -239,7 +234,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "RFR"
@@ -255,9 +250,8 @@
       {
         "id": "OM2.8",
         "path": "OM2.8",
-        "short": "- OM2.8 - ",
-        "definition": "Definition: This field applies only to single tests/observations with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). It defines the range of possible results. Results outside this range are not possible. The field should be recorded in the same format as the normal and critical ranges.",
-        "description": null,
+        "short": "OM2-8",
+        "definition": "This field applies only to single tests/observations with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). It defines the range of possible results. Results outside this range are not possible. The field should be recorded in the same format as the normal and critical ranges.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -265,7 +259,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "RFR"
@@ -281,9 +275,9 @@
       {
         "id": "OM2.9",
         "path": "OM2.9",
-        "short": "- OM2.9 - ",
-        "definition": "Definition: This field applies to numeric tests/observations with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). The field describes the information that controls delta check warnings and includes four components.",
-        "description": null,
+        "short": "OM2-9",
+        "definition": "This field applies to numeric tests/observations with a nature code of A or C (see _OM1-18 - Nature of Service/Test/Observation_). The field describes the information that controls delta check warnings and includes four components.",
+        "comment": "{empty}1) The range to which the following applies: <low & high>. +\n\nAll the ranges are defined in terms of the customary reporting units given in _OM2-2 - Units of Measure_. If no value range is given, the check applies to all values.\n\n{empty}2) The numeric threshold of the change that is detected, e.g., 10.\n\n{empty}3) Whether the change is computed as a percent change or an absolute change. This component can have two possible values:\n\n% indicates a percent change +\n\na absolute change\n\n{empty}4) The length of time that the service retains a value for computing delta checks. This is recorded in number of days.\n\nMore than one delta check rule can apply. 13&16^10^%^100~16.1&20^2^a^100 implies that the delta check will trigger on a 10% change when the value of the observation is between 13 and 16. The check will trigger on an absolute change of 2 when the value is between 16.1 and 20. In both cases, the system will keep the last result for 100 days. In this example, beyond 100 days, the computer will not compute a delta check because it will not have a comparison value.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -291,7 +285,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "DLT"
@@ -307,9 +301,8 @@
       {
         "id": "OM2.10",
         "path": "OM2.10",
-        "short": "- OM2.10 - ",
-        "definition": "Definition: This field contains the numerically valued single observations (a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) and specifies the smallest meaningful difference between reported values (the effective resolution of the measuring instrument or technique for continuous data, or the smallest discrete interval that can occur for discrete data).",
-        "description": null,
+        "short": "OM2-10",
+        "definition": "This field contains the numerically valued single observations (a nature code of A or C, as described in _OM1-18 - Nature of Service/Test/Observation_) and specifies the smallest meaningful difference between reported values (the effective resolution of the measuring instrument or technique for continuous data, or the smallest discrete interval that can occur for discrete data).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -317,7 +310,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -335,5 +328,5 @@
   "title": "HL7 v2 OM2 Segment Definition",
   "name": "OM2",
   "type": "OM2",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:32Z"
 }

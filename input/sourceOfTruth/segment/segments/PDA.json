@@ -26,9 +26,8 @@
       {
         "id": "PDA.1",
         "path": "PDA.1",
-        "short": "- PDA.1 - ",
-        "definition": "Definition: This field is valued with the reason of the death.",
-        "description": null,
+        "short": "PDA-1",
+        "definition": "This field is valued with the reason of the death.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -52,9 +51,8 @@
       {
         "id": "PDA.2",
         "path": "PDA.2",
-        "short": "- PDA.2 - ",
-        "definition": "Definition: This field is valued with the place the death occurred.",
-        "description": null,
+        "short": "PDA-2",
+        "definition": "This field is valued with the place the death occurred.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "PL"
@@ -78,9 +76,9 @@
       {
         "id": "PDA.3",
         "path": "PDA.3",
-        "short": "- PDA.3 - ",
-        "definition": "Definition: This field indicates whether a death was officially certified or not. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "PDA-3",
+        "definition": "This field indicates whether a death was officially certified or not. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "comment": "Y death has been certified\n\nN death has not been certified",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +86,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -121,9 +119,8 @@
       {
         "id": "PDA.4",
         "path": "PDA.4",
-        "short": "- PDA.4 - ",
-        "definition": "Definition: This field is valued with the date and time the death certificate was signed.",
-        "description": null,
+        "short": "PDA-4",
+        "definition": "This field is valued with the date and time the death certificate was signed.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -131,7 +128,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -147,9 +144,8 @@
       {
         "id": "PDA.5",
         "path": "PDA.5",
-        "short": "- PDA.5 - ",
-        "definition": "Definition: This field is valued with the person who signed the death certificate.",
-        "description": null,
+        "short": "PDA-5",
+        "definition": "This field is valued with the person who signed the death certificate.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -157,7 +153,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XCN"
@@ -173,9 +169,9 @@
       {
         "id": "PDA.6",
         "path": "PDA.6",
-        "short": "- PDA.6 - ",
-        "definition": "Definition: This field indicates whether an autopsy was performed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "PDA-6",
+        "definition": "This field indicates whether an autopsy was performed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "comment": "Y an autopsy was performed\n\nN an autopsy was not performed",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -183,7 +179,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -216,9 +212,8 @@
       {
         "id": "PDA.7",
         "path": "PDA.7",
-        "short": "- PDA.7 - ",
-        "definition": "Definition: If an autopsy is performed, this field is valued with the date and time the autopsy was begun and completed",
-        "description": null,
+        "short": "PDA-7",
+        "definition": "If an autopsy is performed, this field is valued with the date and time the autopsy was begun and completed",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -226,7 +221,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DR"
@@ -242,9 +237,8 @@
       {
         "id": "PDA.8",
         "path": "PDA.8",
-        "short": "- PDA.8 - ",
-        "definition": "Definition: This field is valued with the authority who performed the autopsy.",
-        "description": null,
+        "short": "PDA-8",
+        "definition": "This field is valued with the authority who performed the autopsy.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -252,7 +246,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XCN"
@@ -268,9 +262,9 @@
       {
         "id": "PDA.9",
         "path": "PDA.9",
-        "short": "- PDA.9 - ",
-        "definition": "Definition: This flag indicates whether the case/death has been assigned to the coroner/medical examiner for investigative purposed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "PDA-9",
+        "definition": "This flag indicates whether the case/death has been assigned to the coroner/medical examiner for investigative purposed. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] in Chapter 2C, Code Tables, for valid values.",
+        "comment": "Y Has been assigned to the coroner.\n\nN Has not been assigned to the coroner.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -278,7 +272,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -313,5 +307,5 @@
   "title": "HL7 v2 PDA Segment Definition",
   "name": "PDA",
   "type": "PDA",
-  "date": "2025-03-06T16:07:35Z"
+  "date": "2025-06-05T23:00:29Z"
 }

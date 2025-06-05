@@ -26,9 +26,8 @@
       {
         "id": "AFF.1",
         "path": "AFF.1",
-        "short": "- AFF.1 - ",
-        "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
-        "description": null,
+        "short": "AFF-1",
+        "definition": "This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,8 @@
       {
         "id": "AFF.2",
         "path": "AFF.2",
-        "short": "- AFF.2 - ",
-        "definition": "Definition: This field contains the official name of the association promoting specific professional interests with which the staff member is affiliated.",
-        "description": null,
+        "short": "AFF-2",
+        "definition": "This field contains the official name of the association promoting specific professional interests with which the staff member is affiliated.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XON"
@@ -91,9 +89,8 @@
       {
         "id": "AFF.3",
         "path": "AFF.3",
-        "short": "- AFF.3 - ",
-        "definition": "Definition: This field contains the postal address of the professional organization with which the Staff Member is associated.",
-        "description": null,
+        "short": "AFF-3",
+        "definition": "This field contains the postal address of the professional organization with which the Staff Member is associated.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -101,7 +98,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XAD"
@@ -117,9 +114,8 @@
       {
         "id": "AFF.4",
         "path": "AFF.4",
-        "short": "- AFF.4 - ",
-        "definition": "Definition: This field contains the period the staff member started and ended membership in the professional organization.",
-        "description": null,
+        "short": "AFF-4",
+        "definition": "This field contains the period the staff member started and ended membership in the professional organization.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +123,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "DR"
@@ -143,9 +139,8 @@
       {
         "id": "AFF.5",
         "path": "AFF.5",
-        "short": "- AFF.5 - ",
-        "definition": "Definition: This field contains miscellaneous additional information related to the staff member's membership in the professional organization.",
-        "description": null,
+        "short": "AFF-5",
+        "definition": "This field contains miscellaneous additional information related to the staff member's membership in the professional organization.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +148,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -184,5 +179,5 @@
   "title": "HL7 v2 AFF Segment Definition",
   "name": "AFF",
   "type": "AFF",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T23:00:34Z"
 }

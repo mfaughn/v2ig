@@ -26,9 +26,8 @@
       {
         "id": "SLT.1",
         "path": "SLT.1",
-        "short": "- SLT.1 - ",
-        "definition": "Definition: The unique identifier of the device (assigned by user, not assigned by the software application; e.g.: 01).",
-        "description": null,
+        "short": "SLT-1",
+        "definition": "The unique identifier of the device (assigned by user, not assigned by the software application; e.g.: 01).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "SLT.2",
         "path": "SLT.2",
-        "short": "- SLT.2 - ",
-        "definition": "Definition: The name of the device associated with the device number in SLT-1 (e.g., VAC).",
-        "description": null,
+        "short": "SLT-2",
+        "definition": "The name of the device associated with the device number in SLT-1 (e.g., VAC).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -91,9 +89,8 @@
       {
         "id": "SLT.3",
         "path": "SLT.3",
-        "short": "- SLT.3 - ",
-        "definition": "Definition: A unique number associated with an instance of a sterilization/decontamination cycle assigned by the instrument-tracking system.",
-        "description": null,
+        "short": "SLT-3",
+        "definition": "A unique number associated with an instance of a sterilization/decontamination cycle assigned by the instrument-tracking system.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -101,7 +98,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -117,9 +114,8 @@
       {
         "id": "SLT.4",
         "path": "SLT.4",
-        "short": "- SLT.4 - ",
-        "definition": "Definition: The Item Identifier is a unique code assigned to the material item by the Instrument-tracking software application to identify the item being sterilized or decontaminated.",
-        "description": null,
+        "short": "SLT-4",
+        "definition": "The Item Identifier is a unique code assigned to the material item by the Instrument-tracking software application to identify the item being sterilized or decontaminated.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +123,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -143,9 +139,8 @@
       {
         "id": "SLT.5",
         "path": "SLT.5",
-        "short": "- SLT.5 - ",
-        "definition": "Definition: The special identification code, printed as a set of vertical bars of differing widths, used on instruments to identify them and provide for rapid, error-free input by a barcode scanning device. The coding can include numbers, letters or a combination of both.",
-        "description": null,
+        "short": "SLT-5",
+        "definition": "The special identification code, printed as a set of vertical bars of differing widths, used on instruments to identify them and provide for rapid, error-free input by a barcode scanning device. The coding can include numbers, letters or a combination of both.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +148,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -184,5 +179,5 @@
   "title": "HL7 v2 SLT Segment Definition",
   "name": "SLT",
   "type": "SLT",
-  "date": "2025-03-06T16:07:41Z"
+  "date": "2025-06-05T23:00:35Z"
 }

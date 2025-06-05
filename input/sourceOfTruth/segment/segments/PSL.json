@@ -26,9 +26,8 @@
       {
         "id": "PSL.1",
         "path": "PSL.1",
-        "short": "- PSL.1 - ",
-        "definition": "Definition: Unique Product/Service Line Item Number assigned by the Provider Application.",
-        "description": null,
+        "short": "PSL-1",
+        "definition": "Unique Product/Service Line Item Number assigned by the Provider Application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "PSL.2",
         "path": "PSL.2",
-        "short": "- PSL.2 - ",
-        "definition": "Definition: Unique Product/Service Line Item Number assigned by the Payer Application.",
-        "description": null,
+        "short": "PSL-2",
+        "definition": "Unique Product/Service Line Item Number assigned by the Payer Application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -78,9 +76,8 @@
       {
         "id": "PSL.3",
         "path": "PSL.3",
-        "short": "- PSL.3 - ",
-        "definition": "Definition: Unique sequence number for the Product/Service Line Item – starts with 1, then 2, etc. for each unique Product/Service Line Item in this Invoice.",
-        "description": null,
+        "short": "PSL-3",
+        "definition": "Unique sequence number for the Product/Service Line Item – starts with 1, then 2, etc. for each unique Product/Service Line Item in this Invoice.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -88,7 +85,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -117,9 +114,8 @@
       {
         "id": "PSL.4",
         "path": "PSL.4",
-        "short": "- PSL.4 - ",
-        "definition": "Definition: Identifier for this Product/Service Line Item assigned by the Provider Application. This will be echoed on all interactions between participants for this Product/Service Line Item.",
-        "description": null,
+        "short": "PSL-4",
+        "definition": "Identifier for this Product/Service Line Item assigned by the Provider Application. This will be echoed on all interactions between participants for this Product/Service Line Item.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -127,7 +123,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -143,9 +139,8 @@
       {
         "id": "PSL.5",
         "path": "PSL.5",
-        "short": "- PSL.5 - ",
-        "definition": "Definition: Identifier for this Product/Service Line Item assigned by the Payer Application. This will be echoed on all interactions between participants for this Product/Service Line Item.",
-        "description": null,
+        "short": "PSL-5",
+        "definition": "Identifier for this Product/Service Line Item assigned by the Payer Application. This will be echoed on all interactions between participants for this Product/Service Line Item.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -153,7 +148,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -169,9 +164,8 @@
       {
         "id": "PSL.6",
         "path": "PSL.6",
-        "short": "- PSL.6 - ",
-        "definition": "Definition: Processing status for the Product/Service Code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70559[_User-defined Table 0559 – Product/Service Status_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-6",
+        "definition": "Processing status for the Product/Service Code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70559[_User-defined Table 0559 – Product/Service Status_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -179,7 +173,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -199,9 +193,8 @@
       {
         "id": "PSL.7",
         "path": "PSL.7",
-        "short": "- PSL.7 - ",
-        "definition": "Definition: Code describing the service that was delivered/received. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70879[_User-defined Table 0879 – Product/Service Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-7",
+        "definition": "Code describing the service that was delivered/received. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70879[_User-defined Table 0879 – Product/Service Code_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -209,7 +202,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -229,9 +222,8 @@
       {
         "id": "PSL.8",
         "path": "PSL.8",
-        "short": "- PSL.8 - ",
-        "definition": "Definition: Additional optional modifier(s) for the Product/Service Code (e.g., after hours – evening, after hours – weekend); repeats up to 5 times. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70880[_User-defined Table 0880 – Product/Service Code Modifier_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-8",
+        "definition": "Additional optional modifier(s) for the Product/Service Code (e.g., after hours – evening, after hours – weekend); repeats up to 5 times. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70880[_User-defined Table 0880 – Product/Service Code Modifier_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -239,7 +231,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 5,
         "type": [
           {
             "code": "CWE"
@@ -259,9 +251,8 @@
       {
         "id": "PSL.9",
         "path": "PSL.9",
-        "short": "- PSL.9 - ",
-        "definition": "Definition: Text describing Product/Service Code in PSL.",
-        "description": null,
+        "short": "PSL-9",
+        "definition": "Text describing Product/Service Code in PSL.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -269,7 +260,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -298,9 +289,8 @@
       {
         "id": "PSL.10",
         "path": "PSL.10",
-        "short": "- PSL.10 - ",
-        "definition": "Definition: [ Start ] Date/Time product/service was delivered/received.",
-        "description": null,
+        "short": "PSL-10",
+        "definition": "[ Start ] Date/Time product/service was delivered/received.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -308,7 +298,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -324,9 +314,8 @@
       {
         "id": "PSL.11",
         "path": "PSL.11",
-        "short": "- PSL.11 - ",
-        "definition": "Definition: [ End ] Date/Time product/service was delivered/received. If specified, must be greater than or equal to Product/Service Effective Date.",
-        "description": null,
+        "short": "PSL-11",
+        "definition": "[ End ] Date/Time product/service was delivered/received. If specified, must be greater than or equal to Product/Service Effective Date.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -334,7 +323,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -350,9 +339,8 @@
       {
         "id": "PSL.12",
         "path": "PSL.12",
-        "short": "- PSL.12 - ",
-        "definition": "Definition: Amount that has been negotiated for this Product/Service Code on PSL between a Provider and Payer for each unit. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70560[_User-defined Table 0560 – Quantity Units_] in Chapter 2C, Code Tables, for valid values.",
-        "description": null,
+        "short": "PSL-12",
+        "definition": "Amount that has been negotiated for this Product/Service Code on PSL between a Provider and Payer for each unit. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70560[_User-defined Table 0560 – Quantity Units_] in Chapter 2C, Code Tables, for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -360,7 +348,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CQ"
@@ -380,9 +368,9 @@
       {
         "id": "PSL.13",
         "path": "PSL.13",
-        "short": "- PSL.13 - ",
-        "definition": "Definition: This field contains the cost per unit either in monetary amount or in points.",
-        "description": null,
+        "short": "PSL-13",
+        "definition": "This field contains the cost per unit either in monetary amount or in points.",
+        "comment": "Examples:\n\n{empty}1. Qty * cost/unit = gross amount\n\n{empty}2. Qty * cost/unit * factor = gross amount\n\n{empty}3. Qty * cost/point * factor * points = gross amount",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -390,7 +378,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -406,9 +394,8 @@
       {
         "id": "PSL.14",
         "path": "PSL.14",
-        "short": "- PSL.14 - ",
-        "definition": "Definition: Number of items in each unit – for Services, this should be set to 1.",
-        "description": null,
+        "short": "PSL-14",
+        "definition": "Number of items in each unit – for Services, this should be set to 1.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -416,7 +403,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -445,9 +432,8 @@
       {
         "id": "PSL.15",
         "path": "PSL.15",
-        "short": "- PSL.15 - ",
-        "definition": "Definition: = Product/Service Quantity * Product/Service Unit Cost",
-        "description": null,
+        "short": "PSL-15",
+        "definition": "= Product/Service Quantity * Product/Service Unit Cost",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -455,7 +441,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -471,9 +457,9 @@
       {
         "id": "PSL.16",
         "path": "PSL.16",
-        "short": "- PSL.16 - ",
-        "definition": "Definition: Amount that is being billed for this Product/Service Code on PSL, = Product/Service Gross Amount + sum of all Product/Service Adjustments on ADJ for this Product/Service Line Item.",
-        "description": null,
+        "short": "PSL-16",
+        "definition": "Amount that is being billed for this Product/Service Code on PSL, = Product/Service Gross Amount + sum of all Product/Service Adjustments on ADJ for this Product/Service Line Item.",
+        "comment": "\\= Product/Service Gross Amount + sum of all Product/Service Adjustments on ADJ",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -481,7 +467,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -497,9 +483,8 @@
       {
         "id": "PSL.17",
         "path": "PSL.17",
-        "short": "- PSL.17 - ",
-        "definition": "Definition: Additional codes describing the Product/Service Code on PSL – examples are Northern Allowance, Data Center Numbers, Sequence Numbers; repeats with Product/Service Clarification Code Value. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70561[_User-defined Table 0561 – Product/Services Clarification Codes_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-17",
+        "definition": "Additional codes describing the Product/Service Code on PSL – examples are Northern Allowance, Data Center Numbers, Sequence Numbers; repeats with Product/Service Clarification Code Value. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70561[_User-defined Table 0561 – Product/Services Clarification Codes_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -507,7 +492,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 20,
         "type": [
           {
             "code": "CWE"
@@ -527,9 +512,9 @@
       {
         "id": "PSL.18",
         "path": "PSL.18",
-        "short": "- PSL.18 - ",
-        "definition": "Definition: Actual value for Product/Service Clarification Code Type (40) – examples are \"Y\", \"N\" for Northern Allowance, an actual number for a Data Center Number; repeats with Product/Service Clarification Code Type.",
-        "description": null,
+        "short": "PSL-18",
+        "definition": "Actual value for Product/Service Clarification Code Type (40) – examples are \"Y\", \"N\" for Northern Allowance, an actual number for a Data Center Number; repeats with Product/Service Clarification Code Type.",
+        "comment": "Repeats with Product/Service Clarification Code Type.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -537,7 +522,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 20,
         "type": [
           {
             "code": "ST"
@@ -566,9 +551,8 @@
       {
         "id": "PSL.19",
         "path": "PSL.19",
-        "short": "- PSL.19 - ",
-        "definition": "Definition: Health Documents (electronic or paper) that support this Product/Service Line Item. This includes such health documents as forms used to register a claim with a Payer, reports, medical images, etc.",
-        "description": null,
+        "short": "PSL-19",
+        "definition": "Health Documents (electronic or paper) that support this Product/Service Line Item. This includes such health documents as forms used to register a claim with a Payer, reports, medical images, etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -576,7 +560,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 5,
         "type": [
           {
             "code": "EI"
@@ -592,9 +576,8 @@
       {
         "id": "PSL.20",
         "path": "PSL.20",
-        "short": "- PSL.20 - ",
-        "definition": "Definition: Codes indicating special processing requested of Payer for this Product/Service Line Item (e.g., hold until paper supporting documentation is received by Payer). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70562[_User-defined Table 0562 – Processing Consideration Codes_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-20",
+        "definition": "Codes indicating special processing requested of Payer for this Product/Service Line Item (e.g., hold until paper supporting documentation is received by Payer). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70562[_User-defined Table 0562 – Processing Consideration Codes_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -602,7 +585,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 20,
         "type": [
           {
             "code": "CWE"
@@ -622,9 +605,8 @@
       {
         "id": "PSL.21",
         "path": "PSL.21",
-        "short": "- PSL.21 - ",
-        "definition": "Definition: Set to \"Yes\" if information on this invoice should be treated with increased confidentiality/security. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_User-defined Table 0532 – Expanded Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-21",
+        "definition": "Set to \"Yes\" if information on this invoice should be treated with increased confidentiality/security. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70532[_User-defined Table 0532 – Expanded Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -632,7 +614,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -665,9 +647,8 @@
       {
         "id": "PSL.22",
         "path": "PSL.22",
-        "short": "- PSL.22 - ",
-        "definition": "Definition: Two Product /Service Line Items (PSL-7) may be in a relation to each other. One could be an addition to another. In this case this field contains the Code of PSL-7 of the \"master\" Product/Service Line Item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70879[_User-defined Table 0879 – Product/Service Code_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-22",
+        "definition": "Two Product /Service Line Items (PSL-7) may be in a relation to each other. One could be an addition to another. In this case this field contains the Code of PSL-7 of the \"master\" Product/Service Line Item. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70879[_User-defined Table 0879 – Product/Service Code_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -675,7 +656,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -695,9 +676,8 @@
       {
         "id": "PSL.23",
         "path": "PSL.23",
-        "short": "- PSL.23 - ",
-        "definition": "Definition: Monetary Amount of product/service item which is for the physician.",
-        "description": null,
+        "short": "PSL-23",
+        "definition": "Monetary Amount of product/service item which is for the physician.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -705,7 +685,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -721,9 +701,8 @@
       {
         "id": "PSL.24",
         "path": "PSL.24",
-        "short": "- PSL.24 - ",
-        "definition": "Definition: Factor to increase the billed amount.",
-        "description": null,
+        "short": "PSL-24",
+        "definition": "Factor to increase the billed amount.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -731,7 +710,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -760,9 +739,8 @@
       {
         "id": "PSL.25",
         "path": "PSL.25",
-        "short": "- PSL.25 - ",
-        "definition": "Definition: Cost centers are organizational units or activities that provide goods and services. In this context, it would be the department which delivered the Service/Product Line Item, e.g., Radiology, Emergency Room.",
-        "description": null,
+        "short": "PSL-25",
+        "definition": "Cost centers are organizational units or activities that provide goods and services. In this context, it would be the department which delivered the Service/Product Line Item, e.g., Radiology, Emergency Room.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -770,7 +748,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CX"
@@ -786,9 +764,8 @@
       {
         "id": "PSL.26",
         "path": "PSL.26",
-        "short": "- PSL.26 - ",
-        "definition": "Definition: Begin and end of billing period.",
-        "description": null,
+        "short": "PSL-26",
+        "definition": "Begin and end of billing period.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -796,7 +773,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DR"
@@ -812,9 +789,8 @@
       {
         "id": "PSL.27",
         "path": "PSL.27",
-        "short": "- PSL.27 - ",
-        "definition": "Definition: Number of Days for which no invoice is created.",
-        "description": null,
+        "short": "PSL-27",
+        "definition": "Number of Days for which no invoice is created.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -822,7 +798,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -851,9 +827,8 @@
       {
         "id": "PSL.28",
         "path": "PSL.28",
-        "short": "- PSL.28 - ",
-        "definition": "Definition: Several line items may be grouped to a session.",
-        "description": null,
+        "short": "PSL-28",
+        "definition": "Several line items may be grouped to a session.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -861,7 +836,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -890,9 +865,8 @@
       {
         "id": "PSL.29",
         "path": "PSL.29",
-        "short": "- PSL.29 - ",
-        "definition": "Definition: ID of the physician who is providing the Service, e.g., executing the radiology-exam (EAN ID = European Article Numbering).",
-        "description": null,
+        "short": "PSL-29",
+        "definition": "ID of the physician who is providing the Service, e.g., executing the radiology-exam (EAN ID = European Article Numbering).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -900,7 +874,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XCN"
@@ -916,9 +890,8 @@
       {
         "id": "PSL.30",
         "path": "PSL.30",
-        "short": "- PSL.30 - ",
-        "definition": "Definition: ID of the physician who is responsible for the Service.",
-        "description": null,
+        "short": "PSL-30",
+        "definition": "ID of the physician who is responsible for the Service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -926,7 +899,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XCN"
@@ -942,9 +915,8 @@
       {
         "id": "PSL.31",
         "path": "PSL.31",
-        "short": "- PSL.31 - ",
-        "definition": "Definition: Account role of the physician, for example only billing for the professional part, the technical part or both. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70881[_User-defined Table 0881 – Role Executing Physician_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-31",
+        "definition": "Account role of the physician, for example only billing for the professional part, the technical part or both. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70881[_User-defined Table 0881 – Role Executing Physician_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -952,7 +924,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -972,9 +944,8 @@
       {
         "id": "PSL.32",
         "path": "PSL.32",
-        "short": "- PSL.32 - ",
-        "definition": "Definition: The role of the Physician (\"self-employed\" or \"employed\"). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70882[_User-defined Table 0882 – Medical Role Executing Physician_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-32",
+        "definition": "The role of the Physician (\"self-employed\" or \"employed\"). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70882[_User-defined Table 0882 – Medical Role Executing Physician_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -982,7 +953,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -1002,9 +973,8 @@
       {
         "id": "PSL.33",
         "path": "PSL.33",
-        "short": "- PSL.33 - ",
-        "definition": "Definition: Left / right. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70894[_User-defined Table 0894 – Side of Body_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-33",
+        "definition": "Left / right. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70894[_User-defined Table 0894 – Side of Body_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1012,7 +982,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -1032,9 +1002,8 @@
       {
         "id": "PSL.34",
         "path": "PSL.34",
-        "short": "- PSL.34 - ",
-        "definition": "Definition: Cost of the service \"professional part\" expressed in \"points\".",
-        "description": null,
+        "short": "PSL-34",
+        "definition": "Cost of the service \"professional part\" expressed in \"points\".",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1042,7 +1011,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1071,9 +1040,8 @@
       {
         "id": "PSL.35",
         "path": "PSL.35",
-        "short": "- PSL.35 - ",
-        "definition": "Definition: Monetary Value of one \"point\" for the professional part of the service.",
-        "description": null,
+        "short": "PSL-35",
+        "definition": "Monetary Value of one \"point\" for the professional part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1081,7 +1049,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -1097,9 +1065,8 @@
       {
         "id": "PSL.36",
         "path": "PSL.36",
-        "short": "- PSL.36 - ",
-        "definition": "Definition: Internal Scaling Factor for the amount of the professional part of the service.",
-        "description": null,
+        "short": "PSL-36",
+        "definition": "Internal Scaling Factor for the amount of the professional part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1107,7 +1074,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1136,9 +1103,8 @@
       {
         "id": "PSL.37",
         "path": "PSL.37",
-        "short": "- PSL.37 - ",
-        "definition": "Definition: External Scaling Factor for the amount of the professional part of the service.",
-        "description": null,
+        "short": "PSL-37",
+        "definition": "External Scaling Factor for the amount of the professional part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1146,7 +1112,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1175,9 +1141,8 @@
       {
         "id": "PSL.38",
         "path": "PSL.38",
-        "short": "- PSL.38 - ",
-        "definition": "Definition: Total Amount for the professional part of this service.",
-        "description": null,
+        "short": "PSL-38",
+        "definition": "Total Amount for the professional part of this service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1185,7 +1150,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -1201,9 +1166,8 @@
       {
         "id": "PSL.39",
         "path": "PSL.39",
-        "short": "- PSL.39 - ",
-        "definition": "Definition: Cost of the service (Technical Part) expressed in \"points\".",
-        "description": null,
+        "short": "PSL-39",
+        "definition": "Cost of the service (Technical Part) expressed in \"points\".",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1211,7 +1175,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1240,9 +1204,8 @@
       {
         "id": "PSL.40",
         "path": "PSL.40",
-        "short": "- PSL.40 - ",
-        "definition": "Definition: Monetary Value of one \"point\" for the technical part of the service.",
-        "description": null,
+        "short": "PSL-40",
+        "definition": "Monetary Value of one \"point\" for the technical part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1250,7 +1213,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -1266,9 +1229,8 @@
       {
         "id": "PSL.41",
         "path": "PSL.41",
-        "short": "- PSL.41 - ",
-        "definition": "Definition: Internal Scaling Factor for the amount of the technical part of the service.",
-        "description": null,
+        "short": "PSL-41",
+        "definition": "Internal Scaling Factor for the amount of the technical part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1276,7 +1238,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1305,9 +1267,8 @@
       {
         "id": "PSL.42",
         "path": "PSL.42",
-        "short": "- PSL.42 - ",
-        "definition": "Definition: External Scaling Factor for the amount of the technical part of the service.",
-        "description": null,
+        "short": "PSL-42",
+        "definition": "External Scaling Factor for the amount of the technical part of the service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1315,7 +1276,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1344,9 +1305,8 @@
       {
         "id": "PSL.43",
         "path": "PSL.43",
-        "short": "- PSL.43 - ",
-        "definition": "Definition: Total Amount for the technical part of this service.",
-        "description": null,
+        "short": "PSL-43",
+        "definition": "Total Amount for the technical part of this service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1354,7 +1314,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -1370,9 +1330,8 @@
       {
         "id": "PSL.44",
         "path": "PSL.44",
-        "short": "- PSL.44 - ",
-        "definition": "Definition: Total Amount of the cost of this service (Professional plus technical part)",
-        "description": null,
+        "short": "PSL-44",
+        "definition": "Total Amount of the cost of this service (Professional plus technical part)",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1380,7 +1339,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CP"
@@ -1396,9 +1355,8 @@
       {
         "id": "PSL.45",
         "path": "PSL.45",
-        "short": "- PSL.45 - ",
-        "definition": "Definition: VAT–Rate Applied on the total amount of this service.",
-        "description": null,
+        "short": "PSL-45",
+        "definition": "VAT–Rate Applied on the total amount of this service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1406,7 +1364,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -1435,9 +1393,8 @@
       {
         "id": "PSL.46",
         "path": "PSL.46",
-        "short": "- PSL.46 - ",
-        "definition": "Definition: Main service.",
-        "description": null,
+        "short": "PSL-46",
+        "definition": "Main service.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1445,7 +1402,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -1474,9 +1431,8 @@
       {
         "id": "PSL.47",
         "path": "PSL.47",
-        "short": "- PSL.47 - ",
-        "definition": "Definition: Service line item has passed an approved validator software (yes/no). For reason see PSL-48. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "PSL-47",
+        "definition": "Service line item has passed an approved validator software (yes/no). For reason see PSL-48. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1484,7 +1440,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -1517,9 +1473,8 @@
       {
         "id": "PSL.48",
         "path": "PSL.48",
-        "short": "- PSL.48 - ",
-        "definition": "Definition: Reason why the service line item has not passed the validator software.",
-        "description": null,
+        "short": "PSL-48",
+        "definition": "Reason why the service line item has not passed the validator software.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -1527,7 +1482,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -1558,5 +1513,5 @@
   "title": "HL7 v2 PSL Segment Definition",
   "name": "PSL",
   "type": "PSL",
-  "date": "2025-03-06T16:07:40Z"
+  "date": "2025-06-05T23:00:35Z"
 }

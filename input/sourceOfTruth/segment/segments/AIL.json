@@ -26,9 +26,8 @@
       {
         "id": "AIL.1",
         "path": "AIL.1",
-        "short": "- AIL.1 - ",
-        "definition": "Definition: This field contains a number that uniquely identifies the information represented by this segment in this transaction for the purposes of addition, change or deletion.",
-        "description": null,
+        "short": "AIL-1",
+        "definition": "This field contains a number that uniquely identifies the information represented by this segment in this transaction for the purposes of addition, change or deletion.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,9 @@
       {
         "id": "AIL.2",
         "path": "AIL.2",
-        "short": "- AIL.2 - ",
-        "definition": "Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 - Segment Action Code_] in Chapter 2C, Code Tables, for valid values",
-        "description": null,
+        "short": "AIL-2",
+        "definition": "This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 - Segment Action Code_] in Chapter 2C, Code Tables, for valid values",
+        "comment": "This field is conditionally required. It is required for all updating or modifying trigger events.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +74,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -108,9 +107,9 @@
       {
         "id": "AIL.3",
         "path": "AIL.3",
-        "short": "- AIL.3 - ",
-        "definition": "Definition: This field contains a coded identification of the location being requested or scheduled for an appointment. This field is used to identify a specific location being requested, or a specific location that has been scheduled for an appointment. If the specific location is not known but the type of location is, _AIL-4-Location Type-AIL_ is used to identify the type of location required or scheduled. This field is conditionally required for this segment. In new schedule request messages, it is required if the request asks that a specific location be scheduled. For all other request messages, the specific location should be identified if the information is available (either because a specific location was initially requested, or because the filler application returned the coded identification of the specific location that has been scheduled).",
-        "description": null,
+        "short": "AIL-3",
+        "definition": "This field contains a coded identification of the location being requested or scheduled for an appointment. This field is used to identify a specific location being requested, or a specific location that has been scheduled for an appointment. If the specific location is not known but the type of location is, _AIL-4-Location Type-AIL_ is used to identify the type of location required or scheduled. This field is conditionally required for this segment. In new schedule request messages, it is required if the request asks that a specific location be scheduled. For all other request messages, the specific location should be identified if the information is available (either because a specific location was initially requested, or because the filler application returned the coded identification of the specific location that has been scheduled).",
+        "comment": "This field is repeating in order to accommodate both local and enterprise-wide identifiers.\n\nThis field is required for all unsolicited transactions from the filler application. It is optional for all query transactions.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -118,7 +117,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "PL"
@@ -134,9 +133,8 @@
       {
         "id": "AIL.4",
         "path": "AIL.4",
-        "short": "- AIL.4 - ",
-        "definition": "Definition: This field identifies the type of the location requested/scheduled for this appointment. For all messages, this field is conditionally required if a specific location is not identified in AIL-3-Location resource ID. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70305[_HL7 Table 0305 – Person Location Type_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "AIL-4",
+        "definition": "This field identifies the type of the location requested/scheduled for this appointment. For all messages, this field is conditionally required if a specific location is not identified in AIL-3-Location resource ID. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70305[_HL7 Table 0305 – Person Location Type_] in Chapter 2C, Code Tables, for suggested values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -144,7 +142,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -164,9 +162,8 @@
       {
         "id": "AIL.5",
         "path": "AIL.5",
-        "short": "- AIL.5 - ",
-        "definition": "Definition: This field identifies the requested resource as a member of the indicated group. If, in a Schedule Request Message (SRM), no specific location is requested, but a location type is requested, _AIL-5 Location Group_ can be used to further qualify the type of resource being requested.",
-        "description": null,
+        "short": "AIL-5",
+        "definition": "This field identifies the requested resource as a member of the indicated group. If, in a Schedule Request Message (SRM), no specific location is requested, but a location type is requested, _AIL-5 Location Group_ can be used to further qualify the type of resource being requested.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -174,7 +171,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -190,9 +187,9 @@
       {
         "id": "AIL.6",
         "path": "AIL.6",
-        "short": "- AIL.6 - ",
-        "definition": "Definition: This field contains the date and time this service needs for the appointment. This field allows the application to identify that the service is required for the appointment at a different time than the appointment's start date/time",
-        "description": null,
+        "short": "AIL-6",
+        "definition": "This field contains the date and time this service needs for the appointment. This field allows the application to identify that the service is required for the appointment at a different time than the appointment's start date/time",
+        "comment": "This field is conditionally required. If a value for _AIL-7 Start Date/Time Offset_ is not provided, then a value is required for this field. To specify that there is no difference between the appointment's start date/time and the resource's start date/time either replicate the appointment's start date/time into this field, or specify an offset of zero (0) in _AIL-7 Start Date/Time Offset_ and any valid time unit code in _AIL-8-Start Date/Time Offset Units_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -200,7 +197,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -216,9 +213,9 @@
       {
         "id": "AIL.7",
         "path": "AIL.7",
-        "short": "- AIL.7 - ",
-        "definition": "Definition: This field contains the offset this resource needs for the appointment, expressed in units of time relative to the scheduled start date/time. This field indicates to the application that the resource is required for the appointment at a different time than the appointment's start date/time. The first component contains the offset amount. An offset of zero (0), or an unvalued field, indicates that the resource is required at the start date/time of the appointment.",
-        "description": null,
+        "short": "AIL-7",
+        "definition": "This field contains the offset this resource needs for the appointment, expressed in units of time relative to the scheduled start date/time. This field indicates to the application that the resource is required for the appointment at a different time than the appointment's start date/time. The first component contains the offset amount. An offset of zero (0), or an unvalued field, indicates that the resource is required at the start date/time of the appointment.",
+        "comment": "A positive offset (an unsigned or positive number) indicates that the resource is required after the appointment's start date/time. Specifying a negative offset indicates that the resource is required prior to the specified start date/time of the appointment. Negative offsets are allowed, and sites should clearly define the effect of a negative offset on the appointment's start date/time.\n\nThis field is conditionally required. If a value for _AIL-6 Start Date/Time_ is not provided, then a value is required for this field. To specify that there is no difference between the appointment's start date/time and the resource's start date/time either replicate the appointment's start date/time into this field, or specify an offset of zero (0) in _AIL-7 Start Date/Time Offset_ and any valid time unit code in _AIL-8 Start Date/Time Offset Units_.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -226,7 +223,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -242,9 +239,9 @@
       {
         "id": "AIL.8",
         "path": "AIL.8",
-        "short": "- AIL.8 - ",
-        "definition": "Definition: This field contains a code describing the units of time used for expressing the _AIL-7 Start Date/Time Offset_ field. This field should be valued according to the recommendations made in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code \"_s_\") will be assumed. Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.",
-        "description": null,
+        "short": "AIL-8",
+        "definition": "This field contains a code describing the units of time used for expressing the _AIL-7 Start Date/Time Offset_ field. This field should be valued according to the recommendations made in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code \"_s_\") will be assumed. Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.",
+        "comment": "This field is conditionally required. If a value for _AIL-7 Start Date/Time Offset_ is provided, then a value is required for this field.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -252,7 +249,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -268,9 +265,9 @@
       {
         "id": "AIL.9",
         "path": "AIL.9",
-        "short": "- AIL.9 - ",
-        "definition": "Definition: This field contains the duration for which the resource is requested/scheduled for this appointment, if it is different than the overall duration of the requested/scheduled appointment. This field indicates to the application that a resource is required for a different amount of time than the appointment's overall duration. An unvalued duration indicates that the resource is required from its start date/time offset (specified in the previous two fields) until the end of the appointment. If no start date/time offset is specified, then the resource is required for the full duration of the appointment.",
-        "description": null,
+        "short": "AIL-9",
+        "definition": "This field contains the duration for which the resource is requested/scheduled for this appointment, if it is different than the overall duration of the requested/scheduled appointment. This field indicates to the application that a resource is required for a different amount of time than the appointment's overall duration. An unvalued duration indicates that the resource is required from its start date/time offset (specified in the previous two fields) until the end of the appointment. If no start date/time offset is specified, then the resource is required for the full duration of the appointment.",
+        "comment": "This field must be a positive, non-zero number. A negative number or zero (0) is nonsensical in the context of a duration.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -278,7 +275,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "NM"
@@ -294,9 +291,9 @@
       {
         "id": "AIL.10",
         "path": "AIL.10",
-        "short": "- AIL.10 - ",
-        "definition": "Definition: This field contains a code describing the units of time used associated with _AIL-9 Duration._ This field should be valued according to the recommendations made in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code \"_s_\") will be assumed. Refer to Chapter 7 for a list of ISO+ and ANS+ unit codes.",
-        "description": null,
+        "short": "AIL-10",
+        "definition": "This field contains a code describing the units of time used associated with _AIL-9 Duration._ This field should be valued according to the recommendations made in Chapters 2 and 7. If this field is not valued, the ISO base unit of seconds (code \"_s_\") will be assumed. Refer to Chapter 7 for a list of ISO+ and ANS+ unit codes.",
+        "comment": "As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.\n\nUnit of Measure Coding Systems from HL7 Table 0396\n\nUnit of Measure Coding Systems from HL7 Table 0396\n|===\n|Coding System |Description |Comment\n|ISO+ |ISO 2955.83 (units of measure) with HL7 extensions |See chapter 7.\n|ANS+ |HL7 set of units of measure |HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.\n|===",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -304,7 +301,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CNE"
@@ -320,9 +317,9 @@
       {
         "id": "AIL.11",
         "path": "AIL.11",
-        "short": "- AIL.11 - ",
-        "definition": "Definition: This field contains a code indicating whether the identified location can be replaced with an equivalent substitute location by the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70279[_User-Defined Table 0279 - Allow Substitution Codes_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "AIL-11",
+        "definition": "This field contains a code indicating whether the identified location can be replaced with an equivalent substitute location by the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70279[_User-Defined Table 0279 - Allow Substitution Codes_] in Chapter 2C, Code Tables, for suggested values.",
+        "comment": "This field is conditionally required. It is required for all request messages. It is optional for all unsolicited transactions, and for all query messages.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -330,7 +327,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -350,9 +347,9 @@
       {
         "id": "AIL.12",
         "path": "AIL.12",
-        "short": "- AIL.12 - ",
-        "definition": "Definition: This field contains a code that describes the requested/scheduled status of the location, from the point of view of the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70278[_User-Defined Table 0278 - Filler Status Codes_] in Chapter 2C, Code Tables, for suggested values.",
-        "description": null,
+        "short": "AIL-12",
+        "definition": "This field contains a code that describes the requested/scheduled status of the location, from the point of view of the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70278[_User-Defined Table 0278 - Filler Status Codes_] in Chapter 2C, Code Tables, for suggested values.",
+        "comment": "This is a conditionally required field. Because the information contained in this field is only appropriate in transactions originating from a filler application, it is required for those messages. This includes all unsolicited transactions originating from a filler application, as well as all response messages originating from a filler application. This field is optional for all transactions originating from placer, querying and auxiliary applications. It is recommended that this field be left unvalued in transactions originating from applications other than the filler application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -360,7 +357,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -382,5 +379,5 @@
   "title": "HL7 v2 AIL Segment Definition",
   "name": "AIL",
   "type": "AIL",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T23:00:33Z"
 }

@@ -26,9 +26,8 @@
       {
         "id": "EDU.1",
         "path": "EDU.1",
-        "short": "- EDU.1 - ",
-        "definition": "Definition: This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
-        "description": null,
+        "short": "EDU-1",
+        "definition": "This field contains the number that identifies this transaction. For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "SI"
@@ -65,9 +64,8 @@
       {
         "id": "EDU.2",
         "path": "EDU.2",
-        "short": "- EDU.2 - ",
-        "definition": "Definition: This field contains the standard classification awarded upon completion of a unified program of study. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70360[_User-defined Table 0360 - Degree/License/Certificate_].",
-        "description": null,
+        "short": "EDU-2",
+        "definition": "This field contains the standard classification awarded upon completion of a unified program of study. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70360[_User-defined Table 0360 - Degree/License/Certificate_].",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -75,7 +73,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -95,9 +93,8 @@
       {
         "id": "EDU.3",
         "path": "EDU.3",
-        "short": "- EDU.3 - ",
-        "definition": "Definition: This field contains the date range when the academic degree program took place.",
-        "description": null,
+        "short": "EDU-3",
+        "definition": "This field contains the date range when the academic degree program took place.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +102,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DR"
@@ -121,9 +118,8 @@
       {
         "id": "EDU.4",
         "path": "EDU.4",
-        "short": "- EDU.4 - ",
-        "definition": "Definition: This field contains the date range during which the staff member participated in the academic degree program.",
-        "description": null,
+        "short": "EDU-4",
+        "definition": "This field contains the date range during which the staff member participated in the academic degree program.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -131,7 +127,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DR"
@@ -147,9 +143,8 @@
       {
         "id": "EDU.5",
         "path": "EDU.5",
-        "short": "- EDU.5 - ",
-        "definition": "Definition: This field contains the date the academic degree was granted to the staff member.",
-        "description": null,
+        "short": "EDU-5",
+        "definition": "This field contains the date the academic degree was granted to the staff member.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -157,7 +152,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DT"
@@ -173,9 +168,8 @@
       {
         "id": "EDU.6",
         "path": "EDU.6",
-        "short": "- EDU.6 - ",
-        "definition": "Definition: This field contains the official name of the academic institution that granted the degree to the Staff Member.",
-        "description": null,
+        "short": "EDU-6",
+        "definition": "This field contains the official name of the academic institution that granted the degree to the Staff Member.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -183,7 +177,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XON"
@@ -199,9 +193,9 @@
       {
         "id": "EDU.7",
         "path": "EDU.7",
-        "short": "- EDU.7 - ",
-        "definition": "Definition: This field contains the categorization of the academic institution that granted the degree to the Staff Member. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70402[_User-defined Table 0402 – School Type_].",
-        "description": null,
+        "short": "EDU-7",
+        "definition": "This field contains the categorization of the academic institution that granted the degree to the Staff Member. HL7 suggests using values in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70402[_User-defined Table 0402 – School Type_].",
+        "comment": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70402[_User-defined Table 0402 – School Type_] in Chapter 2C, Code Tables, for valid values. This table contains values for graduate, medical etc.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -209,7 +203,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "CWE"
@@ -229,9 +223,8 @@
       {
         "id": "EDU.8",
         "path": "EDU.8",
-        "short": "- EDU.8 - ",
-        "definition": "Definition: This field contains the postal address of the academic institution that granted the degree to the Staff Member.",
-        "description": null,
+        "short": "EDU-8",
+        "definition": "This field contains the postal address of the academic institution that granted the degree to the Staff Member.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -239,7 +232,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XAD"
@@ -255,9 +248,8 @@
       {
         "id": "EDU.9",
         "path": "EDU.9",
-        "short": "- EDU.9 - ",
-        "definition": "Definition: This field contains the subject of academic study associated with the specific academic degree program pursued by the staff member as his/her area of specialization.",
-        "description": null,
+        "short": "EDU-9",
+        "definition": "This field contains the subject of academic study associated with the specific academic degree program pursued by the staff member as his/her area of specialization.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -265,7 +257,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "CWE"
@@ -283,5 +275,5 @@
   "title": "HL7 v2 EDU Segment Definition",
   "name": "EDU",
   "type": "EDU",
-  "date": "2025-03-06T16:07:39Z"
+  "date": "2025-06-05T23:00:34Z"
 }

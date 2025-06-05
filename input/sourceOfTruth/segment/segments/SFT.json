@@ -26,9 +26,8 @@
       {
         "id": "SFT.1",
         "path": "SFT.1",
-        "short": "- SFT.1 - ",
-        "definition": "Definition: Organization identification information for the software vendor that created this transaction. The purpose of this field, along with the remaining fields in this segment, is to provide a more complete picture of applications that are sending HL7 messages. The Software Vendor Organization field would allow the identification of the vendor who is responsible for maintaining the application.",
-        "description": null,
+        "short": "SFT-1",
+        "definition": "Organization identification information for the software vendor that created this transaction. The purpose of this field, along with the remaining fields in this segment, is to provide a more complete picture of applications that are sending HL7 messages. The Software Vendor Organization field would allow the identification of the vendor who is responsible for maintaining the application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XON"
@@ -52,9 +51,9 @@
       {
         "id": "SFT.2",
         "path": "SFT.2",
-        "short": "- SFT.2 - ",
-        "definition": "Definition: Latest software version number of the sending system that has been compliance tested and accepted. Software Certified Version or Release Number helps to provide a complete picture of the application that is sending/receiving HL7 messages. Versions are important in identifying a specific 'release' of an application. In some situations, the receiving application validates the Software Certified Version or Release Number against a list of \"certified\" versions/releases of the particular software to determine if the sending application adheres to specific business rules required by the receiving application.",
-        "description": null,
+        "short": "SFT-2",
+        "definition": "Latest software version number of the sending system that has been compliance tested and accepted. Software Certified Version or Release Number helps to provide a complete picture of the application that is sending/receiving HL7 messages. Versions are important in identifying a specific 'release' of an application. In some situations, the receiving application validates the Software Certified Version or Release Number against a list of \"certified\" versions/releases of the particular software to determine if the sending application adheres to specific business rules required by the receiving application.",
+        "comment": "Alternatively, the software MAY perform different processing depending on the version of the sending software",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +61,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -91,9 +90,8 @@
       {
         "id": "SFT.3",
         "path": "SFT.3",
-        "short": "- SFT.3 - ",
-        "definition": "Definition: The name of the software product that submitted the transaction. A key component in the identification of an application is its Software Product Name. This is a key piece of information in identifying an application.",
-        "description": null,
+        "short": "SFT-3",
+        "definition": "The name of the software product that submitted the transaction. A key component in the identification of an application is its Software Product Name. This is a key piece of information in identifying an application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -101,7 +99,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -130,9 +128,9 @@
       {
         "id": "SFT.4",
         "path": "SFT.4",
-        "short": "- SFT.4 - ",
-        "definition": "Definition: Issued by a vendor for each unique software version instance to distinguish between like versions of the same software e.g., a checksum.",
-        "description": null,
+        "short": "SFT-4",
+        "definition": "Issued by a vendor for each unique software version instance to distinguish between like versions of the same software e.g., a checksum.",
+        "comment": "Software Binary Ids are issued for each unique software version instance. As such, this information helps to differentiate between differing versions of the same software. Identical Primary IDs indicate that the software is identical at the binary level (configuration settings mmightdiffer).",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -140,7 +138,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -169,9 +167,9 @@
       {
         "id": "SFT.5",
         "path": "SFT.5",
-        "short": "- SFT.5 - ",
-        "definition": "Definition: Software identification information that can be supplied by a software vendor with their transaction. Might include configuration settings, etc.",
-        "description": null,
+        "short": "SFT-5",
+        "definition": "Software identification information that can be supplied by a software vendor with their transaction. Might include configuration settings, etc.",
+        "comment": "This field would contain any additional information an application provides with the transaction it has submitted. This information could be used for diagnostic purposes and provides greater flexibility in identifying a piece of software. Possibilities include setup or configuration parameter information.\n\nThis field SHOULD NOT be sent unless performing diagnostics.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -179,7 +177,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "TX"
@@ -195,9 +193,9 @@
       {
         "id": "SFT.6",
         "path": "SFT.6",
-        "short": "- SFT.6 - ",
-        "definition": "Definition: Date the submitting software was installed at the sending site.",
-        "description": null,
+        "short": "SFT-6",
+        "definition": "Date the submitting software was installed at the sending site.",
+        "comment": "A Software Install Date on its own can often provide key information about the behavior of the application, and is necessary to provide a complete picture of the sending application.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -205,7 +203,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "DTM"
@@ -223,5 +221,5 @@
   "title": "HL7 v2 SFT Segment Definition",
   "name": "SFT",
   "type": "SFT",
-  "date": "2025-03-06T16:07:34Z"
+  "date": "2025-06-05T23:00:28Z"
 }

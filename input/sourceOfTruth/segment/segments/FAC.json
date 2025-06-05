@@ -26,9 +26,8 @@
       {
         "id": "FAC.1",
         "path": "FAC.1",
-        "short": "- FAC.1 - ",
-        "definition": "Definition: This field contains the facility identifier.",
-        "description": null,
+        "short": "FAC-1",
+        "definition": "This field contains the facility identifier.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -36,7 +35,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "EI"
@@ -52,9 +51,8 @@
       {
         "id": "FAC.2",
         "path": "FAC.2",
-        "short": "- FAC.2 - ",
-        "definition": "Definition: This field contains the type of facility. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70331[_HL7 Table 0331 - Facility Type_] for valid values.",
-        "description": null,
+        "short": "FAC-2",
+        "definition": "This field contains the type of facility. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70331[_HL7 Table 0331 - Facility Type_] for valid values.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -62,7 +60,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ID"
@@ -95,9 +93,8 @@
       {
         "id": "FAC.3",
         "path": "FAC.3",
-        "short": "- FAC.3 - ",
-        "definition": "Definition: This field contains the facility's address.",
-        "description": null,
+        "short": "FAC-3",
+        "definition": "This field contains the facility's address.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -105,7 +102,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XAD"
@@ -121,9 +118,8 @@
       {
         "id": "FAC.4",
         "path": "FAC.4",
-        "short": "- FAC.4 - ",
-        "definition": "Definition: This field contains the facility's telecommunication information.",
-        "description": null,
+        "short": "FAC-4",
+        "definition": "This field contains the facility's telecommunication information.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -131,7 +127,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XTN"
@@ -147,9 +143,8 @@
       {
         "id": "FAC.5",
         "path": "FAC.5",
-        "short": "- FAC.5 - ",
-        "definition": "Definition: This field contains the primary contact person's name.",
-        "description": null,
+        "short": "FAC-5",
+        "definition": "This field contains the primary contact person's name.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -157,7 +152,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -173,9 +168,8 @@
       {
         "id": "FAC.6",
         "path": "FAC.6",
-        "short": "- FAC.6 - ",
-        "definition": "Definition: This field contains the primary contact person's title.",
-        "description": null,
+        "short": "FAC-6",
+        "definition": "This field contains the primary contact person's title.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -183,7 +177,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "ST"
@@ -212,9 +206,8 @@
       {
         "id": "FAC.7",
         "path": "FAC.7",
-        "short": "- FAC.7 - ",
-        "definition": "Definition: This field contains the primary contact person's address.",
-        "description": null,
+        "short": "FAC-7",
+        "definition": "This field contains the primary contact person's address.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -222,7 +215,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XAD"
@@ -238,9 +231,8 @@
       {
         "id": "FAC.8",
         "path": "FAC.8",
-        "short": "- FAC.8 - ",
-        "definition": "Definition: This field contains the primary contact person's telecommunication information.",
-        "description": null,
+        "short": "FAC-8",
+        "definition": "This field contains the primary contact person's telecommunication information.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -248,7 +240,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XTN"
@@ -264,9 +256,8 @@
       {
         "id": "FAC.9",
         "path": "FAC.9",
-        "short": "- FAC.9 - ",
-        "definition": "Definition: This field contains the name of the individual with signature authority or who is responsible for the report.",
-        "description": null,
+        "short": "FAC-9",
+        "definition": "This field contains the name of the individual with signature authority or who is responsible for the report.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -274,7 +265,7 @@
           }
         ],
         "min": 1,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XCN"
@@ -290,9 +281,8 @@
       {
         "id": "FAC.10",
         "path": "FAC.10",
-        "short": "- FAC.10 - ",
-        "definition": "Definition: This field contains the title of the individual with signature authority or who is responsible for this report.",
-        "description": null,
+        "short": "FAC-10",
+        "definition": "This field contains the title of the individual with signature authority or who is responsible for this report.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -300,7 +290,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "ST"
@@ -329,9 +319,8 @@
       {
         "id": "FAC.11",
         "path": "FAC.11",
-        "short": "- FAC.11 - ",
-        "definition": "Definition: This field contains the address of the individual with signature authority or who is responsible for this report.",
-        "description": null,
+        "short": "FAC-11",
+        "definition": "This field contains the address of the individual with signature authority or who is responsible for this report.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -339,7 +328,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 0,
         "type": [
           {
             "code": "XAD"
@@ -355,9 +344,8 @@
       {
         "id": "FAC.12",
         "path": "FAC.12",
-        "short": "- FAC.12 - ",
-        "definition": "Definition: This field contains the telecommunication information of the individual with signature authority of who is responsible for this report.",
-        "description": null,
+        "short": "FAC-12",
+        "definition": "This field contains the telecommunication information of the individual with signature authority of who is responsible for this report.",
         "code": [
           {
             "system": "http://hl7.org/v2/CodeSystem/DataElements",
@@ -365,7 +353,7 @@
           }
         ],
         "min": 0,
-        "max": "*",
+        "max": 1,
         "type": [
           {
             "code": "XTN"
@@ -383,5 +371,5 @@
   "title": "HL7 v2 FAC Segment Definition",
   "name": "FAC",
   "type": "FAC",
-  "date": "2025-03-06T16:07:38Z"
+  "date": "2025-06-05T23:00:32Z"
 }
