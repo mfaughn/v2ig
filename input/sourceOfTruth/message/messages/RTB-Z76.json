@@ -40,8 +40,8 @@
     ]
   },
   "id": "RTB-Z76",
-  "title": "HL7 v2 RTB^Z76^RTB_K13 Message Definition",
+  "title": "HL7 v2 RTB^Z76 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RTB-Z76",
-  "name": "RTB^Z76^RTB_K13",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rtbZ76",
+  "date": "2025-06-06T00:37:09Z"
 }

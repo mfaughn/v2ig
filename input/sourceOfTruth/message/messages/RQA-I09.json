@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -52,8 +52,8 @@
     ]
   },
   "id": "RQA-I09",
-  "title": "HL7 v2 RQA^I09^RQA_I08 Message Definition",
+  "title": "HL7 v2 RQA^I09 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RQA-I09",
-  "name": "RQA^I09^RQA_I08",
-  "date": "2025-03-06T16:07:53Z"
+  "name": "rqaI09",
+  "date": "2025-06-06T00:37:10Z"
 }

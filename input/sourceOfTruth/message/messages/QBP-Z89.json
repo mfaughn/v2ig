@@ -40,8 +40,8 @@
     ]
   },
   "id": "QBP-Z89",
-  "title": "HL7 v2 QBP^Z89^QBP_Q11 Message Definition",
+  "title": "HL7 v2 QBP^Z89 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/QBP-Z89",
-  "name": "QBP^Z89^QBP_Q11",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "qbpZ89",
+  "date": "2025-06-06T00:37:09Z"
 }

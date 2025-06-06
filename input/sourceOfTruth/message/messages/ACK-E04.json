@@ -33,8 +33,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -47,8 +47,8 @@
     ]
   },
   "id": "ACK-E04",
-  "title": "HL7 v2 ACK^E04^ACK Message Definition",
+  "title": "HL7 v2 ACK^E04 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/ACK-E04",
-  "name": "ACK^E04^ACK",
-  "date": "2025-03-06T16:07:57Z"
+  "name": "ackE04",
+  "date": "2025-06-06T00:37:14Z"
 }

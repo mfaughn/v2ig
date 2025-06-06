@@ -28,8 +28,8 @@
     ]
   },
   "id": "ADT-A36",
-  "title": "HL7 v2 ADT^A36^ Message Definition",
+  "title": "HL7 v2 ADT^A36 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/ADT-A36",
-  "name": "ADT^A36^",
-  "date": "2025-03-06T16:07:51Z"
+  "name": "adtA36",
+  "date": "2025-06-06T00:37:08Z"
 }

@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -50,8 +50,8 @@
         ]
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -62,8 +62,8 @@
         ]
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeApplicationResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeApplicationResponse",
         "type": [
           {
             "code": "Reference",
@@ -76,8 +76,8 @@
     ]
   },
   "id": "MFN-M16",
-  "title": "HL7 v2 MFN^M16^MFN_M16 Message Definition",
+  "title": "HL7 v2 MFN^M16 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/MFN-M16",
-  "name": "MFN^M16^MFN_M16",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "mfnM16",
+  "date": "2025-06-06T00:37:10Z"
 }

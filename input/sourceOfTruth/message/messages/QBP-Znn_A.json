@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -52,8 +52,8 @@
     ]
   },
   "id": "QBP-Znn_A",
-  "title": "HL7 v2 QBP^Znn_A^QBP_Qnn Message Definition",
+  "title": "HL7 v2 QBP^Znn_A Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/QBP-Znn_A",
-  "name": "QBP^Znn_A^QBP_Qnn",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "qbpZnn_A",
+  "date": "2025-06-06T00:37:09Z"
 }

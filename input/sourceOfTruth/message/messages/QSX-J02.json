@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -52,8 +52,8 @@
     ]
   },
   "id": "QSX-J02",
-  "title": "HL7 v2 QSX^J02^QCN_J01 Message Definition",
+  "title": "HL7 v2 QSX^J02 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/QSX-J02",
-  "name": "QSX^J02^QCN_J01",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "qsxJ02",
+  "date": "2025-06-06T00:37:09Z"
 }

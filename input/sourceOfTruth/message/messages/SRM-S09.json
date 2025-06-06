@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -50,8 +50,8 @@
         ]
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -62,8 +62,8 @@
         ]
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeApplicationResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeApplicationResponse",
         "type": [
           {
             "code": "Reference",
@@ -76,8 +76,8 @@
     ]
   },
   "id": "SRM-S09",
-  "title": "HL7 v2 SRM^S09^SRM_S01 Message Definition",
+  "title": "HL7 v2 SRM^S09 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/SRM-S09",
-  "name": "SRM^S09^SRM_S01",
-  "date": "2025-03-06T16:07:53Z"
+  "name": "srmS09",
+  "date": "2025-06-06T00:37:10Z"
 }

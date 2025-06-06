@@ -40,8 +40,8 @@
     ]
   },
   "id": "RDY-K15",
-  "title": "HL7 v2 RDY^K15^RDY_K15 Message Definition",
+  "title": "HL7 v2 RDY^K15 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RDY-K15",
-  "name": "RDY^K15^RDY_K15",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rdyK15",
+  "date": "2025-06-06T00:37:09Z"
 }

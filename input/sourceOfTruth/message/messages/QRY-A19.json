@@ -28,8 +28,8 @@
     ]
   },
   "id": "QRY-A19",
-  "title": "HL7 v2 QRY^A19^ Message Definition",
+  "title": "HL7 v2 QRY^A19 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/QRY-A19",
-  "name": "QRY^A19^",
-  "date": "2025-03-06T16:07:50Z"
+  "name": "qryA19",
+  "date": "2025-06-06T00:37:08Z"
 }

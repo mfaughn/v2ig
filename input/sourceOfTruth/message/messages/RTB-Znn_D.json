@@ -40,8 +40,8 @@
     ]
   },
   "id": "RTB-Znn_D",
-  "title": "HL7 v2 RTB^Znn_D^RTB_K13 Message Definition",
+  "title": "HL7 v2 RTB^Znn_D Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RTB-Znn_D",
-  "name": "RTB^Znn_D^RTB_K13",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rtbZnn_D",
+  "date": "2025-06-06T00:37:09Z"
 }

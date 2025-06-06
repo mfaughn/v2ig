@@ -35,8 +35,8 @@
     ]
   },
   "id": "RSP-Znn_E",
-  "title": "HL7 v2 RSP^Znn_E^RSP_Znn Message Definition",
+  "title": "HL7 v2 RSP^Znn_E Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RSP-Znn_E",
-  "name": "RSP^Znn_E^RSP_Znn",
-  "date": "2025-03-06T16:07:54Z"
+  "name": "rspZnn_E",
+  "date": "2025-06-06T00:37:11Z"
 }

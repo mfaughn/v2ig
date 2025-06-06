@@ -33,8 +33,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -47,8 +47,8 @@
     ]
   },
   "id": "ACK-PC6",
-  "title": "HL7 v2 ACK^PC6^ACK Message Definition",
+  "title": "HL7 v2 ACK^PC6 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/ACK-PC6",
-  "name": "ACK^PC6^ACK",
-  "date": "2025-03-06T16:07:55Z"
+  "name": "ackPC6",
+  "date": "2025-06-06T00:37:12Z"
 }

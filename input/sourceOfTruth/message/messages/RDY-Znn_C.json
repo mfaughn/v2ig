@@ -40,8 +40,8 @@
     ]
   },
   "id": "RDY-Znn_C",
-  "title": "HL7 v2 RDY^Znn_C^RDY_K15 Message Definition",
+  "title": "HL7 v2 RDY^Znn_C Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RDY-Znn_C",
-  "name": "RDY^Znn_C^RDY_K15",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rdyZnn_C",
+  "date": "2025-06-06T00:37:09Z"
 }

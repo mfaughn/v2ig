@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -52,8 +52,8 @@
     ]
   },
   "id": "RSP-Z84",
-  "title": "HL7 v2 RSP^Z84^RSP_Z84 Message Definition",
+  "title": "HL7 v2 RSP^Z84 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RSP-Z84",
-  "name": "RSP^Z84^RSP_Z84",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rspZ84",
+  "date": "2025-06-06T00:37:09Z"
 }

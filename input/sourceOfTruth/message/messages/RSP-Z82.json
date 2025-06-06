@@ -40,8 +40,8 @@
     ]
   },
   "id": "RSP-Z82",
-  "title": "HL7 v2 RSP^Z82^RSP_Z82 Message Definition",
+  "title": "HL7 v2 RSP^Z82 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/RSP-Z82",
-  "name": "RSP^Z82^RSP_Z82",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "rspZ82",
+  "date": "2025-06-06T00:37:09Z"
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "url": "http://hl7.org/v2/CodeSystem/Messages",
+  "url": "http://hl7.org/v2/CodeSystem/messages",
   "id": "messages",
   "status": "active",
   "content": "complete",

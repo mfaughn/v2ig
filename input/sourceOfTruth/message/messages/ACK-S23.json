@@ -33,8 +33,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -47,8 +47,8 @@
     ]
   },
   "id": "ACK-S23",
-  "title": "HL7 v2 ACK^S23^ACK Message Definition",
+  "title": "HL7 v2 ACK^S23 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/ACK-S23",
-  "name": "ACK^S23^ACK",
-  "date": "2025-03-06T16:07:55Z"
+  "name": "ackS23",
+  "date": "2025-06-06T00:37:12Z"
 }

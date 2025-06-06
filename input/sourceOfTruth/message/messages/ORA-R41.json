@@ -38,8 +38,8 @@
         "patternCode": "active"
       },
       {
-        "id": "Message.acknowledgementChoreography.originalModeAck",
-        "path": "Message.acknowledgementChoreography.originalModeAck",
+        "id": "Message.acknowledgementChoreography.originalModeResponse",
+        "path": "Message.acknowledgementChoreography.originalModeResponse",
         "type": [
           {
             "code": "Reference",
@@ -50,8 +50,8 @@
         ]
       },
       {
-        "id": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
-        "path": "Message.acknowledgementChoreography.enhancedModeImmediateAck",
+        "id": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
+        "path": "Message.acknowledgementChoreography.enhancedModeImmediateResponse",
         "type": [
           {
             "code": "Reference",
@@ -64,8 +64,8 @@
     ]
   },
   "id": "ORA-R41",
-  "title": "HL7 v2 ORA^R41^ORA_R41 Message Definition",
+  "title": "HL7 v2 ORA^R41 Message Definition",
   "url": "http://hl7.org/v2/StructureDefinition/Message/ORA-R41",
-  "name": "ORA^R41^ORA_R41",
-  "date": "2025-03-06T16:07:52Z"
+  "name": "oraR41",
+  "date": "2025-06-06T00:37:09Z"
 }
