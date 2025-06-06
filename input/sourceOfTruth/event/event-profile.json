@@ -1,7 +1,7 @@
 {
   "resourceType" : "StructureDefinition",
   "url" : "http://hl7.org/v2/StructureDefinition/Event-Profile",
-  "id" : "v2-event-profile",
+  "id" : "Event-Profile",
   "version" : "0.0.1",
   "name" : "V2EventProfile",
   "title" : " HL7 v2 Event Profile",
@@ -29,7 +29,7 @@
         "path" : "StructureDefinition.type",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "http://hl7.org/v2/ValueSet/Events"
+          "valueSet" : "http://hl7.org/v2/ValueSet/events"
         }
       },
       {

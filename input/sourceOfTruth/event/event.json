@@ -1,9 +1,9 @@
 {
   "resourceType" : "StructureDefinition",
   "url" : "http://hl7.org/v2/StructureDefinition/Event",
-  "id" : "v2-event",
+  "id" : "Event",
   "version" : "0.0.1",
-  "name" : "V2Event",
+  "name" : "Event",
   "title" : " HL7 v2 Event",
   "status" : "active",
   "kind" : "logical",

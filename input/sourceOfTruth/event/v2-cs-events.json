@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "url": "http://hl7.org/v2/CodeSystem/Events",
+  "url": "http://hl7.org/v2/CodeSystem/events",
   "id": "events",
   "status": "active",
   "content": "complete",
