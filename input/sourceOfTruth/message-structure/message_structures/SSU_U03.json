@@ -23,296 +23,265 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "SSU_U03.1-MSH",
-          "path": "SSU_U03.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SSU_U03.2-SFT",
-          "path": "SSU_U03.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SSU_U03.3-UAC",
-          "path": "SSU_U03.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SSU_U03.4-EQU",
-          "path": "SSU_U03.4-EQU",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/EQU"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SSU_U03.5-SPECIMEN_CONTAINER",
-          "path": "SSU_U03.5-SPECIMEN_CONTAINER",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "SSU_U03.5-SPECIMEN_CONTAINER.1-SAC",
-              "path": "SSU_U03.5-SPECIMEN_CONTAINER.1-SAC",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/SAC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SSU_U03.5-SPECIMEN_CONTAINER.2-OBX",
-              "path": "SSU_U03.5-SPECIMEN_CONTAINER.2-OBX",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SSU_U03.5-SPECIMEN_CONTAINER.3-NTE",
-              "path": "SSU_U03.5-SPECIMEN_CONTAINER.3-NTE",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SSU_U03.5-SPECIMEN_CONTAINER.4-PRT",
-              "path": "SSU_U03.5-SPECIMEN_CONTAINER.4-PRT",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN",
-              "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.1-SPM",
-                  "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.1-SPM",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/SPM"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.2-OBX",
-                  "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.2-OBX",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.3-PRT",
-                  "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.3-PRT",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "SSU_U03.1-MSH",
+        "path": "SSU_U03.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "SSU_U03.6-ROL",
-          "path": "SSU_U03.6-ROL",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ROL"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "B"
-            }
-          ]
-        }
-      ]
+      },
+      {
+        "id": "SSU_U03.2-SFT",
+        "path": "SSU_U03.2-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.3-UAC",
+        "path": "SSU_U03.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.4-EQU",
+        "path": "SSU_U03.4-EQU",
+        "short": "Equipment Detail",
+        "min": 1,
+        "max": "1",
+        "definition": "Equipment Detail",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/EQU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER",
+        "short": "SPECIMEN_CONTAINER",
+        "min": 1,
+        "max": "*",
+        "definition": "SPECIMEN_CONTAINER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.1-SAC",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.1-SAC",
+        "short": "Specimen Container Detail",
+        "min": 1,
+        "max": "1",
+        "definition": "Specimen Container Detail",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.2-OBX",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.2-OBX",
+        "short": "Additional specimen container characteristics",
+        "min": 1,
+        "max": "*",
+        "definition": "Additional specimen container characteristics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.3-NTE",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.3-NTE",
+        "short": "Additional specimen container information",
+        "min": 1,
+        "max": "*",
+        "definition": "Additional specimen container information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.4-PRT",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.4-PRT",
+        "short": "Participation for OBX",
+        "min": 1,
+        "max": "*",
+        "definition": "Participation for OBX",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN",
+        "short": "SPECIMEN",
+        "min": 0,
+        "max": "*",
+        "definition": "SPECIMEN",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.1-SPM",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.1-SPM",
+        "short": "Specimen",
+        "min": 1,
+        "max": "1",
+        "definition": "Specimen",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SPM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.2-OBX",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.2-OBX",
+        "short": "Specimen related observation",
+        "min": 1,
+        "max": "*",
+        "definition": "Specimen related observation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.3-PRT",
+        "path": "SSU_U03.5-SPECIMEN_CONTAINER.5-SPECIMEN.3-PRT",
+        "short": "Participation for OBX",
+        "min": 1,
+        "max": "*",
+        "definition": "Participation for OBX",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SSU_U03.6-ROL",
+        "path": "SSU_U03.6-ROL",
+        "short": "Role Detail",
+        "min": 0,
+        "max": "1",
+        "definition": "Role Detail",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 SSU_U03 Segment Definition",
   "name": "SSU_U03",
   "type": "SSU_U03",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:00Z"
 }

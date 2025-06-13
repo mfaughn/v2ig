@@ -23,1235 +23,1086 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "PEX_P07.1-MSH",
-          "path": "PEX_P07.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.2-ARV",
-          "path": "PEX_P07.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.3-SFT",
-          "path": "PEX_P07.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.4-UAC",
-          "path": "PEX_P07.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.5-EVN",
-          "path": "PEX_P07.5-EVN",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/EVN"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.6-PID",
-          "path": "PEX_P07.6-PID",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PID"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.7-PD1",
-          "path": "PEX_P07.7-PD1",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PD1"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.8-GSP",
-          "path": "PEX_P07.8-GSP",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.9-GSR",
-          "path": "PEX_P07.9-GSR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.10-GSC",
-          "path": "PEX_P07.10-GSC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.11-PRT",
-          "path": "PEX_P07.11-PRT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.12-ARV",
-          "path": "PEX_P07.12-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "B"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.13-NTE",
-          "path": "PEX_P07.13-NTE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PEX_P07.14-VISIT",
-          "path": "PEX_P07.14-VISIT",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "PEX_P07.14-VISIT.1-PV1",
-              "path": "PEX_P07.14-VISIT.1-PV1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PEX_P07.14-VISIT.2-PV2",
-              "path": "PEX_P07.14-VISIT.2-PV2",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PEX_P07.14-VISIT.3-PRT",
-              "path": "PEX_P07.14-VISIT.3-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "PEX_P07.1-MSH",
+        "path": "PEX_P07.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "PEX_P07.15-EXPERIENCE",
-          "path": "PEX_P07.15-EXPERIENCE",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "PEX_P07.15-EXPERIENCE.1-PES",
-              "path": "PEX_P07.15-EXPERIENCE.1-PES",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PES"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION",
-              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.1-PEO",
-                  "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.1-PEO",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PEO"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE",
-                  "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.1-PCR",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.1-PCR",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PCR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.1-RXE",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.1-RXE",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.2-PRT",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY",
-                          "min": 0,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.1-TQ1",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.1-TQ1",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.2-TQ2",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.2-TQ2",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.4-RXR",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.4-RXR",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.1-RXA",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.1-RXA",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXA"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.2-RXR",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.2-RXR",
-                          "min": 1,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.3-PRT",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.3-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.4-PRB",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.4-PRB",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRB"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.1-OBX",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.1-OBX",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.2-PRT",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.6-NTE",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.6-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.1-NK1",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.1-NK1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NK1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.2-GSP",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.2-GSP",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.3-GSR",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.3-GSR",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER",
-                          "min": 1,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.1-RXE",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.1-RXE",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXE"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.2-PRT",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.2-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY",
-                              "min": 0,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "BackboneElement"
-                                }
-                              ]
-                            },
-                            [
-                              [
-                                {
-                                  "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.1-TQ1",
-                                  "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.1-TQ1",
-                                  "min": 0,
-                                  "max": "1",
-                                  "definition": "1",
-                                  "short": "1",
-                                  "type": [
-                                    {
-                                      "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                                    }
-                                  ],
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                      "valueCode": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              [
-                                {
-                                  "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.2-TQ2",
-                                  "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.2-TQ2",
-                                  "min": 1,
-                                  "max": "*",
-                                  "definition": "*",
-                                  "short": "*",
-                                  "type": [
-                                    {
-                                      "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                                    }
-                                  ],
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                      "valueCode": "A"
-                                    }
-                                  ]
-                                }
-                              ]
-                            ]
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.4-RXR",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.4-RXR",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.1-RXA",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.1-RXA",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXA"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.2-RXR",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.2-RXR",
-                              "min": 1,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.3-PRT",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.3-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.6-PRB",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.6-PRB",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRB"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.1-OBX",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.1-OBX",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.2-PRT",
-                              "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.2-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY",
-                      "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.1-CSR",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.1-CSR",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/CSR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.2-CSP",
-                          "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.2-CSP",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/CSP"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "PEX_P07.2-ARV",
+        "path": "PEX_P07.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "PEX_P07.3-SFT",
+        "path": "PEX_P07.3-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.4-UAC",
+        "path": "PEX_P07.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.5-EVN",
+        "path": "PEX_P07.5-EVN",
+        "short": "Event Type",
+        "min": 1,
+        "max": "1",
+        "definition": "Event Type",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/EVN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.6-PID",
+        "path": "PEX_P07.6-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.7-PD1",
+        "path": "PEX_P07.7-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.8-GSP",
+        "path": "PEX_P07.8-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.9-GSR",
+        "path": "PEX_P07.9-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.10-GSC",
+        "path": "PEX_P07.10-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.11-PRT",
+        "path": "PEX_P07.11-PRT",
+        "short": "Participation (for Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.12-ARV",
+        "path": "PEX_P07.12-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.13-NTE",
+        "path": "PEX_P07.13-NTE",
+        "short": "Notes and comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.14-VISIT",
+        "path": "PEX_P07.14-VISIT",
+        "short": "VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.14-VISIT.1-PV1",
+        "path": "PEX_P07.14-VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.14-VISIT.2-PV2",
+        "path": "PEX_P07.14-VISIT.2-PV2",
+        "short": "Patient Visit - Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit - Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.14-VISIT.3-PRT",
+        "path": "PEX_P07.14-VISIT.3-PRT",
+        "short": "Participation (for Patient Visit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE",
+        "path": "PEX_P07.15-EXPERIENCE",
+        "short": "EXPERIENCE",
+        "min": 1,
+        "max": "*",
+        "definition": "EXPERIENCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.1-PES",
+        "path": "PEX_P07.15-EXPERIENCE.1-PES",
+        "short": "Product Experience Sender",
+        "min": 1,
+        "max": "1",
+        "definition": "Product Experience Sender",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION",
+        "short": "PEX_OBSERVATION",
+        "min": 1,
+        "max": "*",
+        "definition": "PEX_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.1-PEO",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.1-PEO",
+        "short": "Product Experience Observation",
+        "min": 1,
+        "max": "1",
+        "definition": "Product Experience Observation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PEO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE",
+        "short": "PEX_CAUSE",
+        "min": 1,
+        "max": "*",
+        "definition": "PEX_CAUSE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.1-PCR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.1-PCR",
+        "short": "Potential Causal Relationship",
+        "min": 1,
+        "max": "1",
+        "definition": "Potential Causal Relationship",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PCR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER",
+        "short": "RX_ORDER",
+        "min": 0,
+        "max": "1",
+        "definition": "RX_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.1-RXE",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.1-RXE",
+        "short": "Pharmacy/Treatment Encoded Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Encoded Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.2-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.2-PRT",
+        "short": "Participation (for Pharmacy/Treatment)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Pharmacy/Treatment)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY",
+        "short": "TIMING_QTY",
+        "min": 1,
+        "max": "*",
+        "definition": "TIMING_QTY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.1-TQ1",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.2-TQ2",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.3-TIMING_QTY.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.4-RXR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.2-RX_ORDER.4-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION",
+        "short": "RX_ADMINISTRATION",
+        "min": 0,
+        "max": "*",
+        "definition": "RX_ADMINISTRATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.1-RXA",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.1-RXA",
+        "short": "Pharmacy/Treatment Administration",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Administration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.2-RXR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.2-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 0,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.3-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.3-RX_ADMINISTRATION.3-PRT",
+        "short": "Participation (for Pharmacy Administration)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Pharmacy Administration)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.4-PRB",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.4-PRB",
+        "short": "Detail problem segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Detail problem segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION",
+        "short": "OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.1-OBX",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.1-OBX",
+        "short": "Observation/Result Segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.2-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.5-OBSERVATION.2-PRT",
+        "short": "Participation (for Observation Result)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Observation Result)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.6-NTE",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.6-NTE",
+        "short": "Notes and comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON",
+        "short": "ASSOCIATED_PERSON",
+        "min": 0,
+        "max": "1",
+        "definition": "ASSOCIATED_PERSON",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.1-NK1",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.1-NK1",
+        "short": "Associated parties segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Associated parties segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NK1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.2-GSP",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.2-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.3-GSR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.3-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER",
+        "short": "ASSOCIATED_RX_ORDER",
+        "min": 0,
+        "max": "1",
+        "definition": "ASSOCIATED_RX_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.1-RXE",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.1-RXE",
+        "short": "Pharmacy/Treatment Encoded Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Encoded Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.2-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.2-PRT",
+        "short": "Participation (for Pharmacy/Treatment)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Pharmacy/Treatment)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY",
+        "short": "NK1_TIMING_QTY",
+        "min": 1,
+        "max": "*",
+        "definition": "NK1_TIMING_QTY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.1-TQ1",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.2-TQ2",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.3-NK1_TIMING_QTY.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.4-RXR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.4-ASSOCIATED_RX_ORDER.4-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN",
+        "short": "ASSOCIATED_RX_ADMIN",
+        "min": 0,
+        "max": "*",
+        "definition": "ASSOCIATED_RX_ADMIN",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.1-RXA",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.1-RXA",
+        "short": "Pharmacy/Treatment Administration",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Administration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.2-RXR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.2-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 0,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.3-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.5-ASSOCIATED_RX_ADMIN.3-PRT",
+        "short": "Participation (for Pharmacy Administration)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Pharmacy Administration)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.6-PRB",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.6-PRB",
+        "short": "Detail Problem Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Detail Problem Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION",
+        "short": "ASSOCIATED_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "ASSOCIATED_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.1-OBX",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.1-OBX",
+        "short": "Observation/Results Segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Results Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.2-PRT",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.7-ASSOCIATED_PERSON.7-ASSOCIATED_OBSERVATION.2-PRT",
+        "short": "Participation (for Observation Result)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Observation Result)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY",
+        "short": "STUDY",
+        "min": 0,
+        "max": "*",
+        "definition": "STUDY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.1-CSR",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.1-CSR",
+        "short": "Clinical study registration",
+        "min": 1,
+        "max": "1",
+        "definition": "Clinical study registration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.2-CSP",
+        "path": "PEX_P07.15-EXPERIENCE.2-PEX_OBSERVATION.2-PEX_CAUSE.8-STUDY.2-CSP",
+        "short": "Clinical study phase segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Clinical study phase segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 PEX_P07 Segment Definition",
   "name": "PEX_P07",
   "type": "PEX_P07",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

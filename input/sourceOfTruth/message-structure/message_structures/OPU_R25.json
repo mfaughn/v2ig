@@ -23,1159 +23,1022 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "OPU_R25.1-MSH",
-          "path": "OPU_R25.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.2-ARV",
-          "path": "OPU_R25.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.3-SFT",
-          "path": "OPU_R25.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.4-UAC",
-          "path": "OPU_R25.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.5-NTE",
-          "path": "OPU_R25.5-NTE",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.6-PV1",
-          "path": "OPU_R25.6-PV1",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PV1"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.7-PV2",
-          "path": "OPU_R25.7-PV2",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PV2"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.8-PRT",
-          "path": "OPU_R25.8-PRT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION",
-          "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.1-OBX",
-              "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.1-OBX",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.2-NTE",
-              "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.2-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.3-PRT",
-              "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.3-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "OPU_R25.1-MSH",
+        "path": "OPU_R25.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "OPU_R25.10-ACCESSION_DETAIL",
-          "path": "OPU_R25.10-ACCESSION_DETAIL",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN",
-              "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.1-NK1",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.1-NK1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NK1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.2-GSP",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.2-GSP",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.3-GSR",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.3-GSR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT",
-              "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.1-PID",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.1-PID",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PID"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.2-PD1",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.2-PD1",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.3-GSP",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.3-GSP",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.4-GSR",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.4-GSR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.5-GSC",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.5-GSC",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.6-PRT",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.6-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.7-OH1",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.7-OH1",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OH1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.8-OH2",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.8-OH2",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OH2"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.9-OH3",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.9-OH3",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OH3"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.10-OH4",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.10-OH4",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OH4"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.11-ARV",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.11-ARV",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.1-OBX",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.1-OBX",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.2-PRT",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.3-NTE",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN",
-              "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.1-SPM",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.1-SPM",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/SPM"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.1-OBX",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.1-OBX",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.2-PRT",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.3-NTE",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.1-SAC",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.1-SAC",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/SAC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.2-INV",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.2-INV",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/INV"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER",
-                  "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.1-OBR",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.1-OBR",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.2-PRT",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.1-ORC",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.1-ORC",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.2-PRT",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.4-NTE",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.4-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.5-PRT",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.5-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "D"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.1-TQ1",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.1-TQ1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.2-TQ2",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.2-TQ2",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT",
-                      "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.1-OBX",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.1-OBX",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.2-PRT",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.3-NTE",
-                          "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.3-NTE",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "OPU_R25.2-ARV",
+        "path": "OPU_R25.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "OPU_R25.3-SFT",
+        "path": "OPU_R25.3-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.4-UAC",
+        "path": "OPU_R25.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.5-NTE",
+        "path": "OPU_R25.5-NTE",
+        "short": "Notes and Comments",
+        "min": 0,
+        "max": "1",
+        "definition": "Notes and Comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.6-PV1",
+        "path": "OPU_R25.6-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.7-PV2",
+        "path": "OPU_R25.7-PV2",
+        "short": "Patient Visit – Additional Information",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit – Additional Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.8-PRT",
+        "path": "OPU_R25.8-PRT",
+        "short": "Participation (for Patient Visit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION",
+        "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION",
+        "short": "PATIENT_VISIT_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "PATIENT_VISIT_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.1-OBX",
+        "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.1-OBX",
+        "short": "Observation on the Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation on the Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.2-NTE",
+        "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.2-NTE",
+        "short": "Notes and Comments on Visit",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments on Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.3-PRT",
+        "path": "OPU_R25.9-PATIENT_VISIT_OBSERVATION.3-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL",
+        "path": "OPU_R25.10-ACCESSION_DETAIL",
+        "short": "ACCESSION_DETAIL",
+        "min": 1,
+        "max": "*",
+        "definition": "ACCESSION_DETAIL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN",
+        "short": "NEXT_OF_KIN",
+        "min": 1,
+        "max": "*",
+        "definition": "NEXT_OF_KIN",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.1-NK1",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.1-NK1",
+        "short": "Next of Kin",
+        "min": 1,
+        "max": "1",
+        "definition": "Next of Kin",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NK1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.2-GSP",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.2-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.3-GSR",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.1-NEXT_OF_KIN.3-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.1-PID",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.1-PID",
+        "short": "Patient",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.2-PD1",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.3-GSP",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.3-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.4-GSR",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.4-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.5-GSC",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.5-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.6-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.6-PRT",
+        "short": "Participation (for Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.7-OH1",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.7-OH1",
+        "short": "Employment Status",
+        "min": 0,
+        "max": "*",
+        "definition": "Employment Status",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OH1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.8-OH2",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.8-OH2",
+        "short": "Past or Present Job",
+        "min": 0,
+        "max": "*",
+        "definition": "Past or Present Job",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OH2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.9-OH3",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.9-OH3",
+        "short": "Usual Work",
+        "min": 0,
+        "max": "1",
+        "definition": "Usual Work",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OH3"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.10-OH4",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.10-OH4",
+        "short": "Combat Zone Work",
+        "min": 0,
+        "max": "*",
+        "definition": "Combat Zone Work",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OH4"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.11-ARV",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.11-ARV",
+        "short": "For backwards compatibility only as of V2.9",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION",
+        "short": "PATIENT_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "PATIENT_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.1-OBX",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.1-OBX",
+        "short": "Observations on Patient",
+        "min": 1,
+        "max": "1",
+        "definition": "Observations on Patient",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.2-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.2-PRT",
+        "short": "Participation (for Observation on Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Observation on Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.3-NTE",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.2-PATIENT.12-PATIENT_OBSERVATION.3-NTE",
+        "short": "Notes and Comments for Observation on Patient",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for Observation on Patient",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN",
+        "short": "SPECIMEN",
+        "min": 1,
+        "max": "*",
+        "definition": "SPECIMEN",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.1-SPM",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.1-SPM",
+        "short": "Specimen",
+        "min": 1,
+        "max": "1",
+        "definition": "Specimen",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SPM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION",
+        "short": "SPECIMEN_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "SPECIMEN_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.1-OBX",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.1-OBX",
+        "short": "Observation on Specimen",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation on Specimen",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.2-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.2-PRT",
+        "short": "Participation (for Observation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Observation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.3-NTE",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.2-SPECIMEN_OBSERVATION.3-NTE",
+        "short": "Notes and Comments for Observation on Specimen",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for Observation on Specimen",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER",
+        "short": "CONTAINER",
+        "min": 0,
+        "max": "*",
+        "definition": "CONTAINER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.1-SAC",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.1-SAC",
+        "short": "Container information",
+        "min": 1,
+        "max": "1",
+        "definition": "Container information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.2-INV",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.3-CONTAINER.2-INV",
+        "short": "Detailed Substance information (e.g., id, lot, manufacturer, ... of QC specimen)",
+        "min": 0,
+        "max": "1",
+        "definition": "Detailed Substance information (e.g., id, lot, manufacturer, ... of QC specimen)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/INV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER",
+        "short": "ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.1-OBR",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.1-OBR",
+        "short": "Observation Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.2-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.2-PRT",
+        "short": "Participation (for observation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for observation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER",
+        "short": "COMMON_ORDER",
+        "min": 0,
+        "max": "1",
+        "definition": "COMMON_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.1-ORC",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.2-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.3-COMMON_ORDER.2-PRT",
+        "short": "Participation (for common order)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for common order)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.4-NTE",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.4-NTE",
+        "short": "Notes and Comments (for Detail)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Detail)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.5-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.5-PRT",
+        "short": "Deprecated as of V2.8",
+        "min": 0,
+        "max": "*",
+        "definition": "Deprecated as of V2.8",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "D"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY",
+        "short": "TIMING_QTY",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING_QTY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.1-TQ1",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.2-TQ2",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.6-TIMING_QTY.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT",
+        "short": "RESULT",
+        "min": 1,
+        "max": "*",
+        "definition": "RESULT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.1-OBX",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.1-OBX",
+        "short": "Observation Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.2-PRT",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.3-NTE",
+        "path": "OPU_R25.10-ACCESSION_DETAIL.3-SPECIMEN.4-ORDER.7-RESULT.3-NTE",
+        "short": "Notes and Comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 OPU_R25 Segment Definition",
   "name": "OPU_R25",
   "type": "OPU_R25",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

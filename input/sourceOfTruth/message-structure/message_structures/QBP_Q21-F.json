@@ -28,5 +28,6 @@
   "title": "HL7 v2 QBP_Q21-F Segment Definition",
   "name": "QBP_Q21-F",
   "type": "QBP_Q21-F",
-  "date": "2024-07-24T19:13:16Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:56Z"
 }

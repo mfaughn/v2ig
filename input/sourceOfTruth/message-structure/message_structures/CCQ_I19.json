@@ -23,174 +23,157 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "CCQ_I19.1-MSH",
-          "path": "CCQ_I19.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CCQ_I19.2-SFT",
-          "path": "CCQ_I19.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CCQ_I19.3-UAC",
-          "path": "CCQ_I19.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CCQ_I19.4-RF1",
-          "path": "CCQ_I19.4-RF1",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/RF1"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CCQ_I19.5-PROVIDER_CONTACT",
-          "path": "CCQ_I19.5-PROVIDER_CONTACT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "CCQ_I19.5-PROVIDER_CONTACT.1-PRD",
-              "path": "CCQ_I19.5-PROVIDER_CONTACT.1-PRD",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRD"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CCQ_I19.5-PROVIDER_CONTACT.2-CTD",
-              "path": "CCQ_I19.5-PROVIDER_CONTACT.2-CTD",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CTD"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "CCQ_I19.1-MSH",
+        "path": "CCQ_I19.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "CCQ_I19.6-REL",
-          "path": "CCQ_I19.6-REL",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/REL"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ]
+      },
+      {
+        "id": "CCQ_I19.2-SFT",
+        "path": "CCQ_I19.2-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.3-UAC",
+        "path": "CCQ_I19.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.4-RF1",
+        "path": "CCQ_I19.4-RF1",
+        "short": "Referral Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Referral Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RF1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.5-PROVIDER_CONTACT",
+        "path": "CCQ_I19.5-PROVIDER_CONTACT",
+        "short": "PROVIDER_CONTACT",
+        "min": 0,
+        "max": "*",
+        "definition": "PROVIDER_CONTACT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.5-PROVIDER_CONTACT.1-PRD",
+        "path": "CCQ_I19.5-PROVIDER_CONTACT.1-PRD",
+        "short": "Provider Data",
+        "min": 1,
+        "max": "1",
+        "definition": "Provider Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.5-PROVIDER_CONTACT.2-CTD",
+        "path": "CCQ_I19.5-PROVIDER_CONTACT.2-CTD",
+        "short": "Contact Data",
+        "min": 0,
+        "max": "*",
+        "definition": "Contact Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CCQ_I19.6-REL",
+        "path": "CCQ_I19.6-REL",
+        "short": "Relationship",
+        "min": 0,
+        "max": "*",
+        "definition": "Relationship",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/REL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 CCQ_I19 Segment Definition",
   "name": "CCQ_I19",
   "type": "CCQ_I19",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:00Z"
 }

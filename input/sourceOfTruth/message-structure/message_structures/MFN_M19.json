@@ -23,288 +23,253 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "MFN_M19.1-MSH",
-          "path": "MFN_M19.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M19.2-SFT",
-          "path": "MFN_M19.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M19.3-UAC",
-          "path": "MFN_M19.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M19.4-MFI",
-          "path": "MFN_M19.4-MFI",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MFI"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M19.5-CONTRACT_RECORD",
-          "path": "MFN_M19.5-CONTRACT_RECORD",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "MFN_M19.5-CONTRACT_RECORD.1-MFE",
-              "path": "MFN_M19.5-CONTRACT_RECORD.1-MFE",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/MFE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M19.5-CONTRACT_RECORD.2-CTR",
-              "path": "MFN_M19.5-CONTRACT_RECORD.2-CTR",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CTR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M19.5-CONTRACT_RECORD.3-NTE",
-              "path": "MFN_M19.5-CONTRACT_RECORD.3-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD",
-              "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.1-ITM",
-                  "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.1-ITM",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ITM"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR",
-                  "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.1-VND",
-                      "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.1-VND",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/VND"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING",
-                      "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
-                          "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PKG"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "MFN_M19.1-MSH",
+        "path": "MFN_M19.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "MFN_M19.2-SFT",
+        "path": "MFN_M19.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.3-UAC",
+        "path": "MFN_M19.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.4-MFI",
+        "path": "MFN_M19.4-MFI",
+        "short": "Master File Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD",
+        "path": "MFN_M19.5-CONTRACT_RECORD",
+        "short": "CONTRACT_RECORD",
+        "min": 1,
+        "max": "*",
+        "definition": "CONTRACT_RECORD",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.1-MFE",
+        "path": "MFN_M19.5-CONTRACT_RECORD.1-MFE",
+        "short": "Master File Entry",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Entry",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.2-CTR",
+        "path": "MFN_M19.5-CONTRACT_RECORD.2-CTR",
+        "short": "Supply Item Contract",
+        "min": 1,
+        "max": "1",
+        "definition": "Supply Item Contract",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.3-NTE",
+        "path": "MFN_M19.5-CONTRACT_RECORD.3-NTE",
+        "short": "Notes for CTR",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes for CTR",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD",
+        "short": "MATERIAL_ITEM_RECORD",
+        "min": 1,
+        "max": "*",
+        "definition": "MATERIAL_ITEM_RECORD",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.1-ITM",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.1-ITM",
+        "short": "Material Item",
+        "min": 1,
+        "max": "1",
+        "definition": "Material Item",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ITM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR",
+        "short": "PURCHASING_VENDOR",
+        "min": 1,
+        "max": "*",
+        "definition": "PURCHASING_VENDOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.1-VND",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.1-VND",
+        "short": "Purchasing Vendor",
+        "min": 1,
+        "max": "1",
+        "definition": "Purchasing Vendor",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VND"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING",
+        "short": "PACKAGING",
+        "min": 0,
+        "max": "*",
+        "definition": "PACKAGING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
+        "path": "MFN_M19.5-CONTRACT_RECORD.4-MATERIAL_ITEM_RECORD.2-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
+        "short": "Packaging",
+        "min": 1,
+        "max": "1",
+        "definition": "Packaging",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PKG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 MFN_M19 Segment Definition",
   "name": "MFN_M19",
   "type": "MFN_M19",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

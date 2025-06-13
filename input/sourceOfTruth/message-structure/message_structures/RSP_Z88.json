@@ -23,890 +23,781 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "RSP_Z88.1-MSH",
-          "path": "RSP_Z88.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.2-SFT",
-          "path": "RSP_Z88.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.3-UAC",
-          "path": "RSP_Z88.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.4-MSA",
-          "path": "RSP_Z88.4-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.5-ERR",
-          "path": "RSP_Z88.5-ERR",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.6-QAK",
-          "path": "RSP_Z88.6-QAK",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QAK"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.7-QPD",
-          "path": "RSP_Z88.7-QPD",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QPD"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.8-RCP",
-          "path": "RSP_Z88.8-RCP",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/RCP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_Z88.9-QUERY_RESPONSE",
-          "path": "RSP_Z88.9-QUERY_RESPONSE",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT",
-              "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.1-PID",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.1-PID",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PID"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.2-PD1",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.2-PD1",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.3-NTE",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.1-AL1",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.1-AL1",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.1-PV1",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.1-PV1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.2-PV2",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.2-PV2",
-                          "min": 1,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER",
-              "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.1-ORC",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.1-ORC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.1-TQ1",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.1-TQ1",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.2-TQ2",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.2-TQ2",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.1-RXO",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.1-RXO",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXO"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.2-NTE",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.2-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.3-RXR",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.3-RXR",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.1-RXC",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.1-RXC",
-                          "min": 0,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.2-NTE",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.2-NTE",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.1-RXE",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.1-RXE",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.1-TQ1",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.1-TQ1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.2-TQ2",
-                          "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.2-TQ2",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.3-RXR",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.3-RXR",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.4-RXC",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.4-RXC",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.5-RXD",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.5-RXD",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXD"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.6-RXR",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.6-RXR",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.7-RXC",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.7-RXC",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION",
-                  "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.1-OBX",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.1-OBX",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.2-NTE",
-                      "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.2-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "RSP_Z88.1-MSH",
+        "path": "RSP_Z88.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "RSP_Z88.10-DSC",
-          "path": "RSP_Z88.10-DSC",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/DSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ]
+      },
+      {
+        "id": "RSP_Z88.2-SFT",
+        "path": "RSP_Z88.2-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.3-UAC",
+        "path": "RSP_Z88.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.4-MSA",
+        "path": "RSP_Z88.4-MSA",
+        "short": "Message Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.5-ERR",
+        "path": "RSP_Z88.5-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "1",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.6-QAK",
+        "path": "RSP_Z88.6-QAK",
+        "short": "Query Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QAK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.7-QPD",
+        "path": "RSP_Z88.7-QPD",
+        "short": "Query Parameter Definition",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Parameter Definition",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QPD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.8-RCP",
+        "path": "RSP_Z88.8-RCP",
+        "short": "Response Control Parameter",
+        "min": 1,
+        "max": "1",
+        "definition": "Response Control Parameter",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RCP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE",
+        "short": "QUERY_RESPONSE",
+        "min": 1,
+        "max": "*",
+        "definition": "QUERY_RESPONSE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.1-PID",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.2-PD1",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.3-NTE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.3-NTE",
+        "short": "Notes and Comments (for PID)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for PID)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY",
+        "short": "ALLERGY",
+        "min": 0,
+        "max": "1",
+        "definition": "ALLERGY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.1-AL1",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.1-AL1",
+        "short": "Allergy Information",
+        "min": 1,
+        "max": "*",
+        "definition": "Allergy Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT",
+        "short": "VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.1-PV1",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.2-PV2",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.1-PATIENT.4-ALLERGY.2-VISIT.2-PV2",
+        "short": "Patient Visit – Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit – Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER",
+        "short": "COMMON_ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "COMMON_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.1-ORC",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING",
+        "short": "TIMING",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.1-TQ1",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.2-TQ2",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.2-TIMING.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL",
+        "short": "ORDER_DETAIL",
+        "min": 0,
+        "max": "1",
+        "definition": "ORDER_DETAIL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.1-RXO",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.1-RXO",
+        "short": "Pharmacy/Treatment Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.2-NTE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.2-NTE",
+        "short": "Notes and Comments (for RXO)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for RXO)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.3-RXR",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.3-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT",
+        "short": "COMPONENT",
+        "min": 0,
+        "max": "1",
+        "definition": "COMPONENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.1-RXC",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.1-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.2-NTE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.3-ORDER_DETAIL.4-COMPONENT.2-NTE",
+        "short": "Notes and Comments (for RXC)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for RXC)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED",
+        "short": "ORDER_ENCODED",
+        "min": 0,
+        "max": "1",
+        "definition": "ORDER_ENCODED",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.1-RXE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.1-RXE",
+        "short": "Pharmacy/Treatment Encoded Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Encoded Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED",
+        "short": "TIMING_ENCODED",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING_ENCODED",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.1-TQ1",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.2-TQ2",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.2-TIMING_ENCODED.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.3-RXR",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.3-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.4-RXC",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.4-ORDER_ENCODED.4-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.5-RXD",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.5-RXD",
+        "short": "Pharmacy/Treatment Dispense",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Dispense",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.6-RXR",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.6-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.7-RXC",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.7-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION",
+        "short": "OBSERVATION",
+        "min": 1,
+        "max": "*",
+        "definition": "OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.1-OBX",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.1-OBX",
+        "short": "Results",
+        "min": 0,
+        "max": "1",
+        "definition": "Results",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.2-NTE",
+        "path": "RSP_Z88.9-QUERY_RESPONSE.2-COMMON_ORDER.8-OBSERVATION.2-NTE",
+        "short": "Notes and Comments (for OBX)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for OBX)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_Z88.10-DSC",
+        "path": "RSP_Z88.10-DSC",
+        "short": "Continuation Pointer",
+        "min": 1,
+        "max": "1",
+        "definition": "Continuation Pointer",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 RSP_Z88 Segment Definition",
   "name": "RSP_Z88",
   "type": "RSP_Z88",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:58Z"
 }

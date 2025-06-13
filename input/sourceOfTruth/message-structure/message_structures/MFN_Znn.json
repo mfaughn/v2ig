@@ -23,153 +23,138 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "MFN_Znn.1-MSH",
-          "path": "MFN_Znn.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_Znn.2-SFT",
-          "path": "MFN_Znn.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_Znn.3-UAC",
-          "path": "MFN_Znn.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_Znn.4-MFI",
-          "path": "MFN_Znn.4-MFI",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MFI"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_Znn.5-MF_SITE_DEFINED",
-          "path": "MFN_Znn.5-MF_SITE_DEFINED",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "MFN_Znn.5-MF_SITE_DEFINED.1-MFE",
-              "path": "MFN_Znn.5-MF_SITE_DEFINED.1-MFE",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/MFE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_Znn.5-MF_SITE_DEFINED.2-...",
-              "path": "MFN_Znn.5-MF_SITE_DEFINED.2-...",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/..."
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "MFN_Znn.1-MSH",
+        "path": "MFN_Znn.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "MFN_Znn.2-SFT",
+        "path": "MFN_Znn.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_Znn.3-UAC",
+        "path": "MFN_Znn.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_Znn.4-MFI",
+        "path": "MFN_Znn.4-MFI",
+        "short": "Master File Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_Znn.5-MF_SITE_DEFINED",
+        "path": "MFN_Znn.5-MF_SITE_DEFINED",
+        "short": "MF_SITE_DEFINED",
+        "min": 1,
+        "max": "*",
+        "definition": "MF_SITE_DEFINED",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_Znn.5-MF_SITE_DEFINED.1-MFE",
+        "path": "MFN_Znn.5-MF_SITE_DEFINED.1-MFE",
+        "short": "Master File Entry",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Entry",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_Znn.5-MF_SITE_DEFINED.2-...",
+        "path": "MFN_Znn.5-MF_SITE_DEFINED.2-...",
+        "short": "One or more HL7 and/or Z-segments carrying the data for the entry identified in the MFE segment",
+        "min": 1,
+        "max": "1",
+        "definition": "One or more HL7 and/or Z-segments carrying the data for the entry identified in the MFE segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/..."
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 MFN_Znn Segment Definition",
   "name": "MFN_Znn",
   "type": "MFN_Znn",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

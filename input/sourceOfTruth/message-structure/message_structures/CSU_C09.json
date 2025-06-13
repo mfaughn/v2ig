@@ -23,831 +23,730 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "CSU_C09.1-MSH",
-          "path": "CSU_C09.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CSU_C09.2-ARV",
-          "path": "CSU_C09.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CSU_C09.3-SFT",
-          "path": "CSU_C09.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CSU_C09.4-UAC",
-          "path": "CSU_C09.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CSU_C09.5-PATIENT",
-          "path": "CSU_C09.5-PATIENT",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.1-PID",
-              "path": "CSU_C09.5-PATIENT.1-PID",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PID"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.2-PD1",
-              "path": "CSU_C09.5-PATIENT.2-PD1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.3-GSP",
-              "path": "CSU_C09.5-PATIENT.3-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.4-GSR",
-              "path": "CSU_C09.5-PATIENT.4-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.5-GSC",
-              "path": "CSU_C09.5-PATIENT.5-GSC",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.6-PRT",
-              "path": "CSU_C09.5-PATIENT.6-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.7-ARV",
-              "path": "CSU_C09.5-PATIENT.7-ARV",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.8-NTE",
-              "path": "CSU_C09.5-PATIENT.8-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.9-VISIT",
-              "path": "CSU_C09.5-PATIENT.9-VISIT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "CSU_C09.5-PATIENT.9-VISIT.1-PV1",
-                  "path": "CSU_C09.5-PATIENT.9-VISIT.1-PV1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "CSU_C09.5-PATIENT.9-VISIT.2-PV2",
-                  "path": "CSU_C09.5-PATIENT.9-VISIT.2-PV2",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "CSU_C09.5-PATIENT.9-VISIT.3-PRT",
-                  "path": "CSU_C09.5-PATIENT.9-VISIT.3-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.10-CSR",
-              "path": "CSU_C09.5-PATIENT.10-CSR",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE",
-              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.1-CSP",
-                  "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.1-CSP",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/CSP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE",
-                  "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.1-CSS",
-                      "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.1-CSS",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/CSS"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION",
-                      "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME",
-                          "min": 1,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.1-ORC",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.1-ORC",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.2-PRT",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.2-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.2-OBR",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.2-OBR",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.3-PRT",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.3-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.1-TQ1",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.1-TQ1",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.2-TQ2",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.2-TQ2",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.5-OBX",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.5-OBX",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.6-PRT",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.6-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM",
-                      "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER",
-                          "min": 1,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.1-ORC",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.1-ORC",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.2-PRT",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.2-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN",
-                          "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN",
-                          "min": 0,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.1-RXA",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.1-RXA",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXA"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.2-RXR",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.2-RXR",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ],
-                          [
-                            {
-                              "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.3-PRT",
-                              "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.3-PRT",
-                              "min": 1,
-                              "max": "*",
-                              "definition": "*",
-                              "short": "*",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "CSU_C09.1-MSH",
+        "path": "CSU_C09.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "CSU_C09.2-ARV",
+        "path": "CSU_C09.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.3-SFT",
+        "path": "CSU_C09.3-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.4-UAC",
+        "path": "CSU_C09.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT",
+        "path": "CSU_C09.5-PATIENT",
+        "short": "PATIENT",
+        "min": 1,
+        "max": "*",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.1-PID",
+        "path": "CSU_C09.5-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.2-PD1",
+        "path": "CSU_C09.5-PATIENT.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.3-GSP",
+        "path": "CSU_C09.5-PATIENT.3-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.4-GSR",
+        "path": "CSU_C09.5-PATIENT.4-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.5-GSC",
+        "path": "CSU_C09.5-PATIENT.5-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.6-PRT",
+        "path": "CSU_C09.5-PATIENT.6-PRT",
+        "short": "Participation (for Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.7-ARV",
+        "path": "CSU_C09.5-PATIENT.7-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.8-NTE",
+        "path": "CSU_C09.5-PATIENT.8-NTE",
+        "short": "Notes and comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.9-VISIT",
+        "path": "CSU_C09.5-PATIENT.9-VISIT",
+        "short": "VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.9-VISIT.1-PV1",
+        "path": "CSU_C09.5-PATIENT.9-VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.9-VISIT.2-PV2",
+        "path": "CSU_C09.5-PATIENT.9-VISIT.2-PV2",
+        "short": "Patient Visit - Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit - Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.9-VISIT.3-PRT",
+        "path": "CSU_C09.5-PATIENT.9-VISIT.3-PRT",
+        "short": "Participation (for Patient Visit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.10-CSR",
+        "path": "CSU_C09.5-PATIENT.10-CSR",
+        "short": "Clinical Study Registration",
+        "min": 1,
+        "max": "1",
+        "definition": "Clinical Study Registration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE",
+        "short": "STUDY_PHASE",
+        "min": 1,
+        "max": "*",
+        "definition": "STUDY_PHASE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.1-CSP",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.1-CSP",
+        "short": "Clinical Study Phase",
+        "min": 0,
+        "max": "1",
+        "definition": "Clinical Study Phase",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE",
+        "short": "STUDY_SCHEDULE",
+        "min": 1,
+        "max": "*",
+        "definition": "STUDY_SCHEDULE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.1-CSS",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.1-CSS",
+        "short": "Clinical Study Data Schedule",
+        "min": 0,
+        "max": "1",
+        "definition": "Clinical Study Data Schedule",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION",
+        "short": "STUDY_OBSERVATION",
+        "min": 1,
+        "max": "*",
+        "definition": "STUDY_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME",
+        "short": "FIXME",
+        "min": 0,
+        "max": "1",
+        "definition": "FIXME",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.1-ORC",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.2-PRT",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.1-FIXME.2-PRT",
+        "short": "Participation (for common order)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for common order)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.2-OBR",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.2-OBR",
+        "short": "Observation Battery",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation Battery",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.3-PRT",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.3-PRT",
+        "short": "Participation (for observation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for observation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY",
+        "short": "TIMING_QTY",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING_QTY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.1-TQ1",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.2-TQ2",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.4-TIMING_QTY.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.5-OBX",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.5-OBX",
+        "short": "Observation Results",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation Results",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.6-PRT",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.2-STUDY_OBSERVATION.6-PRT",
+        "short": "Participaton (for Observation Results)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participaton (for Observation Results)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM",
+        "short": "STUDY_PHARM",
+        "min": 1,
+        "max": "*",
+        "definition": "STUDY_PHARM",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER",
+        "short": "COMMON_ORDER",
+        "min": 0,
+        "max": "1",
+        "definition": "COMMON_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.1-ORC",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.2-PRT",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.1-COMMON_ORDER.2-PRT",
+        "short": "Participation (for Common Order)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Common Order)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN",
+        "short": "RX_ADMIN",
+        "min": 1,
+        "max": "*",
+        "definition": "RX_ADMIN",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.1-RXA",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.1-RXA",
+        "short": "Pharmacy Administration",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy Administration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.2-RXR",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.2-RXR",
+        "short": "Pharmacy Route",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.3-PRT",
+        "path": "CSU_C09.5-PATIENT.11-STUDY_PHASE.2-STUDY_SCHEDULE.3-STUDY_PHARM.2-RX_ADMIN.3-PRT",
+        "short": "Participation (for Pharmacy Administration)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Pharmacy Administration)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 CSU_C09 Segment Definition",
   "name": "CSU_C09",
   "type": "CSU_C09",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

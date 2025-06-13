@@ -23,717 +23,634 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "SRM_S01.1-MSH",
-          "path": "SRM_S01.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SRM_S01.2-ARQ",
-          "path": "SRM_S01.2-ARQ",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARQ"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SRM_S01.3-APR",
-          "path": "SRM_S01.3-APR",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/APR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SRM_S01.4-NTE",
-          "path": "SRM_S01.4-NTE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SRM_S01.5-PATIENT",
-          "path": "SRM_S01.5-PATIENT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.1-PID",
-              "path": "SRM_S01.5-PATIENT.1-PID",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PID"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.2-GSP",
-              "path": "SRM_S01.5-PATIENT.2-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.3-GSR",
-              "path": "SRM_S01.5-PATIENT.3-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.4-GSC",
-              "path": "SRM_S01.5-PATIENT.4-GSC",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.5-PRT",
-              "path": "SRM_S01.5-PATIENT.5-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.6-PV1",
-              "path": "SRM_S01.5-PATIENT.6-PV1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.7-PV2",
-              "path": "SRM_S01.5-PATIENT.7-PV2",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.8-PRT",
-              "path": "SRM_S01.5-PATIENT.8-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.9-FIXME",
-              "path": "SRM_S01.5-PATIENT.9-FIXME",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SRM_S01.5-PATIENT.9-FIXME.1-OBX",
-                  "path": "SRM_S01.5-PATIENT.9-FIXME.1-OBX",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.5-PATIENT.9-FIXME.2-PRT",
-                  "path": "SRM_S01.5-PATIENT.9-FIXME.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "SRM_S01.5-PATIENT.10-DG1",
-              "path": "SRM_S01.5-PATIENT.10-DG1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/DG1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "SRM_S01.1-MSH",
+        "path": "SRM_S01.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "SRM_S01.6-RESOURCES",
-          "path": "SRM_S01.6-RESOURCES",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "SRM_S01.6-RESOURCES.1-RGS",
-              "path": "SRM_S01.6-RESOURCES.1-RGS",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/RGS"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "SRM_S01.6-RESOURCES.2-SERVICE",
-              "path": "SRM_S01.6-RESOURCES.2-SERVICE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.2-SERVICE.1-AIS",
-                  "path": "SRM_S01.6-RESOURCES.2-SERVICE.1-AIS",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AIS"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.2-SERVICE.2-APR",
-                  "path": "SRM_S01.6-RESOURCES.2-SERVICE.2-APR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/APR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.2-SERVICE.3-NTE",
-                  "path": "SRM_S01.6-RESOURCES.2-SERVICE.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE",
-              "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.1-AIG",
-                  "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.1-AIG",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AIG"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.2-APR",
-                  "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.2-APR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/APR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.3-NTE",
-                  "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE",
-              "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.1-AIL",
-                  "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.1-AIL",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AIL"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.2-APR",
-                  "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.2-APR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/APR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.3-NTE",
-                  "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE",
-              "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.1-AIP",
-                  "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.1-AIP",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AIP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.2-APR",
-                  "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.2-APR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/APR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.3-NTE",
-                  "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "SRM_S01.2-ARQ",
+        "path": "SRM_S01.2-ARQ",
+        "short": "Appointment Request Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Appointment Request Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARQ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "SRM_S01.3-APR",
+        "path": "SRM_S01.3-APR",
+        "short": "Appointment Preferences",
+        "min": 0,
+        "max": "1",
+        "definition": "Appointment Preferences",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/APR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.4-NTE",
+        "path": "SRM_S01.4-NTE",
+        "short": "Notes and Comments for the ARQ",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for the ARQ",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT",
+        "path": "SRM_S01.5-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "*",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.1-PID",
+        "path": "SRM_S01.5-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.2-GSP",
+        "path": "SRM_S01.5-PATIENT.2-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.3-GSR",
+        "path": "SRM_S01.5-PATIENT.3-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.4-GSC",
+        "path": "SRM_S01.5-PATIENT.4-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.5-PRT",
+        "path": "SRM_S01.5-PATIENT.5-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.6-PV1",
+        "path": "SRM_S01.5-PATIENT.6-PV1",
+        "short": "Patient Visit",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.7-PV2",
+        "path": "SRM_S01.5-PATIENT.7-PV2",
+        "short": "Patient Visit - Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit - Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.8-PRT",
+        "path": "SRM_S01.5-PATIENT.8-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.9-FIXME",
+        "path": "SRM_S01.5-PATIENT.9-FIXME",
+        "short": "FIXME",
+        "min": 0,
+        "max": "*",
+        "definition": "FIXME",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.9-FIXME.1-OBX",
+        "path": "SRM_S01.5-PATIENT.9-FIXME.1-OBX",
+        "short": "Observation/Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.9-FIXME.2-PRT",
+        "path": "SRM_S01.5-PATIENT.9-FIXME.2-PRT",
+        "short": "Participation Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.5-PATIENT.10-DG1",
+        "path": "SRM_S01.5-PATIENT.10-DG1",
+        "short": "Diagnosis",
+        "min": 0,
+        "max": "*",
+        "definition": "Diagnosis",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DG1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES",
+        "path": "SRM_S01.6-RESOURCES",
+        "short": "RESOURCES",
+        "min": 1,
+        "max": "*",
+        "definition": "RESOURCES",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.1-RGS",
+        "path": "SRM_S01.6-RESOURCES.1-RGS",
+        "short": "Resource Group Segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Resource Group Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RGS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.2-SERVICE",
+        "path": "SRM_S01.6-RESOURCES.2-SERVICE",
+        "short": "SERVICE",
+        "min": 0,
+        "max": "*",
+        "definition": "SERVICE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.2-SERVICE.1-AIS",
+        "path": "SRM_S01.6-RESOURCES.2-SERVICE.1-AIS",
+        "short": "Appointment Information - Service",
+        "min": 1,
+        "max": "1",
+        "definition": "Appointment Information - Service",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AIS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.2-SERVICE.2-APR",
+        "path": "SRM_S01.6-RESOURCES.2-SERVICE.2-APR",
+        "short": "Appointment Preferences",
+        "min": 0,
+        "max": "1",
+        "definition": "Appointment Preferences",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/APR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.2-SERVICE.3-NTE",
+        "path": "SRM_S01.6-RESOURCES.2-SERVICE.3-NTE",
+        "short": "Notes and Comments for the AIS",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for the AIS",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE",
+        "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE",
+        "short": "GENERAL_RESOURCE",
+        "min": 0,
+        "max": "*",
+        "definition": "GENERAL_RESOURCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.1-AIG",
+        "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.1-AIG",
+        "short": "Appointment Information - General Resource",
+        "min": 1,
+        "max": "1",
+        "definition": "Appointment Information - General Resource",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AIG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.2-APR",
+        "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.2-APR",
+        "short": "Appointment Preferences",
+        "min": 0,
+        "max": "1",
+        "definition": "Appointment Preferences",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/APR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.3-NTE",
+        "path": "SRM_S01.6-RESOURCES.3-GENERAL_RESOURCE.3-NTE",
+        "short": "Notes and Comments for the AIG",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for the AIG",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE",
+        "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE",
+        "short": "LOCATION_RESOURCE",
+        "min": 0,
+        "max": "*",
+        "definition": "LOCATION_RESOURCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.1-AIL",
+        "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.1-AIL",
+        "short": "Appointment Information - Location Resource",
+        "min": 1,
+        "max": "1",
+        "definition": "Appointment Information - Location Resource",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AIL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.2-APR",
+        "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.2-APR",
+        "short": "Appointment Preferences",
+        "min": 0,
+        "max": "1",
+        "definition": "Appointment Preferences",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/APR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.3-NTE",
+        "path": "SRM_S01.6-RESOURCES.4-LOCATION_RESOURCE.3-NTE",
+        "short": "Notes and Comments for the AIL",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for the AIL",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE",
+        "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE",
+        "short": "PERSONNEL_RESOURCE",
+        "min": 0,
+        "max": "*",
+        "definition": "PERSONNEL_RESOURCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.1-AIP",
+        "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.1-AIP",
+        "short": "Appointment Information - Personnel Resource",
+        "min": 1,
+        "max": "1",
+        "definition": "Appointment Information - Personnel Resource",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AIP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.2-APR",
+        "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.2-APR",
+        "short": "Appointment Preferences",
+        "min": 0,
+        "max": "1",
+        "definition": "Appointment Preferences",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/APR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.3-NTE",
+        "path": "SRM_S01.6-RESOURCES.5-PERSONNEL_RESOURCE.3-NTE",
+        "short": "Notes and Comments for the AIP",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments for the AIP",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 SRM_S01 Segment Definition",
   "name": "SRM_S01",
   "type": "SRM_S01",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

@@ -23,149 +23,132 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "SDR_S31-B.1-MSH",
-          "path": "SDR_S31-B.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SDR_S31-B.2-SFT",
-          "path": "SDR_S31-B.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SDR_S31-B.3-UAC",
-          "path": "SDR_S31-B.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA",
-          "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1",
-              "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1.1-SDD",
-                  "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1.1-SDD",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/SDD"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1.2-SCD",
-                  "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.1.2-SCD",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/SCD"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "SDR_S31-B.1-MSH",
+        "path": "SDR_S31-B.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "SDR_S31-B.2-SFT",
+        "path": "SDR_S31-B.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SDR_S31-B.3-UAC",
+        "path": "SDR_S31-B.3-UAC",
+        "short": "User Authentication Credential Segment",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA",
+        "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA",
+        "short": "ANTI-MICROBIAL_DEVICE_DATA",
+        "min": 1,
+        "max": "1",
+        "definition": "ANTI-MICROBIAL_DEVICE_DATA",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group",
+        "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group",
+        "short": "Choice 1 within ANTI-MICROBIAL_DEVICE_DATA",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 1 within ANTI-MICROBIAL_DEVICE_DATA",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group.1-SDD",
+        "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group.1-SDD",
+        "short": "Sterilization Device",
+        "min": 1,
+        "max": "1",
+        "definition": "Sterilization Device",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SDD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group.2-SCD",
+        "path": "SDR_S31-B.4-ANTI-MICROBIAL_DEVICE_DATA.choice-1-Group.2-SCD",
+        "short": "Sterilization Cycle",
+        "min": 0,
+        "max": "*",
+        "definition": "Sterilization Cycle",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SCD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 SDR_S31-B Segment Definition",
   "name": "SDR_S31-B",
   "type": "SDR_S31-B",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:01Z"
 }

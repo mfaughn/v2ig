@@ -23,1105 +23,940 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "PPR_PC1.1-MSH",
-          "path": "PPR_PC1.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.2-SFT",
-          "path": "PPR_PC1.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.3-UAC",
-          "path": "PPR_PC1.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.4-PID",
-          "path": "PPR_PC1.4-PID",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PID"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.5-GSP",
-          "path": "PPR_PC1.5-GSP",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.6-GSR",
-          "path": "PPR_PC1.6-GSR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.7-GSC",
-          "path": "PPR_PC1.7-GSC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "PPR_PC1.8-PROVIDER",
-          "path": "PPR_PC1.8-PROVIDER",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "PPR_PC1.8-PROVIDER.1-PRD",
-              "path": "PPR_PC1.8-PROVIDER.1-PRD",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRD"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PPR_PC1.8-PROVIDER.2-CTD",
-              "path": "PPR_PC1.8-PROVIDER.2-CTD",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CTD"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "PPR_PC1.1-MSH",
+        "path": "PPR_PC1.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "PPR_PC1.9-PATIENT_VISIT",
-          "path": "PPR_PC1.9-PATIENT_VISIT",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "PPR_PC1.9-PATIENT_VISIT.1-PV1",
-              "path": "PPR_PC1.9-PATIENT_VISIT.1-PV1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PPR_PC1.9-PATIENT_VISIT.2-PV2",
-              "path": "PPR_PC1.9-PATIENT_VISIT.2-PV2",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      },
+      {
+        "id": "PPR_PC1.2-SFT",
+        "path": "PPR_PC1.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "PPR_PC1.10-PROBLEM",
-          "path": "PPR_PC1.10-PROBLEM",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.1-PRB",
-              "path": "PPR_PC1.10-PROBLEM.1-PRB",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRB"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.2-NTE",
-              "path": "PPR_PC1.10-PROBLEM.2-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.3-VAR",
-              "path": "PPR_PC1.10-PROBLEM.3-VAR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION",
-              "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.1-ROL",
-                  "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.1-ROL",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.2-PRT",
-                  "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.2-PRT",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.3-VAR",
-                  "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.3-VAR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.5-PATHWAY",
-              "path": "PPR_PC1.10-PROBLEM.5-PATHWAY",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.5-PATHWAY.1-PTH",
-                  "path": "PPR_PC1.10-PROBLEM.5-PATHWAY.1-PTH",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PTH"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.5-PATHWAY.2-VAR",
-                  "path": "PPR_PC1.10-PROBLEM.5-PATHWAY.2-VAR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION",
-              "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.1-OBX",
-                  "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.1-OBX",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.2-PRT",
-                  "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.3-NTE",
-                  "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.7-GOAL",
-              "path": "PPR_PC1.10-PROBLEM.7-GOAL",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.7-GOAL.1-GOL",
-                  "path": "PPR_PC1.10-PROBLEM.7-GOAL.1-GOL",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GOL"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.7-GOAL.2-NTE",
-                  "path": "PPR_PC1.10-PROBLEM.7-GOAL.2-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.7-GOAL.3-VAR",
-                  "path": "PPR_PC1.10-PROBLEM.7-GOAL.3-VAR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION",
-                  "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.1-ROL",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.1-ROL",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "B"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.2-PRT",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.2-PRT",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.3-VAR",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.3-VAR",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION",
-                  "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.1-OBX",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.1-OBX",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.2-PRT",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.3-NTE",
-                      "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "PPR_PC1.10-PROBLEM.8-ORDER",
-              "path": "PPR_PC1.10-PROBLEM.8-ORDER",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.8-ORDER.1-ORC",
-                  "path": "PPR_PC1.10-PROBLEM.8-ORDER.1-ORC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL",
-                  "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE",
-                      "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.1",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.1.1-OBR",
-                              "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.1.1-OBR",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/OBR"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ],
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.2",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.2",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "BackboneElement"
-                            }
-                          ]
-                        },
-                        [
-                          [
-                            {
-                              "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.2.1-Hxx",
-                              "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.2.1-Hxx",
-                              "min": 0,
-                              "max": "1",
-                              "definition": "1",
-                              "short": "1",
-                              "type": [
-                                {
-                                  "code": "http://hl7.org/v2/StructureDefinition/Hxx"
-                                }
-                              ],
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                                  "valueCode": "A"
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.2-NTE",
-                      "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.2-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.3-VAR",
-                      "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.3-VAR",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION",
-                      "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.1-OBX",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.1-OBX",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.2-PRT",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.3-NTE",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.3-NTE",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.4-VAR",
-                          "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.4-VAR",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/VAR"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "PPR_PC1.3-UAC",
+        "path": "PPR_PC1.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "PPR_PC1.4-PID",
+        "path": "PPR_PC1.4-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.5-GSP",
+        "path": "PPR_PC1.5-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.6-GSR",
+        "path": "PPR_PC1.6-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.7-GSC",
+        "path": "PPR_PC1.7-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.8-PROVIDER",
+        "path": "PPR_PC1.8-PROVIDER",
+        "short": "PROVIDER",
+        "min": 1,
+        "max": "*",
+        "definition": "PROVIDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.8-PROVIDER.1-PRD",
+        "path": "PPR_PC1.8-PROVIDER.1-PRD",
+        "short": "Provider Data",
+        "min": 1,
+        "max": "1",
+        "definition": "Provider Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.8-PROVIDER.2-CTD",
+        "path": "PPR_PC1.8-PROVIDER.2-CTD",
+        "short": "Contact Data",
+        "min": 0,
+        "max": "*",
+        "definition": "Contact Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.9-PATIENT_VISIT",
+        "path": "PPR_PC1.9-PATIENT_VISIT",
+        "short": "PATIENT_VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.9-PATIENT_VISIT.1-PV1",
+        "path": "PPR_PC1.9-PATIENT_VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.9-PATIENT_VISIT.2-PV2",
+        "path": "PPR_PC1.9-PATIENT_VISIT.2-PV2",
+        "short": "Patient Visit",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM",
+        "path": "PPR_PC1.10-PROBLEM",
+        "short": "PROBLEM",
+        "min": 1,
+        "max": "*",
+        "definition": "PROBLEM",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.1-PRB",
+        "path": "PPR_PC1.10-PROBLEM.1-PRB",
+        "short": "Detail Problem",
+        "min": 1,
+        "max": "1",
+        "definition": "Detail Problem",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.2-NTE",
+        "path": "PPR_PC1.10-PROBLEM.2-NTE",
+        "short": "Notes & Comments (Problem Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Problem Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.3-VAR",
+        "path": "PPR_PC1.10-PROBLEM.3-VAR",
+        "short": "Variance (Problem)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Problem)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION",
+        "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION",
+        "short": "PROBLEM_PARTICIPATION",
+        "min": 0,
+        "max": "*",
+        "definition": "PROBLEM_PARTICIPATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.1-ROL",
+        "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.1-ROL",
+        "short": "For backwards compatibility only as of V2.9",
+        "min": 1,
+        "max": "1",
+        "definition": "For backwards compatibility only as of V2.9",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.2-PRT",
+        "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.2-PRT",
+        "short": "Participation (Problem)",
+        "min": 1,
+        "max": "1",
+        "definition": "Participation (Problem)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.3-VAR",
+        "path": "PPR_PC1.10-PROBLEM.4-PROBLEM_PARTICIPATION.3-VAR",
+        "short": "Variance (Participation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Participation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.5-PATHWAY",
+        "path": "PPR_PC1.10-PROBLEM.5-PATHWAY",
+        "short": "PATHWAY",
+        "min": 0,
+        "max": "*",
+        "definition": "PATHWAY",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.5-PATHWAY.1-PTH",
+        "path": "PPR_PC1.10-PROBLEM.5-PATHWAY.1-PTH",
+        "short": "Detail Pathway",
+        "min": 1,
+        "max": "1",
+        "definition": "Detail Pathway",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PTH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.5-PATHWAY.2-VAR",
+        "path": "PPR_PC1.10-PROBLEM.5-PATHWAY.2-VAR",
+        "short": "Variance (Pathway)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Pathway)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION",
+        "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION",
+        "short": "PROBLEM_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "PROBLEM_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.1-OBX",
+        "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.1-OBX",
+        "short": "Observation/Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.2-PRT",
+        "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.3-NTE",
+        "path": "PPR_PC1.10-PROBLEM.6-PROBLEM_OBSERVATION.3-NTE",
+        "short": "Notes & Comments (Observation/Result Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Observation/Result Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL",
+        "short": "GOAL",
+        "min": 0,
+        "max": "*",
+        "definition": "GOAL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.1-GOL",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.1-GOL",
+        "short": "Detail Goal",
+        "min": 1,
+        "max": "1",
+        "definition": "Detail Goal",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GOL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.2-NTE",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.2-NTE",
+        "short": "Notes & Comments (Goal Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Goal Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.3-VAR",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.3-VAR",
+        "short": "Variance (Goal)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Goal)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION",
+        "short": "GOAL_PARTICIPATION",
+        "min": 0,
+        "max": "*",
+        "definition": "GOAL_PARTICIPATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.1-ROL",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.1-ROL",
+        "short": "For backwards compatibility only as of V2.9",
+        "min": 1,
+        "max": "1",
+        "definition": "For backwards compatibility only as of V2.9",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.2-PRT",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.2-PRT",
+        "short": "Participation (Goal)",
+        "min": 1,
+        "max": "1",
+        "definition": "Participation (Goal)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.3-VAR",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.4-GOAL_PARTICIPATION.3-VAR",
+        "short": "Variance (Participation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Participation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION",
+        "short": "GOAL_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "GOAL_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.1-OBX",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.1-OBX",
+        "short": "Observation/Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.2-PRT",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.3-NTE",
+        "path": "PPR_PC1.10-PROBLEM.7-GOAL.5-GOAL_OBSERVATION.3-NTE",
+        "short": "Notes & Comments (Observation/Result Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Observation/Result Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER",
+        "short": "ORDER",
+        "min": 0,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.1-ORC",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL",
+        "short": "ORDER_DETAIL",
+        "min": 0,
+        "max": "1",
+        "definition": "ORDER_DETAIL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE",
+        "short": "CHOICE",
+        "min": 1,
+        "max": "1",
+        "definition": "CHOICE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.choice-1-OBR",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.choice-1-OBR",
+        "short": "Order Detail Segment",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 1 within CHOICE",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.choice-2-Hxx",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.1-CHOICE.choice-2-Hxx",
+        "short": "etc.",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 2 within CHOICE",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/Hxx"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.2-NTE",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.2-NTE",
+        "short": "Notes & Comments (Order Detail Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Order Detail Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.3-VAR",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.3-VAR",
+        "short": "Variance (Order)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Order)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION",
+        "short": "ORDER_OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "ORDER_OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.1-OBX",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.1-OBX",
+        "short": "Observation/Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.2-PRT",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.3-NTE",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.3-NTE",
+        "short": "Notes & Comments (Observation Comments)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes & Comments (Observation Comments)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.4-VAR",
+        "path": "PPR_PC1.10-PROBLEM.8-ORDER.2-ORDER_DETAIL.4-ORDER_OBSERVATION.4-VAR",
+        "short": "Variance (Observation/Result)",
+        "min": 0,
+        "max": "*",
+        "definition": "Variance (Observation/Result)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VAR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 PPR_PC1 Segment Definition",
   "name": "PPR_PC1",
   "type": "PPR_PC1",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:00Z"
 }
