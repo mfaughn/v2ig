@@ -194,5 +194,6 @@
   "title": "HL7 v2 OH4 Segment Definition",
   "name": "OH4",
   "type": "OH4",
-  "date": "2025-06-05T23:00:29Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

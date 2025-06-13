@@ -153,5 +153,6 @@
   "title": "HL7 v2 BLG Segment Definition",
   "name": "BLG",
   "type": "BLG",
-  "date": "2025-06-05T23:00:29Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

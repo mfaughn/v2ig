@@ -496,5 +496,6 @@
   "title": "HL7 v2 CSR Segment Definition",
   "name": "CSR",
   "type": "CSR",
-  "date": "2025-06-05T23:00:32Z"
+  "date": "2025-06-11T22:36:51Z",
+  "fhirVersion": "5.0.0"
 }

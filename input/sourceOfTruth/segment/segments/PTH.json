@@ -226,5 +226,6 @@
   "title": "HL7 v2 PTH Segment Definition",
   "name": "PTH",
   "type": "PTH",
-  "date": "2025-06-05T23:00:34Z"
+  "date": "2025-06-11T22:36:53Z",
+  "fhirVersion": "5.0.0"
 }

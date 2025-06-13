@@ -163,5 +163,6 @@
   "title": "HL7 v2 CDO Segment Definition",
   "name": "CDO",
   "type": "CDO",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:49Z",
+  "fhirVersion": "5.0.0"
 }

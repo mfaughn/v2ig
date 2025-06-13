@@ -1032,5 +1032,6 @@
   "title": "HL7 v2 RXG Segment Definition",
   "name": "RXG",
   "type": "RXG",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:49Z",
+  "fhirVersion": "5.0.0"
 }

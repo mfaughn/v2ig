@@ -104,5 +104,6 @@
   "title": "HL7 v2 FTS Segment Definition",
   "name": "FTS",
   "type": "FTS",
-  "date": "2025-06-05T23:00:28Z"
+  "date": "2025-06-11T22:36:47Z",
+  "fhirVersion": "5.0.0"
 }

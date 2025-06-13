@@ -1513,5 +1513,6 @@
   "title": "HL7 v2 PSL Segment Definition",
   "name": "PSL",
   "type": "PSL",
-  "date": "2025-06-05T23:00:35Z"
+  "date": "2025-06-11T22:36:55Z",
+  "fhirVersion": "5.0.0"
 }

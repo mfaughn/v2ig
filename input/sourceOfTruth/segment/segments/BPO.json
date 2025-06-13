@@ -452,5 +452,6 @@
   "title": "HL7 v2 BPO Segment Definition",
   "name": "BPO",
   "type": "BPO",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

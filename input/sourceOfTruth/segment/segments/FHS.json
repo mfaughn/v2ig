@@ -556,5 +556,6 @@
   "title": "HL7 v2 FHS Segment Definition",
   "name": "FHS",
   "type": "FHS",
-  "date": "2025-06-05T23:00:28Z"
+  "date": "2025-06-11T22:36:47Z",
+  "fhirVersion": "5.0.0"
 }
