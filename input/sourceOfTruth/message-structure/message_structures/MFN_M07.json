@@ -23,174 +23,157 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "MFN_M07.1-MSH",
-          "path": "MFN_M07.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M07.2-SFT",
-          "path": "MFN_M07.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M07.3-UAC",
-          "path": "MFN_M07.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M07.4-MFI",
-          "path": "MFN_M07.4-MFI",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MFI"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED",
-          "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.1-MFE",
-              "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.1-MFE",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/MFE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.2-CM0",
-              "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.2-CM0",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CM0"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.3-CM2",
-              "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.3-CM2",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CM2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "MFN_M07.1-MSH",
+        "path": "MFN_M07.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "MFN_M07.2-SFT",
+        "path": "MFN_M07.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.3-UAC",
+        "path": "MFN_M07.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.4-MFI",
+        "path": "MFN_M07.4-MFI",
+        "short": "Master File Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED",
+        "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED",
+        "short": "MF_CLIN_STUDY_SCHED",
+        "min": 1,
+        "max": "*",
+        "definition": "MF_CLIN_STUDY_SCHED",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.1-MFE",
+        "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.1-MFE",
+        "short": "Master File Entry",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Entry",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.2-CM0",
+        "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.2-CM0",
+        "short": "Clinical Study Master",
+        "min": 1,
+        "max": "1",
+        "definition": "Clinical Study Master",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CM0"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M07.5-MF_CLIN_STUDY_SCHED.3-CM2",
+        "path": "MFN_M07.5-MF_CLIN_STUDY_SCHED.3-CM2",
+        "short": "Clinical Study Schedule",
+        "min": 0,
+        "max": "*",
+        "definition": "Clinical Study Schedule",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CM2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 MFN_M07 Segment Definition",
   "name": "MFN_M07",
   "type": "MFN_M07",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

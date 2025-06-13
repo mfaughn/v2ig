@@ -23,376 +23,335 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "ORX_O58.1-MSH",
-          "path": "ORX_O58.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.2-MSA",
-          "path": "ORX_O58.2-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.3-ARV",
-          "path": "ORX_O58.3-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.4-ERR",
-          "path": "ORX_O58.4-ERR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.5-SFT",
-          "path": "ORX_O58.5-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.6-UAC",
-          "path": "ORX_O58.6-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.7-NTE",
-          "path": "ORX_O58.7-NTE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORX_O58.8-RESPONSE",
-          "path": "ORX_O58.8-RESPONSE",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "ORX_O58.8-RESPONSE.1-PATIENT",
-              "path": "ORX_O58.8-RESPONSE.1-PATIENT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.1-PATIENT.1-PID",
-                  "path": "ORX_O58.8-RESPONSE.1-PATIENT.1-PID",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PID"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.1-PATIENT.2-NTE",
-                  "path": "ORX_O58.8-RESPONSE.1-PATIENT.2-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.1-PATIENT.3-PRT",
-                  "path": "ORX_O58.8-RESPONSE.1-PATIENT.3-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.1-PATIENT.4-ARV",
-                  "path": "ORX_O58.8-RESPONSE.1-PATIENT.4-ARV",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "ORX_O58.8-RESPONSE.2-ORDER",
-              "path": "ORX_O58.8-RESPONSE.2-ORDER",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.2-ORDER.1-ORC",
-                  "path": "ORX_O58.8-RESPONSE.2-ORDER.1-ORC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.2-ORDER.2-PRT",
-                  "path": "ORX_O58.8-RESPONSE.2-ORDER.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.2-ORDER.3-TXA",
-                  "path": "ORX_O58.8-RESPONSE.2-ORDER.3-TXA",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/TXA"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "ORX_O58.8-RESPONSE.2-ORDER.4-CTI",
-                  "path": "ORX_O58.8-RESPONSE.2-ORDER.4-CTI",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/CTI"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "ORX_O58.1-MSH",
+        "path": "ORX_O58.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "ORX_O58.2-MSA",
+        "path": "ORX_O58.2-MSA",
+        "short": "Message Acknowledgment",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.3-ARV",
+        "path": "ORX_O58.3-ARV",
+        "short": "Access Restricitons",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restricitons",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.4-ERR",
+        "path": "ORX_O58.4-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "*",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.5-SFT",
+        "path": "ORX_O58.5-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.6-UAC",
+        "path": "ORX_O58.6-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.7-NTE",
+        "path": "ORX_O58.7-NTE",
+        "short": "Notes and Comments (for Header)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Header)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE",
+        "path": "ORX_O58.8-RESPONSE",
+        "short": "RESPONSE",
+        "min": 0,
+        "max": "1",
+        "definition": "RESPONSE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.1-PATIENT",
+        "path": "ORX_O58.8-RESPONSE.1-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.1-PATIENT.1-PID",
+        "path": "ORX_O58.8-RESPONSE.1-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.1-PATIENT.2-NTE",
+        "path": "ORX_O58.8-RESPONSE.1-PATIENT.2-NTE",
+        "short": "Notes and Comments (for Patient ID)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Patient ID)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.1-PATIENT.3-PRT",
+        "path": "ORX_O58.8-RESPONSE.1-PATIENT.3-PRT",
+        "short": "Participation (for Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.1-PATIENT.4-ARV",
+        "path": "ORX_O58.8-RESPONSE.1-PATIENT.4-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.2-ORDER",
+        "path": "ORX_O58.8-RESPONSE.2-ORDER",
+        "short": "ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.2-ORDER.1-ORC",
+        "path": "ORX_O58.8-RESPONSE.2-ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.2-ORDER.2-PRT",
+        "path": "ORX_O58.8-RESPONSE.2-ORDER.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.2-ORDER.3-TXA",
+        "path": "ORX_O58.8-RESPONSE.2-ORDER.3-TXA",
+        "short": "DESCRIPTION NEEDED",
+        "min": 1,
+        "max": "1",
+        "definition": "DESCRIPTION NEEDED",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TXA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORX_O58.8-RESPONSE.2-ORDER.4-CTI",
+        "path": "ORX_O58.8-RESPONSE.2-ORDER.4-CTI",
+        "short": "Clinical Trial Identification",
+        "min": 0,
+        "max": "*",
+        "definition": "Clinical Trial Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 ORX_O58 Segment Definition",
   "name": "ORX_O58",
   "type": "ORX_O58",
-  "date": "2024-07-24T19:13:16Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:57Z"
 }

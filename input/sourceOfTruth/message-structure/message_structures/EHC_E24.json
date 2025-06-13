@@ -23,250 +23,221 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "EHC_E24.1-MSH",
-          "path": "EHC_E24.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E24.2-SFT",
-          "path": "EHC_E24.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E24.3-UAC",
-          "path": "EHC_E24.3-UAC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E24.4-MSA",
-          "path": "EHC_E24.4-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E24.5-ERR",
-          "path": "EHC_E24.5-ERR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO",
-          "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1",
-              "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.1-IVC",
-                  "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.1-IVC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IVC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO",
-                  "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.1-PSL",
-                      "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.1-PSL",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PSL"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.2-AUT",
-                      "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.2-AUT",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/AUT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.3-ADJ",
-                      "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.1.2-PSL_ITEM_INFO.3-ADJ",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ADJ"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "EHC_E24.1-MSH",
+        "path": "EHC_E24.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "EHC_E24.2-SFT",
+        "path": "EHC_E24.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.3-UAC",
+        "path": "EHC_E24.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "*",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.4-MSA",
+        "path": "EHC_E24.4-MSA",
+        "short": "Message Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.5-ERR",
+        "path": "EHC_E24.5-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "*",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO",
+        "short": "AUTHORIZATION_RESPONSE_INFO",
+        "min": 1,
+        "max": "1",
+        "definition": "AUTHORIZATION_RESPONSE_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group",
+        "short": "Choice 1 within AUTHORIZATION_RESPONSE_INFO",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 1 within AUTHORIZATION_RESPONSE_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.1-IVC",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.1-IVC",
+        "short": "Invoice",
+        "min": 1,
+        "max": "1",
+        "definition": "Invoice",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IVC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO",
+        "short": "PSL_ITEM_INFO",
+        "min": 1,
+        "max": "*",
+        "definition": "PSL_ITEM_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.1-PSL",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.1-PSL",
+        "short": "Product/Service Line Item",
+        "min": 1,
+        "max": "1",
+        "definition": "Product/Service Line Item",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.2-AUT",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.2-AUT",
+        "short": "Authorization",
+        "min": 0,
+        "max": "1",
+        "definition": "Authorization",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AUT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.3-ADJ",
+        "path": "EHC_E24.6-AUTHORIZATION_RESPONSE_INFO.choice-1-Group.2-PSL_ITEM_INFO.3-ADJ",
+        "short": "Adjustment",
+        "min": 0,
+        "max": "*",
+        "definition": "Adjustment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ADJ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 EHC_E24 Segment Definition",
   "name": "EHC_E24",
   "type": "EHC_E24",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:01Z"
 }

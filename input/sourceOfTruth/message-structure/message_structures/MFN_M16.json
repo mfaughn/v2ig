@@ -23,410 +23,361 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "MFN_M16.1-MSH",
-          "path": "MFN_M16.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M16.2-SFT",
-          "path": "MFN_M16.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M16.3-UAC",
-          "path": "MFN_M16.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M16.4-MFI",
-          "path": "MFN_M16.4-MFI",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MFI"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M16.5-MATERIAL_ITEM_RECORD",
-          "path": "MFN_M16.5-MATERIAL_ITEM_RECORD",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.1-MFE",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.1-MFE",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/MFE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.2-ITM",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.2-ITM",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ITM"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.3-NTE",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.3-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.1-STZ",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.1-STZ",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/STZ"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.2-NTE",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.2-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.1-VND",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.1-VND",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/VND"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
-                      "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PKG"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.2-PCE",
-                      "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.2-PCE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PCE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION",
-              "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.1-IVT",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.1-IVT",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IVT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.2-ILT",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.2-ILT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ILT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.3-NTE",
-                  "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "MFN_M16.1-MSH",
+        "path": "MFN_M16.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "MFN_M16.2-SFT",
+        "path": "MFN_M16.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.3-UAC",
+        "path": "MFN_M16.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.4-MFI",
+        "path": "MFN_M16.4-MFI",
+        "short": "Master File Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD",
+        "short": "MATERIAL_ITEM_RECORD",
+        "min": 1,
+        "max": "*",
+        "definition": "MATERIAL_ITEM_RECORD",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.1-MFE",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.1-MFE",
+        "short": "Master File Entry",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Entry",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.2-ITM",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.2-ITM",
+        "short": "Material Item",
+        "min": 1,
+        "max": "1",
+        "definition": "Material Item",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ITM"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.3-NTE",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.3-NTE",
+        "short": "Notes for ITM",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes for ITM",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION",
+        "short": "STERILIZATION",
+        "min": 0,
+        "max": "*",
+        "definition": "STERILIZATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.1-STZ",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.1-STZ",
+        "short": "Sterilization Parameters",
+        "min": 1,
+        "max": "1",
+        "definition": "Sterilization Parameters",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/STZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.2-NTE",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.4-STERILIZATION.2-NTE",
+        "short": "Notes for STZ",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes for STZ",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR",
+        "short": "PURCHASING_VENDOR",
+        "min": 0,
+        "max": "*",
+        "definition": "PURCHASING_VENDOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.1-VND",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.1-VND",
+        "short": "Purchasing Vendor",
+        "min": 1,
+        "max": "1",
+        "definition": "Purchasing Vendor",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/VND"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING",
+        "short": "PACKAGING",
+        "min": 0,
+        "max": "*",
+        "definition": "PACKAGING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.1-PKG",
+        "short": "Packaging",
+        "min": 1,
+        "max": "1",
+        "definition": "Packaging",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PKG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.2-PCE",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.5-PURCHASING_VENDOR.2-PACKAGING.2-PCE",
+        "short": "Patient Charge Cost Center Exception",
+        "min": 0,
+        "max": "*",
+        "definition": "Patient Charge Cost Center Exception",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PCE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION",
+        "short": "MATERIAL_LOCATION",
+        "min": 0,
+        "max": "*",
+        "definition": "MATERIAL_LOCATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.1-IVT",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.1-IVT",
+        "short": "Material Location",
+        "min": 1,
+        "max": "1",
+        "definition": "Material Location",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IVT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.2-ILT",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.2-ILT",
+        "short": "Material Lot/Quantity",
+        "min": 0,
+        "max": "*",
+        "definition": "Material Lot/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ILT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.3-NTE",
+        "path": "MFN_M16.5-MATERIAL_ITEM_RECORD.6-MATERIAL_LOCATION.3-NTE",
+        "short": "Notes for IVT",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes for IVT",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 MFN_M16 Segment Definition",
   "name": "MFN_M16",
   "type": "MFN_M16",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

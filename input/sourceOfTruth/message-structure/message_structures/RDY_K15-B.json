@@ -23,199 +23,182 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "RDY_K15-B.1-MSH",
-          "path": "RDY_K15-B.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.2-SFT",
-          "path": "RDY_K15-B.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.3-MSA",
-          "path": "RDY_K15-B.3-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.4-ERR",
-          "path": "RDY_K15-B.4-ERR",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.5-QAK",
-          "path": "RDY_K15-B.5-QAK",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QAK"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.6-QPD",
-          "path": "RDY_K15-B.6-QPD",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QPD"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.7-DSP",
-          "path": "RDY_K15-B.7-DSP",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/DSP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.8-DSC",
-          "path": "RDY_K15-B.8-DSC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/DSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RDY_K15-B.9-UAC",
-          "path": "RDY_K15-B.9-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ]
+      {
+        "id": "RDY_K15-B.1-MSH",
+        "path": "RDY_K15-B.1-MSH",
+        "short": "Message Header Segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.2-SFT",
+        "path": "RDY_K15-B.2-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.3-MSA",
+        "path": "RDY_K15-B.3-MSA",
+        "short": "Message Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.4-ERR",
+        "path": "RDY_K15-B.4-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "1",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.5-QAK",
+        "path": "RDY_K15-B.5-QAK",
+        "short": "Query Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QAK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.6-QPD",
+        "path": "RDY_K15-B.6-QPD",
+        "short": "Query Parameter Definition",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Parameter Definition",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QPD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.7-DSP",
+        "path": "RDY_K15-B.7-DSP",
+        "short": "Display Data",
+        "min": 0,
+        "max": "*",
+        "definition": "Display Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.8-DSC",
+        "path": "RDY_K15-B.8-DSC",
+        "short": "Continuation Pointer",
+        "min": 0,
+        "max": "1",
+        "definition": "Continuation Pointer",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RDY_K15-B.9-UAC",
+        "path": "RDY_K15-B.9-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 RDY_K15-B Segment Definition",
   "name": "RDY_K15-B",
   "type": "RDY_K15-B",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:58Z"
 }

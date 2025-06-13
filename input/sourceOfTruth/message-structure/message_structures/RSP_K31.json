@@ -23,1167 +23,1034 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "RSP_K31.1-MSH",
-          "path": "RSP_K31.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.2-MSA",
-          "path": "RSP_K31.2-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.3-ERR",
-          "path": "RSP_K31.3-ERR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.4-SFT",
-          "path": "RSP_K31.4-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.5-UAC",
-          "path": "RSP_K31.5-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.6-QAK",
-          "path": "RSP_K31.6-QAK",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QAK"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.7-QPD",
-          "path": "RSP_K31.7-QPD",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/QPD"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.8-RCP",
-          "path": "RSP_K31.8-RCP",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/RCP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "RSP_K31.9-RESPONSE",
-          "path": "RSP_K31.9-RESPONSE",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "RSP_K31.9-RESPONSE.1-PATIENT",
-              "path": "RSP_K31.9-RESPONSE.1-PATIENT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.1-PID",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.1-PID",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PID"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.2-PD1",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.2-PD1",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.3-GSP",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.3-GSP",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.4-GSR",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.4-GSR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.5-GSC",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.5-GSC",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.6-PRT",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.6-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.7-NTE",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.7-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.8-ARV",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.8-ARV",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.9-AL1",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.9-AL1",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT",
-                  "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.1-PV1",
-                      "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.1-PV1",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.2-PV2",
-                      "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.2-PV2",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.3-PRT",
-                      "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.3-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.4-ARV",
-                      "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.4-ARV",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "B"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "RSP_K31.9-RESPONSE.2-ORDER",
-              "path": "RSP_K31.9-RESPONSE.2-ORDER",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.1-ORC",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.1-ORC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.2-PRT",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.1-TQ1",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.1-TQ1",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.2-TQ2",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.2-TQ2",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.1-RXO",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.1-RXO",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXO"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.2-PRT",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.3-NTE",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.4-RXR",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.4-RXR",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.1-RXC",
-                          "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.1-RXC",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.2-NTE",
-                          "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.2-NTE",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.1-RXE",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.1-RXE",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.2-PRT",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.3-NTE",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.1-TQ1",
-                          "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.1-TQ1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.2-TQ2",
-                          "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.2-TQ2",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.5-RXR",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.5-RXR",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.6-RXC",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.6-RXC",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.6-RXD",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.6-RXD",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXD"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.7-PRT",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.7-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.8-RXR",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.8-RXR",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.9-RXC",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.9-RXC",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/RXC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.10-CDO",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.10-CDO",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/CDO"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION",
-                  "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.1-OBX",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.1-OBX",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.2-PRT",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.3-NTE",
-                      "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.3-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "RSP_K31.1-MSH",
+        "path": "RSP_K31.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "RSP_K31.10-DSC",
-          "path": "RSP_K31.10-DSC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/DSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ]
+      },
+      {
+        "id": "RSP_K31.2-MSA",
+        "path": "RSP_K31.2-MSA",
+        "short": "Message Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.3-ERR",
+        "path": "RSP_K31.3-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "*",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.4-SFT",
+        "path": "RSP_K31.4-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.5-UAC",
+        "path": "RSP_K31.5-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.6-QAK",
+        "path": "RSP_K31.6-QAK",
+        "short": "Query Acknowledgement",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Acknowledgement",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QAK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.7-QPD",
+        "path": "RSP_K31.7-QPD",
+        "short": "Query Parameter Definition",
+        "min": 1,
+        "max": "1",
+        "definition": "Query Parameter Definition",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/QPD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.8-RCP",
+        "path": "RSP_K31.8-RCP",
+        "short": "Response Control Parameter",
+        "min": 1,
+        "max": "1",
+        "definition": "Response Control Parameter",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RCP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE",
+        "path": "RSP_K31.9-RESPONSE",
+        "short": "RESPONSE",
+        "min": 1,
+        "max": "*",
+        "definition": "RESPONSE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.1-PID",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.2-PD1",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.3-GSP",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.3-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.4-GSR",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.4-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.5-GSC",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.5-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.6-PRT",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.6-PRT",
+        "short": "Participation (for Additional Demographics)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Additional Demographics)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.7-NTE",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.7-NTE",
+        "short": "Notes and Comments (for PID)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for PID)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.8-ARV",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.8-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.9-AL1",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.9-AL1",
+        "short": "Allergy Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Allergy Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT",
+        "short": "PATIENT_VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.1-PV1",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.2-PV2",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.2-PV2",
+        "short": "Patient Visit – Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit – Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.3-PRT",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.3-PRT",
+        "short": "Participation (for Patient Visit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.4-ARV",
+        "path": "RSP_K31.9-RESPONSE.1-PATIENT.10-PATIENT_VISIT.4-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER",
+        "short": "ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.1-ORC",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.2-PRT",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.2-PRT",
+        "short": "Participation (for ORC)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for ORC)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING",
+        "short": "TIMING",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.1-TQ1",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.2-TQ2",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.3-TIMING.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL",
+        "short": "ORDER_DETAIL",
+        "min": 0,
+        "max": "1",
+        "definition": "ORDER_DETAIL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.1-RXO",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.1-RXO",
+        "short": "Pharmacy/Treatment Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.2-PRT",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.3-NTE",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.3-NTE",
+        "short": "Notes and Comments (for RXO)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for RXO)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.4-RXR",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.4-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS",
+        "short": "COMPONENTS",
+        "min": 0,
+        "max": "*",
+        "definition": "COMPONENTS",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.1-RXC",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.1-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.2-NTE",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.4-ORDER_DETAIL.5-COMPONENTS.2-NTE",
+        "short": "Notes and Comments (for each RXC)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for each RXC)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING",
+        "short": "ENCODING",
+        "min": 0,
+        "max": "1",
+        "definition": "ENCODING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.1-RXE",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.1-RXE",
+        "short": "Pharmacy/Treatment Encoded Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Encoded Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.2-PRT",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.2-PRT",
+        "short": "Participation (for RXE)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for RXE)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.3-NTE",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.3-NTE",
+        "short": "Notes and Comments (for RXE)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for RXE)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED",
+        "short": "TIMING_ENCODED",
+        "min": 1,
+        "max": "*",
+        "definition": "TIMING_ENCODED",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.1-TQ1",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.2-TQ2",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.4-TIMING_ENCODED.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.5-RXR",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.5-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.6-RXC",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.5-ENCODING.6-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.6-RXD",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.6-RXD",
+        "short": "Pharmacy/Treatment Dispense",
+        "min": 1,
+        "max": "1",
+        "definition": "Pharmacy/Treatment Dispense",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.7-PRT",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.7-PRT",
+        "short": "Participation (for RXD)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for RXD)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.8-RXR",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.8-RXR",
+        "short": "Pharmacy/Treatment Route",
+        "min": 1,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Route",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.9-RXC",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.9-RXC",
+        "short": "Pharmacy/Treatment Component",
+        "min": 0,
+        "max": "*",
+        "definition": "Pharmacy/Treatment Component",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RXC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.10-CDO",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.10-CDO",
+        "short": "Cumulative Dosage Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Cumulative Dosage Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CDO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION",
+        "short": "OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.1-OBX",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.1-OBX",
+        "short": "Results",
+        "min": 1,
+        "max": "1",
+        "definition": "Results",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.2-PRT",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.2-PRT",
+        "short": "Participation (for OBX)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for OBX)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.3-NTE",
+        "path": "RSP_K31.9-RESPONSE.2-ORDER.11-OBSERVATION.3-NTE",
+        "short": "Notes and Comments (for OBX)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for OBX)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "RSP_K31.10-DSC",
+        "path": "RSP_K31.10-DSC",
+        "short": "Continuation Pointer",
+        "min": 0,
+        "max": "1",
+        "definition": "Continuation Pointer",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 RSP_K31 Segment Definition",
   "name": "RSP_K31",
   "type": "RSP_K31",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:58Z"
 }

@@ -23,981 +23,880 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "BAR_P05.1-MSH",
-          "path": "BAR_P05.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.2-SFT",
-          "path": "BAR_P05.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.3-UAC",
-          "path": "BAR_P05.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.4-EVN",
-          "path": "BAR_P05.4-EVN",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/EVN"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.5-PID",
-          "path": "BAR_P05.5-PID",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PID"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.6-PD1",
-          "path": "BAR_P05.6-PD1",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PD1"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.7-GSP",
-          "path": "BAR_P05.7-GSP",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSP"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.8-GSR",
-          "path": "BAR_P05.8-GSR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.9-GSC",
-          "path": "BAR_P05.9-GSC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/GSC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.10-PRT",
-          "path": "BAR_P05.10-PRT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.11-ROL",
-          "path": "BAR_P05.11-ROL",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ROL"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "B"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BAR_P05.12-VISIT",
-          "path": "BAR_P05.12-VISIT",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "BAR_P05.12-VISIT.1-PV1",
-              "path": "BAR_P05.12-VISIT.1-PV1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.2-PV2",
-              "path": "BAR_P05.12-VISIT.2-PV2",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.3-PRT",
-              "path": "BAR_P05.12-VISIT.3-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.4-ROL",
-              "path": "BAR_P05.12-VISIT.4-ROL",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.5-DB1",
-              "path": "BAR_P05.12-VISIT.5-DB1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/DB1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.6-OBX",
-              "path": "BAR_P05.12-VISIT.6-OBX",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.7-PRT",
-              "path": "BAR_P05.12-VISIT.7-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.8-AL1",
-              "path": "BAR_P05.12-VISIT.8-AL1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.9-DIAGNOSIS",
-              "path": "BAR_P05.12-VISIT.9-DIAGNOSIS",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.9-DIAGNOSIS.1-DG1",
-                  "path": "BAR_P05.12-VISIT.9-DIAGNOSIS.1-DG1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/DG1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.10-DRG",
-              "path": "BAR_P05.12-VISIT.10-DRG",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/DRG"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.11-PROCEDURE",
-              "path": "BAR_P05.12-VISIT.11-PROCEDURE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.11-PROCEDURE.1-PR1",
-                  "path": "BAR_P05.12-VISIT.11-PROCEDURE.1-PR1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PR1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.11-PROCEDURE.2-PRT",
-                  "path": "BAR_P05.12-VISIT.11-PROCEDURE.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.11-PROCEDURE.3-ROL",
-                  "path": "BAR_P05.12-VISIT.11-PROCEDURE.3-ROL",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.12-GT1",
-              "path": "BAR_P05.12-VISIT.12-GT1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GT1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.13-GSP",
-              "path": "BAR_P05.12-VISIT.13-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.14-GSR",
-              "path": "BAR_P05.12-VISIT.14-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.15-NK1",
-              "path": "BAR_P05.12-VISIT.15-NK1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NK1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.16-GSP",
-              "path": "BAR_P05.12-VISIT.16-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.17-GSR",
-              "path": "BAR_P05.12-VISIT.17-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.18-INSURANCE",
-              "path": "BAR_P05.12-VISIT.18-INSURANCE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.1-IN1",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.1-IN1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.2-GSP",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.2-GSP",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.3-GSR",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.3-GSR",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.4-IN2",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.4-IN2",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN2"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.5-IN3",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.5-IN3",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN3"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.6-PRT",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.6-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BAR_P05.12-VISIT.18-INSURANCE.7-ROL",
-                  "path": "BAR_P05.12-VISIT.18-INSURANCE.7-ROL",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.19-ACC",
-              "path": "BAR_P05.12-VISIT.19-ACC",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ACC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.20-UB1",
-              "path": "BAR_P05.12-VISIT.20-UB1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/UB1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.21-UB2",
-              "path": "BAR_P05.12-VISIT.21-UB2",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/UB2"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.22-ABS",
-              "path": "BAR_P05.12-VISIT.22-ABS",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ABS"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.23-BLC",
-              "path": "BAR_P05.12-VISIT.23-BLC",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/BLC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "BAR_P05.12-VISIT.24-RMI",
-              "path": "BAR_P05.12-VISIT.24-RMI",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/RMI"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "BAR_P05.1-MSH",
+        "path": "BAR_P05.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "BAR_P05.2-SFT",
+        "path": "BAR_P05.2-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.3-UAC",
+        "path": "BAR_P05.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.4-EVN",
+        "path": "BAR_P05.4-EVN",
+        "short": "Event Type",
+        "min": 1,
+        "max": "1",
+        "definition": "Event Type",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/EVN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.5-PID",
+        "path": "BAR_P05.5-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.6-PD1",
+        "path": "BAR_P05.6-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.7-GSP",
+        "path": "BAR_P05.7-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.8-GSR",
+        "path": "BAR_P05.8-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.9-GSC",
+        "path": "BAR_P05.9-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.10-PRT",
+        "path": "BAR_P05.10-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.11-ROL",
+        "path": "BAR_P05.11-ROL",
+        "short": "Role",
+        "min": 0,
+        "max": "*",
+        "definition": "Role",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT",
+        "path": "BAR_P05.12-VISIT",
+        "short": "VISIT",
+        "min": 1,
+        "max": "*",
+        "definition": "VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.1-PV1",
+        "path": "BAR_P05.12-VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.2-PV2",
+        "path": "BAR_P05.12-VISIT.2-PV2",
+        "short": "Patient Visit - Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit - Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.3-PRT",
+        "path": "BAR_P05.12-VISIT.3-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.4-ROL",
+        "path": "BAR_P05.12-VISIT.4-ROL",
+        "short": "Role",
+        "min": 0,
+        "max": "*",
+        "definition": "Role",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.5-DB1",
+        "path": "BAR_P05.12-VISIT.5-DB1",
+        "short": "Disability Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Disability Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DB1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.6-OBX",
+        "path": "BAR_P05.12-VISIT.6-OBX",
+        "short": "Observation/Result",
+        "min": 0,
+        "max": "*",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.7-PRT",
+        "path": "BAR_P05.12-VISIT.7-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.8-AL1",
+        "path": "BAR_P05.12-VISIT.8-AL1",
+        "short": "Allergy Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Allergy Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.9-DIAGNOSIS",
+        "path": "BAR_P05.12-VISIT.9-DIAGNOSIS",
+        "short": "DIAGNOSIS",
+        "min": 0,
+        "max": "*",
+        "definition": "DIAGNOSIS",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.9-DIAGNOSIS.1-DG1",
+        "path": "BAR_P05.12-VISIT.9-DIAGNOSIS.1-DG1",
+        "short": "Diagnosis",
+        "min": 1,
+        "max": "1",
+        "definition": "Diagnosis",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DG1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.10-DRG",
+        "path": "BAR_P05.12-VISIT.10-DRG",
+        "short": "Diagnosis Related Group",
+        "min": 0,
+        "max": "1",
+        "definition": "Diagnosis Related Group",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DRG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.11-PROCEDURE",
+        "path": "BAR_P05.12-VISIT.11-PROCEDURE",
+        "short": "PROCEDURE",
+        "min": 0,
+        "max": "*",
+        "definition": "PROCEDURE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.11-PROCEDURE.1-PR1",
+        "path": "BAR_P05.12-VISIT.11-PROCEDURE.1-PR1",
+        "short": "Procedures",
+        "min": 1,
+        "max": "1",
+        "definition": "Procedures",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PR1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.11-PROCEDURE.2-PRT",
+        "path": "BAR_P05.12-VISIT.11-PROCEDURE.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.11-PROCEDURE.3-ROL",
+        "path": "BAR_P05.12-VISIT.11-PROCEDURE.3-ROL",
+        "short": "Role",
+        "min": 0,
+        "max": "*",
+        "definition": "Role",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.12-GT1",
+        "path": "BAR_P05.12-VISIT.12-GT1",
+        "short": "Guarantor",
+        "min": 0,
+        "max": "*",
+        "definition": "Guarantor",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GT1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.13-GSP",
+        "path": "BAR_P05.12-VISIT.13-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.14-GSR",
+        "path": "BAR_P05.12-VISIT.14-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.15-NK1",
+        "path": "BAR_P05.12-VISIT.15-NK1",
+        "short": "Next of Kin/Associated Parties",
+        "min": 0,
+        "max": "*",
+        "definition": "Next of Kin/Associated Parties",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NK1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.16-GSP",
+        "path": "BAR_P05.12-VISIT.16-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.17-GSR",
+        "path": "BAR_P05.12-VISIT.17-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE",
+        "short": "INSURANCE",
+        "min": 0,
+        "max": "*",
+        "definition": "INSURANCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.1-IN1",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.1-IN1",
+        "short": "Insurance",
+        "min": 1,
+        "max": "1",
+        "definition": "Insurance",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.2-GSP",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.2-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.3-GSR",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.3-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.4-IN2",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.4-IN2",
+        "short": "Insurance - Additional Info.",
+        "min": 0,
+        "max": "1",
+        "definition": "Insurance - Additional Info.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.5-IN3",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.5-IN3",
+        "short": "Insurance - Add'l Info. - Cert.",
+        "min": 0,
+        "max": "*",
+        "definition": "Insurance - Add'l Info. - Cert.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN3"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.6-PRT",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.6-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.18-INSURANCE.7-ROL",
+        "path": "BAR_P05.12-VISIT.18-INSURANCE.7-ROL",
+        "short": "Role",
+        "min": 0,
+        "max": "*",
+        "definition": "Role",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.19-ACC",
+        "path": "BAR_P05.12-VISIT.19-ACC",
+        "short": "Accident Information",
+        "min": 0,
+        "max": "1",
+        "definition": "Accident Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ACC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.20-UB1",
+        "path": "BAR_P05.12-VISIT.20-UB1",
+        "short": "Universal Bill Information",
+        "min": 0,
+        "max": "1",
+        "definition": "Universal Bill Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UB1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.21-UB2",
+        "path": "BAR_P05.12-VISIT.21-UB2",
+        "short": "Universal Bill 92 Information",
+        "min": 0,
+        "max": "1",
+        "definition": "Universal Bill 92 Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UB2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.22-ABS",
+        "path": "BAR_P05.12-VISIT.22-ABS",
+        "short": "Abstract",
+        "min": 0,
+        "max": "1",
+        "definition": "Abstract",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ABS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.23-BLC",
+        "path": "BAR_P05.12-VISIT.23-BLC",
+        "short": "Blood Code",
+        "min": 0,
+        "max": "*",
+        "definition": "Blood Code",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/BLC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BAR_P05.12-VISIT.24-RMI",
+        "path": "BAR_P05.12-VISIT.24-RMI",
+        "short": "Risk Management Incident",
+        "min": 0,
+        "max": "1",
+        "definition": "Risk Management Incident",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/RMI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 BAR_P05 Segment Definition",
   "name": "BAR_P05",
   "type": "BAR_P05",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:58Z"
 }

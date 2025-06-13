@@ -23,288 +23,253 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "EHC_E02.1-MSH",
-          "path": "EHC_E02.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E02.2-SFT",
-          "path": "EHC_E02.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E02.3-UAC",
-          "path": "EHC_E02.3-UAC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL",
-          "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1",
-              "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.1-IVC",
-                  "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.1-IVC",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IVC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.2-PYE",
-                  "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.2-PYE",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PYE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.3-CTD",
-                  "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.3-CTD",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/CTD"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.4-NTE",
-                  "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.4-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION",
-                  "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.1-PSS",
-                      "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.1-PSS",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PSS"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG",
-                      "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG.1-PSG",
-                          "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG.1-PSG",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PSG"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG.2-PSL",
-                          "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.1.5-PRODUCT_SERVICE_SECTION.2-PSG.2-PSL",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PSL"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "EHC_E02.1-MSH",
+        "path": "EHC_E02.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "EHC_E02.2-SFT",
+        "path": "EHC_E02.2-SFT",
+        "short": "Secondary Header",
+        "min": 0,
+        "max": "*",
+        "definition": "Secondary Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.3-UAC",
+        "path": "EHC_E02.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "*",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL",
+        "short": "INVOICE_INFORMATION_CANCEL",
+        "min": 1,
+        "max": "1",
+        "definition": "INVOICE_INFORMATION_CANCEL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group",
+        "short": "Choice 1 within INVOICE_INFORMATION_CANCEL",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 1 within INVOICE_INFORMATION_CANCEL",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.1-IVC",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.1-IVC",
+        "short": "Invoice",
+        "min": 1,
+        "max": "1",
+        "definition": "Invoice",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IVC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.2-PYE",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.2-PYE",
+        "short": "Payee Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Payee Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PYE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.3-CTD",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.3-CTD",
+        "short": "Contact Data",
+        "min": 0,
+        "max": "*",
+        "definition": "Contact Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.4-NTE",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.4-NTE",
+        "short": "Notes and Comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION",
+        "short": "PRODUCT_SERVICE_SECTION",
+        "min": 0,
+        "max": "*",
+        "definition": "PRODUCT_SERVICE_SECTION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.1-PSS",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.1-PSS",
+        "short": "DESCRIPTION NEEDED",
+        "min": 1,
+        "max": "1",
+        "definition": "DESCRIPTION NEEDED",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG",
+        "short": "PSG",
+        "min": 0,
+        "max": "*",
+        "definition": "PSG",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG.1-PSG",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG.1-PSG",
+        "short": "Product/Service Group",
+        "min": 1,
+        "max": "1",
+        "definition": "Product/Service Group",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG.2-PSL",
+        "path": "EHC_E02.4-INVOICE_INFORMATION_CANCEL.choice-1-Group.5-PRODUCT_SERVICE_SECTION.2-PSG.2-PSL",
+        "short": "Product/Service Line Item",
+        "min": 0,
+        "max": "*",
+        "definition": "Product/Service Line Item",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 EHC_E02 Segment Definition",
   "name": "EHC_E02",
   "type": "EHC_E02",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:01Z"
 }

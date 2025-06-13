@@ -23,174 +23,157 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "ORA_R33.1-MSH",
-          "path": "ORA_R33.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORA_R33.2-SFT",
-          "path": "ORA_R33.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORA_R33.3-UAC",
-          "path": "ORA_R33.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORA_R33.4-MSA",
-          "path": "ORA_R33.4-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORA_R33.5-ERR",
-          "path": "ORA_R33.5-ERR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "ORA_R33.6-ORDER",
-          "path": "ORA_R33.6-ORDER",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "ORA_R33.6-ORDER.1-ORC",
-              "path": "ORA_R33.6-ORDER.1-ORC",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "ORA_R33.6-ORDER.2-PRT",
-              "path": "ORA_R33.6-ORDER.2-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "ORA_R33.1-MSH",
+        "path": "ORA_R33.1-MSH",
+        "short": "Message Acknowledgment",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "ORA_R33.2-SFT",
+        "path": "ORA_R33.2-SFT",
+        "short": "Software segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.3-UAC",
+        "path": "ORA_R33.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.4-MSA",
+        "path": "ORA_R33.4-MSA",
+        "short": "Message Acknowledgment",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.5-ERR",
+        "path": "ORA_R33.5-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "*",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.6-ORDER",
+        "path": "ORA_R33.6-ORDER",
+        "short": "ORDER",
+        "min": 0,
+        "max": "1",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.6-ORDER.1-ORC",
+        "path": "ORA_R33.6-ORDER.1-ORC",
+        "short": "Common Order Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "ORA_R33.6-ORDER.2-PRT",
+        "path": "ORA_R33.6-ORDER.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 ORA_R33 Segment Definition",
   "name": "ORA_R33",
   "type": "ORA_R33",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

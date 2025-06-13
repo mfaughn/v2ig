@@ -23,338 +23,303 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "CRM_C01.1-MSH",
-          "path": "CRM_C01.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CRM_C01.2-ARV",
-          "path": "CRM_C01.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CRM_C01.3-SFT",
-          "path": "CRM_C01.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CRM_C01.4-UAC",
-          "path": "CRM_C01.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "CRM_C01.5-PATIENT",
-          "path": "CRM_C01.5-PATIENT",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.1-PID",
-              "path": "CRM_C01.5-PATIENT.1-PID",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PID"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.2-GSP",
-              "path": "CRM_C01.5-PATIENT.2-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.3-GSR",
-              "path": "CRM_C01.5-PATIENT.3-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.4-GSC",
-              "path": "CRM_C01.5-PATIENT.4-GSC",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.5-PRT",
-              "path": "CRM_C01.5-PATIENT.5-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.6-ARV",
-              "path": "CRM_C01.5-PATIENT.6-ARV",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT",
-              "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.1-PV1",
-                  "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.1-PV1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.2-PRT",
-                  "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.8-CSR",
-              "path": "CRM_C01.5-PATIENT.8-CSR",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "CRM_C01.5-PATIENT.9-CSP",
-              "path": "CRM_C01.5-PATIENT.9-CSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "CRM_C01.1-MSH",
+        "path": "CRM_C01.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "CRM_C01.2-ARV",
+        "path": "CRM_C01.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.3-SFT",
+        "path": "CRM_C01.3-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.4-UAC",
+        "path": "CRM_C01.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT",
+        "path": "CRM_C01.5-PATIENT",
+        "short": "PATIENT",
+        "min": 1,
+        "max": "*",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.1-PID",
+        "path": "CRM_C01.5-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.2-GSP",
+        "path": "CRM_C01.5-PATIENT.2-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.3-GSR",
+        "path": "CRM_C01.5-PATIENT.3-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.4-GSC",
+        "path": "CRM_C01.5-PATIENT.4-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.5-PRT",
+        "path": "CRM_C01.5-PATIENT.5-PRT",
+        "short": "Participation (for Patient",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.6-ARV",
+        "path": "CRM_C01.5-PATIENT.6-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT",
+        "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT",
+        "short": "PATIENT_VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.1-PV1",
+        "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.2-PRT",
+        "path": "CRM_C01.5-PATIENT.7-PATIENT_VISIT.2-PRT",
+        "short": "Participation (for Patient Visit",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.8-CSR",
+        "path": "CRM_C01.5-PATIENT.8-CSR",
+        "short": "Clinical Study Registration",
+        "min": 1,
+        "max": "1",
+        "definition": "Clinical Study Registration",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "CRM_C01.5-PATIENT.9-CSP",
+        "path": "CRM_C01.5-PATIENT.9-CSP",
+        "short": "Clinical Study Phase",
+        "min": 0,
+        "max": "*",
+        "definition": "Clinical Study Phase",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 CRM_C01 Segment Definition",
   "name": "CRM_C01",
   "type": "CRM_C01",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

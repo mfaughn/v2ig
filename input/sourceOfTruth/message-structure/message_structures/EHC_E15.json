@@ -23,423 +23,368 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "EHC_E15.1-MSH",
-          "path": "EHC_E15.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E15.2-SFT",
-          "path": "EHC_E15.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E15.3-UAC",
-          "path": "EHC_E15.3-UAC",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO",
-          "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1",
-              "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1.1-PMT",
-                  "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1.1-PMT",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PMT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1.2-PYE",
-                  "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.1.2-PYE",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PYE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "EHC_E15.1-MSH",
+        "path": "EHC_E15.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO",
-          "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.1-IPR",
-              "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.1-IPR",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/IPR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.2-IVC",
-              "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.2-IVC",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/IVC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION",
-              "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.1-PSS",
-                  "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.1-PSS",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PSS"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP",
-                  "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.1-PSG",
-                      "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.1-PSG",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PSG"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO",
-                      "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.1-PSL",
-                          "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.1-PSL",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PSL"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.2-ADJ",
-                          "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.2-ADJ",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/ADJ"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "EHC_E15.2-SFT",
+        "path": "EHC_E15.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "EHC_E15.6-ADJUSTMENT_PAYEE",
-          "path": "EHC_E15.6-ADJUSTMENT_PAYEE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "EHC_E15.6-ADJUSTMENT_PAYEE.1-ADJ",
-              "path": "EHC_E15.6-ADJUSTMENT_PAYEE.1-ADJ",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ADJ"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "EHC_E15.6-ADJUSTMENT_PAYEE.2-PRT",
-              "path": "EHC_E15.6-ADJUSTMENT_PAYEE.2-PRT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "EHC_E15.6-ADJUSTMENT_PAYEE.3-ROL",
-              "path": "EHC_E15.6-ADJUSTMENT_PAYEE.3-ROL",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ROL"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      },
+      {
+        "id": "EHC_E15.3-UAC",
+        "path": "EHC_E15.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "*",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO",
+        "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO",
+        "short": "PAYMENT_REMITTANCE_HEADER_INFO",
+        "min": 1,
+        "max": "1",
+        "definition": "PAYMENT_REMITTANCE_HEADER_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group",
+        "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group",
+        "short": "Choice 1 within PAYMENT_REMITTANCE_HEADER_INFO",
+        "min": 0,
+        "max": "1",
+        "definition": "Choice 1 within PAYMENT_REMITTANCE_HEADER_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group.1-PMT",
+        "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group.1-PMT",
+        "short": "Payment Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Payment Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PMT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group.2-PYE",
+        "path": "EHC_E15.4-PAYMENT_REMITTANCE_HEADER_INFO.choice-1-Group.2-PYE",
+        "short": "Payee Information",
+        "min": 1,
+        "max": "1",
+        "definition": "Payee Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PYE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO",
+        "short": "PAYMENT_REMITTANCE_DETAIL_INFO",
+        "min": 0,
+        "max": "*",
+        "definition": "PAYMENT_REMITTANCE_DETAIL_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.1-IPR",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.1-IPR",
+        "short": "Invoice Processing Results",
+        "min": 1,
+        "max": "1",
+        "definition": "Invoice Processing Results",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IPR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.2-IVC",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.2-IVC",
+        "short": "Invoice",
+        "min": 1,
+        "max": "1",
+        "definition": "Invoice",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IVC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION",
+        "short": "PRODUCT_SERVICE_SECTION",
+        "min": 1,
+        "max": "*",
+        "definition": "PRODUCT_SERVICE_SECTION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.1-PSS",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.1-PSS",
+        "short": "Product/Service Section",
+        "min": 1,
+        "max": "1",
+        "definition": "Product/Service Section",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP",
+        "short": "PRODUCT_SERVICE_GROUP",
+        "min": 1,
+        "max": "*",
+        "definition": "PRODUCT_SERVICE_GROUP",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.1-PSG",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.1-PSG",
+        "short": "Product/Service Group",
+        "min": 1,
+        "max": "1",
+        "definition": "Product/Service Group",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO",
+        "short": "PSL_ITEM_INFO",
+        "min": 1,
+        "max": "*",
+        "definition": "PSL_ITEM_INFO",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.1-PSL",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.1-PSL",
+        "short": "Product/Service Line Item",
+        "min": 1,
+        "max": "1",
+        "definition": "Product/Service Line Item",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PSL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.2-ADJ",
+        "path": "EHC_E15.5-PAYMENT_REMITTANCE_DETAIL_INFO.3-PRODUCT_SERVICE_SECTION.2-PRODUCT_SERVICE_GROUP.2-PSL_ITEM_INFO.2-ADJ",
+        "short": "Adjustment",
+        "min": 0,
+        "max": "*",
+        "definition": "Adjustment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ADJ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.6-ADJUSTMENT_PAYEE",
+        "path": "EHC_E15.6-ADJUSTMENT_PAYEE",
+        "short": "ADJUSTMENT_PAYEE",
+        "min": 0,
+        "max": "*",
+        "definition": "ADJUSTMENT_PAYEE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.6-ADJUSTMENT_PAYEE.1-ADJ",
+        "path": "EHC_E15.6-ADJUSTMENT_PAYEE.1-ADJ",
+        "short": "Adjustment",
+        "min": 1,
+        "max": "1",
+        "definition": "Adjustment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ADJ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.6-ADJUSTMENT_PAYEE.2-PRT",
+        "path": "EHC_E15.6-ADJUSTMENT_PAYEE.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "1",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "EHC_E15.6-ADJUSTMENT_PAYEE.3-ROL",
+        "path": "EHC_E15.6-ADJUSTMENT_PAYEE.3-ROL",
+        "short": "Role",
+        "min": 0,
+        "max": "1",
+        "definition": "Role",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ROL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 EHC_E15 Segment Definition",
   "name": "EHC_E15",
   "type": "EHC_E15",
-  "date": "2024-07-24T19:13:19Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:29:01Z"
 }

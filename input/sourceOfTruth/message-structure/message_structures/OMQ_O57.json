@@ -23,1474 +23,1307 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "OMQ_O57.1-MSH",
-          "path": "OMQ_O57.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OMQ_O57.2-ARV",
-          "path": "OMQ_O57.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OMQ_O57.3-SFT",
-          "path": "OMQ_O57.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OMQ_O57.4-UAC",
-          "path": "OMQ_O57.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OMQ_O57.5-NTE",
-          "path": "OMQ_O57.5-NTE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "OMQ_O57.6-PATIENT",
-          "path": "OMQ_O57.6-PATIENT",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.1-PID",
-              "path": "OMQ_O57.6-PATIENT.1-PID",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PID"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.2-PD1",
-              "path": "OMQ_O57.6-PATIENT.2-PD1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.3-GSP",
-              "path": "OMQ_O57.6-PATIENT.3-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.4-GSR",
-              "path": "OMQ_O57.6-PATIENT.4-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.5-GSC",
-              "path": "OMQ_O57.6-PATIENT.5-GSC",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.6-PRT",
-              "path": "OMQ_O57.6-PATIENT.6-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.7-NTE",
-              "path": "OMQ_O57.6-PATIENT.7-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.8-NK1",
-              "path": "OMQ_O57.6-PATIENT.8-NK1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NK1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.9-GSP",
-              "path": "OMQ_O57.6-PATIENT.9-GSP",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.10-GSR",
-              "path": "OMQ_O57.6-PATIENT.10-GSR",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.11-ARV",
-              "path": "OMQ_O57.6-PATIENT.11-ARV",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT",
-              "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.1-PV1",
-                  "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.1-PV1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.2-PV2",
-                  "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.2-PV2",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.3-PRT",
-                  "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.3-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.13-INSURANCE",
-              "path": "OMQ_O57.6-PATIENT.13-INSURANCE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.13-INSURANCE.1-IN1",
-                  "path": "OMQ_O57.6-PATIENT.13-INSURANCE.1-IN1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.13-INSURANCE.2-IN2",
-                  "path": "OMQ_O57.6-PATIENT.13-INSURANCE.2-IN2",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN2"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.6-PATIENT.13-INSURANCE.3-IN3",
-                  "path": "OMQ_O57.6-PATIENT.13-INSURANCE.3-IN3",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/IN3"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.14-GT1",
-              "path": "OMQ_O57.6-PATIENT.14-GT1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/GT1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.6-PATIENT.15-AL1",
-              "path": "OMQ_O57.6-PATIENT.15-AL1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      {
+        "id": "OMQ_O57.1-MSH",
+        "path": "OMQ_O57.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "OMQ_O57.7-ORDER",
-          "path": "OMQ_O57.7-ORDER",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.1-ORC",
-              "path": "OMQ_O57.7-ORDER.1-ORC",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.2-PRT",
-              "path": "OMQ_O57.7-ORDER.2-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.3-OBX",
-              "path": "OMQ_O57.7-ORDER.3-OBX",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.4-PRT",
-              "path": "OMQ_O57.7-ORDER.4-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.5-TXA",
-              "path": "OMQ_O57.7-ORDER.5-TXA",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/TXA"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.6-CTD",
-              "path": "OMQ_O57.7-ORDER.6-CTD",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CTD"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.7-DG1",
-              "path": "OMQ_O57.7-ORDER.7-DG1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/DG1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.8-OBSERVATION",
-              "path": "OMQ_O57.7-ORDER.8-OBSERVATION",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.8-OBSERVATION.1-OBX",
-                  "path": "OMQ_O57.7-ORDER.8-OBSERVATION.1-OBX",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.8-OBSERVATION.2-PRT",
-                  "path": "OMQ_O57.7-ORDER.8-OBSERVATION.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.8-OBSERVATION.3-NTE",
-                  "path": "OMQ_O57.7-ORDER.8-OBSERVATION.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT",
-              "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR",
-                  "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.1-PID",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.1-PID",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PID"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.2-PD1",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.2-PD1",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.3-GSP",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.3-GSP",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/GSP"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.4-GSR",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.4-GSR",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/GSR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.5-GSC",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.5-GSC",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/GSC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.6-PRT",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.6-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.7-ARV",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.7-ARV",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "B"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR",
-                  "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR",
-                  "min": 1,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.1-PV1",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.1-PV1",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.2-PV2",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.2-PV2",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PV2"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.3-PRT",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.3-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ],
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.3-AL1",
-                  "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.3-AL1",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR",
-                  "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR",
-                  "min": 0,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.1-ORC",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.1-ORC",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.2-PRT",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.3-OBR",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.3-OBR",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/OBR"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.1-TQ1",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.1-TQ1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.2-TQ2",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.2-TQ2",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.5-NTE",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.5-NTE",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.1-PRT",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.1-PRT",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.2-DEV",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.2-DEV",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/DEV"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.7-CTD",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.7-CTD",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/CTD"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR",
-                      "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR",
-                      "min": 0,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.1-OBX",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.1-OBX",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.2-PRT",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.2-PRT",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.3-NTE",
-                          "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.3-NTE",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.10-FT1",
-              "path": "OMQ_O57.7-ORDER.10-FT1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/FT1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.11-CTI",
-              "path": "OMQ_O57.7-ORDER.11-CTI",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/CTI"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "OMQ_O57.7-ORDER.12-BLG",
-              "path": "OMQ_O57.7-ORDER.12-BLG",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/BLG"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      },
+      {
+        "id": "OMQ_O57.2-ARV",
+        "path": "OMQ_O57.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "OMQ_O57.3-SFT",
+        "path": "OMQ_O57.3-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.4-UAC",
+        "path": "OMQ_O57.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.5-NTE",
+        "path": "OMQ_O57.5-NTE",
+        "short": "Notes and Comments (for Header)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Header)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT",
+        "path": "OMQ_O57.6-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.1-PID",
+        "path": "OMQ_O57.6-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.2-PD1",
+        "path": "OMQ_O57.6-PATIENT.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.3-GSP",
+        "path": "OMQ_O57.6-PATIENT.3-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.4-GSR",
+        "path": "OMQ_O57.6-PATIENT.4-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.5-GSC",
+        "path": "OMQ_O57.6-PATIENT.5-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.6-PRT",
+        "path": "OMQ_O57.6-PATIENT.6-PRT",
+        "short": "Participation (for Patient)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.7-NTE",
+        "path": "OMQ_O57.6-PATIENT.7-NTE",
+        "short": "Notes and Comments (for Patient ID)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Patient ID)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.8-NK1",
+        "path": "OMQ_O57.6-PATIENT.8-NK1",
+        "short": "Next of Kin/Associated Parties",
+        "min": 0,
+        "max": "*",
+        "definition": "Next of Kin/Associated Parties",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NK1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.9-GSP",
+        "path": "OMQ_O57.6-PATIENT.9-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.10-GSR",
+        "path": "OMQ_O57.6-PATIENT.10-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.11-ARV",
+        "path": "OMQ_O57.6-PATIENT.11-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT",
+        "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT",
+        "short": "PATIENT_VISIT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_VISIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.1-PV1",
+        "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.1-PV1",
+        "short": "Patient Visit",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.2-PV2",
+        "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.2-PV2",
+        "short": "Patient Visit- Additional Info",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit- Additional Info",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.3-PRT",
+        "path": "OMQ_O57.6-PATIENT.12-PATIENT_VISIT.3-PRT",
+        "short": "Participation (for Patient Visit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.13-INSURANCE",
+        "path": "OMQ_O57.6-PATIENT.13-INSURANCE",
+        "short": "INSURANCE",
+        "min": 0,
+        "max": "*",
+        "definition": "INSURANCE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.13-INSURANCE.1-IN1",
+        "path": "OMQ_O57.6-PATIENT.13-INSURANCE.1-IN1",
+        "short": "Insurance",
+        "min": 1,
+        "max": "1",
+        "definition": "Insurance",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.13-INSURANCE.2-IN2",
+        "path": "OMQ_O57.6-PATIENT.13-INSURANCE.2-IN2",
+        "short": "Insurance Additional Information",
+        "min": 0,
+        "max": "1",
+        "definition": "Insurance Additional Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.13-INSURANCE.3-IN3",
+        "path": "OMQ_O57.6-PATIENT.13-INSURANCE.3-IN3",
+        "short": "Insurance Additional Information, Certification",
+        "min": 0,
+        "max": "1",
+        "definition": "Insurance Additional Information, Certification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/IN3"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.14-GT1",
+        "path": "OMQ_O57.6-PATIENT.14-GT1",
+        "short": "Guarantor",
+        "min": 0,
+        "max": "1",
+        "definition": "Guarantor",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GT1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.6-PATIENT.15-AL1",
+        "path": "OMQ_O57.6-PATIENT.15-AL1",
+        "short": "Allergy Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Allergy Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER",
+        "path": "OMQ_O57.7-ORDER",
+        "short": "ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.1-ORC",
+        "path": "OMQ_O57.7-ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.2-PRT",
+        "path": "OMQ_O57.7-ORDER.2-PRT",
+        "short": "Participation (for Common Order)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Common Order)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.3-OBX",
+        "path": "OMQ_O57.7-ORDER.3-OBX",
+        "short": "Observation containing document",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation containing document",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.4-PRT",
+        "path": "OMQ_O57.7-ORDER.4-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.5-TXA",
+        "path": "OMQ_O57.7-ORDER.5-TXA",
+        "short": "Transcription Document Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Transcription Document Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TXA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.6-CTD",
+        "path": "OMQ_O57.7-ORDER.6-CTD",
+        "short": "Contact Data",
+        "min": 0,
+        "max": "1",
+        "definition": "Contact Data",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.7-DG1",
+        "path": "OMQ_O57.7-ORDER.7-DG1",
+        "short": "Diagnosis",
+        "min": 0,
+        "max": "*",
+        "definition": "Diagnosis",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DG1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.8-OBSERVATION",
+        "path": "OMQ_O57.7-ORDER.8-OBSERVATION",
+        "short": "OBSERVATION",
+        "min": 0,
+        "max": "*",
+        "definition": "OBSERVATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.8-OBSERVATION.1-OBX",
+        "path": "OMQ_O57.7-ORDER.8-OBSERVATION.1-OBX",
+        "short": "Observation/Result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.8-OBSERVATION.2-PRT",
+        "path": "OMQ_O57.7-ORDER.8-OBSERVATION.2-PRT",
+        "short": "Participation (for Observation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Observation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.8-OBSERVATION.3-NTE",
+        "path": "OMQ_O57.7-ORDER.8-OBSERVATION.3-NTE",
+        "short": "Notes and Comments (for Results)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Results)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT",
+        "short": "PRIOR_RESULT",
+        "min": 0,
+        "max": "*",
+        "definition": "PRIOR_RESULT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR",
+        "short": "PATIENT_PRIOR",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.1-PID",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.1-PID",
+        "short": "Patient Identification – previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification – previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.2-PD1",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.2-PD1",
+        "short": "Additional Demographics – previous result",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics – previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.3-GSP",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.3-GSP",
+        "short": "Person Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Person Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.4-GSR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.4-GSR",
+        "short": "Recorded Gender and Sex",
+        "min": 0,
+        "max": "*",
+        "definition": "Recorded Gender and Sex",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.5-GSC",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.5-GSC",
+        "short": "Sex Parameter for Clinical Use",
+        "min": 0,
+        "max": "*",
+        "definition": "Sex Parameter for Clinical Use",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/GSC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.6-PRT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.6-PRT",
+        "short": "Participation (for Patient Prior)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Prior)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.7-ARV",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.1-PATIENT_PRIOR.7-ARV",
+        "short": "For backwards compatitbilitty only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatitbilitty only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR",
+        "short": "PATIENT_VISIT_PRIOR",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT_VISIT_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.1-PV1",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.1-PV1",
+        "short": "Patient Visit – previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit – previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.2-PV2",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.2-PV2",
+        "short": "Patient Visit Add. Info – previous result",
+        "min": 0,
+        "max": "1",
+        "definition": "Patient Visit Add. Info – previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.3-PRT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.2-PATIENT_VISIT_PRIOR.3-PRT",
+        "short": "Participation (for Patient Visit Prior)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Patient Visit Prior)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.3-AL1",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.3-AL1",
+        "short": "Allergy Information - previous result",
+        "min": 0,
+        "max": "*",
+        "definition": "Allergy Information - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR",
+        "short": "ORDER_PRIOR",
+        "min": 1,
+        "max": "*",
+        "definition": "ORDER_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.1-ORC",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.1-ORC",
+        "short": "Common Order - previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.2-PRT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.3-OBR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.3-OBR",
+        "short": "Order Detail - previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Order Detail - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR",
+        "short": "TIMING_PRIOR",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.1-TQ1",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.2-TQ2",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.4-TIMING_PRIOR.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.5-NTE",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.5-NTE",
+        "short": "Notes and Comments - previous result",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR",
+        "short": "OBSERVATION_PARTICIPATION_PRIOR",
+        "min": 0,
+        "max": "*",
+        "definition": "OBSERVATION_PARTICIPATION_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.1-PRT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.1-PRT",
+        "short": "Participation (for Order Prior) - previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Participation (for Order Prior) - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.2-DEV",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.6-OBSERVATION_PARTICIPATION_PRIOR.2-DEV",
+        "short": "Device",
+        "min": 0,
+        "max": "*",
+        "definition": "Device",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DEV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.7-CTD",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.7-CTD",
+        "short": "Contact Data - previous result",
+        "min": 0,
+        "max": "1",
+        "definition": "Contact Data - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTD"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR",
+        "short": "OBSERVATION_PRIOR",
+        "min": 1,
+        "max": "*",
+        "definition": "OBSERVATION_PRIOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.1-OBX",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.1-OBX",
+        "short": "Observation/Result - previous result",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation/Result - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.2-PRT",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.2-PRT",
+        "short": "Participation (for Oservation Prior)",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation (for Oservation Prior)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.3-NTE",
+        "path": "OMQ_O57.7-ORDER.9-PRIOR_RESULT.4-ORDER_PRIOR.8-OBSERVATION_PRIOR.3-NTE",
+        "short": "Notes and Comments - previous result",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments - previous result",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.10-FT1",
+        "path": "OMQ_O57.7-ORDER.10-FT1",
+        "short": "Financial Transaction",
+        "min": 0,
+        "max": "*",
+        "definition": "Financial Transaction",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/FT1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.11-CTI",
+        "path": "OMQ_O57.7-ORDER.11-CTI",
+        "short": "Clinical Trial Identification",
+        "min": 0,
+        "max": "*",
+        "definition": "Clinical Trial Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/CTI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "OMQ_O57.7-ORDER.12-BLG",
+        "path": "OMQ_O57.7-ORDER.12-BLG",
+        "short": "Billing Segment",
+        "min": 0,
+        "max": "1",
+        "definition": "Billing Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/BLG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 OMQ_O57 Segment Definition",
   "name": "OMQ_O57",
   "type": "OMQ_O57",
-  "date": "2024-07-24T19:13:16Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:57Z"
 }

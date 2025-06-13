@@ -23,275 +23,246 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "MFN_M05.1-MSH",
-          "path": "MFN_M05.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M05.2-SFT",
-          "path": "MFN_M05.2-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M05.3-UAC",
-          "path": "MFN_M05.3-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M05.4-MFI",
-          "path": "MFN_M05.4-MFI",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MFI"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "MFN_M05.5-MF_LOCATION",
-          "path": "MFN_M05.5-MF_LOCATION",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "MFN_M05.5-MF_LOCATION.1-MFE",
-              "path": "MFN_M05.5-MF_LOCATION.1-MFE",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/MFE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M05.5-MF_LOCATION.2-LOC",
-              "path": "MFN_M05.5-MF_LOCATION.2-LOC",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/LOC"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M05.5-MF_LOCATION.3-LCH",
-              "path": "MFN_M05.5-MF_LOCATION.3-LCH",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/LCH"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M05.5-MF_LOCATION.4-LRL",
-              "path": "MFN_M05.5-MF_LOCATION.4-LRL",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/LRL"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT",
-              "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT",
-              "min": 0,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.1-LDP",
-                  "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.1-LDP",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/LDP"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.2-LCH",
-                  "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.2-LCH",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/LCH"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.3-LCC",
-                  "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.3-LCC",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/LCC"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "MFN_M05.1-MSH",
+        "path": "MFN_M05.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "MFN_M05.2-SFT",
+        "path": "MFN_M05.2-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.3-UAC",
+        "path": "MFN_M05.3-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.4-MFI",
+        "path": "MFN_M05.4-MFI",
+        "short": "Master File Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION",
+        "path": "MFN_M05.5-MF_LOCATION",
+        "short": "MF_LOCATION",
+        "min": 1,
+        "max": "*",
+        "definition": "MF_LOCATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.1-MFE",
+        "path": "MFN_M05.5-MF_LOCATION.1-MFE",
+        "short": "Master File Entry",
+        "min": 1,
+        "max": "1",
+        "definition": "Master File Entry",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MFE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.2-LOC",
+        "path": "MFN_M05.5-MF_LOCATION.2-LOC",
+        "short": "Patient Location Master",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Location Master",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LOC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.3-LCH",
+        "path": "MFN_M05.5-MF_LOCATION.3-LCH",
+        "short": "Location Characteristic",
+        "min": 0,
+        "max": "*",
+        "definition": "Location Characteristic",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LCH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.4-LRL",
+        "path": "MFN_M05.5-MF_LOCATION.4-LRL",
+        "short": "Location Relationship",
+        "min": 0,
+        "max": "*",
+        "definition": "Location Relationship",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LRL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT",
+        "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT",
+        "short": "MF_LOC_DEPT",
+        "min": 1,
+        "max": "*",
+        "definition": "MF_LOC_DEPT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.1-LDP",
+        "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.1-LDP",
+        "short": "Location Department",
+        "min": 1,
+        "max": "1",
+        "definition": "Location Department",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LDP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.2-LCH",
+        "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.2-LCH",
+        "short": "Location Characteristic",
+        "min": 0,
+        "max": "*",
+        "definition": "Location Characteristic",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LCH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.3-LCC",
+        "path": "MFN_M05.5-MF_LOCATION.5-MF_LOC_DEPT.3-LCC",
+        "short": "Location Charge Code",
+        "min": 0,
+        "max": "*",
+        "definition": "Location Charge Code",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/LCC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 MFN_M05 Segment Definition",
   "name": "MFN_M05",
   "type": "MFN_M05",
-  "date": "2024-07-24T19:13:18Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:59Z"
 }

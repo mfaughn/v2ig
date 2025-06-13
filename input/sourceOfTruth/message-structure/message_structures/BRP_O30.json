@@ -23,414 +23,367 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "BRP_O30.1-MSH",
-          "path": "BRP_O30.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.2-MSA",
-          "path": "BRP_O30.2-MSA",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSA"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.3-ARV",
-          "path": "BRP_O30.3-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.4-ERR",
-          "path": "BRP_O30.4-ERR",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ERR"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.5-SFT",
-          "path": "BRP_O30.5-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.6-UAC",
-          "path": "BRP_O30.6-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.7-NTE",
-          "path": "BRP_O30.7-NTE",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/NTE"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "BRP_O30.8-RESPONSE",
-          "path": "BRP_O30.8-RESPONSE",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "BRP_O30.8-RESPONSE.1-PATIENT",
-              "path": "BRP_O30.8-RESPONSE.1-PATIENT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "BRP_O30.8-RESPONSE.1-PATIENT.1-PID",
-                  "path": "BRP_O30.8-RESPONSE.1-PATIENT.1-PID",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PID"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BRP_O30.8-RESPONSE.1-PATIENT.2-PRT",
-                  "path": "BRP_O30.8-RESPONSE.1-PATIENT.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BRP_O30.8-RESPONSE.1-PATIENT.3-ARV",
-                  "path": "BRP_O30.8-RESPONSE.1-PATIENT.3-ARV",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "B"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER",
-                  "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "BackboneElement"
-                    }
-                  ]
-                },
-                [
-                  [
-                    {
-                      "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.1-ORC",
-                      "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.1-ORC",
-                      "min": 0,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/ORC"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.2-PRT",
-                      "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.2-PRT",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING",
-                      "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "BackboneElement"
-                        }
-                      ]
-                    },
-                    [
-                      [
-                        {
-                          "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.1-TQ1",
-                          "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.1-TQ1",
-                          "min": 0,
-                          "max": "1",
-                          "definition": "1",
-                          "short": "1",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ1"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.2-TQ2",
-                          "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.2-TQ2",
-                          "min": 1,
-                          "max": "*",
-                          "definition": "*",
-                          "short": "*",
-                          "type": [
-                            {
-                              "code": "http://hl7.org/v2/StructureDefinition/TQ2"
-                            }
-                          ],
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                              "valueCode": "A"
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  ],
-                  [
-                    {
-                      "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.4-BPO",
-                      "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.4-BPO",
-                      "min": 1,
-                      "max": "1",
-                      "definition": "1",
-                      "short": "1",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/BPO"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ],
-                  [
-                    {
-                      "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.5-BPX",
-                      "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.5-BPX",
-                      "min": 1,
-                      "max": "*",
-                      "definition": "*",
-                      "short": "*",
-                      "type": [
-                        {
-                          "code": "http://hl7.org/v2/StructureDefinition/BPX"
-                        }
-                      ],
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                          "valueCode": "A"
-                        }
-                      ]
-                    }
-                  ]
-                ]
-              ]
-            ]
-          ]
+      {
+        "id": "BRP_O30.1-MSH",
+        "path": "BRP_O30.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "BRP_O30.2-MSA",
+        "path": "BRP_O30.2-MSA",
+        "short": "Message Acknowledgment",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Acknowledgment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.3-ARV",
+        "path": "BRP_O30.3-ARV",
+        "short": "Access Restriction",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restriction",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.4-ERR",
+        "path": "BRP_O30.4-ERR",
+        "short": "Error",
+        "min": 0,
+        "max": "*",
+        "definition": "Error",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ERR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.5-SFT",
+        "path": "BRP_O30.5-SFT",
+        "short": "Software",
+        "min": 0,
+        "max": "*",
+        "definition": "Software",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.6-UAC",
+        "path": "BRP_O30.6-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.7-NTE",
+        "path": "BRP_O30.7-NTE",
+        "short": "Notes and Comments (for Response Header)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Response Header)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE",
+        "path": "BRP_O30.8-RESPONSE",
+        "short": "RESPONSE",
+        "min": 0,
+        "max": "1",
+        "definition": "RESPONSE",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT",
+        "short": "PATIENT",
+        "min": 0,
+        "max": "1",
+        "definition": "PATIENT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.1-PID",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.1-PID",
+        "short": "Patient Identification",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.2-PRT",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.3-ARV",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.3-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER",
+        "short": "ORDER",
+        "min": 0,
+        "max": "*",
+        "definition": "ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.1-ORC",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.1-ORC",
+        "short": "Common Order",
+        "min": 1,
+        "max": "1",
+        "definition": "Common Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ORC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.2-PRT",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING",
+        "short": "TIMING",
+        "min": 0,
+        "max": "*",
+        "definition": "TIMING",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.1-TQ1",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.1-TQ1",
+        "short": "Timing/Quantity",
+        "min": 1,
+        "max": "1",
+        "definition": "Timing/Quantity",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.2-TQ2",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.3-TIMING.2-TQ2",
+        "short": "Timing/Quantity Order Sequence",
+        "min": 0,
+        "max": "*",
+        "definition": "Timing/Quantity Order Sequence",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/TQ2"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.4-BPO",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.4-BPO",
+        "short": "Blood Product Order",
+        "min": 0,
+        "max": "1",
+        "definition": "Blood Product Order",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/BPO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.5-BPX",
+        "path": "BRP_O30.8-RESPONSE.1-PATIENT.4-ORDER.5-BPX",
+        "short": "Blood Product dispense status",
+        "min": 0,
+        "max": "*",
+        "definition": "Blood Product dispense status",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/BPX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 BRP_O30 Segment Definition",
   "name": "BRP_O30",
   "type": "BRP_O30",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:57Z"
 }

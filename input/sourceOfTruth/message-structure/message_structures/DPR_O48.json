@@ -23,633 +23,558 @@
         "min": 0,
         "max": "*"
       },
-      [
-        {
-          "id": "DPR_O48.1-MSH",
-          "path": "DPR_O48.1-MSH",
-          "min": 0,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/MSH"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "DPR_O48.2-ARV",
-          "path": "DPR_O48.2-ARV",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/ARV"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "DPR_O48.3-SFT",
-          "path": "DPR_O48.3-SFT",
-          "min": 1,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/SFT"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "DPR_O48.4-UAC",
-          "path": "DPR_O48.4-UAC",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "http://hl7.org/v2/StructureDefinition/UAC"
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-              "valueCode": "A"
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "id": "DPR_O48.5-DONOR",
-          "path": "DPR_O48.5-DONOR",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "DPR_O48.5-DONOR.1-PID",
-              "path": "DPR_O48.5-DONOR.1-PID",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PID"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.2-PD1",
-              "path": "DPR_O48.5-DONOR.2-PD1",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PD1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.3-PRT",
-              "path": "DPR_O48.5-DONOR.3-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS",
-              "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.1-OBX",
-                  "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.1-OBX",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.2-PRT",
-                  "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.5-NTE",
-              "path": "DPR_O48.5-DONOR.5-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.6-AL1",
-              "path": "DPR_O48.5-DONOR.6-AL1",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/AL1"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.7-ARV",
-              "path": "DPR_O48.5-DONOR.7-ARV",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/ARV"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "B"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION",
-              "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.1-PV1",
-                  "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.1-PV1",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PV1"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.2-PRT",
-                  "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.3-NTE",
-                  "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.3-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      {
+        "id": "DPR_O48.1-MSH",
+        "path": "DPR_O48.1-MSH",
+        "short": "Message Header",
+        "min": 1,
+        "max": "1",
+        "definition": "Message Header",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/MSH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "DPR_O48.6-DONATION_ORDER",
-          "path": "DPR_O48.6-DONATION_ORDER",
-          "min": 0,
-          "max": "*",
-          "definition": "*",
-          "short": "*",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "DPR_O48.6-DONATION_ORDER.1-OBR",
-              "path": "DPR_O48.6-DONATION_ORDER.1-OBR",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/OBR"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.6-DONATION_ORDER.2-PRT",
-              "path": "DPR_O48.6-DONATION_ORDER.2-PRT",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.6-DONATION_ORDER.3-NTE",
-              "path": "DPR_O48.6-DONATION_ORDER.3-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ]
+      },
+      {
+        "id": "DPR_O48.2-ARV",
+        "path": "DPR_O48.2-ARV",
+        "short": "Access Restrictions",
+        "min": 0,
+        "max": "*",
+        "definition": "Access Restrictions",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ],
-      [
-        {
-          "id": "DPR_O48.7-DONATION",
-          "path": "DPR_O48.7-DONATION",
-          "min": 1,
-          "max": "1",
-          "definition": "1",
-          "short": "1",
-          "type": [
-            {
-              "code": "BackboneElement"
-            }
-          ]
-        },
-        [
-          [
-            {
-              "id": "DPR_O48.7-DONATION.1-DON",
-              "path": "DPR_O48.7-DONATION.1-DON",
-              "min": 0,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/DON"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS",
-              "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.1-OBX",
-                  "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.1-OBX",
-                  "min": 0,
-                  "max": "1",
-                  "definition": "1",
-                  "short": "1",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/OBX"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.2-PRT",
-                  "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.2-PRT",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/PRT"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            {
-              "id": "DPR_O48.7-DONATION.3-NTE",
-              "path": "DPR_O48.7-DONATION.3-NTE",
-              "min": 1,
-              "max": "*",
-              "definition": "*",
-              "short": "*",
-              "type": [
-                {
-                  "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                }
-              ],
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                  "valueCode": "A"
-                }
-              ]
-            }
-          ],
-          [
-            {
-              "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT",
-              "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT",
-              "min": 1,
-              "max": "1",
-              "definition": "1",
-              "short": "1",
-              "type": [
-                {
-                  "code": "BackboneElement"
-                }
-              ]
-            },
-            [
-              [
-                {
-                  "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT.1-BUI",
-                  "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT.1-BUI",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/BUI"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ],
-              [
-                {
-                  "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT.2-NTE",
-                  "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT.2-NTE",
-                  "min": 1,
-                  "max": "*",
-                  "definition": "*",
-                  "short": "*",
-                  "type": [
-                    {
-                      "code": "http://hl7.org/v2/StructureDefinition/NTE"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
-                      "valueCode": "A"
-                    }
-                  ]
-                }
-              ]
-            ]
-          ]
+      },
+      {
+        "id": "DPR_O48.3-SFT",
+        "path": "DPR_O48.3-SFT",
+        "short": "Software Segment",
+        "min": 0,
+        "max": "*",
+        "definition": "Software Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/SFT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
         ]
-      ]
+      },
+      {
+        "id": "DPR_O48.4-UAC",
+        "path": "DPR_O48.4-UAC",
+        "short": "User Authentication Credential",
+        "min": 0,
+        "max": "1",
+        "definition": "User Authentication Credential",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/UAC"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR",
+        "path": "DPR_O48.5-DONOR",
+        "short": "DONOR",
+        "min": 0,
+        "max": "1",
+        "definition": "DONOR",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.1-PID",
+        "path": "DPR_O48.5-DONOR.1-PID",
+        "short": "Patient Identification Segment",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Identification Segment",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PID"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.2-PD1",
+        "path": "DPR_O48.5-DONOR.2-PD1",
+        "short": "Additional Demographics",
+        "min": 0,
+        "max": "1",
+        "definition": "Additional Demographics",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PD1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.3-PRT",
+        "path": "DPR_O48.5-DONOR.3-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS",
+        "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS",
+        "short": "DONOR_OBSERVATIONS",
+        "min": 0,
+        "max": "*",
+        "definition": "DONOR_OBSERVATIONS",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.1-OBX",
+        "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.1-OBX",
+        "short": "Donor Observations",
+        "min": 1,
+        "max": "1",
+        "definition": "Donor Observations",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.2-PRT",
+        "path": "DPR_O48.5-DONOR.4-DONOR_OBSERVATIONS.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.5-NTE",
+        "path": "DPR_O48.5-DONOR.5-NTE",
+        "short": "Notes and Comments (for Donor)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Donor)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.6-AL1",
+        "path": "DPR_O48.5-DONOR.6-AL1",
+        "short": "Allergy Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Allergy Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/AL1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.7-ARV",
+        "path": "DPR_O48.5-DONOR.7-ARV",
+        "short": "For backwards compatibility only as of V2.9.",
+        "min": 0,
+        "max": "*",
+        "definition": "For backwards compatibility only as of V2.9.",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/ARV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "B"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION",
+        "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION",
+        "short": "DONOR_REGISTRATION",
+        "min": 0,
+        "max": "1",
+        "definition": "DONOR_REGISTRATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.1-PV1",
+        "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.1-PV1",
+        "short": "Patient Visit (Donor Registration)",
+        "min": 1,
+        "max": "1",
+        "definition": "Patient Visit (Donor Registration)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PV1"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.2-PRT",
+        "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.3-NTE",
+        "path": "DPR_O48.5-DONOR.8-DONOR_REGISTRATION.3-NTE",
+        "short": "Notes and Comments (for Donor Registration)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Donor Registration)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.6-DONATION_ORDER",
+        "path": "DPR_O48.6-DONATION_ORDER",
+        "short": "DONATION_ORDER",
+        "min": 1,
+        "max": "*",
+        "definition": "DONATION_ORDER",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.6-DONATION_ORDER.1-OBR",
+        "path": "DPR_O48.6-DONATION_ORDER.1-OBR",
+        "short": "Observation",
+        "min": 1,
+        "max": "1",
+        "definition": "Observation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.6-DONATION_ORDER.2-PRT",
+        "path": "DPR_O48.6-DONATION_ORDER.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.6-DONATION_ORDER.3-NTE",
+        "path": "DPR_O48.6-DONATION_ORDER.3-NTE",
+        "short": "Notes and Comments",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION",
+        "path": "DPR_O48.7-DONATION",
+        "short": "DONATION",
+        "min": 0,
+        "max": "1",
+        "definition": "DONATION",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.1-DON",
+        "path": "DPR_O48.7-DONATION.1-DON",
+        "short": "Donation",
+        "min": 1,
+        "max": "1",
+        "definition": "Donation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/DON"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS",
+        "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS",
+        "short": "DONATION_OBSERVATIONS",
+        "min": 0,
+        "max": "*",
+        "definition": "DONATION_OBSERVATIONS",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.1-OBX",
+        "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.1-OBX",
+        "short": "Donation Observation (Adverse Reactions, Associations, etc.)",
+        "min": 1,
+        "max": "1",
+        "definition": "Donation Observation (Adverse Reactions, Associations, etc.)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/OBX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.2-PRT",
+        "path": "DPR_O48.7-DONATION.2-DONATION_OBSERVATIONS.2-PRT",
+        "short": "Participation",
+        "min": 0,
+        "max": "*",
+        "definition": "Participation",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/PRT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.3-NTE",
+        "path": "DPR_O48.7-DONATION.3-NTE",
+        "short": "Notes and Comments (for Donation)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Donation)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT",
+        "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT",
+        "short": "BLOOD_UNIT",
+        "min": 0,
+        "max": "1",
+        "definition": "BLOOD_UNIT",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT.1-BUI",
+        "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT.1-BUI",
+        "short": "Blood Unit Information",
+        "min": 0,
+        "max": "*",
+        "definition": "Blood Unit Information",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/BUI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      },
+      {
+        "id": "DPR_O48.7-DONATION.4-BLOOD_UNIT.2-NTE",
+        "path": "DPR_O48.7-DONATION.4-BLOOD_UNIT.2-NTE",
+        "short": "Notes and Comments (for Blood Unit)",
+        "min": 0,
+        "max": "*",
+        "definition": "Notes and Comments (for Blood Unit)",
+        "type": [
+          {
+            "code": "http://hl7.org/v2/StructureDefinition/NTE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/v2-segment-status",
+            "valueCode": "A"
+          }
+        ]
+      }
     ]
   },
   "title": "HL7 v2 DPR_O48 Segment Definition",
   "name": "DPR_O48",
   "type": "DPR_O48",
-  "date": "2024-07-24T19:13:17Z"
+  "fhirVersion": "5.0.0",
+  "date": "2025-06-13T21:28:58Z"
 }
