@@ -759,5 +759,6 @@
   "title": "HL7 v2 PR1 Segment Definition",
   "name": "PR1",
   "type": "PR1",
-  "date": "2025-06-05T23:00:31Z"
+  "date": "2025-06-11T22:36:50Z",
+  "fhirVersion": "5.0.0"
 }

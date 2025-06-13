@@ -359,5 +359,6 @@
   "title": "HL7 v2 RXC Segment Definition",
   "name": "RXC",
   "type": "RXC",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:49Z",
+  "fhirVersion": "5.0.0"
 }

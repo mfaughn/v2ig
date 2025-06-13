@@ -254,5 +254,6 @@
   "title": "HL7 v2 OM3 Segment Definition",
   "name": "OM3",
   "type": "OM3",
-  "date": "2025-06-05T23:00:32Z"
+  "date": "2025-06-11T22:36:51Z",
+  "fhirVersion": "5.0.0"
 }

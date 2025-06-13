@@ -337,5 +337,6 @@
   "title": "HL7 v2 PKG Segment Definition",
   "name": "PKG",
   "type": "PKG",
-  "date": "2025-06-05T23:00:35Z"
+  "date": "2025-06-11T22:36:55Z",
+  "fhirVersion": "5.0.0"
 }

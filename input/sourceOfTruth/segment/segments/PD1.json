@@ -686,5 +686,6 @@
   "title": "HL7 v2 PD1 Segment Definition",
   "name": "PD1",
   "type": "PD1",
-  "date": "2025-06-05T23:00:29Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

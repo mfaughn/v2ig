@@ -135,5 +135,6 @@
   "title": "HL7 v2 QPD Segment Definition",
   "name": "QPD",
   "type": "QPD",
-  "date": "2025-06-05T23:00:31Z"
+  "date": "2025-06-11T22:36:49Z",
+  "fhirVersion": "5.0.0"
 }

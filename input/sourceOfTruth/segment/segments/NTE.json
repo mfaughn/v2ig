@@ -280,5 +280,6 @@
   "title": "HL7 v2 NTE Segment Definition",
   "name": "NTE",
   "type": "NTE",
-  "date": "2025-06-05T23:00:28Z"
+  "date": "2025-06-11T22:36:47Z",
+  "fhirVersion": "5.0.0"
 }

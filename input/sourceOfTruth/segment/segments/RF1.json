@@ -856,5 +856,6 @@
   "title": "HL7 v2 RF1 Segment Definition",
   "name": "RF1",
   "type": "RF1",
-  "date": "2025-06-05T23:00:33Z"
+  "date": "2025-06-11T22:36:52Z",
+  "fhirVersion": "5.0.0"
 }

@@ -1577,5 +1577,6 @@
   "title": "HL7 v2 PV2 Segment Definition",
   "name": "PV2",
   "type": "PV2",
-  "date": "2025-06-05T23:00:29Z"
+  "date": "2025-06-11T22:36:47Z",
+  "fhirVersion": "5.0.0"
 }

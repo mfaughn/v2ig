@@ -334,5 +334,6 @@
   "title": "HL7 v2 RQD Segment Definition",
   "name": "RQD",
   "type": "RQD",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

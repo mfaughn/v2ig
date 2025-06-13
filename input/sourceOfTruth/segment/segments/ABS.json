@@ -455,5 +455,6 @@
   "title": "HL7 v2 ABS Segment Definition",
   "name": "ABS",
   "type": "ABS",
-  "date": "2025-06-05T23:00:32Z"
+  "date": "2025-06-11T22:36:50Z",
+  "fhirVersion": "5.0.0"
 }

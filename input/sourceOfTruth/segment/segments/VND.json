@@ -333,5 +333,6 @@
   "title": "HL7 v2 VND Segment Definition",
   "name": "VND",
   "type": "VND",
-  "date": "2025-06-05T23:00:35Z"
+  "date": "2025-06-11T22:36:55Z",
+  "fhirVersion": "5.0.0"
 }

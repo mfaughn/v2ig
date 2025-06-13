@@ -257,5 +257,6 @@
   "title": "HL7 v2 MFE Segment Definition",
   "name": "MFE",
   "type": "MFE",
-  "date": "2025-06-05T23:00:32Z"
+  "date": "2025-06-11T22:36:51Z",
+  "fhirVersion": "5.0.0"
 }

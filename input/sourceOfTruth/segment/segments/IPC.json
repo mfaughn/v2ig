@@ -330,5 +330,6 @@
   "title": "HL7 v2 IPC Segment Definition",
   "name": "IPC",
   "type": "IPC",
-  "date": "2025-06-05T23:00:30Z"
+  "date": "2025-06-11T22:36:48Z",
+  "fhirVersion": "5.0.0"
 }

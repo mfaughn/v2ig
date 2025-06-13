@@ -170,5 +170,6 @@
   "title": "HL7 v2 GP1 Segment Definition",
   "name": "GP1",
   "type": "GP1",
-  "date": "2025-06-05T23:00:32Z"
+  "date": "2025-06-11T22:36:50Z",
+  "fhirVersion": "5.0.0"
 }

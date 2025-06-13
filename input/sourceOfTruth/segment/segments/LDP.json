@@ -408,5 +408,6 @@
   "title": "HL7 v2 LDP Segment Definition",
   "name": "LDP",
   "type": "LDP",
-  "date": "2025-06-05T23:00:33Z"
+  "date": "2025-06-11T22:36:52Z",
+  "fhirVersion": "5.0.0"
 }
