@@ -9,3 +9,5 @@ While the _exact_ details are still being worked out, the current plan for build
 The [input/sourceOfTruth](input/sourceOfTruth) directory contains FHIR structure definitions that define the v2+ data structures.  These include data types, segment definitions, message structures, messages, events, and acknowledgement choreographies.  At least initially, the text associated with these definitional elements will be maintained as AsciiDoc which will be programmatically inserted into the StructureDefinitions.
 
 Discussion about the v2+ IG are welcomed.  Please feel free to use the Discussions feature of this GitHub repository.
+
+A page indicating which editors have primary responsibility for the v2+ domains may be found [here](editor_instructions/editor_assignments.md).
