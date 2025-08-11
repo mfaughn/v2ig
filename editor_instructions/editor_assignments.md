@@ -38,4 +38,4 @@ Chapter 15:
 
 Chapter 16:
 
-Chapter 17:
+Chapter 17: Craig Newman (as of 8/11/2025)
