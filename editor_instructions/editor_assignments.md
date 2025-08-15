@@ -8,7 +8,7 @@ Chapter 2A:
 
 Chapter 2C:
 
-Chapter 3:
+Chapter 3: Riki Merrick
 
 Chapter 4: Hans Buitendijk
 
