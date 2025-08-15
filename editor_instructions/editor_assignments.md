@@ -10,9 +10,9 @@ Chapter 2C:
 
 Chapter 3:
 
-Chapter 4:
+Chapter 4: Hans Buitendijk
 
-Chapter 4A:
+Chapter 4A: Hans Buitendijk
 
 Chapter 5:
 
