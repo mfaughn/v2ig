@@ -3,34 +3,22 @@
 == Introduction
 [v291_section="17.3"]
 
-This Materials Management chapter defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility. There are two basic types of messages defined in this chapter: _inventory item master file updates, and supply item sterilization messages_.
+This Materials Management domain defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility. There are two basic types of messages defined: _inventory item master file updates, and supply item sterilization messages_.
 
-The inventory item master file segments published in this chapter are based on master file add and update messages between applications such as _materials management, scheduling, and sterilization applications._
+The inventory item master file segments are based on master file add and update messages between applications such as _materials management, scheduling, and sterilization applications._
 
-The sterilization and decontamination messages published in this chapter are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer or washer.
+The sterilization and decontamination messages are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer or washer.
 
-This chapter describes various roles under which applications might operate. The roles discussed in this chapter illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
+This domain describes various roles under which applications might operate. The roles discussed here illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
 
-This chapter defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this chapter were constructed using the HL7 Encoding Rules.
+This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this chapter were constructed using the HL7 Encoding Rules.
 
 == General Use Cases / Background
 
 === Inventory Item Master Updates
 [v291_section="17.3.1"]
 
-The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. These inventory item master segments are used with trigger event M15 – Inventory Item Master File Message , and M16 – Inventory Item Master File Message – Enhanced. The message structures of these events are published in Chapter 8 - Master Files.
-
-==== Item Master Catalog
-[v291_section="17.3.1.0"]
-
-The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a domain such as Inventory, Scheduling, Pharmacy, and Sterilization.
-
-==== Inventory Locations
-[v291_section="17.3.1.1"]
-
-Inventory locations contain a list of items that are stocked at the location, or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
-
-The following are the primary attributes of a supply item:
+The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. The following are the primary attributes of a supply item:
 
 Unique identification code
 
@@ -44,6 +32,18 @@ Supply Item Type
 
 • This attribute describes a type or class of supply items. This would typically be a supply type such as office supplies, OR supplies, or laboratory supplies.
 
+The inventory item master segments are used with trigger event M15 – Inventory Item Master File Message , and M16 – Inventory Item Master File Message – Enhanced. The message structures of these events are published in Chapter 8 - Master Files.
+
+==== Item Master Catalog
+[v291_section="17.3.1.0"]
+
+The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a domain such as Inventory, Scheduling, Pharmacy, and Sterilization.
+
+==== Inventory Locations
+[v291_section="17.3.1.1"]
+
+Inventory locations contain a list of items that are stocked at the location, or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
+
 === Sterilization and Decontamination
 [v291_section="17.3.2"]
 
@@ -51,15 +51,15 @@ Sterilization and decontamination messages in this chapter are exchanged between
 
 _Sterilization_ is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide gas.
 
-_Decontamination_ is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. \{29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.
+_Decontamination_ is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. {29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.
 
-Steam sterilizers have defined cycles that achieve sterilization by attaining certain temperatures for specific lengths of time. These cycles are validated using AAMI (Association for Advancement of Medical Instrumentation) standards.
+Steam sterilizers have defined cycles that achieve sterilization by attaining certain temperatures for specific lengths of time. These cycles are validated using Association for Advancement of Medical Instrumentation (AAMI) standards.
 
-Ethylene Oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer's research to achieve sterilization at specific temperatures and exposure times to the sterilant.
+Ethylene oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer's research to achieve sterilization at specific temperatures and exposure times to the sterilant.
 
 Sterilization and decontamination cycles are defined as a sequence of steps or phases that are designed to achieve sterilization or decontamination.
 
-Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for Ethylene Oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.
+Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for ethylene oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.
 
 The following tables contain examples of typical cycles for sterilizers and washers.
 
@@ -67,8 +67,8 @@ The following tables contain examples of typical cycles for sterilizers and wash
 [width="100%",cols="16%,18%,13%,15%,38%",options="header",]
 |===
 |Cycles |Sterilize Temperature |Sterilize Time |Dry Time |Recommended Load
-|Express |270°F (132°C) |4.0 Min |3.0 MIN. |Single wrapped instrument tray with a single instrument. Non-porous good, only.
-|Flash |270°F (132°C) |3.0 MIN |1.0 MIN |Unwrapped instrument tray with a single instrument
+|Express |270°F (132°C) |4.0 min |3.0 min |Single wrapped instrument tray with a single instrument. Non-porous good, only.
+|Flash |270°F (132°C) |3.0 min |1.0 min |Unwrapped instrument tray with a single instrument
 |===
 
 .Prevacuum Testing Cycles for Steam Sterilizers
@@ -76,8 +76,8 @@ The following tables contain examples of typical cycles for sterilizers and wash
 |===
 |Prevacuum Testing Cycles |Sterilizer Temperature |Sterilize Time |Dry Time |Recommended Load
 |Leak Test |270°F (132°C) |N/A |N/A |N/A
-|Dart Test |270°F (132°C) |3½ MIN. |1.0 MIN |Bowie-Dick Test or DART
-|Dart Warmup |270°F (132°C) |3.0 MIN. |1.0 MIN. |N/A
+|Dart Test |270°F (132°C) |3.5 min |1.0 min |Bowie-Dick Test or DART
+|Dart Warmup |270°F (132°C) |3.0 min |1.0 min |N/A
 |===
 
 === Application roles
@@ -92,9 +92,9 @@ In this specification, the definition of application roles is not intended to de
 === Trigger Events
 [v291_section="17.4"]
 
-This chapter defines trigger events used to communicate supply item information between applications.
+This domain defines trigger events used to communicate supply item information between applications.
 
-The inventory item master file notification trigger events are defined in Chapter 8, Master Files. The sterilization and decontamination related trigger events in this chapter are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
+The inventory item master file notification trigger events are defined in Chapter 8, Master Files. The sterilization and decontamination related trigger events are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
 
 === Statuses
 [v291_section="17.4.1"]
@@ -103,7 +103,7 @@ The status of a supply item describes the state of the supply item in the item m
 
 The status of a load describes the state of a load during a sterilization cycle. Typical statuses of a load may include the following: Pending, Active, Complete, and Canceled.
 
-=== Organization of This Chapter: Trigger Events and Message Definitions
+=== Trigger Events and Message Definitions
 [v291_section="17.4.3"]
 
 This specification contains four functional groupings of trigger events and message definitions. The trigger events within each of the placer, filler, and query functional groupings share the same or similar message definitions.
@@ -130,18 +130,16 @@ The enhanced inventory item master message communicates additions and updates of
 
 The general supply inventory location sends a transaction to multiple inventory locations with this trigger event, communicating adds and changes to item master catalog and inventory supply items.
 
-The ILT segment formerly published in v2.5 Chapter 8, Master Files, will now be published in this chapter because of its use in the Materials Management domain.
-
 == Technical Specs
 
 == Placer Application Requests and Trigger Events
 [v291_section="17.6"]
 
-Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the *SLR, STI, SDR,* or *SMD* message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the *SLS, STS, SDS,* or *SMS* message types, to either grant or deny the requests from the placer application.
+Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the *SLR*, *STI*, *SDR,* or *SMD* message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the *SLS*, *STS*, *SDS,* or *SMS* message types, to either grant or deny the requests from the placer application.
 
-When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined in this chapter. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use).
+When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined here. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use).
 
-After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this chapter, an application accept from the filler means that the request was processed and accepted by the filler.
+After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this domain, an application accept from the filler means that the request was processed and accepted by the filler.
 
 An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the filler system is down, or there was an internal error).
 
