@@ -3,11 +3,11 @@
 == Introduction
 [v291_section="12.2"]
 
-The Patient Carefootnote:[While not an ideal term, the word “patient” is used here to represent the entire spectrum of individuals who receive healthcare in a variety of settings including, but not limited to, acute care, clinic care, long-term care, residential care, home health care, office practices, school-based care and community settings.] Work Group has designed the following messages to support the communication of problem-oriented records, including clinical problems, goals, and pathway information between computer systems. The purpose of this chapter is to describe healthcare messages that need to be communicated between clinical applications for a given individual. These message transactions can be sent in either batch or online mode. As described in Chapter 2, multiple communication transactions may be grouped and sent between applications using a file transfer media or direct networked connection.
+This Patient Care domain defines messages to support the communication of problem-oriented records, including clinical problems, goals, and pathway information between clinical applications for a given individual. These message transactions can be sent in either batch or online mode. As described in Chapter 2, multiple communication transactions may be grouped and sent between applications using a file transfer media or direct networked connection.
 
-This chapter defines the transactions that occur at the seventh OSI level, that is, abstract messages. The examples of messages included in this chapter were constructed using the HL7 Encoding Rules.
+This domain defines the transactions that occur at the seventh OSI level, that is, abstract messages. The examples of messages included in this chapter were constructed using the HL7 Encoding Rules.
 
-This chapter describes a Clinical Relationship segment which enables the run-time expression of relationships between information elements both inside and, where identifiable, by the application, outside the message.
+While not an ideal term, the word “patient” is used in this domain to represent the entire spectrum of individuals who receive healthcare in a variety of settings including, but not limited to, acute care, clinic care, long-term care, residential care, home health care, office practices, school-based care and community settings.
 
 == General Use Cases / Background
 
@@ -32,7 +32,7 @@ Information from point of care, clinical practice management or ancillary system
 ==== Communicating clinical pathways and multidisciplinary plans of care
 [v291_section="12.2.2.4"]
 
-The pathway is communicated between Quality Assurance, Point of Care Systems, Research Databases, and Clinical Order Entry Systems. A point of care information system triggers a linkage between a problem and a set of ordered interventions initiated by the clinical order entry system.
+The pathway is communicated between quality assurance, point of care systems, research databases, and clinical order entry systems. A point of care information system triggers a linkage between a problem and a set of ordered interventions initiated by the clinical order entry system.
 
 === Trigger Events
 [v291_section="12.2.3"]
@@ -50,42 +50,42 @@ To reduce the number of repeating segments, action codes may be employed. Action
 
 In either event, for systems implementing Version 2.3 or higher, if a particular repeating segment can be updated by either of these two modes, the parties concerned determine by agreement on a site-specific basis whether an interface uses the *snapshot* mode or the *action code/unique identifier* mode.
 
-A description of valid action codes used in message segments originating in this chapter is given immediately below:
+A description of valid action codes used in message segments originating in this domain is given immediately below:
 
-{empty}a) *AD* (*ADD*) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem. If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)
+*AD* (*ADD*) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem. If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)
 
-{empty}b) *CO* (*CORRECT*) - The object attributes contained within the segment have been corrected. This is not updated information, but information originally sent and later found to be in error. The previous attributes should be replaced.
+*CO* (*CORRECT*) - The object attributes contained within the segment have been corrected. This is not updated information, but information originally sent and later found to be in error. The previous attributes should be replaced.
 
-{empty}c) *UP* (*UPDATE*) - The object attributes contained within the segment are an update of previously sent information. The previous information was correct for the period of time in which it was sent.
+*UP* (*UPDATE*) - The object attributes contained within the segment are an update of previously sent information. The previous information was correct for the period of time in which it was sent.
 
-{empty}d) *DE* (*DELETE*) - This object should be deleted from the set of objects which are linked to the previous object in the message hierarchy. An example might be a role deleted from the set of roles contained by the Goal object. Delete presumes the original linkage was in error.
+*DE* (*DELETE*) - This object should be deleted from the set of objects which are linked to the previous object in the message hierarchy. An example might be a role deleted from the set of roles contained by the Goal object. Delete presumes the original linkage was in error.
 
-{empty}e) *LI (LINK)* - This action code denotes that the object contained in the segment should be linked in a dependency relationship to the previous object in the hierarchy. It is used to denote relationships and should not contain additional information other than those attributes necessary for specific identification.
+*LI (LINK)* - This action code denotes that the object contained in the segment should be linked in a dependency relationship to the previous object in the hierarchy. It is used to denote relationships and should not contain additional information other than those attributes necessary for specific identification.
 
-{empty}f) *UN* (*UNLINK*) - This is a request that the object be removed from the set of linked objects. An example might be the dissolution of a relationship between a problem and a goal. Unlink presumes the original linkage was correct, but due to life cycle changes the active linkage is no longer appropriate.
+*UN* (*UNLINK*) - This is a request that the object be removed from the set of linked objects. An example might be the dissolution of a relationship between a problem and a goal. Unlink presumes the original linkage was correct, but due to life cycle changes the active linkage is no longer appropriate.
 
-{empty}g) *UC* (*UNCHANGED*) - This code signifies that the segment is being included for the purposes of hierarchical set identification. It does not contain any changed or additional data. Its purpose is to allow the identification of the collection set to which subsequent segments belong in the message structure. An example might be the modification of role information requiring the previous goal segment to be appropriately identified.
+*UC* (*UNCHANGED*) - This code signifies that the segment is being included for the purposes of hierarchical set identification. It does not contain any changed or additional data. Its purpose is to allow the identification of the collection set to which subsequent segments belong in the message structure. An example might be the modification of role information requiring the previous goal segment to be appropriately identified.
 
 ==== Examples of action code usage
 [v291_section="12.2.4.1"]
 
-A problem list and associated goals are generated in a Point of Care system. This transaction is broadcast through an interface engine that determines which systems in the organization require the event information and then forwards the messages appropriately. Each segment included in the original message contains the Action Code for *ADD* to signify an original message instance.
+A problem list and associated goals are generated in a point of care system. This transaction is broadcast through an interface engine that determines which systems in the organization require the event information and then forwards the messages appropriately. Each segment included in the original message contains the Action Code for *ADD* to signify an original message instance.
 
-{empty}h) Upon subsequent review, it is determined that a role segment designates the wrong person as the transcribing clerk for a problem. After the information is changed in the originating system, a new message is sent to provide synchronization. The message includes the original PRB segment with the PRB-1 Action Code for *UNCHANGED* (to identify the problem for which the role is being changed). This code signifies that the segment is included for the purposes of hierarchical linkage identification and that none of the information contained in it has been changed. The accompanying role segment sent would include the role *transcriber* in ROL-3 Role, the correct person in ROL-4 Role Person, and the value for *CORRECT* in ROL-2 Action Code.
+Upon subsequent review, it is determined that a role segment designates the wrong person as the transcribing clerk for a problem. After the information is changed in the originating system, a new message is sent to provide synchronization. The message includes the original PRB segment with the PRB-1 Action Code for *UNCHANGED* (to identify the problem for which the role is being changed). This code signifies that the segment is included for the purposes of hierarchical linkage identification and that none of the information contained in it has been changed. The accompanying role segment sent would include the role *transcriber* in ROL-3 Role, the correct person in ROL-4 Role Person, and the value for *CORRECT* in ROL-2 Action Code.
 
-{empty}i) It is later decided that an additional goal must be added to a specific problem, and that an already existing goal that is currently supporting another problem should also be linked with this specific problem. The message would be constructed with the problem (PRB) segment for identification (the value for PRB-1 Action Code is *UNCHANGED*). The goal segment (GOL) for the additional goal would include GOL-1 Action Code for *ADD*. The goals already included with the problem list that need to be linked to this problem would have to be included on additional GOL segments with the GOL-1 Action Code for *LINK*. +
-+
+It is later decided that an additional goal must be added to a specific problem, and that an already existing goal that is currently supporting another problem should also be linked with this specific problem. The message would be constructed with the problem (PRB) segment for identification (the value for PRB-1 Action Code is *UNCHANGED*). The goal segment (GOL) for the additional goal would include GOL-1 Action Code for *ADD*. The goals already included with the problem list that need to be linked to this problem would have to be included on additional GOL segments with the GOL-1 Action Code for *LINK*.
+
 Once data regarding a Diagnosis/Problem or a Goal have been communicated to other systems, there are occasions on which the data may have to be amended.
 
-{empty}j) New diagnoses/problems must be added to an individual's list. The Problem message is sent with the appropriate Problem Instance ID. All PRB segment(s) included in the message that contain the value for *ADD* in PRB-1 Action Code are processed as additions to the individual's problem list.
+New diagnoses/problems must be added to an individual's list. The Problem message is sent with the appropriate Problem Instance ID. All PRB segment(s) included in the message that contain the value for *ADD* in PRB-1 Action Code are processed as additions to the individual's problem list.
 
-{empty}k) New goals are added to the individual's record. The Goal message is sent with the GOL segments indicating the value for *ADD* as GOL-1 Action Code in each segment occurrence.
+New goals are added to the individual's record. The Goal message is sent with the GOL segments indicating the value for *ADD* as GOL-1 Action Code in each segment occurrence.
 
-{empty}l) Changes are made to the attributes of a goal. Examples include a change in the expected resolution date, a change in the life cycle status to reflect its successful conclusion, etc. The Goal message is sent with the appropriate GOL-4 Goal Instance ID. The GOL segments of the Goal message would include the value for *UPDATE* in GOL-1 Action Code.
+Changes are made to the attributes of a goal. Examples include a change in the expected resolution date, a change in the life cycle status to reflect its successful conclusion, etc. The Goal message is sent with the appropriate GOL-4 Goal Instance ID. The GOL segments of the Goal message would include the value for *UPDATE* in GOL-1 Action Code.
 
-{empty}m) A new goal is attached to a problem already in the repository (e.g., the goal of "education on diabetes" for an individual diagnosed with "insulin-dependent diabetes"). A problem message would be sent with the PRB segment including the PRB-4 Problem Instance ID for the diabetes problem, and with the value *UNCHANGED* in PRB-1 Action Code. The attached GOL segment for the education goal would accompany the message and contain the value *ADD* in its GOL-1 Action Code field.
+A new goal is attached to a problem already in the repository (e.g., the goal of "education on diabetes" for an individual diagnosed with "insulin-dependent diabetes"). A problem message would be sent with the PRB segment including the PRB-4 Problem Instance ID for the diabetes problem, and with the value *UNCHANGED* in PRB-1 Action Code. The attached GOL segment for the education goal would accompany the message and contain the value *ADD* in its GOL-1 Action Code field.
 
-{empty}n) A new diagnosis/problem is attached to a goal (e.g., a Goal is to "discharge an individual with intact skin." While the initial problem was "skin breakdown related to immobility," a new problem is "potential for skin breakdown related to draining wounds"). A Goal message would be sent with the GOL segment, including the GOL-4 Goal Instance ID for the discharge goal, and contain the value *UNCHANGED* in GOL-1 Action Code. The attached PRB segment identifying the new problem, "potential for skin breakdown related to draining wounds," would accompany this message and contain the value for *ADD* in PRB-1 Action Code.
+A new diagnosis/problem is attached to a goal (e.g., a Goal is to "discharge an individual with intact skin." While the initial problem was "skin breakdown related to immobility," a new problem is "potential for skin breakdown related to draining wounds"). A Goal message would be sent with the GOL segment, including the GOL-4 Goal Instance ID for the discharge goal, and contain the value *UNCHANGED* in GOL-1 Action Code. The attached PRB segment identifying the new problem, "potential for skin breakdown related to draining wounds," would accompany this message and contain the value for *ADD* in PRB-1 Action Code.
 
 [NOTE]
 If there is a requirement to modify information contained on a segment and unlink that same problem/goal, two segments must be transmitted (one for the modification and one for the unlink request).
@@ -155,14 +155,11 @@ Order segments are sent with Problem and Goal segments in order to establish a l
 == Implementation Considerations
 [v291_section="12.6"]
 
-The Patient Care Technical Committee recognizes that this document contains a great deal of information for computer systems that are currently under development. The participating institutions/vendors will be responsible for defining the necessary tables that have been previously discussed. As these tables are defined and clarified, they will be included in this document for distribution.
-
 Applications can have differing orientations for representing problem and goal hierarchies. For example, parent:child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
 
-=== Outstanding Issues
-[v291_section="12.7"]
-
 In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
+
+Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This chapter does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
 
 == Technical Specs
 [v291_section="12.3"]
