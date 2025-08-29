@@ -1,41 +1,41 @@
 This is just a draft.  Do we want to make assignments based on the historical chapters or based on the rearranged domains?  For the sake of just getting something started, here are the chapters...
 
-Chapter 1:
+Chapter 1: Update Author: 
 
-Chapter 2:
+Chapter 2: Update Author: 
 
-Chapter 2A:
+Chapter 2A: Update Author: 
 
-Chapter 2C:
+Chapter 2C: Update Author: 
 
-Chapter 3: Riki Merrick
+Chapter 3: Update Author: Riki Merrick  Reviewer:
 
-Chapter 4: Hans Buitendijk
+Chapter 4: Update Author: Hans Buitendijk  Reviewer:
 
-Chapter 4A: Hans Buitendijk
+Chapter 4A: Update Author: Hans Buitendijk  Reviewer:
 
-Chapter 5:
+Chapter 5: Update Author: 
 
-Chapter 6:
+Chapter 6: Update Author: 
 
-Chapter 7:
+Chapter 7: Update Author: 
 
-Chapter 8:
+Chapter 8: Update Author: 
 
-Chapter 9:
+Chapter 9: Update Author: 
 
-Chapter 10:
+Chapter 10: Update Author: 
 
-Chapter 11:
+Chapter 11: Update Author: 
 
-Chapter 12: Craig Newman
+Chapter 12: Update Author: Craig Newman  Reviewer:
 
-Chapter 13: Ralf Herzog
+Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
-Chapter 14:
+Chapter 14: Update Author: 
 
-Chapter 15:
+Chapter 15: Update Author: 
 
-Chapter 16:
+Chapter 16: Update Author: 
 
-Chapter 17: Craig Newman (as of 8/11/2025)
+Chapter 17: Update Author: Craig Newman  Reviewer:
