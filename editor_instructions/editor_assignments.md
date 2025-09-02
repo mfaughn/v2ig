@@ -34,7 +34,7 @@ Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
 Chapter 14: Update Author: 
 
-Chapter 15: Update Author: 
+Chapter 15: Update Author: Craig Newman  Review:
 
 Chapter 16: Update Author: 
 
