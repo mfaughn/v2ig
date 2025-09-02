@@ -32,7 +32,7 @@ Chapter 12: Update Author: Craig Newman  Reviewer:
 
 Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
-Chapter 14: Update Author: 
+Chapter 14: Update Author: Craig Newman  Reviewer:
 
 Chapter 15: Update Author: Craig Newman  Review:
 
