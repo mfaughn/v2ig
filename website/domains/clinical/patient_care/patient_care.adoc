@@ -41,6 +41,15 @@ The trigger events originate goal, problem and pathway messages. Each trigger ev
 
 In order to accommodate these high-level events, the following patient care events are included in HL7 Table 0003 – Event Type. The added events are instantiated in MSH-9 Message Type and are used by the pathway, problem, and goal messages. MSH-9 Message Type contains the message type and trigger event for the message.
 
+== Implementation Considerations
+[v291_section="12.6"]
+
+Applications can have differing orientations for representing problem and goal hierarchies. For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
+
+In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
+
+Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This chapter does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
+
 === Use of Action Codes
 [v291_section="12.2.4"]
 
@@ -151,15 +160,6 @@ Orders referenced in Patient Care messages are used for linkage purposes only. I
 [v291_section="12.2.5.6"]
 
 Order segments are sent with Problem and Goal segments in order to establish a linkage between them, NOT to communicate new orders or changes to those orders. For purposes of these messages, an LI (Link) and a UL (Unlink) code have been added to HL7 Table 0119 - Order Control Codes.
-
-== Implementation Considerations
-[v291_section="12.6"]
-
-Applications can have differing orientations for representing problem and goal hierarchies. For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
-
-In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
-
-Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This chapter does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
 
 == Technical Specs
 [v291_section="12.3"]
