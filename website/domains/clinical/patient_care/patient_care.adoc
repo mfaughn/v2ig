@@ -155,7 +155,7 @@ Order segments are sent with Problem and Goal segments in order to establish a l
 == Implementation Considerations
 [v291_section="12.6"]
 
-Applications can have differing orientations for representing problem and goal hierarchies. For example, parent:child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
+Applications can have differing orientations for representing problem and goal hierarchies. For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
 
 In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
 
