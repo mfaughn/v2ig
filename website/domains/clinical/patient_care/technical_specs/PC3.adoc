@@ -7,13 +7,3 @@ The patient problem message is used to send problems from one application to ano
 
 [tabset]
 PC3
-
-
-
-
-
-
-
-
-This error segment indicates the fields that caused a transaction to be rejected.
-
