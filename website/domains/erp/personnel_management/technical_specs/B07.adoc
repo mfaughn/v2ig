@@ -3,20 +3,9 @@
 :v2_section_name: "PMU/ACK – Grant Certificate/Permission (Event B07)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-An event B07 indicates that a health professional is granted a certificate/permission for a special purpose.
-
-A permission is issued by an organization and documented in form of a certificate. An update of a role results in an issuing of a new certificate.
+An event B07 indicates that a health professional is granted a certificate/permission for a special purpose. A permission is issued by an organization and documented in form of a certificate. An update of a role results in an issuing of a new certificate.
 
 The EVN segment is used to indicate the effective or planned date.
 
 [tabset]
 B07
-
-
-
-There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
-
-
-
-
-
