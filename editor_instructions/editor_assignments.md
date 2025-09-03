@@ -20,7 +20,7 @@ Chapter 6: Update Author:
 
 Chapter 7: Update Author: 
 
-Chapter 8: Update Author: 
+Chapter 8: Update Author: Craig Newman
 
 Chapter 9: Update Author: 
 
