@@ -33,3 +33,5 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 * How are we formatting references to semgents, fields, components and subcomponents
 
 * Are we removing text referencing "future plans" for various content (such as in Chapter 9)
+
+* Where does the Chapter 1 stuff go?
