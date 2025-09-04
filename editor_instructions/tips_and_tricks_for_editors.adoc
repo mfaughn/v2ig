@@ -16,6 +16,6 @@ image::images/extraneous_choreography_text.png[]
 
 * Example messages are contained within an [er7] block. Michael will apply special formatting to the examples, but the GitHub preview does not. Therefore they look ugly (segments run together, seemingly random bits are superscripted, etc). Just leave them as they are.
 
-image::images/example_messages.png[]
+image::images/example_messages2.png[]
 
 
