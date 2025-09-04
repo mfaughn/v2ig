@@ -6,6 +6,8 @@ FIXME
 
 == Administration Subdomains
 
+xref:consent/consent.adoc[Consent]
+
 xref:referral/referral.adoc[Referral]
 
 xref:registration/registration.adoc[Registration]
