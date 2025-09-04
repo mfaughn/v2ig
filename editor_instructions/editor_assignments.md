@@ -26,7 +26,7 @@ Chapter 9: Update Author: Craig Newman  Reviewer:
 
 Chapter 10: Update Author: 
 
-Chapter 11: Update Author: 
+Chapter 11: Update Author: Craig Newman  Reviewer:
 
 Chapter 12: Update Author: Craig Newman  Reviewer:
 
