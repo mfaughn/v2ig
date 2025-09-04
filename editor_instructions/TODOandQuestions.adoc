@@ -4,11 +4,32 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 == TODO
 
-* todo item
+*	In Chapter 15, for QBP/RSP, the usage of "Conformance Statement" in the opening bit of the technical_specs file is probably not correct. We should review
 
+* Figure out a strategy for dealing with Glossary terms
+** Combine them? Leave them in Context? Make a decision based on the specificity of the term?
 
-  
+*Confirm the addition of the Consent content from Chapter 9 to the Administrative Domain
+
+*	Review remaining TBD sections
+**	7.17+ - Units lists (tables)
+**	9.4.1 - Consent 9 (see topic above)
+**	5.10+ (5.9 in v2.9.1) – Superseded stuff
+**	5.11 (5.10 in v2.9.1) – outstanding issues (move to Jira if still an issue??)
+
+* Decide on where to put Item Inventory and Master File content
+
+* Review the "rules" in Chapter 12 relative to general guidance in Chapter 2
 
 == Questions
 
 * Should the links to tech_specs really not include the event(s) identifiers??
+
+* Are we updating dates in example messages?
+
+*	Should Patient Care (Chapter 12) be updated from "patient care" to "problem-oriented records" to be more specific?
+**	Something similar seems to have been done for Medical Records (Chapter 9)/Document Management
+
+* How are we formatting references to semgents, fields, components and subcomponents
+
+* Are we removing text referencing "future plans" for various content (such as in Chapter 9)
