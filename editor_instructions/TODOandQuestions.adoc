@@ -21,6 +21,8 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * Review the "rules" in Chapter 12 relative to general guidance in Chapter 2
 
+* Review content of the Communicating Collaborative Care of a Patient section of the Referrals domain for wording about using segments in ways they weren't intended
+
 == Questions
 
 * Should the links to tech_specs really not include the event(s) identifiers??
