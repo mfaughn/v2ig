@@ -7,11 +7,13 @@
 == Introduction
 [v291_section="10.2"]
 
-This domain defines abstract messages for the purpose of communicating various events related to the scheduling of appointments for services or for the use of resources. There are three basic types of messages defined in this transaction set: _request transactions_ and their responses, _query transactions_ and their responses, and _unsolicited transactions_ and their responses. Request transactions communicate requests for the scheduling of appointments for services or for the use of resources. These transactions occur between _placer_ (requesting) applications and _filler_ (processing) applications. The query and unsolicited transaction sets provide for the exchange of scheduling information between systems. The exchange of this information is achieved either actively or passively. The active gathering of scheduling information is performed by issuing query transactions to a filler application from a querying application. The passive gathering of this information is performed by accepting unsolicited transactions issued by a filler application.
+This domain defines abstract messages for the purpose of communicating various events related to the scheduling of appointments for services or for the use of resources. There are two basic types of messages defined in this transaction set: _request transactions_ and their responses, and _unsolicited transactions_ and their responses. Request transactions communicate requests for the scheduling of appointments for services or for the use of resources. These transactions occur between _placer_ (requesting) applications and _filler_ (processing) applications. The unsolicited transaction set provides for the exchange of scheduling information between systems with a placer application accepting unsolicited transactions issued by a filler application.
 
-This chapter describes various roles under which applications might operate. The roles discussed in this chapter illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
+This domain describes various roles under which applications might operate. The roles discussed in this domain illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
 
-This chapter defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this chapter were constructed using the HL7 Encoding Rules.
+Query transactions are the messages and trigger events used between querying applications and filler applications. Previous versions of this standard included support within the sheduling domain for query transactions. Support for scheduling specific queries has been withdrawan in favor of a standardized query model as described in Chapter 5 Query. Implementers are referred to that domain for additional dietails.
+
+This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this domain were constructed using the HL7 Encoding Rules.
 
 == General Use Cases / Background
 
@@ -20,7 +22,7 @@ This chapter defines the transactions at the seventh level, that is, the abstrac
 
 The goal of this specification is to facilitate the communication of scheduling requests and information between applications. Such communication involves three main subjects: _schedules_, _appointments_, and _services and resources_. Schedules control the occurrence of certain services and the use of particular resources. They consist of a set of open, booked and blocked slots for one particular service or resource. _Open slots_ are periods of time on a schedule during which a service may occur, and/or a resource is available for use. _Booked slots_ are periods of time on a schedule that have already been reserved. _Appointments_ occupy sets of one or more booked slots on a schedule. They describe the nature of the service and/or the use of the resource, the person or persons responsible for the appointment's booking, and other information relevant to the booking and execution of an appointment. _Blocked slots_ on a schedule are periods of time during which a service or resource is unavailable for reasons other than booked appointments (for example, a piece of equipment might be unavailable for maintenance reasons).
 
-In the context of this chapter, services and resources are those things that are controlled by schedules. _Services_ are real-world events, such as clinic appointments, the performance of which is controlled by a schedule. Often, these kinds of activities relate to the care of a patient. In other words, appointments for services often schedule a service for one or more patients. _Resources_ are tangible items whose use is controlled by a schedule. These "items" are often people, locations, or things low in supply but high in demand.
+In the context of this domain, services and resources are those things that are controlled by schedules. _Services_ are real-world events, such as clinic appointments, the performance of which is controlled by a schedule. Often, these kinds of activities relate to the care of a patient. In other words, appointments for services often schedule a service for one or more patients. _Resources_ are tangible items whose use is controlled by a schedule. These "items" are often people, locations, or things low in supply but high in demand.
 
 ==== Schedules
 [v291_section="10.2.1.1"]
@@ -29,23 +31,13 @@ A _schedule_ controls the dates and times available for the performance of a ser
 
 The real-world, non-automated analog of the schedule described above is a standard appointment book. These books are generally organized with rows of time slots, during which a service or resource is available. The following figure illustrates an excerpt from such an appointment book.
 
-.Figure 10-1. An example excerpt from an appointment book
-[width="100%",cols="17%,3%,21%,5%,16%,3%,16%,3%,16%",]
-|===
-| | |*Date:* | |May 17, 1994 | | | |
-| |*Room A* | |*Room B* | |*Room C* | |*Room D* |
-|*8:00 am* | |Pat: A Everyman | | | | | |
-|*:15   * | |Dr.: Specialize | | | |Closed for | |
-|*:30   * | |Physical | |Pat: A Everyman | |Remodeling | |
-|*:45   * | |Exam | |Dr.: Stretcher | | | |
-|*9:00 am* | |Pat: E Everywoman | |Allergy | | | |Pat: A Everyman
-|*:15   * | |Dr.: Specialize | |Scratch Test | | | |Dr.: Stretcher
-|*:30   * | |Follow-up | | | | | |
-|===
+Figure 1. An example excerpt from an appointment book
+
+image::Scheduling Figure 1.png[Appointment Book Excerpt]
 
 Each cell in the figure above represents a slot on a schedule. Different shading patterns represent booked and blocked slots. Information identifying the appointments scheduled in booked slots is written in the appointment book. Similarly, explanations are written into the book when resources are blocked. Those cells with no shading and comments represent open slots.
 
-As in the figure above, appointment books commonly contain more than one column. This format allows the scheduling of more than one resource or activity within the same book. This chapter defines a schedule as an entity controlling the availability of only one resource or service for a given period of time. Given that definition, each column in the above excerpt from the appointment book represents a separate schedule for a separate resource.
+As in the figure above, appointment books commonly contain more than one column. This format allows the scheduling of more than one resource or activity within the same book. This domain defines a schedule as an entity controlling the availability of only one resource or service for a given period of time. Given that definition, each column in the above excerpt from the appointment book represents a separate schedule for a separate resource.
 
 ==== Services and Resources
 [v291_section="10.2.1.2"]
@@ -58,31 +50,31 @@ Resources are tangible things that must be reserved prior to their use. Examples
 
 The following are the primary attributes that describe a resource:
 
-• A unique identification code +
+* A unique identification code +
 +
 The unique identification code for a service or resource describes a specific instance of that service or resource. For tangible resources, this may be a serial number, a location, an employee number, or another unique designation. For services, the identification of a slot on the schedule is usually sufficient for unique identification.
 
-• A code describing the type of class of service or resource +
+* A code describing the type of class of service or resource +
 +
 This code describes a type or class of service, or resource groups like services or resources together. For services, this is typically a universal service ID similar to the field used in the OBR segment defined in the Order Entry chapter (Chapter 4). This Universal Service ID uniquely identifies clinical services performed in a healthcare provider organization. +
 +
 For tangible resources, this code may be a model number, a staff classification (such as physician, nurse, physical therapist, etc.), or a kind of room. This kind of information can be used to request a resource from a pool, where a specific instance of the resource scheduled is unknown and unimportant (as long as it is of the specified type or class).
 
-• A name or text description of the resource +
+* A name or text description of the resource +
 +
 The name or text description of the resource provides a human-readable identification of the service or resource.
 
-• When a resource is associated with an appointment, or is requested for an appointment, the following attributes describe the relationship (or requested relationship):
+* When a resource is associated with an appointment, or is requested for an appointment, the following attributes describe the relationship (or requested relationship):
 
-• The start date and time the service or resource is required for the appointment. +
+** The start date and time the service or resource is required for the appointment. +
 +
 The start date and time the service or resource is required for the appointment describes the point at which the service or resource should be made available to the activity. In this specification, this is represented as a positive or negative time offset from the start date and time of the appointment.
 
-• The duration for which the service or resource is needed for the appointment. +
+** The duration for which the service or resource is needed for the appointment. +
 +
 The duration for which the service or resource is required for the appointment describes how long the service or resource is needed to complete the appointment. By adding the duration to the start date and time, the end date and time can be calculated for the required resource or service within the activity.
 
-• Other attributes further describe services and resources. These attributes are communicated, as necessary, in transactions between applications.
+* Other attributes further describe services and resources. These attributes are communicated, as necessary, in transactions between applications.
 
 ==== Appointments
 [v291_section="10.2.1.3"]
@@ -93,31 +85,31 @@ In its simplest form, an appointment consists of one service or resource reserve
 
 The primary attributes for the appointment which describes a scheduled activity include the following:
 
-• A unique placer appointment identification code +
+* A unique placer appointment identification code +
 +
 The placer appointment identification code uniquely describes an instance of an appointment. It is used in communications between placer and filler applications to identify a particular appointment (or a request for an appointment booking) on the placer application. Except in special circumstances, the code is assigned by the placer application upon making an initial scheduling request. This concept is similar in practice to the placer order number found in Chapter 4, Order Entry.
 
-• A unique filler appointment identification code +
+* A unique filler appointment identification code +
 +
 The filler appointment identification code uniquely describes an instance of an appointment. It is the filler application's counter-part to the placer appointment identification code. It is used in communications between placer and filler applications to identify a particular appointment (or request for an appointment booking) on the filler application. Except under special circumstances, it is assigned by the filler application when an appointment (or a request for an appointment booking) is created by the filler application. This concept is similar in practice to the filler order number found in Chapter 4, Order Entry.
 
-• An appointment start date and time +
+* An appointment start date and time +
 +
 The appointment start date and time describe the beginning of the appointment. In request transactions, the appointment start date and time are expressed as a preference or list of preferences. The filler application uses this expression of preference to book the appointment. Once an appointment has been booked, the start date and time are expressed in the actual scheduled start date and time.
 
-• An appointment duration +
+* An appointment duration +
 +
 The appointment duration describes how long the appointment will last, and consequently, the end date and time of the appointment.
 
 Supporting information about service and resource activities includes the following:
 
-• Reason codes to describe the reason that the service is occurring or the resource is being used;
+* Reason codes to describe the reason that the service is occurring or the resource is being used;
 
-• Patient information to describe for whom the appointment is taking place, whether the appointment or scheduled activity is for, or related to, a patient;
+* Patient information to describe for whom the appointment is taking place, whether the appointment or scheduled activity is for, or related to, a patient;
 
-• Requestor information to describe the person responsible for initiating and executing the appointment;
+* Requestor information to describe the person responsible for initiating and executing the appointment;
 
-• Location information to describe where the appointment is scheduled to occur.
+* Location information to describe where the appointment is scheduled to occur.
 
 Other attributes further describe appointments. These attributes are communicated as necessary in transactions between applications.
 
@@ -131,7 +123,7 @@ Either the placing application or the filling application can specify child appo
 === Application Roles
 [v291_section="10.2.2"]
 
-In this specification, there are four roles that an application can assume: a filler application role, a placer application role, a querying application role, and an auxiliary application role. These application roles define the interaction that an application will have with other applications in the messaging environment. In many environments, any one application may take on more than one application role.
+In this specification, there are three roles that an application can assume: a filler application role, a placer application role, and an auxiliary application role. These application roles define the interaction that an application will have with other applications in the messaging environment. In many environments, any one application may take on more than one application role.
 
 In this specification, the definition of application roles is not intended to define or limit the functionality of specific products developed by vendors of such applications. Instead, this information is provided to help define the model used to develop this specification, and to provide an unambiguous way for applications to communicate with each other.
 
@@ -142,7 +134,7 @@ The filler application role in the scheduling model is very similar to the fille
 
 Other applications can, on the other hand, make requests to modify the schedules owned by the filler application. The filler application either fulfills or denies requests to book slots, or to otherwise modify the schedules for the services and resources over which it exerts control.
 
-Finally, the filler application also provides information about scheduled activities to other applications. The reasons that an application may be interested in receiving such information are varied. An application may have previously requested bookings or modifications on the schedule, or may simply be interested in the information for its own reporting or statistical purposes. There are two methods whereby filler applications disseminate this information: by issuing unsolicited information messages, or by responding to queries.
+Finally, the filler application also provides information about scheduled activities to other applications. The reasons that an application may be interested in receiving such information are varied. An application may have previously requested bookings or modifications on the schedule, or may simply be interested in the information for its own reporting or statistical purposes. The filler applications disseminates this information by issuing unsolicited information messages.
 
 The analog of a filler application in a non-automated environment might be an appointment book and the person in charge of maintaining that book. The appointment book describes when the resources are available and when they are booked. This appointment book is the only official record of this information, and controls the availability of the resources to any user. The person in charge of this appointment book takes requests to book the resources, and decides whether to accept or reject the requests based on the information recorded in the appointment book. Anyone needing information from the appointment book either consults the book directly, or contacts the person in charge of the book.
 
@@ -153,19 +145,10 @@ The placer application role in the scheduling model is also very similar to its 
 
 The analog of a placer application in a non-automated environment might be any person needing a particular resource or appointment for a service. A person needing to book an appointment would contact the person in charge of the appointment book for that resource or service, and request a reservation. Often, there is negotiation between the person requesting the reservation or appointment and the person who maintains the appointment book. The requesting person will indicate requirements and preferences, and the person controlling the appointment book will indicate whether the request can be fulfilled as specified.
 
-==== The Querying Application Role
-[v291_section="10.2.2.3"]
-
-A querying application neither exerts control over, nor requests changes to a schedule. Rather than accepting unsolicited information about schedules, as does an auxiliary application, the querying application actively solicits this information using a query mechanism. It will, in general, be driven by a person wanting information about schedules, and may be part of an application filling the placer application role as defined in this chapter. The information that the querying application receives is valid only at the exact time that the query results are generated by the filler application. Changes made to the schedule after the query results have been returned are not communicated to the querying application until it issues another query transaction.
-
-The analog of a querying application in a non-automated environment might be any person needing information about a specific portion of a schedule. For example, a facilities manager may need to know whether a specific room has been scheduled during a specific period of time. This person might ask the person controlling the appointment book about the specific room and period of time in question.
-
-Often, a placer application will also act as a querying application. The ability to send queries and receive lists of open slots is built in to some implementations of placer applications. These placer applications use this information to select open slots for subsequent booking requests. The current specification does not imply that placer applications should or should not also be able to fulfill the role of a querying application. Instead, the model defines these roles separately. Applications that support this functionality may take advantage of this application role in the model. Applications that do not support the querying application role are not limited in their support of the placer application role.
-
 ==== The Auxiliary Application Role
 [v291_section="10.2.2.4"]
 
-Like querying applications, an auxiliary application neither exerts control over, nor requests changes to a schedule. It, too, is only concerned with gathering information about a particular schedule. It is considered an "interested third-party," in that it is interested in any changes to a particular schedule, but has no interest in changing it or controlling it in any way. An auxiliary application passively collects information by receiving unsolicited updates from a filler application.
+An auxiliary application neither exerts control over, nor requests changes to a schedule. It, too, is only concerned with gathering information about a particular schedule. It is considered an "interested third-party," in that it is interested in any changes to a particular schedule, but has no interest in changing it or controlling it in any way. An auxiliary application passively collects information by receiving unsolicited updates from a filler application.
 
 The analog of an auxiliary application in a non-automated environment might be any person receiving reports containing schedule information. For example, a facilities manager may need to know what rooms are booked for activity during specific periods of time. This person might ask the person controlling the appointment book for a periodic listing of activity, which may be something as simple as copies of pages from the appointment book.
 
@@ -174,15 +157,13 @@ Often, a placer application will also act as an auxiliary application. A placer 
 ==== Application Roles in a Messaging Environment
 [v291_section="10.2.2.5"]
 
-In a messaging environment, these four application roles communicate using specific types of messages and trigger events. The following figure illustrates the relationships between these application roles in a messaging environment:
+In a messaging environment, these application roles communicate using specific types of messages and trigger events. The following figure illustrates the relationships between these application roles in a messaging environment:
 
-.Application role messaging relationships
-image::application_role_scheduling_relationships.png[application_role_scheduling_relationships]
-// Figure 10-2
+Figure 2. Application role messaging relationships
+
+image::Scheduling Figure 2.png[Appointment Book Excerpt]
 
 The relationship between placer and filler applications revolves around request messages and response messages to those requests. Placer applications trigger request messages to filler applications, which respond to those requests with request response messages.
-
-The relationship between querying and filler applications focuses on query messages and responses. Querying applications trigger query messages to filler applications, which respond with query response messages.
 
 The relationship between auxiliary and filler applications centers on unsolicited informational messages. Filler applications trigger unsolicited informational messages to auxiliary applications whenever changes in the schedule occur. Auxiliary applications do not respond with any messages other than general acknowledgments. Filler applications triggering unsolicited informational messages do not expect further information from auxiliary applications.
 
