@@ -3,17 +3,7 @@
 :v2_section_name: "BAR/ACK - Update Diagnosis/Procedure (Event P12)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The P12 event is used to communicate diagnosis and/or procedures in update mode. The newly created fields in DG1 and PR1, i.e., identifiers and action codes, must be populated to indicate which change should be applied. When other patient or visit related fields change, use the A08 (update patient information) event.
+The P12 event is used to communicate diagnosis and/or procedures in update mode. Fields in DG1 and PR1, i.e., identifiers and action codes, must be populated to indicate which change should be applied. When other patient or visit related fields change, use the A08 (update patient information) event.
 
 [tabset]
 P12
-
-
-
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
