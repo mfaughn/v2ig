@@ -9,8 +9,7 @@ Use case for adding the INx and GT1 segments inside the FT1 repetition:
 
 If the insurance and/or the guarantor information is specific to a certain financial transaction of a patient and differs from the patient's regular insurance and/or guarantor, you may use the INx and GT1 segments related to the FT1 segment. If being used, the information supersedes the information on the patient level.
 
-[example]
-Before being employed by a company, a pre-employment physical is required. The cost of the examinations is paid by the company, and not by the person's private health insurance. One of the physicians examining the person is an eye doctor. For efficiency reasons, the person made an appointment for these examinations on the same day as he already had an appointment with his eye doctor in the same hospital. The costs for this eye doctor appointment are being paid by the patient's private health insurance. Both financial transactions for the same patient/person could be sent in the same message. To bill the examination for the future-employer to that organization, you need to use the GT1 segment that is related to the FT1.
+Example: Before being employed by a company, a pre-employment physical is required. The cost of the examinations is paid by the company, and not by the person's private health insurance. One of the physicians examining the person is an eye doctor. For efficiency reasons, the person made an appointment for these examinations on the same day as he already had an appointment with his eye doctor in the same hospital. The costs for this eye doctor appointment are being paid by the patient's private health insurance. Both financial transactions for the same patient/person could be sent in the same message. To bill the examination for the future-employer to that organization, you need to use the GT1 segment that is related to the FT1.
 
 [tabset]
 P11
@@ -22,10 +21,3 @@ The ROL segment is optionally included after the PD1 to transmit information for
 
 [NOTE]
 There is an information overlap between the FT1, DG1 and PR1 segments. If diagnosis information is sent in an FT1 segment, it should be consistent with the information contained in any DG1 segments present within its hierarchy. Since the procedure code field within the FT1 does not repeat, if procedure information is sent on an FT1 it is recommended that the single occurrence of the code in FT1 equates to the primary procedure (_PR1-14 - Procedure Priority_ code value 1).
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
