@@ -7,13 +7,3 @@ Generally, the elimination of all billing/accounts receivable records will be an
 
 [tabset]
 P02
-
-
-
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
