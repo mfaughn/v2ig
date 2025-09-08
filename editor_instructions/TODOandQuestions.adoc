@@ -34,6 +34,8 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * Are we updating dates in example messages?
 
+* Chapter 6 recommends Z-segments for state-specific requirements. Can this be removed?
+
 * Can we convert footnotes to regular text?
 
 *	Should Patient Care (Chapter 12) be updated from "patient care" to "problem-oriented records" to be more specific?
