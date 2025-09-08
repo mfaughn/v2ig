@@ -7,13 +7,3 @@ The P10 event is used to communicate Ambulatory Payment Classification (APC) gro
 
 [tabset]
 P10
-
-
-
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
