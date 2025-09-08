@@ -7,13 +7,3 @@ The P05 event is sent when an existing account is being updated. From version 2.
 
 [tabset]
 P05
-
-
-
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
