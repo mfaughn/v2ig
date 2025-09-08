@@ -16,7 +16,7 @@ Chapter 4A: Update Author: Hans Buitendijk  Reviewer:
 
 Chapter 5: Update Author: 
 
-Chapter 6: Update Author: 
+Chapter 6: Update Author: Craig Newman  Reviewer:
 
 Chapter 7: Update Author: 
 
