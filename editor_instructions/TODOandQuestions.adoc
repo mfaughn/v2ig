@@ -23,6 +23,8 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * Review content of the Communicating Collaborative Care of a Patient section of the Referrals domain for wording about using segments in ways they weren't intended
 
+* Decide on section numbering (for example compare Scheduling with Referrals)
+
 == Questions
 
 * Should "domain" be restricted to just the high-level groups (administrative, clinical, erp, financial and technical) with "topic" or some other word used for the next level (registration, scheduling, materials management, immunization)? Or is everything OK to describe as a "domain"? "Transaction set" is also used a lot in a variety of chapters.
