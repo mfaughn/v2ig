@@ -35,6 +35,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * Several chapters have text similar to the following. Does this need to be in every chapter?
 ** This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this domain were constructed using the HL7 Encoding Rules.
+** This can be removed and only live in Chapter 1 (Introduction)
 
 * Should the links to tech_specs really not include the event(s) identifiers??
 
