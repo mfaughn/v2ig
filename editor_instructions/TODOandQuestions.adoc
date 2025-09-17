@@ -38,7 +38,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * Chapter 6 recommends Z-segments for state-specific requirements. Can this be removed?
 
-*The P03 and P11 message definitions in Chapter 6 contain footnotes and notes. How should these be rendered?
+* The P03 and P11 message definitions in Chapter 6 contain footnotes and notes. How should these be rendered?
 
 * Can we convert footnotes to regular text?
 
@@ -50,3 +50,5 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 * Are we removing text referencing "future plans" for various content (such as in Chapter 9)
 
 * Where does the Chapter 1 stuff go?
+
+* Do we really need chapter 5?
