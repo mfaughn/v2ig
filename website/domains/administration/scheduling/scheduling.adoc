@@ -7,22 +7,20 @@
 == Introduction
 [v291_section="10.2"]
 
-This domain defines abstract messages for the purpose of communicating various events related to the scheduling of appointments for services or for the use of resources. There are two basic types of messages defined in this transaction set: _request transactions_ and their responses, and _unsolicited transactions_ and their responses. Request transactions communicate requests for the scheduling of appointments for services or for the use of resources. These transactions occur between _placer_ (requesting) applications and _filler_ (processing) applications. The unsolicited transaction set provides for the exchange of scheduling information between systems with a placer application accepting unsolicited transactions issued by a filler application.
+This TOPIC defines abstract messages for the purpose of communicating various events related to the scheduling of appointments for services or for the use of resources. There are two basic types of messages defined in this transaction set: _request transactions_ and their responses, and _unsolicited transactions_ and their responses. Request transactions communicate requests for the scheduling of appointments for services or for the use of resources. These transactions occur between _placer_ (requesting) applications and _filler_ (processing) applications. The unsolicited transaction set provides for the exchange of scheduling information between systems with a placer application accepting unsolicited transactions issued by a filler application.
 
-This domain describes various roles under which applications might operate. The roles discussed in this domain illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
+This topic describes various roles under which applications might operate. The roles discussed in this topic illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
 
-Query transactions are the messages and trigger events used between querying applications and filler applications. Previous versions of this standard included support within the sheduling domain for query transactions. Support for scheduling specific queries has been withdrawan in favor of a standardized query model as described in Chapter 5 Query. Implementers are referred to that domain for additional dietails.
-
-This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this domain were constructed using the HL7 Encoding Rules.
+Query transactions are the messages and trigger events used between querying applications and filler applications. Previous versions of this standard included support within the sheduling topic for query transactions. Support for scheduling specific queries has been withdrawan in favor of a standardized query model as described in Chapter 5 Query. Implementers are referred to that topic for additional dietails.
 
 == General Use Cases / Background
 
 === Schedules, Appointments, Services, and Resources
 [v291_section="10.2.1"]
 
-The goal of this specification is to facilitate the communication of scheduling requests and information between applications. Such communication involves three main subjects: _schedules_, _appointments_, and _services and resources_. Schedules control the occurrence of certain services and the use of particular resources. They consist of a set of open, booked and blocked slots for one particular service or resource. _Open slots_ are periods of time on a schedule during which a service may occur, and/or a resource is available for use. _Booked slots_ are periods of time on a schedule that have already been reserved. _Appointments_ occupy sets of one or more booked slots on a schedule. They describe the nature of the service and/or the use of the resource, the person or persons responsible for the appointment's booking, and other information relevant to the booking and execution of an appointment. _Blocked slots_ on a schedule are periods of time during which a service or resource is unavailable for reasons other than booked appointments (for example, a piece of equipment might be unavailable for maintenance reasons).
+The goal of this topic is to facilitate the communication of scheduling requests and information between applications. Such communication involves three main subjects: _schedules_, _appointments_, and _services and resources_. Schedules control the occurrence of certain services and the use of particular resources. They consist of a set of open, booked and blocked slots for one particular service or resource. _Open slots_ are periods of time on a schedule during which a service may occur, and/or a resource is available for use. _Booked slots_ are periods of time on a schedule that have already been reserved. _Appointments_ occupy sets of one or more booked slots on a schedule. They describe the nature of the service and/or the use of the resource, the person or persons responsible for the appointment's booking, and other information relevant to the booking and execution of an appointment. _Blocked slots_ on a schedule are periods of time during which a service or resource is unavailable for reasons other than booked appointments (for example, a piece of equipment might be unavailable for maintenance reasons).
 
-In the context of this domain, services and resources are those things that are controlled by schedules. _Services_ are real-world events, such as clinic appointments, the performance of which is controlled by a schedule. Often, these kinds of activities relate to the care of a patient. In other words, appointments for services often schedule a service for one or more patients. _Resources_ are tangible items whose use is controlled by a schedule. These "items" are often people, locations, or things low in supply but high in demand.
+In the context of this topic, services and resources are those things that are controlled by schedules. _Services_ are real-world events, such as clinic appointments, the performance of which is controlled by a schedule. Often, these kinds of activities relate to the care of a patient. In other words, appointments for services often schedule a service for one or more patients. _Resources_ are tangible items whose use is controlled by a schedule. These "items" are often people, locations, or things low in supply but high in demand.
 
 ==== Schedules
 [v291_section="10.2.1.1"]
@@ -37,7 +35,7 @@ image::Scheduling Figure 1.png[Appointment Book Excerpt]
 
 Each cell in the figure above represents a slot on a schedule. Different shading patterns represent booked and blocked slots. Information identifying the appointments scheduled in booked slots is written in the appointment book. Similarly, explanations are written into the book when resources are blocked. Those cells with no shading and comments represent open slots.
 
-As in the figure above, appointment books commonly contain more than one column. This format allows the scheduling of more than one resource or activity within the same book. This domain defines a schedule as an entity controlling the availability of only one resource or service for a given period of time. Given that definition, each column in the above excerpt from the appointment book represents a separate schedule for a separate resource.
+As in the figure above, appointment books commonly contain more than one column. This format allows the scheduling of more than one resource or activity within the same book. This topic defines a schedule as an entity controlling the availability of only one resource or service for a given period of time. Given that definition, each column in the above excerpt from the appointment book represents a separate schedule for a separate resource.
 
 ==== Services and Resources
 [v291_section="10.2.1.2"]
@@ -123,7 +121,7 @@ Either the placing application or the filling application can specify child appo
 === Application Roles
 [v291_section="10.2.2"]
 
-In this specification, there are three roles that an application can assume: a filler application role, a placer application role, and an auxiliary application role. These application roles define the interaction that an application will have with other applications in the messaging environment. In many environments, any one application may take on more than one application role.
+In this topic, there are three roles that an application can assume: a filler application role, a placer application role, and an auxiliary application role. These application roles define the interaction that an application will have with other applications in the messaging environment. In many environments, any one application may take on more than one application role.
 
 In this specification, the definition of application roles is not intended to define or limit the functionality of specific products developed by vendors of such applications. Instead, this information is provided to help define the model used to develop this specification, and to provide an unambiguous way for applications to communicate with each other.
 
@@ -170,24 +168,24 @@ The relationship between auxiliary and filler applications centers on unsolicite
 === Trigger Events, Status, Reasons, and Types
 [v291_section="10.2.3"]
 
-This domain defines several trigger events used to communicate scheduling information between applications. In addition, it also defines, suggests, or allows for several statuses that scheduled activities may hold, several reasons a scheduled activity may occur, and several types of scheduled activities. The distinction between these four concepts is important for understanding the information in this domain.
+This topic defines several trigger events used to communicate scheduling information between applications. In addition, it also defines, suggests, or allows for several statuses that scheduled activities may hold, several reasons a scheduled activity may occur, and several types of scheduled activities. The distinction between these four concepts is important for understanding the information in this topic.
 
 ==== Trigger Events
 [v291_section="10.2.3.1"]
 
-The trigger events for this domain are defined below. Traditionally, trigger events define the transition of some entity from one state to another.footnote:[HL7 trigger events are not strictly limited to this definition; however, most trigger events do define state transitions.] Typical trigger events may be listed as follows: new, cancel, modify, discontinue, reschedule, and delete.
+The trigger events for this topic are defined below. Traditionally, trigger events define the transition of some entity from one state to another.footnote:[HL7 trigger events are not strictly limited to this definition; however, most trigger events do define state transitions.] Typical trigger events may be listed as follows: new, cancel, modify, discontinue, reschedule, and delete.
 
 ==== Status
 [v291_section="10.2.3.2"]
 
-The status of a scheduled activity describes where that activity is in its life cycle. A status differs from a trigger event in an important way: a status describes the current condition of an entity, whereas a trigger event is generated to "move" the entity from one state to another. All status fields in this domain are defined with respect to the application acting in the role of a filler, unless otherwise (and specifically) indicated. Therefore, a status in a scheduling interface transaction is only truly meaningful if the transaction was generated by the application assigning or maintaining that status.
+The status of a scheduled activity describes where that activity is in its life cycle. A status differs from a trigger event in an important way: a status describes the current condition of an entity, whereas a trigger event is generated to "move" the entity from one state to another. All status fields in this topic are defined with respect to the application acting in the role of a filler, unless otherwise (and specifically) indicated. Therefore, a status in a scheduling interface transaction is only truly meaningful if the transaction was generated by the application assigning or maintaining that status.
 
 Typical statuses for a schedule transaction might include the following: pending, wait-listed, confirmed, canceled, discontinued, deleted, started, completed, overbooked (booked for a resource along with another conflicting appointment), blocked, etc.
 
 ==== Reasons
 [v291_section="10.2.3.3"]
 
-This domain defines two kinds of reasons used with transactions. The first is an appointment reason that indicates why the appointment is being booked – and ultimately why the activity is going to occur. The second is an event reason that describes why a particular trigger event has been generated. Reasons tend to be static, whereas statuses tend to change. In contrast, trigger events describe an action to be performed.
+This topic defines two kinds of reasons used with transactions. The first is an appointment reason that indicates why the appointment is being booked – and ultimately why the activity is going to occur. The second is an event reason that describes why a particular trigger event has been generated. Reasons tend to be static, whereas statuses tend to change. In contrast, trigger events describe an action to be performed.
 
 Appointment reasons tend to be relatively static for the life of the scheduled activity. Typical examples of appointment reasons include the following: routine, walk-in, check-up, follow-up, emergency, etc.
 
@@ -201,12 +199,12 @@ Rather than describing why an appointment has been scheduled – as the appointm
 === Appointments, Orders, and Referrals
 [v291_section="10.2.4"]
 
-A schedule request or appointment should not be confused, in any way, with orders for services, or for patient referrals. The trigger events and messages defined in this domain are meant to operate within the realm of scheduling activities, and not to imply that any other trigger event or real-world event has or should occur. It should not be construed from this domain that any schedule request transaction can be used instead of an order transaction, in which a service or other activity must be specifically ordered. In such cases, a specific order transaction should occur (either electronically or otherwise). If subsequent scheduling transactions are then required to carry out the order, the trigger events and messages defined in this domain may be used.
+A schedule request or appointment should not be confused, in any way, with orders for services, or for patient referrals. The trigger events and messages defined in this topic are meant to operate within the realm of scheduling activities, and not to imply that any other trigger event or real-world event has or should occur. It should not be construed from this topic that any schedule request transaction can be used instead of an order transaction, in which a service or other activity must be specifically ordered. In such cases, a specific order transaction should occur (either electronically or otherwise). If subsequent scheduling transactions are then required to carry out the order, the trigger events and messages defined in this topic may be used.
 
 === Organization of Trigger Events and Message Definitions
 [v291_section="10.2.6"]
 
-This specification contains two functional groupings of trigger events and message definitions. The trigger events within each of the functional groupings share the same or similar message definitions. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for defining abstract messages."
+This topic contains two functional groupings of trigger events and message definitions. The trigger events within each of the functional groupings share the same or similar message definitions. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for defining abstract messages."
 
 The first functional grouping of trigger events and message definitions describes _placer request transactions_. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages. The second functional grouping describes trigger events and message definitions for _unsolicited transactions_ from applications acting in the filler application role. This grouping describes the unsolicited messages originating from an application fulfilling the filler role, and the response messages sent back by applications fulfilling the auxiliary role. 
 
@@ -214,7 +212,7 @@ The first functional grouping of trigger events and message definitions describe
 
 Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the SRM message, requesting that the filler application modify its schedule(s) with the given trigger event and information. The filler application responds to these requests, using the SRR message, to either grant or deny the requests from the placer application. All of the trigger events associated with placer request and filler response transactions use common message definitions of SRM_S01 and SRR_S01 respectively. There are no unsolicited messages initiated from a filler application defined in this set of trigger events. Those messages and trigger events are defined below.
 
-When initiating a request, the placer application will generate and send an SRM message containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined in this domain. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an ACK message (assuming that the enhanced acknowledgment mode is in use). After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in an SRR message (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode, or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this domain, an application accept from the filler means that the request was processed and accepted by the filler. An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not, be processed due to one or more reasons unrelated to its content (for example: it fails the basic application protocol validation, the filler system is down, or there was an internal error). When appropriate, an SRR message with an application accept acknowledgment will contain further information on the request that was processed.
+When initiating a request, the placer application will generate and send an SRM message containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined in this topic. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an ACK message (assuming that the enhanced acknowledgment mode is in use). After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in an SRR message (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode, or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this topic, an application accept from the filler means that the request was processed and accepted by the filler. An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not, be processed due to one or more reasons unrelated to its content (for example: it fails the basic application protocol validation, the filler system is down, or there was an internal error). When appropriate, an SRR message with an application accept acknowledgment will contain further information on the request that was processed.
 
 Note that in the abstract message definitions for both the SRM and SRR, the patient information segments (segments PID through DG1) are both optional as a group, and repeating as a group. The optionality allows for transactions that relate to a patient, and for those that do not. The ability to repeat the patient information allows for those transactions in which one activity must be scheduled for multiple patients (e.g., for family or group therapy).
 
@@ -226,7 +224,7 @@ Unsolicited transactions from filler applications are the messages and trigger e
 
 This set of trigger events is also used to notify applications fulfilling the placer application role of changes in the filler application's schedule(s), if the application is configured to accept these messages and trigger events as an auxiliary application would. As the discussion of application roles has indicated above, any one application can have more than one application role. If it is important that the application acting in the placer application role in your messaging environment be notified of unsolicited changes to a filler application's schedule(s), then it must also support the role of an auxiliary application.
 
-When initiating a notification transaction, the filler application will generate and send an SIU message containing all of the information necessary to communicate the desired information to the auxiliary application. All required segments and fields (both explicitly required and conditionally required) should be provided by the filler application, as defined in this domain. When the auxiliary application receives the transaction, it acknowledges with the appropriate accept acknowledgment using an ACK message (assuming that the enhanced acknowledgment mode is in use). After processing the notification at the application level, the auxiliary application acknowledges the transaction with the appropriate application acknowledgment in an ACK message (assuming that an application acknowledgment was requested under the enhanced acknowledgment mode, or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes (detailed in Chapter 2) in the context of this domain, an application accept from the auxiliary application means that the notification was processed and accepted. An application error from the auxiliary application means that the auxiliary application was unable to process the notification at the application level. An application reject from the auxiliary application means that the request was not, and could not, be processed due to one or more reasons unrelated to its content (for example: it fails the basic application protocol validation, the system is down, or there was an internal error).
+When initiating a notification transaction, the filler application will generate and send an SIU message containing all of the information necessary to communicate the desired information to the auxiliary application. All required segments and fields (both explicitly required and conditionally required) should be provided by the filler application, as defined in this topic. When the auxiliary application receives the transaction, it acknowledges with the appropriate accept acknowledgment using an ACK message (assuming that the enhanced acknowledgment mode is in use). After processing the notification at the application level, the auxiliary application acknowledges the transaction with the appropriate application acknowledgment in an ACK message (assuming that an application acknowledgment was requested under the enhanced acknowledgment mode, or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes (detailed in Chapter 2) in the context of this topic, an application accept from the auxiliary application means that the notification was processed and accepted. An application error from the auxiliary application means that the auxiliary application was unable to process the notification at the application level. An application reject from the auxiliary application means that the request was not, and could not, be processed due to one or more reasons unrelated to its content (for example: it fails the basic application protocol validation, the system is down, or there was an internal error).
 
 == Implementation Considerations
 [v291_section="10.8"]
@@ -234,21 +232,21 @@ When initiating a notification transaction, the filler application will generate
 === Update mode
 [v291_section="10.2.6.1"]
 
-This domain uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.10.4, "Protocol for interpreting repeating segments or segment groups in an update Message," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, Section 2.10.4.2, "Action code/unique identifier mode update definition."
+This topic uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.10.4, "Protocol for interpreting repeating segments or segment groups in an update Message," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, Section 2.10.4.2, "Action code/unique identifier mode update definition."
 
 === Logical Relationship of Resource and Service Segments
 [v291_section="10.8.1"]
 
-This domain implies that the relationship of the repeating resource and service specific segments has a logical "and" relationship. In other words, if more than one AIP segment is sent in a transaction, it is logical to assume that both specified personnel resources are required for the appointment. Currently, there is no way to specify an "or" relationship between the resource and service segments. It is possible to specify a resource type and achieve a similar (but not equivalent) effect.
+This topic implies that the relationship of the repeating resource and service specific segments has a logical "and" relationship. In other words, if more than one AIP segment is sent in a transaction, it is logical to assume that both specified personnel resources are required for the appointment. Currently, there is no way to specify an "or" relationship between the resource and service segments. It is possible to specify a resource type and achieve a similar (but not equivalent) effect.
 
 === Multiple Placer Applications
 [v291_section="10.8.2"]
 
-When implementing the transactions defined in this domain with multiple placer applications, one must consider the implications of a situation when more than one placer application asks to book, hold, lock, or otherwise reserve the same slot or set of slots on a particular schedule.
+When implementing the transactions defined in this topic with multiple placer applications, one must consider the implications of a situation when more than one placer application asks to book, hold, lock, or otherwise reserve the same slot or set of slots on a particular schedule.
 
-This domain makes no attempt to define attribute ownership (e.g., based on application roles). Ownership is the right to create or update attribute content. If two or more applications attempt simultaneously to update the same attribute(s), deadly update collisions may occur, causing data corruption, unless robust mechanisms for bidding and locking such attributes are in place between applications. This domain makes no attempt to address data ownership issues or to define attribute bidding and locking mechanisms.
+This topic makes no attempt to define attribute ownership (e.g., based on application roles). Ownership is the right to create or update attribute content. If two or more applications attempt simultaneously to update the same attribute(s), deadly update collisions may occur, causing data corruption, unless robust mechanisms for bidding and locking such attributes are in place between applications. This topic makes no attempt to address data ownership issues or to define attribute bidding and locking mechanisms.
 
-This domain assumes that the placer and filler applications have put such mechanisms into place, therefore resolving any contention or collision issues at the application level. Further, if such mechanisms have not been implemented by the applications, then this domain assumes that procedural solutions have been implemented by the healthcare provider organization to resolve contention and collision issues.
+This topic assumes that the placer and filler applications have put such mechanisms into place, therefore resolving any contention or collision issues at the application level. Further, if such mechanisms have not been implemented by the applications, then this topic assumes that procedural solutions have been implemented by the healthcare provider organization to resolve contention and collision issues.
 
 == Technical Specs
 
@@ -310,35 +308,35 @@ xref:technical_specs/S27.adoc[Message - S27 Broadcast Notification of Scheduled 
 === Request and Receive New Appointment - Event S01
 [v291_section="10.7.1"]
 
-The patient has been seen by his primary care physician, Dr. Patricia Primary, and requires treatment by a cardiologist. The PCP requests a new appointment with Dr. Pump at the North Office. The patient has requested that the appointment be scheduled for a time between January 2nd and January 10th, 2007, and between 8:00 AM and 5:00 PM. Dr. Pump's office responds to the request with an appointment at the North Office at 9:30 AM on January 6, 2007.
+The patient has been seen by his primary care physician, Dr. Patricia Primary, and requires treatment by a cardiologist. The PCP requests a new appointment with Dr. Pump at the North Office. The patient has requested that the appointment be scheduled for a time between January 2nd and January 10th, 2025, and between 8:00 AM and 5:00 PM. Dr. Pump's office responds to the request with an appointment at the North Office at 9:30 AM on January 6, 2025.
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|200701010800||SRM^S01^SRM_S01|090849PRIMARY|P|2.8|||AL|AL|||<cr>
-ARQ|19940047^SCH001|||||047^Referral||NORMAL|||199401020800^199401101700||||0045^Contact^Carrie^S^^^||||3372^Person^Entered||||<cr>
-PID||4875439|484848||Everyman^Adam^A^^| |19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M|||444-33-3333|||||||||||<cr>
-DG1|001|I9|786.5|CHEST PAINS|200701010730|W|||||||||||||<cr>
-DG1|002|I9|412|OLD MYOCARDIAL INFARCTION|200701010730|W|||||||||||||<cr>
-RGS|001|<cr>
-AIP|001||032^Pump^Patrick|002^CARDIOLOGIST|||||||NO|<cr>
-AIL|001|^NORTH OFFICE|002^CLINIC|||||||YES|<cr>
+MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|202501010800||SRM^S01^SRM_S01|090849PRIMARY|P|2.8|||AL|AL
+ARQ|19940047^SCH001|||||047^Referral||NORMAL|||202501020800^202501101700||||0045^Contact^Carrie^S||||3372^Person^Entered
+PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
+DG1|001||786.5^^I9|CHEST PAINS|200701010730|W
+DG1|002||412^I9|OLD MYOCARDIAL INFARCTION|200701010730|W
+RGS|001
+AIP|001||032^Pump^Patrick|002^CARDIOLOGIST|||||||NO
+AIL|001|^NORTH OFFICE|002^CLINIC|||||||YES
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|200701010802||ACK|021244SPOCARD|P|2.8||||||<cr>
-MSA|CA|090849JONES||||<cr>
+MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|202501010802||ACK|021244SPOCARD|P|2.8
+MSA|CA|090849JONES
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|200701010810||SRR^S01^SRR_S01|0934849SPOCARD|P|2.8|||||||<cr>
-MSA|AA|090849EVERYMAN||||<cr>
-SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C^^^|555-2010|||087^By^Entered^^^^|555-2011||||BOOKED<cr>
-TQ1||||||30^M|200701060930|200701061000||||||<cr>
-PID||4875439|484848||Everyman^Adam^A^^||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M|||444-22-3333|||||||||||<cr>
-RGS|001|<cr>
-AIP|001|032^Pump^Patrick|002^CARDIOLOGIST|||||||NO|BOOKED<cr>
-AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED<cr>
+MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|202501010810||SRR^S01^SRR_S01|0934849SPOCARD|P|2.8
+MSA|AA|090849EVERYMAN
+SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C|555-2010|||087^By^Entered|555-2011||||BOOKED
+TQ1||||||30^M|202501060930|202501061000
+PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
+RGS|001
+AIP|001|032^Pump^Patrick|002^CARDIOLOGIST|||||||NO|BOOKED
+AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|200701010812||ACK|434532JONES|P|2.8||||||<cr>
-MSA|CA|0934849SPOCARD||||<cr>
+MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|202501010812||ACK|434532JONES|P|2.8
+MSA|CA|0934849SPOCARD
 
 === Unsolicited Notification of Rescheduled Appointment - Event S13
 [v291_section="10.7.2"]
@@ -346,51 +344,51 @@ MSA|CA|0934849SPOCARD||||<cr>
 The patient has asked Dr. Pump to reschedule his January 6th appointment. Dr. Primary’s scheduling application (the filler application) sends the PCP, Dr. Primary, a notification that the original appointment has been rescheduled, followed by a notification of the new appointment on January 9th at 1:00 PM..
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|200701040800||SIU^S13^SIU_S12|021244SPOCARD|P|2.8|||AL|ER||<cr>
-SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C^^^|555-2010|||087^By^Entered^^^^|555-2011||||BOOKED<cr>
-TQ1||||||30^M|200701091300|200701091330||||||<cr>
-NTE||The patient is going to be on vacation so cannot make previous appointment scheduled on January 6.<cr>
-PID||4875439|484848||Everyman^Adam^A^^||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M|||444-22-3333|||||||||||<cr>
-RGS|001|<cr>
-AIP|001|032^Pump^Patrick|002^CARDIOLOGIST|||||||NO|BOOKED<cr>
-AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED<cr>
+MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|202501040800||SIU^S13^SIU_S12|021244SPOCARD|P|2.8|||AL|ER
+SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C^^^|555-2010|||087^By^Entered^^^^|555-2011||||BOOKED
+TQ1||||||30^M|200701091300|200701091330
+NTE||The patient is going to be on vacation so cannot make previous appointment scheduled on January 6.
+PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
+RGS|001
+AIP|001|032^Pump^Patrick|002^CARDIOLOGIST|||||||NO|BOOKED
+AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED
 
 [er7]
-MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|200701010802||ACK|035324PRIMARY|P|2.8||||||<cr>
-MSA|CA|021244SPOCARD||||<cr>
+MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|202501010802||ACK|035324PRIMARY|P|2.8
+MSA|CA|021244SPOCARD
 
 === Request and Receive New Appointment with Repeating Interval - Event S01
 [v291_section="10.7.3"]
 
-The patient has been seen by his specialist, Dr. Specialize, and requires treatment by a physical therapist, Seth Stretcher. Dr. Specialize's office requests a one-hour appointment each day for the next five days. Mr. Stretcher's office responds to the request with an appointment at 9:30 AM on June 20th through June 24th, 2007.
+The patient has been seen by his specialist, Dr. Specialize, and requires treatment by a physical therapist, Seth Stretcher. Dr. Specialize's office requests a one-hour appointment each day for the next five days. Mr. Stretcher's office responds to the request with an appointment at 9:30 AM on June 20th through June 24th, 2025.
 
 .Request
 [er7]
-MSH|^~\&|SPECIALIZE|EWHIN|STRETCHER|EWHIN|200706190800||SRM^S01^SRM_S01|03432SPECIALIZE|P|2.8|||AL|AL||<cr>
-ARQ|20070347^SCH001|||||047^Referral||NORMAL|060|min|200706200930||Q1D|D5|00335^Specialize^Sara^S^^^MD||||A3423^Person^Entered||||<cr>
-PID||4875439|484848||Everyman^Adam^A^^| |19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M||444-33-3333||||||||||<cr>
-DG1|001|I9|833.00|Closed dislocation wrist|200706190700|||||||||||||<cr>
-RGS|001|<cr>
-AIP|001|064^STRETCHER^SETH|097^PHYSICAL THERAPIST|||||||NO|<cr>
-AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|<cr>
+MSH|^~\&|SPECIALIZE|EWHIN|STRETCHER|EWHIN|202506190800||SRM^S01^SRM_S01|03432SPECIALIZE|P|2.8|||AL|AL
+ARQ|20070347^SCH001|||||047^Referral||NORMAL|060|min|200706200930||Q1D|D5|00335^Specialize^Sara^S^^^MD||||A3423^Person^Entered
+PID|||484848^^^^MR||Everyman^Adam^A||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
+DG1|001||833.00^^I9|Closed dislocation wrist|202506190700
+RGS|001
+AIP|001|064^STRETCHER^SETH|097^PHYSICAL THERAPIST|||||||NO
+AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO
 
 .ACK
 [er7]
-MSH|^~\&|SPECIALIZE|EWHIN|SMITH|EWHIN|200706190802||ACK|546644STRETCHER|P|2.8||||||<cr>
-MSA|CA|03432SPECIALIZE||||<cr>
+MSH|^~\&|SPECIALIZE|EWHIN|SMITH|EWHIN|202506190802||ACK|546644STRETCHER|P|2.8
+MSA|CA|03432SPECIALIZE
 
 .Response
 [er7]
-MSH|^~\&|STRETCHER|EWHIN|SPECIALIZE|EWHIN|200706190810||SRR^S01^SRR_S01|0654544JONES|P|2.8||||||<cr>
-MSA|AA|03432SSPECIALIZE||||<cr>
-SCH|2007037^SCH001|2007297^SCH100|||||047^Referral|NORMAL|| ||0335^Contact^Carrie^C^^^||||064^By^Entered|||||BOOKED<cr>
-TQ1|||Q1D||5^D|60^M|200706200930|200706240930||||||<cr>
-PID||4875439|484848||Everyman^Adam^A^^||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M|||444-33-3333|||||||||||<cr>
-RGS|001|<cr>
-AIP|001|064^STRETCHER^SETH|097^PHYSICAL THERAPIST|||||||NO|BOOKED<cr>
-AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED<cr>
+MSH|^~\&|STRETCHER|EWHIN|SPECIALIZE|EWHIN|202506190810||SRR^S01^SRR_S01|0654544JONES|P|2.8
+MSA|AA|03432SSPECIALIZE
+SCH|2007037^SCH001|2007297^SCH100|||||047^Referral|NORMAL|| ||0335^Contact^Carrie^C^^^||||064^By^Entered|||||BOOKED
+TQ1|||Q1D||5^D|60^M|200706200930|200706240930
+PID|||484848^^^^MR||Everyman^Adam^A||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
+RGS|001
+AIP|001|064^STRETCHER^SETH|097^PHYSICAL THERAPIST|||||||NO|BOOKED
+AIL|001|103^NORTH OFFICE|002^CLINIC|||||||NO|BOOKED
 
 .ACK
 [er7]
-MSH|^~\&|SPECIALIZE|EWHIN|STRETCHER|EWHIN|200706190800||ACK|045742SPECIALIZE|P|2.8||||||<cr>
-MSA|CA|0654544JONES||||<cr>
+MSH|^~\&|SPECIALIZE|EWHIN|STRETCHER|EWHIN|202506190800||ACK|045742SPECIALIZE|P|2.8
+MSA|CA|0654544JONES
