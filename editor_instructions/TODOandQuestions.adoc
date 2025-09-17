@@ -28,6 +28,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 == Questions
 
 * Should "domain" be restricted to just the high-level groups (administrative, clinical, erp, financial and technical) with "topic" or some other word used for the next level (registration, scheduling, materials management, immunization)? Or is everything OK to describe as a "domain"? "Transaction set" is also used a lot in a variety of chapters.
+** We decided on "topic" as the word
 
 * Several chapters have text similar to the following. Does this need to be in every chapter?
 ** This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this domain were constructed using the HL7 Encoding Rules.
