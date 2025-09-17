@@ -3,7 +3,7 @@
 == Introduction
 [v291_section="9.2"]
 
-This topic currently supports document management. In the future, it is intended also to support the data exchange needs of applications supporting other medical record functions, including chart location and tracking, deficiency analysis, consents, and release of information. The main purpose of the medical record is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
+This topic currently supports document management. The main purpose of document management is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
 
 Document/reports supported in this domain will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in Chapter 7, "Observations" (section 7.2 – Purpose).
 
