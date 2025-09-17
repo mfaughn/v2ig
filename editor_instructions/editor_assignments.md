@@ -20,11 +20,11 @@ Chapter 6: Update Author: Craig Newman  Reviewer:
 
 Chapter 7: Update Author: 
 
-Chapter 8: Update Author: Craig Newman  Reviewer:
+Chapter 8: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
-Chapter 9: Update Author: Craig Newman  Reviewer:
+Chapter 9: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
-Chapter 10: Update Author: Craig Newman  Reviewer:
+Chapter 10: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
 Chapter 11: Update Author: Craig Newman  Reviewer:
 
