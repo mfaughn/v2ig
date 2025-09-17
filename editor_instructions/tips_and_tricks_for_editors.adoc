@@ -1,6 +1,6 @@
 = Tips and Tricks for Editors (by editors)
 
-* Where "chapter" is used, "domain" is an acceptable substitution (e.g. "The information in this chapter was relocated from Appendix C as of v2.4")
+* Where "chapter" is used, "topic" is an acceptable substitution (e.g. "The information in this chapter was relocated from Appendix C as of v2.4")
 ** One exception is where the text references content elsewhere (e.g. "repetition of segments is described in Chapter 2, section 2.12, 'Chapter Formats for Defining HL7 Messages.'"). These references will be cleaned up programatically later and should be left as is
 * When reviewing a section, be sure to review both the domain level .adoc file as well as the narrative in all .sdoc files in the technical_specs folder in Github
 
