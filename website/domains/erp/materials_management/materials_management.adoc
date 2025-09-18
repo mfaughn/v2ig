@@ -35,7 +35,7 @@ The inventory item master segments are used with trigger event M15 – Inventory
 ==== Item Master Catalog
 [v291_section="17.3.1.0"]
 
-The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a domain such as Inventory, Scheduling, Pharmacy, and Sterilization.
+The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a topic such as Inventory, Scheduling, Pharmacy, and Sterilization.
 
 ==== Inventory Locations
 [v291_section="17.3.1.1"]
@@ -135,7 +135,7 @@ Placer request and filler response transactions are the messages and trigger eve
 
 When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined here. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use).
 
-After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this domain, an application accept from the filler means that the request was processed and accepted by the filler.
+After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this topic, an application accept from the filler means that the request was processed and accepted by the filler.
 
 An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the filler system is down, or there was an internal error).
 
