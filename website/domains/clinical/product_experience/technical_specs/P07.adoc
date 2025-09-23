@@ -18,7 +18,7 @@ Each message contains information about a single case including one patient (PID
 
 The MSH segment specifies the character set (_MSH-18_) and the language (_MSH-19_) used in the PEX message.
 
-
+The PEX message is designed to accommodate required reporting of adverse product events to the responsible regulatory agencies. In the United States, this report is MedWatch.
 
 
 
