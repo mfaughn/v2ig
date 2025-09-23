@@ -22,6 +22,8 @@ Chapter 7 (Product Experience): Update Author: Craig Newman  Reviewer:
 
 Chapter 7 (Clinical Trials): Update Author: Craig Newman  Reviewer:
 
+Chapter 7 (Specimen Shipment): Update Author: Craig Newman  Reviewer:
+
 Chapter 8: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
 Chapter 9: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
