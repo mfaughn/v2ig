@@ -18,7 +18,9 @@ Chapter 5: Update Author: Craig Newman  Reviewer:
 
 Chapter 6: Update Author: Craig Newman  Reviewer:
 
-Chapter 7: Update Author: Craig Newman  Reviewer:
+Chapter 7 (Product Experience): Update Author: Craig Newman  Reviewer:
+
+Chapter 7 (Clinical Trials): Update Author: Craig Newman  Reviewer:
 
 Chapter 8: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
