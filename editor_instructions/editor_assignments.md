@@ -14,11 +14,11 @@ Chapter 4: Update Author: Hans Buitendijk  Reviewer:
 
 Chapter 4A: Update Author: Hans Buitendijk  Reviewer:
 
-Chapter 5: Update Author: 
+Chapter 5: Update Author: Craig Newman  Reviewer:
 
 Chapter 6: Update Author: Craig Newman  Reviewer:
 
-Chapter 7: Update Author: 
+Chapter 7: Update Author: Craig Newman  Reviewer:
 
 Chapter 8: Update Author: Craig Newman  Reviewer: READY FOR REVIEW
 
