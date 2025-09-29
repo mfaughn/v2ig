@@ -4,18 +4,8 @@
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
 == General Approach of Service/Test/Observation Master Files
-include::general_approach.adoc[]
 
-:leveloffset: -1
-
-[NOTE]
-The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
-
-[NOTE]
 _MFI-1 -_ Master _File Identifier_ = OMA for numeric observations.
 
 [tabset]
 M08
-
-
-
