@@ -7,5 +7,7 @@
 
 _MFI-1 -_ Master _File Identifier_ = OMA for numeric observations.
 
+A service/test/observation definition may have both an OM2 (numeric) and OM3 (categorical) segment included in case the value may be either numeric and/or categorical.
+
 [tabset]
 M08
