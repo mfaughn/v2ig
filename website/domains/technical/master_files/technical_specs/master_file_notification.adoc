@@ -1,2 +1,0 @@
-[v291_section="8.4"]
-The following messages are defined for master files transactions: MFN, master files notification; MFK, master files application acknowledgment; and MFQ, master files query.
