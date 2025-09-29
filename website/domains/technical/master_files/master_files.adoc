@@ -86,19 +86,125 @@ It is recommended that site-specific master files use event M13 or M14; alternat
 
 Event M02
 
+=== Charge Description Master Files
+
+Event M04
+
+The charge description (CDM) master file segment should be used in conjunction with the general master file segments in Section 8.5, "GENERAL MASTER FILE SEGMENTS." Interfacing systems often need not only to communicate data about a patient's detailed charges, but also to communicate the charge identification entries by which an application knows how to handle a particular charge code. The charge description master is a master file.
+
+=== Location Master Files
+
+Event M05
+
+This use case is specifically concerned with describing a master file message that should be used to transmit information which identifies the inventory of healthcare patient locations, such as nursing units, rooms, beds, clinics, exam rooms, etc. In a network environment, this can be used to define patient locations to other applications. It also includes the readiness states and support locations for the patient locations.
+
+=== Clinical Trials Master Files
+
+Events M06 and M07
+
+The CM0 (Clinical Study Master), CM1 (Clinical Study Phase), and CM2 (Clinical Study Schedule) segments can be used to transmit master files information between systems. The CM0 segment contains the information about the study itself; the CM1 contains the information about one phase of the study identified in the preceding CM0; and the CM2 contains the information about the scheduled time points for the preceding study or phase-related treatment or evaluation events.
+
+=== Service/Test/Observation Master Files
+[v291_section="8.8.1"]
+
+Events M08, M09, M10, M11, M12, and M18
+
+These segments define the format for the general information about the observations that a clinical or diagnostic service produces and sends to its "clients." This format can be used to send the producer's entire service/test/observation definition or a few of the producer's observations, such as those with procedure, technique, or interpretation changes.
+
+The attributes of observations/batteries have been grouped into seven different segments:
+
+* OM1 contains the attributes that apply to all observations
+
+* OM2 applies to numerically-valued observations
+
+* OM3 applies to text or code-valued observations
+
+* OM4 applies to observations or batteries that require specimens
+
+* OM5 contains the attributes of batteries, or sets of observations or other batteries
+
+* OM6 contains the quantities (observations in a most general sense) that are calculated from one or more other observations
+
+* OM7 contains additional basic attributes that apply to the definition of most observations/services.
+
+Thus, the full definition of a numerically-valued laboratory observation would require the transmission of OM1, OM2, and OM4.
+
+In the following discussion, we use OMx to refer to any of the seven observation-defining segments. Each instance of an OMx segment contains the information about one observation or observation battery. These OMx segments are designed to be "inclusive" and accommodate the attributes of many kinds of observations. Thus, the fact that a field is listed in a particular segment should not be construed as meaning that a producer must include information about that item in its definition transmission. Many fields will apply to some terms; others will not. One observation producer may choose to populate one set of fields; another may choose to populate a different set of fields, according to the requirements of that producer's "client."
+
+Most of the fields of data type TX in those segments are intended to include information typically contained in a diagnostic service's user manual. Such fields should describe how the data is to be interpreted or used, and are not intended for computer interpretation.
+
+Remember that the magnitude of a treatment can also be regarded as an observation and, as such, can be represented as an observation within these segments. Many examples exist. When a blood gas is transmitted, the requesting service usually transmits the amount of inspired O2 (a treatment) on requisition. (In an electronic transmission, the service would send this as an OBX segment, along with the electronic order for the test.) When blood levels are drawn, the amount and time of the last dose are routinely included as observations on the request for service. A pharmacy system could routinely send to a medical record system the average daily dose of each outpatient medication it dispenses. In such cases, the treatment amounts would be observations to the receiving system and would be transmitted as OBX segments. When received, they would be treated like any other observation. A medical record system could then create, for example, a flowchart of lab results, or lab results mixed with relevant treatments.
+
+=== Inventory Item Master Files
+
+Events M15 and M16
+
+[v291_section="17.3.1"]
+
+The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. The following are the primary attributes of a supply item:
+
+Unique identification code
+
+* The unique identification code for a supply item describes a relation to a supply that can be ordered. This would likely be a catalog number specific to a manufacturer of the supply item.
+
+Supply Item Description
+
+* The name or text description of the supply item provides a human-readable identification of the supply.
+
+Supply Item Type
+
+* This attribute describes a type or class of supply items. This would typically be a supply type such as office supplies, OR supplies, or laboratory supplies.
+
+==== Item Master Catalog
+[v291_section="17.3.1.0"]
+
+The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a topic such as Inventory, Scheduling, Pharmacy, and Sterilization.
+
+==== Inventory Locations
+[v291_section="17.3.1.1"]
+
+Inventory locations contain a list of items that are stocked at the location (GLOSSARY), or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
+
+==== Statuses
+[v291_section="17.4.1"]
+
+The status of a supply item describes the state of the supply item in the item master catalog and at an inventory location. Typical statuses of a supply item may include the following: Active, Pending Inactive, and Inactive.
+
+==== Trigger Events
+
+The functional grouping of trigger events and message definitions in this section describes the common master file notification messages for use of the record level events for adds, deletes, updates, deactivations, and reactivations. This functional grouping is specific to the item master inventory messages.
+
+=== Diagnostic Related Group (DRG) Master Files
+
+Event M17
+
+This section is specifically concerned with describing a master file message that should be used to transmit information which identifies the DRG basic information, such as relative weight, lower and upper trim points, etc.
+
+=== Contract Master Files
+
+Event M19
+
 == Technical Specs
 
 === Staff and Practitioner Master Files
 
 xref:technical_specs/M02.adoc[Message - M02 Staff/Practitioner Master File]
 
-=== Generic Master File Notification (General and Site Defined)
+=== Charge Description Master Files
 
-xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
+xref:technical_specs/M04.adoc[Message - M04 Charge Description Master File Message]
 
-xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
+=== Location Master Files
 
+xref:technical_specs/M05.adoc[Message - M05 Patient Location Master File]
 
+=== Clinical Trials Master Files
+
+xref:technical_specs/M06.adoc[Message - M06 Clinical Trials Master File]
+
+xref:technical_specs/M07.adoc[Message - M07 Clinical Trials Master File]
+
+=== Service/Test/Observation Master Files
 
 xref:technical_specs/M08.adoc[Message - M08 Master File Notification - Test/Observation (Numeric)]
 
@@ -112,25 +218,29 @@ xref:technical_specs/M12.adoc[Message - M12 Master File Notification - Additiona
 
 xref:technical_specs/M18.adoc[Message - M18 Master File Notification – Test/Observation (Payer)]
 
-xref:technical_specs/M05.adoc[Message - M05 Patient Location Master File]
+=== Generic Master File Notification (General and Site Defined)
 
-xref:technical_specs/M04.adoc[Message - M04 Charge Description Master File Message]
+xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
 
-xref:technical_specs/M06.adoc[Message - M06 Clinical Trials Master File]
+xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
 
-xref:technical_specs/M07.adoc[Message - M07 Clinical Trials Master File]
+=== Inventory Item Master Files
 
 xref:technical_specs/M15.adoc[Message - M15 Inventory Item Master File Message]
 
 xref:technical_specs/M16.adoc[Message - M16 Inventory Item Master File – Enhanced]
 
+=== Diagnostic Related Group (DRG) Master Files
+
 xref:technical_specs/M17.adoc[Message - M17 DRG Master File]
+
+=== Contract Master Files
 
 xref:technical_specs/M19.adoc[Message - M19 Contract Master File]
 
 == Examples
 
-=== GENERIC MASTER FILE EXAMPLES
+=== Generic Master File Examples
 [v291_section="8.6"]
 
 The following are examples of a generic method of updating a standard HL7 table, covering the following two cases:
