@@ -3,8 +3,6 @@
 :v2_section_name: "MFN/MFK - Master File Notification - Site Defined (Event M14) "
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-include::master_file_notification.adoc[]
-
 [v291_section="8.4"]
 The MFN Site defined master file notification transaction is used where the master file is not a simple one (as defined for MFN^M13) and is not a transaction type currently defined by HL7, but rather requires one or more HL7 and/or 'Z' segments to carry the master file information.
 
@@ -12,7 +10,3 @@ The Site defined master file notification is defined as follows:
 
 [tabset]
 M14
-
-// This note should probably be on the tab for the ACK Choreographies
-[NOTE]
-The MFK message is used for an application acknowledgment in either the original or enhanced acknowledgment modes.
