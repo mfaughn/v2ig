@@ -3,8 +3,6 @@
 :v2_section_name: "MFN/MFK - Charge Description Master File Message (Event M04)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The charge description (CDM) master file segment should be used in conjunction with the general master file segments in Section 8.5, "GENERAL MASTER FILE SEGMENTS." Interfacing systems often need not only to communicate data about a patient's detailed charges, but also to communicate the charge identification entries by which an application knows how to handle a particular charge code. The charge description master is a master file.
-
 The NTE segment may also contain other information to the provider to convey other requirements or context. For example:
 
 • Convey the status of Federal Drug Administration (FDA) approval of the test. For example, the test may have FDA approval but is not validated yet because of limited gathering of data to confirm the validity of the test.
