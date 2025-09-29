@@ -3,44 +3,13 @@
 == Introduction
 [v291_section="17.3"]
 
-This Materials Management topic defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility. There are two basic types of messages defined: _inventory item master file updates, and supply item sterilization messages_.
-
-The inventory item master file segments are based on master file add and update messages between applications such as _materials management, scheduling, and sterilization applications._
+This Materials Management topic defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility.
 
 The sterilization (GLOSSARY) and decontamination (GLOSSARY) messages are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer (GLOSSARY) or washer (GLOSSARY).
 
 This topic describes various roles under which applications might operate. The roles discussed here illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
 
 == General Use Cases / Background
-
-=== Inventory Item Master Updates
-[v291_section="17.3.1"]
-
-The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. The following are the primary attributes of a supply item:
-
-Unique identification code
-
-• The unique identification code for a supply item describes a relation to a supply that can be ordered. This would likely be a catalog number specific to a manufacturer of the supply item.
-
-Supply Item Description
-
-• The name or text description of the supply item provides a human-readable identification of the supply.
-
-Supply Item Type
-
-• This attribute describes a type or class of supply items. This would typically be a supply type such as office supplies, OR supplies, or laboratory supplies.
-
-The inventory item master segments are used with trigger event M15 – Inventory Item Master File Message , and M16 – Inventory Item Master File Message – Enhanced. The message structures of these events are published in Chapter 8 - Master Files.
-
-==== Item Master Catalog
-[v291_section="17.3.1.0"]
-
-The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a topic such as Inventory, Scheduling, Pharmacy, and Sterilization.
-
-==== Inventory Locations
-[v291_section="17.3.1.1"]
-
-Inventory locations contain a list of items that are stocked at the location (GLOSSARY), or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
 
 === Sterilization and Decontamination
 [v291_section="17.3.2"]
@@ -90,14 +59,10 @@ In this specification, the definition of application roles is not intended to de
 === Trigger Events
 [v291_section="17.4"]
 
-This topic defines trigger events used to communicate supply item information between applications.
-
-The inventory item master file notification trigger events are defined in Chapter 8, Master Files. The sterilization and decontamination related trigger events are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
+This topic defines trigger events used to communicate supply item information between applications. The sterilization and decontamination related trigger events are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
 
 === Statuses
 [v291_section="17.4.1"]
-
-The status of a supply item describes the state of the supply item in the item master catalog and at an inventory location. Typical statuses of a supply item may include the following: Active, Pending Inactive, and Inactive.
 
 The status of a load describes the state of a load during a sterilization cycle. Typical statuses of a load may include the following: Pending, Active, Complete, and Canceled.
 
@@ -106,29 +71,18 @@ The status of a load describes the state of a load during a sterilization cycle.
 
 This specification contains functional groupings of trigger events and message definitions. The trigger events within each functional grouping share the same or similar message definitions.
 
-The first functional grouping of trigger events and message definitions describes the common master file notification messages for use of the record level events for adds, deletes, updates, deactivations, and reactivations. This functional grouping is specific to the item master inventory messages.
+The first functional grouping of trigger events and message definitions describes _placer request transactions_. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.6_, "_Placer Application Requests and Trigger Events_."
 
-The second functional grouping of trigger events and message definitions describes _placer request transactions_. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.6_, "_Placer Application Requests and Trigger Events_."
-
-The final functional grouping describes trigger events and message definitions for _unsolicited transactions_ from applications acting in the filler application role. This grouping describes the unsolicited messages originating from an application fulfilling the filler role, and the response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.7_, "_Filler Application Messages and Trigger Events Unsolicited_."
+The second functional grouping describes trigger events and message definitions for _unsolicited transactions_ from applications acting in the filler application role. This grouping describes the unsolicited messages originating from an application fulfilling the filler role, and the response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.7_, "_Filler Application Messages and Trigger Events Unsolicited_."
 
 ==== Update mode
 [v291_section="17.4.3.0"]
 
 This topic uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.15.4, "Modes for updating via repeating segments," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, section 2.15.4.2, "Action code/unique identifier mode update definition."
 
-=== Inventory Item Master Messages Segments
-[v291_section="17.5"]
-
-This section covers the segments described in the Inventory Item Master File Message (Event M15) and Inventory Item Master File Message - Enhanced (Event M16) master file messages. The description of these events and the messages structures are published in Chapter 8, Master Files. The M15 Inventory Item Master File trigger event and the IIM inventory item master segment is a limited implementation. The M16 Inventory Item Master File - Enhanced trigger event is a comprehensive Materials Management message.
-
-The enhanced inventory item master message communicates additions and updates of supply items and their attributes from a general supply location to additional supply locations within a healthcare facility.
-
-The general supply inventory location sends a transaction to multiple inventory locations with this trigger event, communicating adds and changes to item master catalog and inventory supply items.
-
 == Technical Specs
 
-== Placer Application Requests and Trigger Events
+=== Placer Application Requests and Trigger Events
 [v291_section="17.6"]
 
 Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the *SLR*, *STI*, *SDR,* or *SMD* message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the *SLS*, *STS*, *SDS,* or *SMS* message types, to either grant or deny the requests from the placer application.
@@ -142,8 +96,6 @@ An application error from the filler means that the request was processed and de
 There are no unsolicited messages initiated from a filler application defined in this set of trigger events. Those messages and trigger events are defined below, in section _17.7_, "_Filler Application Messages and Trigger Events Unsolicited_."
 
 All of the trigger events associated with placer request and filler response transactions use the message definitions that follow:
-
-
 
 xref:technical_specs/S28.adoc[Message - S28 Request New Sterilization Lot]
 
@@ -175,28 +127,6 @@ xref:technical_specs/S36.adoc[Message - S36 Notification of Anti-Microbial Devic
 xref:technical_specs/S37.adoc[Message - S37 Notification of Anti-Microbial Device Cycle Data]
 
 == Examples
-
-=== Inventory Item Master Catalog Add - Event M16
-[v291_section="17.10.1"]
-
-An inventory clerk in the General Supply Inventory location has added a new supply item to the item master catalog. A Master File Add message is sent to notify selected inventory locations that this supply item has been added to the item master catalog
-
-[er7]
-MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|202508150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL
-MFI|INV|MATERIALSYS|UPD|200408121100|SU
-MFE|MAD|F589|202508121100|JMC090387^^JMF
-SFT|COMPAPP|9.0.0|MATIERALSYS|4500|202501010700
-UAC| KERB|MATSYS|AP|Octet-stream|A|Clerk
-ITM|10001|Formula 8oz|A|SUP|DietaryFormula|Y|ALR|MANUFACTURER|F589|ALR900||Y|300-0001^FormulaAlim_8oz|4.92|Y||FDA|N||100-9088-37887|20|29.75|N|N|N||||REF
-VND|001|M00933|VENDOR|FV9975|Y
-VND|002|M00934|VENDOR2|FV9976|N
-PKG|001|CS|6|Y|5|29.50|30.25|202509030100
-PKG|002|EA|N|1|4.92|5.04|202509030100
-PCE|001|9188|300-0002|5.35
-ITV|001|GS^General Stores|CS^Central Supply|1|GS-031|CS|EA|100-9200-00000|Y|300-0001|4.95||Y|N|N||||M|30|450|100|400|N
-
-MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|202508150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL
-MSA|CA|8000
 
 === Request New Sterilization Lot - Event S28
 [v291_section="17.10.2"]
