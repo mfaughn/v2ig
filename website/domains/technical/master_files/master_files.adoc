@@ -72,19 +72,33 @@ The Master Files Change Notification message can be used for the following messa
 |M19 |Contract Master File
 |===
 
-It is recommended that site-specific master files use event M13 or M14; alternately a code of the form Znn can be used (see also section 8.5.1, "MFI - Master File Identification Segment.")
-
 The MFN message specifies whether the master file, as a whole, has been replaced or if a record within the file has been updated. See section 8.5.13, "MFI-3 File Event Code" for further details.
 
 The MFN message transmits the specific action taken on a record. See section 8.5.2.1, "MFE-1 Record Event Code" for further details.
 
+=== Generic Master File Notification (General and Site Defined)
+
+Events M13 and M14.
+
+It is recommended that site-specific master files use event M13 or M14; alternately a code of the form Znn can be used (see also section 8.5.1, "MFI - Master File Identification Segment.")
+
+=== Staff and Practitioner Master Files
+
+Event M02
+
 == Technical Specs
+
+=== Staff and Practitioner Master Files
+
+xref:technical_specs/M02.adoc[Message - M02 Staff/Practitioner Master File]
+
+=== Generic Master File Notification (General and Site Defined)
 
 xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
 
 xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
 
-xref:technical_specs/M02.adoc[Message - M02 Staff/Practitioner Master File]
+
 
 xref:technical_specs/M08.adoc[Message - M08 Master File Notification - Test/Observation (Numeric)]
 
