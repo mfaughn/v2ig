@@ -66,7 +66,7 @@ Ms. Everywoman's patient number is 8064993 and her billing number is 6045681. Th
 MSH|^~\&|PATA|01|PATB|01|20250908135031||DFT^P03^DFT_P03|641|P|2.8|000000000000001|
 EVN|P03|20250908135030||
 PID||0008064993^^^ENT^PE|0008064993^^^PAT^MR||0006045681^^^PATA^AN|EVERYWOMEN^EVE^J|19471007|F||1|2222 HOMESTREET^^HOUSTON^TX^77030^USA|HAR||||S||6045681^^^PATA^AN
-FT1|1|||19950715|19950716|CG|B1238^BIOPSY-SKIN^SYSTEMA|||1|||ONC|A357||||||P8765^KILDARE^BEN
+FT1|1|||20250715|20250716|CG|B1238^BIOPSY-SKIN^SYSTEMA|||1|||ONC|A357||||||P8765^KILDARE^BEN
 
 === Update patient accounts - update UB1 information
 [v291_section="6.6.3"]
@@ -78,11 +78,10 @@ The patient has been assigned to a medically necessary private room (UB conditio
 The services provided for the period 05/01/88 through 05/07/88 are fully approved (PSRO/UR Approval Code 1). The patient's hospitalization is the result of an auto accident (UB occurrence code 01).
 
 [er7]
-MSH|^~\&|UREV||PATB||199309061352025||BAR^P05^BAR_P05|MSG0018|P|2.8
+MSH|^~\&|UREV||PATB||202509061352025||BAR^P05^BAR_P05|MSG0018|P|2.8
 EVN|P05|20250908135030
 PID|||125976^^^^^MR||EVERYMAN^ADAM^J|||||||||||||125976011
-UB1|1|1|5|3|1||39|||01^500.00|||1|19880501|19880507|10^19880501
-
+UB1|1|1|5|3|1||39|||01^500.00|||1|20250501|20250507|10^20250501
 
 === Update patient accounts - update diagnosis and DRG information
 [v291_section="6.6.4"]
@@ -93,5 +92,5 @@ The DG1 segment contains the information that the patient was diagnosed on May 1
 MSH|^~\&|UREV||PATB||20250908135030||BAR^P05^BAR_P05|MSG0018|P|2.8
 EVN|P05|20250908135030
 PID|||125976^^^^^MR||EVERYMAN^ADAM^J|||||||||||||125976011
-DG1|001|I9|1550|MAL NEO LIVER, PRIMARY|19880501103005|F
-DRG|203|19880501103010|Y||D|5
+DG1|001|I9|1550|MAL NEO LIVER, PRIMARY|20250501103005|F
+DRG|203|20250501103010|Y||D|5
