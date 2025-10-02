@@ -16,7 +16,7 @@ Chapter 4A: Update Author: Hans Buitendijk  Reviewer:
 
 Chapter 5: Update Author: Craig Newman  Reviewer:
 
-Chapter 6: Update Author: Craig Newman  **Pull Request created**  Reviewer:
+Chapter 6: Update Author: Craig Newman  Reviewer: Riki - **Pull Request created, reviewed, merged and deleted** 
 
 Chapter 7 (General): Update Author: Hans Buitendijk  Reviewer:
 
