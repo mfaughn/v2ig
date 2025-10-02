@@ -7,16 +7,3 @@ The P06 event is a notification that the account is no longer open, that is, no 
 
 [tabset]
 P06
-
-
-
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
-[NOTE]
-P07-P09 have been defined by the Orders/Observations Technical Committee as product experience messages. Refer to Chapter 7.
-

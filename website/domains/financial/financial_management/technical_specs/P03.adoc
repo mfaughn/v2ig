@@ -28,10 +28,3 @@ There is an information overlap between the FT1, DG1 and PR1 segments. If diagno
 
 [NOTE]
 The extra set of DG1/DRG/GT1/IN1/IN2/IN3/ROL segments added in V2.4 have been withdrawn as a technical correction
-
-
-
-
-
-The error segment indicates the fields that caused a transaction to be rejected.
-
