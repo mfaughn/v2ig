@@ -20,9 +20,9 @@ Chapter 7 (General): Update Author: Hans Buitendijk  Reviewer:
 
 Chapter 7 (Product Experience, Clincal Trials and Specimen Shipment): Update Author: Craig Newman  Reviewer: TBD - **Pull Request created (#12)**
 
-Chapter 8: Update Author: Craig Newman  Reviewer: 
+Chapter 8: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#13)
 
-Chapter 9: Update Author: Craig Newman  Reviewer: 
+Chapter 9: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#14)
 
 Chapter 10: Update Author: Craig Newman  Reviewer: 
 
