@@ -96,6 +96,10 @@ image::Referrals_Figure_1.png[patient_treatment_process]
 
 == Technical Specs
 
+=== Patient Information Request Messages
+
+Patient information may need to be retrieved from various enterprises. The definition of these enterprises often varies greatly. Some enterprises may be providers or reference laboratories, while others may be payors providing insurance information. In the first case, the message definitions will focus on patient and provider information, while in the latter case, the message definition will deal primarily with patient and subscriber identification.
+
 xref:technical_specs/I01.adoc[Message - I01 Request for Insurance]
 
 xref:technical_specs/I02.adoc[Message - I02 Request of Patient Selection Display List]
@@ -108,11 +112,19 @@ xref:technical_specs/I07.adoc[Message - I07 Unsolicited Insurance Information]
 
 xref:technical_specs/I08.adoc[Message - I08 Request for Treatment Authorization Information]
 
+=== Patient Treatment Authorization Requests
+
+This functional definition applies to a request for treatment authorization. Although this message also pertains to the payor, it differs greatly from that of an insurance information request. This message is used to request an authorization for specific procedures. Just as patient identification was important in an insurance information request, the focus of this functional area is provider identification, requested treatments/procedures and, in many cases, clinical information on a patient needed to fulfill review or certification requirements.
+
 xref:technical_specs/I09.adoc[Message - I09 Request for Modification to an Authorization]
 
 xref:technical_specs/I10.adoc[Message - I10 Request for Resubmission of an Authorization]
 
 xref:technical_specs/I11.adoc[Message - I11 Request for Cancellation of an Authorization]
+
+=== Patient Referral Messages
+
+These message definitions and event codes define the patient referral. Although only three trigger events are defined, the abstract message is very versatile and can provide for a wide variety of inter-enterprise transactions.
 
 xref:technical_specs/I12.adoc[Message - I12 Patient Referral]
 
@@ -122,17 +134,25 @@ xref:technical_specs/I14.adoc[Message - I14 Cancel Patient Referral]
 
 xref:technical_specs/I15.adoc[Message - I15 Request Patient Referral Status]
 
+=== Collaborative Care Messages
+
+These message definitions and event codes define the collaborative care exchanges, including patient referral, discharge summary and infectious diseases notifications. Although only seven trigger events are defined, the abstract message is very versatile and can provide for a wide variety of exchanges of information between care entities.
+
+xref:technical_specs/I21.adoc[Message - I21 Collaborative Care Message]
+
 xref:technical_specs/I16.adoc[Message - I16 Collaborative Care Referral]
 
 xref:technical_specs/I17.adoc[Message - I17 Modify Collaborative Care Referral]
 
 xref:technical_specs/I18.adoc[Message - I18 Cancel Collaborative Care Referral]
 
-xref:technical_specs/I19.adoc[Message - I19 Collaborative Care Query/Collaborative Care Query Update]
-
 xref:technical_specs/I20.adoc[Message - I20 Asynchronous Collaborative Care Update]
 
-xref:technical_specs/I21.adoc[Message - I21 Collaborative Care Message]
+=== Collaborative Care Information Request Messages
+
+Collaborative care information may need to be retrieved from various entities, such as healthcare providers, clinical repositories or regulatory bodies. The definition of these entities often varies greatly. Some times the query will relate to a previous referral. At other times it will relate to a specific patient.
+xref:technical_specs/I19.adoc[Message - I19 Collaborative Care Query/Collaborative Care Query Update]
+
 
 xref:technical_specs/I22.adoc[Message - I22 Collaborative Care Fetch / Collaborative Care Information]
 
