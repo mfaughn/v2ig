@@ -54,7 +54,7 @@ The unique identification code for a service or resource describes a specific in
 
 * A code describing the type of class of service or resource +
 +
-This code describes a type or class of service, or resource groups like services or resources together. For services, this is typically a universal service ID similar to the field used in the OBR segment defined in the Order Entry chapter (Chapter 4). This Universal Service ID uniquely identifies clinical services performed in a healthcare provider organization. +
+This code describes a type or class of service, or resource groups like services or resources together. For services, this is typically a universal service ID similar to the field used in the OBR segment defined in the Order Entry topic (Chapter 4). This Universal Service ID uniquely identifies clinical services performed in a healthcare provider organization. +
 +
 For tangible resources, this code may be a model number, a staff classification (such as physician, nurse, physical therapist, etc.), or a kind of room. This kind of information can be used to request a resource from a pool, where a specific instance of the resource scheduled is unknown and unimportant (as long as it is of the specified type or class).
 
@@ -139,7 +139,7 @@ The analog of a filler application in a non-automated environment might be an ap
 ==== The Placer Application Role
 [v291_section="10.2.2.2"]
 
-The placer application role in the scheduling model is also very similar to its counterpart in the Order Entry chapter. A placer application requests the booking, modification, cancellation, etc., of a scheduled activity for a service or resource. Because it cannot exert any control over the schedule for that resource, it must send its requests to modify the schedule to the filler application. In requesting that these appointments be booked or modified in some way, the placer application is asking the filler application to exert its control over the schedule on the placer application's behalf.
+The placer application role in the scheduling model is also very similar to its counterpart in the Order Entry topic. A placer application requests the booking, modification, cancellation, etc., of a scheduled activity for a service or resource. Because it cannot exert any control over the schedule for that resource, it must send its requests to modify the schedule to the filler application. In requesting that these appointments be booked or modified in some way, the placer application is asking the filler application to exert its control over the schedule on the placer application's behalf.
 
 The analog of a placer application in a non-automated environment might be any person needing a particular resource or appointment for a service. A person needing to book an appointment would contact the person in charge of the appointment book for that resource or service, and request a reservation. Often, there is negotiation between the person requesting the reservation or appointment and the person who maintains the appointment book. The requesting person will indicate requirements and preferences, and the person controlling the appointment book will indicate whether the request can be fulfilled as specified.
 
@@ -314,8 +314,8 @@ The patient has been seen by his primary care physician, Dr. Patricia Primary, a
 MSH|^~\&|PRIMARY|EWHIN|SPOCARD|EWHIN|202501010800||SRM^S01^SRM_S01|090849PRIMARY|P|2.8|||AL|AL
 ARQ|19940047^SCH001|||||047^Referral||NORMAL|||202501020800^202501101700||||0045^Contact^Carrie^S||||3372^Person^Entered
 PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
-DG1|001||786.5^^I9|CHEST PAINS|200701010730|W
-DG1|002||412^I9|OLD MYOCARDIAL INFARCTION|200701010730|W
+DG1|001||786.5^^I9|CHEST PAINS|202501010730|W
+DG1|002||412^I9|OLD MYOCARDIAL INFARCTION|202501010730|W
 RGS|001
 AIP|001||032^Pump^Patrick|002^CARDIOLOGIST|||||||NO
 AIL|001|^NORTH OFFICE|002^CLINIC|||||||YES
@@ -327,7 +327,7 @@ MSA|CA|090849JONES
 [er7]
 MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|202501010810||SRR^S01^SRR_S01|0934849SPOCARD|P|2.8
 MSA|AA|090849EVERYMAN
-SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C|555-2010|||087^By^Entered|555-2011||||BOOKED
+SCH|2025047^SCH001|2025567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C|555-2010|||087^By^Entered|555-2011||||BOOKED
 TQ1||||||30^M|202501060930|202501061000
 PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
 RGS|001
@@ -345,8 +345,8 @@ The patient has asked Dr. Pump to reschedule his January 6th appointment. Dr. Pr
 
 [er7]
 MSH|^~\&|PRIMARY|EWHIN|JONES|EWHIN|202501040800||SIU^S13^SIU_S12|021244SPOCARD|P|2.8|||AL|ER
-SCH|2007047^SCH001|2007567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C^^^|555-2010|||087^By^Entered^^^^|555-2011||||BOOKED
-TQ1||||||30^M|200701091300|200701091330
+SCH|2025047^SCH001|2025567^SCH100|||||047^Referral|NORMAL||||0045^Contact^Carrie^C^^^|555-2010|||087^By^Entered^^^^|555-2011||||BOOKED
+TQ1||||||30^M|202501091300|202501091330
 NTE||The patient is going to be on vacation so cannot make previous appointment scheduled on January 6.
 PID|||484848^^^^MR||Everyman^Adam^A||19601121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
 RGS|001
@@ -365,7 +365,7 @@ The patient has been seen by his specialist, Dr. Specialize, and requires treatm
 .Request
 [er7]
 MSH|^~\&|SPECIALIZE|EWHIN|STRETCHER|EWHIN|202506190800||SRM^S01^SRM_S01|03432SPECIALIZE|P|2.8|||AL|AL
-ARQ|20070347^SCH001|||||047^Referral||NORMAL|060|min|200706200930||Q1D|D5|00335^Specialize^Sara^S^^^MD||||A3423^Person^Entered
+ARQ|20250347^SCH001|||||047^Referral||NORMAL|060|min|202506200930||Q1D|D5|00335^Specialize^Sara^S^^^MD||||A3423^Person^Entered
 PID|||484848^^^^MR||Everyman^Adam^A||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
 DG1|001||833.00^^I9|Closed dislocation wrist|202506190700
 RGS|001
@@ -381,8 +381,8 @@ MSA|CA|03432SPECIALIZE
 [er7]
 MSH|^~\&|STRETCHER|EWHIN|SPECIALIZE|EWHIN|202506190810||SRR^S01^SRR_S01|0654544JONES|P|2.8
 MSA|AA|03432SSPECIALIZE
-SCH|2007037^SCH001|2007297^SCH100|||||047^Referral|NORMAL|| ||0335^Contact^Carrie^C^^^||||064^By^Entered|||||BOOKED
-TQ1|||Q1D||5^D|60^M|200706200930|200706240930
+SCH|2025037^SCH001|2025297^SCH100|||||047^Referral|NORMAL|| ||0335^Contact^Carrie^C^^^||||064^By^Entered|||||BOOKED
+TQ1|||Q1D||5^D|60^M|202506200930|202506240930
 PID|||484848^^^^MR||Everyman^Adam^A||19401121|M|Alias||2222 Home Street^Jay^WA^99021||555-2003|||M
 RGS|001
 AIP|001|064^STRETCHER^SETH|097^PHYSICAL THERAPIST|||||||NO|BOOKED
