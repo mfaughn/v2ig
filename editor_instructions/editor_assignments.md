@@ -24,7 +24,7 @@ Chapter 8: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#1
 
 Chapter 9: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#14)
 
-Chapter 10: Update Author: Craig Newman  Reviewer: 
+Chapter 10: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#15)
 
 Chapter 11: Update Author: Craig Newman  Reviewer:
 
