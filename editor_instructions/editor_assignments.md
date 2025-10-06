@@ -26,16 +26,16 @@ Chapter 9: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#1
 
 Chapter 10: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#15)
 
-Chapter 11: Update Author: Craig Newman  Reviewer:
+Chapter 11: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#16)
 
-Chapter 12: Update Author: Craig Newman  Reviewer:
+Chapter 12: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#17)
 
 Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
-Chapter 14: Update Author: Craig Newman  Reviewer:
+Chapter 14: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#18)
 
-Chapter 15: Update Author: Craig Newman  Reviewer:
+Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#19)
 
-Chapter 16: Update Author: Craig Newman  Reviewer:
+Chapter 16: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#20)
 
-Chapter 17: Update Author: Craig Newman  Reviewer:
+Chapter 17: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#21)
