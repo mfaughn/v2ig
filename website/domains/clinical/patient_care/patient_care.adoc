@@ -47,7 +47,7 @@ Applications can have differing orientations for representing problem and goal h
 
 In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
 
-Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This chapter does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
+Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This topic does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
 
 === Use of Action Codes
 [v291_section="12.2.4"]
@@ -58,7 +58,7 @@ To reduce the number of repeating segments, action codes may be employed. Action
 
 In either event, for systems implementing Version 2.3 or higher, if a particular repeating segment can be updated by either of these two modes, the parties concerned determine by agreement on a site-specific basis whether an interface uses the *snapshot* mode or the *action code/unique identifier* mode.
 
-A description of valid action codes used in message segments originating in this domain is given immediately below:
+A description of valid action codes used in message segments originating in this topic is given immediately below:
 
 *AD* (*ADD*) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem. If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)
 
@@ -100,6 +100,8 @@ If there is a requirement to modify information contained on a segment and unlin
 
 === Message Construction Rules
 [v291_section="12.2.5"]
+
+FIXME - decide if we are going to keep these rules or not
 
 The semantic meaning of a message is contained in the message through the use of the trigger events, the implicit hierarchical linkages of the segments, and the segment action codes. Each of these has a scope within the message. The message event as included in the MSH-9 Message Type has a scope which is global to the message. The segment hierarchical linkage has a scope which includes both the segment itself and its relationship to its parent. The segment action code's scope is to the segment itself. It may further define link and unlink actions in the hierarchical structure.
 
@@ -202,7 +204,7 @@ xref:technical_specs/PCJ.adoc[Message - PCJ Patient Pathway Goal Delete]
 The following is an example of a patient goal message.
 
 [er7]
-MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PGL^PC6^PGL_PC6| <cr>
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PGL^PC6^PGL_PC6
 PID||0123456‑1^^^^MR||EVERYMAN^ADAM^A|||||||9821111
 PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||­||ADM|A0­
 GOL|AD|202505011200|00312^Improve Peripheral Circulation^L||||202505011200|202505101200|Due^Review Due^L|||202505021200||QAM|||ACT^Active^L|202505011200|P^Patient^L
