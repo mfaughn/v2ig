@@ -19,7 +19,7 @@ The objectives of the clinical trials messages and segments are to identify that
 
 xref:technical_specs/C01.adoc[Message - C01 Register a patient on a clinical trial]
 
-xref:technical_specs/C02.adoc[Message - C02 Cancel a patient registration on clinical trial (for clerical mistakes since an intended registration should not be canceled)]
+xref:technical_specs/C02.adoc[Message - C02 Cancel a patient registration on clinical trial]
 
 xref:technical_specs/C03.adoc[Message - C03 Correct/update registration information]
 
@@ -27,7 +27,7 @@ xref:technical_specs/C04.adoc[Message - C04 Patient has gone off a clinical tria
 
 xref:technical_specs/C05.adoc[Message - C05 Patient enters phase of clinical trial]
 
-xref:technical_specs/C06.adoc[Message - C06 Cancel patient entering a phase (clerical mistake)]
+xref:technical_specs/C06.adoc[Message - C06 Cancel patient entering a phase]
 
 xref:technical_specs/C07.adoc[Message - C07 Correct/update phase information]
 
