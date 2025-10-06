@@ -1,5 +1,3 @@
-This is just a draft.  Do we want to make assignments based on the historical chapters or based on the rearranged domains?  For the sake of just getting something started, here are the chapters...
-
 Chapter 1: Update Author: 
 
 Chapter 2: Update Author: 
@@ -20,11 +18,7 @@ Chapter 6: Update Author: Craig Newman  Reviewer: Riki - **Pull Request created,
 
 Chapter 7 (General): Update Author: Hans Buitendijk  Reviewer:
 
-Chapter 7 (Product Experience): Update Author: Craig Newman  Reviewer:
-
-Chapter 7 (Clinical Trials): Update Author: Craig Newman  Reviewer:
-
-Chapter 7 (Specimen Shipment): Update Author: Craig Newman  Reviewer:
+Chapter 7 (Product Experience, Clincal Trials and Specimen Shipment): Update Author: Craig Newman  Reviewer: TBD - **Pull Request created (#12)**
 
 Chapter 8: Update Author: Craig Newman  Reviewer: 
 
