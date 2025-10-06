@@ -6,7 +6,7 @@ FIXME - need to rename the topic from medical_records to document_management
 
 This topic currently supports document management. The main purpose of document management is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
 
-Document/reports supported in this domain will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in Chapter 7, "Observations" (section 7.2 – Purpose).
+Document/reports supported in this topic will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in Chapter 7, "Observations" (section 7.2 – Purpose).
 
 == General Use Cases / Background
 
