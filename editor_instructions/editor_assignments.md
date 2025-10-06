@@ -39,3 +39,5 @@ Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#
 Chapter 16: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#20)
 
 Chapter 17: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#21)
+
+Net New - Addition of text to the general Domains page as well as the Navigation page for each individual domain: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#22)
