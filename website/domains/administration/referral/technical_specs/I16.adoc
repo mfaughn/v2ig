@@ -7,4 +7,3 @@ This event triggers a message to be sent from one healthcare provider to another
 
 [tabset]
 I16
-I16
