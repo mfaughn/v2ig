@@ -68,3 +68,9 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** Into an Introduction Section
 
 * Do we really need chapter 5?
+
+* What should the header for the individual Data Type pages look like?
+** (AD) Data Type - address
+** AD - Address
+** Address (AD) Data Type
+**etc
