@@ -74,3 +74,5 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** AD - Address
 ** Address (AD) Data Type
 ** etc
+
+* In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?
