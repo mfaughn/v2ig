@@ -41,3 +41,5 @@ Chapter 16: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#
 Chapter 17: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#21)
 
 Net New - Addition of text to the general Domains page as well as the Navigation page for each individual domain: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#22)
+
+Net New - Complex data types: pdate Author: Craig Newman  Reviewer: TBD - Pull Request created (#23)
