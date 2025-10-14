@@ -32,7 +32,7 @@ Chapter 12: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#
 
 Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
-Chapter 14: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#18)
+Chapter 14: Update Author: Craig Newman  Reviewer: InM (Riki, Brian) - **Pull Request created, reviewed, merged and deleted** 
 
 Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#19)
 
@@ -42,4 +42,4 @@ Chapter 17: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#
 
 Net New - Addition of text to the general Domains page as well as the Navigation page for each individual domain: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#22)
 
-Net New - Complex data types: pdate Author: Craig Newman  Reviewer: TBD - Pull Request created (#23)
+Net New - Complex data types: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#23)
