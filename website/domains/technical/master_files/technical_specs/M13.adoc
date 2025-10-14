@@ -6,8 +6,9 @@
 [v291_section="8.4.2"]
 The MFN General master file notification transaction is used where the master file is a simple one that contains only a key and the text value of that key. Both values are carried in _MFE-4 - Primary Key Value - MFE_. The specific master file being updated is identified by _MFI-1 - Master File Identifier_ and _MFI-2 - Master Files Application Identifier_.
 
-[v291_section="8.4.2.1"]
-The MFA segment carries acknowledgment information for the corresponding MFE segment (identified by MFA-5 - Primary Key Value - MFA). Fields _MFE-4 - Primary Key Value - MFE_ and _MFA-5 - Primary Key Value - MFA_ provide the link between the corresponding segments.
-
 [tabset]
 M13
+
+[v291_section="8.4.2.1"]
+=== MFK Use Note ===
+The MFA segment carries acknowledgment information for the corresponding MFE segment (identified by MFA-5 - Primary Key Value - MFA). Fields _MFE-4 - Primary Key Value - MFE_ and _MFA-5 - Primary Key Value - MFA_ provide the link between the corresponding segments.
