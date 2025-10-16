@@ -21,6 +21,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 **	5.11 (5.10 in v2.9.1) – outstanding issues (move to Jira if still an issue??)
 
 * Decide on where to put Item Inventory and Master File content
+** Moved to content from Chapter 17 to Chapter 8
 
 * Review the "rules" in Chapter 12 relative to general guidance in Chapter 2
 
