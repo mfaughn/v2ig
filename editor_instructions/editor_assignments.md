@@ -18,11 +18,11 @@ Chapter 6: Update Author: Craig Newman  Reviewer: Riki - **Pull Request created,
 
 Chapter 7 (General): Update Author: Hans Buitendijk  Reviewer:
 
-Chapter 7 (Product Experience, Clinical Trials and Specimen Shipment): Update Author: Craig Newman  Reviewer: TBD - **Pull Request created (#12)**
+Chapter 7 (Product Experience, Clinical Trials and Specimen Shipment): Update Author: Craig Newman  Reviewer: TBD - **Pull Request created (#12)** - Reviewed by Riki with comments
 
-Chapter 8: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#13)
+Chapter 8: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request created (#13)- reviewed with comments
 
-Chapter 9: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#14)
+Chapter 9: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request created (#14)
 
 Chapter 10: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#15)
 
