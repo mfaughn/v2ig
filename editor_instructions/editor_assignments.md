@@ -34,7 +34,7 @@ Chapter 13: Update Author: Ralf Herzog  Reviewer:
 
 Chapter 14: Update Author: Craig Newman  Reviewer: InM (Riki, Brian) - **Pull Request created, reviewed, merged and deleted** 
 
-Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#19)
+Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#19) - Riki reviewed with comments
 
 Chapter 16: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#20)
 
