@@ -3,7 +3,8 @@
 :v2_section_name: "QBP/RSP – Query Information (Event Q25/K25)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-.The following trigger event is served by the following Conformance Statement: Another application determines a need for Personnel data about a person and sends a query to a system providing this information.
+The following trigger event is served by the following Conformance Statement: Another application determines a need for Personnel data about a person and sends a query to a system providing this information.
+
 [width="100%",cols="39%,61%",options="header",]
 |===
 |Conformance Statement ID: |Q25
@@ -21,7 +22,6 @@
 [tabset]
 Q25
 
-.There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
 [width="100%",cols="11%,14%,8%,3%,6%,8%,3%,3%,8%,8%,9%,8%,11%",options="header",]
 |===
 |Fld. Seq. |ColName a|

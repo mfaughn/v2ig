@@ -7,12 +7,3 @@ An event B04 signals that a staff member is available for work (e.g., schedules 
 
 [tabset]
 B04
-
-
-
-There is not supposed to be an Application Level acknowledgement to an Application Level Acknowledgement message. In Enhanced Mode, MSH-16 in the Application Acknowledgement message SHALL always be set to NE (Never).
-
-
-
-
-
