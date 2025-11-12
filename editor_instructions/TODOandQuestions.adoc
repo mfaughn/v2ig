@@ -76,4 +76,6 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** Address (AD) Data Type
 ** DECISION: use AD - Address
 
+*  (from Riki) I thought we handle all queries in the same place - for exmaple, in Chapter 15 should the Q25_K25 doc be moved to the query section insted of remaining in the personnel management section?
+
 * In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?
