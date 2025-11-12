@@ -3,63 +3,30 @@
 == Introduction
 [v291_section="17.3"]
 
-This Materials Management chapter defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility. There are two basic types of messages defined in this chapter: _inventory item master file updates, and supply item sterilization messages_.
+This Materials Management topic defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility.
 
-The inventory item master file segments published in this chapter are based on master file add and update messages between applications such as _materials management, scheduling, and sterilization applications._
+The sterilization (GLOSSARY) and decontamination (GLOSSARY) messages are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer (GLOSSARY) or washer (GLOSSARY).
 
-The sterilization and decontamination messages published in this chapter are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer or washer.
-
-This chapter describes various roles under which applications might operate. The roles discussed in this chapter illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
-
-This chapter defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this chapter were constructed using the HL7 Encoding Rules.
+This topic describes various roles under which applications might operate. The roles discussed here illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.
 
 == General Use Cases / Background
-
-=== Inventory Item Master Updates
-[v291_section="17.3.1"]
-
-The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. These inventory item master segments are used with trigger event M15 – Inventory Item Master File Message , and M16 – Inventory Item Master File Message – Enhanced. The message structures of these events are published in Chapter 8 - Master Files.
-
-==== Item Master Catalog
-[v291_section="17.3.1.0"]
-
-The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a domain such as Inventory, Scheduling, Pharmacy, and Sterilization.
-
-==== Inventory Locations
-[v291_section="17.3.1.1"]
-
-Inventory locations contain a list of items that are stocked at the location, or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
-
-The following are the primary attributes of a supply item:
-
-Unique identification code
-
-• The unique identification code for a supply item describes a relation to a supply that can be ordered. This would likely be a catalog number specific to a manufacturer of the supply item.
-
-Supply Item Description
-
-• The name or text description of the supply item provides a human-readable identification of the supply.
-
-Supply Item Type
-
-• This attribute describes a type or class of supply items. This would typically be a supply type such as office supplies, OR supplies, or laboratory supplies.
 
 === Sterilization and Decontamination
 [v291_section="17.3.2"]
 
-Sterilization and decontamination messages in this chapter are exchanged between a sterilizer or washer and an Instrument-tracking System.  The main focus of the sterilization and decontamination process is a load or grouping of _supply items_. These messages communicate sterilizer configuration, sterilizer lot, and device and cycle data messages related to instances of sterilizing and decontaminating supply items.
+Sterilization and decontamination messages in this topic are exchanged between a sterilizer (GLOSSARY) or washer (GLOSSARY) and an Instrument-tracking System.  The main focus of the sterilization and decontamination process is a load or grouping of _supply items_. These messages communicate sterilizer configuration, sterilizer lot, and device and cycle data messages related to instances of sterilizing and decontaminating supply items.
 
-_Sterilization_ is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide gas.
+_Sterilization_ is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide gas (GLOSSARY).
 
-_Decontamination_ is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. \{29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.
+_Decontamination_ is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. {29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.
 
-Steam sterilizers have defined cycles that achieve sterilization by attaining certain temperatures for specific lengths of time. These cycles are validated using AAMI (Association for Advancement of Medical Instrumentation) standards.
+Steam sterilizers have defined cycles (GLOSSARY) that achieve sterilization by attaining certain temperatures for specific lengths of time. These cycles are validated using Association for Advancement of Medical Instrumentation (AAMI) standards.
 
-Ethylene Oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer's research to achieve sterilization at specific temperatures and exposure times to the sterilant.
+Ethylene oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer's research to achieve sterilization at specific temperatures and exposure times to the sterilant.
 
 Sterilization and decontamination cycles are defined as a sequence of steps or phases that are designed to achieve sterilization or decontamination.
 
-Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for Ethylene Oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.
+Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for ethylene oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.
 
 The following tables contain examples of typical cycles for sterilizers and washers.
 
@@ -67,8 +34,8 @@ The following tables contain examples of typical cycles for sterilizers and wash
 [width="100%",cols="16%,18%,13%,15%,38%",options="header",]
 |===
 |Cycles |Sterilize Temperature |Sterilize Time |Dry Time |Recommended Load
-|Express |270°F (132°C) |4.0 Min |3.0 MIN. |Single wrapped instrument tray with a single instrument. Non-porous good, only.
-|Flash |270°F (132°C) |3.0 MIN |1.0 MIN |Unwrapped instrument tray with a single instrument
+|Express |270°F (132°C) |4.0 min |3.0 min |Single wrapped instrument tray with a single instrument. Non-porous good, only.
+|Flash |270°F (132°C) |3.0 min |1.0 min |Unwrapped instrument tray with a single instrument
 |===
 
 .Prevacuum Testing Cycles for Steam Sterilizers
@@ -76,8 +43,8 @@ The following tables contain examples of typical cycles for sterilizers and wash
 |===
 |Prevacuum Testing Cycles |Sterilizer Temperature |Sterilize Time |Dry Time |Recommended Load
 |Leak Test |270°F (132°C) |N/A |N/A |N/A
-|Dart Test |270°F (132°C) |3½ MIN. |1.0 MIN |Bowie-Dick Test or DART
-|Dart Warmup |270°F (132°C) |3.0 MIN. |1.0 MIN. |N/A
+|Dart Test |270°F (132°C) |3.5 min |1.0 min |Bowie-Dick Test or DART
+|Dart Warmup |270°F (132°C) |3.0 min |1.0 min |N/A
 |===
 
 === Application roles
@@ -92,64 +59,43 @@ In this specification, the definition of application roles is not intended to de
 === Trigger Events
 [v291_section="17.4"]
 
-This chapter defines trigger events used to communicate supply item information between applications.
-
-The inventory item master file notification trigger events are defined in Chapter 8, Master Files. The sterilization and decontamination related trigger events in this chapter are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
+This topic defines trigger events used to communicate supply item information between applications. The sterilization and decontamination related trigger events are defined in section _17.5_, "_Inventory Item Master Messages Segments_," and _17.6_, "_Placer Application Requests and Trigger Events_."
 
 === Statuses
 [v291_section="17.4.1"]
 
-The status of a supply item describes the state of the supply item in the item master catalog and at an inventory location. Typical statuses of a supply item may include the following: Active, Pending Inactive, and Inactive.
-
 The status of a load describes the state of a load during a sterilization cycle. Typical statuses of a load may include the following: Pending, Active, Complete, and Canceled.
 
-=== Organization of This Chapter: Trigger Events and Message Definitions
+=== Trigger Events and Message Definitions
 [v291_section="17.4.3"]
 
-This specification contains four functional groupings of trigger events and message definitions. The trigger events within each of the placer, filler, and query functional groupings share the same or similar message definitions.
+This specification contains functional groupings of trigger events and message definitions. The trigger events within each functional grouping share the same or similar message definitions.
 
-The first functional grouping of trigger events and message definitions describes the common master file notification messages for use of the record level events for adds, deletes, updates, deactivations, and reactivations. This functional grouping is specific to the item master inventory messages.
-
-The second functional grouping of trigger events and message definitions describes _placer request transactions_. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.6_, "_Placer Application Requests and Trigger Events_."
+The first functional grouping of trigger events and message definitions describes _placer request transactions_. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.6_, "_Placer Application Requests and Trigger Events_."
 
 The second functional grouping describes trigger events and message definitions for _unsolicited transactions_ from applications acting in the filler application role. This grouping describes the unsolicited messages originating from an application fulfilling the filler role, and the response messages sent back by applications fulfilling the auxiliary role. These messages are described in section _17.7_, "_Filler Application Messages and Trigger Events Unsolicited_."
-
-The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for defining abstract messages."
 
 ==== Update mode
 [v291_section="17.4.3.0"]
 
-This chapter uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.15.4, "Modes for updating via repeating segments," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, section 2.15.4.2, "Action code/unique identifier mode update definition."
-
-=== Inventory Item Master Messages Segments
-[v291_section="17.5"]
-
-This section describes the segments described in the Inventory Item Master File Message (Event M15) and Inventory Item Master File Message - Enhanced (Event M16) master file messages. The description of these events and the messages structures are published in Chapter 8, Master Files. The M15 Inventory Item Master File trigger event and the IIM inventory item master segment is a limited implementation. The M16 Inventory Item Master File - Enhanced trigger event is a comprehensive Materials Management message.
-
-The enhanced inventory item master message communicates additions and updates of supply items and their attributes from a general supply location to additional supply locations within a healthcare facility.
-
-The general supply inventory location sends a transaction to multiple inventory locations with this trigger event, communicating adds and changes to item master catalog and inventory supply items.
-
-The ILT segment formerly published in v2.5 Chapter 8, Master Files, will now be published in this chapter because of its use in the Materials Management domain.
+This topic uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.15.4, "Modes for updating via repeating segments," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, section 2.15.4.2, "Action code/unique identifier mode update definition."
 
 == Technical Specs
 
-== Placer Application Requests and Trigger Events
+=== Placer Application Requests and Trigger Events
 [v291_section="17.6"]
 
-Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the *SLR, STI, SDR,* or *SMD* message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the *SLS, STS, SDS,* or *SMS* message types, to either grant or deny the requests from the placer application.
+Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the *SLR*, *STI*, *SDR,* or *SMD* message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the *SLS*, *STS*, *SDS,* or *SMS* message types, to either grant or deny the requests from the placer application.
 
-When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined in this chapter. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use).
+When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined here. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use).
 
-After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this chapter, an application accept from the filler means that the request was processed and accepted by the filler.
+After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this topic, an application accept from the filler means that the request was processed and accepted by the filler.
 
 An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the filler system is down, or there was an internal error).
 
 There are no unsolicited messages initiated from a filler application defined in this set of trigger events. Those messages and trigger events are defined below, in section _17.7_, "_Filler Application Messages and Trigger Events Unsolicited_."
 
 All of the trigger events associated with placer request and filler response transactions use the message definitions that follow:
-
-
 
 xref:technical_specs/S28.adoc[Message - S28 Request New Sterilization Lot]
 
@@ -168,7 +114,7 @@ Unsolicited transactions from filler applications are the messages and trigger e
 
 As the discussion of application roles has indicated above, any one application can have more than one application role. If it is important that the application acting in the placer application role in your messaging environment be notified of unsolicited sterilization configurations, then it must also support the role of an auxiliary application.
 
-When initiating a notification transaction, the filler application will generate and send an *STC, SLN, SDN,* or *SCN* message containing all of the information necessary to communicate the desired information to the auxiliary application. All required segments and fields (both explicitly required and conditionally required) should be provided by the filler application, as defined in this chapter. When the auxiliary application receives the transaction, it acknowledges with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use). After processing the notification at the application level, the auxiliary application acknowledges the transaction with the appropriate application acknowledgment in an *ACK* message (assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes (detailed in Chapter 2) in the context of this chapter, an application accept from the auxiliary application means that the notification was processed and accepted. An application error from the auxiliary application means that the auxiliary application was unable to process the notification at the application level. An application reject from the auxiliary application means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the system is down, or there was an internal error).
+When initiating a notification transaction, the filler application will generate and send an *STC*, *SLN*, *SDN,* or *SCN* message containing all of the information necessary to communicate the desired information to the auxiliary application. All required segments and fields (both explicitly required and conditionally required) should be provided by the filler application. When the auxiliary application receives the transaction, it acknowledges with the appropriate accept acknowledgment using an *ACK* message (assuming that the enhanced acknowledgment mode is in use). After processing the notification at the application level, the auxiliary application acknowledges the transaction with the appropriate application acknowledgment in an *ACK* message (assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes (detailed in Chapter 2) in this context, an application accept from the auxiliary application means that the notification was processed and accepted. An application error from the auxiliary application means that the auxiliary application was unable to process the notification at the application level. An application reject from the auxiliary application means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the system is down, or there was an internal error).
 
 xref:technical_specs/S33.adoc[Message - S33 Notification of Sterilization Configuration]
 
@@ -182,42 +128,24 @@ xref:technical_specs/S37.adoc[Message - S37 Notification of Anti-Microbial Devic
 
 == Examples
 
-=== Inventory Item Master Catalog Add - Event M16
-[v291_section="17.10.1"]
-
-An inventory clerk in the General Supply Inventory location has added a new supply item to the item master catalog. A Master File Add message is sent (MAD) to notify selected inventory locations that this supply item has been added to the item master catalog
-
-[er7]
-MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|200408150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL|||<cr>
-MFI|INV|MATERIALSYS|UPD|200408121100|SU|<cr>
-MFE|MAD|F589|200408121100|JMC090387^^JMFcr>
-SFT|COMPAPP|9.0.0|MATIERALSYS|4500|200401010700|<cr>
-UAC| KERB|MATSYS|AP|Octet-stream|A|Clerk|<cr>
-ITM|10001|Formula 8oz|A|SUP|DietaryFormula|Y|ALR|MANUFACTURER|F589|ALR900||Y|300-0001^FormulaAlim_8oz|4.92|Y||FDA|N||100-9088-37887|20|29.75|N|N|N||||REF|<cr>
-VND|001|M00933|VENDOR|FV9975|Y|<cr>
-VND|002|M00934|VENDOR2|FV9976|N|<cr>
-PKG|001|CS|6|Y|5|29.50|30.25|200409030100|<cr>
-PKG|002|EA|N|1|4.92|5.04|200409030100|<cr>
-PCE|001|9188|300-0002|5.35|<cr>
-ITV|001|GS^General Stores|CS^Central Supply|1|GS-031|CS|EA|100-9200-00000|Y|300-0001|4.95||Y|N|N||||M|30|450|100|400|N|<cr>
-MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|200408150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL|||<cr>
-MSA|CA|8000|||||<cr>
-
 === Request New Sterilization Lot - Event S28
 [v291_section="17.10.2"]
 
 The sterilizer operator is preparing to run a flash sterilizer load. The sterilizer requests a lot number from the instrument-tracking system to assign to the load.
 
 [er7]
-MSH|^~\&|Sterila|FacilB|Instrutrak|FacilA|200410010800||SLR^S28 SLR_S28|021244STER|P|2.9|||AL|AL||||||<cr>
-SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|200402140900|<cr>
-UAC|KERB|MATSYS|AP|Octet-stream|A|Clerk|<cr>
-SLT|87995|DEVICE NAME|A46|LF4|1435567677<cr>
-MSH|^~\&|Sterila|FacilB|Instrutrak|FacilA|200410010800||ACK^S28^ACK|021244STER|P|2.9|||NE|NE||||||<cr>
-MSA|CA|021244STER||||<cr>
-MSH|^~\&|Instrutrak|FacilB|Sterila|FacilA|2004010010801||SLS^S28 SLR_S28|021244STER|P|2.9|||AL|NE|||||<cr>
-SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|200402140900|<cr>
-UAC|KERB|MATSYS|AP|Octet-stream|A|Admin|<cr>
-SLT|01||||<cr>
-MSH|^~\&|Instrutrak|FacilB|Sterila|FacilA|2004010010801||SLS^S28|021244STER|P|2.9|||NE|NE||||||<cr>
-MSA|CA|021244STER||||<cr>
+MSH|^~\&|Sterila|FacilB|Instrutrak|FacilA|202510010800||SLR^S28^SLR_S28|021244STER|P|2.9|||AL|AL
+SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|202502140900
+UAC|KERB|MATSYS|AP|Octet-stream|A|Clerk
+SLT|87995|DEVICE NAME|A46|LF4|1435567677
+
+MSH|^~\&|Sterila|FacilB|Instrutrak|FacilA|202510010800||ACK^S28^ACK|021244STER|P|2.9|||NE|NE
+MSA|CA|021244STER
+
+MSH|^~\&|Instrutrak|FacilB|Sterila|FacilA|2025010010801||SLS^S28^SLR_S28|021244STER|P|2.9|||AL|NE
+SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|202502140900
+UAC|KERB|MATSYS|AP|Octet-stream|A|Admin
+SLT|01
+
+MSH|^~\&|Instrutrak|FacilB|Sterila|FacilA|2025010010801||SLS^S28^SLR_S28|021244STER|P|2.9|||NE|NE
+MSA|CA|021244STER
