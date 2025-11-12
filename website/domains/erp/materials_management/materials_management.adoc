@@ -14,17 +14,17 @@ This topic describes various roles under which applications might operate. The r
 === Sterilization and Decontamination
 [v291_section="17.3.2"]
 
-Sterilization and decontamination messages in this topic are exchanged between a sterilizer (GLOSSARY) or washer (GLOSSARY) and an Instrument-tracking System.  The main focus of the sterilization and decontamination process is a load or grouping of _supply items_. These messages communicate sterilizer configuration, sterilizer lot, and device and cycle data messages related to instances of sterilizing and decontaminating supply items.
+The main focus of the sterilization and decontamination process is a load or grouping of _supply items_. These messages communicate sterilizer configuration, sterilizer lot, and device and cycle data messages related to instances of sterilizing and decontaminating supply items.
 
-_Sterilization_ is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide gas (GLOSSARY).
+_Sterilization_ is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide (EO) gas (GLOSSARY).
 
 _Decontamination_ is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. {29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.
 
-Steam sterilizers have defined cycles (GLOSSARY) that achieve sterilization by attaining certain temperatures for specific lengths of time. These cycles are validated using Association for Advancement of Medical Instrumentation (AAMI) standards.
+Steam sterilizers have defined cycles (GLOSSARY) that achieve sterilization by attaining certain temperatures for specific lengths of time (GLOSSARY - point to Cycle Time). These cycles are validated using Association for Advancement of Medical Instrumentation (AAMI) standards.
 
 Ethylene oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer's research to achieve sterilization at specific temperatures and exposure times to the sterilant.
 
-Sterilization and decontamination cycles are defined as a sequence of steps or phases that are designed to achieve sterilization or decontamination.
+Sterilization and decontamination cycles (GLOSSARY) are defined as a sequence of steps or phases that are designed to achieve sterilization or decontamination.
 
 Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for ethylene oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.
 
@@ -43,7 +43,7 @@ The following tables contain examples of typical cycles for sterilizers and wash
 |===
 |Prevacuum Testing Cycles |Sterilizer Temperature |Sterilize Time |Dry Time |Recommended Load
 |Leak Test |270°F (132°C) |N/A |N/A |N/A
-|Dart Test |270°F (132°C) |3.5 min |1.0 min |Bowie-Dick Test or DART
+|Dart Test |270°F (132°C) |3.5 min |1.0 min |Bowie-Dick Test (GLOSSARY) or DART
 |Dart Warmup |270°F (132°C) |3.0 min |1.0 min |N/A
 |===
 
