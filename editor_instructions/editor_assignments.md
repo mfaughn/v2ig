@@ -38,7 +38,7 @@ Chapter 15: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#
 
 Chapter 16: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#20) - Reviewed by Riki with comments
 
-Chapter 17: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#21) - Reviewed by Riki with comments
+Chapter 17: Update Author: Craig Newman  Reviewer: Riki - **Pull Request created, reviewed, merged and deleted** 
 
 Net New - Addition of text to the general Domains page as well as the Navigation page for each individual domain: Update Author: Craig Newman  Reviewer: TBD - Pull Request created (#22)
 
