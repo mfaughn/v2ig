@@ -1,44 +1,50 @@
 = Document Management
+FIXME - need to rename the topic from medical_records to document_management
 
 == Introduction
 [v291_section="9.2"]
 
-This chapter currently supports document management. In the future, it is intended also to support the data exchange needs of applications supporting other medical record functions, including chart location and tracking, deficiency analysis, consents, and release of information. The main purpose of the medical record is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
+This topic currently supports document management. The main purpose of document management is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
 
-Document/reports supported in this chapter will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in 7.2.
+Document/reports supported in this topic will meet the criteria as described in Chapter 7, "Observations" (section 7.2 – Purpose). The appropriate use of MDM messages versus ORU message has been clarified in Chapter 7, "Observations" (section 7.2 – Purpose).
 
-== ASSUMPTIONS
+== General Use Cases / Background
+
+This topic defines the Medical Document Management (MDM) transaction set. It supports transmission of new or updated documents or information about their status(es). The trigger events and messages may be divided into two broad categories. One which describes the status of a document only and the other that describes the status and contains the document content itself.
+
+The document management topic is concerned primarily with the management of those documents and entries which are created as a result of a transcription process. Documents may be represented as a CDA document. See ANSI/HL7 CDA R2.0-2005 Section 3 for the correct method of transmitting CDA documents within an MDM message. These documents are created in two distinct contexts, one of which is related to an order and describes the procedures or activities associated with that order, and another which occurs independently of the order process. In this version we have added the ORC, OBR and associated NTE segments in order to provide full ordering context when appropriate for document management messages. The scope of this section also includes any document that contains data derived from orders or results but which must be treated as aggregate display data due to system limitations. This is a transition strategy to support integration of data across the continuum of care.
+
+The content of a document can be represented with one or more observation segments (OBX). Where headings or separations naturally exist within the text, it is preferred that each of these blocks be represented as a separate OBX record. Where systems are able to decompose the text into separate medical concepts, the most atomic level of granularity of content should be represented, ideally with each medical concept being represented in its own OBX segment. Many of these concepts can be represented as coded entities.
+
 [v291_section="9.5"]
 
-Within this section we have created a single message whose contents vary predicated on the trigger event. The following assumptions are made when the Medical Document Management (MDM) message is used:
+The following assumptions are made when the Medical Document Management (MDM) message is used:
 
-• The application system is responsible for meeting all legal requirements (on the local, state, and federal levels) in the areas of document authentication, confidentiality, and retention.
+* The application system is responsible for meeting all legal requirements (on the local, state, and federal levels) in the areas of document authentication, confidentiality, and retention.
 
-• All documents are unique, and document numbers and file names are not reused.
+* All documents are unique, and document numbers and file names are not reused.
 
-• Documents may be associated with one or more orders.
+* Documents may be associated with one or more orders.
 
-== Technical Specs
-[v291_section="9.6"]
-
-Each triggering event is listed below, along with the applicable form of the message exchange. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for Defining Abstract Messages." There are two classes of events, those which contain notifications only, and those which contain both notifications and content (text contained in OBX segments).
+Each triggering event is listed below, along with the applicable form of the message exchange. There are two classes of events, those which contain notifications only, and those which contain both notifications and content (text contained in OBX segments).
 
 [NOTE]
-Note that the event is encapsulated in MSH-9 and the event segment is deprecated for all MDM message cases as of version 2.5.
-
-When -MSH-9 is valued, the value of EVN-1 must be the same.
+Note that the event is encapsulated in MSH-9 and the Event Type (EVN) segment is deprecated for all MDM message cases as of version 2.5. However, if the EVN segment is present, the value of EVN-1 must be the same as the value of MSH-9.
 
 These triggering events are mainly associated with documents or entries that will be or have been transcribed. The types and appearance of the transcribed documents can vary greatly within a healthcare organization and between organizations. However, the main purpose of the transcription process is to document patient care or diagnostic results in a legible manner; these documents then become part of the legal medical record. The conceptual purpose of document notification is to facilitate updating the receiving system(s) with information from the source system(s), typically dictation or transcription systems, to indicate that an electronic document has been created or altered. The document notification message can be attached to an entire document (i.e., transcribed document) or can be transmitted stand-alone. In either case, the document notification is transmitted in the form of an unsolicited update or in response to a record-oriented query. A document notification message can be created under a variety of circumstances such as when: 1) dictation has been completed; 2) a document has been transcribed; or, 3) the status of a document has been changed, i.e., when a document has been authenticated.
 
 Also, the orders represented by the ORC/OBR segments must be wholly and exclusively satisfied by the TXA/OBX content. "Wholly satisfied" means there are no other orders related to the TXA/OBX content other than those specified by the ORC/OBR segments. "Exclusively satisfied" means that the actions described by the ORC/OBR segments do not contain actions not addressed by the TXA/OBX content. Thus, the TXA/OBX context must satisfy all instances of ORC/OBR as indicated by _ORC-7 Quantity/Timing,_ _OBR-27 Quantity/Timing_ or the TQ1/ TQ2 segments.
 
-• The placer order number may exist in the ORC, OBR and TXA. If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
+* The placer order number may exist in the ORC, OBR and TXA. If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
 
-• The filler order number may exist in the ORC, OBR and TXA. If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
+* The filler order number may exist in the ORC, OBR and TXA. If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
 
-• Generally the _OBR-32 Principal interpreter_ and the _TXA –22.1 Authentication person_ are conceptually the same. Normally only the _TXA-22.1_ should be valued. If both are valued, the _TXA-22.1_ takes precedence.
+* Generally, the _OBR-32 Principal interpreter_ and the _TXA –22.1 Authentication person_ are conceptually the same. Normally only _TXA-22.1_ should be valued. If both are valued, _TXA-22.1_ takes precedence.
 
-The _OBR-35 Transcriptionist_ and the _TXA –11 Transcriptionist_ are conceptually the same. Normally only the _TXA-11_ should be valued. If both are valued, the _TXA-11_ takes precedence.
+* Generally, the _OBR-35 Transcriptionist_ and the _TXA –11 Transcriptionist_ are conceptually the same. Normally only _TXA-11_ should be valued. If both are valued, _TXA-11_ takes precedence.
+
+== Technical Specs
+[v291_section="9.6"]
 
 xref:technical_specs/T01.adoc[Message - T01 Document]
 
@@ -70,14 +76,14 @@ xref:technical_specs/T11.adoc[Message - T11 Document Cancel]
 The following is an example of an original transmission of a history and physical examination which has been authenticated prior to this message being initiated:
 
 [er7]
-MSH|...<cr>
-EVN|T02|19960215154405||04|097220^Seven^Henry^L^ ^Dr^MD^| <cr>
-PID|...<cr>
-PR1|...<cr>
-TXA|0001|HP^history & physical|TX^text|19960213213000|099919^Everyman^Adam^A^ ^Mr^MS^|19960213153000|19960215134500||099919^Everyman^Adam^A^III^Mr^MS^|097220^Seven^Henry^L^ ^Dr^MD^|01234567^Contact^Carrie^C^Ms|1996021500001^transA|||example.doc|LA|UC|AV||AC|||||097220^Seven^Henry^L^ ^Dr^MD^| <cr>
-OBX|1|CE|2000.40^CHIEF COMPLAINT|| ... <cr>
-OBX|2|ST|2000.01^SOURCE||PATIENT <cr>
-OBX|3|TX|2000.02^PRESENT ILLNESS||SUDDEN ONSET OF CHEST PAIN. 2 DAYS, PTA ASSOCIATED WITH NAUSEA, VOMITING & SOB. NO RELIEF WITH ANTACIDS OR NTG. NO OTHER SX. NOT PREVIOUSLY ILL.<cr>
+MSH|...
+EVN|T02|20250215154405||04|097220^Seven^Henry^L^ ^Dr^MD
+PID|...
+PR1|...
+TXA|0001|HP^history & physical|TX^HL70270|20250213213000|099919^Everyman^Adam^A^^Mr^MS^|20250213153000|20250215134500||099919^Everyman^Adam^A^III^Mr^MS|097220^Seven^Henry^L^Dr^MD^|01234567^Contact^Carrie^C^Ms|2025021500001^transA|||example.doc|LA|UC|AV||AC|||||097220^Seven^Henry^L^ ^Dr^MD
+OBX|1|CE|2000.40^CHIEF COMPLAINT^L| ... 
+OBX|2|ST|2000.01^SOURCE^L||PATIENT| ...
+OBX|3|TX|2000.02^PRESENT ILLNESS^L||SUDDEN ONSET OF CHEST PAIN. 2 DAYS, PTA ASSOCIATED WITH NAUSEA, VOMITING & SOB. NO RELIEF WITH ANTACIDS OR NTG. NO OTHER SX. NOT PREVIOUSLY ILL.
 .
 .
 and so on.
@@ -85,13 +91,13 @@ and so on.
 === Document Folder
 [v291_section="9.8.2"]
 
-Hospital A creates a psychiatric report. It sends a notification to hospital B.
+Hospital A creates a psychiatric report. It sends a notification to Hospital B.
 
 [er7]
-MSH|^~\&|SENDAPP|SENDFAC|RECAPP|RECFAC|200411261008||MDM^T01^MDM_T01|167865|P|2.9
-EVN|T01|200811261007|200811261007|60012|10107
-PID|1|1011684|1011684||Jurgensen^Antoine^^||197710220000|F|||Hubertweg^^Stuttgart^^70173^DE|||||M|CAT||4390271065||||Karlsruhe|N||
-PV1|1|I|STATION^^^3200^^13372100|A^^301||||||||||||N|||0460005110||K|||||||||||||||||||||||200811160916|||||
-TXA|1|Psychiatric Disabilities Report|PDF|||||20081126100756 ||||570531^SENDFAC||||1081007_2874942_570531_26100756.PDF|DO|||||||PSY^psychiatric document^^1.2.4481222~WEB^web document^^1.2.4481223
+MSH|^~\&|SENDAPP|SENDFAC|RECAPP|RECFAC|202511261008||MDM^T01^MDM_T01|167865|P|2.9
+EVN|T01|202511261007|202511261007|60012|10107
+PID|1||1011684^^^^MR||Jurgensen^Antoine||197710220000|F|||Hubertweg^^Stuttgart^^70173^DE|||||M|CAT||4390271065||||Karlsruhe|N
+PV1|1|I|STATION^^^3200^^13372100|A^^301||||||||||||N|||0460005110||K|||||||||||||||||||||||202511160916
+TXA|1|PC^Psychiatric consultation^HL70270||||||20251126100756||||570531^SENDFAC||||1081007_2874942_570531_26100756.PDF|DO|||||||PSY^psychiatric document^^1.2.4481222~WEB^web document^^1.2.4481223
 
-Hospital B receives the document. Hospital A and B have negotiated the folder definitions in the form of a catalog (the exchange is out of scope of this document). Therefore, Hospital B knows the document should only be accessible to psychiatrists and should be available in the patient's personal web access. This is only an example; document folder interpretation is up to the systems and out of scope of this proposal.
+Hospital B receives the document. Hospital A and B have negotiated the folder definitions in the form of a catalog (the exchange is out of scope of this document). Therefore, Hospital B knows the document should only be accessible to psychiatrists and should be available in the patient's personal web access. This is only an example; document folder interpretation is up to the systems and out of scope of this section.
