@@ -24,7 +24,7 @@ Chapter 8: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request cr
 
 Chapter 9: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request created (#14) - Reviewed by Riki with comments
 
-Chapter 10: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request created (#15) - Reviewed by Riki with comments
+Chapter 10: Update Author: Craig Newman  Reviewer: Riki - **Pull Request created, reviewed, merged and deleted** 
 
 Chapter 11: Update Author: Craig Newman  Reviewer: Riki Merrick - Pull Request created (#16)  - Reviewed by Riki with comments (twice :O)
 
