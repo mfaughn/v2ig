@@ -5,7 +5,7 @@
 
 In most cases in the health field, consent must be "informed" consent. This means that the consenting individual must understand and appreciate the implications of what they are consenting to. Most consent processes involve providing background material describing the reasons for the proposed service, expected benefits and potential risks. It is important to have a record of what information was presented to the subject at the time of consent.
 
-The base HL7 v2 standard does not define specific events or message types associated with gathering or sharing patient consent, however the Consent (CON) segment is incorporated into in a variety of message definitions where it can be used for patient consent information sharing related to a particular message
+The base HL7 v2 standard does not define specific events or message types associated with gathering or sharing patient consent, however the Consent (CON) segment is incorporated into in a variety of message definitions where it can be used for patient consent information sharing related to a particular message.
 
 == General Use Cases / Background
 
