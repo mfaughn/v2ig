@@ -34,7 +34,7 @@ The Master Files Notification message supports the distribution of changes to va
 [NOTE]
 The MFE segment is not the master file record, but only specifies its identifier, event, and event dates. The master file record so identified is contained in either Z-segments (not recommended) or HL7-defined segments immediately following the MFE segment. This record may be either a flat record contained in a single segment, or a complex record needing more than a single segment to carry its data and (usually hierarchical) structure.
 
-The master file segments commonly needed across HL7 applications as well as those specific to the various application chapters, are defined in elsewhere in this section.
+The master file segments commonly needed across HL7 applications as well as those specific to the various application chapters, are defined elsewhere in this section.
 
 A given master files message concerns only a single master file. However, the provision of a record-level event code (and requested activation date) on the MFE and the MFA segments allows a single message to contain several types of changes (events) to that file.
 
