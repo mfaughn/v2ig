@@ -51,7 +51,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 * The P03 (Common Order Group) and P11 message definitions in Chapter 6 contain footnotes and notes. How should these be rendered?
 
 * Can we convert footnotes to regular text?
-** check with Lynn to see if these are normative now
+** Per Lynn (asking if footnotes are normative and cannot be changed) - I don’t think there’s an issue with changing the location of the content of the footnotes for V2+. The whole thing is a migration to the web format so why not change the footnotes.
 
 *	Should Patient Care (Chapter 12) be updated from "patient care" to "problem-oriented records" to be more specific?
 **	Something similar seems to have been done for Medical Records (Chapter 9)/Document Management
@@ -69,6 +69,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** Into an Introduction Section
 
 * Do we really need chapter 5?
+** Yes as this is a normative document
 
 * What should the header for the individual Data Type pages look like?
 ** (AD) Data Type - address
