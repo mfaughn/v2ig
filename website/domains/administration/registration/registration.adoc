@@ -5,7 +5,7 @@ The Patient Administration transaction set provides for the transmission of new 
 
 Generally, information is entered into a Patient Administration system and passed to the nursing, ancillary and financial systems either in the form of an unsolicited update or a response to a record-oriented query.
 
-This chapter defines the transactions that occur at the seventh level, that is, the abstract messages. The examples included in this chapter were constructed using the HL7 Encoding Rules.
+This topic defines the transactions that occur at the seventh level, that is, the abstract messages. The examples included in this topic were constructed using the HL7 Encoding Rules.
 
 == Implementation Considerations
 
