@@ -81,6 +81,8 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 * In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?
 
+* In the examples, should MSH-12 be updated to 2.9.1?
+
 == Glossary questions
 
 * Will need to add the Glossary links for "Generic Name" and "Brand Name" to the PCD segment field descriptions, since not in this text here anywhere.
