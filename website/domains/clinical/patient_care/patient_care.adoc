@@ -169,11 +169,6 @@ Applications can have differing orientations for representing problem and goal h
 
 Due to the multiple occurrences of common segments such as Variance (VAR) and Notes (NTE), we have chosen to expand the segment definitions on the message diagrams to explicitly identify the hierarchical relationships. Examples of this would be "Variance (Goal)" and "Variance (Participation)." This does not imply unique segments, but indicates in the first case that the variance is related to its parent Goal, and in the second case that the variance is related to its parent Role.
 
-The notation used to describe the sequence, the optionality, and the repetition of segments is described in Chapter 2, under "Format for defining abstract message."
-
-[NOTE]
-For all message definitions, the "OBR etc." notation represents all possible combinations of pharmacy and other order detail segments, as outlined in Chapter 4 conventions (See section 4.2.2.4, "Order detail segment").
-
 xref:technical_specs/PC6.adoc[Message - PC6 Patient Goal Add]
 
 xref:technical_specs/PC7.adoc[Message - PC7 Patient Goal Update]
