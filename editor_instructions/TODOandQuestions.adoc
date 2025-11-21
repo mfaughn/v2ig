@@ -80,3 +80,17 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 *  (from Riki) I thought we handle all queries in the same place - for exmaple, in Chapter 15 should the Q25_K25 doc be moved to the query section insted of remaining in the personnel management section?
 
 * In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?
+
+== Glossary questions
+
+* Will need to add the Glossary links for "Generic Name" and "Brand Name" to the PCD segment field descriptions, since not in this text here anywhere.
+** Craig - Not sure I like adding hyperlinks in segment field descriptions (and there is no way to do that now, because the segment definitions haven't been added to GitHub (that I know of) for editing. Skipping this for now.
+
+* For this entry "prove causality (GLOSSARY)" - do we need to provide the links to both Causation and Causal Relationship? How would we do that?
+** Craig - deferred until we look at the overall Glossary strategy
+
+* Should the GLOSSARY link to Regulatory agency also be added in what is currently 7.6: "To meet monitoring and analysis requirements, patient registration, treatment, diagnostic, and study summary data are reported to study sponsors like pharmaceutical or medical device companies, regulatory agencies, "?
+** Craig - generally speaking, I only marked the first reference to a term with GLOSSARY.
+
+*  Not sure where to add the reference to "Holder of marketing authorization" in the Glossary.
+** Craig - I guess this is a question of if all terms in the Glossary need to be used in the narrative text. It doesn't seem like we've enforced that requirement before.
