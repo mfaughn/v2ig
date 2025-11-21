@@ -7,13 +7,3 @@ This message is used to send goals from one application to another (e.g., a poin
 
 [tabset]
 PC7
-
-
-
-
-
-
-
-
-This error segment indicates the fields that caused a transaction to be rejected.
-
