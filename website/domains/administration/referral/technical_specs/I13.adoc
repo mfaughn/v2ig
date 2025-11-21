@@ -7,5 +7,3 @@ This event triggers a message to be sent from one healthcare provider to another
 
 [tabset]
 I12
-
-FIXME - confirm that the I12 tabset content is right for events I12 through I15

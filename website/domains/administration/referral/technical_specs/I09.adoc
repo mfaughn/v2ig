@@ -7,5 +7,3 @@ This event triggers a message sent from a healthcare provider to a payor request
 
 [tabset]
 I08
-
-FIXME - confirm that I08 is right for Events I08  through I11

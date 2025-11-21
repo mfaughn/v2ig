@@ -7,5 +7,3 @@ This event triggers a message to be sent from one healthcare provider to another
 
 [tabset]
 I16
-
-FIXME - confirm that the I16 message tabset is OK for events I16 through I18
