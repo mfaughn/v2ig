@@ -6,5 +6,4 @@
 If a previously submitted request for treatment authorization is rejected or canceled, this event could trigger a resubmission message for a referenced authorization. For example, the payor may have rejected a request until additional clinical information is sent to support the authorization request.
 
 [tabset]
-I10
-I10
+I08

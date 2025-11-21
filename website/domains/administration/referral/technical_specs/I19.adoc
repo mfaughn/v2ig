@@ -8,6 +8,8 @@ This event triggers a query message to be sent from a referring healthcare provi
 [tabset]
 I19
 
+FIXME -  I think the following tables should be part of the I19 tab set stuff
+
 [width="99%",cols="33%,47%,9%,11%",options="header",]
 |===
 |[\{ GSfile:///D:\Eigene%20Dateien\2018\HL7\Standards\v2.9%20May\716%20-%20New.doc##NK1[P] }] |Person Gender and Sex | |3
