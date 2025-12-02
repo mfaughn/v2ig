@@ -1,4 +1,5 @@
 == CWE.17 - Alternate Coding System OID (ST)
+:target-element: CWE.17
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) for the coding system or value set named in _CWE.6_. Analogous to _CWE.14 Coding System OID_.

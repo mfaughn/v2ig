@@ -1,4 +1,5 @@
 == CX.11 - Security Check (ST)
+:target-element: CX.11
 
 [datatype-definition]
 This component is used to communicate a version code that may be assigned to the value given in _CX.1 ID_.

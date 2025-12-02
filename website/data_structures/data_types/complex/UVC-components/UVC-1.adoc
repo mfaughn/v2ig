@@ -1,4 +1,5 @@
 == UVC.1 - Value Code (CWE)
+:target-element: UVC.1
 
 [datatype-definition]
 Specifies the National Uniform Billing Committee (NUBC) code itself.

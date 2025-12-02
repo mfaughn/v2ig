@@ -1,4 +1,5 @@
 == XPN.13 - Expiration Date (DTM)
+:target-element: XPN.13
 
 [datatype-definition]
 The last date, if known, on which the person name is valid and active.

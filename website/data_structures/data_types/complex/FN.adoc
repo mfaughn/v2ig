@@ -4,6 +4,7 @@
 :code: FN
 :name: family name
 :primitive: false
+:target-element: FN
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

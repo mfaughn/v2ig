@@ -1,4 +1,5 @@
 == DLD.2 - Effective Date (DTM)
+:target-element: DLD.2
 
 [datatype-definition]
 Specifies the date on which the patient was discharged to a healthcare facility.

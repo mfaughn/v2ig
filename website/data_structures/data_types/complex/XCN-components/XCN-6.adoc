@@ -1,4 +1,5 @@
 == XCN.6 - Prefix (ST)
+:target-element: XCN.6
 
 [datatype-definition]
 Used to specify a name prefix (e.g., Dr.).

@@ -4,6 +4,7 @@
 :code: OSP
 :name: occurrence span code and date
 :primitive: false
+:target-element: OSP
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

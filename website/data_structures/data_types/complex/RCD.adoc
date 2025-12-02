@@ -4,6 +4,7 @@
 :code: RCD
 :name: row column definition
 :primitive: false
+:target-element: RCD
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

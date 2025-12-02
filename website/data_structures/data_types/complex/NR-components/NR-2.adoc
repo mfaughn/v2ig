@@ -1,4 +1,5 @@
 == NR.2 - High Value (NM)
+:target-element: NR.2
 
 [datatype-definition]
 The number specifying the high limit or boundary of the range.

@@ -1,4 +1,5 @@
 == CNN.6 - Prefix (ST)
+:target-element: CNN.6
 
 Used to specify a name prefix (e.g., Dr.).
 

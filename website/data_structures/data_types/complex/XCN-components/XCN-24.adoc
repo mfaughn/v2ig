@@ -1,4 +1,5 @@
 == XCN.24 - Security Check (ST)
+:target-element: XCN.24
 
 [datatype-definition]
 This component is used to communicate a version code that may be assigned to the value given in _XCN.1 Person Identifier_.

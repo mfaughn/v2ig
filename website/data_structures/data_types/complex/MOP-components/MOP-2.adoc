@@ -1,4 +1,5 @@
 == MOP.2 - Money or Percentage Quantity (NM)
+:target-element: MOP.2
 
 [datatype-definition]
 Specifies the currency or percentage quantity.

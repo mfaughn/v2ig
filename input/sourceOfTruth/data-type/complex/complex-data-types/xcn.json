@@ -30,7 +30,6 @@
         "id": "XCN.1",
         "path": "XCN.1",
         "short": "Person Identifier",
-        "defintion": "*Definition:* This component carries the Person Identifier itself. XCN.1, in conjunction with XCN.9 uniquely identifies the entity/person.\n\n\n\n_XCN.1_ is required if _XCN.2_ is not populated. Both may be populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component carries the Person Identifier itself. XCN.1, in conjunction with XCN.9 uniquely identifies the entity/person.\n\n*XCN.1* is required if *XCN.2* is not populated. Both may be populated."
       },
       {
         "id": "XCN.2",
         "path": "XCN.2",
         "short": "Family Name",
-        "defintion": "*Definition:* This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section _2A.2.30_, \"_FN - family name_\".\n\n\n\n_XCN.2_ is required if _XCN.1_ is not populated. Both may be populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section *2A.2.30*, \"*FN - family name*\".\n\n*XCN.2* is required if *XCN.1* is not populated. Both may be populated."
       },
       {
         "id": "XCN.3",
         "path": "XCN.3",
         "short": "Given Name",
-        "defintion": "*Definition:* First name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,13 +106,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "First name."
       },
       {
         "id": "XCN.4",
         "path": "XCN.4",
         "short": "Second and Further Given Names or Initials Thereof",
-        "defintion": "*Definition:* Multiple middle names may be included by separating them with spaces.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -139,13 +138,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Multiple middle names may be included by separating them with spaces."
       },
       {
         "id": "XCN.5",
         "path": "XCN.5",
         "short": "Suffix",
-        "defintion": "*Definition:* Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -171,13 +170,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name suffix (e.g., Jr. or III)."
       },
       {
         "id": "XCN.6",
         "path": "XCN.6",
         "short": "Prefix",
-        "defintion": "*Definition:* Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -203,25 +202,25 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name prefix (e.g., Dr.)."
       },
       {
         "id": "XCN.7",
         "path": "XCN.7",
         "short": "Degree",
-        "defintion": "*Attention:* _The XCN-7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v27.._ Refer to _XCN.21 Professional Suffix._\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The XCN-7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v27..* Refer to *XCN.21 Professional Suffix.*"
       },
       {
         "id": "XCN.8",
         "path": "XCN.8",
         "short": "Source Table",
-        "defintion": "*Attention*: _Retained for backwards compatibility only as of v 2.7_. The reader is referred to _XCN.9_ instead.\n\n\n\nfile:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70297[_User-de__fined Table 0297 – CN ID_] source is used as the HL7 identifier for the user-defined table of values for this component. Used to delineate the first component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -238,13 +237,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "B"
           }
-        ]
+        ],
+        "definition": "**Attention**: *Retained for backwards compatibility only as of v 2.7*. The reader is referred to *XCN.9* instead.\n\n*User-de**fined Table 0297 – CN ID* source is used as the HL7 identifier for the user-defined table of values for this component. Used to delineate the first component."
       },
       {
         "id": "XCN.9",
         "path": "XCN.9",
         "short": "Assigning Authority",
-        "defintion": "*Definition:* The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assig__ning Authority_] is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.\n\n\n\nAs of v 2.7, the Assigning Authority is conditional. It is required if _XCN.1_ is populated and neither _XCN.22_ nor _XCN.23_ are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.\n\n\n\nThe reader is referred to _XCN.22_ and _XCN.23_ if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in _XCN.22_ and/or _XCN.23_ conflict with _XCN.9_, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Namespa__ce I__D_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementors may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 – Namespace ID_] for the first sub-component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -261,13 +260,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. *User-defined Table 0363 – Assig**ning Authority* is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.\n\nAs of v 2.7, the Assigning Authority is conditional. It is required if *XCN.1* is populated and neither *XCN.22* nor *XCN.23* are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.\n\nThe reader is referred to *XCN.22* and *XCN.23* if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in *XCN.22* and/or *XCN.23* conflict with *XCN.9*, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence.\n\n> ***NOTE:*** When the HD data type is used in a given segment as a component of a field of another data type, *User-defined Table 0300 - Namespa**ce I**D* (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n> \n> By site agreement, implementors may continue to use *User-defined Table 0300 – Namespace ID* for the first sub-component."
       },
       {
         "id": "XCN.10",
         "path": "XCN.10",
         "short": "Name Type Code",
-        "defintion": "*Definition:* A code that represents the type of name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Nam__e Type_] for valid values. See Section _2A.2.90.7_, \"_Name Type Code (ID)_\".\n\n\n\nAs of v 2.7, _XCN.10_ is conditional. It is required if _XCN.2_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -297,13 +296,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the type of name. Refer to *HL7 Table 0200 - Nam**e Type* for valid values. See Section *2A.2.90.7*, \"*Name Type Code (ID)*\".\n\nAs of v 2.7, *XCN.10* is conditional. It is required if *XCN.2* is populated."
       },
       {
         "id": "XCN.11",
         "path": "XCN.11",
         "short": "Identifier Check Digit",
-        "defintion": "*Definition:* This component contains the digit, or digits, exclusive of the identifier in _XCN.1_, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -329,13 +328,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component contains the digit, or digits, exclusive of the identifier in *XCN.1*, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier."
       },
       {
         "id": "XCN.12",
         "path": "XCN.12",
         "short": "Check Digit Scheme",
-        "defintion": "*Definition:* Contains the code identifying the check digit scheme employed.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 T__able 0061 - Check Digit Scheme_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -365,13 +364,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Contains the code identifying the check digit scheme employed.\n\nRefer to *HL7 T**able 0061 - Check Digit Scheme* for valid values."
       },
       {
         "id": "XCN.13",
         "path": "XCN.13",
         "short": "Identifier Type Code",
-        "defintion": "*Definition:* A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the <assigning authority> component. Refer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29_CH02C_Tables.docx#HL70203[_HL7 Table 0203 - Identifier Type_] for suggested values.\n\n\n\nAs of v 2.7, _XCN.13_ is conditional. It is required if _XCN.1_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -401,13 +400,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the <assigning authority> component. Refer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29*CH02C*Tables.docx#HL70203[*HL7 Table 0203 - Identifier Type*] for suggested values.\n\nAs of v 2.7, *XCN.13* is conditional. It is required if *XCN.1* is populated."
       },
       {
         "id": "XCN.14",
         "path": "XCN.14",
         "short": "Assigning Facility",
-        "defintion": "*Definition:* The place or location identifier where the identifier was first assigned to the person. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Nam__espace ID_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -420,13 +419,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The place or location identifier where the identifier was first assigned to the person. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.\n\n> ***NOTE:*** When the HD data type is used in a given segment as a component of a field of another data type, *User-defined Table 0300 - Nam**espace ID* (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment."
       },
       {
         "id": "XCN.15",
         "path": "XCN.15",
         "short": "Name Representation Code",
-        "defintion": "*Definition:* Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n\n\n*NOTE:* This new component remains in “alphabetic” representation with each repetition of the field using these data types. I.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70465[_HL7 Table 0465 – Name/address Representation_] for valid values.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -456,13 +455,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n> ***NOTE:*** This new component remains in “alphabetic” representation with each repetition of the field using these data types. I.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n> \n> Refer to *HL7 Table 0465 – Name/address Representation* for valid values.\n> \n> In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying."
       },
       {
         "id": "XCN.16",
         "path": "XCN.16",
         "short": "Name Context",
-        "defintion": "*Definition:* This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70448[_User-defined Table 0448 – Name Context_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -479,25 +478,25 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to *User-defined Table 0448 – Name Context* for suggested values."
       },
       {
         "id": "XCN.17",
         "path": "XCN.17",
         "short": "Name Validity Range",
-        "defintion": "*Attention:* _The XCN.17 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to _XCN.19 Effective Date_ and _XCN.20 Expiration Date_ instead.\n\n\n\nThis component contains the start and end date/times that define the period during which this name was valid.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The XCN.17 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.* Refer to *XCN.19 Effective Date* and *XCN.20 Expiration Date* instead.\n\nThis component contains the start and end date/times that define the period during which this name was valid."
       },
       {
         "id": "XCN.18",
         "path": "XCN.18",
         "short": "Name Assembly Order",
-        "defintion": "*Definition:* A code that represents the preferred display order of the components of this person name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70444[_HL7 Table 0444 - Name Assembly Order_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -527,13 +526,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the preferred display order of the components of this person name. Refer to *HL7 Table 0444 - Name Assembly Order* for valid values."
       },
       {
         "id": "XCN.19",
         "path": "XCN.19",
         "short": "Effective Date",
-        "defintion": "*Definition:* The first date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -559,13 +558,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The first date, if known, on which the person name is valid and active."
       },
       {
         "id": "XCN.20",
         "path": "XCN.20",
         "short": "Expiration Date",
-        "defintion": "*Definition:* The last date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -591,13 +590,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The last date, if known, on which the person name is valid and active."
       },
       {
         "id": "XCN.21",
         "path": "XCN.21",
         "short": "Professional Suffix",
-        "defintion": "*Definition:* Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, \"Personnel Management\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -623,13 +622,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, \"Personnel Management\"."
       },
       {
         "id": "XCN.22",
         "path": "XCN.22",
         "short": "Assigning Jurisdiction",
-        "defintion": "*Definition:* The geo-political body that assigned the identifier in _XCN.1_.\n\n\n\nSee section, _2A.2.14.9_, \"_Assigning Jurisdiction (CWE)_\" for further detail.\n\n\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if _XCN.1_ is populated and neither _XCN.9_ nor _XCN.23_ are populated. All 3 components may be populated. The reader is referred to _XCN.9_ if there is a need to transmit this information as an OID.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -642,13 +641,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "The geo-political body that assigned the identifier in *XCN.1*.\n\nSee section, *2A.2.14.9*, \"*Assigning Jurisdiction (CWE)*\" for further detail.\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if *XCN.1* is populated and neither *XCN.9* nor *XCN.23* are populated. All 3 components may be populated. The reader is referred to *XCN.9* if there is a need to transmit this information as an OID."
       },
       {
         "id": "XCN.23",
         "path": "XCN.23",
         "short": "Assigning Agency or Department",
-        "defintion": "*Definition:* The agency or department that assigned the identifier in _XCN.1_.\n\n\n\nSee section _2A.2.14.10_, \"_Assigning Agency or Department (CWE)_\" for further details.\n\n\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if _XCN.1_ is populated and neither _XCN.9_ nor _XCN.22_ are populated. All 3 components may be populated. The reader is referred to _XCN.9_ if there is a need to transmit this information as an OID.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -661,13 +660,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "The agency or department that assigned the identifier in *XCN.1*.\n\nSee section *2A.2.14.10*, \"*Assigning Agency or Department (CWE)*\" for further details.\n\nAs of v 2.7, the Assigning Jurisdiction is conditional. It is required if *XCN.1* is populated and neither *XCN.9* nor *XCN.22* are populated. All 3 components may be populated. The reader is referred to *XCN.9* if there is a need to transmit this information as an OID."
       },
       {
         "id": "XCN.24",
         "path": "XCN.24",
         "short": "Security Check",
-        "defintion": "*Definition:* This component is used to communicate a version code that may be assigned to the value given in _XCN.1 Person Identifier_.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -693,13 +692,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component is used to communicate a version code that may be assigned to the value given in *XCN.1 Person Identifier*."
       },
       {
         "id": "XCN.25",
         "path": "XCN.25",
         "short": "Security Check Scheme",
-        "defintion": "*Definition:* This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70904[_HL7 Table 0904 - Security Check Scheme_] for valid values\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -729,9 +728,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.\n\nRefer to *HL7 Table 0904 - Security Check Scheme* for valid values"
       }
     ]
   },
-  "description": "*Note:* Replaces CN data type as of v 2.3.\n\nThis data type is used extensively appearing in the PV1, ORC, RXO, RXE, OBR and SCH segments, as well as others, where there is a need to specify the ID number and name of a person.\n\nExample without assigning authority and assigning facility:\n\n|1234567^Everyman^Adam^A^III^DR^^ADT01^^L^4^M11^MR|\n\nExamples with assigning authority and assigning facility:\n\nDr. Harold Hippocrates’ provider ID was assigned by the Provider Master and was first issued at Good Health Hospital within the Community Health and Hospitals System. Since IS table values (first component of the HD) were not used for assigning authority and assigning facility, components 2 and 3 of the HD data type are populated and demoted to sub-components as follows:\n\n12188^Hippocrates^Harold^H^IV^Dr^^^&Provider Master.Community Health and Hospitals&L^L^9^M10^DN^&Good Health Hospital.Community Health and Hospitals&L^A\n\nLudwig van Beethoven's medical record number was assigned by the Master Patient Index and was first issued at Fairview Hospital within the University Hospitals System.\n\n10535^van Beethoven&van^Ludwig^A^III^Dr^^^&MPI.Community Health and Hospitals&L^L^3^M10^MR^& Good Health Hospital.Community Health and Hospitals&L^A"
+  "description": "> ***NOTE:*** Replaces CN data type as of v 2.3.\n> \n> This data type is used extensively appearing in the PV1, ORC, RXO, RXE, OBR and SCH segments, as well as others, where there is a need to specify the ID number and name of a person.\n> \n> [example]\n> without assigning authority and assigning facility:\n> \n> |1234567\\^Everyman^Adam\\^A^III\\^DR^\\^ADT01^\\^L^4\\^M11^MR|\n> \n> [example]\n> s with assigning authority and assigning facility:\n> \n> Dr. Harold Hippocrates’ provider ID was assigned by the Provider Master and was first issued at Good Health Hospital within the Community Health and Hospitals System. Since IS table values (first component of the HD) were not used for assigning authority and assigning facility, components 2 and 3 of the HD data type are populated and demoted to sub-components as follows:\n> \n> 12188^Hippocrates^Harold^H^IV^Dr^^^&Provider Master.Community Health and Hospitals&L^L^9^M10^DN^&Good Health Hospital.Community Health and Hospitals&L^A\n> \n> Ludwig van Beethoven's medical record number was assigned by the Master Patient Index and was first issued at Fairview Hospital within the University Hospitals System.\n> \n> 10535^van Beethoven&van^Ludwig^A^III^Dr^^^&MPI.Community Health and Hospitals&L^L^3^M10^MR^& Good Health Hospital.Community Health and Hospitals&L^A"
 }

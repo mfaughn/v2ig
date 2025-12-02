@@ -1,4 +1,5 @@
 == OSP.1 - Occurrence Span Code (CNE)
+:target-element: OSP.1
 
 [datatype-definition]
 The NUBC code itself that identifies an event that relates to the payment of a claim.

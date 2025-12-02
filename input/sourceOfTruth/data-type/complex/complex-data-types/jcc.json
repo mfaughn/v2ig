@@ -30,7 +30,6 @@
         "id": "JCC.1",
         "path": "JCC.1",
         "short": "Job Code",
-        "defintion": "*Definition:* This component contains the person’s job code. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70327[_User-defined Table 0__327 - Job Code_] is used as the HL7 identifier for the user-defined table of values for this component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component contains the person’s job code. *User-defined Table 0**327 - Job Code* is used as the HL7 identifier for the user-defined table of values for this component."
       },
       {
         "id": "JCC.2",
         "path": "JCC.2",
         "short": "Job Class",
-        "defintion": "*Definition:* This component contains the person’s employee classification. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70328[_User-defined Table 0328 - Employee Classification_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,13 +69,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component contains the person’s employee classification. Refer to *User-defined Table 0328 - Employee Classification* for suggested values."
       },
       {
         "id": "JCC.3",
         "path": "JCC.3",
         "short": "Job Description Text",
-        "defintion": "*Definition:* This component contains the text of the job description. This will accommodate systems where job descriptions are not codified.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -89,9 +88,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component contains the text of the job description. This will accommodate systems where job descriptions are not codified."
       }
     ]
   },
-  "description": "Example 1: Codified job (where 1 represents the code for Administrator and F represents full time)\n\n|1^F^Administrator|\n\nExample 2: Uncodified job (where job codes are not codified and PT represents part time)\n\n|^PT^Analyst|."
+  "description": "> ***Example:***\n> \n> 1: Codified job (where 1 represents the code for Administrator and F represents full time)\n> \n> |1\\^F^Administrator|\n> \n> [example]\n> 2: Uncodified job (where job codes are not codified and PT represents part time)\n> \n> |\\^PT^Analyst|."
 }

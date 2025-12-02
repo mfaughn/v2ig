@@ -1,4 +1,5 @@
 == CX.7 - Effective Date (DT)
+:target-element: CX.7
 
 [datatype-definition]
 The first date, if known, on which the identifier is valid and active.

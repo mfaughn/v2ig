@@ -1,4 +1,5 @@
 == ED.3 - Data Subtype (ID)
+:target-element: ED.3
 
 [datatype-definition]
 Identical to “subtype” component in the reference pointer (RP) data type. See Section _2A.2.66.4_, "_Subtype (ID)_".

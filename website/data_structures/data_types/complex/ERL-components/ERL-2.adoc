@@ -1,4 +1,5 @@
 == ERL.2 - Segment Sequence (SI)
+:target-element: ERL.2
 
 [datatype-definition]
 Identifies the segment occurrence within the message. The first occurrence of a segment is assigned the number of 1.

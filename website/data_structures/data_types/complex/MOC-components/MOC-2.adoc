@@ -1,4 +1,5 @@
 == MOC.2 - Charge Code (CWE)
+:target-element: MOC.2
 
 [datatype-definition]
 The code identifying the charge to the ordering entity for the services performed.

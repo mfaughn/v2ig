@@ -4,6 +4,7 @@
 :code: VR
 :name: value range
 :primitive: false
+:target-element: VR
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

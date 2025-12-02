@@ -4,6 +4,7 @@
 :code: DLN
 :name: driver’s license number
 :primitive: false
+:target-element: DLN
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

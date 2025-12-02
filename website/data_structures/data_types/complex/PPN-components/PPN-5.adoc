@@ -1,4 +1,5 @@
 == PPN.5 - Suffix (ST)
+:target-element: PPN.5
 
 [datatype-definition]
 Used to specify a name suffix (e.g., Jr. or III).

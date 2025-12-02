@@ -4,6 +4,7 @@
 :code: FC
 :name: financial class
 :primitive: false
+:target-element: FC
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 include::FC-components/FC-1.adoc[]

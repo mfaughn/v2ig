@@ -30,7 +30,6 @@
         "id": "PLN.1",
         "path": "PLN.1",
         "short": "ID Number",
-        "defintion": "*Definition:* Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number."
       },
       {
         "id": "PLN.2",
         "path": "PLN.2",
         "short": "Type of ID Number",
-        "defintion": "*Definition:* Specifies the type of number.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70338[_User-defined Table 0338 – Practitioner ID Number Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -79,13 +78,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the type of number.\n\nRefer to *User-defined Table 0338 – Practitioner ID Number Type* for suggested values."
       },
       {
         "id": "PLN.3",
         "path": "PLN.3",
         "short": "State/other Qualifying Information",
-        "defintion": "*Definition:* Specifies the state or province in which the license or ID is valid, if relevant, or other qualifying information. It is recommended that state qualifications use the abbreviations from the postal service of the country.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -111,13 +110,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the state or province in which the license or ID is valid, if relevant, or other qualifying information. It is recommended that state qualifications use the abbreviations from the postal service of the country."
       },
       {
         "id": "PLN.4",
         "path": "PLN.4",
         "short": "Expiration Date",
-        "defintion": "*Definition:* Specifies the date when the license or ID is no longer valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -143,9 +142,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the date when the license or ID is no longer valid."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5."
+  "description": "This data type specifies a practitioner’s license number, or other ID number such as UPIN, Medicare and Medicaid number, and associated detail.\n\n> ***NOTE:*** Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5."
 }

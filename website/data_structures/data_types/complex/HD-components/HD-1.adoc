@@ -1,4 +1,5 @@
 == HD.1 - Namespace ID (IS)
+:target-element: HD.1
 
 [datatype-definition]
 The local coded item for the entity. The component intentionally remains associated with the IS data type in v 2.7.

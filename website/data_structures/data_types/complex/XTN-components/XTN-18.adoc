@@ -1,4 +1,5 @@
 == XTN.18 - Preference Order (NM)
+:target-element: XTN.18
 
 [datatype-definition]
 For an entity having multiple telecommunication addresses, indicates which is the "most preferred" (lowest number) to "least preferred" (highest number).

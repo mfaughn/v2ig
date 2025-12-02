@@ -30,7 +30,6 @@
         "id": "WVS.1",
         "path": "WVS.1",
         "short": "Source One Name",
-        "defintion": "*Definition:* This component identifies the first input for the waveform source.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component identifies the first input for the waveform source."
       },
       {
         "id": "WVS.2",
         "path": "WVS.2",
         "short": "Source Two Name",
-        "defintion": "*Definition:* This component identifies the second input for the waveform source if a differential input is used.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,9 +87,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component identifies the second input for the waveform source if a differential input is used."
       }
     ]
   },
-  "description": "*Attention: _Retained for backward compatibility only in v2.7._* It is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.\n\n*Note:* Replaces the CM data type used in 7.14.1.4 OBX-5.2 where OBX-5 Observation value (*) is data type CD as of v 2.5."
+  "description": "**Attention: *Retained for backward compatibility only in v2.7.*** It is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.\n\nThis data type identifies the source of the waveform connected to a channel.\n\n> ***NOTE:**** Replaces the CM data type used in 7.14.1.4 OBX-5.2 where OBX-5 Observation value (**) is data type CD as of v 2.5."
 }

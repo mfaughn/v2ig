@@ -1,4 +1,5 @@
 == XTN.7 - Local Number (SNM)
+:target-element: XTN.7
 
 [datatype-definition]
 The numeric code used to contact the called party, exclusive of country and area/city codes. The Local Number is required when, and allowed only if, _XTN.4_ and _XTN.12_ are not populated.

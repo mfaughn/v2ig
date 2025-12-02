@@ -30,7 +30,6 @@
         "id": "XPN.1",
         "path": "XPN.1",
         "short": "Family Name",
-        "defintion": "*Definition:* This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section _2A.2.30_, \"_FN - family name_\".\n\n\n\n_XPN.1_ will be empty when _XPN.7_ is MSK. It MAY be empty when _XPN.7_ is NAV.\n\n\n\n*Usage Note:* If a person’s name has only one component, that name will be sent in _XPN.1 Family Name_. This is common practice in some countries such as Indonesia. This note does not cover the case where only one part of a person's multi-part name is known (e.g., only know \"John\" of \"John Doe\").\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "RE"
           }
-        ]
+        ],
+        "definition": "This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section *2A.2.30*, \"*FN - family name*\".\n\n*XPN.1* will be empty when *XPN.7* is MSK. It MAY be empty when *XPN.7* is NAV.\n\n**Usage Note:** If a person’s name has only one component, that name will be sent in *XPN.1 Family Name*. This is common practice in some countries such as Indonesia. This note does not cover the case where only one part of a person's multi-part name is known (e.g., only know \"John\" of \"John Doe\")."
       },
       {
         "id": "XPN.2",
         "path": "XPN.2",
         "short": "Given Name",
-        "defintion": "*Definition:* First name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "First name."
       },
       {
         "id": "XPN.3",
         "path": "XPN.3",
         "short": "Second and Further Given Names or Initials Thereof",
-        "defintion": "*Definition:* Multiple middle names may be included by separating them with spaces.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,13 +106,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Multiple middle names may be included by separating them with spaces."
       },
       {
         "id": "XPN.4",
         "path": "XPN.4",
         "short": "Suffix",
-        "defintion": "*Definition:* Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -139,13 +138,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name suffix (e.g., Jr. or III)."
       },
       {
         "id": "XPN.5",
         "path": "XPN.5",
         "short": "Prefix",
-        "defintion": "*Definition:* Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -171,25 +170,25 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name prefix (e.g., Dr.)."
       },
       {
         "id": "XPN.6",
         "path": "XPN.6",
         "short": "Degree",
-        "defintion": "*Attention:* _The XPN-6 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ See _XPN.14 Professional Suffix_.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The XPN-6 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.* See *XPN.14 Professional Suffix*."
       },
       {
         "id": "XPN.7",
         "path": "XPN.7",
         "short": "Name Type Code",
-        "defintion": "*Definition:* A code that represents the type of name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Name Type_] for valid values.\n\n\n\n*NOTE:* The content of Legal Name is country specific. In the US the legal name is the same as the current married name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -219,13 +218,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the type of name. Refer to *HL7 Table 0200 - Name Type* for valid values.\n\n> ***NOTE:*** The content of Legal Name is country specific. In the US the legal name is the same as the current married name."
       },
       {
         "id": "XPN.8",
         "path": "XPN.8",
         "short": "Name Representation Code",
-        "defintion": "*Definition:* Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n\n\n*NOTE:* This new component remains in \"alphabetic\" representation with each repetition of the field using these data types, i.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70465[_HL7 Table 0465 – Name/ad__dress Representation_] for valid values.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -255,13 +254,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n> ***NOTE:*** This new component remains in \"alphabetic\" representation with each repetition of the field using these data types, i.e., even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n> \n> Refer to *HL7 Table 0465 – Name/ad**dress Representation* for valid values.\n> \n> In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying."
       },
       {
         "id": "XPN.9",
         "path": "XPN.9",
         "short": "Name Context",
-        "defintion": "*Definition:* This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70448[_User-defined T__able 0448 – Nam__e Context_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -278,25 +277,25 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component is used to designate the context in which a name is used. The main use case is in Australian healthcare for indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to *User-defined T**able 0448 – Nam**e Context* for suggested values."
       },
       {
         "id": "XPN.10",
         "path": "XPN.10",
         "short": "Name Validity Range",
-        "defintion": "*Attention:* _The XPN.10 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7._ Refer to 2A.2.90.12, \"Effective Date (DTM)\" and 2A.2.90.13, \"Expiration Date (DTM)\" components.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The XPN.10 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7.* Refer to 2A.2.90.12, \"Effective Date (DTM)\" and 2A.2.90.13, \"Expiration Date (DTM)\" components."
       },
       {
         "id": "XPN.11",
         "path": "XPN.11",
         "short": "Name Assembly Order",
-        "defintion": "*Definition:* A code that represents the preferred display order of the components of this person name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70444[_HL7 0444 – Name Assembly Order_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -326,13 +325,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the preferred display order of the components of this person name. Refer to *HL7 0444 – Name Assembly Order* for valid values."
       },
       {
         "id": "XPN.12",
         "path": "XPN.12",
         "short": "Effective Date",
-        "defintion": "*Definition:* The first date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -345,13 +344,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The first date, if known, on which the person name is valid and active."
       },
       {
         "id": "XPN.13",
         "path": "XPN.13",
         "short": "Expiration Date",
-        "defintion": "*Definition:* The last date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -364,13 +363,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The last date, if known, on which the person name is valid and active."
       },
       {
         "id": "XPN.14",
         "path": "XPN.14",
         "short": "Professional Suffix",
-        "defintion": "*Definition:* Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, Personnel Management.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -396,13 +395,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify an abbreviation, or a string of abbreviations denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, Personnel Management."
       },
       {
         "id": "XPN.15",
         "path": "XPN.15",
         "short": "Called By",
-        "defintion": "*Definition:* A \"called by\" name is the name that is preferred when a person is directly addressed; sometimes known as a nickname.\n\n\n\n*NOTE:* The called by component contains a name that could be categorized as a nickname using the name usage types in file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0200 - Name type_]. Its use is reserved for instances in which the nickname is a single name part that is provided in addition to a name that has some other type, such as legal. It is understood that the \"called by\" name is not part of the full name. Where a nickname has more parts, possibly including a family name, a different XPN with a type of nickname should instead be used.\n\n\n\nExample:\ns:\n\n\n\n• James Robert Smith is Called By Jim Bob\n\n\n\n• James Robert Smith is Called By JR\n\n\n\n• Peter Richard Smith is Called By Richard\n\n\n\n• Mary Margaret Elizabeth Jones is Called By Meg.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -428,9 +427,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A \"called by\" name is the name that is preferred when a person is directly addressed; sometimes known as a nickname.\n\n> ***NOTE:*** The called by component contains a name that could be categorized as a nickname using the name usage types in *HL7 Table 0200 - Name type*. Its use is reserved for instances in which the nickname is a single name part that is provided in addition to a name that has some other type, such as legal. It is understood that the \"called by\" name is not part of the full name. Where a nickname has more parts, possibly including a family name, a different XPN with a type of nickname should instead be used.\n> \n> [example]\n> s:\n> \n> • James Robert Smith is Called By Jim Bob\n> \n> • James Robert Smith is Called By JR\n> \n> • Peter Richard Smith is Called By Richard\n> \n> • Mary Margaret Elizabeth Jones is Called By Meg."
       }
     ]
   },
-  "description": "*Note:* Replaces PN data type as of v 2.3.\n\n*Internationalization Note:* In countries using ideographic or syllabic (phonetic) character sets, it is sometimes necessary to send the name in one or both of these formats, as well as an alphabetic format. The switching between the different character sets can be accomplished using a character set such as JIS X 0202 - ISO 2022 which provides an escape sequence for switching among different character sets and among single-byte and multi-byte character representations. When the name field is repeated, the different repetitions of the name may be represented by these different character sets. The details are as follows. (See also Section 2.9.2, “Escape sequences supporting multiple character sets for PN, XPN, XCN, XON, XAD, FT, ST and TX data types.”)\n\nHL7 supports the following standards for Japanese characters:\n\nJIS X 0201 for ISO-IR 13 (Japanese Katakana)\n\nJIS X 0201 for ISO-IR 14 (Japanese Romaji)\n\nJIS X 0208 for ISO-IR 87 (Japanese Kanji, Hiragana and Katakana)\n\nJIS X 0212 for ISO-IR 159 (supplementary Japanese Kanji)\n\nHL7 supports the following standards for European characters:\n\nISO 8859 (1-9) for ISO-IR 100, 101, 109, 110, 144,127, 126, 138 and 148.\n\nCharacter sets are referenced in HL7 as ASCII, 8859/1,8859/2, ISO IR14, ISO IR87, and ISO IR159. DICOM uses codes laid out in ISO 2375, of the form 'ISO-IR xxx'. HL7 supports this naming as well, to facilitate interoperability.\n\nHL7 uses the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO IR-6) as the default character repertoire for character strings. This is a single-byte character set, identical to ASCII.\n\nEach repetition of a XPN, XON, XCN, or XAD field is assumed to begin with the default character set. If another character set is to be used, the HL7 defined escape sequence used to announce that character set must be at the beginning of the repetition, and the HL7 defined escape sequence used to start the default character set must be at the end of the repetition. Note also that several character sets may be intermixed within a single repetition as long as the repetition ends with a return to the default character set.\n\nAn application must specify which character sets it supports in the field _MSH-18 Character Sets_ and which character set handling scheme it supports in the field _MSH-20 Alternate Character Set Handling Scheme_. It is assumed that the sending and receiving applications are aware of how to map character set names (i.e., ISO-IR xxx) to escape sequences.\n\nFor example, in many Japanese messages there is a mix of Romaji (i.e., Roman characters), Katakana (phonetic representation of foreign words), Hiragana (phonetic representation of Japanese words) and Kanji (pictographs). Such a message would require 4 character sets be specified in the MSH.\n\nReferences for Internationalization of Name\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<table border=\"1\">\n<tr>\n<th> </th>\n<th>Reference </th>\n<th>Description</th>\n</tr>\n<tr>\n<td>1. </td>\n<td>&ldquo;Understanding Japanese Information Processing&rdquo; by Ken Lunde, O&rsquo;Reilly Press </td>\n</tr>\n<tr>\n<td>2. </td>\n<td>NEMA PS3.5 - DICOM Part 5: Data Structure and Semantics </td>\n</tr>\n<tr>\n<td>3. </td>\n<td>ANSI X3.4:1986 </td>\n<td>ASCII character set</td>\n</tr>\n<tr>\n<td>4. </td>\n<td>ISO 646:1990 </td>\n<td>Information Processing - ISO 7-bit coded character set for information interchange</td>\n</tr>\n<tr>\n<td>5. </td>\n<td>ISO/IEC 2022:1994 </td>\n<td>Information Technology - Character code structure and extension techniques</td>\n</tr>\n<tr>\n<td>6. </td>\n<td>ISO 2375:1986 </td>\n<td>Data Processing - Procedure for the registration of escape sequences</td>\n</tr>\n<tr>\n<td>7. </td>\n<td>ISO 6429:1990 </td>\n<td>Information Processing - Control functions for 7-bit and 8-bit coded character sets</td>\n</tr>\n<tr>\n<td>8. </td>\n<td>ISO 8859 (1-9) </td>\n<td>Information Processing - 8-bit single-byte coded graphic character sets - parts 1-9</td>\n</tr>\n<tr>\n<td>9. </td>\n<td>ENV 41 503:1990 </td>\n<td>Information systems interconnection - European graphic character repertoires and their coding</td>\n</tr>\n<tr>\n<td>10. </td>\n<td>ENV 41 508:1990 </td>\n<td>Information systems interconnection - East European graphic character repertoires and their coding</td>\n</tr>\n<tr>\n<td>11. </td>\n<td>JIS X 0201-1976 </td>\n<td>Code for Information Exchange</td>\n</tr>\n<tr>\n<td>12. </td>\n<td>JIS X 0212-1990 </td>\n<td>Code of the supplementary Japanese Graphic Character set for information interchange</td>\n</tr>\n<tr>\n<td>13. </td>\n<td>JIS X 0208-1990 </td>\n<td>Code for the Japanese Graphic Character set for information interchange</td>\n</tr>\n<tr>\n<td>14. </td>\n<td>RFC 1468 </td>\n<td>Japanese Character Encoding for Internet Messages</td>\n</tr>\n</table>\n\n\nCharacter Repertoires supported by DICOM are defined in Part 5, section 6.1. The DICOM Standard is available free on the Internet at http://medical.nema.org/[_http://medical.nema.org/_].\n\n*Examples of names requiring only one iteration of the field where the XPN is applied:*\n\nExample 1: Adam A. Everyman III PhD\n\n|Everyman^Adam^A^III^DR^^L^^^^^^^PHD|\n\nExample 2: Ludwig van Beethoven\n\n|Beethoven&van^Ludwig^^^^^L|\n\nExample 3: Hermann Egon Mayer zur alten Schildesche\n\n|Mayer^Hermann^Egon^zur alten Schildesche|\n\nExample 4: Sister Margot\n\n|^Margot^^^Sister^^C|\n\nExample 5: Dr Harold Henry Hippocrates AO. MBBS. ASCTS. A physician who holds an Honorarium, an academic degree and a board certificate. Professional suffixes are displayed as concatenated. (AO = Order of Australia (Honorarium), MBBS = Bachelor of Medicine and Bachelor of Surgery, ASCTS = Australian Society of Cardiothoracic Surgeons\n\n|Hippocrates^Harold^Henry^^^^L^^^^^^^AO.MBBS.ASCTS|\n\nExample 6: Nancy N. Nightingale, RN, PHN, BSN, MSN. A registered nurse who is a Public Health Nurse with 2 academic degrees, BSN and MSN.\n\n|Nightingale^Nancy^N^^^^^^^^^^^RN, PHN, BSN, MSN|\n\nExample 7: H.Horrace Helper Jr., RN, CNP. A registered nurse who is a certified nurse practitioner.\n\n|Helper^H^Horrace^Jr^^^^^^^^^^ RN, CNP|\n\nExample 8: Mevrouw Irma Jongeneel de Haas.\n\nAn individual whose birth name (geboortenaam) is de Haas and whose partner's name is Jongeneel.\n\n| Jongeneel-de Haas&de&Haas&&Jongeneel^Irma^^^Mevrouw^^L |\n\n*Examples of names requiring more than one iteration of the field where the XPN is applied:*\n\nExample 9: Herr Prof. Dr. med. Joachim W. Dudeck\n\n|Dudeck^Joachim^W.^^Dr.med.^^L^^^^^^^ MD ~Dudeck^J.W.^^^Herr Prof.Dr.^^D|\n\nExample 10: Herr Dr. Otto Graf Lambsdorff mdB a.D.\n\nAccording to German law “Adelstitel” like “Graf” or “Baron” belongs to the family name and therefore must be encoded in the family name field separated by blanks.\n\n|Graf Lambsdorff&Graf&Lambsdorff^Otto^^^Dr.^^L~Graf Lambsdorff&Graf&Lambsdorff^Otto^^mdB a.D.^Herr Dr.^^D|\n\nExample 11: Walter Kemper genannt (named) Mölleken\n\n|Kemper^Walter^^^^^L~Mölleken^Walter^^^^^A|\n\nExample 12: Herr Dr. med. Dr. h.c. Egon Maier\n\n|Maier^Egon^^^Dr.med. Dr.h.c.^^L^^^^^^^MD~Maier^Egon^^^Herr Dr.med. Dr.h.c^^D|\n\nExample 13: Herr Dipl.Ing. Egon Maier\n\n|Maier^Egon^^^^^L^^^^^^^ DIPL~Maier^Egon^^^Herr Dipl.Ing.^^D|\n\nExample 14: Frau Gerda Müller geb. Maier, verheiratet seit 16.2.2000\n\n|Müller^Gerda^^^Frau^^L^^^^^20000216~Maier^Gerda^^^Frau^^M|\n\nExample 15: President Adam A Everyman III, president from 1997 until 2001, aka Sonny Everyman\n\n|Everyman^Adam^A.^III^President^^L~^^^^Mr. President^^D^^^^^19970816^20010320~Everyman^Sonny^^^^^A|\n\nExample 16: Michio Kimura\n\nThis example doesn’t use title and degrees, but shows the repetition of this name for different purposes. The first iteration is the legal name in Kanji; the second, Katakana; the third, alphabetic.\n\nimage:extracted-media/media/image1.png[extracted-media/media/image1]"
+  "description": "> ***NOTE:*** Replaces PN data type as of v 2.3.\n> \n> **Internationalization Note:** In countries using ideographic or syllabic (phonetic) character sets, it is sometimes necessary to send the name in one or both of these formats, as well as an alphabetic format. The switching between the different character sets can be accomplished using a character set such as JIS X 0202 - ISO 2022 which provides an escape sequence for switching among different character sets and among single-byte and multi-byte character representations. When the name field is repeated, the different repetitions of the name may be represented by these different character sets. The details are as follows. (See also Section 2.9.2, “Escape sequences supporting multiple character sets for PN, XPN, XCN, XON, XAD, FT, ST and TX data types.”)\n> \n> HL7 supports the following standards for Japanese characters:\n> \n> JIS X 0201 for ISO-IR 13 (Japanese Katakana)\n> \n> JIS X 0201 for ISO-IR 14 (Japanese Romaji)\n> \n> JIS X 0208 for ISO-IR 87 (Japanese Kanji, Hiragana and Katakana)\n> \n> JIS X 0212 for ISO-IR 159 (supplementary Japanese Kanji)\n> \n> HL7 supports the following standards for European characters:\n> \n> ISO 8859 (1-9) for ISO-IR 100, 101, 109, 110, 144,127, 126, 138 and 148.\n> \n> Character sets are referenced in HL7 as ASCII, 8859/1,8859/2, ISO IR14, ISO IR87, and ISO IR159. DICOM uses codes laid out in ISO 2375, of the form 'ISO-IR xxx'. HL7 supports this naming as well, to facilitate interoperability.\n> \n> HL7 uses the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO IR-6) as the default character repertoire for character strings. This is a single-byte character set, identical to ASCII.\n> \n> Each repetition of a XPN, XON, XCN, or XAD field is assumed to begin with the default character set. If another character set is to be used, the HL7 defined escape sequence used to announce that character set must be at the beginning of the repetition, and the HL7 defined escape sequence used to start the default character set must be at the end of the repetition. Note also that several character sets may be intermixed within a single repetition as long as the repetition ends with a return to the default character set.\n> \n> An application must specify which character sets it supports in the field *MSH-18 Character Sets* and which character set handling scheme it supports in the field *MSH-20 Alternate Character Set Handling Scheme*. It is assumed that the sending and receiving applications are aware of how to map character set names (i.e., ISO-IR xxx) to escape sequences.\n> \n> For example, in many Japanese messages there is a mix of Romaji (i.e., Roman characters), Katakana (phonetic representation of foreign words), Hiragana (phonetic representation of Japanese words) and Kanji (pictographs). Such a message would require 4 character sets be specified in the MSH.\n> \n> .References for Internationalization of Name\n> [width=\"100%\",cols=\"7%,34%,59%\",options=\"header\",]\n> |===\n> | |Reference |Description\n> |1. |“Understanding Japanese Information Processing” by Ken Lunde, O’Reilly Press |\n> |2. |NEMA PS3.5 - DICOM Part 5: Data Structure and Semantics |\n> |3. |ANSI X3.4:1986 |ASCII character set\n> |4. |ISO 646:1990 |Information Processing - ISO 7-bit coded character set for information interchange\n> |5. |ISO/IEC 2022:1994 |Information Technology - Character code structure and extension techniques\n> |6. |ISO 2375:1986 |Data Processing - Procedure for the registration of escape sequences\n> |7. |ISO 6429:1990 |Information Processing - Control functions for 7-bit and 8-bit coded character sets\n> |8. |ISO 8859 (1-9) |Information Processing - 8-bit single-byte coded graphic character sets - parts 1-9\n> |9. |ENV 41 503:1990 |Information systems interconnection - European graphic character repertoires and their coding\n> |10. |ENV 41 508:1990 |Information systems interconnection - East European graphic character repertoires and their coding\n> |11. |JIS X 0201-1976 |Code for Information Exchange\n> |12. |JIS X 0212-1990 |Code of the supplementary Japanese Graphic Character set for information interchange\n> |13. |JIS X 0208-1990 |Code for the Japanese Graphic Character set for information interchange\n> |14. |RFC 1468 |Japanese Character Encoding for Internet Messages\n> |===\n> \n> Character Repertoires supported by DICOM are defined in Part 5, section 6.1. The DICOM Standard is available free on the Internet at http://medical.nema.org/[*http://medical.nema.org/*].\n> \n> [example]\n> **Examples of names requiring only one iteration of the field where the XPN is applied:**\n> \n> [example]\n> 1: Adam A. Everyman III PhD\n> \n> |Everyman\\^Adam^A\\^III^DR\\^^L\\^^\\^^\\^^^PHD|\n> \n> [example]\n> 2: Ludwig van Beethoven\n> \n> |Beethoven&van\\^Ludwig^\\^^\\^^L|\n> \n> [example]\n> 3: Hermann Egon Mayer zur alten Schildesche\n> \n> |Mayer\\^Hermann^Egon^zur alten Schildesche|\n> \n> [example]\n> 4: Sister Margot\n> \n> |\\^Margot^\\^^Sister\\^^C|\n> \n> [example]\n> 5: Dr Harold Henry Hippocrates AO. MBBS. ASCTS. A physician who holds an Honorarium, an academic degree and a board certificate. Professional suffixes are displayed as concatenated. (AO = Order of Australia (Honorarium), MBBS = Bachelor of Medicine and Bachelor of Surgery, ASCTS = Australian Society of Cardiothoracic Surgeons\n> \n> |Hippocrates\\^Harold^Henry\\^^\\^^L\\^^\\^^\\^^^AO.MBBS.ASCTS|\n> \n> [example]\n> 6: Nancy N. Nightingale, RN, PHN, BSN, MSN. A registered nurse who is a Public Health Nurse with 2 academic degrees, BSN and MSN.\n> \n> |Nightingale\\^Nancy^N\\^^\\^^\\^^\\^^\\^^^RN, PHN, BSN, MSN|\n> \n> [example]\n> 7: H.Horrace Helper Jr., RN, CNP. A registered nurse who is a certified nurse practitioner.\n> \n> |Helper\\^H^Horrace\\^Jr^\\^^\\^^\\^^\\^^^ RN, CNP|\n> \n> [example]\n> 8: Mevrouw Irma Jongeneel de Haas.\n> \n> An individual whose birth name (geboortenaam) is de Haas and whose partner's name is Jongeneel.\n> \n> [er7]\n> | Jongeneel-de Haas&de&Haas&&Jongeneel\\^Irma^\\^^Mevrouw\\^^L |\n> \n> [example]\n> **Examples of names requiring more than one iteration of the field where the XPN is applied:**\n> \n> [example]\n> 9: Herr Prof. Dr. med. Joachim W. Dudeck\n> \n> |Dudeck\\^Joachim^W.\\^^Dr.med.\\^^L\\^^\\^^\\^^\\^ MD ~Dudeck^J.W.\\^^\\^Herr Prof.Dr.^^D|\n> \n> [example]\n> 10: Herr Dr. Otto Graf Lambsdorff mdB a.D.\n> \n> According to German law “Adelstitel” like “Graf” or “Baron” belongs to the family name and therefore must be encoded in the family name field separated by blanks.\n> \n> [er7]\n> |Graf Lambsdorff&Graf&Lambsdorff\\^Otto^\\^^Dr.\\^^L~Graf Lambsdorff&Graf&Lambsdorff\\^Otto^\\^mdB a.D.^Herr Dr.\\^^D|\n> \n> [example]\n> 11: Walter Kemper genannt (named) Mölleken\n> \n> |Kemper\\^Walter^\\^^\\^^L~Mölleken\\^Walter^\\^^\\^^A|\n> \n> [example]\n> 12: Herr Dr. med. Dr. h.c. Egon Maier\n> \n> |Maier\\^Egon^\\^^Dr.med. Dr.h.c.\\^^L\\^^\\^^\\^^\\^MD~Maier^Egon\\^^\\^Herr Dr.med. Dr.h.c^^D|\n> \n> [example]\n> 13: Herr Dipl.Ing. Egon Maier\n> \n> |Maier\\^Egon^\\^^\\^^L\\^^\\^^\\^^\\^ DIPL~Maier^Egon\\^^\\^Herr Dipl.Ing.^^D|\n> \n> [example]\n> 14: Frau Gerda Müller geb. Maier, verheiratet seit 16.2.2000\n> \n> |Müller\\^Gerda^\\^^Frau\\^^L\\^^\\^^\\^20000216~Maier^Gerda\\^^\\^Frau^^M|\n> \n> [example]\n> 15: President Adam A Everyman III, president from 1997 until 2001, aka Sonny Everyman\n> \n> |Everyman\\^Adam^A.\\^III^President\\^^L~\\^^\\^^Mr. President\\^^D\\^^\\^^\\^19970816^20010320~Everyman\\^Sonny^\\^^\\^^A|\n> \n> [example]\n> 16: Michio Kimura\n> \n> This example doesn’t use title and degrees, but shows the repetition of this name for different purposes. The first iteration is the legal name in Kanji; the second, Katakana; the third, alphabetic.\n> \n> image::extracted-media/media/image1.png[]"
 }

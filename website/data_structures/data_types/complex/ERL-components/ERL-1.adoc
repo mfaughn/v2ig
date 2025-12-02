@@ -1,4 +1,5 @@
 == ERL.1 - Segment ID (ST)
+:target-element: ERL.1
 
 [datatype-definition]
 Specifies the 3-letter name for the segment.

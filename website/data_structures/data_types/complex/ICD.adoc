@@ -4,6 +4,7 @@
 :code: ICD
 :name: insurance certification definition
 :primitive: false
+:target-element: ICD
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

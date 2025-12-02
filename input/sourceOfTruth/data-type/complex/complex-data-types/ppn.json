@@ -30,7 +30,6 @@
         "id": "PPN.1",
         "path": "PPN.1",
         "short": "Person Identifier",
-        "defintion": "*Definition:* This component carries the Person Identifier itself. _PPN.1_, in conjunction with _PPN.9_, uniquely identifies the entity/person.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component carries the Person Identifier itself. *PPN.1*, in conjunction with *PPN.9*, uniquely identifies the entity/person."
       },
       {
         "id": "PPN.2",
         "path": "PPN.2",
         "short": "Family Name",
-        "defintion": "*Definition:* This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section _2A.2.30_, \"link:++#a.2.30-fn---family-name++[_FN – Family Name_]\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as \"van\" or \"de\") from the surname root. See section *2A.2.30*, \"link:++#a.2.30-fn---family-name++[*FN – Family Name*]\"."
       },
       {
         "id": "PPN.3",
         "path": "PPN.3",
         "short": "Given Name",
-        "defintion": "*Definition:* First name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,13 +106,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "First name."
       },
       {
         "id": "PPN.4",
         "path": "PPN.4",
         "short": "Second and Further Given Names or Initials Thereof",
-        "defintion": "*Definition:* Multiple middle names may be included by separating them with spaces.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -139,13 +138,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Multiple middle names may be included by separating them with spaces."
       },
       {
         "id": "PPN.5",
         "path": "PPN.5",
         "short": "Suffix",
-        "defintion": "*Definition:* Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -171,13 +170,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name suffix (e.g., Jr. or III)."
       },
       {
         "id": "PPN.6",
         "path": "PPN.6",
         "short": "Prefix",
-        "defintion": "*Definition:* Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -203,25 +202,25 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name prefix (e.g., Dr.)."
       },
       {
         "id": "PPN.7",
         "path": "PPN.7",
         "short": "Degree",
-        "defintion": "*Attention: _The PPN.7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7_* See _PPN.22 - Professional Suffix_.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention: *The PPN.7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7*** See *PPN.22 - Professional Suffix*."
       },
       {
         "id": "PPN.8",
         "path": "PPN.8",
         "short": "Source Table",
-        "defintion": "*Attention*: Retained for backwards compatibility only as of v2.7 and withdrawn in V2.9. The reader is referred to _PPN.9_ instead.\n",
         "binding": {
           "strength": "required",
           "valueSet": "http://terminology.hl7.org/ValueSet/v2-0297"
@@ -231,13 +230,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention**: Retained for backwards compatibility only as of v2.7 and withdrawn in V2.9. The reader is referred to *PPN.9* instead."
       },
       {
         "id": "PPN.9",
         "path": "PPN.9",
         "short": "Assigning Authority",
-        "defintion": "*Definition:* The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. It is a HD data type. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Auth__ority_] is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Name__space ID_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementors may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 – Name__space ID_] for the first sub-component.\n\n\n\n*Attention:* _As of v 2.7, the Assigning Authority is conditional._ It is required if _PPN.1_ is populated and neither _PPN.23_ nor _PPN.24_ are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.\n\n\n\nThe reader is referred to the _PPN.23_ and the _PPN.24_ if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in _PPN.23_ and/or _PPN.24_ conflict with _PPN.9_, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -254,13 +253,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. It is a HD data type. *User-defined Table 0363 – Assigning Auth**ority* is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.\n\n> ***NOTE:*** When the HD data type is used in a given segment as a component of a field of another data type, *User-defined Table 0300 - Name**space ID* (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n> \n> By site agreement, implementors may continue to use *User-defined Table 0300 – Name**space ID* for the first sub-component.\n> \n> **Attention:** *As of v 2.7, the Assigning Authority is conditional.* It is required if *PPN.1* is populated and neither *PPN.23* nor *PPN.24* are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.\n> \n> The reader is referred to the *PPN.23* and the *PPN.24* if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in *PPN.23* and/or *PPN.24* conflict with *PPN.9*, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence."
       },
       {
         "id": "PPN.10",
         "path": "PPN.10",
         "short": "Name Type Code",
-        "defintion": "*Definition:* A code that represents the type of name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70200[_HL7 Table 0__200 - Nam__e Type_] for valid values (see Section _2A.2.90_, “_XPN - extended person name_”).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -290,13 +289,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the type of name. Refer to *HL7 Table 0**200 - Nam**e Type* for valid values (see Section *2A.2.90*, “*XPN - extended person name*”)."
       },
       {
         "id": "PPN.11",
         "path": "PPN.11",
         "short": "Identifier Check Digit",
-        "defintion": "*Definition:* A digit, or digits, exclusive of the identifier in _CX.1_, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -322,13 +321,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A digit, or digits, exclusive of the identifier in *CX.1*, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier."
       },
       {
         "id": "PPN.12",
         "path": "PPN.12",
         "short": "Check Digit Scheme",
-        "defintion": "*Definition:* Contains the code identifying the check digit scheme employed.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70061[_HL7 Table_ _0061 - Check Digi__t Scheme_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -358,13 +357,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Contains the code identifying the check digit scheme employed.\n\nRefer to *HL7 Table* *0061 - Check Digi**t Scheme* for valid values."
       },
       {
         "id": "PPN.13",
         "path": "PPN.13",
         "short": "Identifier Type Code",
-        "defintion": "*Definition:* A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the \"Assigning authority\" component. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70203[_HL7 Table 0203 - Identifier Typ__e_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -394,13 +393,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the \"Assigning authority\" component. Refer to *HL7 Table 0203 - Identifier Typ**e* for suggested values."
       },
       {
         "id": "PPN.14",
         "path": "PPN.14",
         "short": "Assigning Facility",
-        "defintion": "*Definition:* The place or location identifier where the identifier was first assigned to the patient. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.\n\n\n\n*NOTE:* When the HD data type is used in a given segment as a component of a field of another data type, file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[_User-defined Table 0300 - Namesp__ace I__D_] (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -413,13 +412,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The place or location identifier where the identifier was first assigned to the patient. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.\n\n> ***NOTE:*** When the HD data type is used in a given segment as a component of a field of another data type, *User-defined Table 0300 - Namesp**ace I**D* (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment."
       },
       {
         "id": "PPN.15",
         "path": "PPN.15",
         "short": "Date/Time Action Performed",
-        "defintion": "This component describes when the activity was performed.\n\n\n\n*NOTE:* If this field is not null, both the performing person and the time stamp must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -432,13 +431,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component describes when the activity was performed.\n\n> ***NOTE:*** If this field is not null, both the performing person and the time stamp must be valued."
       },
       {
         "id": "PPN.16",
         "path": "PPN.16",
         "short": "Name Representation Code",
-        "defintion": "*Definition:* Different name/address types and representations of the same name/address should be described by repeating of this field, with different values of the Name/Address Type and/or Name/Address Representation component.\n\n\n\n*NOTE:* This new component remains in “alphabetic” representation with each repetition of the field using these data types. That is, even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -468,13 +467,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Different name/address types and representations of the same name/address should be described by repeating of this field, with different values of the Name/Address Type and/or Name/Address Representation component.\n\n> ***NOTE:*** This new component remains in “alphabetic” representation with each repetition of the field using these data types. That is, even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n> \n> In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying."
       },
       {
         "id": "PPN.17",
         "path": "PPN.17",
         "short": "Name Context",
-        "defintion": "*Definition:* This component is used to designate the context in which a name is used. The main use case is in Australian healthcare: indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to chapter 3, section 3.4.2.6 for more detailed information on how to use this table. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70448[_User-__defined Table 0448 – Name Context_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -491,25 +490,25 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component is used to designate the context in which a name is used. The main use case is in Australian healthcare: indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to chapter 3, section 3.4.2.6 for more detailed information on how to use this table. Refer to *User-**defined Table 0448 – Name Context* for suggested values."
       },
       {
         "id": "PPN.18",
         "path": "PPN.18",
         "short": "Name Validity Range",
-        "defintion": "*Attention:* _The PPN.18 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to link:#a.2.56.20-effective-date-dtm[_PPN.20 Effective Date_] and link:#a.2.56.21-expiration-date-dtm[_PPN.21 Expiration Date_].\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The PPN.18 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.* Refer to [*PPN.20 Effective Date*](#a.2.56.20-effective-date-dtm) and [*PPN.21 Expiration Date*](#a.2.56.21-expiration-date-dtm)."
       },
       {
         "id": "PPN.19",
         "path": "PPN.19",
         "short": "Name Assembly Order",
-        "defintion": "*Definition:* A code that represents the preferred display order of the components of this person name. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70444[_HL7 Table 0444 – Name Ass__embl__y Order_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -539,13 +538,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that represents the preferred display order of the components of this person name. Refer to *HL7 Table 0444 – Name Ass**embl**y Order* for valid values."
       },
       {
         "id": "PPN.20",
         "path": "PPN.20",
         "short": "Effective Date",
-        "defintion": "*Definition:* The first date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -558,13 +557,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The first date, if known, on which the person name is valid and active."
       },
       {
         "id": "PPN.21",
         "path": "PPN.21",
         "short": "Expiration Date",
-        "defintion": "*Definition:* The last date, if known, on which the person name is valid and active.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -577,13 +576,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The last date, if known, on which the person name is valid and active."
       },
       {
         "id": "PPN.22",
         "path": "PPN.22",
         "short": "Professional Suffix",
-        "defintion": "*Definition:* Used to specify an abbreviation, or a string of abbreviations, denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, \"Personnel Management\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -609,13 +608,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify an abbreviation, or a string of abbreviations, denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, \"Personnel Management\"."
       },
       {
         "id": "PPN.23",
         "path": "PPN.23",
         "short": "Assigning Jurisdiction",
-        "defintion": "*Definition:* The geo-political body that assigned the identifier in component 1.\n\n\n\nSee section _2A.2.14.9_, \"_Assigning Jurisdiction (CWE)_\" for further detail.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -628,13 +627,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The geo-political body that assigned the identifier in component 1.\n\nSee section *2A.2.14.9*, \"*Assigning Jurisdiction (CWE)*\" for further detail."
       },
       {
         "id": "PPN.24",
         "path": "PPN.24",
         "short": "Assigning Agency or Department",
-        "defintion": "*Definition:* The agency or department that assigned the identifier in component 1.\n\n\n\nSee section _2A.2.14.10_, \"_Assigning Agency or Department (CWE)_\" for further details.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -647,13 +646,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The agency or department that assigned the identifier in component 1.\n\nSee section *2A.2.14.10*, \"*Assigning Agency or Department (CWE)*\" for further details."
       },
       {
         "id": "PPN.25",
         "path": "PPN.25",
         "short": "Security Check",
-        "defintion": "*Definition:* This component is used to communicate a version code that may be assigned to the value given in _PPN.1 - Person Identifier_.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -679,13 +678,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component is used to communicate a version code that may be assigned to the value given in *PPN.1 - Person Identifier*."
       },
       {
         "id": "PPN.26",
         "path": "PPN.26",
         "short": "Security Check Scheme",
-        "defintion": "*Definition:* This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.\n\n\n\nRefer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70904[HL7 Table 0904 - Security Check Scheme]_ for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -715,9 +714,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.\n\nRefer to *HL7 Table 0904 - Security Check Scheme* for valid values."
       }
     ]
   },
-  "description": ""
+  "description": "This data type is the equivalent of an XCN data type joined with a DTM data type. However, the XCN data type has been flattened to allow legal expression of its embedded complex data types HD, CWE and CWE."
 }

@@ -1,4 +1,5 @@
 == CNE.1 - Identifier (ST)
+:target-element: CNE.1
 
 [datatype-definition]
 The first component contains the sequence of characters (the code) that uniquely identifies the item being referenced by the _CNE.2_. Different coding schemes will have different elements here.

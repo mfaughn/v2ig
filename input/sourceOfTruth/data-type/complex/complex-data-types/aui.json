@@ -30,7 +30,6 @@
         "id": "AUI.1",
         "path": "AUI.1",
         "short": "Authorization Number",
-        "defintion": "*Definition:* Identifier assigned to the authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Identifier assigned to the authorization."
       },
       {
         "id": "AUI.2",
         "path": "AUI.2",
         "short": "Date",
-        "defintion": "*Definition:* Date of authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Date of authorization."
       },
       {
         "id": "AUI.3",
         "path": "AUI.3",
         "short": "Source",
-        "defintion": "*Definition:* Source of authorization.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,9 +106,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Source of authorization."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in sections 6.5.6.14 IN1-14, as of v2.5."
+  "description": "This data type specifies the identifier or code for an insurance authorization instance and its associated detail.\n\n> ***NOTE:*** Replaces the CM data type used in sections 6.5.6.14 IN1-14, as of v2.5."
 }

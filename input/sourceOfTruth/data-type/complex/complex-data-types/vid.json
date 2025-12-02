@@ -30,7 +30,6 @@
         "id": "VID.1",
         "path": "VID.1",
         "short": "Version ID",
-        "defintion": "*Definition:* Used to identify the HL7 version. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70104[_HL7 Table 0__104 - V__ersion ID_] in Chapter 2C for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -60,13 +59,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to identify the HL7 version. Refer to *HL7 Table 0**104 - V**ersion ID* in Chapter 2C for valid values."
       },
       {
         "id": "VID.2",
         "path": "VID.2",
         "short": "Internationalization Code",
-        "defintion": "*Definition:* Used to identify the international affiliate country code. The values to be used are those of ISO 3166 -1:1977. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70399[_HL7 Table 0__399 - Country Code_] in Chapter 2C for the 3-character codes as defined by ISO 3166 table.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,13 +82,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Used to identify the international affiliate country code. The values to be used are those of ISO 3166 -1:1977. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.\n\nRefer to *HL7 Table 0**399 - Country Code* in Chapter 2C for the 3-character codes as defined by ISO 3166 table."
       },
       {
         "id": "VID.3",
         "path": "VID.3",
         "short": "International Version ID",
-        "defintion": "*Definition:* This field component identifies international affiliate’s version; it is especially important when the international affiliate has more than a single local version associated with a single US version.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -102,7 +101,8 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This field component identifies international affiliate’s version; it is especially important when the international affiliate has more than a single local version associated with a single US version."
       }
     ]
   },

@@ -30,7 +30,6 @@
         "id": "PIP.1",
         "path": "PIP.1",
         "short": "Privilege",
-        "defintion": "*Definition:* Specifies the institutional privilege itself. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70525[_User-defined Table 0525 – Privilege_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the institutional privilege itself. Refer to *User-defined Table 0525 – Privilege* for suggested values."
       },
       {
         "id": "PIP.2",
         "path": "PIP.2",
         "short": "Privilege Class",
-        "defintion": "*Definition:* Specifies the class category of institutional privilege. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70526[_User-defined Table 0526 – Privilege Class_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,13 +69,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies the class category of institutional privilege. Refer to *User-defined Table 0526 – Privilege Class* for suggested values."
       },
       {
         "id": "PIP.3",
         "path": "PIP.3",
         "short": "Expiration Date",
-        "defintion": "*Definition:* Specifies the date the institutional privilege is/was no longer valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -102,13 +101,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the date the institutional privilege is/was no longer valid."
       },
       {
         "id": "PIP.4",
         "path": "PIP.4",
         "short": "Activation Date",
-        "defintion": "*Definition:* Specifies the date the institutional privilege became/becomes valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -134,13 +133,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the date the institutional privilege became/becomes valid."
       },
       {
         "id": "PIP.5",
         "path": "PIP.5",
         "short": "Facility",
-        "defintion": "*Definition:* Specifies the facility in which the institutional privilege is/was valid.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -153,9 +152,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies the facility in which the institutional privilege is/was valid."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5."
+  "description": "This data type specifies the institutional privileges with associated detail granted to a provider.\n\n> ***NOTE:*** Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5."
 }

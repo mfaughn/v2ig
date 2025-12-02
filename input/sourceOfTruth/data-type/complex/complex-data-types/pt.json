@@ -30,7 +30,6 @@
         "id": "PT.1",
         "path": "PT.1",
         "short": "Processing ID",
-        "defintion": "*Definition:* A value that defines whether the message is part of a production, training, or debugging system. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70103[_H__L7 Table 0__103 - P__roc__es__sing ID_] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -60,13 +59,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A value that defines whether the message is part of a production, training, or debugging system. Refer to *H**L7 Table 0**103 - P**roc**es**sing ID* for valid values."
       },
       {
         "id": "PT.2",
         "path": "PT.2",
         "short": "Processing Mode",
-        "defintion": "*Definition:* A value that defines whether the message is part of an archival process or an initial load. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70207[_HL7 Table 0207 - Processi__ng Mode_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,9 +95,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A value that defines whether the message is part of an archival process or an initial load. Refer to *HL7 Table 0207 - Processi**ng Mode* for valid values."
       }
     ]
   },
-  "description": ""
+  "description": "This data type indicates whether to process a message as defined in HL7 Application (level 7) Processing rules."
 }

@@ -1,4 +1,5 @@
 == CCD.2 - Date/time (DTM)
+:target-element: CCD.2
 
 [datatype-definition]
 The second component is used to express the exact time to charge for the ordered service; it is used only when the _CCD.1_ value is T. When used, it is expressed as a DTM data type.

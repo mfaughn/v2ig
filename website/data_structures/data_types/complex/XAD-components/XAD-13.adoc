@@ -1,4 +1,5 @@
 == XAD.13 - Effective Date (DTM)
+:target-element: XAD.13
 
 [datatype-definition]
 The first date, if known, on which the address is valid and active for the ‘owning’ entity.

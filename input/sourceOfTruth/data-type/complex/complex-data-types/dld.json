@@ -30,7 +30,6 @@
         "id": "DLD.1",
         "path": "DLD.1",
         "short": "Discharge to Location",
-        "defintion": "*Definition:* This component specifies the healthcare facility to which the patient was discharged. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70113[_User-defined Table 0113 - Di__scharged to Location_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "This component specifies the healthcare facility to which the patient was discharged. Refer to *User-defined Table 0113 - Di**scharged to Location* for suggested values."
       },
       {
         "id": "DLD.2",
         "path": "DLD.2",
         "short": "Effective Date",
-        "defintion": "*Definition:* Specifies the date on which the patient was discharged to a healthcare facility.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -66,9 +65,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies the date on which the patient was discharged to a healthcare facility."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 3.4.3.37 PV1-37, as of v 2.5."
+  "description": "Specifies the healthcare facility to which the patient was discharged and the date.\n\n> ***NOTE:*** Replaces the CM data type used in section 3.4.3.37 PV1-37, as of v 2.5."
 }

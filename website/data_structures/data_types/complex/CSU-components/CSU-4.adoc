@@ -1,4 +1,5 @@
 == CSU.4 - Unit of Measure Coding System (ID)
+:target-element: CSU.4
 
 [datatype-definition]
 Specifies the designated system of units. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[HL7 Table 0396 – Coding System] in Chapter 2C, Code Tables, for valid values. This component is required if the _CSU.2 Unit of Measure Identifier_ is present.

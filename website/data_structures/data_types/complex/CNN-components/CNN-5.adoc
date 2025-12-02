@@ -1,4 +1,5 @@
 == CNN.5 - Suffix (ST)
+:target-element: CNN.5
 
 Used to specify a name suffix (e.g., Jr. or III).
 

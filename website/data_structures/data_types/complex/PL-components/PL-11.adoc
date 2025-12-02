@@ -1,4 +1,5 @@
 == PL.11 - Assigning Authority for Location (HD)
+:target-element: PL.11
 
 [datatype-definition]
 The entity that creates the data for the individual physical location components. If populated, it should be the authority for all components populated. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Authority_] for suggested values for the first sub-component of the HD component, <namespace ID>.

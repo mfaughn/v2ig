@@ -1,4 +1,5 @@
 == RPT.11 - General Timing Specification (GTS)
+:target-element: RPT.11
 
 [datatype-definition]
 The General Timing Specification as defined by the Version 3 Data Types document.

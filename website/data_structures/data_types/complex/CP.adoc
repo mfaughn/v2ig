@@ -4,6 +4,7 @@
 :code: CP
 :name: composite price
 :primitive: false
+:target-element: CP
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [NOTE]

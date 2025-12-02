@@ -1,4 +1,5 @@
 == CNE.6 - Name of Alternate Coding System (ID)
+:target-element: CNE.6
 
 [datatype-definition]
 Identifies the coding scheme being used in the alternate identifier component. Analogous to _CNE.3 Name of Coding System_. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[HL7 Table 0396 - Coding Systems] in Chapter 2C, Code Tables, for valid values.

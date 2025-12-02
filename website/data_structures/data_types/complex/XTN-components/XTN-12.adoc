@@ -1,4 +1,5 @@
 == XTN.12 - Unformatted Telephone Number (ST)
+:target-element: XTN.12
 
 [datatype-definition]
 An expression of the telephone number as an unparsable string. The Unformatted Telephone number is required when, and allowed only if, _XTN.4_ and _XTN.7_ are not populated.

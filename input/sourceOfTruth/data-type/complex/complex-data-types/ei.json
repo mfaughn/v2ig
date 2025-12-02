@@ -30,7 +30,6 @@
         "id": "EI.1",
         "path": "EI.1",
         "short": "Entity Identifier",
-        "defintion": "*Definition:* The first component, <entity identifier>, is usually defined to be unique within the series of identifiers created by the <assigning authority>, defined by a hierarchic designator, represented by components 2 through 4. See Section _2A.2.33_, \"_HD - hierarchic designator_\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The first component, <entity identifier>, is usually defined to be unique within the series of identifiers created by the <assigning authority>, defined by a hierarchic designator, represented by components 2 through 4. See Section *2A.2.33*, \"*HD - hierarchic designator*\"."
       },
       {
         "id": "EI.2",
         "path": "EI.2",
         "short": "Namespace ID",
-        "defintion": "*Definition:* See Section _2A.2.33.1_, \"_Namespace ID (IS)_\" for definition. The component intentionally remains associated with the IS data type in v 2.7.\n\n\n\nThe assigning authority is a unique identifier of the system (or organization or agency or department) that creates the data. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0__363 – Assigning Authority_] for suggested values.\n\n\n\n*NOTE:* When the HD is used as a part of another data type, in this case as part of the EI data type, this table may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n\n\n\nBy site agreement, implementers may continue to use file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70300[User-defined Table 0300 – Namespace ID] for the first component\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,13 +91,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "See Section *2A.2.33.1*, \"*Namespace ID (IS)*\" for definition. The component intentionally remains associated with the IS data type in v 2.7.\n\nThe assigning authority is a unique identifier of the system (or organization or agency or department) that creates the data. Refer to *User-defined Table 0**363 – Assigning Authority* for suggested values.\n\n> ***NOTE:*** When the HD is used as a part of another data type, in this case as part of the EI data type, this table may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.\n> \n> By site agreement, implementers may continue to use User-defined Table 0300 – Namespace ID for the first component"
       },
       {
         "id": "EI.3",
         "path": "EI.3",
         "short": "Universal ID",
-        "defintion": "*Definition:* See Section _2A.2.33.2_, \"_Universal ID (ST)_\" for definition.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -124,13 +123,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "See Section *2A.2.33.2*, \"*Universal ID (ST)*\" for definition."
       },
       {
         "id": "EI.4",
         "path": "EI.4",
         "short": "Universal ID Type",
-        "defintion": "*Definition:* Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70301[_HL7 Table 0301 - Universal ID Type_] for valid values. See Section _2A.2.33.3_, \"_Universal ID Type (ID)_,\" for definition.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -160,9 +159,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Refer to *HL7 Table 0301 - Universal ID Type* for valid values. See Section *2A.2.33.3*, \"*Universal ID Type (ID)*,\" for definition."
       }
     ]
   },
-  "description": "The EI is appropriate for, but not limited to, machine or software generated identifiers. The generated identifier goes in the first component. The remaining components, 2 through 4, are known as the assigning authority; they identify the machine/system responsible for generating the identifier in component 1.\n\nThe specified series, the assigning authority, is defined by components 2 through 4. The assigning authority is of the hierarchic designator (HD) data type, but it is defined as three separate components in the EI data type, rather than as a single component as would normally be the case. This is in order to maintain backward compatibility with the EI’s use as a component in several existing data fields. Otherwise, the components 2 through 4 are as defined in Section _2A.2.33_, \"_HD - hierarchic designator_\". Hierarchic designators (HD) are unique across a given HL7 implementation."
+  "description": "The entity identifier defines a given entity within a specified series of identifiers.\n\nThe EI is appropriate for, but not limited to, machine or software generated identifiers. The generated identifier goes in the first component. The remaining components, 2 through 4, are known as the assigning authority; they identify the machine/system responsible for generating the identifier in component 1.\n\nThe specified series, the assigning authority, is defined by components 2 through 4. The assigning authority is of the hierarchic designator (HD) data type, but it is defined as three separate components in the EI data type, rather than as a single component as would normally be the case. This is in order to maintain backward compatibility with the EI’s use as a component in several existing data fields. Otherwise, the components 2 through 4 are as defined in Section *2A.2.33*, \"*HD - hierarchic designator*\". Hierarchic designators (HD) are unique across a given HL7 implementation."
 }

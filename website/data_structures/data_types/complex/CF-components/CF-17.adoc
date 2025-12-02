@@ -1,4 +1,5 @@
 == CF.17 - Alternate Coding System OID (ST)
+:target-element: CF.17
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) for the coding system or value set named in _CF.6_. Analogous To _CF.14 Coding System OID_.

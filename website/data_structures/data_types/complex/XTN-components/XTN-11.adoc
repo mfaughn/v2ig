@@ -1,4 +1,5 @@
 == XTN.11 - Speed Dial Code (ST)
+:target-element: XTN.11
 
 [datatype-definition]
 The characters established within a company’s internal telephone system used in place of the (external) telephone number to facilitate calling because its length is shorter than that of the telephone number.

@@ -1,4 +1,5 @@
 == UVC.3 - Non-Monetary Value Amount / Quantity (NM)
+:target-element: UVC.3
 
 [datatype-definition]
 Specifies the numeric amount when needed to pair with the value when it is non-monetary.

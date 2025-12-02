@@ -1,4 +1,5 @@
 == CWE.4 - Alternate Identifier (ST)
+:target-element: CWE.4
 
 [datatype-definition]
 A sequence of characters that uniquely identifies an alternate code. Analogous to _CWE.1- Identifier_.

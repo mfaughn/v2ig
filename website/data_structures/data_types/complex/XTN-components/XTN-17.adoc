@@ -1,4 +1,5 @@
 == XTN.17 - Shared Telecommunication Identifier (EI)
+:target-element: XTN.17
 
 [datatype-definition]
 A unique identifier for the phone number or e-mail address.

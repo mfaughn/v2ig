@@ -1,4 +1,5 @@
 == XPN.4 - Suffix (ST)
+:target-element: XPN.4
 
 [datatype-definition]
 Used to specify a name suffix (e.g., Jr. or III).

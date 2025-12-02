@@ -4,6 +4,7 @@
 :code: DTN
 :name: day type and number
 :primitive: false
+:target-element: DTN
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

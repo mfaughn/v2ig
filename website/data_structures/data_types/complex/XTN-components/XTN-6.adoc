@@ -1,4 +1,5 @@
 == XTN.6 - Area/City Code (SNM)
+:target-element: XTN.6
 
 [datatype-definition]
 The numeric code to access telephone services in another area/city within a country. This number historically needs not be dialed if the caller is located in the same area/city as the phone number of the called party.

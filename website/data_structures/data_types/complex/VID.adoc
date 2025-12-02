@@ -4,6 +4,7 @@
 :code: VID
 :name: version identifier
 :primitive: false
+:target-element: VID
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 include::VID-components/VID-1.adoc[]

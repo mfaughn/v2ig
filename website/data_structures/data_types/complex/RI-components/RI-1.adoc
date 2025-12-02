@@ -1,4 +1,5 @@
 == RI.1 - Repeat Pattern (CWE)
+:target-element: RI.1
 
 [datatype-definition]
 The repeating frequency with which the treatment is to be administered. It is similar to the frequency and SIG code tables used in order entry systems.

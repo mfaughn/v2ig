@@ -1,4 +1,5 @@
 == CSU.22 - Alternate Unit of Measure Value Set OID (ST)
+:target-element: CSU.22
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in _CSU.11_ is obtained. The value for this component is 2.16.840.1.113883.12.#### where "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used.

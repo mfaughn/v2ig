@@ -4,6 +4,7 @@
 :code: MOC
 :name: money and charge code
 :primitive: false
+:target-element: MOC
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

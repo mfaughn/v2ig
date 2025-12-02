@@ -1,4 +1,5 @@
 == CWE.16 - Value Set Version ID (DTM)
+:target-element: CWE.16
 
 [datatype-definition]
 This component carries the version for the value set identified by _CWE.15_. The version is a date. The date is the date/time that the value set being used was published.

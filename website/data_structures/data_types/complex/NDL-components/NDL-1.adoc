@@ -1,4 +1,5 @@
 == NDL.1 - Name (CNN)
+:target-element: NDL.1
 
 [datatype-definition]
 This component specifies the name of the person performing a service.

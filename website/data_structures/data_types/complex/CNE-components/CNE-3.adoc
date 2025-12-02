@@ -1,4 +1,5 @@
 == CNE.3 - Name of Coding System (ID)
+:target-element: CNE.3
 
 [datatype-definition]
 The third component contains the code for the name of the coding system from which the value in _CNE.1_ is obtained. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[HL7 Table 0396 - Coding Systems] in Chapter 2C, Code Tables, for valid values. Each coding system is assigned a unique identifier.

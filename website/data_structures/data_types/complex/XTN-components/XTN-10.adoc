@@ -1,4 +1,5 @@
 == XTN.10 - Extension Prefix (ST)
+:target-element: XTN.10
 
 [datatype-definition]
 The characters established within a company’s internal telephone system network used as a prefix to the Extension component for internal dialing.

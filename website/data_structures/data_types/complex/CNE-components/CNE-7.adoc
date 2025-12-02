@@ -1,4 +1,5 @@
 == CNE.7 - Coding System Version ID (ST)
+:target-element: CNE.7
 
 [datatype-definition]
 the version ID for the coding system identified by _CNE.3_. It belongs conceptually to components 1-3 and appears here only for reasons of backward compatibility.

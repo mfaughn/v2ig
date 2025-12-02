@@ -4,6 +4,7 @@
 :code: MSG
 :name: message type
 :primitive: false
+:target-element: MSG
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

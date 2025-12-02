@@ -30,7 +30,6 @@
         "id": "RPT.1",
         "path": "RPT.1",
         "short": "Repeat Pattern Code",
-        "defintion": "*Definition:* A code representing the repeat pattern defined by the other components of this data type. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70335[_User-defined Table 0335 – Repeat Pattern_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "A code representing the repeat pattern defined by the other components of this data type. Refer to *User-defined Table 0335 – Repeat Pattern* for suggested values."
       },
       {
         "id": "RPT.2",
         "path": "RPT.2",
         "short": "Calendar Alignment",
-        "defintion": "*Definition:* Specifies an alignment of the repetition to a calendar (e.g., to distinguish every 30 days from “the 5^th^ of every month”). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[_HL7 Table 0527 - Calendar Alignment_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,13 +82,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies an alignment of the repetition to a calendar (e.g., to distinguish every 30 days from “the 5^th^ of every month”). Refer to *HL7 Table 0527 - Calendar Alignment* for valid values."
       },
       {
         "id": "RPT.3",
         "path": "RPT.3",
         "short": "Phase Range Begin Value",
-        "defintion": "*Definition:* Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular _RPT.2 - Calendar Alignment_ to the beginning of the phase. If Calendar Alignment is DW (days of week), then this would be the offset from the beginning of the week.\n\n\n\nIf Phase Range Begin Value is populated, but Phase Range End Value is not populated, then this component defines when the period (RPT.5, 6) begins.\n\n\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the earliest point in time at which the period (RPT.5, 6) will begin.\n\n\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[HL7 Table 0527 - Calendar Alignment]_ for the units of measure associated with a particular calendar alignment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -115,13 +114,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular *RPT.2 - Calendar Alignment* to the beginning of the phase. If Calendar Alignment is DW (days of week), then this would be the offset from the beginning of the week.\n\nIf Phase Range Begin Value is populated, but Phase Range End Value is not populated, then this component defines when the period (RPT.5, 6) begins.\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the earliest point in time at which the period (RPT.5, 6) will begin.\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See *HL7 Table 0527 - Calendar Alignment* for the units of measure associated with a particular calendar alignment."
       },
       {
         "id": "RPT.4",
         "path": "RPT.4",
         "short": "Phase Range End Value",
-        "defintion": "*Definition:* Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular _RPT.2 - Calendar Alignment_ to the end of the phase.\n\n\n\nIf Phase Range End Value is populated, but Phase Range Begin Value is not populated, then this component defines when the timing period (RPT.5, 6) begins.\n\n\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the latest point in time at which the period (RPT.5, 6) will begin.\n\n\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70527[HL7 Table 0527 - Calendar Alignment]_ for the units of measure associated with a particular calendar alignment.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -147,13 +146,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular *RPT.2 - Calendar Alignment* to the end of the phase.\n\nIf Phase Range End Value is populated, but Phase Range Begin Value is not populated, then this component defines when the timing period (RPT.5, 6) begins.\n\nIf both Phase Range Begin Value and Phase Range End Value are populated, then this component defines the latest point in time at which the period (RPT.5, 6) will begin.\n\nThe units of measure for this component are derived from the Calendar Alignment value in RPT.2. See *HL7 Table 0527 - Calendar Alignment* for the units of measure associated with a particular calendar alignment."
       },
       {
         "id": "RPT.5",
         "path": "RPT.5",
         "short": "Period Quantity",
-        "defintion": "*Definition:* A time duration specifying the frequency at which the periodic interval repeats. _RPT.6 - Period Units_ defines the units of time for this component.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -179,13 +178,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A time duration specifying the frequency at which the periodic interval repeats. *RPT.6 - Period Units* defines the units of time for this component."
       },
       {
         "id": "RPT.6",
         "path": "RPT.6",
         "short": "Period Units",
-        "defintion": "*Definition:* Defines the units used for _RPT.5 - Period Quantity_. Constrained to units of time. Best practice is to use UCUM. Refer to External table the Unified Code for Units of Measure (UCUM) [https://ucum.org/] for valid values.\n\n\n\nCondition Rule: This component is required if _RPT.5 - Period Quantity_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -198,13 +197,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "Defines the units used for *RPT.5 - Period Quantity*. Constrained to units of time. Best practice is to use UCUM. Refer to External table the Unified Code for Units of Measure (UCUM) [https://ucum.org/] for valid values.\n\nCondition Rule: This component is required if *RPT.5 - Period Quantity* is populated."
       },
       {
         "id": "RPT.7",
         "path": "RPT.7",
         "short": "Institution Specified Time",
-        "defintion": "*Definition:* A code that indicates whether the exact timing is up to the party executing the schedule (e.g., to distinguish “every 8 hours” from “3 times a day”). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/No Indicator_] for valid values.\n\n\n\n• Y - exact timing up to party executing schedule.\n\n\n\n• N - exact timing as specified.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -234,13 +233,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code that indicates whether the exact timing is up to the party executing the schedule (e.g., to distinguish “every 8 hours” from “3 times a day”). Refer to *HL7 Table 0136 - Yes/No Indicator* for valid values.\n\n• Y - exact timing up to party executing schedule.\n\n• N - exact timing as specified."
       },
       {
         "id": "RPT.8",
         "path": "RPT.8",
         "short": "Event",
-        "defintion": "*Definition:* A code for a common (periodical) activity of daily living. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70528[_HL7 Table 0528 - Event-Related Period_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -270,13 +269,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "A code for a common (periodical) activity of daily living. Refer to *HL7 Table 0528 - Event-Related Period* for valid values."
       },
       {
         "id": "RPT.9",
         "path": "RPT.9",
         "short": "Event Offset Quantity",
-        "defintion": "*Definition:* An interval that marks the offsets for the beginning, width and end of the event-related periodic interval measured from the time each such event actually occurred. A positive numeric value indicates the amount of time after the event in RPT.8. A negative numeric value indicates the amount of time prior to the event in _RPT.8_. _RPT.10 - Event Offset Units_ defines the units of time for this component.\n\n\n\n*Usage Note:* This component should not be valued unless there is a value in RPT-8 (Event).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -302,13 +301,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "An interval that marks the offsets for the beginning, width and end of the event-related periodic interval measured from the time each such event actually occurred. A positive numeric value indicates the amount of time after the event in RPT.8. A negative numeric value indicates the amount of time prior to the event in *RPT.8*. *RPT.10 - Event Offset Units* defines the units of time for this component.\n\n**Usage Note:** This component should not be valued unless there is a value in RPT-8 (Event)."
       },
       {
         "id": "RPT.10",
         "path": "RPT.10",
         "short": "Event Offset Units",
-        "defintion": "*Definition:* Defines the units used for RPT-9 (Event Offset Quantity). Constrained to units of time. The codes for unit of measure are specified in the Unified Code for Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].\n\n\n\nCondition Rule: This component is required if _RPT.9 - Event Offset Quantity_ is populated.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -321,13 +320,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "C"
           }
-        ]
+        ],
+        "definition": "Defines the units used for RPT-9 (Event Offset Quantity). Constrained to units of time. The codes for unit of measure are specified in the Unified Code for Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].\n\nCondition Rule: This component is required if *RPT.9 - Event Offset Quantity* is populated."
       },
       {
         "id": "RPT.11",
         "path": "RPT.11",
         "short": "General Timing Specification",
-        "defintion": "*Definition:* The General Timing Specification as defined by the Version 3 Data Types document.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -340,9 +339,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The General Timing Specification as defined by the Version 3 Data Types document."
       }
     ]
   },
-  "description": "When using the RPT, if an application doesn't recognize the code in component 1, then it may attempt to determine the appropriate frequency using the remaining components. If the application does recognize the code in component 1, the application is not required to determine the frequency from the remaining components.\n\n*Use Case*: The use case supporting this proposal is the need to define repeat patterns on the fly while placing an order. The TQ data type did not have the capability to define the meaning of a repeat pattern on the fly. To get around this problem, vendors have implemented a variety of solutions to solve this issue. One way was to add Z-components to the TQ data type to transmit information about the repeat pattern. Another solution was to attempt to parse the repeat pattern code in an attempt to decipher what the code meant.\n\nExamples:\n\n|Q1H&Every 1 Hour&HL7xxx^^^^1^h|\n\n|Q2J2&Every second Tuesday&HL7xxx^DW^2^^2^wk|\n\n|BID&Twice a day at institution specified times&HL7xxx^^^^12^h^Y|\n\n|QAM&Every morning at the institution specified time&HL7xxx^HD^00^11^1^d^Y|\n\n|QHS&Every day before the hours of sleep&HL7xxx^^^^1^d^^AHS|\n\n|ACM&Before Breakfast&HL7xxx^^^^^^^ACM|"
+  "description": "The repeat pattern data type should be used where it is necessary to define the frequency at which an event is to take place. This data type provides a way to define repeat pattern codes \"on the fly\". The repeat pattern code is equivalent to the TQ data type, component 2, sub-component 1 (repeat pattern). The additional components define the meaning of the repeat pattern code. Components 2 - 10 are used to define relatively simple repeat patterns. Component 11 is provided to define complex repeat patterns. This data type forms a bridge between the 2.x Repeat Pattern concept from Quantity/Timing, and the Version 3.0 GTS General Timing Specification. Component 1 is the 2.x concept of repeat pattern. Components 2-7 are derived from the version 3.0 data type PIVL. Components 8-10 are derived from the version 3.0 EIVL data type. If a repeat pattern cannot be defined using components 2-10, then component 11, General Timing Specification is provided. This allows the full literal form of the version 3.0 GTS to be specified.\n\nWhen using the RPT, if an application doesn't recognize the code in component 1, then it may attempt to determine the appropriate frequency using the remaining components. If the application does recognize the code in component 1, the application is not required to determine the frequency from the remaining components.\n\n**Use Case**: The use case supporting this proposal is the need to define repeat patterns on the fly while placing an order. The TQ data type did not have the capability to define the meaning of a repeat pattern on the fly. To get around this problem, vendors have implemented a variety of solutions to solve this issue. One way was to add Z-components to the TQ data type to transmit information about the repeat pattern. Another solution was to attempt to parse the repeat pattern code in an attempt to decipher what the code meant.\n\nExamples:\n\n```\n|Q1H&Every 1 Hour&HL7xxx\\^^\\^^1^h|\n\n[er7]\n|Q2J2&Every second Tuesday&HL7xxx\\^DW^2\\^^2^wk|\n\n[er7]\n|BID&Twice a day at institution specified times&HL7xxx\\^^\\^^12\\^h^Y|\n\n[er7]\n|QAM&Every morning at the institution specified time&HL7xxx\\^HD^00\\^11^1\\^d^Y|\n\n[er7]\n|QHS&Every day before the hours of sleep&HL7xxx\\^^\\^^1\\^d^^AHS|\n\n[er7]\n|ACM&Before Breakfast&HL7xxx\\^^\\^^\\^^^ACM|\n```"
 }

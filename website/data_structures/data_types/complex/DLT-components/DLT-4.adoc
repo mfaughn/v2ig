@@ -1,4 +1,5 @@
 == DLT.4 - Days Retained (NM)
+:target-element: DLT.4
 
 [datatype-definition]
 The length of time in days that the value is retained for computing delta checks.

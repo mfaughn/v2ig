@@ -1,4 +1,5 @@
 == XTN.4 - Communication Address (ST)
+:target-element: XTN.4
 
 [NOTE]
 This component is required if, and only allowed if, XTN.7 or XTN.12 are not populated.

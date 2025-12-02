@@ -30,7 +30,6 @@
         "id": "EIP.1",
         "path": "EIP.1",
         "short": "Placer Assigned Identifier",
-        "defintion": "*Definition:* Specifies an identifier assigned to an entity by the placer system.\n\n\n\nFor example, the component might be used to convey the following:\n\n\n\n{empty}a) placer order number of the parent order.\n\n\n\n{empty}b) the specimen identifier as assigned by the placer.\n\n\n\n{empty}c) a location identifier assigned (or used by) the placer.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies an identifier assigned to an entity by the placer system.\n\nFor example, the component might be used to convey the following:\n\na) placer order number of the parent order.\n\nb) the specimen identifier as assigned by the placer.\n\nc) a location identifier assigned (or used by) the placer."
       },
       {
         "id": "EIP.2",
         "path": "EIP.2",
         "short": "Filler Assigned Identifier",
-        "defintion": "*Definition:* Specifies an identifier assigned to an entity by the filler system.\n\n\n\nFor example, the component might convey the following:\n\n\n\n{empty}a) filler order number of the parent order.\n\n\n\n{empty}b) the specimen identifier as assigned by the filler.\n\n\n\n{empty}c) a location identifier assigned (or used by) the filler.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -62,9 +61,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies an identifier assigned to an entity by the filler system.\n\nFor example, the component might convey the following:\n\na) filler order number of the parent order.\n\nb) the specimen identifier as assigned by the filler.\n\nc) a location identifier assigned (or used by) the filler."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 – OBR-29, 7.3.1.29 – OBR-29, as of v 2.5."
+  "description": "Specifies an identifier assigned to an entity by either the placer or the filler system. If both components are populated the identifiers must refer to the same entity.\n\n> ***NOTE:*** Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 – OBR-29, 7.3.1.29 – OBR-29, as of v 2.5."
 }

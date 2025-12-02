@@ -1,4 +1,5 @@
 == PLN.2 - Type of ID Number (CWE)
+:target-element: PLN.2
 
 [datatype-definition]
 Specifies the type of number.

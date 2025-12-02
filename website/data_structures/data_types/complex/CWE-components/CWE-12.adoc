@@ -1,4 +1,5 @@
 == CWE.12 - Name of Second Alternate Coding System (ID)
+:target-element: CWE.12
 
 [datatype-definition]
 Identifies the coding scheme being used in the alternate identifier component. Analogous to _CWE.3 Name of Coding System_. See usage note in section introduction.

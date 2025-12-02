@@ -1,4 +1,5 @@
 == ED.2 - Type of Data (ID)
+:target-element: ED.2
 
 [datatype-definition]
 Identical to “type of data” component in the reference pointer (RP) data type. See Section _2A.2.66.3_, "_Type of Data (ID)_".

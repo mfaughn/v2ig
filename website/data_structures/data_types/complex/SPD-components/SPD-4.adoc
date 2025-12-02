@@ -1,4 +1,5 @@
 == SPD.4 - Date of Certification (DT)
+:target-element: SPD.4
 
 [datatype-definition]
 Specifies when certification occurred.

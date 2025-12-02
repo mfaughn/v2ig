@@ -30,7 +30,6 @@
         "id": "MOC.1",
         "path": "MOC.1",
         "short": "Monetary Amount",
-        "defintion": "*Definition:* The amount and denomination of money associated with the charge code.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The amount and denomination of money associated with the charge code."
       },
       {
         "id": "MOC.2",
         "path": "MOC.2",
         "short": "Charge Code",
-        "defintion": "*Definition:* The code identifying the charge to the ordering entity for the services performed.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -62,9 +61,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The code identifying the charge to the ordering entity for the services performed."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5."
+  "description": "Transmits monetary information and the associated charge code for services performed.\n\n> ***NOTE:*** Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5."
 }

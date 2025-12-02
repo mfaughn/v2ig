@@ -1,4 +1,5 @@
 == CQ.1 - Quantity (NM)
+:target-element: CQ.1
 
 [datatype-definition]
 This component specifies the numeric quantity or amount of an entity.

@@ -1,4 +1,5 @@
 == CF.10 - Second Alternate Identifier (ST)
+:target-element: CF.10
 
 [datatype-definition]
 A sequence of characters that uniquely identifies an alternate code. Analogous to _CF.1 Identifier_.

@@ -1,4 +1,5 @@
 == OG.2 - Group (NM)
+:target-element: OG.2
 
 [datatype-definition]
 The Group component indicates the group and its sequence within the OBR segment that the OBX segment is a part of.

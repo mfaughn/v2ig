@@ -30,7 +30,6 @@
         "id": "MSG.1",
         "path": "MSG.1",
         "short": "Message Code",
-        "defintion": "*Definition:* Specifies the message type code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70076[_HL7 Table 0076– Message Type_] for valid values.\n\n\n\nThis table contains values such as ACK, ADT, ORM, ORU etc.\n\n\n\nSee Chapter 2, \"Control\", section 2.5.1, \"Messages\" for further discussion.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -60,13 +59,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the message type code. Refer to *HL7 Table 0076– Message Type* for valid values.\n\nThis table contains values such as ACK, ADT, ORM, ORU etc.\n\nSee Chapter 2, \"Control\", section 2.5.1, \"Messages\" for further discussion."
       },
       {
         "id": "MSG.2",
         "path": "MSG.2",
         "short": "Trigger Event",
-        "defintion": "*Definition:* Specifies the trigger event code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70003[_HL7 Table 0003– Event Type_] for valid values.\n\n\n\nThis table contains values like A01, O01, R01 etc.\n\n\n\nSee Chapter 2, \"Control\", section 2.3.1, \"Trigger Events\" for further discussion.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -96,13 +95,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the trigger event code. Refer to *HL7 Table 0003– Event Type* for valid values.\n\nThis table contains values like A01, O01, R01 etc.\n\nSee Chapter 2, \"Control\", section 2.3.1, \"Trigger Events\" for further discussion."
       },
       {
         "id": "MSG.3",
         "path": "MSG.3",
         "short": "Message Structure",
-        "defintion": "*Definition:* Specifies the abstract message structure code. Refer to _file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70354[HL7 Table 0354 – Message Structure]_ for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -132,9 +131,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the abstract message structure code. Refer to *HL7 Table 0354 – Message Structure* for valid values."
       }
     ]
   },
-  "description": "*Note*: Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5."
+  "description": "This field contains the message type, trigger event, and the message structure ID for the message.\n\n> ***NOTE:*** Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5."
 }

@@ -1,4 +1,5 @@
 == DDI.1 - Delay Days (NM)
+:target-element: DDI.1
 
 [datatype-definition]
 The number of days after which the daily deductible begins.

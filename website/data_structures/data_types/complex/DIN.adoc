@@ -4,6 +4,7 @@
 :code: DIN
 :name: date and institution name
 :primitive: false
+:target-element: DIN
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

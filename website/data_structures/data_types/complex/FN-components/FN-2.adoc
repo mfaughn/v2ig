@@ -1,4 +1,5 @@
 == FN.2 - Own Surname Prefix (ST)
+:target-element: FN.2
 
 [datatype-definition]
 Internationalization usage for Germanic languages. This component is optional. An example of a <surname prefix> is the "van" in "Ludwig van Beethoven". Since the <surname prefix> doesn't sort completely alphabetically, it is reasonable to specify it as a separate sub-component of the PN and extended PN data types (XPN and XCN).

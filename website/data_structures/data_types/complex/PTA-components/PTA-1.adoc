@@ -1,4 +1,5 @@
 == PTA.1 - Policy Type (CWE)
+:target-element: PTA.1
 
 [datatype-definition]
 Specifies the policy type.

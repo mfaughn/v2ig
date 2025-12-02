@@ -30,7 +30,6 @@
         "id": "SAD.1",
         "path": "SAD.1",
         "short": "Street or Mailing Address",
-        "defintion": "*Definition:* This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address."
       },
       {
         "id": "SAD.2",
         "path": "SAD.2",
         "short": "Street Name",
-        "defintion": "",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,13 +87,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "== SAD.2 - Street Name (ST)\n:target-element: SAD.2"
       },
       {
         "id": "SAD.3",
         "path": "SAD.3",
         "short": "Dwelling Number",
-        "defintion": "",
         "min": 0,
         "max": "1",
         "type": [
@@ -120,9 +119,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "== SAD.3 - Dwelling Number (ST)\n:target-element: SAD.3"
       }
     ]
   },
-  "description": "*Note:* Appears ONLY in the XAD data type"
+  "description": "This data type specifies an entity's street address and associated detail.\n\n> ***NOTE:*** Appears ONLY in the XAD data type"
 }

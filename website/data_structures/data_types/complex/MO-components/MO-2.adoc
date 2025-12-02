@@ -1,4 +1,5 @@
 == MO.2 - Denomination (ID)
+:target-element: MO.2
 
 [datatype-definition]
 The second component is the denomination in which the quantity is expressed. The values for the denomination component are the three-character codes specified in ISO-4217. See file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#ISO0913[_Externally-defined Table 0913 – Monetary Denomination Code_].

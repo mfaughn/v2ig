@@ -1,4 +1,5 @@
 == QIP.1 - Segment Field Name (ST)
+:target-element: QIP.1
 
 [datatype-definition]
 This component contains the segment field name.

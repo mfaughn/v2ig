@@ -30,7 +30,6 @@
         "id": "VH.1",
         "path": "VH.1",
         "short": "Start Day Range",
-        "defintion": "*Definition:* Starting day of visiting hours range. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70267[_HL7 Table 0267 - Days of_ _the Week_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -60,13 +59,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Starting day of visiting hours range. See *HL7 Table 0267 - Days of* *the Week* for valid values."
       },
       {
         "id": "VH.2",
         "path": "VH.2",
         "short": "End Day Range",
-        "defintion": "*Definition:* Ending day of visiting hours range. Starting day of visiting hours range. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70267[_HL7 Table 0267 - Days of the Week_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -96,13 +95,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Ending day of visiting hours range. Starting day of visiting hours range. See *HL7 Table 0267 - Days of the Week* for valid values."
       },
       {
         "id": "VH.3",
         "path": "VH.3",
         "short": "Start Hour Range",
-        "defintion": "*Definition:* Starting hour on starting day of visiting hours range. See first component, _2A.2.82.1_, \"_Start Day Range (ID)_\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -115,13 +114,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Starting hour on starting day of visiting hours range. See first component, *2A.2.82.1*, \"*Start Day Range (ID)*\"."
       },
       {
         "id": "VH.4",
         "path": "VH.4",
         "short": "End Hour Range",
-        "defintion": "*Definition:* Ending hour on ending day of visiting hours range. See second component, _2A.2.82.2_, \"_End Day Range (ID)_\".\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -134,9 +133,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Ending hour on ending day of visiting hours range. See second component, *2A.2.82.2*, \"*End Day Range (ID)*\"."
       }
     ]
   },
-  "description": ""
+  "description": "This data type contains the hours when a patient location is open for visiting. Refer to *HL7 Table 0267 - Days of* *the Week* for valid values for the first two components."
 }

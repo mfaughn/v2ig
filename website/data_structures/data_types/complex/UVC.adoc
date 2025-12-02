@@ -4,6 +4,7 @@
 :code: UVC
 :name: UB value code and amount
 :primitive: false
+:target-element: UVC
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

@@ -30,7 +30,6 @@
         "id": "DIN.1",
         "path": "DIN.1",
         "short": "Date",
-        "defintion": "*Definition:* Specifies the date when a staff member became active or inactive.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the date when a staff member became active or inactive."
       },
       {
         "id": "DIN.2",
         "path": "DIN.2",
         "short": "Institution Name",
-        "defintion": "*Definition:* Specifies the institution where a staff member is or was active. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70531[_User-De__fined Table 0531 - Institution_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -66,9 +65,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the institution where a staff member is or was active. Refer to *User-De**fined Table 0531 - Institution* for suggested values."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5."
+  "description": "Specifies the date and institution information where a staff member became active or inactive.\n\n> ***NOTE:*** Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5."
 }

@@ -1,4 +1,5 @@
 == RPT.6 - Period Units (CWE)
+:target-element: RPT.6
 
 [datatype-definition]
 Defines the units used for _RPT.5 - Period Quantity_. Constrained to units of time. Best practice is to use UCUM. Refer to External table the Unified Code for Units of Measure (UCUM) [https://ucum.org/] for valid values.

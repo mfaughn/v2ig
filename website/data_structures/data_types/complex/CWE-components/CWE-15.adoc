@@ -1,4 +1,5 @@
 == CWE.15 - Value Set OID (ST)
+:target-element: CWE.15
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in _CWE.1_ is obtained. The value for this component is identified for each of the HL7 Tables that have values published in C__hapter 2C Code Tables__. For externally defined value sets, the OID registered in the HL7 OID registry and/or published in an HL7 balloted Implementation Guide SHALL be used.

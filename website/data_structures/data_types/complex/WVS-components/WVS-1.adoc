@@ -1,4 +1,5 @@
 == WVS.1 - Source One Name (ST)
+:target-element: WVS.1
 
 [datatype-definition]
 This component identifies the first input for the waveform source.

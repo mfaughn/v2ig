@@ -4,6 +4,7 @@
 :code: CX
 :name: extended composite ID with check digit
 :primitive: false
+:target-element: CX
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [datatype-definition]

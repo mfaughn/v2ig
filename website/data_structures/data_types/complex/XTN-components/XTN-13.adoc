@@ -1,4 +1,5 @@
 == XTN.13 - Effective Start Date (DTM)
+:target-element: XTN.13
 
 [datatype-definition]
 The first date, if known, on which the telecommunication number is valid and active.

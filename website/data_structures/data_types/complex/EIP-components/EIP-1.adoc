@@ -1,4 +1,5 @@
 == EIP.1 - Placer Assigned Identifier (EI)
+:target-element: EIP.1
 
 [datatype-definition]
 Specifies an identifier assigned to an entity by the placer system.

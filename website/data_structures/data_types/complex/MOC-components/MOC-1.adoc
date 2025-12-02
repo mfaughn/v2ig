@@ -1,4 +1,5 @@
 == MOC.1 - Monetary Amount (MO)
+:target-element: MOC.1
 
 [datatype-definition]
 The amount and denomination of money associated with the charge code.

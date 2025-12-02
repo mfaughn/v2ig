@@ -1,4 +1,5 @@
 == CX.9 - Assigning Jurisdiction (CWE)
+:target-element: CX.9
 
 [datatype-definition]
 The geo-political body that assigned the identifier in component 1. As of v2.7, Assigning Jurisdiction is required if neither _CX.4_ nor _CX.10_ are populated.

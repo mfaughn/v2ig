@@ -30,7 +30,6 @@
         "id": "DDI.1",
         "path": "DDI.1",
         "short": "Delay Days",
-        "defintion": "*Definition:* The number of days after which the daily deductible begins.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The number of days after which the daily deductible begins."
       },
       {
         "id": "DDI.2",
         "path": "DDI.2",
         "short": "Monetary Amount",
-        "defintion": "*Definition:* The monetary amount of the deductible.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "The monetary amount of the deductible."
       },
       {
         "id": "DDI.3",
         "path": "DDI.3",
         "short": "Number of Days",
-        "defintion": "*Definition:* The number of days to apply the deductible. If this component is not populated, it means that the number of days is indefinite.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,9 +106,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The number of days to apply the deductible. If this component is not populated, it means that the number of days is indefinite."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 6.5.7.30 IN2-30, as of v 2.5."
+  "description": "This data type specifies the detail information for the daily deductible.\n\n> ***NOTE:*** Replaces the CM data type used in section 6.5.7.30 IN2-30, as of v 2.5."
 }

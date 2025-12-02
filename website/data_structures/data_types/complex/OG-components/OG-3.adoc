@@ -1,4 +1,5 @@
 == OG.3 - Sequence (NM)
+:target-element: OG.3
 
 [datatype-definition]
 The Sequence component indicates the sequence within the group as defined in OG-2.

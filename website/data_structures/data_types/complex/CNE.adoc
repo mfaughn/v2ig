@@ -4,6 +4,7 @@
 :code: CNE
 :name: coded with no exceptions
 :primitive: false
+:target-element: CNE
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 As of v2.7 a third tuple, formerly known as triplet, has been added to the CNE data type. Additionally, 3 new components were added to each tuple such that each tuple now has a total of 7 components. The Original Text component applies to the CNE as a whole.

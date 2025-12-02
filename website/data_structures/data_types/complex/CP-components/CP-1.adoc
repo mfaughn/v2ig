@@ -1,4 +1,5 @@
 == CP.1 - Price (MO)
+:target-element: CP.1
 
 [datatype-definition]
 The only required component; usually containing a decimal point.

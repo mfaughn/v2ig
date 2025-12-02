@@ -1,4 +1,5 @@
 == XAD.21 - Preference Order (NM)
+:target-element: XAD.21
 
 [datatype-definition]
 For an entity having multiple addresses, indicates which is the 'most preferred' (lowest number) to 'least preferred' (highest number).

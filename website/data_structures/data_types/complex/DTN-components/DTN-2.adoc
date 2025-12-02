@@ -1,4 +1,5 @@
 == DTN.2 - Number of Days (NM)
+:target-element: DTN.2
 
 [datatype-definition]
 Specifies the number of days for which the certification is valid.

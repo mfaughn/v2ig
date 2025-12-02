@@ -1,4 +1,5 @@
 == CX.1 - ID Number (ST)
+:target-element: CX.1
 
 [datatype-definition]
 The value of the identifier itself.

@@ -1,4 +1,5 @@
 == PTA.2 - Amount Class (CWE)
+:target-element: PTA.2
 
 [datatype-definition]
 Specifies the amount quantity class.

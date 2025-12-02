@@ -1,4 +1,5 @@
 == VID.2 - Internationalization Code (CWE)
+:target-element: VID.2
 
 [datatype-definition]
 Used to identify the international affiliate country code. The values to be used are those of ISO 3166 -1:1977. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.

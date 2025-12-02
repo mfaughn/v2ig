@@ -4,6 +4,7 @@
 :code: SAD
 :name: street address
 :primitive: false
+:target-element: SAD
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

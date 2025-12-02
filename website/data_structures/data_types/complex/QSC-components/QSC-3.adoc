@@ -1,4 +1,5 @@
 == QSC.3 - Value (ST)
+:target-element: QSC.3
 
 [datatype-definition]
 The value to which the field will be compared.

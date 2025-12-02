@@ -4,6 +4,7 @@
 :code: PIP
 :name: practitioner institutional privileges
 :primitive: false
+:target-element: PIP
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

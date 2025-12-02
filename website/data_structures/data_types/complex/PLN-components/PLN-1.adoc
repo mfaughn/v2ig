@@ -1,4 +1,5 @@
 == PLN.1 - ID Number (ST)
+:target-element: PLN.1
 
 [datatype-definition]
 Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number.

@@ -1,4 +1,5 @@
 == XPN.5 - Prefix (ST)
+:target-element: XPN.5
 
 [datatype-definition]
 Used to specify a name prefix (e.g., Dr.).

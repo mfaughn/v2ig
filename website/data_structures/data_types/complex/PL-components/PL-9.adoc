@@ -1,4 +1,5 @@
 == PL.9 - Location Description (ST)
+:target-element: PL.9
 
 [datatype-definition]
 This component describes the location in free text.

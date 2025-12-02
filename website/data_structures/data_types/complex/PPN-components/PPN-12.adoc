@@ -1,4 +1,5 @@
 == PPN.12 - Check Digit Scheme (ID)
+:target-element: PPN.12
 
 [datatype-definition]
 Contains the code identifying the check digit scheme employed.

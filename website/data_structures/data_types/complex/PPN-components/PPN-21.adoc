@@ -1,4 +1,5 @@
 == PPN.21 - Expiration Date (DTM)
+:target-element: PPN.21
 
 [datatype-definition]
 The last date, if known, on which the person name is valid and active.

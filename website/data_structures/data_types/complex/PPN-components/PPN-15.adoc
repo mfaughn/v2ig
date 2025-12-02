@@ -1,4 +1,5 @@
 == PPN.15 - Date/Time Action Performed (DTM)
+:target-element: PPN.15
 
 This component describes when the activity was performed.
 

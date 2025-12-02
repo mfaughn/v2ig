@@ -1,4 +1,5 @@
 == XAD.23 - Address Identifier (EI)
+:target-element: XAD.23
 
 [datatype-definition]
 A unique identifier for the address.

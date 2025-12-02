@@ -1,4 +1,5 @@
 == DDI.2 - Monetary Amount (MO)
+:target-element: DDI.2
 
 [datatype-definition]
 The monetary amount of the deductible.

@@ -1,4 +1,5 @@
 == OSP.3 - Occurrence Span Stop Date (DT)
+:target-element: OSP.3
 
 [datatype-definition]
 The date an event ended that relates to the payment of a claim.

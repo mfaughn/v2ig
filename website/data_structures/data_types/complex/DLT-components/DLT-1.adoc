@@ -1,4 +1,5 @@
 == DLT.1 - Normal Range (NR)
+:target-element: DLT.1
 
 [datatype-definition]
 Specifies the normal interval of the reference data.

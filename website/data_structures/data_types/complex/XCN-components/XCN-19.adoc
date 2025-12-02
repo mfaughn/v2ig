@@ -1,4 +1,5 @@
 == XCN.19 - Effective Date (DTM)
+:target-element: XCN.19
 
 [datatype-definition]
 The first date, if known, on which the person name is valid and active.

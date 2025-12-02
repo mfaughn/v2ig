@@ -1,4 +1,5 @@
 == XCN.1 - Person Identifier (ST)
+:target-element: XCN.1
 
 [datatype-definition]
 This component carries the Person Identifier itself. XCN.1, in conjunction with XCN.9 uniquely identifies the entity/person.

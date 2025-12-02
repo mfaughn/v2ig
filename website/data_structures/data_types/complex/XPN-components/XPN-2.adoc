@@ -1,4 +1,5 @@
 == XPN.2 - Given Name (ST)
+:target-element: XPN.2
 
 [datatype-definition]
 First name.

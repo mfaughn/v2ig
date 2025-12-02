@@ -1,4 +1,5 @@
 == XCN.8 - Source Table (CWE)
+:target-element: XCN.8
 
 *Attention*: _Retained for backwards compatibility only as of v 2.7_. The reader is referred to _XCN.9_ instead.
 

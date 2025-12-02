@@ -1,4 +1,5 @@
 == XTN.9 - Any Text (ST)
+:target-element: XTN.9
 
 [datatype-definition]
 Contains comments with respect to the telephone number.

@@ -4,6 +4,7 @@
 :code: VH
 :name: visiting hours
 :primitive: false
+:target-element: VH
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

@@ -1,4 +1,5 @@
 == CNN.10 - Assigning Authority - Universal ID (ST)
+:target-element: CNN.10
 
 See section, _2A.2.14.4_, "_Assigning Authority (HD)_" for definition.
 

@@ -4,6 +4,7 @@
 :code: ED
 :name: encapsulated data
 :primitive: false
+:target-element: ED
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

@@ -1,4 +1,5 @@
 == PIP.5 - Facility (EI)
+:target-element: PIP.5
 
 [datatype-definition]
 Specifies the facility in which the institutional privilege is/was valid.

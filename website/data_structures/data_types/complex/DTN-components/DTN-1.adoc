@@ -1,4 +1,5 @@
 == DTN.1 - Day Type (CWE)
+:target-element: DTN.1
 
 [datatype-definition]
 Specifies whether the days are denied, pending, or approved.

@@ -1,4 +1,5 @@
 == RP.4 - Subtype (ID)
+:target-element: RP.4
 
 [datatype-definition]
 An ID data type declaring the format for the referenced. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70291[_Externally-defined Table 0291 – Subtype_ of Referenced Data] for valid values. Table 0291 comprises the values of MIME media subtypes established in accordance with RFC 2046 (http://ietf.org/rfc/rfc2046.txt) and registered with the Internet Assigned Numbers Authority (http://www.iana.org/numbers.html).

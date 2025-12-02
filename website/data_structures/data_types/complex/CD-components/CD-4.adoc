@@ -1,4 +1,5 @@
 == CD.4 - Channel Calibration Parameters (CCP)
+:target-element: CD.4
 
 [datatype-definition]
 This component identifies the corrections to channel sensitivity, the baseline, and the channel time skew.

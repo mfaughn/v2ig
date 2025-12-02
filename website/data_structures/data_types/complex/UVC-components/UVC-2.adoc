@@ -1,4 +1,5 @@
 == UVC.2 - Value Amount (MO)
+:target-element: UVC.2
 
 [datatype-definition]
 Specifies the numeric amount when needed to pair with the value when it is monetary.

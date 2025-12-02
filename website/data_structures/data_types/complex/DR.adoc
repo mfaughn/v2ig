@@ -4,6 +4,7 @@
 :code: DR
 :name: date/time range
 :primitive: false
+:target-element: DR
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [NOTE]

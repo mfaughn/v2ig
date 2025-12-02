@@ -1,4 +1,5 @@
 == RMC.1 - Room Type (CWE)
+:target-element: RMC.1
 
 [datatype-definition]
 Specifies the room type.

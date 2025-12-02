@@ -1,4 +1,5 @@
 == AD.8 - Other Geographic Designation (ST)
+:target-element: AD.8
 
 [datatype-definition]
 This component specifies any other geographic designation that may be necessary. It includes county, bioregion, SMSA, etc.

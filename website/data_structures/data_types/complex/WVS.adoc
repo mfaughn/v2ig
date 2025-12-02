@@ -4,6 +4,7 @@
 :code: WVS
 :name: waveform source
 :primitive: false
+:target-element: WVS
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 *Attention: _Retained for backward compatibility only in v2.7._* It is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.

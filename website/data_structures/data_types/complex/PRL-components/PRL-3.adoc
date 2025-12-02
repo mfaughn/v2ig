@@ -1,4 +1,5 @@
 == PRL.3 - Parent Observation Value Descriptor (TX)
+:target-element: PRL.3
 
 [datatype-definition]
 Contains a descriptor of the parent observation value as specified in the _OBX-5_ of the parent result.

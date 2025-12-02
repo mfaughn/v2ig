@@ -30,7 +30,6 @@
         "id": "NDL.1",
         "path": "NDL.1",
         "short": "Name",
-        "defintion": "*Definition:* This component specifies the name of the person performing a service.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component specifies the name of the person performing a service."
       },
       {
         "id": "NDL.2",
         "path": "NDL.2",
         "short": "Start Date/Time",
-        "defintion": "*Definition:* This component specifies the starting date and time for when the person is performing the service.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -62,13 +61,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component specifies the starting date and time for when the person is performing the service."
       },
       {
         "id": "NDL.3",
         "path": "NDL.3",
         "short": "End Date/Time",
-        "defintion": "*Definition:* This component specifies the ending date and time for when the person is performing the service.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -81,13 +80,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component specifies the ending date and time for when the person is performing the service."
       },
       {
         "id": "NDL.4",
         "path": "NDL.4",
         "short": "Point of Care",
-        "defintion": "*Definition:* This component specifies the code for the point where patient care is administered. It is conditional on NDL.9 – Patient Location Type (e.g., nursing unit or department or clinic). After floor, it is the most general patient location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70302[_User-defined Table 0302 - Point of care_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -117,13 +116,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the code for the point where patient care is administered. It is conditional on NDL.9 – Patient Location Type (e.g., nursing unit or department or clinic). After floor, it is the most general patient location designation. Refer to *User-defined Table 0302 - Point of care* for suggested values."
       },
       {
         "id": "NDL.5",
         "path": "NDL.5",
         "short": "Room",
-        "defintion": "*Definition:* Patient room. After point of care, it is the most general location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70303[_User-defined Table 0303 - Room_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -153,13 +152,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Patient room. After point of care, it is the most general location designation. Refer to *User-defined Table 0303 - Room* for suggested values."
       },
       {
         "id": "NDL.6",
         "path": "NDL.6",
         "short": "Bed",
-        "defintion": "*Definition:* This component specifies the code for the patient's bed. After room, it is the most general location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70304[_User-defined Table 0304 - Bed_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -189,13 +188,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the code for the patient's bed. After room, it is the most general location designation. Refer to *User-defined Table 0304 - Bed* for suggested values."
       },
       {
         "id": "NDL.7",
         "path": "NDL.7",
         "short": "Facility",
-        "defintion": "*Definition:* This component is subject to site interpretation but generally describes the highest level physical designation of an institution, medical center or enterprise. It is the most general location designation.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -208,13 +207,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component is subject to site interpretation but generally describes the highest level physical designation of an institution, medical center or enterprise. It is the most general location designation."
       },
       {
         "id": "NDL.8",
         "path": "NDL.8",
         "short": "Location Status",
-        "defintion": "*Definition:* This component specifies the code for the status or availability of the location. For example, it may convey bed status. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70306[_User-defined Table 0306 - Location Status_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -244,13 +243,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the code for the status or availability of the location. For example, it may convey bed status. Refer to *User-defined Table 0306 - Location Status* for suggested values."
       },
       {
         "id": "NDL.9",
         "path": "NDL.9",
         "short": "Patient Location Type",
-        "defintion": "*Definition:* Location type is the categorization of the location defined by facility, building, floor, point of care, room or bed. Although not a required field, when used, it may be the only populated field. Usually includes values such as nursing unit, department, clinic, SNF, physician’s office. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70305[_User-defined Table 0305 - Person Location Type_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -280,13 +279,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Location type is the categorization of the location defined by facility, building, floor, point of care, room or bed. Although not a required field, when used, it may be the only populated field. Usually includes values such as nursing unit, department, clinic, SNF, physician’s office. Refer to *User-defined Table 0305 - Person Location Type* for suggested values."
       },
       {
         "id": "NDL.10",
         "path": "NDL.10",
         "short": "Building",
-        "defintion": "*Definition:* This component specifies the code for the building where the person is located. After facility, it is the most general location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70307[_User-defined Table 0307 - Building_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -316,13 +315,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the code for the building where the person is located. After facility, it is the most general location designation. Refer to *User-defined Table 0307 - Building* for suggested values."
       },
       {
         "id": "NDL.11",
         "path": "NDL.11",
         "short": "Floor",
-        "defintion": "*Definition:* This component specifies the code for the floor where the person is located. After building, it is the most general location designation. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70308[_User-defined Table 0308 - Floor_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -352,9 +351,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the code for the floor where the person is located. After building, it is the most general location designation. Refer to *User-defined Table 0308 - Floor* for suggested values."
       }
     ]
   },
-  "description": "*Attention: _Retained for backward compatibility only in v2.6._* Fields associated with this data type have been replaced by the ROL segment.\n\n*Note:* Replaces the CM data type used in sections 4.5.3.32 and 7.4.1.32-( OBR-32), 4.5.3.33 and 7.4.1.33 - ( OBR-33) 4.5.3.34 and 7.4.1.34 - ( OBR-34) 4.5.3.35 and 7.4.1.35 - ( OBR-35) as of v 2.5."
+  "description": "**Attention: *Retained for backward compatibility only in v2.6.*** Fields associated with this data type have been replaced by the ROL segment.\n\nSpecifies the name of the person performing a service, when the person performed the service and where the person performed the service. Retained for backward compatibility as of v2.6.\n\n> ***NOTE:*** Replaces the CM data type used in sections 4.5.3.32 and 7.4.1.32-( OBR-32), 4.5.3.33 and 7.4.1.33 - ( OBR-33) 4.5.3.34 and 7.4.1.34 - ( OBR-34) 4.5.3.35 and 7.4.1.35 - ( OBR-35) as of v 2.5."
 }

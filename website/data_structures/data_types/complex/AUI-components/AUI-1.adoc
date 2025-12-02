@@ -1,4 +1,5 @@
 == AUI.1 - Authorization Number (ST)
+:target-element: AUI.1
 
 [datatype-definition]
 Identifier assigned to the authorization.

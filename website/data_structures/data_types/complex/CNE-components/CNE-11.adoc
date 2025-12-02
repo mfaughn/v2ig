@@ -1,4 +1,5 @@
 == CNE.11 - Second Alternate Text (ST)
+:target-element: CNE.11
 
 [datatype-definition]
 The descriptive or textual name of the Second Alternate Identifier. Analogous to _CNE.2 Text._

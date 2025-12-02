@@ -1,4 +1,5 @@
 == RPT.4 - Phase Range End Value (NM)
+:target-element: RPT.4
 
 [datatype-definition]
 Used for Calendar aligned repeat patterns to determine the amount of time from the beginning of particular _RPT.2 - Calendar Alignment_ to the end of the phase.

@@ -1,4 +1,5 @@
 == MSG.2 - Trigger Event (ID)
+:target-element: MSG.2
 
 [datatype-definition]
 Specifies the trigger event code. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70003[_HL7 Table 0003– Event Type_] for valid values.

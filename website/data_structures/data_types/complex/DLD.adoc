@@ -4,6 +4,7 @@
 :code: DLD
 :name: discharge to location and date
 :primitive: false
+:target-element: DLD
 :generated: Thu, 19 Sep 2024 15:32:57 -0600
 
 [datatype-definition]

@@ -30,7 +30,6 @@
         "id": "XAD.1",
         "path": "XAD.1",
         "short": "Street Address",
-        "defintion": "*Definition:* This component contains the house number, apartment number, street name, street direction, P.O. Box number, and similar address information.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This component contains the house number, apartment number, street name, street direction, P.O. Box number, and similar address information."
       },
       {
         "id": "XAD.2",
         "path": "XAD.2",
         "short": "Other Designation",
-        "defintion": "*Definition:* This component contains the second line of address. In US usage, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,13 +74,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component contains the second line of address. In US usage, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address."
       },
       {
         "id": "XAD.3",
         "path": "XAD.3",
         "short": "City",
-        "defintion": "*Definition:* This component specifies the city, or district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,13 +106,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the city, or district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage."
       },
       {
         "id": "XAD.4",
         "path": "XAD.4",
         "short": "State or Province",
-        "defintion": "*Definition:* This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -139,13 +138,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country."
       },
       {
         "id": "XAD.5",
         "path": "XAD.5",
         "short": "Zip or Postal Code",
-        "defintion": "*Definition:* This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9, and the Australian Postcode takes the form 9999.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -171,13 +170,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9, and the Australian Postcode takes the form 9999."
       },
       {
         "id": "XAD.6",
         "path": "XAD.6",
         "short": "Country",
-        "defintion": "*Definition:* This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70399[_HL7 Table_ _0399 – Count__ry Code_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -207,13 +206,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to *HL7 Table* *0399 – Count**ry Code* for valid values."
       },
       {
         "id": "XAD.7",
         "path": "XAD.7",
         "short": "Address Type",
-        "defintion": "*Definition:* This component specifies the kind or type of address. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70190[_HL7 Ta__ble 0190 - A__ddress Type_] for valid values.\n\n\n\n_XAD.7_ is required if there are multiple occurrences of XAD in a field.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -243,13 +242,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the kind or type of address. Refer to *HL7 Ta**ble 0190 - A**ddress Type* for valid values.\n\n*XAD.7* is required if there are multiple occurrences of XAD in a field."
       },
       {
         "id": "XAD.8",
         "path": "XAD.8",
         "short": "Other Geographic Designation",
-        "defintion": "*Definition:* This component specifies any other geographic designation. It includes county, bioregion, SMSA, etc.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -275,13 +274,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies any other geographic designation. It includes county, bioregion, SMSA, etc."
       },
       {
         "id": "XAD.9",
         "path": "XAD.9",
         "short": "County/Parish Code",
-        "defintion": "*Definition:* A code that represents the county in which the specified address resides. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70289[_User-defined Table 0289 - County/parish_] is used as the HL7 identifier for the user-defined table of values for this component. When this component is used to represent the county (or parish), component 8 <other geographic designation> should not duplicate it (i.e., the use of <other geographic designation> to represent the county is allowed only for the purpose of backward compatibility, and should be discouraged in this and future versions of HL7).\n\n\n\nAllowable values: codes defined by government.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -298,13 +297,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "A code that represents the county in which the specified address resides. *User-defined Table 0289 - County/parish* is used as the HL7 identifier for the user-defined table of values for this component. When this component is used to represent the county (or parish), component 8 <other geographic designation> should not duplicate it (i.e., the use of <other geographic designation> to represent the county is allowed only for the purpose of backward compatibility, and should be discouraged in this and future versions of HL7).\n\nAllowable values: codes defined by government."
       },
       {
         "id": "XAD.10",
         "path": "XAD.10",
         "short": "Census Tract",
-        "defintion": "*Definition:* A code that represents the census tract in which the specified address resides. file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70288[_User-defined Table 0288 - Census Tract_] is used as the HL7 identifier for the user-defined table of values for this component.\n\n\n\nAllowable Values: codes defined by government.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -321,13 +320,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "A code that represents the census tract in which the specified address resides. *User-defined Table 0288 - Census Tract* is used as the HL7 identifier for the user-defined table of values for this component.\n\nAllowable Values: codes defined by government."
       },
       {
         "id": "XAD.11",
         "path": "XAD.11",
         "short": "Address Representation Code",
-        "defintion": "*Definition:* Different <name/address types> and representations of the same name/address should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n\n\n*NOTE:* Also note that this new component remains in \"alphabetic\" representation with each repetition of the fields using these data types. I.e. even though the address may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70465[_HL7 Table 0465 – Name/address Representatio__n_] for valid values.\n\n\n\nIn general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -357,25 +356,25 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Different <name/address types> and representations of the same name/address should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.\n\n> ***NOTE:*** Also note that this new component remains in \"alphabetic\" representation with each repetition of the fields using these data types. I.e. even though the address may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.\n> \n> Refer to *HL7 Table 0465 – Name/address Representatio**n* for valid values.\n> \n> In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying."
       },
       {
         "id": "XAD.12",
         "path": "XAD.12",
         "short": "Address Validity Range",
-        "defintion": "*Attention:* _The XAD.12 component was retained for backward compatibility as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7._ Refer to _2A.2.87.13_, \"_Effective Date_ (DTM)\" and _2A.2.87.14_, \"_Expiration Date_ (DTM)\" components.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The XAD.12 component was retained for backward compatibility as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7.* Refer to *2A.2.87.13*, \"*Effective Date* (DTM)\" and *2A.2.87.14*, \"*Expiration Date* (DTM)\" components."
       },
       {
         "id": "XAD.13",
         "path": "XAD.13",
         "short": "Effective Date",
-        "defintion": "*Definition:* The first date, if known, on which the address is valid and active for the ‘owning’ entity.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -401,13 +400,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The first date, if known, on which the address is valid and active for the ‘owning’ entity."
       },
       {
         "id": "XAD.14",
         "path": "XAD.14",
         "short": "Expiration Date",
-        "defintion": "*Definition:* The last date, if known, on which the address is valid and active for the ‘owning’ entity.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -433,13 +432,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The last date, if known, on which the address is valid and active for the ‘owning’ entity."
       },
       {
         "id": "XAD.15",
         "path": "XAD.15",
         "short": "Expiration Reason",
-        "defintion": "*Definition:* This identifies why this address was marked as \"ended\". Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70616[User-defined Table 0616 – Address Expiration Reason] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -456,13 +455,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "This identifies why this address was marked as \"ended\". Refer to User-defined Table 0616 – Address Expiration Reason for valid values."
       },
       {
         "id": "XAD.16",
         "path": "XAD.16",
         "short": "Temporary Indicator",
-        "defintion": "*Definition:* If \"Y\" this indicates that the address is considered temporary. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_].\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -492,13 +491,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "If \"Y\" this indicates that the address is considered temporary. Refer to *HL7 Table 0136 – Yes/No Indicator*."
       },
       {
         "id": "XAD.17",
         "path": "XAD.17",
         "short": "Bad Address Indicator",
-        "defintion": "*Definition:* If \"Y\", this indicates that it is not possible to contact the \"owning\" entity at this address. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 – Yes/No Indicator_].\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -528,13 +527,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "If \"Y\", this indicates that it is not possible to contact the \"owning\" entity at this address. Refer to *HL7 Table 0136 – Yes/No Indicator*."
       },
       {
         "id": "XAD.18",
         "path": "XAD.18",
         "short": "Address Usage",
-        "defintion": "*Definition:* This indicates how the address is intended to be used. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70617[_User-defined Table 0617 – Address Usage_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -564,13 +563,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This indicates how the address is intended to be used. Refer to *User-defined Table 0617 – Address Usage* for valid values."
       },
       {
         "id": "XAD.19",
         "path": "XAD.19",
         "short": "Addressee",
-        "defintion": "*Definition:* Identifies the name of the person or organization that should appear as part of the address. This is also known as the \"Care of\" or \"C/O\" line.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -596,13 +595,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Identifies the name of the person or organization that should appear as part of the address. This is also known as the \"Care of\" or \"C/O\" line."
       },
       {
         "id": "XAD.20",
         "path": "XAD.20",
         "short": "Comment",
-        "defintion": "*Definition:* Descriptive information about the use of the address.\n\n\n\nExample:\n\"Do not ring bell.\"\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -628,13 +627,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Descriptive information about the use of the address.\n\n> ***Example:***\n> \n> \"Do not ring bell.\""
       },
       {
         "id": "XAD.21",
         "path": "XAD.21",
         "short": "Preference Order",
-        "defintion": "*Definition:* For an entity having multiple addresses, indicates which is the 'most preferred' (lowest number) to 'least preferred' (highest number).\n\n\n\nIf the preference order is unique across all usages for a given type, then it indicates the preference across all usages, (e.g., first try my home address, then my business address). Otherwise, the preference order is assumed to only apply within a specific usage.\n\n\n\nPreference order numbers need not be sequential (i.e., four addresses with the priority orders of 10, 1, 5 and 15 are legitimate). The preference order numbers must be non-negative.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -660,13 +659,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "For an entity having multiple addresses, indicates which is the 'most preferred' (lowest number) to 'least preferred' (highest number).\n\nIf the preference order is unique across all usages for a given type, then it indicates the preference across all usages, (e.g., first try my home address, then my business address). Otherwise, the preference order is assumed to only apply within a specific usage.\n\nPreference order numbers need not be sequential (i.e., four addresses with the priority orders of 10, 1, 5 and 15 are legitimate). The preference order numbers must be non-negative."
       },
       {
         "id": "XAD.22",
         "path": "XAD.22",
         "short": "Protection Code",
-        "defintion": "*Definition:* Identifies that an address needs to be treated with special care or sensitivity.\n\n\n\nThe specific set of codes and appropriate handling of such addresses will vary by jurisdiction and is subject to site-specific negotiation. For example, a provider address marked as 'unlisted' might not be printed in an internal address listing. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70618[_User-defined Table 0618 – Protection Code_] for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -683,13 +682,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Identifies that an address needs to be treated with special care or sensitivity.\n\nThe specific set of codes and appropriate handling of such addresses will vary by jurisdiction and is subject to site-specific negotiation. For example, a provider address marked as 'unlisted' might not be printed in an internal address listing. Refer to *User-defined Table 0618 – Protection Code* for valid values."
       },
       {
         "id": "XAD.23",
         "path": "XAD.23",
         "short": "Address Identifier",
-        "defintion": "*Definition:* A unique identifier for the address.\n\n\n\nThis component allows an address to be uniquely identified, and enables the linking of a single address to multiple people and contexts. For example, each member of a family living at the same location would share the same address, having the same identifier. A correction to the address of one family member could be automatically propagated to other members of the family.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -702,9 +701,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "A unique identifier for the address.\n\nThis component allows an address to be uniquely identified, and enables the linking of a single address to multiple people and contexts. For example, each member of a family living at the same location would share the same address, having the same identifier. A correction to the address of one family member could be automatically propagated to other members of the family."
       }
     ]
   },
-  "description": "*Note:* Replaces the AD data type as of v2.3.\n\nExample of usage for US:\n\n|1000 Hospital Lane^Ste. 123^Ann Arbor ^MI^99999^USA^B^^WA^|\n\nThis would be formatted for postal purposes as\n\n1000 Hospital Lane\n\nSte. 123\n\nAnn Arbor MI 99999\n\nExample of usage for Australia:\n\n|14th Floor^1000 Hospital Lane^Sidney^QLD^9999|\n\nThis would be formatted for postal purposes using the same rules as for the American example as\n\n14th Floor\n\n1000 Hospital Lane\n\nSidney QLD 9999\n\n*International note:* Countries typically have a standard method of formatting addresses. This data type does not specify the formatting usages, only the components of a postal address."
+  "description": "This data type specifies the address of a person, place or organization plus associated information.\n\n> ***NOTE:*** Replaces the AD data type as of v2.3.\n> \n> [example]\n> of usage for US:\n> \n> |1000 Hospital Lane\\^Ste. 123^Ann Arbor \\^MI^99999\\^USA^B\\^^WA^|\n> \n> This would be formatted for postal purposes as\n> \n> 1000 Hospital Lane\n> \n> Ste. 123\n> \n> Ann Arbor MI 99999\n> \n> [example]\n> of usage for Australia:\n> \n> |14th Floor\\^1000 Hospital Lane^Sidney\\^QLD^9999|\n> \n> This would be formatted for postal purposes using the same rules as for the American example as\n> \n> 14th Floor\n> \n> 1000 Hospital Lane\n> \n> Sidney QLD 9999\n> \n> **International note:** Countries typically have a standard method of formatting addresses. This data type does not specify the formatting usages, only the components of a postal address."
 }

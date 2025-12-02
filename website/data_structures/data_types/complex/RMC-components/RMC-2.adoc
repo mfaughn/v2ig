@@ -1,4 +1,5 @@
 == RMC.2 - Amount Type (CWE)
+:target-element: RMC.2
 
 [datatype-definition]
 Specifies amount quantity type.

@@ -4,6 +4,7 @@
 :code: AUI
 :name: authorization information
 :primitive: false
+:target-element: AUI
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [datatype-definition]

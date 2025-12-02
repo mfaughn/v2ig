@@ -1,4 +1,5 @@
 == CSU.7 - Alternate Unit of Measure Coding System (ID)
+:target-element: CSU.7
 
 [datatype-definition]
 Specifies the coding system for the alternate unit of measure. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[HL7 Table 0396 – Coding System] in Chapter 2C, section "Coding System Table" for valid values. Analogous to _CSU.4 Unit of Measure Coding System_.

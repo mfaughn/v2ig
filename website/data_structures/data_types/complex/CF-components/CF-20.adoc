@@ -1,4 +1,5 @@
 == CF.20 - Second Alternate Coding System OID (ST)
+:target-element: CF.20
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) for the coding system or value set named in _CF.12_. Analogous To _CF.14 Coding System OID_.

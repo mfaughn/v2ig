@@ -1,4 +1,5 @@
 == PPN.23 - Assigning Jurisdiction (CWE)
+:target-element: PPN.23
 
 [datatype-definition]
 The geo-political body that assigned the identifier in component 1.

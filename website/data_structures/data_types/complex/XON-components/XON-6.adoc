@@ -1,4 +1,5 @@
 == XON.6 - Assigning Authority (HD)
+:target-element: XON.6
 
 [datatype-definition]
 The assigning authority is a unique identifier of the system (or organization or agency or department) that creates the data. Assigning authorities are unique across a given HL7 implementation. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 - Assigning_ _Authorit__y_] for suggested values.

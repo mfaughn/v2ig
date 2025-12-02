@@ -1,4 +1,5 @@
 == XCN.13 - Identifier Type Code (ID)
+:target-element: XCN.13
 
 [datatype-definition]
 A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the <assigning authority> component. Refer to E:\\V2\\v2.9 final Nov from Frank\\V29_CH02C_Tables.docx#HL70203[_HL7 Table 0203 - Identifier Type_] for suggested values.

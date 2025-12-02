@@ -1,4 +1,5 @@
 == QIP.2 - Values (ST)
+:target-element: QIP.2
 
 [datatype-definition]
 This component contains the field value or values in the form "value1& value2 & value3..."

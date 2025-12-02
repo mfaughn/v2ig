@@ -1,4 +1,5 @@
 == CX.6 - Assigning Facility (HD)
+:target-element: CX.6
 
 [datatype-definition]
 The place or location identifier where the identifier was first assigned to the patient. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.

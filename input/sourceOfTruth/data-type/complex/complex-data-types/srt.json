@@ -30,7 +30,6 @@
         "id": "SRT.1",
         "path": "SRT.1",
         "short": "Sort-by Field",
-        "defintion": "*Definition:* Identifies the field by which the response will be sorted. In a tabular response, this will be the column name to sort by. In the Segment Pattern and the Display Response, this will be the segment field name to sort by. See QIP in Section _2A.2.60.1_, \"_Segment Field Name (ST)_\" for segment field name definition.\n\n\n\nSee Chapter 5, \"Query\", for a complete discussion of queries and their responses.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Identifies the field by which the response will be sorted. In a tabular response, this will be the column name to sort by. In the Segment Pattern and the Display Response, this will be the segment field name to sort by. See QIP in Section *2A.2.60.1*, \"*Segment Field Name (ST)*\" for segment field name definition.\n\nSee Chapter 5, \"Query\", for a complete discussion of queries and their responses."
       },
       {
         "id": "SRT.2",
         "path": "SRT.2",
         "short": "Sequencing",
-        "defintion": "*Definition:* Identifies how the field or parameter will be sorted; and, if sorted, whether the sort will be case sensitive (the default) or not. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70397[_HL7 Table 0__397 –_ _Sequencing_] for valid values\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -92,9 +91,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Identifies how the field or parameter will be sorted; and, if sorted, whether the sort will be case sensitive (the default) or not. Refer to *HL7 Table 0**397 –* *Sequencing* for valid values"
       }
     ]
   },
-  "description": "Example: In a tabular response query, where the return data is known by column name, the SRT might look like:\n\n|LastName^A~FirstName^A|\n\nExample: In a segment response query, where the return data is known by segment and offset, the SRT field would use segment field name notation:\n\n|PID.3.1^A~PID.3.2^A|"
+  "description": "Specifies those parameters by which the response will be sorted and by what method.\n\n> ***Example:***\n> \n> In a tabular response query, where the return data is known by column name, the SRT might look like:\n> \n> |LastName\\^A~FirstName^A|\n> \n> [example]\n> In a segment response query, where the return data is known by segment and offset, the SRT field would use segment field name notation:\n> \n> |PID.3.1\\^A~PID.3.2^A|"
 }

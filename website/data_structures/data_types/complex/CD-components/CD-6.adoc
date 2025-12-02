@@ -1,4 +1,5 @@
 == CD.6 - Minimum and Maximum Data Values (NR)
+:target-element: CD.6
 
 [NOTE]
 this is the frequency of transmitted data, which may or may not be the actual frequency at which the data was acquired by an analog-to-digital converter or other digital data source (i.e. the data transmitted may be subsampled, or interpolated, from the originally acquired data.)

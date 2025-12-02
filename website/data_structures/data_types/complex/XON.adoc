@@ -4,6 +4,7 @@
 :code: XON
 :name: extended composite name and identification number for organizations
 :primitive: false
+:target-element: XON
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 This data type is used in fields (e.g., PV2-23, NK1-13, PD1-3, OBR-44) to specify the name and ID number of an organization.

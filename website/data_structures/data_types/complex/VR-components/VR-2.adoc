@@ -1,4 +1,5 @@
 == VR.2 - Last Data Code Value (ST)
+:target-element: VR.2
 
 [datatype-definition]
 Specifies the upper bound value.

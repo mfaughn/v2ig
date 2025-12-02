@@ -1,4 +1,5 @@
 == DIN.1 - Date (DTM)
+:target-element: DIN.1
 
 [datatype-definition]
 Specifies the date when a staff member became active or inactive.

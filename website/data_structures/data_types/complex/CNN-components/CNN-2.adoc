@@ -1,4 +1,5 @@
 == CNN.2 - Family Name (ST)
+:target-element: CNN.2
 
 This component contains the person's family name in a string format.
 

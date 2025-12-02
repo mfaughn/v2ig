@@ -1,4 +1,5 @@
 == MO.1 - Quantity (NM)
+:target-element: MO.1
 
 [datatype-definition]
 The first component is a quantity.

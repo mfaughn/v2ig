@@ -1,4 +1,5 @@
 == WVI.1 - Channel Number (NM)
+:target-element: WVI.1
 
 [datatype-definition]
 This component specifies the number of the recording channel.

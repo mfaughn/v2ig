@@ -1,4 +1,5 @@
 == CD.3 - Channel Sensitivity and Units (CSU)
+:target-element: CD.3
 
 [datatype-definition]
 This component defines the channel sensitivity (gain) and the units in which it is measured.

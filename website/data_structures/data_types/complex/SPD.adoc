@@ -4,6 +4,7 @@
 :code: SPD
 :name: specialty description
 :primitive: false
+:target-element: SPD
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

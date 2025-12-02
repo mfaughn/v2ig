@@ -30,7 +30,6 @@
         "id": "CNN.1",
         "path": "CNN.1",
         "short": "ID Number",
-        "defintion": "Coded ID according to a user-defined table. If the first component is present, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Coded ID according to a user-defined table. If the first component is present, either *CNN.8* or *CNN.9*, or both *CNN.10* and *CNN.11*, must be valued."
       },
       {
         "id": "CNN.2",
         "path": "CNN.2",
         "short": "Family Name",
-        "defintion": "This component contains the person's family name in a string format.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,13 +87,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component contains the person's family name in a string format."
       },
       {
         "id": "CNN.3",
         "path": "CNN.3",
         "short": "Given Name",
-        "defintion": "Used to specify a first name.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -120,13 +119,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a first name."
       },
       {
         "id": "CNN.4",
         "path": "CNN.4",
         "short": "Second and Further Given Names or Initials Thereof",
-        "defintion": "",
         "min": 0,
         "max": "1",
         "type": [
@@ -152,13 +151,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "== CNN.4 - Second and Further Given Names or Initials Thereof (ST)\n:target-element: CNN.4"
       },
       {
         "id": "CNN.5",
         "path": "CNN.5",
         "short": "Suffix",
-        "defintion": "Used to specify a name suffix (e.g., Jr. or III).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -184,13 +183,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name suffix (e.g., Jr. or III)."
       },
       {
         "id": "CNN.6",
         "path": "CNN.6",
         "short": "Prefix",
-        "defintion": "Used to specify a name prefix (e.g., Dr.).\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -216,13 +215,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify a name prefix (e.g., Dr.)."
       },
       {
         "id": "CNN.7",
         "path": "CNN.7",
         "short": "Degree",
-        "defintion": "Used to specify an educational degree (e.g., MD). Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70360[_User-defined Table 0360 – Degree/license/certificate_] in Chapter 2C, Code Tables, for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -252,13 +251,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Used to specify an educational degree (e.g., MD). Refer to *User-defined Table 0360 – Degree/license/certificate* in Chapter 2C, Code Tables, for suggested values."
       },
       {
         "id": "CNN.8",
         "path": "CNN.8",
         "short": "Source Table",
-        "defintion": "Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70297[_User-defined Table 0297 - CN ID source_] in Chapter 2C, Code Tables, for suggested values. Used to delineate the first component. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -288,13 +287,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Refer to *User-defined Table 0297 - CN ID source* in Chapter 2C, Code Tables, for suggested values. Used to delineate the first component. If component 1 is valued, either *CNN.8* or *CNN.9*, or both *CNN.10* and *CNN.11*, must be valued."
       },
       {
         "id": "CNN.9",
         "path": "CNN.9",
         "short": "Assigning Authority - Namespace ID",
-        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Authority_] in Chapter 2C, Code Tables, for suggested values. Assigning Authority is normally expressed as an HD data type, but has been flattened to 3 components here (_CNN.9_, _CNN.10_ and _CNN.11_) in this data type so that it may be fully expressed. Also note that if additional components are added to the HD data type in the future, adjustment will need to be made accordingly to this data type.\n\n\n\nIf component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -324,13 +323,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "See section, *2A.2.14.4*, \"*Assigning Authority (HD)*\" for definition. Refer to *User-defined Table 0363 – Assigning Authority* in Chapter 2C, Code Tables, for suggested values. Assigning Authority is normally expressed as an HD data type, but has been flattened to 3 components here (*CNN.9*, *CNN.10* and *CNN.11*) in this data type so that it may be fully expressed. Also note that if additional components are added to the HD data type in the future, adjustment will need to be made accordingly to this data type.\n\nIf component 1 is valued, either *CNN.8* or *CNN.9*, or both *CNN.10* and *CNN.11*, must be valued."
       },
       {
         "id": "CNN.10",
         "path": "CNN.10",
         "short": "Assigning Authority - Universal ID",
-        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition.\n\n\n\nIf _CNN.11_ is valued, this component must be valued. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -356,13 +355,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "See section, *2A.2.14.4*, \"*Assigning Authority (HD)*\" for definition.\n\nIf *CNN.11* is valued, this component must be valued. If component 1 is valued, either *CNN.8* or *CNN.9*, or both *CNN.10* and *CNN.11*, must be valued."
       },
       {
         "id": "CNN.11",
         "path": "CNN.11",
         "short": "Assigning Authority - Universal ID Type",
-        "defintion": "See section, _2A.2.14.4_, \"_Assigning Authority (HD)_\" for definition. If this component is a known UID refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70301[_HL7 Table 0301 - Universal ID type_] in Chapter 2C, Code Tables, for valid values.\n\n\n\nIf _CNN.10_ is valued, this component must be valued. If component 1 is valued, either _CNN.8_ or _CNN.9_, or both _CNN.10_ and _CNN.11_, must be valued.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -392,9 +391,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "See section, *2A.2.14.4*, \"*Assigning Authority (HD)*\" for definition. If this component is a known UID refer to *HL7 Table 0301 - Universal ID type* in Chapter 2C, Code Tables, for valid values.\n\nIf *CNN.10* is valued, this component must be valued. If component 1 is valued, either *CNN.8* or *CNN.9*, or both *CNN.10* and *CNN.11*, must be valued."
       }
     ]
   },
-  "description": "*Attention: _Retained for backward compatibility only in version 2.6. Fields associated with this data type have been replaced by the ROL segment._*\n\n*Note:* Restores the original data type CN as was initially implementable in the CM used in sections 4.5.3.32 and 7.4.1.32 - (OBR-32), 4.5.3.33 and 7.4.1.33 - ( OBR-33), 4.5.3.34 and 7.4.1.34 - ( OBR-34), 4.5.3.35 and 7.4.1.35 - (OBR-35). Components 7 and 8, however, have been promoted to data type IS to be consistent with current practice without violating backward compatibility."
+  "description": "**Attention: *Retained for backward compatibility only in version 2.6. Fields associated with this data type have been replaced by the ROL segment.***\n\nSpecifies a person using both an identifier and the person’s name. Retained for backward compatibility only as of v2.6.\n\n> ***NOTE:*** Restores the original data type CN as was initially implementable in the CM used in sections 4.5.3.32 and 7.4.1.32 - (OBR-32), 4.5.3.33 and 7.4.1.33 - ( OBR-33), 4.5.3.34 and 7.4.1.34 - ( OBR-34), 4.5.3.35 and 7.4.1.35 - (OBR-35). Components 7 and 8, however, have been promoted to data type IS to be consistent with current practice without violating backward compatibility."
 }

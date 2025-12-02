@@ -30,7 +30,6 @@
         "id": "CCD.1",
         "path": "CCD.1",
         "short": "Invocation Event",
-        "defintion": "*Definition:* Specifies the code for the event precipitating/triggering the charge activity. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70100[_HL__7 Table 010__0 - Invocation_ _event_] for valid values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -60,13 +59,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "Specifies the code for the event precipitating/triggering the charge activity. Refer to *HL**7 Table 010**0 - Invocation* *event* for valid values."
       },
       {
         "id": "CCD.2",
         "path": "CCD.2",
         "short": "Date/time",
-        "defintion": "*Definition:* The second component is used to express the exact time to charge for the ordered service; it is used only when the _CCD.1_ value is T. When used, it is expressed as a DTM data type.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,9 +78,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The second component is used to express the exact time to charge for the ordered service; it is used only when the *CCD.1* value is T. When used, it is expressed as a DTM data type."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v2.5."
+  "description": "Specifies whether a charge action is based on an invocation event or is time-based.\n\n> ***NOTE:*** Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v2.5."
 }

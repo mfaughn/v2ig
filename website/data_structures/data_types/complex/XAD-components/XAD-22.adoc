@@ -1,4 +1,5 @@
 == XAD.22 - Protection Code (CWE)
+:target-element: XAD.22
 
 [datatype-definition]
 Identifies that an address needs to be treated with special care or sensitivity.

@@ -1,4 +1,5 @@
 == CWE.14 - Coding System OID (ST)
+:target-element: CWE.14
 
 [datatype-definition]
 This component contains the ISO Object Identifier (OID) for the coding system or value set named in _CWE.3_. The value for this component for an HL7 or User Defined table SHALL be the value published for the code system OID for the table in _Chapter 2C Code Tables_. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used.

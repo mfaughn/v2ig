@@ -1,4 +1,5 @@
 == DLT.2 - Numeric Threshold (NM)
+:target-element: DLT.2
 
 [datatype-definition]
 The numeric threshold of the change that is detected.

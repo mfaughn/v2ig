@@ -1,4 +1,5 @@
 == PPN.24 - Assigning Agency or Department (CWE)
+:target-element: PPN.24
 
 [datatype-definition]
 The agency or department that assigned the identifier in component 1.

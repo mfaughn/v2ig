@@ -4,6 +4,7 @@
 :code: SCV
 :name: scheduling class value pair
 :primitive: false
+:target-element: SCV
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

@@ -30,7 +30,6 @@
         "id": "OCD.1",
         "path": "OCD.1",
         "short": "Occurrence Code",
-        "defintion": "*Definition:* The NUBC code for the event or occurrence relating to a bill that may affect payer processing.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70350[_HL7-defined Table 03__50 – Occurrence Code_] for valid values.\n\n\n\nValues for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "The NUBC code for the event or occurrence relating to a bill that may affect payer processing.\n\nRefer to *HL7-defined Table 03**50 – Occurrence Code* for valid values.\n\nValues for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed."
       },
       {
         "id": "OCD.2",
         "path": "OCD.2",
         "short": "Occurrence Date",
-        "defintion": "*Definition:* The date the event, relating to a bill that may affect payer processing, occurred.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -79,9 +78,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The date the event, relating to a bill that may affect payer processing, occurred."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.\n\nThis data type carries data defined by CMS or other regulatory agencies. It corresponds to UB82 Fields 28‑32 and UB92 fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. Refer to a UB specification for additional information.\n\nUse Case: A Medicare beneficiary was confined in hospital from January 1, 1992 to January 10, 1992, however, his Medicare Part A benefits were exhausted as of January 8, 1992, and he was not entitled to Part B benefits. Therefore, Form Locator 32 should contain code 23 and the date 010892.\n\nExample:\n\n|23&Benefits Exhausted&NUBC^19920108|"
+  "description": "The code and associated date defining a significant event relating to a bill that may affect payer processing.\n\n> ***NOTE:*** Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.\n> \n> This data type carries data defined by CMS or other regulatory agencies. It corresponds to UB82 Fields 28‑32 and UB92 fields 32a, 32b, 33a, 33b, 34a, 34b, 35a, and 35b. Refer to a UB specification for additional information.\n> \n> Use Case: A Medicare beneficiary was confined in hospital from January 1, 1992 to January 10, 1992, however, his Medicare Part A benefits were exhausted as of January 8, 1992, and he was not entitled to Part B benefits. Therefore, Form Locator 32 should contain code 23 and the date 010892.\n> \n> [er7-example]\n> |23&Benefits Exhausted&NUBC^19920108|"
 }

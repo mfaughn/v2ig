@@ -30,7 +30,6 @@
         "id": "PTA.1",
         "path": "PTA.1",
         "short": "Policy Type",
-        "defintion": "*Definition:* Specifies the policy type.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70147[_User-defin__ed Table 0147 - Policy Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the policy type.\n\nRefer to *User-defin**ed Table 0147 - Policy Type* for suggested values."
       },
       {
         "id": "PTA.2",
         "path": "PTA.2",
         "short": "Amount Class",
-        "defintion": "*Definition:* Specifies the amount quantity class.\n\n\n\nRefer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29_CH02C_Tables.docx#HL70193[_User-defi__n__ed Table_ _0193 - Amount Class_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,25 +69,25 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies the amount quantity class.\n\nRefer to E:\\\\V2\\\\v2.9 final Nov from Frank\\\\V29*CH02C*Tables.docx#HL70193[*User-defi**n**ed Table* *0193 - Amount Class*] for suggested values."
       },
       {
         "id": "PTA.3",
         "path": "PTA.3",
         "short": "Money or Percentage Quantity",
-        "defintion": "*Attention:* _The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7._ Refer to link:#a.2.59.4-money-or-percentage-mop[_PTA.4_] instead.\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.* Refer to [*PTA.4*](#a.2.59.4-money-or-percentage-mop) instead."
       },
       {
         "id": "PTA.4",
         "path": "PTA.4",
         "short": "Money or Percentage",
-        "defintion": "*Definition:* specifies an amount that may be either currency or a percentage.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -101,9 +100,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "specifies an amount that may be either currency or a percentage."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 6.5.7.29 IN2-29, as of v 2.5."
+  "description": "This data type specifies the policy type and amount covered by the insurance.\n\n> ***NOTE:*** Replaces the CM data type used in section 6.5.7.29 IN2-29, as of v 2.5."
 }

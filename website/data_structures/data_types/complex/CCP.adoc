@@ -4,6 +4,7 @@
 :code: CCP
 :name: channel calibration parameters
 :primitive: false
+:target-element: CCP
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 *Attention: Retained for backward compatibility only in version 2.7.* This is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.

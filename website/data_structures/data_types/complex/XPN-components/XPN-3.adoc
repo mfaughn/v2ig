@@ -1,4 +1,5 @@
 == XPN.3 - Second and Further Given Names or Initials Thereof (ST)
+:target-element: XPN.3
 
 [datatype-definition]
 Multiple middle names may be included by separating them with spaces.

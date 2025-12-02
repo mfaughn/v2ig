@@ -1,4 +1,5 @@
 == XAD.20 - Comment (ST)
+:target-element: XAD.20
 
 [datatype-definition]
 Descriptive information about the use of the address.

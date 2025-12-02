@@ -4,6 +4,7 @@
 :code: NDL
 :name: name with date and location
 :primitive: false
+:target-element: NDL
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 *Attention: _Retained for backward compatibility only in v2.6._* Fields associated with this data type have been replaced by the ROL segment.

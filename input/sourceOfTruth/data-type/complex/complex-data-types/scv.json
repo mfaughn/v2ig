@@ -30,7 +30,6 @@
         "id": "SCV.1",
         "path": "SCV.1",
         "short": "Parameter Class",
-        "defintion": "*Definition:* The first component of this field is a code identifying the parameter or preference being passed to the filler application. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70294[_User-defined Table 0294 - Time Selection Criteria Parameter Class_ Codes] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The first component of this field is a code identifying the parameter or preference being passed to the filler application. Refer to *User-defined Table 0294 - Time Selection Criteria Parameter Class* Codes for suggested values."
       },
       {
         "id": "SCV.2",
         "path": "SCV.2",
         "short": "Parameter Value",
-        "defintion": "*Definition:* The second component is the actual data value for that parameter.\n\n\n\nFor example, if a filler application allows preference parameters to be passed to specify a preferred start time, a preferred end time, and preferred days of the week for the appointment, it may define the following parameter class codes and valid data sets.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,9 +78,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The second component is the actual data value for that parameter.\n\nFor example, if a filler application allows preference parameters to be passed to specify a preferred start time, a preferred end time, and preferred days of the week for the appointment, it may define the following parameter class codes and valid data sets."
       }
     ]
   },
-  "description": "For use only with the scheduling chapter."
+  "description": "This data type is used to communicate parameters and preferences to the filler application regarding the selection of an appropriate time slot, resource, location, or filler override criterion for an appointment.\n\nFor use only with the scheduling chapter."
 }

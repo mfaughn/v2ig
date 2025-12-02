@@ -30,7 +30,6 @@
         "id": "AD.1",
         "path": "AD.1",
         "short": "Street Address",
-        "defintion": "*Definition:* This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,13 +55,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address."
       },
       {
         "id": "AD.2",
         "path": "AD.2",
         "short": "Other Designation",
-        "defintion": "*Definition:* This component specifies the second line of address. In general, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,13 +87,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the second line of address. In general, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address."
       },
       {
         "id": "AD.3",
         "path": "AD.3",
         "short": "City",
-        "defintion": "*Definition:* This component specifies the city, district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -120,13 +119,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the city, district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage."
       },
       {
         "id": "AD.4",
         "path": "AD.4",
         "short": "State or Province",
-        "defintion": "*Definition:* This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -152,13 +151,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country."
       },
       {
         "id": "AD.5",
         "path": "AD.5",
         "short": "Zip or Postal Code",
-        "defintion": "*Definition:* This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9 and the Australian Postcode takes the form 9999.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -184,13 +183,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9 and the Australian Postcode takes the form 9999."
       },
       {
         "id": "AD.6",
         "path": "AD.6",
         "short": "Country",
-        "defintion": "*Definition:* This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70399[HL7 Table 0399 - Country Code] in Chapter 2C, Code Tables, for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -220,13 +219,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to HL7 Table 0399 - Country Code in Chapter 2C, Code Tables, for valid values."
       },
       {
         "id": "AD.7",
         "path": "AD.7",
         "short": "Address Type",
-        "defintion": "*Definition:* This component specifies the kind or type of address. Refer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70190[_HL7 Table_ _0190 - Add__ress Type_] in Chapter 2C, Code Tables, for valid values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -256,13 +255,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies the kind or type of address. Refer to *HL7 Table* *0190 - Add**ress Type* in Chapter 2C, Code Tables, for valid values."
       },
       {
         "id": "AD.8",
         "path": "AD.8",
         "short": "Other Geographic Designation",
-        "defintion": "*Definition:* This component specifies any other geographic designation that may be necessary. It includes county, bioregion, SMSA, etc.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -288,9 +287,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "This component specifies any other geographic designation that may be necessary. It includes county, bioregion, SMSA, etc."
       }
     ]
   },
-  "description": "*Note:* Used only in the LA1 data type. Retained for backward compatibility as of v2.6. Replaced elsewhere by the XAD data type as of v2.3.\n\nExample:\n\n|10 ASH LN^#3^LIMA^OH^48132­|"
+  "description": "This data type specifies the address of a person, place or organization.\n\n> ***NOTE:*** Used only in the LA1 data type. Retained for backward compatibility as of v2.6. Replaced elsewhere by the XAD data type as of v2.3.\n> \n> [er7-example]\n> |10 ASH LN\\^#3^LIMA\\^OH^48132­|"
 }

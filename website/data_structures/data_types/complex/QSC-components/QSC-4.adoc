@@ -1,4 +1,5 @@
 == QSC.4 - Relational Conjunction (ID)
+:target-element: QSC.4
 
 [datatype-definition]
 Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70210[_HL7 Table 0210 - Relational Conjunction_] for valid values. The relational conjunction is defined as follows: If more than one comparison is to be made to select qualifying rows, a conjunction relates this repetition of the field to the next.

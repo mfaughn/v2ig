@@ -1,4 +1,5 @@
 == XON.9 - Name Representation Code (ID)
+:target-element: XON.9
 
 [datatype-definition]
 Different <name/address types> and representations of the same <name/address> should be described by repeating of this field, with different values of the <name/address type> and/or <name/address representation> component.

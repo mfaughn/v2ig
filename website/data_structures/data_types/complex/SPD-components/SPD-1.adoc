@@ -1,4 +1,5 @@
 == SPD.1 - Specialty Name (ST)
+:target-element: SPD.1
 
 [datatype-definition]
 Identifies the provider’s specialty.

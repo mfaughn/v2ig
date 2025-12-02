@@ -1,4 +1,5 @@
 == CF.4 - Alternate Identifier (ST)
+:target-element: CF.4
 
 [datatype-definition]
 A sequence of characters that uniquely identifies an alternate code. Analogous to _CF-1 Identifier_.

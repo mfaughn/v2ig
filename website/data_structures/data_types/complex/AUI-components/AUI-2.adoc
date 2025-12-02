@@ -1,4 +1,5 @@
 == AUI.2 - Date (DT)
+:target-element: AUI.2
 
 [datatype-definition]
 Date of authorization.

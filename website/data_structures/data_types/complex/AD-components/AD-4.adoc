@@ -1,4 +1,5 @@
 == AD.4 - State or Province (ST)
+:target-element: AD.4
 
 [datatype-definition]
 This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.

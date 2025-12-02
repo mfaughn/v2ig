@@ -1,4 +1,5 @@
 == CNE.4 - Alternate Identifier (ST)
+:target-element: CNE.4
 
 [datatype-definition]
 A sequence of characters that uniquely identifies an alternate code. Analogous to _CNE.1_ _Identifier_.

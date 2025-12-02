@@ -1,4 +1,5 @@
 == PPN.9 - Assigning Authority (HD)
+:target-element: PPN.9
 
 [datatype-definition]
 The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. It is a HD data type. file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70363[_User-defined Table 0363 – Assigning Auth__ority_] is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, <namespace ID>.

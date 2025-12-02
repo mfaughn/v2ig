@@ -4,6 +4,7 @@
 :code: CD
 :name: channel definition
 :primitive: false
+:target-element: CD
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 *Attention: _Retained for backward compatibility onlyas of v 2.7_.* This is used only in the waveform message, CHM category, which has been retained for backward compatibility only in v 2.7.

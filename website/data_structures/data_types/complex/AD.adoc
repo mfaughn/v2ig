@@ -4,6 +4,7 @@
 :code: AD
 :name: address
 :primitive: false
+:target-element: AD
 :generated: Thu, 19 Sep 2024 15:32:55 -0600
 
 [datatype-definition]

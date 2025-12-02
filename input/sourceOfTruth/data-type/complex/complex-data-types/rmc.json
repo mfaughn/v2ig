@@ -30,7 +30,6 @@
         "id": "RMC.1",
         "path": "RMC.1",
         "short": "Room Type",
-        "defintion": "*Definition:* Specifies the room type.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70145[_User-defined Table 0145 - Room Type_] for suggested values.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "Specifies the room type.\n\nRefer to *User-defined Table 0145 - Room Type* for suggested values."
       },
       {
         "id": "RMC.2",
         "path": "RMC.2",
         "short": "Amount Type",
-        "defintion": "*Definition:* Specifies amount quantity type.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70146[_User-defined Table 0146 – Amount Type_] for suggested values.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -70,25 +69,25 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "Specifies amount quantity type.\n\nRefer to *User-defined Table 0146 – Amount Type* for suggested values."
       },
       {
         "id": "RMC.3",
         "path": "RMC.3",
         "short": "Coverage Amount",
-        "defintion": "*Attention:* _The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7._ Refer to _2A.2.65.4_, \"link:#a.2.65.4-money-or-percentage-mop[_Money or Percentage_]\".\n",
         "extension": [
           {
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "W"
           }
-        ]
+        ],
+        "definition": "**Attention:** *The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7.* Refer to *2A.2.65.4*, \"[*Money or Percentage*](#a.2.65.4-money-or-percentage-mop)\"."
       },
       {
         "id": "RMC.4",
         "path": "RMC.4",
         "short": "Money or Percentage",
-        "defintion": "*Definition:* specifies an amount that may be either currency or a percentage.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -101,9 +100,10 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "specifies an amount that may be either currency or a percentage."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 6.5.7.28 IN2-28, as of v 2.5."
+  "description": "This data type specifies insurance coverage detail for a room.\n\n> ***NOTE:*** Replaces the CM data type used in section 6.5.7.28 IN2-28, as of v 2.5."
 }

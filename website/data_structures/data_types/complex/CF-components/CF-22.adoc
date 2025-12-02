@@ -1,4 +1,5 @@
 == CF.22 - Second Alternate Value Set Version ID (DTM)
+:target-element: CF.22
 
 [datatype-definition]
 This component carries the version for the value set identified by _CF.21_. The version is a date. The date is the date/time that the value set being used was published.

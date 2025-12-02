@@ -30,7 +30,6 @@
         "id": "MO.1",
         "path": "MO.1",
         "short": "Quantity",
-        "defintion": "*Definition:* The first component is a quantity.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -43,13 +42,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "O"
           }
-        ]
+        ],
+        "definition": "The first component is a quantity."
       },
       {
         "id": "MO.2",
         "path": "MO.2",
         "short": "Denomination",
-        "defintion": "*Definition:* The second component is the denomination in which the quantity is expressed. The values for the denomination component are the three-character codes specified in ISO-4217. See file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#ISO0913[_Externally-defined Table 0913 – Monetary Denomination Code_].\n\n\n\nIf the denomination is not specified, \"MSH-17-country code\", in Chapter 2, section 2.14.9.17, is used to determine the default. Example,\n\n\n\n|99.50^USD|\n\n\n\nwhere USD is the ISO 4217 code for the U.S. American dollar.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,9 +78,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The second component is the denomination in which the quantity is expressed. The values for the denomination component are the three-character codes specified in ISO-4217. See *Externally-defined Table 0913 – Monetary Denomination Code*.\n\nIf the denomination is not specified, \"MSH-17-country code\", in Chapter 2, section 2.14.9.17, is used to determine the default. Example,\n\n```\n|99.50^USD|\n\nwhere USD is the ISO 4217 code for the U.S. American dollar.\n```"
       }
     ]
   },
-  "description": ""
+  "description": "This data type specifies an amount of money and the denomination in which it is expressed."
 }

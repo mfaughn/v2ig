@@ -30,7 +30,6 @@
         "id": "OSP.1",
         "path": "OSP.1",
         "short": "Occurrence Span Code",
-        "defintion": "*Definition:* The NUBC code itself that identifies an event that relates to the payment of a claim.\n\n\n\nRefer to file:///E:\\V2\\v2.9%20final%20Nov%20from%20Frank\\V29_CH02C_Tables.docx#HL70351[_HL7 Table_ _0351 – Occurren__ce Span_] for valid values. Values for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed.\n",
         "min": 1,
         "max": "1",
         "type": [
@@ -47,13 +46,13 @@
             "url": "http://hl7.org/v2/StructureDefinition/optionality",
             "valueCode": "R"
           }
-        ]
+        ],
+        "definition": "The NUBC code itself that identifies an event that relates to the payment of a claim.\n\nRefer to *HL7 Table* *0351 – Occurren**ce Span* for valid values. Values for this component need to come from National Uniform Billing Committee (NUBC). No extensions are allowed."
       },
       {
         "id": "OSP.2",
         "path": "OSP.2",
         "short": "Occurrence Span Start Date",
-        "defintion": "*Definition:* The date an event started that relates to the payment of a claim.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,13 +78,13 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The date an event started that relates to the payment of a claim."
       },
       {
         "id": "OSP.3",
         "path": "OSP.3",
         "short": "Occurrence Span Stop Date",
-        "defintion": "*Definition:* The date an event ended that relates to the payment of a claim.\n",
         "min": 0,
         "max": "1",
         "type": [
@@ -111,9 +110,10 @@
               }
             ]
           }
-        ]
+        ],
+        "definition": "The date an event ended that relates to the payment of a claim."
       }
     ]
   },
-  "description": "*Note:* Replaces the CM data type used in section 6.5.11.8 UB2-8, as of v 2.5.\n\nUse case: The patient was admitted for minor surgery (1/6/03) and discharged the following day (1/7/03). Complications ensured and the patient was readmitted the following day (1/8/03). When the claim for 1/8/03 is filed, the prior stay dates (1/6/03-1/7/03) must be reported (per the Health Plan) using Occurrence Span Code and Dates 71 - Prior Stay Date. Example:\n\n|71&Prior Stay Date&NUBC^20030106^20030107|"
+  "description": "A code and the related dates that identify an event that relates to the payment of the claim. For example, Prior Stay Dates which is the from/through dates given by the patient of any hospital stay that ended within 60 days of this hospital or SNF admission.\n\n> ***NOTE:*** Replaces the CM data type used in section 6.5.11.8 UB2-8, as of v 2.5.\n> \n> Use case: The patient was admitted for minor surgery (1/6/03) and discharged the following day (1/7/03). Complications ensured and the patient was readmitted the following day (1/8/03). When the claim for 1/8/03 is filed, the prior stay dates (1/6/03-1/7/03) must be reported (per the Health Plan) using Occurrence Span Code and Dates 71 - Prior Stay Date. Example:\n> \n> [er7]\n> |71&Prior Stay Date&NUBC\\^20030106^20030107|"
 }

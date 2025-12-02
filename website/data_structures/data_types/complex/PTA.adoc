@@ -4,6 +4,7 @@
 :code: PTA
 :name: policy type and amount
 :primitive: false
+:target-element: PTA
 :generated: Thu, 19 Sep 2024 15:32:58 -0600
 
 [datatype-definition]

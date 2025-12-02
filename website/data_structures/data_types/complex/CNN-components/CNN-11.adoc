@@ -1,4 +1,5 @@
 == CNN.11 - Assigning Authority - Universal ID Type (ID)
+:target-element: CNN.11
 
 See section, _2A.2.14.4_, "_Assigning Authority (HD)_" for definition. If this component is a known UID refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70301[_HL7 Table 0301 - Universal ID type_] in Chapter 2C, Code Tables, for valid values.
 

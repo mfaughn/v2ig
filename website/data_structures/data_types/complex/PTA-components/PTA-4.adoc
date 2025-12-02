@@ -1,4 +1,5 @@
 == PTA.4 - Money or Percentage (MOP)
+:target-element: PTA.4
 
 [datatype-definition]
 specifies an amount that may be either currency or a percentage.
