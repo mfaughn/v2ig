@@ -15,13 +15,9 @@ Each MFE/ITM/IVT structure describes a set of attributes specific to the invento
 
 The ILT segment describes lot and quantity information for a material product. In the message structure, this segment is directly associated with the IVT segment, thus the lot/quantity information is always related to a location. Repetition of the ILT segment supports the case where more than one lot of a material product may exist in an inventory location.
 
-[NOTE]
-that the quantities in the ILT segment are not necessarily intended to refer to continuously updated inventory quantities. The expectation is that periodic inventory quantities would be updated with subsequent master file messages. This segment can be used for interfacing, for example, Immunization information.
+Note that the quantities in the ILT segment are not necessarily intended to refer to continuously updated inventory quantities. The expectation is that periodic inventory quantities would be updated with subsequent master file messages. This segment can be used for interfacing, for example, Immunization information.
 
 Additional specialized information segments may be defined as additional use cases are defined, such as medication/drug segments.
 
 [tabset]
 M16
-
-Master Files Query Response: Refer to Section 8.4.4.
-

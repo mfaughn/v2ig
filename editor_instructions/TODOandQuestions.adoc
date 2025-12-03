@@ -6,22 +6,11 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 *	In Chapter 15, for QBP/RSP, the usage of "Conformance Statement" in the opening bit of the technical_specs file is probably not correct. We should review
 
-* Figure out a strategy for dealing with Glossary terms
-** Combine them? Leave them in Context? Make a decision based on the specificity of the term?
-** Make the first reference in text a hyperlink which goes to a glossary
-*** Editors tag these with GLOSSARY so that we can find them later
-
-* Confirm the addition of the Consent content from Chapter 9 to the Administrative Domain
-** This is OK
-
 *	Review remaining TBD sections
 **	7.17+ - Units lists (tables)
 **	9.4.1 - Consent 9 (see topic above)
 **	5.10+ (5.9 in v2.9.1) – Superseded stuff
 **	5.11 (5.10 in v2.9.1) – outstanding issues (move to Jira if still an issue??)
-
-* Decide on where to put Item Inventory and Master File content
-** Moved to content from Chapter 17 to Chapter 8
 
 * Review the "rules" in Chapter 12 relative to general guidance in Chapter 2
 
@@ -33,6 +22,40 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 
 == Questions
 
+* Should the links to tech_specs really not include the event(s) identifiers??
+
+* The P03 (Common Order Group) and P11 message definitions in Chapter 6 contain footnotes and notes. How should these be rendered?
+
+*  (from Riki) I thought we handle all queries in the same place - for exmaple, in Chapter 15 should the Q25_K25 doc be moved to the query section insted of remaining in the personnel management section?
+
+* In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?
+
+* In the examples, should MSH-12 be updated to 2.9.1?
+
+== Glossary questions
+
+* Will need to add the Glossary links for "Generic Name" and "Brand Name" to the PCD segment field descriptions, since not in this text here anywhere.
+** Craig - Not sure I like adding hyperlinks in segment field descriptions (and there is no way to do that now, because the segment definitions haven't been added to GitHub (that I know of) for editing. Skipping this for now.
+
+* For this entry "prove causality (GLOSSARY)" - do we need to provide the links to both Causation and Causal Relationship? How would we do that?
+** Craig - deferred until we look at the overall Glossary strategy
+
+* Should the GLOSSARY link to Regulatory agency also be added in what is currently 7.6: "To meet monitoring and analysis requirements, patient registration, treatment, diagnostic, and study summary data are reported to study sponsors like pharmaceutical or medical device companies, regulatory agencies, "?
+** Craig - generally speaking, I only marked the first reference to a term with GLOSSARY.
+
+== Completed
+
+* Figure out a strategy for dealing with Glossary terms
+** Combine them? Leave them in Context? Make a decision based on the specificity of the term?
+** Make the first reference in text a hyperlink which goes to a glossary
+*** Editors tag these with GLOSSARY so that we can find them later
+
+* Confirm the addition of the Consent content from Chapter 9 to the Administrative Domain
+** This is OK
+
+*  Not sure where to add the reference to "Holder of marketing authorization" in the Glossary.
+** Craig - I guess this is a question of if all terms in the Glossary need to be used in the narrative text. It doesn't seem like we've enforced that requirement before.
+
 * Should "domain" be restricted to just the high-level groups (administrative, clinical, erp, financial and technical) with "topic" or some other word used for the next level (registration, scheduling, materials management, immunization)? Or is everything OK to describe as a "domain"? "Transaction set" is also used a lot in a variety of chapters.
 ** We decided on "topic" as the word
 
@@ -40,7 +63,9 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** This domain defines the transactions at the seventh level, that is, the abstract message. Various schemes are used to generate the actual characters that comprise the messages according to the communication environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 1, "Relationship to Other Protocols." The examples included in this domain were constructed using the HL7 Encoding Rules.
 ** This can be removed and only live in Chapter 1 (Introduction)
 
-* Should the links to tech_specs really not include the event(s) identifiers??
+* Decide on where to put Item Inventory and Master File content
+** Moved to content from Chapter 17 to Chapter 8
+
 
 * Are we updating dates in example messages?
 ** Yes - dates and general best practices
@@ -48,7 +73,6 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 * Chapter 6 recommends Z-segments for state-specific requirements. Can this be removed?
 ** Yes
 
-* The P03 (Common Order Group) and P11 message definitions in Chapter 6 contain footnotes and notes. How should these be rendered?
 
 * Can we convert footnotes to regular text?
 ** Per Lynn (asking if footnotes are normative and cannot be changed) - I don’t think there’s an issue with changing the location of the content of the footnotes for V2+. The whole thing is a migration to the web format so why not change the footnotes.
@@ -56,6 +80,7 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 *	Should Patient Care (Chapter 12) be updated from "patient care" to "problem-oriented records" to be more specific?
 **	Something similar seems to have been done for Medical Records (Chapter 9)/Document Management
 ** Yes, rename
+
 
 * How are we formatting references to segments, fields, components and subcomponents
 ** OBX segment  OBX - Observation Segment
@@ -76,7 +101,3 @@ This file contains a TODO list for tasks related to setting up the v2+ editing e
 ** AD - Address
 ** Address (AD) Data Type
 ** DECISION: use AD - Address
-
-*  (from Riki) I thought we handle all queries in the same place - for exmaple, in Chapter 15 should the Q25_K25 doc be moved to the query section insted of remaining in the personnel management section?
-
-* In general, do statements like "Refer to User-defined Table 0305 - Person location type for suggested values." mean anything when the user defined table is empty? Can these be removed as part of the terminology transition away from tables?

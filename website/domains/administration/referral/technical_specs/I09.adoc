@@ -6,5 +6,4 @@
 This event triggers a message sent from a healthcare provider to a payor requesting changes to a previously referenced authorization. For example, a provider may determine that a substitute testing or surgical procedure should be performed on a specified patient.
 
 [tabset]
-I09
-I09
+I08

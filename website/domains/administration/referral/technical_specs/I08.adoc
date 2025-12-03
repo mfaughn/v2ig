@@ -7,5 +7,3 @@ This event triggers a message to be sent from a healthcare provider to a payor r
 
 [tabset]
 I08
-I08
-

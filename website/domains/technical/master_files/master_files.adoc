@@ -5,25 +5,25 @@
 
 In an open-architecture healthcare environment there often exists a set of common reference files used by one or more application systems. Such files are called master files. Some common examples of master files in the healthcare environment include:
 
-{empty}a) staff and health practitioner master file
+* staff and health practitioner master file
 
-{empty}b) system user (and password) master file
+* system user (and password) master file
 
-{empty}c) location (census and clinic) master file
+* location (census and clinic) master file
 
-{empty}d) device type and location (e.g., workstations, terminals, printers, etc.)
+* device type and location (e.g., workstations, terminals, printers, etc.)
 
-{empty}e) lab test definition file
+* lab test definition file
 
-{empty}f) exam code (radiology) definition file
+* exam code (radiology) definition file
 
-{empty}g) charge master file
+* charge master file
 
-{empty}h) patient status master
+* patient status master
 
-{empty}i) patient type master
+* patient type master
 
-{empty}j) service item master file
+* service item master file
 
 These common reference files need to be synchronized across the various applications at a given site. The Master Files Notification message provides a way of maintaining this synchronization by specifying a standard for the transmission of this data between applications.
 
@@ -32,9 +32,9 @@ In many implementations, one application system will "own" a particular master f
 The Master Files Notification message supports the distribution of changes to various master files between systems in either online or batch modes, and allows the use of either original or enhanced acknowledgment modes. These messages use the MSH segment to pass the basic event code (master files notification or acknowledgment). The MFI (master file identification) segment identifies the master file being updated as well as the initial and requested dates for "file-level" events (such as "replace file"). For each record being changed, the MFE (Master File Entry) segment carries the record-level event code (such as add, update, etc.), the initial and requested dates for the event, and the record-level key identifying the entry in the master file. The MFA (master file acknowledgment) segment returns record-specific acknowledgment information.
 
 [NOTE]
-The MFE segment is not the master file record, but only specifies its identifier, event, and event dates. The master file record so identified is contained in either Z-segments or HL7-defined segments immediately following the MFE segment. This record may be either a flat record contained in a single segment, or a complex record needing more than a single segment to carry its data and (usually hierarchical) structure.
+The MFE segment is not the master file record, but only specifies its identifier, event, and event dates. The master file record so identified is contained in either Z-segments (not recommended) or HL7-defined segments immediately following the MFE segment. This record may be either a flat record contained in a single segment, or a complex record needing more than a single segment to carry its data and (usually hierarchical) structure.
 
-The master file segments commonly needed across HL7 applications as well as those specific to the various application chapters, are defined in Sections 0 through 4 of this chapter.
+The master file segments commonly needed across HL7 applications as well as those specific to the various application chapters, are defined elsewhere in this section.
 
 A given master files message concerns only a single master file. However, the provision of a record-level event code (and requested activation date) on the MFE and the MFA segments allows a single message to contain several types of changes (events) to that file.
 
@@ -47,13 +47,13 @@ This also means that an application acknowledgment (or a deferred application ac
 == General Use Cases / Background
 [v291_section="8.3"]
 
-.The Master Files Change Notification message can be used for the following message-level trigger events:
+The Master Files Change Notification message can be used for the following message-level trigger events.
+
+.Master Files Trigger Events
 [width="100%",cols="19%,81%",options="header",]
 |===
 |Trigger Event |Name
-|M01 |Master File Notification - not otherwise specified [WITHDRAWN]
 |M02 |Master File Notification – Staff/Practitioner
-|M03 |Master File Notification – Test/Observation [WITHDRAWN]
 |M04 |Master File Notification – Charge Description
 |M05 |Master File Notification – Patient Location
 |M06 |Master File Notification – Clinical Study with Phases and Schedules
@@ -72,19 +72,139 @@ This also means that an application acknowledgment (or a deferred application ac
 |M19 |Contract Master File
 |===
 
+The MFN message specifies whether the master file, as a whole, has been replaced or if a record within the file has been updated. See section 8.5.13, "MFI-3 File Event Code" for further details.
+
+The MFN message transmits the specific action taken on a record. See section 8.5.2.1, "MFE-1 Record Event Code" for further details.
+
+=== Generic Master File Notification (General and Site Defined)
+
+Events M13 and M14.
+
 It is recommended that site-specific master files use event M13 or M14; alternately a code of the form Znn can be used (see also section 8.5.1, "MFI - Master File Identification Segment.")
 
-The MFN message specifies whether the master file, as a whole, has been replaced or if a record within the file has been updated. See section link:#_MFI-3___File-Level Event Code   (ID[_8.5.13_&#44; "_MFI-3 File Event Code_]," for further details.
+=== Staff and Practitioner Master Files
 
-The MFN message transmits the specific action taken on a record. See section link:#_MFE-1___Record-Level Event Code   ([_8.5.2.1_&#44; "_MFE-1 Record Event Code_]," for further details.
+Event M02
+
+=== Charge Description Master Files
+
+Event M04
+
+The charge description (CDM) master file segment should be used in conjunction with the general master file segments in Section 8.5, "GENERAL MASTER FILE SEGMENTS." Interfacing systems often need not only to communicate data about a patient's detailed charges, but also to communicate the charge identification entries by which an application knows how to handle a particular charge code. The charge description master is a master file.
+
+=== Location Master Files
+
+Event M05
+
+This use case is specifically concerned with describing a master file message that should be used to transmit information which identifies the inventory of healthcare patient locations, such as nursing units, rooms, beds, clinics, exam rooms, etc. In a network environment, this can be used to define patient locations to other applications. It also includes the readiness states and support locations for the patient locations.
+
+=== Clinical Trials Master Files
+
+Events M06 and M07
+
+The CM0 (Clinical Study Master), CM1 (Clinical Study Phase), and CM2 (Clinical Study Schedule) segments can be used to transmit master files information between systems. The CM0 segment contains the information about the study itself; the CM1 contains the information about one phase of the study identified in the preceding CM0; and the CM2 contains the information about the scheduled time points for the preceding study or phase-related treatment or evaluation events.
+
+=== Service/Test/Observation Master Files
+[v291_section="8.8.1"]
+
+Events M08, M09, M10, M11, M12, and M18
+
+These segments define the format for the general information about the observations that a clinical or diagnostic service produces and sends to its "clients." This format can be used to send the producer's entire service/test/observation definition or a few of the producer's observations, such as those with procedure, technique, or interpretation changes.
+
+The attributes of observations/batteries have been grouped into seven different segments:
+
+* OM1 contains the attributes that apply to all observations
+
+* OM2 applies to numerically-valued observations
+
+* OM3 applies to text or code-valued observations
+
+* OM4 applies to observations or batteries that require specimens
+
+* OM5 contains the attributes of batteries, or sets of observations or other batteries
+
+* OM6 contains the quantities (observations in a most general sense) that are calculated from one or more other observations
+
+* OM7 contains additional basic attributes that apply to the definition of most observations/services.
+
+Thus, the full definition of a numerically-valued laboratory observation would require the transmission of OM1, OM2, and OM4.
+
+In the following discussion, we use OMx to refer to any of the seven observation-defining segments. Each instance of an OMx segment contains the information about one observation or observation battery. These OMx segments are designed to be "inclusive" and accommodate the attributes of many kinds of observations. Thus, the fact that a field is listed in a particular segment should not be construed as meaning that a producer must include information about that item in its definition transmission. Many fields will apply to some terms; others will not. One observation producer may choose to populate one set of fields; another may choose to populate a different set of fields, according to the requirements of that producer's "client."
+
+Most of the fields of data type TX in those segments are intended to include information typically contained in a diagnostic service's user manual. Such fields should describe how the data is to be interpreted or used, and are not intended for computer interpretation.
+
+Remember that the magnitude of a treatment can also be regarded as an observation and, as such, can be represented as an observation within these segments. Many examples exist. When a blood gas is transmitted, the requesting service usually transmits the amount of inspired O2 (a treatment) on requisition. (In an electronic transmission, the service would send this as an OBX segment, along with the electronic order for the test.) When blood levels are drawn, the amount and time of the last dose are routinely included as observations on the request for service. A pharmacy system could routinely send to a medical record system the average daily dose of each outpatient medication it dispenses. In such cases, the treatment amounts would be observations to the receiving system and would be transmitted as OBX segments. When received, they would be treated like any other observation. A medical record system could then create, for example, a flowchart of lab results, or lab results mixed with relevant treatments.
+
+=== Inventory Item Master Files
+
+Events M15 and M16
+
+[v291_section="17.3.1"]
+
+The goal of the Inventory Item Master Update message specifications is to facilitate the communication of inventory item master catalog and lot information between applications. The main subject of such communication is the _supply item_. The following are the primary attributes of a supply item:
+
+Unique identification code
+
+* The unique identification code for a supply item describes a relation to a supply that can be ordered. This would likely be a catalog number specific to a manufacturer of the supply item.
+
+Supply Item Description
+
+* The name or text description of the supply item provides a human-readable identification of the supply.
+
+Supply Item Type
+
+* This attribute describes a type or class of supply items. This would typically be a supply type such as office supplies, OR supplies, or laboratory supplies.
+
+==== Item Master Catalog
+[v291_section="17.3.1.0"]
+
+The _item master catalog_ provides a catalog of supplies used for ordering to replenish inventory at supply locations, for general usage in a healthcare facility for scheduled appointments, surgery, and to provide identifiers for instrument-tracking used for the sterilization process. The catalog consists of numerous attributes related to a supply item. Supply items and associated attributes can be specific to a topic such as Inventory, Scheduling, Pharmacy, and Sterilization.
+
+==== Inventory Locations
+[v291_section="17.3.1.1"]
+
+Inventory locations contain a list of items that are stocked at the location (GLOSSARY), or that can be ordered from the location (but not stocked on a regular basis). Inventory locations receive updates to the attributes of supply items from the general supply location's item master catalog. Even though the general supply location's item master catalog and the other inventory locations item master both share the majority of the supply item attributes, those attributes can have a different value in each location. For example, the status of a supply item (active, inactive, pending inactive), can be inactive in the general supply location item master catalog (meaning it cannot be ordered), but the same item may be pending inactive at another inventory location that still has the supply item in stock, and will issue the supply item until the stock is depleted, but cannot order to replenish the stock at this location.
+
+==== Statuses
+[v291_section="17.4.1"]
+
+The status of a supply item describes the state of the supply item in the item master catalog and at an inventory location. Typical statuses of a supply item may include the following: Active, Pending Inactive, and Inactive.
+
+==== Trigger Events
+
+The functional grouping of trigger events and message definitions in this section describes the common master file notification messages for use of the record level events for adds, deletes, updates, deactivations, and reactivations. This functional grouping is specific to the item master inventory messages.
+
+=== Diagnostic Related Group (DRG) Master Files
+
+Event M17
+
+This section is specifically concerned with describing a master file message that should be used to transmit information which identifies the DRG basic information, such as relative weight, lower and upper trim points, etc.
+
+=== Contract Master Files
+
+Event M19
 
 == Technical Specs
 
-xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
-
-xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
+=== Staff and Practitioner Master Files
 
 xref:technical_specs/M02.adoc[Message - M02 Staff/Practitioner Master File]
+
+=== Charge Description Master Files
+
+xref:technical_specs/M04.adoc[Message - M04 Charge Description Master File Message]
+
+=== Location Master Files
+
+xref:technical_specs/M05.adoc[Message - M05 Patient Location Master File]
+
+=== Clinical Trials Master Files
+
+xref:technical_specs/M06.adoc[Message - M06 Clinical Trials Master File]
+
+xref:technical_specs/M07.adoc[Message - M07 Clinical Trials Master File]
+
+=== Service/Test/Observation Master Files
 
 xref:technical_specs/M08.adoc[Message - M08 Master File Notification - Test/Observation (Numeric)]
 
@@ -98,34 +218,38 @@ xref:technical_specs/M12.adoc[Message - M12 Master File Notification - Additiona
 
 xref:technical_specs/M18.adoc[Message - M18 Master File Notification – Test/Observation (Payer)]
 
-xref:technical_specs/M05.adoc[Message - M05 Patient Location Master File]
+=== Generic Master File Notification (General and Site Defined)
 
-xref:technical_specs/M04.adoc[Message - M04 Charge Description Master File Message]
+xref:technical_specs/M13.adoc[Message - M13 Master File Notification - General]
 
-xref:technical_specs/M06.adoc[Message - M06 Clinical Trials Master File]
+xref:technical_specs/M14.adoc[Message - M14 Master File Notification - Site Defined]
 
-xref:technical_specs/M07.adoc[Message - M07 Clinical Trials Master File]
+=== Inventory Item Master Files
 
 xref:technical_specs/M15.adoc[Message - M15 Inventory Item Master File Message]
 
 xref:technical_specs/M16.adoc[Message - M16 Inventory Item Master File – Enhanced]
 
+=== Diagnostic Related Group (DRG) Master Files
+
 xref:technical_specs/M17.adoc[Message - M17 DRG Master File]
+
+=== Contract Master Files
 
 xref:technical_specs/M19.adoc[Message - M19 Contract Master File]
 
 == Examples
 
-=== GENERIC MASTER FILE EXAMPLES
+=== Generic Master File Examples
 [v291_section="8.6"]
 
 The following are examples of a generic method of updating a standard HL7 table, covering the following two cases:
 
-{empty}1) The case with a site-defined "Z" segment. This message type is used when standard HL7 segments are not available to carry all of the required information on the master file. This message type can also be used in the case where standard HL7 segments are available, but the transaction type is not currently defined by HL7. Refer to Section 8.4.3, "MFN/MFK - Master File Notification - Site Defined (Event M14)," for more information on this message type.
+{empty}1) The case with a site-defined "Z" segment. This message type is used when standard HL7 segments are not available to carry all of the required information on the master file. This message type can also be used in the case where standard HL7 segments are available, but the transaction type is not currently defined by HL7. Refer to Section 8.4.3, "MFN/MFK - Master File Notification - Site Defined (Event M14)," for more information on this message type. Implementers must take care when utilizing "Z" segments as by definition they are not defined in a standard way and will not be consistently implemented across all systems.
 
 {empty}2) The case without a site-defined "Z" segment. This message type is used when standard HL7 segments are available to carry all of the required information on the master file (in the case of a 'simple' master file that contains only a key and the text value of that key). Refer to Section 8.4.2, "MFN/MFK - Master File Notification - General (Event M13)," for more information on this message type.
 
-The following examples show two records being added to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70006[User-defined Table 0006 - Religion] (in Chapter 2C, Code Tables).
+The following examples show two records being added to User-defined Table 0006 - Religion.
 
 [NOTE]
 A site-defined "Z" table segment ("ZL7" in this example) can be constructed by defining two fields: a table entry field (as a CWE field) and a display-sort-key field (a numeric field) as follows.
@@ -156,14 +280,95 @@ This field contains HL7 table values for identifier and text encoded as a CWE da
 [datatype-definition]
 This field is used to specify a non-alphabetic ordering for display or print versions of a standard HL7 table.
 
+==== MFN Message with Original Acknowledgment Mode
+
+The initiating system constructs an MFN^M14 message. In this example, the message contains site-defined "Z" segments as defined above. The following message is sent to the responding system:
+
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|202506290544||MFN^M14^MFN_Z99|MSGID001|P|2.9
+MFI|HL70006^RELIGION^HL70175||UPD|||AL
+MFE|MAD|6772331|202506290500|BUD^Buddhist^HL70006|CWE
+ZL7|BUD^Buddhist^HL70006|3
+MFE|MAD|6772332|202506290500|BOT^Buddhist: Other^HL70006|CWE
+ZL7|BOT^Buddhist: Other^HL70006|4
+
+The responder receives the message and performs necessary validation on the message. In this example, it determines the message just received is acceptable for processing. The following MFK^M14 message is constructed by the responder and sent to the initiating system to indicate acknowledgment of the MFN^M14 message:
+
+[er7]
+MSH|^~\&|HL7LAB|CH|HL7REG|UH|202506290545||MFK^M14^MFK_M01|MSGID99001|P|2.9
+MSA|AA|MSGID001
+MFI|HL70006^RELIGION^HL70175||UPD|||AL
+MFA|MAD|6772331|202506290545|S|BUD^Buddhist^HL70006|CWE
+MFA|MAD|6772332|202506290545|S|BOT^Buddhist: Other^HL70006|CWE
+
+Note that MSA-1 - Acknowledgment Code contains 'AA' to indicate the message was received and processed successfully. This value could also have been 'AE' or 'AR' to indicate the message was received but not processed successfully. MSA-2 - Message Control ID contains the value from MSH-10 - Message Control ID in the initiating MFN^M14 message (MSGID001) to link the acknowledgment response to the initiating message.
+
+==== MFN message with enhanced Mode Application-Level Acknowledgment
+
+The initiating system constructs an MFN^M13 message. In this example, the message does not contain site-defined "Z" segments. The following message is sent to the responding system:
+
+[er7]
+HL7REG|UH|HL7LAB|CH|202506290544||MFN^M13^MFN_M13|MSGID004|P|2.9||AL|AL
+MFI|HL70006^RELIGION^HL70175||UPD|||AL
+MFE|MAD|6772333|202506290500|BUD^Buddhist^HL70006|CWE
+MFE|MAD|6772334|202506290500|BOT^Buddhist: Other^HL70006|CWE
+
+The responder receives the message and performs necessary validation on the message. In this example, it determines the message just received is acceptable for processing. Since MSH-15 - Accept Acknowledgment of the initiating message indicates an accept acknowledgment is required ('AL'), the following ACK message is constructed by the responder and sent to the initiating system to indicate acknowledgment of the MFN^M13 message:
+
+[er7]
+MSH|^~\&|HL7LAB|CH|HL7REG|UH|202506290545||ACK^M13^ACK|MSGID99004|P|2.9
+MSA|CA|MSGID004
+
+Note that MSA-1 - Acknowledgment Code contains 'CA' to indicate the message was received and committed to safe storage. This value could also have been 'CE' or 'CR' to indicate the message was received but not processed successfully. MSA-2 - Message Control ID contains the value from MSH-10 - Message Control ID in the initiating MFN^M13 message (MSGID004) to link the acknowledgment response to the initiating message.
+
+The initiating system indicated in this example via MSH-16 - Application Acknowledgment Type that it requires an application level acknowledgment ('AL'). The responder, at some point following the sending of the above ACK message to the initiating system, will process the MFN^M13 message. Once message processing is complete, the application acknowledgment is sent from the responder to the initiating system to indicate the message was processed. The responder constructs an MFK^M13 acknowledgment message, and sends it to the initiating system:
+
+[er7]
+MSH|^~\&|HL7LAB|CH|HL7REG|UH|202506290550||MFK^M13^MFK_M13|MSGID99501|P|2.9||AL|
+MSA|AA|MSGID004
+MFI|HL70006^RELIGION^HL70175||UPD|||AL
+MFA|MAD|6772333|202506290550|S|BUD^Buddhist^HL70006|CWE
+MFA|MAD|6772334|202506290550|S|BOT^Buddhist: Other^HL70006|CWE
+
+Note that MSA-1 - Acknowledgment Code contains 'AA' to indicate the message was received and processed successfully. This value could also have been 'AE' or 'AR' to indicate the message was received but not processed successfully. This value applies to all MFA segments which follow. MSA-2 - Message Control ID contains the value from MSH-10 - Message Control ID in the initiating MFN^M13 message (MSGID004) to link the application acknowledgment response to the initiating message.
+
+The initiating system receives the application acknowledgment message from the responder, and forms an ACK message to acknowledge it. The following message is sent to the responder system:
+
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|200106290551||ACK^M13^ACK|MSGID445|P|2.9
+MSA|CA|MSGID99501
+
+Note that MSA-2 - Message Control ID contains the value from MSH-10 - Message Control ID in the MFK^M13 message just received (MSGID99501), and NOT from the initiating MFN^M13 message.
+
+=== Inventory Item Master Catalog Add - Event M16
+[v291_section="17.10.1"]
+
+An inventory clerk in the General Supply Inventory location has added a new supply item to the item master catalog. A Master File Add message is sent to notify selected inventory locations that this supply item has been added to the item master catalog
+
+[er7]
+MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|202508150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL
+MFI|INV|MATERIALSYS|UPD|200408121100|SU
+MFE|MAD|F589|202508121100|JMC090387^^JMF
+SFT|COMPAPP|9.0.0|MATIERALSYS|4500|202501010700
+UAC| KERB|MATSYS|AP|Octet-stream|A|Clerk
+ITM|10001|Formula 8oz|A|SUP|DietaryFormula|Y|ALR|MANUFACTURER|F589|ALR900||Y|300-0001^FormulaAlim_8oz|4.92|Y||FDA|N||100-9088-37887|20|29.75|N|N|N||||REF
+VND|001|M00933|VENDOR|FV9975|Y
+VND|002|M00934|VENDOR2|FV9976|N
+PKG|001|CS|6|Y|5|29.50|30.25|202509030100
+PKG|002|EA|N|1|4.92|5.04|202509030100
+PCE|001|9188|300-0002|5.35
+ITV|001|GS^General Stores|CS^Central Supply|1|GS-031|CS|EA|100-9200-00000|Y|300-0001|4.95||Y|N|N||||M|30|450|100|400|N
+
+MSH|^~\&|MATERIALSYS|FACA|INVSYS|CENSUPPLY|202508150900||MFN^M16^MFN_M16|090849SUPITM|P|2.9|||AL|AL
+MSA|CA|8000
 
 === Staff and Health Practitioner Master File MFN Message
 [v291_section="8.7.2"]
 
 [er7]
-MSH|^~\&|HL7REG|UH|HL7LAB|CH|200102280700||MFN^M02^MFN_M02|MSGID002|P|2.9|||AL|NE
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|202502280700||MFN^M02^MFN_M02|MSGID002|P|2.9|||AL|NE
 MFI|PRA^Practitioner Master File^HL70175||UPD|||AL
-MFE|MAD|U2246|200102280700|PMF98123789182^^PLW|CWE
+MFE|MAD|U2246|202502280700|PMF98123789182^^PLW|CWE
 STF|PMF98123789182^^PLW|U2246^^^PLW~444444444^^^USSSA^SS|Hippocrates^Harold^H^JR^DR^M.D.|P|M|19511004|A|^ICU|^MED|^WPN^PH^^^555^5551003~^PRN^PH^^^955^5551003|1003 Healthcare Drive ^^Ann Arbor^MI^^^H~4444 Healthcare Dr^^Ann Arbor^MI^^^O|19890125^&Level Seven Healthcare, Inc.&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT|20210101
 GSP|2|S||90778-2^Personal pronouns – Reported^LN|LA29518-0^he/him/his/his/himself^LN|20210101
@@ -172,16 +377,16 @@ AFF|1|AMERICAN MEDICAL ASSOCIATION|123 MAIN STREET^^OUR TOWN^CA^98765^USA^M |199
 LAN|1|ESL^SPANISH^ISO639|1^READ^HL70403|1^EXCELLENT^HL70404|
 LAN|2|ESL^SPANISH^ISO639|2^WRITE^HL70403|2^GOOD^HL70404|
 LAN|3|FRE^FRENCH^ISO639|3^SPEAK^HL70403|3^FAIR^HL70404|
-EDU|1|BA|19810901^19850601||19850604|YALE UNIVERSITY^L|U^HL70402|456 CONNECTICUT AVENUE^^NEW HAVEN^CO^87654^USA^M|
-EDU|2|MD|19850901^19890601||19890604|HARVARD MEDICAL SCHOOL^L |M^HL70402|123 MASSACHUSETTS AVENUE^^CAMBRIDGE^MA^76543^USA^M|
+EDU|1|BA|19910901^19950601||19850604|YALE UNIVERSITY^L|U^HL70402|456 CONNECTICUT AVENUE^^NEW HAVEN^CO^87654^USA^M|
+EDU|2|MD|19950901^19990601||19890604|HARVARD MEDICAL SCHOOL^L |M^HL70402|123 MASSACHUSETTS AVENUE^^CAMBRIDGE^MA^76543^USA^M|
 
 === MFN Message Charge Description Master File
 [v291_section="8.10.4"]
 
 [er7]
-MSH|^~\&|HL7REG|UH|HL7LAB|CH|19910918060544||MFN^M04^MFN_M04|MSGID002|P|2.9||AL|NE<cr>
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|20250918060544||MFN^M04^MFN_M04|MSGID002|P|2.9||AL|NE<cr>
 MFI|CDM||UPD|||AL<cr>
-MFE|MAD|CDM98123789182|199110011230|P2246^^PLW|CWE<cr>
+MFE|MAD|CDM98123789182|202510011230|P2246^^PLW|CWE<cr>
 CDM|P2246^^PLW |2445|APPENDECTOMY|APPENDECTOMY|X||244.34|A|2321||||N<cr>
 PRC|P2246^^PLW |FAC3|SURG|O~A|100.00^UP |formula |1|1 |100.00^USD|1000.00^USD|19941031||Y|GL545|Y|A|<cr>
 
@@ -193,47 +398,47 @@ This example shows the lab system using the Master Files specification to send t
 *Original mode example:*
 
 [er7]
-MSH|^~\&|LABxxx|ClinLAB|ICU||19910918060544||MFN^M03^MFN_M03|MSGID002|P|2.9
+MSH|^~\&|LABxxx|ClinLAB|ICU||2050918060544||MFN^M03^MFN_M03|MSGID002|P|2.9
 MFI|OMA|LABxxx^Lab Test Dictionary^L|UPD|||AL
-MFE|MUP|199109051000|199110010000|12345^WBC^L|CWE
+MFE|MUP|202509051000|202510010000|12345^WBC^L|CWE
 OM1|...
-MFE|MP|199109051015|199110010000|6789^RBC^L|CWE
+MFE|MP|202509051015|202510010000|6789^RBC^L|CWE
 OM1|...
 
 *Original mode acknowledgment of the HL7 message according to MFI Response Level Code of AL.*
 
 [er7]
-MSH|^~\&|ICU||LABxxx|ClinLAB|19910918060545||MFK^M03^MFK_M01|MSGID99002|P|2.9
+MSH|^~\&|ICU||LABxxx|ClinLAB|20250918060545||MFK^M03^MFK_M01|MSGID99002|P|2.9
 MSA|AA|MSGID002
 MFI|OMA|LABxxx^Lab Test Dictionary^L|UPD|||AL
-MFA|MUP|199110010000|199110010040|S|12345^WBC^L|CWE
-MFA|MUP|199110010000|199110010041|S|6789^RBC^L|CWE
+MFA|MUP|202510010000|202510010040|S|12345^WBC^L|CWE
+MFA|MUP|202510010000|202510010041|S|6789^RBC^L|CWE
 
 *Enhanced mode example*
 
 Initial message with accept acknowledgment
 
 [er7]
-MSH|^~\&|LABxxx|ClinLAB|ICU||19910918060544||MFN^M03^MFN_M03|MSGID002|P|2.9|||AL|AL
+MSH|^~\&|LABxxx|ClinLAB|ICU||20250918060544||MFN^M03^MFN_M03|MSGID002|P|2.9|||AL|AL
 MFI|OMA|LABxxx^Lab Test Dictionary^L|UPD|||AL
-MFE|MUP|199109051000|199110010000|12345^WBC^L|CWE
+MFE|MUP|202509051000|202510010000|12345^WBC^L|CWE
 OM1|...
-MFE|MUP|199109051015|199110010000|6789^RBC^L|CWE
+MFE|MUP|202509051015|202510010000|6789^RBC^L|CWE
 OM1|...
 
 [er7]
-MSH|^~\&|ICU||LABxxx|ClinLAB|19910918060545||ACK^M03^ACK|MSGID99002|P|2.7
+MSH|^~\&|ICU||LABxxx|ClinLAB|20250918060545||ACK^M03^ACK|MSGID99002|P|2.7
 MSA|CA|MSGID002
 
 *Application acknowledgment message*
 
 [er7]
-MSH|^~\&|ICU||LABxxx|ClinLAB|19911001080504||MFK^M03^MFK_M01|MSGID5002|P|2.9|||AL|
+MSH|^~\&|ICU||LABxxx|ClinLAB|20251001080504||MFK^M03^MFK_M01|MSGID5002|P|2.9|||AL|
 MSA|AA|MSGID002
 MFI|OMA|LABxxx^Lab Test Dictionary^L|UPD|||AL
-MFA|MUP|199109051000|199110010040|S|12345^WBC^L|CWE
-MFA|MUP|199109051015|199110010041|S|6789^RBC^L|CWE
+MFA|MUP|202509051000|202510010040|S|12345^WBC^L|CWE
+MFA|MUP|202509051015|202510010041|S|6789^RBC^L|CWE
 
 [er7]
-MSH|^~\&|LABxxx|ClinLAB|ICU||19911001080507||ACK^M03^ACK|MSGID444|P|2.7
+MSH|^~\&|LABxxx|ClinLAB|ICU||20251001080507||ACK^M03^ACK|MSGID444|P|2.7
 MSA|CA|MSGID5002

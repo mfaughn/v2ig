@@ -3,7 +3,7 @@
 :v2_section_name: "PEX - Product Experience Message (Event P08)"
 :generated: "Thu, 01 Aug 2024 15:25:17 -0600"
 
-The primary application of this message is to transfer information related to an adverse event occurring while a patient was exposed to a product.
+The primary application of the PEX message is to transfer information related to an adverse event occurring while a patient was exposed to a product. The P08 event is an unsolicited update of an individual product experience report.
 
 [tabset]
 P08
