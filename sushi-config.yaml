@@ -1,0 +1,224 @@
+# ╭─────────────────────────────────ImplementationGuide-hl7.other.uv.v2plus.json─────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+id: hl7.other.uv.v2plus
+canonical: http://somewhere.org/fhir/uv/v2plus
+version: 0.0.0
+name: V2Plus
+title: HL7 v2+ Specification
+status: draft
+experimental: false
+publisher:
+  name: HL7 International
+contact:
+  - telecom:
+      - system: url
+        value: http://hl7.org/Special/committees/v2mgmt
+description: HL7 v2+ Specification
+license: CC0-1.0
+fhirVersion: 5.0.0
+packageId: hl7.v2plus
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# menu:
+#   Home: index.html
+#   Artifacts:
+#     Profiles: artifacts.html#2
+#     Extensions: artifacts.html#3
+#     Value Sets: artifacts.html#4
+#   Support:
+#     Downloads: downloads.html
+#     Changelog: changelog.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# history:
+#   current: http://build.fhir.org/ig/HL7/v2plus
+#   0.0.0:
+#     fhirversion: 5.0.0
+#     date: 2099-01-01
+#     desc: Initial STU ballot
+#     path: http://somewhere.org/fhir/uv/v2plus/2024Jan
+#     status: ballot
+#     sequence: STU 1
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To use a provided ig.ini file, delete the "template" property below.                          │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# template: fhir.base.template#current
+# Note: We're using a local template, so template is not specified here
+# The ig.ini file will reference: template = #local-template
+
+# ╭────────────────────────────────────────────pages────────────────────────────────────────────────╮
+# │  The pages property corresponds to ImplementationGuide.definition.page. SUSHI can              │
+# │  auto-generate the page list, but if the author includes pages in this file, it is assumed     │
+# │  that the author will fully manage the pages section and SUSHI will not generate any           │
+# │  page entries that are not specified.                                                           │
+# │                                                                                                  │
+# │  Indentation represents hierarchy. The format is:                                               │
+# │    page-file.md:                                                                                │
+# │      title: Page Title                                                                          │
+# │      generation: html|markdown                                                                  │
+# │      child-page.md:                                                                             │
+# │        title: Child Page Title                                                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+pages:
+  index.md:
+    title: V2+ Home
+    generation: markdown
+
+  introduction.md:
+    title: Introduction
+    generation: markdown
+
+  foundation.md:
+    title: Foundation
+    generation: markdown
+    foundation-intro.md:
+      title: Introduction
+      generation: markdown
+    control.md:
+      title: Control
+      generation: markdown
+
+  data-types.md:
+    title: Data Types
+    generation: markdown
+    complex-data-types.md:
+      title: Complex Data Types
+      generation: markdown
+    primitive-data-types.md:
+      title: Primitive Data Types
+      generation: markdown
+
+  domains.md:
+    title: Domain Messaging
+    generation: markdown
+
+    # Administration Domain
+    administration.md:
+      title: Administration
+      generation: markdown
+      registration.md:
+        title: Registration
+        generation: markdown
+      scheduling.md:
+        title: Scheduling
+        generation: markdown
+      referral.md:
+        title: Referral
+        generation: markdown
+      consent.md:
+        title: Consent
+        generation: markdown
+
+    # Clinical Domain
+    clinical.md:
+      title: Clinical
+      generation: markdown
+      general-orders-and-results.md:
+        title: General Orders and Results
+        generation: markdown
+      laboratory.md:
+        title: Laboratory
+        generation: markdown
+      pharmacy.md:
+        title: Pharmacy
+        generation: markdown
+      blood-bank.md:
+        title: Blood Bank
+        generation: markdown
+      immunizations.md:
+        title: Immunizations
+        generation: markdown
+      patient-care.md:
+        title: Patient Care
+        generation: markdown
+      medical-records.md:
+        title: Medical Records
+        generation: markdown
+      imaging.md:
+        title: Imaging
+        generation: markdown
+      dietary.md:
+        title: Dietary
+        generation: markdown
+      clinical-trials.md:
+        title: Clinical Trials
+        generation: markdown
+      product-experience.md:
+        title: Product Experience
+        generation: markdown
+      supply.md:
+        title: Supply
+        generation: markdown
+
+    # Financial Domain
+    financial.md:
+      title: Financial
+      generation: markdown
+      claims-and-reimbursements.md:
+        title: Claims and Reimbursements
+        generation: markdown
+      financial-management.md:
+        title: Financial Management
+        generation: markdown
+
+    # ERP Domain
+    erp.md:
+      title: Enterprise Resource Planning
+      generation: markdown
+      lab-automation.md:
+        title: Lab Automation
+        generation: markdown
+      personnel-management.md:
+        title: Personnel Management
+        generation: markdown
+      materials-management.md:
+        title: Materials Management
+        generation: markdown
+      supply-erp.md:
+        title: Supply
+        generation: markdown
+      specimen-shipment-manifest.md:
+        title: Specimen Shipment Manifest
+        generation: markdown
+
+    # Technical Domain
+    technical.md:
+      title: Technical
+      generation: markdown
+
+# ╭─────────────────────────────────────────────parameters─────────────────────────────────────────╮
+# │  The parameters property represents IG.definition.parameter. Parameters can control            │
+# │  various aspects of the build.                                                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+parameters:
+  path-resource:
+    - input/sourceOfTruth/control-manifests
+    - input/sourceOfTruth/data-type
+    - input/sourceOfTruth/data-type/complex
+    - input/sourceOfTruth/data-type/complex/complex-data-types
+    - input/sourceOfTruth/data-type/primitive
+    - input/sourceOfTruth/data-type/primitive/primitive-data-types
+    - input/sourceOfTruth/data-type/primitive/primitives
+    # Uncomment when ready:
+    # - input/sourceOfTruth/message
+    # - input/sourceOfTruth/message/messages
+    # - input/sourceOfTruth/message-structure
+    # - input/sourceOfTruth/message-structure/message-structures
+    # - input/sourceOfTruth/segment
+    # - input/sourceOfTruth/segment/segments
+    # - input/sourceOfTruth/acknowledgement-choreography
+    # - input/sourceOfTruth/acknowledgement-choreography/acknowledgement-choreographies
+    # - input/sourceOfTruth/event
+    # - input/sourceOfTruth/event/events

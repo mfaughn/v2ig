@@ -1,97 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd">
-  <id value="hl7.other.uv.v2plus"/>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="informative"/> 
-  </extension> 
-  <url value="http://somewhere.org/fhir/uv/v2plus/ImplementationGuide/hl7.other.uv.v2plus"/>
+<ImplementationGuide xmlns='http://hl7.org/fhir' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd'>
+  <id value='hl7.other.uv.v2plus'/>
+  <extension url='http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status'>
+    <valueCode value='informative'/>
+  </extension>
+  <url value='http://somewhere.org/fhir/uv/v2plus/ImplementationGuide/hl7.other.uv.v2plus'/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.0"/>
-  <name value="V2Plus"/>
-  <title value="HL7 v2+ Specification"/>
-  <status value="draft"/>
-  <experimental value="false"/>
-  <publisher value="HL7 International"/>
+  <version value='0.0.0'/>
+  <name value='V2Plus'/>
+  <title value='HL7 v2+ Specification'/>
+  <status value='draft'/>
+  <experimental value='false'/>
+  <publisher value='HL7 International'/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
-      <system value="url"/>
-      <value value="http://hl7.org/Special/committees/v2mgmt"/>
+      <system value='url'/>
+      <value value='http://hl7.org/Special/committees/v2mgmt'/>
     </telecom>
   </contact>
-  <description value="HL7 v2+ Specification"/>
-  <packageId value="hl7.v2plus"/>
-  <license value="CC0-1.0"/>
+  <description value='HL7 v2+ Specification'/>
+  <packageId value='hl7.v2plus'/>
+  <license value='CC0-1.0'/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
-  <fhirVersion value="5.0.0"/>
+  <fhirVersion value='5.0.0'/>
   <definition>
     <page>
-      <name value="index.html"/>
-      <!-- <title value="v2+ Home Page"/> -->
-      <generation value="html"/>
+      <name value='index.html'/>
+      <title value='V2+ Home'/>
+      <generation value='html'/>
       <page>
-        <name value="data-types.html"/>
-        <title value="V2+ Data Types"/>
-        <generation value="html"/>
+        <name value='introduction.html'/>
+        <title value='Introduction'/>
+        <generation value='html'/>
+      </page>
+      <page>
+        <name value='foundation.html'/>
+        <title value='Foundation'/>
+        <generation value='html'/>
+        <page>
+          <name value='foundation-intro.html'/>
+          <title value='Introduction'/>
+          <generation value='html'/>
+        </page>
+        <page>
+          <name value='control.html'/>
+          <title value='Control'/>
+          <generation value='html'/>
+        </page>
+      </page>
+      <page>
+        <name value='data-types.html'/>
+        <title value='Data Types'/>
+        <generation value='html'/>
+        <page>
+          <name value='complex-data-types.html'/>
+          <title value='Complex Data Types'/>
+          <generation value='html'/>
+        </page>
+        <page>
+          <name value='primitive-data-types.html'/>
+          <title value='Primitive Data Types'/>
+          <generation value='html'/>
+        </page>
+      </page>
+      <page>
+        <name value='domains.html'/>
+        <title value='Domain Messaging'/>
+        <generation value='html'/>
+        <page>
+          <name value='administration.html'/>
+          <title value='Administration'/>
+          <generation value='html'/>
+          <page>
+            <name value='registration.html'/>
+            <title value='Registration'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='scheduling.html'/>
+            <title value='Scheduling'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='referral.html'/>
+            <title value='Referral'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='consent.html'/>
+            <title value='Consent'/>
+            <generation value='html'/>
+          </page>
+        </page>
+        <page>
+          <name value='clinical.html'/>
+          <title value='Clinical'/>
+          <generation value='html'/>
+          <page>
+            <name value='general-orders-and-results.html'/>
+            <title value='General Orders and Results'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='laboratory.html'/>
+            <title value='Laboratory'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='pharmacy.html'/>
+            <title value='Pharmacy'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='blood-bank.html'/>
+            <title value='Blood Bank'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='immunizations.html'/>
+            <title value='Immunizations'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='patient-care.html'/>
+            <title value='Patient Care'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='medical-records.html'/>
+            <title value='Medical Records'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='imaging.html'/>
+            <title value='Imaging'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='dietary.html'/>
+            <title value='Dietary'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='clinical-trials.html'/>
+            <title value='Clinical Trials'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='product-experience.html'/>
+            <title value='Product Experience'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='supply.html'/>
+            <title value='Supply'/>
+            <generation value='html'/>
+          </page>
+        </page>
+        <page>
+          <name value='financial.html'/>
+          <title value='Financial'/>
+          <generation value='html'/>
+          <page>
+            <name value='claims-and-reimbursements.html'/>
+            <title value='Claims and Reimbursements'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='financial-management.html'/>
+            <title value='Financial Management'/>
+            <generation value='html'/>
+          </page>
+        </page>
+        <page>
+          <name value='erp.html'/>
+          <title value='Enterprise Resource Planning'/>
+          <generation value='html'/>
+          <page>
+            <name value='lab-automation.html'/>
+            <title value='Lab Automation'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='personnel-management.html'/>
+            <title value='Personnel Management'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='materials-management.html'/>
+            <title value='Materials Management'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='supply-erp.html'/>
+            <title value='Supply'/>
+            <generation value='html'/>
+          </page>
+          <page>
+            <name value='specimen-shipment-manifest.html'/>
+            <title value='Specimen Shipment Manifest'/>
+            <generation value='html'/>
+          </page>
+        </page>
+        <page>
+          <name value='technical.html'/>
+          <title value='Technical'/>
+          <generation value='html'/>
+        </page>
       </page>
     </page>
-    
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/control-manifests"/>
+      <value value='input/sourceOfTruth/control-manifests'/>
     </parameter>
-    
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type"/>
+      <value value='input/sourceOfTruth/data-type'/>
     </parameter>
-    
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type/complex"/>
+      <value value='input/sourceOfTruth/data-type/complex'/>
     </parameter>
-    
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type/complex/complex-data-types"/>
+      <value value='input/sourceOfTruth/data-type/complex/complex-data-types'/>
     </parameter>
-
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type/primitive"/>
+      <value value='input/sourceOfTruth/data-type/primitive'/>
     </parameter>
-
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type/primitive/primitive-data-types"/>
+      <value value='input/sourceOfTruth/data-type/primitive/primitive-data-types'/>
     </parameter>
-    
     <parameter>
       <code>
-      <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-      <code value="path-resource"/>
+        <system value='http://hl7.org/fhir/tools/CodeSystem/ig-parameters'/>
+        <code value='path-resource'/>
       </code>
-      <value value="input/sourceOfTruth/data-type/primitive/primitives"/>
+      <value value='input/sourceOfTruth/data-type/primitive/primitives'/>
     </parameter>
-    
     <!-- <parameter>
       <code>
       <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
@@ -171,6 +338,5 @@
       </code>
       <value value="input/sourceOfTruth/event/events"/>
     </parameter> -->
-    
   </definition>
 </ImplementationGuide>
