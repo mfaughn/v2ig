@@ -1,0 +1,214 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>This chapter specifies HL7 triggers, messages, and segments required for implementation of clinical laboratory automation communication interfaces. It was developed jointly by the HL7 Laboratory Automation Special Interest Group and the NCCLS Subcommittee on Communications with Automated Systems. This chapter, by agreement between HL7 and NCCLS, is also published in its entirety as part of the NCCLS Approved Level standard:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>AUTO3, "Laboratory Automation: Communications with Automated Clinical Laboratory Systems, Instruments, Devices, and Information Systems, © NCCLS" <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>This document contains other chapters to enable a vendor to successfully implement all of the elements essential to meet the standard.</p>
+  </div>
+  <div class="paragraph">
+  <p>The other related NCCLS clinical laboratory automation standards are:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>AUTO1: "Laboratory Automation: Specimen Container / Specimen Carrier", © NCCLS.</p>
+  </li>
+  <li>
+  <p>AUTO2: "Laboratory Automation: Bar Codes for Specimen Container Identification", © NCCLS.</p>
+  </li>
+  <li>
+  <p>AUTO4: "Laboratory Automation: Systems Operational Requirements, Characteristics, and Information Elements", © NCCLS.</p>
+  </li>
+  <li>
+  <p>AUTO5: "Laboratory Automation: Electromechanical Interfaces", © NCCLS.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>The reader is referred to any or all of these NCCLS standards, particularly AUTO3 and AUTO4, for detailed information on the communications requirements in clinical laboratory automation applications.</p>
+  </div>
+  <div class="paragraph">
+  <p>The control model proposed in this standard is an extension of the model described in LECIS:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>ASTM E1989-98. Laboratory Equipment Control Interface Specification (LECIS). American Society for Testing and Materials; 1998.</p>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Clinical laboratory automation involves the integration or interfacing of automated or robotic transport systems, analytical instruments, and pre- or post-analytical process equipment such as automated centrifuges and aliquoters, decappers, recappers, sorters, and specimen storage and retrieval systems. In addition to the electrical and mechanical interfaces of these various components, the computers that control these devices or instruments must also be interfaced to each other and/or the Laboratory Information System (LIS).</p>
+  </div>
+  <div class="paragraph">
+  <p>The types of information communicated between these systems include process control and status information for each device or analyzer, each specimen, specimen container, and container carrier, information and detailed data related to patients, orders, and results, and information related to specimen flow algorithms and automated decision making. This wide array of communicated information is essential for a Laboratory Automation System (LAS) to control the various processes and to ensure that each specimen or aliquot has the correct tests performed in the proper sequence.</p>
+  </div>
+  <div class="paragraph">
+  <p>As of 1999 there are already more than 200 clinical laboratories in the world with "total laboratory automation" systems and hundreds more with a lesser level of automation – generally workcells or modular automation systems. The development of prospective standards for these aspects of clinical laboratory automation will facilitate the inter-operability of the systems being developed by the various players in lab automation – the vendors of analytical instruments, LIS systems, automation systems and components and their laboratory customers.</p>
+  </div>
+  <div class="paragraph">
+  <p>In the early 1990&#8217;s an ad hoc task force, Clinical Testing Automation Standards Steering Committee (CTASSC), began to meet at the annual meetings of the International Conference on Automation and Robotics (ICAR) and the American Association for Clinical Chemistry (AACC). In 1996, CTASSC approached NCCLS,<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> a globally-recognized, consensus standards organization that has developed more than 125 clinical laboratory standards and related products since it was founded in 1968, about taking on a project for clinical laboratory automation. NCCLS agreed to sponsor this project which was separately funded via a direct solicitation of the vendors in lab automation, instruments, LIS systems, and automation customers. It was organized as a "fast track" project to develop prospective standards to guide future developments in laboratory automation. With the oversight of an Area Committee on Automation, five separate subcommittees have worked since 1997 to develop a series of prospective standards for:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Specimen containers and carriers</p>
+  </li>
+  <li>
+  <p>Bar codes for specimen container identification</p>
+  </li>
+  <li>
+  <p>Communications</p>
+  </li>
+  <li>
+  <p>System operational requirements and characteristics</p>
+  </li>
+  <li>
+  <p>Electromechanical interfaces</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>Approved level standards for all five of these areas were published by NCCLS.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_implementation_considerations">Implementation Considerations</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_other_required_original_hl7_messages">Other Required Original HL7 Messages</h3>
+  <div class="paragraph">
+  <p>The transaction for synchronization of system clocks must be supported by all equipment as receiver. The master (sender) of the time is either the LAS computer or the LIS.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_transfer_of_laboratory_test_orders_and_results">Transfer of Laboratory Test Orders and Results</h3>
+  <div class="paragraph">
+  <p>For the transfer of laboratory automation orders and results refer to 4.2.6 OML - laboratory order message (event O21) instead of ORM and 7.2.2 ORL – unsolicited laboratory observation message (event O20) instead of ORU.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_transfer_of_qc_results">Transfer of QC Results</h3>
+  <div class="paragraph">
+  <p>Use <em>SPM-11 Specimen Role</em>, or <em>SAC-6 Specimen Source</em>, or the 7th component of <em>OBR-15 Specimen Source</em> or <em>SAC-6 Specimen Source</em> to indicate that this is a control specimen. Use <em>SAC-3 Container Identifier</em> for the identification of a control specimen container. The SID segment appended to this SAC segment specifies the manufacturer, lot identifiers, etc. for the control specimen.</p>
+  </div>
+  <div class="paragraph">
+  <p>The identification of the instrument performing the QC measurement, should be transferred with the <em>OBX-18 Equipment Instance Identifier</em>), the measurement data/time with the <em>OBX-19 Date/Time of the Analysis</em>.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_query_for_order_information_triggers_for_download_of_test_orders">Query for Order Information – Triggers for Download of Test Orders</h3>
+  <div class="paragraph">
+  <p>There is no specific query for laboratory order information. Instead, the order information should be downloaded to the LAS either unsolicited (based on LIS internal triggers such as Sample Collected or Order Entered) or after an implicit trigger such as Sample Status Update – sample identified by the LAS.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_transfer_of_additional_information_for_automated_processing">Transfer of Additional Information for Automated Processing</h3>
+  <div class="paragraph">
+  <p>Instruments requiring additional information for performing of automated processing based on automatic validation, such as Expected Date of Birth (Delivery Date), Menstrual Status, History of Medication Use, should consider using OBX segments and LOINC codes. For example, the LOINC code for Delivery Date is 11778-8, Menstrual status is 8678-5, History of Medication Use is 10160‑0.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_working_with_non_substance_inventory_items">Working With Non-Substance Inventory Items</h3>
+  <div class="paragraph">
+  <p>This section provides examples of INV segments related to reporting and querying values of equipment state indicators (special non-material inventory items).</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Reporting that all tests are available (in INU^U05):</div>
+  <p>INV|NONE<sup>^HL70451|OK</sup><sup>HL70383|||||||||||||||||||TA</sup>^HL70942</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Reporting that tests with LOINC codes 1492-8 and 1496-8 are available (in INU^U05):</div>
+  <p>INV|NONE<sup>^HL70451|OK</sup><sup>HL70383|||||||||||||1492-8</sup><sup>LN~1496-8</sup><sup>LN||||||TA</sup>^HL70942</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Reporting that the current instrument processing capacity is 42 % (in INU^U05):</div>
+  <p>INV|NONE<sup>^HL70451|OK</sup><sup>HL70383|||||||||||||||||||IC</sup><sup>HL70942|42</sup>%&amp;&amp;UCUM</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Reporting that an output specimen buffer “Buffer1” is full (in INU^U05):</div>
+  <p>INV|BufferId1<sup>^HL70451|OK</sup><sup>HL70383|||||||||||||||||||OB</sup><sup>HL70942|100</sup>%&amp;&amp;UCUM</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Reporting that an emergency input specimen buffer “Buffer2” is empty (in INU^U05):</div>
+  <p>INV|BufferId2<sup>^HL70451|OK</sup><sup>HL70383|||||||||||||||||||EB</sup><sup>HL70942|0</sup>%&amp;&amp;UCUM</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Querying the current instrument processing capacity (in INR^U14):</div>
+  <p>INV|||||||||||||||||||||IC^^HL70942</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Querying the current capacity of all regular specimen input buffers (in INR^U14):</div>
+  <p>INV|||||||||||||||||||||IB^^HL70942</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Querying the current capacity of the regular specimen input buffer “Buffer3” (in INR^U14):</div>
+  <p>INV|Buffer3<sup>^HL70451||||||||||||||||||||IB</sup>^HL70942</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Each trigger event is listed below, along with the application form of the message exchange. The notation used to describe the sequence, optionality and repetition of segments is described in Chapter 2.</p>
+  </div>
+  <div class="paragraph">
+  <p>The notation used to describe the sequence, the optionality, and the repetition of segments is described in Chapter 2 under "Format for Defining Abstract Message."</p>
+  </div>
+  <div class="paragraph">
+  <p>All the ACK messages are varieties of the 'general acknowledgement' message defined in Chapter 2, section 2.13.1. The only difference is the event code.</p>
+  </div>
+  <div class="paragraph">
+  <p>The "Equipment Notification" message (EAN/ACK event U09) is used to send information about the occurrence of an event. An event does not necessarily cause a state transition. The "Status Update" message (EAU/ACK event U01) is used to transfer information about the current status. This status can be the result of one or more events that led to the state transition. Example: The event of a "warning level of a consumable being reached" (e.g., 10% left) does not cause a state transition, because the system can remain "In operation". This results in an EAN/ACK message. An event "container transport jammed" causes the state transition to "Emergency stop". This results in both EAN/ACK and EAU/ACK messages.</p>
+  </div>
+  <div class="paragraph">
+  <p>For the transfer of laboratory automation orders and results refer to 4.4.6 OML - laboratory order message (event O21) instead of ORM and 7.3.2 OUL – unsolicited laboratory observation message (event O20) instead of ORU.</p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U01.html">Message - U01 Automated Equipment Status Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U02.html">Message - U02 Automated Equipment Status Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U03.html">Message - U03 Specimen Status Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U04.html">Message - U04 Specimen Status Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U05.html">Message - U05 Automated Equipment Inventory Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/U06.html">Message - U06 Automated Equipment Inventory Request</a></p>
+  </div>
+  </div>
+  </div>
+  <div id="footnotes">
+  <hr>
+  <div class="footnote" id="_footnotedef_1">
+  <a href="#_footnoteref_1">1</a>. (NCCLS. <em>Laboratory Automation: Communications With Automated Clinical Laboratory Systems, Instruments, Devices, and Information Systems</em>; Approved Standard - NCCLS Document AUTO3-A [ISBN 1-56238-361-2}. NCCLS, 940 West Valley Road, Suite 1400, Wayne, PA 19087-1898 USA, 2000). www.nccls.org
+  </div>
+  <div class="footnote" id="_footnotedef_2">
+  <a href="#_footnoteref_2">2</a>. NCCLS, 940 West Valley Road, Suite 1400, Wayne, PA 19087; www.nccls.org
+  </div>
+  </div>
+</div>

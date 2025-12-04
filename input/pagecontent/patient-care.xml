@@ -1,0 +1,335 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The Problem-Oriented Records topic defines messages to support the communication of relevant records, including clinical problems (GLOSSARY), goals (GLOSSARY), and pathway (GLOSSARY) information between clinical applications for a given individual. These message transactions can be sent in either batch or online mode. As described in Chapter 2, multiple communication transactions may be grouped and sent between applications using a file transfer media or direct networked connection.</p>
+  </div>
+  <div class="paragraph">
+  <p>While not an ideal term, the word “patient” is used in this topic to represent the entire spectrum of individuals who receive healthcare in a variety of settings including, but not limited to, acute care, clinic care, long-term care, residential care, home health care, office practices, school-based care and community settings.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_scenario_descriptions">Scenario Descriptions</h3>
+  <div class="sect3">
+  <h4 id="_patient_pre_admission_or_patient_admission">Patient pre-admission or patient admission</h4>
+  <div class="paragraph">
+  <p>A physician&#8217;s office is scheduling a patient for admission to the hospital. The admitting diagnosis/problem list and admission information is sent by the physician&#8217;s electronic information system to the hospital&#8217;s Patient Administration system and longitudinal medical record. The trigger event identifies the message as an "add problem" or update patient medical information to the Patient Administration and medical record system.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_consultation">Consultation</h4>
+  <div class="paragraph">
+  <p>A consultation is requested for an individual. The information system generating the consultation triggers an unsolicited message containing the problem/diagnosis list that is transmitted to the consulting organization. Goals and various kinds of role information are included with the transmission. The trigger event identifies the message as an unchanged record.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_loading_a_clinical_repository">Loading a clinical repository</h4>
+  <div class="paragraph">
+  <p>Information from point of care, clinical practice management or ancillary systems regarding the creation or update of pathways, problems, diagnoses, or goals are communicated to the clinical repository. Message triggers from the departmental systems may indicate adding, correcting, deleting, or updating records maintained in the clinical data repository.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_communicating_clinical_pathways_and_multidisciplinary_plans_of_care">Communicating clinical pathways and multidisciplinary plans of care</h4>
+  <div class="paragraph">
+  <p>The pathway is communicated between quality assurance, point of care systems, research databases, and clinical order entry systems. A point of care information system triggers a linkage between a problem and a set of ordered interventions initiated by the clinical order entry system.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_trigger_events">Trigger Events</h3>
+  <div class="paragraph">
+  <p>The trigger events originate goal, problem and pathway messages. Each trigger event is documented below, along with the appropriate form of the message exchange. These are message-level event triggers, which are augmented by the action code fields contained in the pathway, problem and goal segments described below. Action codes are required fields in patient care message segments (see Chapter 2 for further information regarding implementation issues). Implementors need to apply the appropriate logic as part of their message construction (for example, logic would state that an "add" trigger event should not include segments with a "delete" action code).</p>
+  </div>
+  <div class="paragraph">
+  <p>In order to accommodate these high-level events, the following patient care events are included in HL7 Table 0003 – Event Type. The added events are instantiated in MSH-9 Message Type and are used by the pathway, problem, and goal messages. MSH-9 Message Type contains the message type and trigger event for the message.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_implementation_considerations">Implementation Considerations</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Applications can have differing orientations for representing problem and goal hierarchies. For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal. We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.</p>
+  </div>
+  <div class="paragraph">
+  <p>In both the Problem and Goal segments a field named "Episode of Care" has been included. This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.</p>
+  </div>
+  <div class="paragraph">
+  <p>Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record. This topic does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time. From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application. This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure &amp; Messaging committee for further debate.</p>
+  </div>
+  <div class="sect2">
+  <h3 id="_use_of_action_codes">Use of Action Codes</h3>
+  <div class="paragraph">
+  <p>Prior to Version 2.3 of the Standard, all repeating segments had to be sent in an update message, because there was no way to indicate which ones changed and which ones did not. In this <strong>snapshot</strong> mode, all repeating segments must be sent with every subsequent message in the series of messages.</p>
+  </div>
+  <div class="paragraph">
+  <p>To reduce the number of repeating segments, action codes may be employed. Action codes (e.g., order control codes and result status codes) may be embedded within repeating segments and used by sophisticated application parsers to reduce the number of repetitions required for a complete record.</p>
+  </div>
+  <div class="paragraph">
+  <p>In either event, for systems implementing Version 2.3 or higher, if a particular repeating segment can be updated by either of these two modes, the parties concerned determine by agreement on a site-specific basis whether an interface uses the <strong>snapshot</strong> mode or the <strong>action code/unique identifier</strong> mode.</p>
+  </div>
+  <div class="paragraph">
+  <p>A description of valid action codes used in message segments originating in this topic is given immediately below:</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>AD</strong> (<strong>ADD</strong>) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem. If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>CO</strong> (<strong>CORRECT</strong>) - The object attributes contained within the segment have been corrected. This is not updated information, but information originally sent and later found to be in error. The previous attributes should be replaced.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>UP</strong> (<strong>UPDATE</strong>) - The object attributes contained within the segment are an update of previously sent information. The previous information was correct for the period of time in which it was sent.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>DE</strong> (<strong>DELETE</strong>) - This object should be deleted from the set of objects which are linked to the previous object in the message hierarchy. An example might be a role deleted from the set of roles contained by the Goal object. Delete presumes the original linkage was in error.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>LI (LINK)</strong> - This action code denotes that the object contained in the segment should be linked in a dependency relationship to the previous object in the hierarchy. It is used to denote relationships and should not contain additional information other than those attributes necessary for specific identification.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>UN</strong> (<strong>UNLINK</strong>) - This is a request that the object be removed from the set of linked objects. An example might be the dissolution of a relationship between a problem and a goal. Unlink presumes the original linkage was correct, but due to life cycle changes the active linkage is no longer appropriate.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>UC</strong> (<strong>UNCHANGED</strong>) - This code signifies that the segment is being included for the purposes of hierarchical set identification. It does not contain any changed or additional data. Its purpose is to allow the identification of the collection set to which subsequent segments belong in the message structure. An example might be the modification of role information requiring the previous goal segment to be appropriately identified.</p>
+  </div>
+  <div class="sect3">
+  <h4 id="_examples_of_action_code_usage">Examples of action code usage</h4>
+  <div class="paragraph">
+  <p>A problem list and associated goals are generated in a point of care system. This transaction is broadcast through an interface engine that determines which systems in the organization require the event information and then forwards the messages appropriately. Each segment included in the original message contains the Action Code for <strong>ADD</strong> to signify an original message instance.</p>
+  </div>
+  <div class="paragraph">
+  <p>Upon subsequent review, it is determined that a role segment designates the wrong person as the transcribing clerk for a problem. After the information is changed in the originating system, a new message is sent to provide synchronization. The message includes the original PRB segment with the PRB-1 Action Code for <strong>UNCHANGED</strong> (to identify the problem for which the role is being changed). This code signifies that the segment is included for the purposes of hierarchical linkage identification and that none of the information contained in it has been changed.</p>
+  </div>
+  <div class="paragraph">
+  <p>It is later decided that an additional goal must be added to a specific problem, and that an already existing goal that is currently supporting another problem should also be linked with this specific problem. The message would be constructed with the problem (PRB) segment for identification (the value for PRB-1 Action Code is <strong>UNCHANGED</strong>). The goal segment (GOL) for the additional goal would include GOL-1 Action Code for <strong>ADD</strong>. The goals already included with the problem list that need to be linked to this problem would have to be included on additional GOL segments with the GOL-1 Action Code for <strong>LINK</strong>.</p>
+  </div>
+  <div class="paragraph">
+  <p>Once data regarding a Diagnosis/Problem or a Goal have been communicated to other systems, there are occasions on which the data may have to be amended.</p>
+  </div>
+  <div class="paragraph">
+  <p>New diagnoses/problems must be added to an individual&#8217;s list. The Problem message is sent with the appropriate Problem Instance ID. All PRB segment(s) included in the message that contain the value for <strong>ADD</strong> in PRB-1 Action Code are processed as additions to the individual&#8217;s problem list.</p>
+  </div>
+  <div class="paragraph">
+  <p>New goals are added to the individual&#8217;s record. The Goal message is sent with the GOL segments indicating the value for <strong>ADD</strong> as GOL-1 Action Code in each segment occurrence.</p>
+  </div>
+  <div class="paragraph">
+  <p>Changes are made to the attributes of a goal. Examples include a change in the expected resolution date, a change in the life cycle status to reflect its successful conclusion, etc. The Goal message is sent with the appropriate GOL-4 Goal Instance ID. The GOL segments of the Goal message would include the value for <strong>UPDATE</strong> in GOL-1 Action Code.</p>
+  </div>
+  <div class="paragraph">
+  <p>A new goal is attached to a problem already in the repository (e.g., the goal of "education on diabetes" for an individual diagnosed with "insulin-dependent diabetes"). A problem message would be sent with the PRB segment including the PRB-4 Problem Instance ID for the diabetes problem, and with the value <strong>UNCHANGED</strong> in PRB-1 Action Code. The attached GOL segment for the education goal would accompany the message and contain the value <strong>ADD</strong> in its GOL-1 Action Code field.</p>
+  </div>
+  <div class="paragraph">
+  <p>A new diagnosis/problem is attached to a goal (e.g., a Goal is to "discharge an individual with intact skin." While the initial problem was "skin breakdown related to immobility," a new problem is "potential for skin breakdown related to draining wounds"). A Goal message would be sent with the GOL segment, including the GOL-4 Goal Instance ID for the discharge goal, and contain the value <strong>UNCHANGED</strong> in GOL-1 Action Code. The attached PRB segment identifying the new problem, "potential for skin breakdown related to draining wounds," would accompany this message and contain the value for <strong>ADD</strong> in PRB-1 Action Code.</p>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  If there is a requirement to modify information contained on a segment and unlink that same problem/goal, two segments must be transmitted (one for the modification and one for the unlink request).
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_message_construction_rules">Message Construction Rules</h3>
+  <div class="paragraph">
+  <p>FIXME - decide if we are going to keep these rules or not</p>
+  </div>
+  <div class="paragraph">
+  <p>The semantic meaning of a message is contained in the message through the use of the trigger events, the implicit hierarchical linkages of the segments, and the segment action codes. Each of these has a scope within the message. The message event as included in the MSH-9 Message Type has a scope which is global to the message. The segment hierarchical linkage has a scope which includes both the segment itself and its relationship to its parent. The segment action code&#8217;s scope is to the segment itself. It may further define link and unlink actions in the hierarchical structure.</p>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_1">Rule 1</h4>
+  <div class="paragraph">
+  <p>The trigger event defines the action at the first level of the hierarchy, and should not be contradicted by either hierarchical linkages or segment action codes. Thus, a PC1 (problem add) event should only contain problem, goal, and role segments that have action codes <strong>ADD</strong>.</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <caption class="title">Table 1. Allowable trigger event types and action codes</caption>
+  <colgroup>
+  <col style="width: 27%;">
+  <col style="width: 73%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Trigger Event Types</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Allowable Action Codes</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">xxx-Add</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Top level action code must be ADD<br>
+  Dependent segment action code must be ADD (or NW for Order segments)</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">xxx-Update</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Top level action code must be CORRECT, UPDATE, or UNCHANGED<br>
+  Dependent segment action codes - Any are allowed at the lower hierarchical levels</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">xxx-Delete</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Top level action code must be DELETE<br>
+  Dependent segments' action codes must be DELETE</p></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_2">Rule 2</h4>
+  <div class="paragraph">
+  <p>When using the segment action codes <strong>LINK</strong> and <strong>UNLINK</strong>, only those fields which are used to define a unique instance of the object are used. This action cannot be used to send changes and updates to the other fields of that segment.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_3">Rule 3</h4>
+  <div class="paragraph">
+  <p>In dependent segments <strong>ADD</strong> is the action code to use to establish the initial relationship between parent-child objects. The receiving system must be ready to handle multiple adds of the same object. An example is a Problem List of three (3) problems which is being sent. Attached to these problems are three (3) goals. Problem A has Goals 1 and 2 attached to it. Problem B has the same Goal 2 and a new Goal 3 attached to it. All of these will have the <strong>ADD</strong> action code in the segment, and when Problem B is transmitted with Goals 2 and 3, Goal 2 will have been previously transmitted with Problem A. The message construct would look like this:</p>
+  </div>
+  <div class="literalblock er7">
+  <div class="content">
+  <pre>MSH...
+  PID...
+            PRB (Problem A)
+                   GOL (Goal 1)
+                   GOL (Goal 2)
+            PRB (Problem B)
+                   GOL (Goal 2)
+                   GOL (Goal 3)
+            PRB (Problem C) (No attached goals)</pre>
+  </div>
+  </div>
+  <div class="paragraph">
+  <p>When two (or more) instances of the same problem or goal segment are present in a message both such segments must have identical values for all fields.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_4">Rule 4</h4>
+  <div class="paragraph">
+  <p>Remember that HL7 only provides for error messages at the message level. Thus, if the receiving system cannot process one segment, the entire message is going to be treated as an error (See Chapter 2).</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_5">Rule 5</h4>
+  <div class="paragraph">
+  <p>The Problem, Goal, and Pathway messages integrate order segments as a method for establishing causal linkages. Linkages or relationships between orders, problems, goals, and pathways can therefore be presented in the Patient Care messages.</p>
+  </div>
+  <div class="paragraph">
+  <p>Orders referenced in Patient Care messages are used for linkage purposes only. Initiation and status changes to orders are accomplished by using dedicated messages defined in the Order Entry Chapter.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_rule_6">Rule 6</h4>
+  <div class="paragraph">
+  <p>Order segments are sent with Problem and Goal segments in order to establish a linkage between them, NOT to communicate new orders or changes to those orders. For purposes of these messages, an LI (Link) and a UL (Unlink) code have been added to HL7 Table 0119 - Order Control Codes.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Applications can have differing orientations for representing problem and goal hierarchies. For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s). To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal.</p>
+  </div>
+  <div class="paragraph">
+  <p>Due to the multiple occurrences of common segments such as Variance (VAR) and Notes (NTE), we have chosen to expand the segment definitions on the message diagrams to explicitly identify the hierarchical relationships. Examples of this would be "Variance (Goal)" and "Variance (Participation)." This does not imply unique segments, but indicates in the first case that the variance is related to its parent Goal, and in the second case that the variance is related to its parent Role.</p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC6.html">Message - PC6 Patient Goal Add</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC7.html">Message - PC7 Patient Goal Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC8.html">Message - PC8 Patient Goal Delete</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC1.html">Message - PC1 Patient Problem Add</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC2.html">Message - PC2 Patient Problem Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PC3.html">Message - PC3 Patient Problem Delete</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCB.html">Message - PCB Patient Pathway Add</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCC.html">Message - PCC Patient Pathway Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCD.html">Message - PCD Patient Pathway Delete</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCG.html">Message - PCG Patient Pathway Goal Add</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCH.html">Message - PCH Patient Pathway Goal Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/PCJ.html">Message - PCJ Patient Pathway Goal Delete</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The following is an example of a patient goal message.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|SENDAP|SENDFAC|RECAP|RECFAC|||PGL</sup>PC6^PGL_PC6
+  PID||0123456‑1<sup>^</sup><sup>MR||EVERYMAN</sup>ADAM^A|||||||9821111
+  PV1|1|I|2000<sup>2012</sup>01||||004777<sup>ATTEND</sup>AARON^A.|||SUR||­||ADM|A0­
+  GOL|AD|202505011200|00312^Improve Peripheral Circulation<sup>L||||202505011200|202505101200|Due</sup>Review Due<sup>L|||202505021200||QAM|||ACT</sup>Active<sup>L|202505011200|P</sup>Patient^L
+  PRT||AD||AT^Attending Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  PRT||AD||EP^Entering Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  PRB|AD|202505011200|04411^Restricted Circulation<sup>L||||202505011200|||IP</sup>Inpatient<sup>L|NU</sup>Nursing<sup>L|Acute</sup>Acute<sup>L|C</sup>Confirmed<sup>L|A1</sup>Active^L| 2022505011200|202504250000||2<sup>Secondary</sup>L|HI<sup>High</sup>L||1<sup>Fully</sup>L|2<sup>Good</sup>L
+  PRT||AD||AT^Attending Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs</p>
+  </div>
+  <div class="paragraph">
+  <p>The following is an example of a patient problem message.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|SENDAP|SENDFAC|RECAP|RECFAC|||PPR</sup>PC1^PPR_PC1
+  PID||0123456‑1<sup>^</sup><sup>^MR||EVERYMAN</sup>ADAM^A|||||||9821111
+  PV1|1|I|2000<sup>2012</sup>01||||004777<sup>ATTEND</sup>AARON^A.|||SUR||­||ADM|A0­
+  PRB|AD|120205011200|04411^Restricted Circulation^L|| ||202505011200|||IP<sup>Inpatient</sup>L|NU<sup>Nursing</sup>L|Acute<sup>Acute</sup>L| C<sup>Confirmed</sup>L|A1<sup>Active</sup>L|202505011200|202504250000||2<sup>Secondary</sup>L|HI<sup>High</sup>L||1<sup>Fully</sup>L|2<sup>Good</sup>L
+  PRT||AD||AT^Attending Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  PRT||AD||EP^Entering Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs
+  GOL|AD|199505011200|00312^Improve Peripheral Circulation<sup>L||||202505011200|202505101200|Due</sup>Review Due<sup>L||202505021200||QAM|||ACT</sup>Active<sup>L|202505011200|P</sup>Patient^L
+  PRT||AD||AT^Attending Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200</p>
+  </div>
+  <div class="paragraph">
+  <p>The following is an example of a patient pathway problem-oriented message.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|SENDAP|SENDFAC|RECAP|RECFAC|||PPP</sup>PCB_PPP_PCB
+  PID||0123456‑1<sup>^</sup><sup>^MR||EVERYMAN</sup>ADAM^A|||||||9821111
+  PV1|1|I|2000<sup>2012</sup>01||||004777<sup>ATTEND</sup>AARON^A.|||SUR||­||ADM|A0­
+  PTH|AD<sup>^HL70287|OH457</sup>Open Heart Pathway<sup>AHCPR|0018329078785</sup>PCIS1|199505011200|A1<sup>Active</sup>L|202505011200
+  VAR|84032847876<sup>LOCK|202505011200||</sup>Verify<sup>Virgil</sup>V<sup>^RN|23</sup>Coincident^L|Exceeds APACHE III threshold score.
+  PRB|AD|202505011200|04411^Restricted Circulation^L|| ||202505011200|||IP<sup>Inpatient</sup>L| NU<sup>Nursing</sup>L|Acute<sup>Acute</sup>L| C<sup>Confirmed</sup>L|A1<sup>Active</sup>L|202505011200|202504250000||2<sup>Secondary</sup>L|HI<sup>High</sup>L||1<sup>Fully</sup>L|2<sup>Good</sup>L
+  PRT||AD||AT^Attending Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  PRT||AD||EP^Entering Provider<sup>HL70912|</sup>Admit<sup>Alan</sup>A^^RN||||||202505011200
+  ORC|NW|2045<sup>OE||||E|</sup>C<sup>202505011200</sup>199505011200^^TM3
+  RXO|||3|L|IV|D5W WITH 1/2 NS WITH 20 MEQ KCL EVERY THIRD BOTTLE STARTING WITH FIRST||W8&amp;825&amp;A^|N||||||||H30
+  ORC|NW|1000<sup>OE|9999999</sup>RX|||E|<sup>Q6H</sup>D10<sup>^</sup>R
+  RXA|1|202505011200|||0047-0402-30^Ampicillin 250 MG TAB^NDC|2|TAB</p>
+  </div>
+  </div>
+  </div>
+</div>

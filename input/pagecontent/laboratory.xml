@@ -1,0 +1,201 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/O21.html">Message - O21 General Laboratory Order</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O33.html">Message - O33 Multiple Laboratory Orders for Single Specimen</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O35.html">Message - O35 Multiple Laboratory Orders for a Single Container of a Specimen</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O39.html">Message - O39 Laboratory Order for All Specimens in Shipment</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O37.html">Message - O37 Laboratory Order for Population/Location</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O59.html">Message - O59 Laboratory Result Interpretation Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R22.html">Message - R22 Unsolicited Specimen Oriented Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R23.html">Message - R23 Unsolicited Specimen Container Oriented Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R24.html">Message - R24 Unsolicited Order Oriented Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R25.html">Message - R25 Unsolicited Population/Location-Based Laboratory Observation</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_example_messages">Example Messages</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>This sub-chapter contains examples to messages defined in the chapter 13. Examples for other messages using segments defined in the chapter 13 are published in corresponding chapters, e.g., for laboratory orders in chapter 4 and for laboratory observations in chapter 7.</p>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_status_update">Automated Equipment Status Update</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 was powered up directly by the operator (local control) and correctly performed the initialization process. This information is sent by the analyzer to the LAS.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |ESU<sup>U01</sup>ESU|MSG00001|P|2.8|&lt;cr&gt;
+  EQU|0001<sup>CHEMISTRYANALYZER|19980630080038|PU</sup>POWERED_UP|L<sup>LOCAL|N</sup>NORMAL&lt;cr&gt;
+  ISD|123456789|IN^INIT|OK&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_status_request">Automated Equipment Status Request</h3>
+  <div class="paragraph">
+  <p>The LAS queries the chemistry analyzer 0001 for status information.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |ESR<sup>U02</sup>ESR|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_specimen_status_update">Specimen Status Update</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 recognized an aliquot container (id=092321A) with blood. This container is in a position 1 of carrier type R5 (id=120) and is located in the input buffer 1.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |SSU<sup>U03</sup>SSU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  SAC|991912376<sup>EXTLAB|01039421</sup>THISLAB|092321A<sup>LAS|092321</sup>LAS||BLD^BLOOD |19980620080037|I<sup>IDENTIFIED|R5</sup>5_HOLE_RACK|120|1||||BUF1^INPUT BUFFER 1&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>A pre-analytical instrument 0001 performed aliquoting and sorting operation.<br>
+  (See Fig. 13-5 for visualization of positions and locations)<br>
+  The carrier (id=2002) with primary/parent container (id=12345) at position 2 was transported in the location: output buffer 1, into position 4 of the output tray (id=A1203).<br>
+  The aliquot container (id=12345A) was sorted into the manual transportable carrier (id=045), in row 3, column 2. This carrier is located in the sorter bed at location 4.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|PREANPROG|AUTPREAN|LASPROG|LASSYS|19980630080040|SECURITY |SSU<sup>U03</sup>SSU|MSG00002|P|2.9|&lt;cr&gt;
+  EQU|0001^AQS|19980630080043&lt;cr&gt;
+  SAC|991912376<sup>EXTLAB|01039421</sup>THISLAB|12345<sup>LAS||||19980620080039|R</sup>COMPLETED |R3<sup>3_HOLE_RACK|2002|1|OT</sup>OUTPUTTRAY|A1203<sup>AQSTRAY|4|OB1</sup>OUTPUTBUFFER&lt;cr&gt;
+  SAC|991912376<sup>EXTLAB|01039421</sup>THISLAB|12345A<sup>LAS|12345</sup>LAS|||19980620080039 |R<sup>COMPLETED|R14</sup>14_HOLE_RACK|045|3^2||||AQSBED||||||2|0.5||ml&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_specimen_status_request">Specimen Status Request</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 queries the LAS for status of specimen/container (id=092321A).</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |SSR<sup>U04</sup>SSR|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  SAC|991912376<sup>EXTLAB|01039421</sup>THISLAB|092321A^LAS||||199806200823&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_inventory_update">Automated Equipment Inventory Update</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 sends to the LAS the status of a TSH reagent (id=MF01239) in bottle (id=12345).</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |INU<sup>U05</sup>INU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  INV|MF01239<sup>REAGENT1|OK</sup>OK_STATUS|SR^SINGLE_TEST_REAGENT |12345<sup>BOTTLE_NUM|||||190||ML|20000101||</sup>^D60|TSH|A12345678|PROD1&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_inventory_request">Automated Equipment Inventory Request</h3>
+  <div class="paragraph">
+  <p>The LAS queries the chemistry analyzer 0001 for status of all packages of the substance (id=MF01239).</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |INR<sup>U06</sup>INR|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  INV|MF01239<sup>REAGENT1|OK</sup>OK_STATUS&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_command">Automated Equipment Command</h3>
+  <div class="paragraph">
+  <p>The LAS sends command of "Clearing Notification" to the chemistry analyzer 0001.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |EAC<sup>U07</sup>EAC|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  ECD|89421|CN^CLEAR NOTIFICATION|Y^YES&lt;cr&gt;
+  CNS|1209|1500|199806010800|199806300800&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_response">Automated Equipment Response</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer confirms completion of the execution of the initialization command.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |EAR<sup>U08</sup>EAR|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  ECD|89421|IN<sup>INIT|Y</sup>YES&lt;cr&gt;
+  ECR|OK^COMMAND_COMPLETE|19980630080035&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_notification">Automated Equipment Notification</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer sends a notification (warning) about drift in the detection unit.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |EAN<sup>U09</sup>EAN|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  NDS|8923|199806300800|W<sup>WARNING</sup>|DU001^DETECTIO UNIT DRIFT&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_test_code_settings_update">Automated Equipment Test Code Settings Update</h3>
+  <div class="paragraph">
+  <p>The LAS send update of configuration parameters for Glucose test.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |TCU<sup>U10</sup>TCU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  TCC|15074-8<sup>GLUCOSE|GLU-HK</sup>CHEMISTRYANALYZER|SER^SERUM|10|10|0|0|500| Y<sup>YES|Y</sup>YES|N^NO |<sup>2</sup>‑^400|mg/dL|P&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_test_code_settings_request">Automated Equipment Test Code Settings Request</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 queries the LAS for configuration parameters of the Glucose test.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |TCR<sup>U11</sup>TCU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  TCC|15074-8<sup>GLUCOSE|GLU-HK</sup>CHEMISTRYANALYZER&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_logservice_update">Automated Equipment Log/Service Update</h3>
+  <div class="paragraph">
+  <p>The chemistry analyzer 0001 sends 1 record from the event log to the LAS.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|INSTPROG|AUTINST|LASPROG|LASSYS|19980630080040|SECURITY |LSU<sup>U12</sup>LSU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  EQP|LOG^LOG_EVENT||199806300755|199806300800|I976 Instrument Initialization&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_automated_equipment_logservice_request">Automated Equipment Log/Service Request</h3>
+  <div class="paragraph">
+  <p>The LAS queries chemistry analyzer for log file of events occurring between 7am and 8am on 30<sup>th</sup> June 1998.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|LASPROG|LASSYS|INSTPROG|AUTINST|19980630080040|SECURITY |LSR<sup>U13</sup>LSU|MSG00001|P|2.9|&lt;cr&gt;
+  EQU|0001^CHEMISTRYANALYZER|19980630080038&lt;cr&gt;
+  EQP|LOG^LOG_EVENT||199806300700|199806300800&lt;cr&gt;</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

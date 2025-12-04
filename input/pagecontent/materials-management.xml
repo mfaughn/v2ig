@@ -1,0 +1,268 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>This Materials Management topic defines abstract messages for the purpose of communicating various events related to the transactions derived from supply chain management within a healthcare facility.</p>
+  </div>
+  <div class="paragraph">
+  <p>The sterilization (GLOSSARY) and decontamination (GLOSSARY) messages are based on a request, response, or unsolicited update. These transactions occur between an instrument-tracking system and a sterilizer (GLOSSARY) or washer (GLOSSARY).</p>
+  </div>
+  <div class="paragraph">
+  <p>This topic describes various roles under which applications might operate. The roles discussed here illustrate the underlying model used to develop this specification. They do not imply the need for a particular application model or method of implementation.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_sterilization_and_decontamination">Sterilization and Decontamination</h3>
+  <div class="paragraph">
+  <p>The main focus of the sterilization and decontamination process is a load or grouping of <em>supply items</em>. These messages communicate sterilizer configuration, sterilizer lot, and device and cycle data messages related to instances of sterilizing and decontaminating supply items.</p>
+  </div>
+  <div class="paragraph">
+  <p><em>Sterilization</em> is a process used to render a product free from viable microorganisms in order to meet infection prevention standards. Sterilizers are defined as apparatus used to sterilize medical devices, equipment and supplies by direct exposure to the sterilizing agent. The typical sterilizing agent for high temperature sterilization is saturated steam under pressure; low temperature sterilizing agents are peracetic acid or ethylene oxide (EO) gas (GLOSSARY).</p>
+  </div>
+  <div class="paragraph">
+  <p><em>Decontamination</em> is defined by the Occupational Safety and Health Administration (OSHA) as the use of physical or chemical means to remove, inactivate or destroy blood-borne pathogens on a surface or item to the point where they are no longer capable of transmitting infectious particles and the surface or item is rendered safe for handling, use or disposal. {29 CFR 1910.1030} Washers provide decontamination services in order to render items safe for handling.</p>
+  </div>
+  <div class="paragraph">
+  <p>Steam sterilizers have defined cycles (GLOSSARY) that achieve sterilization by attaining certain temperatures for specific lengths of time (GLOSSARY - point to Cycle Time). These cycles are validated using Association for Advancement of Medical Instrumentation (AAMI) standards.</p>
+  </div>
+  <div class="paragraph">
+  <p>Ethylene oxide gas and peracetic acid sterilizers have defined cycles that are validated by the manufacturer&#8217;s research to achieve sterilization at specific temperatures and exposure times to the sterilant.</p>
+  </div>
+  <div class="paragraph">
+  <p>Sterilization and decontamination cycles (GLOSSARY) are defined as a sequence of steps or phases that are designed to achieve sterilization or decontamination.</p>
+  </div>
+  <div class="paragraph">
+  <p>Typical phases for steam sterilization include Condition, Sterilize and Exhaust. Phases for ethylene oxide sterilization include Condition, Sterilize, Exhaust and Aerate. Peracetic acid sterilizers also have similar phases.</p>
+  </div>
+  <div class="paragraph">
+  <p>The following tables contain examples of typical cycles for sterilizers and washers.</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <caption class="title">Table 1. Representative Steam Sterilization Cycles</caption>
+  <colgroup>
+  <col style="width: 16%;">
+  <col style="width: 18%;">
+  <col style="width: 13%;">
+  <col style="width: 15%;">
+  <col style="width: 38%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Cycles</th>
+  <th class="tableblock halign-left valign-top">Sterilize Temperature</th>
+  <th class="tableblock halign-left valign-top">Sterilize Time</th>
+  <th class="tableblock halign-left valign-top">Dry Time</th>
+  <th class="tableblock halign-left valign-top">Recommended Load</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Express</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">270°F (132°C)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">4.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">3.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Single wrapped instrument tray with a single instrument. Non-porous good, only.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Flash</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">270°F (132°C)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">3.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">1.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Unwrapped instrument tray with a single instrument</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <table class="tableblock frame-all grid-all stretch">
+  <caption class="title">Table 2. Prevacuum Testing Cycles for Steam Sterilizers</caption>
+  <colgroup>
+  <col style="width: 22%;">
+  <col style="width: 20%;">
+  <col style="width: 17%;">
+  <col style="width: 17%;">
+  <col style="width: 24%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Prevacuum Testing Cycles</th>
+  <th class="tableblock halign-left valign-top">Sterilizer Temperature</th>
+  <th class="tableblock halign-left valign-top">Sterilize Time</th>
+  <th class="tableblock halign-left valign-top">Dry Time</th>
+  <th class="tableblock halign-left valign-top">Recommended Load</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Leak Test</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">270°F (132°C)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Dart Test</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">270°F (132°C)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">3.5 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">1.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Bowie-Dick Test (GLOSSARY) or DART</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Dart Warmup</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">270°F (132°C)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">3.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">1.0 min</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect2">
+  <h3 id="_application_roles">Application roles</h3>
+  <div class="paragraph">
+  <p>In the sterilization and decontamination specification, there are two roles that an application can assume: a filler application role, and a placer application role. These application roles define the interaction that an application will have with other applications in the messaging environment. In many environments, any one application may take on more than one application role.</p>
+  </div>
+  <div class="paragraph">
+  <p>In this specification, the definition of application roles is not intended to define or limit the functionality of specific products developed by vendors of such applications. Instead, this information is provided to help define the model used to develop this specification, and to provide an unambiguous way for applications to communicate with each other.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_implementation_considerations">Implementation Considerations</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_trigger_events">Trigger Events</h3>
+  <div class="paragraph">
+  <p>This topic defines trigger events used to communicate supply item information between applications. The sterilization and decontamination related trigger events are defined in section <em>17.5</em>, "<em>Inventory Item Master Messages Segments</em>," and <em>17.6</em>, "<em>Placer Application Requests and Trigger Events</em>."</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_statuses">Statuses</h3>
+  <div class="paragraph">
+  <p>The status of a load describes the state of a load during a sterilization cycle. Typical statuses of a load may include the following: Pending, Active, Complete, and Canceled.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_trigger_events_and_message_definitions">Trigger Events and Message Definitions</h3>
+  <div class="paragraph">
+  <p>This specification contains functional groupings of trigger events and message definitions. The trigger events within each functional grouping share the same or similar message definitions.</p>
+  </div>
+  <div class="paragraph">
+  <p>The first functional grouping of trigger events and message definitions describes <em>placer request transactions</em>. This grouping defines the trigger events and message definitions for transactions from applications acting in a placer application role, and also defines the related filler application response messages sent back by applications fulfilling the auxiliary role. These messages are described in section <em>17.6</em>, "<em>Placer Application Requests and Trigger Events</em>."</p>
+  </div>
+  <div class="paragraph">
+  <p>The second functional grouping describes trigger events and message definitions for <em>unsolicited transactions</em> from applications acting in the filler application role. This grouping describes the unsolicited messages originating from an application fulfilling the filler role, and the response messages sent back by applications fulfilling the auxiliary role. These messages are described in section <em>17.7</em>, "<em>Filler Application Messages and Trigger Events Unsolicited</em>."</p>
+  </div>
+  <div class="sect3">
+  <h4 id="_update_mode">Update mode</h4>
+  <div class="paragraph">
+  <p>This topic uses the "Action code/unique identifier" mode for updating via repeating segments. For more information on updating via repeating segments, please see section 2.15.4, "Modes for updating via repeating segments," in Chapter 2. The definition of the "Action code/unique identifier" update mode can be found in Chapter 2, section 2.15.4.2, "Action code/unique identifier mode update definition."</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_placer_application_requests_and_trigger_events">Placer Application Requests and Trigger Events</h3>
+  <div class="paragraph">
+  <p>Placer request and filler response transactions are the messages and trigger events used between placer applications and filler applications. The placer application initiates transactions using the <strong>SLR</strong>, <strong>STI</strong>, <strong>SDR,</strong> or <strong>SMD</strong> message types, requesting information with the given trigger event message detail. The filler application responds to these requests, using the <strong>SLS</strong>, <strong>STS</strong>, <strong>SDS,</strong> or <strong>SMS</strong> message types, to either grant or deny the requests from the placer application.</p>
+  </div>
+  <div class="paragraph">
+  <p>When initiating a request, the placer application will generate and send a message type containing all of the information necessary to communicate the desired action to the filler application. All required segments and fields (both explicitly required and conditionally required) should be provided to the filler application, as defined here. When the filler application receives the transaction, it acknowledges it with the appropriate accept acknowledgment using an <strong>ACK</strong> message (assuming that the enhanced acknowledgment mode is in use).</p>
+  </div>
+  <div class="paragraph">
+  <p>After processing the request at the application level, the filler acknowledges the transaction with the appropriate application acknowledgment in a response message type (again assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes in the context of this topic, an application accept from the filler means that the request was processed and accepted by the filler.</p>
+  </div>
+  <div class="paragraph">
+  <p>An application error from the filler means that the request was processed and denied. An application reject from the filler means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the filler system is down, or there was an internal error).</p>
+  </div>
+  <div class="paragraph">
+  <p>There are no unsolicited messages initiated from a filler application defined in this set of trigger events. Those messages and trigger events are defined below, in section <em>17.7</em>, "<em>Filler Application Messages and Trigger Events Unsolicited</em>."</p>
+  </div>
+  <div class="paragraph">
+  <p>All of the trigger events associated with placer request and filler response transactions use the message definitions that follow:</p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S28.html">Message - S28 Request New Sterilization Lot</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S29.html">Message - S29 Request Sterilization Lot Deletion</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S30.html">Message - S30 Request Item</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S31.html">Message - S31 Request Anti-Microbial Device Data</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S32.html">Message - S32 Request Anti-Microbial Device Cycle Data</a></p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_filler_application_messages_and_trigger_events_unsolicited">Filler Application Messages and Trigger Events Unsolicited</h3>
+  <div class="paragraph">
+  <p>Unsolicited transactions from filler applications are the messages and trigger events used between filler applications and auxiliary applications. Transactions are initiated by the filler application, using the <strong>STC</strong> message to notify auxiliary applications of a sterilization configuration set. The auxiliary application responds to these notifications, using the <strong>ACK</strong> message, either to acknowledge receipt of the transaction, or to signal that an interfacing error of some kind has occurred.</p>
+  </div>
+  <div class="paragraph">
+  <p>As the discussion of application roles has indicated above, any one application can have more than one application role. If it is important that the application acting in the placer application role in your messaging environment be notified of unsolicited sterilization configurations, then it must also support the role of an auxiliary application.</p>
+  </div>
+  <div class="paragraph">
+  <p>When initiating a notification transaction, the filler application will generate and send an <strong>STC</strong>, <strong>SLN</strong>, <strong>SDN,</strong> or <strong>SCN</strong> message containing all of the information necessary to communicate the desired information to the auxiliary application. All required segments and fields (both explicitly required and conditionally required) should be provided by the filler application. When the auxiliary application receives the transaction, it acknowledges with the appropriate accept acknowledgment using an <strong>ACK</strong> message (assuming that the enhanced acknowledgment mode is in use). After processing the notification at the application level, the auxiliary application acknowledges the transaction with the appropriate application acknowledgment in an <strong>ACK</strong> message (assuming that an application acknowledgment was requested under the enhanced acknowledgment mode or that the original acknowledgment mode is in use). Applying the explanations of the various application acknowledgment codes (detailed in Chapter 2) in this context, an application accept from the auxiliary application means that the notification was processed and accepted. An application error from the auxiliary application means that the auxiliary application was unable to process the notification at the application level. An application reject from the auxiliary application means that the request was not, and could not be, processed due to one or more reasons unrelated to its content (for example, it fails the basic application protocol validation, the system is down, or there was an internal error).</p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S33.html">Message - S33 Notification of Sterilization Configuration</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S34.html">Message - S34 Notification of New Sterilization Lot</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S35.html">Message - S35 Notification of Sterilization Lot Deletion</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S36.html">Message - S36 Notification of Anti-Microbial Device Data</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/S37.html">Message - S37 Notification of Anti-Microbial Device Cycle Data</a></p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_request_new_sterilization_lot_event_s28">Request New Sterilization Lot - Event S28</h3>
+  <div class="paragraph">
+  <p>The sterilizer operator is preparing to run a flash sterilizer load. The sterilizer requests a lot number from the instrument-tracking system to assign to the load.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|Sterila|FacilB|Instrutrak|FacilA|202510010800||SLR</sup>S28^SLR_S28|021244STER|P|2.9|||AL|AL
+  SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|202502140900
+  UAC|KERB|MATSYS|AP|Octet-stream|A|Clerk
+  SLT|87995|DEVICE NAME|A46|LF4|1435567677</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|Sterila|FacilB|Instrutrak|FacilA|202510010800||ACK</sup>S28^ACK|021244STER|P|2.9|||NE|NE
+  MSA|CA|021244STER</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|Instrutrak|FacilB|Sterila|FacilA|2025010010801||SLS</sup>S28^SLR_S28|021244STER|P|2.9|||AL|NE
+  SFT|Hospital A|9.0|Sterila|10101010|9.0 999|New Load|202502140900
+  UAC|KERB|MATSYS|AP|Octet-stream|A|Admin
+  SLT|01</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|Instrutrak|FacilB|Sterila|FacilA|2025010010801||SLS</sup>S28^SLR_S28|021244STER|P|2.9|||NE|NE
+  MSA|CA|021244STER</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

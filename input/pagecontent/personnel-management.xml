@@ -1,0 +1,84 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The Personnel Management topic provides for the transmission of new or updated administration information about individual healthcare practitioners and supporting staff members. Since many systems (e.g., security, scheduling, orders, etc.), must be able to closely monitor changes in certain information regarding individual healthcare practitioners, the Personnel Management transaction set is used to clearly identify these events. For example, it is important to a Security System to be aware of when a staff member was hired or specific role has been terminated. Prior to Version 2.4, master file updates were the only method to update this information. However, when any of these changes are reported as master file update notifications, it is not obvious which of the data has been changed, and is cumbersome to process efficiently. It should be noted that Personnel Management functions that do not affect healthcare administration (e.g., benefits) are not addressed in this topic.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Generally, information is entered into a Personnel Management system and passed to other systems requiring individual healthcare practitioner data either in the form of an unsolicited update or a response to a record-oriented query.</p>
+  </div>
+  <div class="sect2">
+  <h3 id="_trigger_events">Trigger Events</h3>
+  <div class="paragraph">
+  <p>Each trigger event is documented below, along with the applicable form of the message exchange.</p>
+  </div>
+  <div class="paragraph">
+  <p>The trigger events that follow are served by the unsolicited Personnel Management update (PMU) and General Acknowledgment (ACK) response.</p>
+  </div>
+  <div class="paragraph">
+  <p>The information that is included in any of these trigger event transactions can be more than the minimum necessary to communicate that event. Any of the fields occurring in the segments listed for the message can be used. A few or many fields can be used as agreed upon during implementation. However, please note, that when the contents of a field change for a field that is not necessarily related to the trigger event, it is a matter for implementation negotiation as to whether the receiving systems can capture this changed data.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/B01.html">Message - B01 Add Personnel Record</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B02.html">Message - B02 Update Personnel Record</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B03.html">Message - B03 Delete Personnel Record</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B04.html">Message - B04 Activate Practicing Person</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B05.html">Message - B05 Deactivate Practicing Person</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B06.html">Message - B06 Terminate Practicing Person</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q25_K25.html">Message - Q25/K25 Query Personnel Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B07.html">Message - B07 Grant Certificate/Permission</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/B08.html">Message - B08 Revoke Certificate/Permission</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_add_personnel_record_event_b01">Add Personnel Record - Event B01</h3>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|HL7REG|UH|HL7LAB|CH|202502280700||PMU</sup>B01^PMU_B01|MSGID002|P|2.8
+  EVN|B01|202502280700
+  STF||U2246<sup>^</sup>PLW<sub>111223333<sup>^</sup>USSSA<sup>SS|HIPPOCRATES</sup>HAROLD<sup>H</sup>JR<sup>DR</sup>M.D.|P|M|19511004|A|<sup>ICU|</sup>MED|(555)555-1003X345CO</sub>(555)555-3334CH~(555)555-1345X789CB|1003 HEALTHCARE DRIVE^SUITE 200<sup>ANNARBOR</sup>MI<sup>98199</sup>U.S.A.^H~3029 HEALTHCARE DRIVE^^ANN ARBOR, MI<sup>98198</sup>U.S.A.<sup>O|19890125</sup>DOCTORSAREUS MEDICAL SCHOOL&amp;L01||PMF88123453334|<a href="mailto:74160.2326@COMPUSERV.COM">74160.2326@COMPUSERV.COM</a>|B
+  GSP|1|S||76691-5^Gender identity<sup>LN|446151000124109</sup>Identifies as male gender^SCT|20210101
+  GSP|2|S||90778-2^Personal pronouns – Reported<sup>LN|LA29518-0</sup>he/him/his/his/himself^LN|20210101
+  PRA||^HIPPOCRATES FAMILY PRACTICE|ST|I|OB/GYN^STATE BOARD OF OBSTETRICS AND GYNECOLOGY<sup>C</sup>19790123|1234887609<sup>UPIN<sub>1234987</sup>CTY<sup>MECOSTA</sub>223987654</sup>TAX<sub>1234987757<sup>DEA</sub>12394433879</sup>MDD<sup>CA|ADMIT&amp;&amp;ADT</sup>MED&amp;&amp;L2<sup>19941231~DISCH&amp;&amp;ADT</sup>MED&amp;&amp;L2^19941231
+  AFF|1|AMERICAN MEDICAL ASSOCIATION|123 MAIN STREET^^OUR TOWN<sup>CA</sup>98765<sup>U.S.A.</sup>M |20200101
+  LAN|1|ESL<sup>SPANISH</sup>ISO639|1<sup>READ</sup>HL70403|1<sup>EXCELLENT</sup>HL70404
+  LAN|2|ESL<sup>SPANISH</sup>ISO639|2<sup>WRITE</sup>HL70403|2<sup>GOOD</sup>HL70404
+  LAN|3|FRE<sup>FRENCH</sup>ISO639|3<sup>SPEAK</sup>HL70403|3<sup>FAIR</sup>HL70404
+  EDU|1|BA^BACHELOR OF ARTS<sup>HL70360|19810901</sup>19850601|20010901^19850601|20050701|YALE UNIVERSITY<sup>L|U</sup>HL70402|456 CONNECTICUT AVENUE^^NEW HAVEN<sup>CO</sup>87654<sup>U.S.A.</sup>M
+  EDU|2|MD^DOCTOR OF MEDICINE<sup>HL70360|19850901</sup>19890601|20050901^19890601|20090701|HARVARD MEDICAL SCHOOL<sup>L|M</sup>HL70402|123 MASSACHUSETTS AVENUE<sup>^CAMBRIDGE</sup>MA<sup>76543</sup>U.S.A.^M</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

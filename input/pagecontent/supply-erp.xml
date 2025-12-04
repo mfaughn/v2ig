@@ -1,0 +1,73 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The Requisition Detail segment (RQD) is used for ordering medical, surgical, and patient care supplies. It is assumed that these supplies are managed by a materials management application, which contains a master list of all items the hospital uses.</p>
+  </div>
+  <div class="paragraph">
+  <p>There are basically two types of supplies, commonly referred to as stock and non-stock.</p>
+  </div>
+  <div class="paragraph">
+  <p>Stock supplies are, as the name suggests, stocked in the hospital in designated areas, such as the warehouse, Central Supply, Nursing floors, or Operating Room. When requisitioning stock supplies, the requesting application need only specify the information in the RQD segment. It is assumed that this is enough information for the application receiving to identify the item. If the sending application is not aware whether the supply is stock, it may optionally send an RQ1 along with the RQD. Typically in that case, the item is requested with a free text description.</p>
+  </div>
+  <div class="paragraph">
+  <p>Non-stock supplies are not stocked anywhere in the hospital and must be ordered from an industry distributor or manufacturer. When the requesting application knows that it is requisitioning non-stock supplies, it may also send an RQ1 segment with the RQD if at least one field in RQ1 is known to the sending application. This may be necessary in order for the receiving application to properly determine where to get these supplies. This depends on the sophistication of the database of the receiving application, which may contain a history of requisitions from the sending application.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/O05.html">Message - O05 Stock Supply Requisition</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O07.html">Message - O07 Non-Stock Supply Requisition</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_patient_order">Patient order</h3>
+  <div class="paragraph">
+  <p>This example is a requisition from the ORSUPPLY application to the MMSUPPLY application for two items for patient Adam A. Everyman. One item is a stock item for an IV Solution and the second item is a nonstock implant manufactured by Detter. The requisition numbers used by the ORSUPPLY application are RQ101 &amp; RQ102.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|20061105131523||OMS</sup>O05^OMS_O05| &#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203; &lt;cr&gt;
+  ORC|NW|RQ101<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL<sup>V|MAINOR</sup>2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|1|1234^Solution, 2.25% Saline||S1786^Saline Solution|1|BT<sup>Bottle|1234‑5678||ORSUP</sup>Main OR Supply Room|20061123|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|19911105131523||OMN</sup>O07^OMN_O07|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203; &lt;cr&gt;
+  ORC|NW|RQ102<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304&lt;cr&gt;
+  RQD|1|23455^Implant, Special Hip||I45323<sup>Implant|1|EA</sup> Each|1234‑5678||ORSUP^Main OR Supply Room|20061123|&#8230;&#8203;&lt;cr&gt;
+  RQ1|123.45|DET^Detter, Inc.|444456|DST^Local Distributors, Inc.|333‑456|N|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_replenish_supply_closet">Replenish Supply Closet</h3>
+  <div class="paragraph">
+  <p>This example is a requisition from the ORSUPPLY application to the MMSUPPLY application for five stock items to replenish a supply closet. The requisition numbers used by the ORSUPPLY application is RQ103 - RQ1037.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|ORSUPPLY|ORSYS|MMSUPPLY|MMSYS|20061105131523||OMS</sup>O05^OMS_O05|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|RQ103<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|1|1232^Solution, 1% Saline||S1784^Saline Solution|5|BT<sup>Bottle|1234‑5678||ORSUP</sup>Main OR Supply Room|20061105|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|RQ104<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|2|1231^Solution, 0.2% Saline||S1781^Saline Solution|2|BT<sup>Bottle|1234‑5678||ORSUP</sup>Main OR Supply Room|20061105|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|RQ105<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|3|2342^Suture, Black Silk||SU123<sup>Suture|2|DZ</sup>Dozen|1234‑5678||ORSUP^Main OR Supply Room|20061105|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|RQ106<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|4|2344^Suture, Black Silk 3‑0||SU124<sup>Suture|1|DZ</sup>Dozen|1234‑5678||ORSUP^Main OR Supply Room|20061105|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|RQ107<sup>ORSUPPLY||||N|||20061105130000||333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V |MAINOR^2W|321-1234 X2304<sup>^</sup><sup>^</sup>3211234^2304|&#8230;&#8203;&lt;cr&gt;
+  RQD|5|4565^Bandage Pad, 4x4||B6345^Bandage Pad|3|BX<sup>Box|1234‑5678||ORSUP</sup>Main OR Supply Room|20061105|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

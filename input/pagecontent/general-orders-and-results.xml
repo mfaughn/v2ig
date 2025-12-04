@@ -1,0 +1,3429 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_order_entry_fixme">Order Entry FIXME</h3>
+  <div class="paragraph">
+  <p>The Order Entry transaction set provides for the transmission of orders or information about orders between applications that capture the order, by those that fulfill the order, and other applications as needed. An order is a request for material or services, usually for a specific patient. These services include medications from the pharmacy, clinical observations (e.g., vitals, I&amp;Os) from the nursing service, tests in the laboratory, food from dietary, films from radiology, linens from housekeeping, supplies from central supply, an order to give a medication (as opposed to delivering it to the ward), etc.</p>
+  </div>
+  <div class="paragraph">
+  <p>Most orders are associated with a particular patient. However, the Standard also allows a department to order from another ancillary department without regard to a patient (e.g., floor stock), as well as orders originating in an ancillary department (i.e., any application may be the placer of an order or the filler of an order).</p>
+  </div>
+  <div class="paragraph">
+  <p>We refer to the person or entity who places the order as the placer. We refer to the person or entity that carries out the order as the filler (producer in ASTM terminology). In the case where the person or entity that carries out the order also requests the order, this person or entity is referred to as the filler and placer of the order. The filler may also request another application to assign a filler or placer order number.</p>
+  </div>
+  <div class="paragraph">
+  <p>This chapter defines the transactions at the seventh level, i.e., the abstract messages. Various schemes may be used to generate the actual characters that make up the messages according to the communications environment. The HL7 Encoding Rules will be used where there is not a complete Presentation Layer. This is described in Chapter 2, Section 2.6, "Message construction rules." The examples included in this chapter were constructed according to the HL7 Encoding Rules.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_pharmacy_and_vaccines_fixme">Pharmacy and Vaccines FIXME</h3>
+  <div class="paragraph">
+  <p>This extension of chapter 4 was created because as of version 2.6 it had become too large to edit without great difficulty. Thus, the sections specific to pharmacy and vaccines were excised from that chapter and now comprise the content of this chapter.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_observation_reporting">Observation Reporting</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>This chapter describes the transaction set required for sending structured patient-oriented clinical data from one computer system to another. A common use of these transaction sets will be to transmit observations and results of diagnostic studies from the producing system (e.g., clinical laboratory system, EKG system) (the filler), to the ordering system (e.g., HIS order entry, physician&#8217;s office system) (the placer). Observations can be sent from producing systems to clinical information systems (not necessarily the order placer) and from such systems to other systems that were not part of the ordering loop, e.g., an office practice system of the referring physician for inpatient test results ordered by an inpatient surgeon. This chapter also provides mechanisms for registering clinical trials and methods for linking orders and results to clinical trials and for reporting experiences with drugs and devices.</p>
+  </div>
+  <div class="paragraph">
+  <p>These transaction sets permit the transmission of clinical observations including (but not limited to) clinical laboratory results, measures of patient status and condition, vital signs, intake and output, severity and/or frequency of symptoms.</p>
+  </div>
+  <div class="paragraph">
+  <p>If the observation being reported meets one or more of the following criteria, then the content would qualify as a medical document management message (MDM) rather than an observation message (ORU). The reader is referred to the MDM message type in Chapter 9.</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Documents/reports that require succession management to reflect the evolution of both document addenda and replacement documents. Succession management is described in Chapter 9.</p>
+  </li>
+  <li>
+  <p>Documents/reports where the Sender wants to indicate the availability of the report for use in patient care using the availability status present in the TXA segment, as described in Chapter 9.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>Additional considerations that may affect the appropriateness of using an MDM message:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Documents/reports where the whole requires a signature as part of the message. While the ORU message does not support the inclusion of signature or authentication, some document content forms support these requirements. Of particular note, CDA documents provide for the inclusion of originator/signature. Thus, if a CDA document requires a signature but does not require succession management or report availability (as described above), then an ORU message may be appropriate. However, if the CDA document requires succession management or report availability, then an MDM message is required.</p>
+  </li>
+  <li>
+  <p>Documents/reports where the whole requires authentication as part of the message. As described for signatures, authentication may exist within the document content form. Again, CDA documents provide for the identification of an authenticator. Thus if a CDA document does not require succession management or report availability, then an ORU message may be appropriate. If succession management or report availability are necessary, then an MDM message is required.</p>
+  </li>
+  <li>
+  <p>Documents/reports where the content as a whole requires special confidentiality protection using the confidentiality status present in the TXA segment, as described in Chapter 9.</p>
+  </li>
+  <li>
+  <p>Documents/reports where document storage status is useful for archival and purging purposes using the storage status present in the TXA segment, as described in Chapter 9.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>Using these criteria, the following examples of documents/reports would typically qualify as medical document management (MDM) messages. Note that as clinical content, the following documents/reports typically require succession management and/or report availability thus would require an MDM message even if the payload utilizes CSA.</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>History and Physical</p>
+  </li>
+  <li>
+  <p>Consultation reports</p>
+  </li>
+  <li>
+  <p>Discharge summaries</p>
+  </li>
+  <li>
+  <p>Surgical/anatomic pathology reports</p>
+  </li>
+  <li>
+  <p>Diagnostic imaging reports</p>
+  </li>
+  <li>
+  <p>Cardio-diagnostic reports</p>
+  </li>
+  <li>
+  <p>Operative reports</p>
+  </li>
+  <li>
+  <p>As an international example, microbiology reports may include clinical interpretation and require authentication. This may not be the case in all jurisdictions, but is an example that the use or requirement of MDM messages may be influenced by local considerations.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>Usage Notes:</p>
+  </div>
+  <div class="paragraph">
+  <p>Transcription is not a defining quality for the selection of an MDM or ORU message. In an MDM message, the document/report is typically dictated or transcribed, but not always. Machine-generated or automated output is an example of a document/report that is appropriate to the MDM but is not transcribed.</p>
+  </div>
+  <div class="paragraph">
+  <p>Observations may be transmitted in a solicited (in response to a query) or unsolicited mode. In the solicited mode, a user requests a set of observations according to criteria transmitted by the user. The sending system responds with existing data to satisfy the query (subject to access controls). Queries do not elicit new observations by the target system, they simply retrieve old observations. (See Chapter 5 for full discussion of the query transmission.)</p>
+  </div>
+  <div class="paragraph">
+  <p>The unsolicited mode is used primarily to transmit the values of new observations. It is the mode used by producing services to return the values of observations requested by an ordering system. A laboratory system, for example, would usually send the results of an AM electrolytes to the ordering HIS via the unsolicited mode. An intensive care system would send the blood pressures to the same HIS by the same mode. Calling such transactions unsolicited may sound like a misnomer, but is not. The placing service solicits the producing service to make the observation. It could also (through a query) solicit the value of that observation after it has been made. However, such an approach would demand continuous polling of the producing system until the result was produced. Using the unsolicited mode, the producing service returns the value of an observation as soon as it is available. The unsolicited mode can also be used to transmit new results to a system (e.g., an archival medical record system) that did not order the observation. The transactions that define these modes are more fully described in Section <em>7.3</em>, "<em>General Trigger Events &amp; Message Definitions</em>."</p>
+  </div>
+  <div class="paragraph">
+  <p>Observations are usually ordered and reported as sets (batteries) of many separate observations. Physicians order electrolytes (consisting of sodium, potassium, chloride, bicarbonate) or vitals (consisting of diastolic blood pressure, systolic blood pressure, pulse, and temperature). Moreover, tests that we may think of as single entity, e.g., cardiac echo, usually yield multiple separate measurements, e.g., left ventricular diameter, left atrial diameter, etc. Moreover, observations that are usually reported as text (e.g., the review of systems from the history and physical) can also be considered a set of separately analyzable units (e.g., cardiac history, pulmonary history, genito-urinary history, etc.). We strongly suggest that all text clinical reports be broken down into such separate analyzable entities and that these individual entities be transmitted as separate OBX segments. Because many attributes of a set of observations taken at one time will be identical, one OBR segment serves as a header for the report and carries the information that applies to all of the individual observations in the set. In the case of ordered observations, the OBR segment is a "turn-around document" like the manual request forms it replaces. It carries information about the order to the producing service; a copy of the OBR with additional fields completed is returned with the observations to the requesting service. Alternately, text documents can be encoded as a CDA document and sent within a single OBX.</p>
+  </div>
+  <div class="paragraph">
+  <p>Not all observations are preceded by an order. However, all observations whether explicitly ordered or initiated without an order are reported with an OBR segment as the report header.</p>
+  </div>
+  <div class="paragraph">
+  <p>The major segments (OBR, OBX) defined in this chapter, their fields, and the code tables have been defined in collaboration with ASTM E31.11 with the goal of keeping HL7 observation transmission the same as ASTM E1238 in pursuit of the goals of ANSI HISPP and the Message Standards Developers Subcommittee. (Some sections of this chapter have been taken with permission directly from the E1238‑91 document and vice versa in pursuit of those goals).</p>
+  </div>
+  <div class="paragraph">
+  <p>The OBR segment provides information that applies to all of the observations that follow. It includes a field that identifies a particular battery (or panel or set) of observations (e.g., electrolytes, vital signs or Admission H&amp;P). For simplicity we will refer to the observation set as the battery. The battery usually corresponds to the entity that is ordered or performed as a unit. (In the case of a query, observation sets may be a more arbitrary collection of observations.) The OBX segment provides information about a single observation, and it includes a field that identifies that single observation (e.g., potassium, diastolic blood pressure or admission diagnosis). Both of these fields assume master tables that define coding systems (the universe of valid identifying codes) for batteries and observations, respectively. These tables will usually be part of the producing and sending services application and (usually) include many other useful pieces of information about the observation or battery. Segments for transmitting such master file information between systems that produce and systems that use clinical information are described in Chapter 8.</p>
+  </div>
+  <div class="paragraph">
+  <p>This Standard does not require the use of a particular coding system to identify either batteries or single observations In the past, local institutions tended to invent their own unique code systems for identifying test and other clinical observations because standard codes were not available. Such local code systems sufficed for transmitting information within the institutions but presented high barriers to pooling data from many sources for research or for building medical record systems. However, standard code systems such as LOINC® for observation IDs (OBX-3) and SNOMED for coding categorical observations now exist for many of these purposes, and we strongly encourage their use in observation reporting. These codes can be sent either as the only code or they can be sent along with the local historic code as the second code system in a CWE or CNE coded field.</p>
+  </div>
+  <div class="paragraph">
+  <p>LOINC® codes exist for most laboratory tests and many common clinical variables and codes for reporting observations from the laboratory, 12-lead EKG, cardiac echoes, obstetrical ultrasounds, radiology reports, history and physical findings, tumor registries, vital signs, intake and outputs, UCUM units of measure references and/or answer lists depending on the data type, and descriptions for most variables. Translations of LOINC® descriptions are provided for more than 14 languages. The most recent version of the LOINC® database, which includes records for more than 70,000 observations and includes codes, names, synonyms and other attributes (such as the molecular weights of chemical moieties) for each observation, the LOINC database and a downloadable browser and mapping tool are available at no cost from the Regenstrief Institute at <em><a href="http://loinc.org/" class="bare">http://loinc.org/</a></em>. A web browser for LOINC is available at <a href="https://search.loinc.org" class="bare">https://search.loinc.org</a>. Codes for Neurophysiologic variables (EEG, EMG, Evoked potentials) are provided in Appendix X2 of ASTM E1467. Some parts of this document (the discussion and tables defining units, the discussion of the rules of mapping observations to OBX segments, and some of the examples at the end of the chapter) have been copied (with permission) from ASTM E1238.</p>
+  </div>
+  <div class="paragraph">
+  <p>As is true throughout this Standard, the emphasis should be on the abstract messages, defined without regard to the encoding rules. The example messages, however, are based upon the HL7 encoding rules.</p>
+  </div>
+  <div class="sect2">
+  <h3 id="_suffixes_for_defining_observation_ids_for_common_components_of_narrative_reports">Suffixes for Defining Observation IDs for Common Components of Narrative Reports</h3>
+  <div class="paragraph">
+  <p><strong>Retained for backwards compatability only as of V2.7 and withdrawn as of v2.9, in favor of using LOINC codes that pre-coordinate the appropriate identifiers with the suffices. See Chapter 2.8.4.c.</strong></p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_figure_4_8_associations_between_order_control_codes_and_trigger_events">Figure 4-8 Associations between Order Control Codes and Trigger Events</h3>
+  <div class="paragraph">
+  <p>Figure 4-8 defines the explicit relationships that exist between Order Control Codes and Trigger Events. A value of "Y" at the intersection of an Order Control Code and a Trigger Event indicates that is a valid combination that can be used in a message. A value of "N" indicates that combination is not valid in any message. No value at an intersection indicates that no business case has been brought forward for to justify or exclude that combination. Implementers are encouraged to bring business cases forward for currently undefined combinations of Order Control Codes and Trigger Events.</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <caption class="title">Table 1. Figure 4-8 Order Control Codes / Trigger Event Matrix</caption>
+  <colgroup>
+  <col style="width: 28%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top"></th>
+  <th class="tableblock halign-left valign-top">O01</th>
+  <th class="tableblock halign-left valign-top">O02</th>
+  <th class="tableblock halign-left valign-top">O03</th>
+  <th class="tableblock halign-left valign-top">O04</th>
+  <th class="tableblock halign-left valign-top">O05</th>
+  <th class="tableblock halign-left valign-top">O06</th>
+  <th class="tableblock halign-left valign-top">O07</th>
+  <th class="tableblock halign-left valign-top">O08</th>
+  <th class="tableblock halign-left valign-top">O09</th>
+  <th class="tableblock halign-left valign-top">O10</th>
+  <th class="tableblock halign-left valign-top">O11</th>
+  <th class="tableblock halign-left valign-top">O12</th>
+  <th class="tableblock halign-left valign-top">O13</th>
+  <th class="tableblock halign-left valign-top">O14</th>
+  <th class="tableblock halign-left valign-top">O15</th>
+  <th class="tableblock halign-left valign-top">O16</th>
+  <th class="tableblock halign-left valign-top">O18</th>
+  <th class="tableblock halign-left valign-top">O19</th>
+  <th class="tableblock halign-left valign-top">O20</th>
+  <th class="tableblock halign-left valign-top">O21</th>
+  <th class="tableblock halign-left valign-top">P03</th>
+  <th class="tableblock halign-left valign-top">P11</th>
+  <th class="tableblock halign-left valign-top">Q06</th>
+  <th class="tableblock halign-left valign-top">R01</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">AF</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CA</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CH</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CN</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DF</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">FU</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">HD</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">HR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">LI</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MC</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NW</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OD</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OF</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OH</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OK</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">PA</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">PR</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">PY</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RF</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RL</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RO</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RP</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RQ</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RU</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">SC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">SN</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">SR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">SS</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UA</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UC</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UD</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UF</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UH</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UM</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UN</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">UX</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XO</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XR</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XX</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>Editor’s note: The order control codes need to be assessed for their application to these trigger events O22 through O48. The current table structure will not accommodate these additional columns; a new table structure needs to be considered.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_implementation_considerations">Implementation Considerations</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_snapshot_mode">Snapshot Mode</h3>
+  <div class="paragraph">
+  <p>Chapter 2, Section 2.10.4 defines the meaning of snapshot mode updates and indicates that each chapter or related implementation guides may further refine this definition. The following guidance applies to results messages:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>In some instances there are tests that have a precise relationship between the parent and child to assist the clinician in understanding to which OBX in the parent OBR the child is connected. In those instances the ORDER_OBSERVATION segment groups of the parent and other children should be included in the snapshot rather than sending the child&#8217;s ORDER_OBSERVATION segment group (including the OBR/OBX set) by itself. Example: OBRs of the parent OBR (example would be microbiology with culture and Sensitivity Panels (Sensi-Panels)), unless advised otherwise by trading partners, would be included in the snapshot reporting. </p>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_narrative_reports_as_batteries_with_many_obx">Narrative Reports as Batteries with Many OBX</h3>
+  <div class="paragraph">
+  <p>Narrative reports from services such as Radiology usually consist of a number of subcomponents (e.g., a chest X-ray report may consist of a description, an impression, and a recommendation). Other studies, such as echocardiograms, contain analogous components, as well as numeric observations (e.g., left ventricular and diastolic diameter). Surgical pathology reports may contain information about multiple specimens and reports: the anatomic source, the gross description, the microscopic description, and a diagnostic impression for each specimen.</p>
+  </div>
+  <div class="paragraph">
+  <p>The current Standard treats each component of a narrative report as a separate "test" or observation. Just as a CHEM12 is transmitted as an order segment (OBR) plus 12 OBX segments, a chest X-ray would be transmitted as an order (OBR) segment plus three OBX segments, one for the description, one for the impression, and one for the recommendations. Similarly, an EKG report would be transmitted as an order segment (OBR), two OBX segments for the impression and recommendation, and additional OBX segments for each EKG measurement, e.g., the PR interval, QR interval, QRS axis, and so on.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/O19.html">Message - O19 General Clinical Order</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O51.html">Message - O51 Order Status Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O57.html">Message - O57 General Clinical Order with Supporting Document</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R01.html">Message - R01 Unsolicited Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R30.html">Message - R30 Unsolicited Point-Of-Care Observation without Existing Order - R30 Place an Order</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R31.html">Message - R31 Unsolicited New Point-Of-Care Observation - R31 Search for an Order</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R32.html">Message - R32 Unsolicited Pre-Ordered Point-Of-Care Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R40.html">Message - R40 Unsolicited Alert Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R42.html">Message - R42 Unsolicited Device Event Observation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/R43.html">Message - R43 Unsolicited Patient-Device Association Observation</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_example_transactions">Example Transactions</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_general_message_examples">General Message Examples</h3>
+  <div class="paragraph">
+  <p>The purpose of this section is to show how certain specific situations would be handled using the order entry protocol. The ellipses represent uncompleted details. The symbol // precedes comments for clarification.</p>
+  </div>
+  <div class="sect3">
+  <h4 id="_an_order_replaced_by_three_orders">An order replaced by three orders</h4>
+  <div class="paragraph">
+  <p>Suppose that an application called "PC" is sending an order to the EKG application for three EKGs to be done on successive days.</p>
+  </div>
+  <div class="paragraph">
+  <p>The order might be placed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>ORM message:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PID|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|NW|A226677<sup>PC||946281</sup>PC||N|3<sup>QAM||200601121132|444-44-4444</sup>HIPPOCRATES<sup>HAROLD</sup><sup>^</sup>MD|||4EAST|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|||8601-7^EKG IMPRESSION<sup>LN||||||||||||222-33-4444</sup>PUMP<sup>PATRICK</sup><sup>^</sup>MD|||||||||||3^QAM|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>BLG|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|NW|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>There is a group number first component indicating that an order group is being created.</p>
+  </div>
+  <div class="paragraph">
+  <p>Responses: Because the EKG application must turn the single order above into three orders for three separate EKGs (services), the results of each will be reported under its own OBR segment. Several response levels are possible depending on the Response Flag:</p>
+  </div>
+  <div class="paragraph">
+  <p>a) If the Response Flag is N (as it is), then the filler EKG application only responds "I got the order."</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>MSA|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>The only implication of this response is that the order was received.</p>
+  </div>
+  <div class="paragraph">
+  <p>If the Response Flag had been E, then the response would have been the same, but its implication would have been that the EKG application had processed all the orders and they were acceptable.</p>
+  </div>
+  <div class="paragraph">
+  <p>b) If the Response Flag were R, then the filler EKG application must communicate to the PC the fact of the creation of child orders, but with no details:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>MSA|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|PA|A226677<sup>PC|89‑458</sup>EKG|946281^PC&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89‑551</sup>EKG|946281&#8230;&#8203;&lt;cr&gt; // 1ST child ORC.</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89‑552</sup>EKG|946281&#8230;&#8203;&lt;cr&gt; // 2ND child ORC.</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89‑553</sup>EKG|946281&#8230;&#8203;&lt;cr&gt; // 3RD child ORC.</p>
+  </div>
+  <div class="olist lowerroman">
+  <ol class="lowerroman" type="i">
+  <li>
+  <p>// Other parts of follow.</p>
+  </li>
+  </ol>
+  </div>
+  <div class="paragraph">
+  <p>What has been said here is "Your A226767 has spun out three children named 89‑551, 89‑552, and 89‑553." Notice that the placer order numbers are identical in the children&#8217;s ORCs.</p>
+  </div>
+  <div class="paragraph">
+  <p>c) If the Response Flag were D, then the filler EKG application must communicate to the PC application the fact of the replacement and also the exact replacement order segments:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>MSA|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|PA|A226677<sup>PC|89‑458</sup>EKG&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89‑551</sup>EKG|946281<sup>PC|SC|||A226677&amp;PC</sup>89-458&amp;EKG|</p>
+  </div>
+  <div class="olist lowerroman">
+  <ol class="lowerroman" type="i">
+  <li>
+  <p><sup>^</sup><sup>198901130500</sup>&#8230;&#8203;&lt;cr&gt;</p>
+  </li>
+  </ol>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1||89‑551<sup>EKG|8601-7</sup>EKG IMPRESSION^LN|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89-522</sup>EKG|946281<sup>PC|SC|||A226677&amp;PC</sup>89-458&amp;EKG|</p>
+  </div>
+  <div class="olist lowerroman">
+  <ol class="lowerroman" type="i">
+  <li>
+  <p><sup>^</sup><sup>198901140500</sup>&#8230;&#8203;&lt;cr&gt;</p>
+  </li>
+  </ol>
+  </div>
+  <div class="paragraph">
+  <p>OBR|2||89‑552<sup>EKG|8601-7</sup>EKG IMPRESSION^LN|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|CH|A226677<sup>PC|89‑553</sup>EKG|946281<sup>PC|SC|||A226677&amp;PC</sup>89-458&amp;EKG|</p>
+  </div>
+  <div class="paragraph">
+  <p>&#8230;&#8203;<sup>^</sup><sup>198901150500</sup>&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|3||89‑553<sup>EKG|8601-7</sup>EKG IMPRESSION^LN|&#8230;&#8203; &lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Here the actual OBR segments have been added.</p>
+  </div>
+  <div class="paragraph">
+  <p>The status of the child orders is being reported as SC (scheduled).</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC-7-quantity/timing shows that the EKGs are requested after 0500 on successive days.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_ordering_non_medical_services">Ordering non-medical services</h4>
+  <div class="paragraph">
+  <p>The patient requests hospital specific services for a certain period of time. This can be a phone, fax, or TV in the room, or the delivery of a newspaper every day. Another example may be the use of specialized chip cards that give access to hospital specific services. Typically, a request for these services is made at the time of admission. Another example may be the printing of a form (e.g., the receipt for a payment). In case of using phones it might be a detailed list of calls for a patient or for a special extension.</p>
+  </div>
+  <div class="paragraph">
+  <p>To support these scenarios, the following fields are used to communicate the appropriate message:</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 31%;">
+  <col style="width: 69%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Segment/Field</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-1</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Order Control</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-2</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Placer Order Number</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-5</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Order Status</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">TQ1-7</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Start Date/Time</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">TQ1-8</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">End Date/Time</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-16</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Order Control Code Reason</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-25</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Order Status Modifier</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OBR-4</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Universal Service ID</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OBX-5</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Observation Value</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">FT1-17</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Fee Schedule</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">FT1-11</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Transaction amount – extended</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">BLG</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Billing segment</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>ORC-1, ORC-2, OBR-4, OBX-5<br>
+  These services can be started, discontinued, canceled, locked, etc., according to the ORC-1 Order control code. The order is identified through ORC-2 Placer order number. The service itself is specified in the field OBR-4 Universal service ID. User defined codes are used to identify the specific services. The identification of the object of the service, e.g., phone number or card number, is done using the OBX-5 Observation value. The ORC-25 Order Status Modifier is used to refine the status of the universal service ID. For example, in the case of issuing chip cards, these fields would be valued as follows:</p>
+  </li>
+  </ul>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 9%;">
+  <col style="width: 23%;">
+  <col style="width: 19%;">
+  <col style="width: 49%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-1</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">OBR-4 (in textual form)</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ORC-16.1 Code</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NW</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">chip card</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Issue a chip card the first time</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XO</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">chip card</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">defective</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Change the previous order. Issue a new chip card for a defective one.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XO</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">chip card</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">lost</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Change the previous order. Issue a new chip card for a defective one.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Return chip card</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Cancel the chip card order</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Return chip card</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">lost</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Cancel the chip card order because lost.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DC</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Return chip card</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">defective</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Cancel the chip card order because defective.</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>Use of different universal service IDs allows for the ability to charge an additional fee.</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>TQ1-7/8<br>
+  The field TQ1 Quantity/timing describes time periods during which the requested service is valid. The components 4 and 5 denote the start and end date/time.</p>
+  </li>
+  <li>
+  <p>ORC-5<br>
+  In this field information on the status of the service can be transmitted. This field can be used in particular in response to a query message.</p>
+  </li>
+  <li>
+  <p>ORC-25<br>
+  This field allows for refining the status of the requested universal service, e.g., to change an order for a chip card in order to distribute a new card for a lost one.</p>
+  </li>
+  <li>
+  <p>BLG-1,2,3<br>
+  These fields indicate to the financial system that charges are to be invoiced for this service.</p>
+  </li>
+  <li>
+  <p>FT1-17<br>
+  In some cases it is necessary that the placer defines a special tariff the filler has to use for computing the final balance.</p>
+  </li>
+  <li>
+  <p>FT1-11<br>
+  In combination with the tariff the patient can prepay the ordered service. This may be helpful when the patient uses services provided by the hospital in order to use the service from the beginning. FT1-6 must be valued at "PY".<br>
+  If no amount is prepaid a limit can be established according to a special tariff. This depends on the setup of the filling system. In such a case the hospital grants a credit to the patient.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p><strong>Phone Number Assignment</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>In case the patient requests a bedside phone and the number of this phone is assigned to that patient personally, a number of messages are transmitted. The objective is to connect a phone number to a patient and a room.</p>
+  </div>
+  <div class="paragraph">
+  <p>The update of the location master file depends on the setup of the private branch exchange system (PABX):</p>
+  </div>
+  <div class="paragraph">
+  <p>b) <strong>Variable Numbering System<br>
+  </strong>On admission the patient is assigned his or her personal call number, which he or she retains throughout that patient&#8217;s stay, including if the patient is transferred. The patient can always be reached under the same call number.<br>
+  To understand the mechanism for M05 events it is important to know that two different sets of phone numbers exist: one is a pool to be used when querying for a phone number for a patient; the other one is used for temporary assign­ments when no patient is lying in the bed (i.e., the bed is free).</p>
+  </div>
+  <div class="paragraph">
+  <p>c) <strong>Fixed Numbering System<br>
+  </strong>On admission the system issues the patient with a telephone and/or TV authorization. This authorization key must be entered into the phone to activate it.<br>
+  No M05 messages are necessary if a fixed numbering system is used: Each telephone connection is assigned a permanent call number when the system is set up.</p>
+  </div>
+  <div class="paragraph">
+  <p>When the patient is admitted, an ADT^A01 message is sent to create a patient record in the phone number assigning application. Typically, the patient ID (PID-3), patient location (PV1-3), and visit number (PV1-19) are at least required. This message is acknowledged accordingly with an ACK. Then, the order for the phone number to the phone number assigning application is placed with the ORM^O01 message where the essential fields are ORC-1 = "NW", ORC-2 = &lt;placer order number&gt;, and OBR-4 = "Phone".</p>
+  </div>
+  <div class="paragraph">
+  <p>The ORR^O02 message is used to acknowledge the order and communicate the filler order number and order status. Then, when the phone number is available, an ORU^R01 message is used to communicate the phone number using OBX-5 for the phone number.</p>
+  </div>
+  <div class="paragraph">
+  <p>Any status changes to the order are communicated with the ORM^O01 message where ORC-1 = "SC", ORC-2 = &lt;placer order number&gt;, ORC-3 = &lt;filler order number&gt;, ORC-5 = &lt;order status&gt;, OBR-4 = "Phone", and OBX-5 = &lt;Phone Number of Patient&gt;. The status change is acknowledged with the ORR^O02 message.</p>
+  </div>
+  <div class="paragraph">
+  <p>Next, the location master files are updated. The phone number assigning application may send a MFN^M05 message to have the location master file reflect the phone number assignment as well. The fields on the message are valued as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>After processing the order: MFI-1 = "LOC", MFI-3 = "UPD", MFI-5 = &lt;effective date/time&gt;, MFE-1 = "MUP", LOC-1 = &lt;patient location&gt;, LOC-3 = "B" (bed), LOC-6 = &lt;Phone Number of Patient&gt;. This message is acknowledged using the MFK^M05 message.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Transfer a patient (A02)</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>If a patient keeps the same phone number during the whole visit the assigned phone number must be mapped to a different phone outlet whenever a patient is transferred to a new location. In that case, the ADT^A02 message is sent to the phone number assigning application. That application not only acknowledges the message, but also sends an ORM^O01 message with ORC-1 = "SC" and the other fields the same as described in the Phone Number Assignment section. Additionally, it sends a MFN^M05 message to change the location master file accordingly for the old location and another MFN^M05 to synchronize the phones for the new location.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Leave of absence (A21/A22)</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>When the patient leaves the hospital or the bed is vacated for a significant amount of time, the phone needs to be de-activated and re-activated appropriately. The same ORM^O01 and MFN^M05 messages are used as described above following the ADT^A21 and ADT^22 messages.</p>
+  </div>
+  <div class="paragraph">
+  <p>Patient makes calls or (de-)activates his phone.</p>
+  </div>
+  <div class="paragraph">
+  <p>The patient can use the phone whenever he wants to. This implies that his balance does not exceed the limit. Otherwise the phone is deactivated automatically. Furthermore the patient can activate or deactivate the phone by entering the authorization key for his own. In these scenarios the phone number assigning application sends and ORM^O01 message with ORC-1 = "OD" and the appropriate order status. The status update is necessary to provide a call switching system with the actual information.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Discharge a patient (A03)</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>When the patient is discharged, the ADT^A03 message is sent to indicate a discharge. The phone number assigning application sends an ORM^O01 message with a change of status to indicate completion of the order, as well as an MFN^M05 message to synchronize the location master file.</p>
+  </div>
+  <div class="paragraph">
+  <p>After discharging a patient his final charges must be billed. Using the query P04 returns the data in a display oriented format which can be used for printing. Alternatively a print request can be used. The billing system issues a QRY^P04 message where the fields are valued as follows: QRD-2 = "R" (record oriented format), QRD-3 = "I" (immediate response), QRD-8.1 = &lt;Patient ID&gt;, QRF-2 = &lt;start date/time&gt;, and QRF-3 = &lt;end date/time&gt;. The phone number assigning applications responds with a DSR^P04 message with the data in DSP-3.</p>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  The original mode query, including QRD and QRF segments were retained for backward compatibility only as of v 2.4. The reader is therefore referred to chapter 5, section 5.4, for the current query/response message structure.
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div class="paragraph">
+  <p><strong>Phone Call Queries (Z73)</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>The new query modes using a query by parameter query with a virtual table response allows for obtaining call information from the phone system to be used for charging. The query can be for accumulated data or detailed data. Both requests use this conformance statement:</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 39%;">
+  <col style="width: 61%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Query ID:</th>
+  <th class="tableblock halign-left valign-top">Z73</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Name:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Information about Phone Calls</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Type:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Trigger:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">QBP<sup>Z73</sup>QBP_Z73</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Mode:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Both</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Response Trigger:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RTB<sup>Z74</sup>RTB_Z74</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Priority:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Immediate</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Characteristics:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Returns response sorted by <em>Phone Number</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose:</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Retrieve all information about phone calls made during a defined interval either in a detailed or an accumulative format. The identifier for the patient must be given.</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>QBP<sup>Z73</sup>QBP_Z73: QBP Message</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 33%;">
+  <col style="width: 47%;">
+  <col style="width: 9%;">
+  <col style="width: 11%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Segments</th>
+  <th class="tableblock halign-left valign-top">Description</th>
+  <th class="tableblock halign-left valign-top">Status</th>
+  <th class="tableblock halign-left valign-top">Chapter</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Message Header Segment</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.9</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[\{ SFT }]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Software</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.12</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[ UAC ]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">User Authentication Credential</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">QPD</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter Definition</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.4</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RCP</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Response Control Parameter</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.6</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 26%;">
+  <col style="width: 35%;">
+  <col style="width: 15%;">
+  <col style="width: 24%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Acknowledgement Choreography</th>
+  <th class="tableblock halign-left valign-top"></th>
+  <th class="tableblock halign-left valign-top"></th>
+  <th class="tableblock halign-left valign-top"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">QBP<sup>Z73</sup>QBP_Z73</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field name</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field Value: Original mode</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field Value: Enhanced Mode</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH-15</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Blank</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">AL, ER, SU</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH-16</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Blank</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Immediate Ack</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ACK<sup>Z73</sup>ACK</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Application Ack</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RTB<sup>Z74</sup>RTB_Z74</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RTB<sup>Z74</sup>RTB_Z74</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>QPD Input Parameter Specification:</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 11%;">
+  <col style="width: 14%;">
+  <col style="width: 8%;">
+  <col style="width: 3%;">
+  <col style="width: 6%;">
+  <col style="width: 8%;">
+  <col style="width: 3%;">
+  <col style="width: 3%;">
+  <col style="width: 8%;">
+  <col style="width: 8%;">
+  <col style="width: 9%;">
+  <col style="width: 8%;">
+  <col style="width: 11%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Field Seq. (Query ID=Z73)</th>
+  <th class="tableblock halign-left valign-top">Name</th>
+  <th class="tableblock halign-left valign-top">Key/ Search</th>
+  <th class="tableblock halign-left valign-top">Sort</th>
+  <th class="tableblock halign-left valign-top">LEN</th>
+  <th class="tableblock halign-left valign-top">TYPE</th>
+  <th class="tableblock halign-left valign-top">Opt</th>
+  <th class="tableblock halign-left valign-top">Rep</th>
+  <th class="tableblock halign-left valign-top">Match Op</th>
+  <th class="tableblock halign-left valign-top">TBL</th>
+  <th class="tableblock halign-left valign-top">Segment Field Name</th>
+  <th class="tableblock halign-left valign-top">Service Identifier Code</th>
+  <th class="tableblock halign-left valign-top">ElementName</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Patient ID</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">K</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CX</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">=</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">PID.3</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">PID.3 Patient ID</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Date Range</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DR</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">contains=</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Detailed</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ID</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">=</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">0136</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>Input Parameter Field Description and Commentary:</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 19%;">
+  <col style="width: 11%;">
+  <col style="width: 6%;">
+  <col style="width: 64%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Field</th>
+  <th class="tableblock halign-left valign-top">Component</th>
+  <th class="tableblock halign-left valign-top">DT</th>
+  <th class="tableblock halign-left valign-top">Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Patient ID</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">CX</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Components: &lt;ID (ST)&gt; ^ &lt;check digit (ST)&gt; ^ &lt;code identifying the check digit scheme employed (ID)&gt; ^ &lt;assigning authority (HD)&gt; ^ &lt;identifier type code (IS)&gt; ^ &lt;assigning facility (HD)&gt;</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">This field contains a patient identification code to identify the requested person.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">If this field is not valued, no values for this field are considered to be a match.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Date Range</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DR</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">This field specifies the range of time, the requested records should match.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">If this field is not valued, all values for this field are considered to be a match.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Detailed</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ID</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">This field specifies whether the output should be detailed. (no cumulative records).</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">If this field is not valued, a detailed result is returned.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">When Detailed=Y is requested, one record for each call is returned. Each detailed record will contain columns 1, 2, 3, 4, 5, 7, 8, and 9 (Providor, Region, Extension, Destination, Date/Time, Duration, Units, Amount) for each call.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">When detailed=N, the query is for accumulated data. In this case, one row record per extension is returned.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Each row will return columns 1, 2, 6, 7, 8, and 9 (Provider, Region, Quantity, Units, Amount) from the output virtual table.</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>Response Grammar:</p>
+  </div>
+  <div class="paragraph">
+  <p>RTB<sup>Z74</sup>RTB_Z74: Personnel Information Message</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 33%;">
+  <col style="width: 47%;">
+  <col style="width: 9%;">
+  <col style="width: 11%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Segments</th>
+  <th class="tableblock halign-left valign-top">Description</th>
+  <th class="tableblock halign-left valign-top">Status</th>
+  <th class="tableblock halign-left valign-top">Chapter</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Message Header</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.9</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSA</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Message Acknowledgement</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.8</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[\{ ERR }]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.5</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[\{ SFT }]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Software</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.12</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[ UAC ]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">User Authentication Credential</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">QAK</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Acknowledgement</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.2</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">QPD</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter Definition</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.4</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">--- ROW_DEFINITION begin</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RDF</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Table Row Definition Segment</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.7</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[\{ RDT }]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Table Row Data Segment</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">5.5.8</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">--- ROW_DEFINITION end</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">[ DSC ]</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Continuation Pointer</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">2.15.4</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 28%;">
+  <col style="width: 36%;">
+  <col style="width: 16%;">
+  <col style="width: 20%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Acknowledgement Choreography</th>
+  <th class="tableblock halign-left valign-top"></th>
+  <th class="tableblock halign-left valign-top"></th>
+  <th class="tableblock halign-left valign-top"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">RTB<sup>Z74</sup>RTB_Z74</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field name</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field Value: Original mode</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Field Value: Enhanced Mode</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH-15</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Blank</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">AL, ER, SU</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MSH-16</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Blank</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Immediate Ack</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ACK<sup>Z73</sup>ACK</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ACK<sup>Z73</sup>ACK</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Application Ack</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>Virtual Table:</p>
+  </div>
+  <table class="tableblock frame-all grid-all" style="width: 99%;">
+  <colgroup>
+  <col style="width: 19%;">
+  <col style="width: 9%;">
+  <col style="width: 3%;">
+  <col style="width: 6%;">
+  <col style="width: 8%;">
+  <col style="width: 3%;">
+  <col style="width: 6%;">
+  <col style="width: 8%;">
+  <col style="width: 8%;">
+  <col style="width: 10%;">
+  <col style="width: 11%;">
+  <col style="width: 9%;">
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">ColName (Z74)</th>
+  <th class="tableblock halign-left valign-top">Key/
+  
+  Search</th>
+  <th class="tableblock halign-left valign-top">Sort</th>
+  <th class="tableblock halign-left valign-top">LEN</th>
+  <th class="tableblock halign-left valign-top">TYPE</th>
+  <th class="tableblock halign-left valign-top">Opt</th>
+  <th class="tableblock halign-left valign-top">Rep</th>
+  <th class="tableblock halign-left valign-top">Match Op</th>
+  <th class="tableblock halign-left valign-top">TBL</th>
+  <th class="tableblock halign-left valign-top">Segment Field Name</th>
+  <th class="tableblock halign-left valign-top">LOINC or HL7 code</th>
+  <th class="tableblock halign-left valign-top">ElementName</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Provider</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ST</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Region</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">ST</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Extension</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XTN</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Destina­tion number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">XTN</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Date/Time</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">DTM</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Quantity</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NM</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NM</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Units</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">NM</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Amount</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MO</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="sect4">
+  <h5 id="_examples">Examples</h5>
+  <div class="exampleblock">
+  <div class="content">
+  <strong>Example 1:</strong>
+  </div>
+  </div>
+  <div class="paragraph">
+  <p>Query the accumulated list for patient 12345 from 3/2/00 till 3/3/00. Transfer the first 20 records.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Query:</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^&amp;~\|PCR|Gen Hosp|Pharm||20000303201400-0800||QBP<sup>Z73</sup>QBP_Z73|9901|P|2.8|</p>
+  </div>
+  <div class="paragraph">
+  <p>QPD|Z89^Query Phone Calls<sup>HL70471|Q010|12345|2000030100000</sup>20000302235959|Y</p>
+  </div>
+  <div class="paragraph">
+  <p>RCP|I|20^RD|</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Answer:</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^&amp;~\|Pharm|Gen Hosp|PCR||20000303201430-0800||RTB<sup>Z74</sup>RTB_Z74|8858|P|2.8|</p>
+  </div>
+  <div class="paragraph">
+  <p>MSA|AA|9901|</p>
+  </div>
+  <div class="paragraph">
+  <p>QAK|Q010|OK|Z89^Query Phone Calls^HL70471|4</p>
+  </div>
+  <div class="paragraph">
+  <p>QPD|Z89^Query Phone Calls<sup>HL70471|Q010|12345|2000030100000</sup>20000302235959|Y|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDF|9|Provider<sup>ST</sup>20|Region<sup>ST</sup>40|Extension<sup>XTN</sup>40|Destination<sup>XTN</sup>40|Date/Time<sup>DTM</sup>24|Quantity<sup>NM</sup>4|Duration<sup>NM</sup>4|Units<sup>NM</sup>4|Amount<sup>MO</sup>8|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|CITY||||5|20|3|3.25|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|R50||||1|10|2|1.00|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|R200||||0|0|0|0|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|NAT||||0|0|0|0|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|INT||||0|0|0|0|</p>
+  </div>
+  <div class="exampleblock">
+  <div class="content">
+  <strong>Example 2:</strong>
+  </div>
+  </div>
+  <div class="paragraph">
+  <p>Query the detailed information for patient 12345 from 3/1/06 till 3/3/06. Transfer the first 10 records.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Query:</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^&amp;~\|PCR|Gen Hosp|Pharm||200611201400-0800||QBP<sup>Z73</sup>QBP_Z73|ACK9901|P|2.8|</p>
+  </div>
+  <div class="paragraph">
+  <p>QPD|Z89^Query Phone Calls<sup>HL70471|Q010|12345|2006030100000</sup>20060302235959|Y|</p>
+  </div>
+  <div class="paragraph">
+  <p>RCP|I|10^RD|</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Answer:</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^&amp;~\|Pharm|Gen Hosp|PCR||200611201401-0800||RTB<sup>Z74</sup>RTB_Z74|8858|P|2.8|</p>
+  </div>
+  <div class="paragraph">
+  <p>MSA|AA|8858 QAK|Q010|OK|Z89^Query Phone Calls^HL70471|4</p>
+  </div>
+  <div class="paragraph">
+  <p>QPD|Z89^Query Phone Calls<sup>HL70471|Q010|12345|2006030100000</sup>20060302235959|Y|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDF|9|Provider<sup>ST</sup>20|Region<sup>ST</sup>40|Extension<sup>XTN</sup>40|Destination<sup>XTN</sup>40|Date/Time<sup>DTM</sup>24|Quantity<sup>NM</sup>4|Duration<sup>NM</sup>4|Units<sup>NM</sup>4|Amount<sup>MO</sup>8|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|CITY|12345|555-1234|200603021715||20|12|2.25|</p>
+  </div>
+  <div class="paragraph">
+  <p>RDT|DTAG|CITY|12345|555-4569|200603011252||21|3|0.48|</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Requesting a Chip card</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>In case the hospital provides additional services that can be accessed through chip cards, this card has to be issued to the patient. At the end of the visit this chip card is returned. Distributing a chip card to a patient is a service which must be ordered from the chip card dispensing system, too. When discharging the patient the service (= order) is complete.</p>
+  </div>
+  <div class="paragraph">
+  <p>The messages are essentially the same as for issuing a phone number. The filler for the chip card order is a chip card dispensing application and instead of returning a phone number, it returns a chip card number. The following scenarios have slight variations.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>New Chip Card requested due to, e.g., loss</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>When a card is lost, or a new chip card must be requested, an additional fee can be communicated by including the FT1 segment in the ORM^O01 message and valuing FT1-11 = &lt;additional fee&gt;.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Request a new Chip card for a defective one</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>Sometimes a chip card is defective. Then the patient needs a new one. This situation requires an order using the XO control code in the ORM^O01 message. The chip card dispensing system returns the new chip card number using the ORU^RO1. The ORC-16-Order Control Code Reason is used to clarify the request.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Return a chip card</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>When the patient returns the chip card, a discontinue message is send with ORC-1 = "DC". This message is acknowledged accordingly by the chip card dispensing system.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Printing a form</strong></p>
+  </div>
+  <div class="paragraph">
+  <p>When form needs printing, the ORM^O01 could also be used. The OBR segment would contain the print form service and the OBX would contain the specific print form. A notification when completing the printing is feasible as well using the ORM^O01 with a status update associated to the appropriate placer/filler order number.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_queryresponse">Query/response</h3>
+  <div class="paragraph">
+  <p><strong>Attention: _Retained for backwards compatibility only as of v 2.4 and withdrawn as of v 2.7. _</strong></p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_unsolicited">Unsolicited</h3>
+  <div class="paragraph">
+  <p>The following is an unsolicited transmission of radiology data.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|XRAY||CDB||200006021411||ORU</sup>R01^ORU_R01|K172|P|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PID|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|X89‑1501<sup>OE|78912</sup>RD|71020^CHEST XRAY AP \T\ LATERAL|||198703290800||||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|19005-8^X-ray impression<sup>LN|4|</sup>MASS LEFT LOWER LOBE|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|CWE|19005-8^X-ray impression<sup>LN|2|</sup>INFILTRATE RIGHT LOWER LOBE|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|CWE|19005-8^X-ray impression<sup>LN|3|</sup>HEART SIZE NORMAL|||N|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|FT|36687-2^Chest XR AP+Lat ^LN|1|circular density (2 x 2 cm) is seen in the posterior segment of</p>
+  </div>
+  <div class="paragraph">
+  <p>the LLL. A second, less well‑defined infiltrated circulation density is</p>
+  </div>
+  <div class="paragraph">
+  <p>seen in the R mid lung field and appears to cross the minor fissure#||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|5|CWE|71020&amp;REC|5|71020^Follow up CXR 1 month||30‑45||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_laboratory">Laboratory</h3>
+  <div class="paragraph">
+  <p>Laboratory message: electrolytes, CBC, sed rate, blood cultures and susceptibilities</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PID|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Electrolytes:</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|870930010<sup>OE|CM3562</sup>LAB|2432-6^ELECTROLYTES HCFA 98 PANEL^LN| ||198703290800|||</p>
+  </div>
+  <div class="paragraph">
+  <p>401-0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L| ||||SER|<sup>HIPPOCRATES</sup>HAROLD<sup>H</sup>^DR|(555)555‑1003|</p>
+  </div>
+  <div class="paragraph">
+  <p>This is requestor field #1.|Requestor field #2|Diag.serv.field #1.|</p>
+  </div>
+  <div class="paragraph">
+  <p>Diag.serv.field #2.|198703311400|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|NM|2951-2<sup>SODIUM</sup>LN||150|mmol/L|136‑148|H||A|F|19850301|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|NM|2823-3<sup>POTASSIUM</sup>LN||4.5|mmol/L|3.5‑5|N||N|F|19850301|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|NM|2075-0<sup>CHLORIDE</sup>LN||102|mmol/L|94‑105|N||N|F|19850301|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|NM|2028-9^CARBON DIOXIDE^LN||27|mmol/L|24‑31|N||N|F|19850301|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>CBC:</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|2|870930011<sup>OE|HEM3268</sup>LAB|24359-2^HEMOGRAM+DIFFERENTIAL PANEL^LN| ||198703290800|||401-0 ^</p>
+  </div>
+  <div class="paragraph">
+  <p>INTERN<sup>IRVING</sup>I<sup>^</sup>MD<sup>L|||||BLDV|</sup>HIPPOCRATES<sup>HAROLD</sup>H^^DR|(555)555‑1003|This is requestor field #1.|This is Requestor field #2.|This is lab field #1.|Lab field #2.|198703311400|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|NM|718-7<sup>HEMOGLOBIN</sup>LN||13.4|GM/DL|14-18|N||S|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|NM|4544-3<sup>HEMATOCRIT</sup>LN||40.3|%|42-52|L||S|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|NM|789-8<sup>ERYTHROCYTES</sup>LN||4.56|10*6/ml|4.7-6.1|L||S|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|NM|787-2^ERYTHROCYTE MEAN CORPUSCULAR VOLUME:^LN</p>
+  </div>
+  <div class="paragraph">
+  <p>||88|fl|80-94|N||S|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|5|NM|785-6^ERYTHROCYTE MEAN CORPUSCULAR HEMOGLOBIN:^LN</p>
+  </div>
+  <div class="paragraph">
+  <p>||29.5|pg|27-31|N||N|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|6|NM|786-4^ERYTHROCYTE MEAN CORPUSCULAR HEMOGLOBIN CONCENTRATION:^LN</p>
+  </div>
+  <div class="paragraph">
+  <p>||33|%|33-37|N||N|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|7|NM|6690-2<sup>LEUKOCYTES</sup>LN||10.7|10*3/ml|4.8-10.8|N||N|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|8|NM|770-8^NEUTROPHILS/100 LEUKOCYTES^LN||68|%|||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|9|NM|736-9^LYMPHOCYTES/100 LEUKOCYTES:^LN||29|%|||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|10|NM|5905-5^MONOCYTES/100 LEUKOCYTES:^LN||1|%|||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|11|NM|713-8^EOSINOPHILS/100 LEUKOCYTES:^LN||2|%|||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Sed rate:</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|3|870930011<sup>OE|HEM3269</sup>LAB|4537-7^ERYTHROCYTE SEDIMENTATION RATE^LN</p>
+  </div>
+  <div class="paragraph">
+  <p>|||198703290800|||</p>
+  </div>
+  <div class="paragraph">
+  <p>401-0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L|||||BLDV|<sup>HIPPOCRATES</sup>HAROLD<sup>H</sup>^DR|(555)555-1003|</p>
+  </div>
+  <div class="paragraph">
+  <p>This is requestor field #1.|This is Requestor field #2.|This is lab field</p>
+  </div>
+  <div class="paragraph">
+  <p>#1.|Lab field #2.|198703311400|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|NM|4537-7^ERYTHROCYTE SEDIMENTATION RATE:^LN|</p>
+  </div>
+  <div class="paragraph">
+  <p>|7|MM/HR|0-10|N||S|F|19860522|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Parent micro result, identifies organism</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|4|2740X<sup>OE|BC376</sup>MIC|87040^Blood culture| ||198703290800|||</p>
+  </div>
+  <div class="paragraph">
+  <p>99-2<sup>SPINNER</sup>SAM<sup>S||</sup>Hepatitis risk||198703290830|BLDV|</p>
+  </div>
+  <div class="paragraph">
+  <p>4010<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L|555-1022 X3472<sup>^</sup><sup>^</sup>^3472|Requestor field 1|Requestor field 2|</p>
+  </div>
+  <div class="paragraph">
+  <p>Producer&#8217;s field 1|Producer&#8217;s field 2|198703301000|35.00|MB|F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|600-7^MICROORGANISM IDENTIFIED<sup>LN|1|</sup>E Coli|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|CWE|600-7^MICROORGANISM IDENTIFIED<sup>LN|2|</sup>S Aureus|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Child micro result, gives antimicrobials susceptibilities for organism identified in first OBX of parent</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|5|2740X<sup>OE|BC402</sup>MIC|87186^Antibiotic MIC||</p>
+  </div>
+  <div class="paragraph">
+  <p>|198703290800||||G|^Hepatitis Risk||198703290830|BLDB</p>
+  </div>
+  <div class="paragraph">
+  <p>|401.0^INTERN^IRVING^I^^^MD\^L|555-1022 X3472<sup>\</sup><sup>\</sup><sup>\</sup>^3472|||||198703310900|40.00</p>
+  </div>
+  <div class="paragraph">
+  <p>|MB|F|600-7&amp;MICROORGANISM IDENTIFIED&amp;LN^1|||2740X&amp;OE^BC376&amp;MIC|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|ST|28-1<sup>AMIPICILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|ST|60-4<sup>CARBENICILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;16|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|ST|267-5<sup>GENTAMICIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|ST|496-0<sup>TETRACYCLINE:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;1|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|5|ST|408-5<sup>PIPERACILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;8|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|6|ST|145-3<sup>CEFUROXIME:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|7|ST|161-0<sup>CEPHALOTHIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;8|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|8|ST|20-8<sup>AMOXICILLIN+CLAVULANATE:SUSC:PT:ISLT:QN:MIC</sup>LN</p>
+  </div>
+  <div class="paragraph">
+  <p>||&lt;4|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|9|ST|173-5<sup>CHLORAMPHENICOL:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;4|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|10|ST|508-2<sup>TOBRAMYCIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|11|ST|12-5<sup>AMIKACIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;4|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|12|ST|516-5<sup>TRIMETHOPRIM+SULFMOETHOXAZOLE:SUSC:PT:ISLT:QN:MIC</sup>LN|</p>
+  </div>
+  <div class="paragraph">
+  <p>|&lt;2/38|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|13|ST|76-0<sup>CEFAZOLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|14|ST|116-4<sup>CEFOXITIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|15|ST|141-2<sup>CEFTRIAXONE:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;4|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|16|ST|133-9<sup>CEFTAZIDIME:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|17|ST|185-9<sup>CIPROFLOXACIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;1|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Second micro child result, gives susceptibilities or organism identified by Second OBX of parent</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|6|2740X<sup>OE|BC403</sup>MIC|87186^Antibiotic MIC| ||198703290800||||G|</p>
+  </div>
+  <div class="paragraph">
+  <p>^Hepatitis risk||198703290830|BLDV|401.0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L|321-4321 X3472<sup>^</sup><sup>^</sup>^3472|||||</p>
+  </div>
+  <div class="paragraph">
+  <p>198703310900|40.00|MB|F|600-7&amp;MICROORGANISM IDENTIFIED &amp;LN^2|</p>
+  </div>
+  <div class="paragraph">
+  <p>||2740X&amp;OE^BC376&amp;MIC|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|ST|28-1<sup>AMPICILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;8|ug/ml||R|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|ST|193-3<sup>CLINDAMYCIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;.25|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|ST|267-5<sup>GENTAMICIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;1|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|ST|233-7<sup>ERYTHROMYCIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;.5|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|5|ST|383-0<sup>OXACILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;.5|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|6|ST|524-9<sup>VANCOMYCIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|7|ST|6932-8<sup>PENICILLIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;8|ug/ml||R|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|8|ST|161-0<sup>CEPHALOTHIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;2|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|9|ST|173-5<sup>CHLORAMPHENICOL:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;4|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|10|ST|12-5<sup>AMIKACIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;16|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|11|ST|185-9<sup>CIPROFLOXACIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;1|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|12|ST|428-3<sup>RIFAMPIN:SUSC:PT:ISLT:QN:MIC</sup>LN||&lt;1|ug/ml||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_narrative_report_messages">Narrative report messages</h3>
+  <div class="paragraph">
+  <p>This example of the body of reports shows the following observation from what are usually free text reports. The text within these examples that begins with <strong>-- and ends with --</strong> are explanatory comments, not a formal part of the message. The following outline shows the segments that are included in this example message.</p>
+  </div>
+  <div class="paragraph">
+  <p>a) patient identifying record (PID)</p>
+  </div>
+  <div class="paragraph">
+  <p>b) order record for chest x-ray (OBR)</p>
+  </div>
+  <div class="paragraph">
+  <p>c) two diagnostic impressions for CXR (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>d) description record for CXR (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>e) a recommendation record for CXR (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>f) an order record for surgical pathology (OBR)</p>
+  </div>
+  <div class="paragraph">
+  <p>g) a gross description record for pathology showing use of anatomy fields (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>h) a microscopic description record for pathology (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>i) vital signs request (OBR)</p>
+  </div>
+  <div class="paragraph">
+  <p>j) six vital signs (OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>k) part of the physical history (OBR &amp; OBX)</p>
+  </div>
+  <div class="paragraph">
+  <p>l) end record</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PID|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Order record for CXR</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|2|P8754<sup>OE|XR1501</sup>XR|24646-2^CXR PA+LAT^LN|||198703290800|||</p>
+  </div>
+  <div class="paragraph">
+  <p>401-0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Two CXR diagnostic impressions</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|24646-2&amp;IMP^CXR PA+LAT^LN</p>
+  </div>
+  <div class="paragraph">
+  <p>|1|.61^RUL^ACR~.212^Bronchopneumonia^ACR|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|CWE|24646-2&amp;IMP^CXR PA+LAT^LN |2|51.71^Congestive heart failure^ACR|||A|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>CXR Description with continuation records</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|TX|24646-2&amp;GDT^CXR PA+LAT^LN||Infiltrate probably representing bronchopneumonia in the right lower lobe. Also pulmonary venous congestion cardiomegaly and cephalization, indicating early congestive heart failure.|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Recommendations about CXR report to follow up one month with a repeat CXR</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|CWE|24646-2&amp;REC^CXR PA+LAT<sup>LN||71020</sup>Followup CXR 1 month^AS4||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Order record for pathology report</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|3|P8755<sup>OE|SP89-739</sup>SP|11529-5^Surgical Path</p>
+  </div>
+  <div class="paragraph">
+  <p>Report<sup>LN|||198703290800|||401-0</sup>INTERN<sup>IRVING</sup>I<sup>^</sup>MD^L|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|11529-5&amp;ANT^Surgical Path Report<sup>LN|1|Y0480-912001</sup>orbital region^SNM||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Gross description record (with overflow) for pathology</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|TX|22634-0^Path report.gross observation^LN||The specimen is received in four containers. The first is labeled with the patient&#8217;s name and consists of three fragments of reddish-brown tissue each of which measures 2 mm in greatest dimension. They are wrapped in tissue paper and submitted in toto in a single cassette|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Microscopic description record for pathology</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|TX|22635-7^Path report.microscopic observation^LN|1|Sections of the first specimen received for frozen section diagnosis reveal thick walled, ramifying vessels lined by a single layer of flattened endothelial cells. The thick smooth muscle walls exhibit no malignant cytologic features nor do the endothelial lining cells. Within the same specimen are also found fragments of fibrous connective tissue, bone, and nerve which are histologically unremarkable||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Vital signs using LOINC® codes as observation identifiers</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|4|P8756<sup>OE|N2345</sup>NR|29274-8^VITAL SIGNS^LN| ||198703290800|||401-0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|NM|8462-4^INTRAVASCULAR DIASTOLIC:PRES^LN||90|mm(hg)|60-90||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|NM|8479-8^INTRAVASCULAR SYSTOLIC:PRES^LN||120|mm(hg)</p>
+  </div>
+  <div class="paragraph">
+  <p>|100-160||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|NM|8478-0^INTRAVASCULAR MEAN:PRES^LN||100|mm(hg)|80-120|N|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|4|NM|8867-4^HEART BEAT RATE^LN||74|/min|60-100|N|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|5|ST|8357-6^BLOOD PRESSURE METHOD^LN||MANUAL BY CUFF||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|6|ST|8886-4^HEART RATE METHOD^LN||MANUAL BY PALP||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Part of the patient&#8217;s history</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|5|P8568<sup>OE|HX2230</sup><sup>CLN||2000</sup>HISTORY| ||198703290800||401</p>
+  </div>
+  <div class="paragraph">
+  <p>0<sup>INTERN</sup>IRVING<sup>I</sup><sup>^MD</sup>L||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|8661-1^CHIEF COMPLAINT^LN||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|ST|8674-4^HISTORY SOURCE^LN||PATIENT||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|TX|8684-3^PRESENT ILLNESS^LN||SUDDEN ONSET OF CHEST PAIN. 2 DAYS,</p>
+  </div>
+  <div class="paragraph">
+  <p>PTA ASSOCIATED WITH NAUSEA, VOMITING \T\ SOB. NO RELIEF WITH ANTACIDS</p>
+  </div>
+  <div class="paragraph">
+  <p>OR NTG. NO OTHER SX. NOT PREVIOUSLY ILL.||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>.</p>
+  </div>
+  <div class="paragraph">
+  <p>.</p>
+  </div>
+  <div class="paragraph">
+  <p>and so on.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_reporting_cultures_and_susceptibilities">Reporting Cultures and Susceptibilities</h3>
+  <div class="sect3">
+  <h4 id="_culture_batteryreport_representation">Culture battery/report representation</h4>
+  <div class="paragraph">
+  <p>Organisms and other observations/tests are reported using multiple OBX segments. The granularity expected for HL7culture reports is one observation per organism.</p>
+  </div>
+  <div class="paragraph">
+  <p>All OBX segments which have the same observation ID and sub-ID are part of a single observation.</p>
+  </div>
+  <div class="paragraph">
+  <p>Each organism in a culture battery is assigned a unique <em>OBX-4 Observation Sub-ID</em> (and is therefore a separate observation). The organism name is given in <em>OBX-5 Observation Value</em> (results). It is recommended, but not required, that the organism name may change over time, but the corresponding observation sub-ID never changes. (The observation ID will be identical for all organisms reported.)</p>
+  </div>
+  <div class="paragraph">
+  <p>Recommended:</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|600-7^Micro Organism Identified<sup>LN|1|</sup>E. Coli||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|CWE|600-7^Micro Organism Identified^LN |2|^S. Aureus||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Not recommended:</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|CWE|600-7^Micro Organism Identified^LN |1|^E. Coli||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|CWE|600-7^Micro Organism Identified^LN |1|^S. Aureus||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_susceptibility_batteryreport_representation">Susceptibility battery/report representation</h4>
+  <div class="paragraph">
+  <p>Each antimicrobial should be reported as a separate (OBX) observation where the Observation ID is a code for the antimicrobial. (OBXs for non-antimicrobials observations and related information may be present in the same battery.)</p>
+  </div>
+  <div class="paragraph">
+  <p>MIC and disk diffusion (Kirby Bauer) susceptibility results can be combined in the same OBX segment. An OBX can contain a MIC value (in <em>OBX-5 Observation Value</em> (results)) and <em>OBX-8 Interpretation Codes</em> that indicates whether the organism is sensitive, resistant, or intermediate (see <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70078"><em>HL7 Table 0078 - Interpretation Codes</em></a> under abnormal flag fields).</p>
+  </div>
+  <div class="paragraph">
+  <p>Or, an OBX can contain a disk diffusion result string (e.g., <strong>sensitive</strong>) in the Observation Results field and the disk diffusion interpretation in <em>OBX-8 Interpretation Codes</em> (e.g., <strong>S</strong>).</p>
+  </div>
+  <div class="paragraph">
+  <p>A susceptibility battery may only contain results corresponding to a single organism that has been previously reported in a culture battery.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_identification_of_the_organism_for_a_susceptibility_battery">Identification of the organism for a susceptibility battery</h4>
+  <div class="paragraph">
+  <p>The following is the preferred, but not required method of organizing data about antimicrobial susceptibility.</p>
+  </div>
+  <div class="paragraph">
+  <p>A susceptibility battery may only contain results corresponding to a single organism that has been previously reported in a culture battery.</p>
+  </div>
+  <div class="paragraph">
+  <p>A susceptibility battery is always a child order to a culture battery. <em>OBR-29 Parent</em> (parent&#8217;s filler order number) in the susceptibility OBR is equal <em>to OBR-3 Filler Order Number</em> in the parent culture OBR and is used to link the two batteries logically.</p>
+  </div>
+  <div class="paragraph">
+  <p>The susceptibility battery also contains a linkage back to a particular organism in the culture battery. <em>OBR-26 Parent Result</em> of the susceptibility OBR contains two components--<em>OBX-3 Observation Identifier</em> (code only) and <em>OBX -4 Observation Sub-ID</em> of the OBX in the culture battery which contains the organism name.</p>
+  </div>
+  <div class="paragraph">
+  <p>The identity of an organism/isolate is expected to be refined over time. When an organism identification changes, the parent culture battery can be resent without resending the child susceptibility battery.</p>
+  </div>
+  <div class="paragraph">
+  <p>The case may occur where a susceptibility battery is reported on an organism which has not yet been identified. In this case, it is required that a placeholder OBX for the organism name be reported in the corresponding culture battery so that <em>OBR-26 Parent Result</em> in the susceptibility OBR will point to a valid organism OBX in the culture battery. Transmission of an organism OBX (in the culture battery) with the Sub-ID field valued must precede the susceptibility battery which uses the identical Sub-ID in <em>OBR-26 Parent Result</em>.</p>
+  </div>
+  <div class="paragraph">
+  <p>Discussion and examples:</p>
+  </div>
+  <div class="paragraph">
+  <p>Order micro results (blood culture)</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|LAB1||DESTINATION||19910127105114||ORU</sup>R01^ORU_R01|LAB1003929|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PID|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>PV1|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|NW|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|A485388<sup>OE|H29847</sup>LAB1|17928-3^BLOOD CULTURE^LN|||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Result for culture</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|RE|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|A485388<sup>OE|H29847</sup>LAB1|17928-3^BLOOD CULTURE ^LN||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|FT|SDES^SOURCE||BLOOD-RAPID||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|FT|664-3^GRAM STAIN SMEAR^LN||GRAM POSITIVE COCCI IN GROUPS||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|FT|600-7^MICROORGANISM IDENTIFIED^LN|1|ISOLATE 1||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Result for susceptibility</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|RE|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|A485388<sup>OE|H29848</sup>LAB1|BT1^SUSCEPTIBILITY BATTERY||||||123<sup>MANSFIELD</sup>CHARLES| ||||||||||||||||600-7&amp;MICROORGANISM IDENTIFIED&amp;LN <sup>1|||A485388&amp;OE</sup>H29847&amp;LAB1|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|NM|6932-8^PENICILLIN MIC^LN||0.5|||R|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|2|NM|347-5^NAFCILLIN MIC^LN||1|||R|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|3|ST|193-3^CLINDAMYCIN MIC^LN||&#8656;0.1|||S|||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Result for Culture ID</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|RE|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|A485388<sup>OE|H29847</sup>LAB1|17928-3^BLOOD CULTURE ^LN||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|FT|600-7^ MICROORGANISM IDENTIFIED^LN |1|STAPH EPI||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>New result for culture ID</p>
+  </div>
+  <div class="paragraph">
+  <p>ORC|RE|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBR|1|A485388<sup>OE|H29847</sup>LAB1|17928-3^BLOOD CULTURE ^LN||&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>OBX|1|FT|600-7^MICROORGANISM IDENTIFIED^LN|1|STAPH EPI SERO TYPE 3||||||F|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Assumptions</p>
+  </div>
+  <div class="paragraph">
+  <p>1) All OBXs in the parent order must employ the same coding scheme.</p>
+  </div>
+  <div class="paragraph">
+  <p>2) The Sub-ID of the parent OBXs (result) cannot change.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>FIXME</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_clinical_subdomains">Clinical Subdomains</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="blood_bank/blood_bank.html">Blood Bank</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="clinical_trials/clinical_trials.html">Clinical Trials</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="dietary/dietary.html">Dietary</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="general_orders_and_results/general_orders_and_results.html">General Orders And Results</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="imaging/imaging.html">Imaging</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="immunizations/immunizations.html">Immunizations</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="laboratory/laboratory.html">Laboratory</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="medical records/medical records.html">Medical Records</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="patient_care/patient_care.html">Patient Care</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="pharmacy/pharmacy.html">Pharmacy</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="product_experience/product_experience.html">Product Experience</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="supply/supply.html">Supply</a></p>
+  </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>FIXME</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_erp_subdomains">ERP Subdomains</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="materials_management/materials_management.html">Materials Management</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="personnel_management/personnel_management.html">Personnel Management</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="lab_automation/lab_automation.html">Lab Automation</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="supply/supply.html">Supply</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="specimen_shipment_manifest/specimen_shipment_manifest.html">Specimen Shipment Manifest</a></p>
+  </div>
+  </div>
+  </div>
+</div>

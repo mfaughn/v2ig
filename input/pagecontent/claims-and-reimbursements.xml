@@ -1,0 +1,115 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>This document contains the HL7 messaging specifications to support Claims and Reimbursement (CR) for the electronic exchange of health invoice (claim) data. The document is intended for use by benefit group vendors, Third Party Administrators (TPA) and Payers who wish to develop software that is compliant with an international standard for the electronic exchange of claim data.</p>
+  </div>
+  <div class="paragraph">
+  <p>The content of this document is not intended to be an alternative to or replacement for those ASC X12 standards mandated for use in this domain in the United States</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The scope of the Claims and Reimbursement informative document defines the HL7 messaging and technical standards for:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Electronic transmission of healthcare invoices, with supporting documents and reports, to authorized individuals and/or organizations;</p>
+  </li>
+  <li>
+  <p>Inclusion of diagnostic and preventative intervention codes with each healthcare invoice;</p>
+  </li>
+  <li>
+  <p>A query mechanism to allow authorized users to electronically inquire about information they have previously provided to a Payer;</p>
+  </li>
+  <li>
+  <p>Minimum data sets;</p>
+  </li>
+  <li>
+  <p>Minimum display and print standards; and</p>
+  </li>
+  <li>
+  <p>Minimum data storage.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>As used in this document the domain of Claims and Reimbursement excludes:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Payer and benefit group specific processing and implementation rules;</p>
+  </li>
+  <li>
+  <p>Jurisdictional specific processing and implementation rules;</p>
+  </li>
+  <li>
+  <p>Processes for the submission of supporting documentation by third parties to Payers.</p>
+  </li>
+  <li>
+  <p>Processes for the capture and processing of healthcare invoice data by a Provider;</p>
+  </li>
+  <li>
+  <p>Processes for the adjudication, payment and reconciliation of healthcare invoices by a Payer;</p>
+  </li>
+  <li>
+  <p>Referrals between Providers;</p>
+  </li>
+  <li>
+  <p>Electronic funds transfer (EFT) messages; and,</p>
+  </li>
+  <li>
+  <p>Implementation of the standard.</p>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/E01.html">Message - E01 Submit HealthCare Services Invoice</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E02.html">Message - E02 Cancel HealthCare Services Invoice</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E03.html">Message - E03 Query HealthCare Services Invoice Status</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E04.html">Message - E04 Re-Assess HealthCare Services Invoice Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E10.html">Message - E10 Edit/Adjudication Results</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E12.html">Message - E12 Request Additional Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E13.html">Message - E13 Additional Information Response</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E15.html">Message - E15 Payment/Remittance Advice</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E20.html">Message - E20 Submit Authorization Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E21.html">Message - E21 Cancel Authorization Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E22.html">Message - E22 Query Authorization Request Statu</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/E24.html">Message - E24 Authorization Response</a></p>
+  </div>
+  </div>
+  </div>
+</div>

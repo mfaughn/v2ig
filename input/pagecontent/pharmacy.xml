@@ -1,0 +1,96 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <div class="title">Pharmacy/Treatment Transaction Flow Diagram</div>
+  <p>The following are possible routes at a generic site.</p>
+  </div>
+  <div class="paragraph">
+  <p><span class="image"><img src="pharmacy_transaction_flow.jpg" alt="pharmacy_transaction_flow"></span></p>
+  </div>
+  <div class="sect2">
+  <h3 id="_omp">OMP:</h3>
+  <div class="paragraph">
+  <p>The Ordering application generates a pharmacy/treatment OMP and sends it to the pharmacy or treatment application, Nursing application, and/or other applications as appropriate at the site.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_rde">RDE:</h3>
+  <div class="paragraph">
+  <p>The pharmacy/treatment application may send the RDE, the Pharmacy/Treatment Encoded Order message, a fully encoded order to the Nursing application, Ordering application, and/or other system applications as appropriate at the site.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_rds">RDS:</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The pharmacy/treatment application may send the RDS, the Pharmacy/Treatment Dispense message, to the Nursing application or other applications as appropriate at the site, each time a medication is dispensed for this order. This message may occur multiple times for each order.</p>
+  </div>
+  <div class="sect2">
+  <h3 id="_rgv">RGV:</h3>
+  <div class="paragraph">
+  <p>The pharmacy application may send the RGV, the Pharmacy/Treatment Give message, to the Nursing application or other applications as appropriate at the site, for each scheduled date/time of administration of a medication for a given order. This message may occur multiple times for each order.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_ras">RAS:</h3>
+  <div class="paragraph">
+  <p>The Nursing application (and other applications) can generate the RAS, the pharmacy/treatment Administration Results message, whenever a medication is given to the patient. This message may occur multiple times for each order.</p>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  Sites having a long term clinical data repository may wish to route data to the data repository from copies of all or any of the five messages.
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/O09.html">Message - O09 Pharmacy/Treatment Order</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O11.html">Message - O11 Pharmacy/Treatment EncodedOrder</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O49.html">Message - O49 Pharmacy/Treatment Dispense Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O13.html">Message - O13 Pharmacy/Treatment Dispense</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O59.html">Message - O59 Pharmacy/Treatment Dispense Receipt</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O15.html">Message - O15 Pharmacy/Treatment Give Instructions</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O17.html">Message - O17 Pharmacy/Treatment Administration</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/O25.html">Message - O25 Pharmacy/Treatment Refill Authorization Request</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q11_K31.adoc.html">Message - Q11/K31 Pharmacy Query/Response</a></p>
+  </div>
+  </div>
+  </div>
+</div>

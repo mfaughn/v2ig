@@ -1,0 +1,130 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The Financial Mangement topic describes patient accounting transactions. Financial transactions can be sent between applications either in batches or online. As defined in Chapter 2 on batch segments, multiple transactions may be grouped and sent through all file transfer media or programs when using the HL7 Encoding Rules.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_patient_accounting_message_set">PATIENT ACCOUNTING MESSAGE SET</h3>
+  <div class="paragraph">
+  <p>The patient accounting message set provides for the entry and manipulation of information on billing accounts, charges, payments, adjustments, insurance, and other related patient billing and accounts receivable information.</p>
+  </div>
+  <div class="paragraph">
+  <p>This standard includes all of the data defined in the National Uniform Billing Field Specifications. We have excluded state-specific coding and suggest that, where required, it be implemented through site-specific negotiation. In addition, no attempt has been made to define data that have traditionally been required for the financial responsibility ("proration") of charges. This requirement is unique to a billing system and not a part of an interface.</p>
+  </div>
+  <div class="paragraph">
+  <p>We recognize that a wide variety of billing and accounts receivable systems exist today. Therefore, in an effort to accommodate the needs of the most comprehensive systems, we have defined an extensive set of transaction segments.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The triggering events that follow are served by Detail Financial Transaction (DFT), Add/Change Billing Account (BAR), and General Acknowledgment (ACK) messages.</p>
+  </div>
+  <div class="paragraph">
+  <p>Each trigger event is documented, along with the applicable form of the message exchange. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for Defining Abstract Messages."</p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P01.html">Message - P01 Add Patient Account</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P02.html">Message - P02 Purge Patient Accounts</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P03.html">Message - P03 Post Detail Financial Transactions</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P05.html">Message - P05 BAR/ACK - Update Account</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P06.html">Message - P06 BAR/ACK - End Account</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P10.html">Message - P10 Transmit Ambulatory Payment Classification (APC) Groups</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P11.html">Message - P11 Post Detail Financial Transactions - Expanded</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/P12.html">Message - P12 Update Diagnosis/Procedure</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_create_a_patient_billingaccounts_receivable_record">Create a patient billing/accounts receivable record</h3>
+  <div class="paragraph">
+  <p>A patient has been registered by the ADT system (PATA) and notification is sent to the Patient Billing system (PATB). The patient&#8217;s name is Eve J. Everywoman, a female Caucasian, born on October 7, 1947. Living at 1234 Homestreet, Houston, TX.</p>
+  </div>
+  <div class="paragraph">
+  <p>Ms. Everywoman&#8217;s medical record number is 8064993 and her billing number is 6045681. Her national identifier is 123456789ABC. Her social security number, assigned by the U.S. Social Security Administration, is 123456789. Ms. Everywoman has provided her father&#8217;s name and address for next of kin. Ms. Smith is insured under plan ID A357 with an insurance company known to both systems as BCMD, with a company ID of 1234.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|PATA|01|PATB|01|20250908135031||BAR</sup>P01^BAR_P01|641|P|2.8|000000000000001|
+  EVN|P01|20250908135030||
+  PID|1||8064993<sup>^</sup>PATA1<sup>MR</sup>A<sub>6045681<sup>^</sup>PATA1<sup>BN</sup>A</sub>123456789ABC<sup>^</sup>US<sup>NI~123456789</sup><sup>^USSSA</sup>SS||EVERYWOMAN<sup>EVE</sup>J||19471007|F||1|22220018 HOMESTREET<sup>^HOUSTON</sup>TX<sup>77030</sup>USA|HAR||||S||6045681
+  GT1|001||JOHNSON<sup>SAM</sup>J||1111 HEALTHCARE DRIVE<sup>^BALTIMORE</sup>MD<sup>21234</sup>USA|||||||193‑22‑1876
+  NK1|001|BETTERHALF^BORIS|F|2222 HOME STREET<sup>^CUMBERLAND</sup>MD<sup>28765</sup>US|(301)555‑2134
+  IN1|001|A357|1234|BCMD|||||132987</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_post_a_charge_to_a_patients_account">Post a charge to a patient&#8217;s account</h3>
+  <div class="paragraph">
+  <p>A patient has been registered by the ADT system (PATA) and notification is sent to the Patient Billing system (PATB). The patient&#8217;s name is Eve J. Everywoman, a female Caucasian, born on October 7, 1947. Living at 1234 Homestreet, Houston, TX.</p>
+  </div>
+  <div class="paragraph">
+  <p>Ms. Everywoman&#8217;s patient number is 8064993 and her billing number is 6045681. This transaction is posting a charge for a skin biopsy to her account.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|PATA|01|PATB|01|20250908135031||DFT</sup>P03^DFT_P03|641|P|2.8|000000000000001|
+  EVN|P03|20250908135030||
+  PID||0008064993<sup>^</sup>ENT<sup>PE|0008064993</sup><sup>^PAT</sup>MR||0006045681<sup>^</sup>PATA<sup>AN|EVERYWOMEN</sup>EVE^J|19471007|F||1|2222 HOMESTREET<sup>^HOUSTON</sup>TX<sup>77030</sup>USA|HAR||||S||6045681<sup>^</sup>PATA^AN
+  FT1|1|||20250715|20250716|CG|B1238<sup>BIOPSY-SKIN</sup>SYSTEMA|||1|||ONC|A357||||||P8765<sup>KILDARE</sup>BEN</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_update_patient_accounts_update_ub1_information">Update patient accounts - update UB1 information</h3>
+  <div class="paragraph">
+  <p>Utilization review sends data for Patient Billing to the Patient Accounting system. The patient&#8217;s insurance program has a 1-pint deductible for blood; the patient received five pints of blood, and three pints were replaced, with one pint not yet replaced.</p>
+  </div>
+  <div class="paragraph">
+  <p>The patient has been assigned to a medically necessary private room (UB condition code 39). The hospital&#8217;s most common semi-private rate is $500.00 (UB value code 01).</p>
+  </div>
+  <div class="paragraph">
+  <p>The services provided for the period 05/01/88 through 05/07/88 are fully approved (PSRO/UR Approval Code 1). The patient&#8217;s hospitalization is the result of an auto accident (UB occurrence code 01).</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|UREV||PATB||202509061352025||BAR</sup>P05^BAR_P05|MSG0018|P|2.8
+  EVN|P05|20250908135030
+  PID|||125976<sup>^</sup><sup>^MR||EVERYMAN</sup>ADAM^J|||||||||||||125976011
+  UB1|1|1|5|3|1||39|||01<sup>500.00|||1|20250501|20250507|10</sup>20250501</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_update_patient_accounts_update_diagnosis_and_drg_information">Update patient accounts - update diagnosis and DRG information</h3>
+  <div class="paragraph">
+  <p>The DG1 segment contains the information that the patient was diagnosed on May 1 as having a malignancy of the hepatobiliary system or pancreas (ICD9 code 1550). In the DRG segment, the patient has been assigned a Diagnostic Related Group (DRG) of 203 (corresponding to the ICD9 code of 1550). Also, the patient has been approved for an additional five days (five-day outlier).</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|UREV||PATB||20250908135030||BAR</sup>P05^BAR_P05|MSG0018|P|2.8
+  EVN|P05|20250908135030
+  PID|||125976<sup>^</sup><sup>^MR||EVERYMAN</sup>ADAM^J|||||||||||||125976011
+  DG1|001|I9|1550|MAL NEO LIVER, PRIMARY|20250501103005|F
+  DRG|203|20250501103010|Y||D|5</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

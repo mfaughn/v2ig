@@ -1,0 +1,131 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>A diet office needs to receive specific information, the most important being the diet order itself. Diet restrictions (often called diet codes) are the basic building blocks of a diet order. The diet order segments may be sent as part of the ORM and ORR message structure to support backwards compatibility, or may be sent as part of the following dedicated message structures.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/O03.html">Message O03 - Dietary Order</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_typical_progression_of_orders_for_a_surgery_patient">Typical progression of orders for a surgery patient</h3>
+  <div class="paragraph">
+  <div class="title">First order:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1235<sup>NURS|||||</sup><sup>^199108021700||200608021200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||321<sup>DB15</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||322<sup>NA2GM</sup>99DO3|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Hold first order:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|HD|1235<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">NPO order with guest tray:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1236<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||323<sup>NPO</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1244<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|GUEST^Guest tray<sup>HL70160|5</sup>^99CBD|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Clear liquid with guest tray:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|DC|1236<sup>NURS|||||</sup><sup>^200608041700||200608041200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1237<sup>NURS|||||</sup><sup>^200608041700||200608041200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||321<sup>DB15</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||322<sup>NA2GM</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||324<sup>CLRLIQ</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1245<sup>NURS|||||</sup><sup>^200608041700||200608041200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|GUEST^Guest tray<sup>HL70160|5</sup>^99CBD|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Full liquid with guest tray:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|DC|1237<sup>NURS|||||</sup><sup>^200608051700||200608051200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1238<sup>NURS|||||</sup><sup>^200608051700||200608051200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||321<sup>DB15</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||322<sup>NA2GM</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||325<sup>FULLIQ</sup>99DO3|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1246<sup>NURS|||||</sup><sup>^200608051700||200608051200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|GUEST^Guest tray<sup>HL70160|3</sup>^99CBD|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Release hold on previous order and give discharge message:</div>
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|DC|1238<sup>NURS|||||</sup><sup>^200608061700||200608061200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ORC|RL|1235<sup>NURS|||||</sup><sup>^200608061700||200608061200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1247<sup>NURS|||||</sup><sup>^200608061700||200608061200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|MSG^Tray message only<sup>HL70160|5</sup>^99CBD|You Will Be Leaving Tomorrow|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_complex_order">Complex order</h3>
+  <div class="paragraph">
+  <p>Basic diet: high protein, low fat. Supplements are ice cream at service period 4 and a half ham sandwich at service period 6. There are also tray orders for early service period 1, late service period 3, and guest tray at dinner.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1234<sup>NURS|||||</sup><sup>^200608021700||200608021200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||011<sup>HIPRO100</sup>99FD1|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||123<sup>LOFAT20</sup>99FD1|&#8230;&#8203;&lt;cr&gt;
+  ODS|S|4|119^ICE CREAM^99FD8|&#8230;&#8203;&lt;cr&gt;
+  ODS|S|6|320^1/2 HAM SANDWICH^99FD8|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1244<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|EARLY^Early tray<sup>HL70160|1</sup>^99CBD|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1245<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|LATE^Late tray<sup>HL70160|3</sup>^99CBD|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1246<sup>NURS|||||</sup><sup>^200608031700||200608031200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODT|GUEST^Guest tray<sup>HL70160|5</sup>DINNER^99CBD|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_tube_feeding">Tube feeding</h3>
+  <div class="paragraph">
+  <p>This order specifies Similac with MCT oil and polycose additives.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1232<sup>NURS|||||60</sup>Q3H<sup>^200608021700||200608021200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||010<sup>SIMILAC</sup>99DO1|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||011<sup>MCT</sup>99DO1|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||012<sup>POLYCOSE</sup>99DO1|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_patient_preference">Patient preference</h3>
+  <div class="paragraph">
+  <p>This order specifies that the patient is a vegetarian.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|&#8230;&#8203;&lt;cr&gt;
+  PID|&#8230;&#8203;&lt;cr&gt;
+  ORC|NW|1232<sup>NURS|||||60</sup>Q3H<sup>^200608021700||200608021200|333-77-7777</sup>COMRAD<sup>CONNOR</sup>C|999-99-9999<sup>VERIFY</sup>VIRGIL^V|&#8230;&#8203;&lt;cr&gt;
+  ODS|D||123<sup>LOFAT20</sup>99FD1|&#8230;&#8203;&lt;cr&gt;
+  ODS|S|4|119^ICE CREAM^99FD8|&#8230;&#8203;&lt;cr&gt;
+  ODS|P||^VEGETARIAN|&#8230;&#8203;&lt;cr&gt;</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

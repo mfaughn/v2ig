@@ -1,0 +1,45 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_general_use_cases_background">General Use Cases / Background</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_actors">Actors</h3>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Specimen Shipper - The Specimen Shipper actor is an application capable of sending specimen shipments and transmitting the specimen shipment manifest message.</p>
+  </li>
+  <li>
+  <p>Specimen Shipment Receiver - The Specimen Shipment Receiver actor is an application capable of receiving specimen shipments as well as specimen shipment manifest messages. Typically this application is associated with a Laboratory.</p>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_activity_diagram">Activity Diagram</h3>
+  <div class="paragraph">
+  <p>The following activity diagram illustrates the usage of this message. The message is initially sent from the Specimen Shipper at the point the specimen is shipped. The actual point of transmission of the message could occur as soon as all the contents of the shipment have been identified, and the transporters shipment id has been assigned to the shipment. The specimen shipment receiver will send back transaction using the Specimen Shipment Manifest message indicating the specimen shipment has been accepted or rejected. This normally will occur after the shipment has been physically received and evaluated. Note that this response back is not considered an application acknowledgment, and is certainly not required. Its purpose is to update the shipper with the status of the shipment.</p>
+  </div>
+  <div class="imageblock">
+  <div class="content">
+  <img src="Specimen_Shipment_Figure_1.png" alt="specimen_shipment_activity_diagram">
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/R26.html">Message - R26 Unsolicited Specimen Shipment Manifest</a></p>
+  </div>
+  </div>
+  </div>
+</div>

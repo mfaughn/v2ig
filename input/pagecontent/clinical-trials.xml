@@ -1,0 +1,92 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>Academic medical institutions, academic research coordinating centers, and industry-based research organizations often have computer systems that support registration, compliance and safety monitoring, and outcomes analysis for clinical trials (GLOSSARY). Patients on these trials may receive their treatment and evaluation at one research facility or at many different medical facilities. Clinical trials systems could message other applications that a patient is registered on a clinical trial. Several functional examples follow:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>
+  <p>Some of the data required to monitor or analyze outcomes on the trial are generated in other medical computer systems, such as pharmacy, laboratory, or clinical applications. These applications may tag patients on clinical trials so that data may be sent back to the clinical trials system.</p>
+  </li>
+  <li>
+  <p>Order entry systems could also use patient registration information: they could display standard order sets for the protocol or particular treatment/evaluation phases (GLOSSARY) of a complex protocol. They could pass the clinical trials status on to service provider applications to initiate a results report to the clinical trials system. It could also be passed to billing applications that may use specialized procedures for research‑related costs.</p>
+  </li>
+  <li>
+  <p>Nursing and pharmacy systems can use information on patients' clinical trials status for care plans or dispensing authorization (auxiliary to the physician&#8217;s prescription), respectively. There could be many other uses of this message since a patient&#8217;s involvement on a clinical trial affects all concurrent medical care.</p>
+  </li>
+  </ul>
+  </div>
+  <div class="paragraph">
+  <p>To meet monitoring and analysis requirements, patient registration, treatment, diagnostic, and study summary data are reported to study sponsors like pharmaceutical or medical device companies, regulatory agencies, and data management centers for collaborative studies. Automated procedures must be used to transfer these voluminous data among the participant computer systems in a cost-efficient and timely manner. This topic aims to specify standard messaging transactions to automate such reporting as well as to enable communication of clinical trials registration data to relevant medical applications as described above.</p>
+  </div>
+  <div class="paragraph">
+  <p>The objectives of the clinical trials messages and segments are to identify that patients are registered on clinical trials, have entered a study‑specific phase of treatment or evaluation, or to indicate the study protocol&#8217;s data schedule (GLOSSARY). Message components include OBR (section 4.5.3, "OBR - Observation Request Segment"), OBX (section 7.4.2, "OBX ‑ Observation/Result Segment"), RXA (section 4.14.7, "RXA - Pharmacy /Treatment Administration Segment"), and RXR (section 4.14.2, "RXR - pharmacy/Treatment Route Segment") segments to report observations or drug administration that are relevant to the study. In addition to study‑related clinical data, OBX segments may contain the results of study variables according to master code tables. There are also master segments to describe the clinical trial, its treatment phases, and its scheduled date-time points for message recipients. These are analogous to the Test/Observation Master Segments (Chapter 8), with the trials, phases, or scheduled time points treated as the OBX treats observation identifiers.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/C01.html">Message - C01 Register a patient on a clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C02.html">Message - C02 Cancel a patient registration on clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C03.html">Message - C03 Correct/update registration information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C04.html">Message - C04 Patient has gone off a clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C05.html">Message - C05 Patient enters phase of clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C06.html">Message - C06 Cancel patient entering a phase</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C07.html">Message - C07 Correct/update phase information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C08.html">Message - C08 Patient has gone off phase of clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C09.html">Message - C09 Automated time intervals for reporting, like monthly</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C10.html">Message - C10 Patient completes the clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C11.html">Message - C11 Patient completes a phase of the clinical trial</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/C12.html">Message - C12 Update/correction of patient order/result information</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_examples">Examples</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_crm_message_when_patient_registered_on_a_clinical_trial">CRM - Message When Patient Registered on a Clinical Trial</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|PDMS|MDACC|ORDER ENTRY|MDACC|202506021649||CRM<sup>C01</sup>CRM_C01|&#8230;&#8203;
+  PID|1||2222<sup>^</sup><sup>^MR||Everywoman</sup>Eve^E||19730117|&#8230;&#8203;
+  CSR|DM94-004<sup>MDACC||MDACC|3||19941013||342</sup><sup>^</sup><sup>^</sup>PDMS| |||||1005<sup>^</sup><sup>^</sup><sup>MDACC|19941013|Y</sup>Meets All Requirements^PDMS|&#8230;&#8203;</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_crm_message_when_patient_begins_a_phase_of_a_clinical_trial">CRM - Message When Patient Begins a Phase of a Clinical Trial</h3>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|PDMS|MDACC|PHARM|MDACC|202506050925||CRM</sup>C05^CRM_C05|&#8230;&#8203;
+  PID|1||2222<sup>^</sup><sup>^MR||Everywoman</sup>Eve^E||19230213|&#8230;&#8203;
+  CSR|ID91-025<sup>MDACC||MDACC|301||19941005||342</sup><sup>^</sup><sup>^</sup>PDMS |||19941201|2<sup>blind</sup>PDMS| 12^Smoker,Stage II,&lt;60^PDMS|&#8230;&#8203;
+  CSP|2<sup>Treatment</sup>PDMS|19941201|&#8230;&#8203;</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

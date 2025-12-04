@@ -1,0 +1,24 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div class="sect1">
+  <h2 id="_introduction">Introduction</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>FIXME</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_subdomains">Technical Subdomains</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="application_management/application_management.html">Application Management</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="master_files/master_files.html">Master Files</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="queries/queries.html">Queries</a></p>
+  </div>
+  </div>
+  </div>
+</div>

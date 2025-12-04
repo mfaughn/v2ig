@@ -1,0 +1,2299 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <div id="preamble">
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p>The Patient Administration transaction set provides for the transmission of new or updated demographic and visit information about patients. Since virtually any system attached to the network requires information about patients, the Patient Administration transaction set is one of the most commonly used.</p>
+  </div>
+  <div class="paragraph">
+  <p>Generally, information is entered into a Patient Administration system and passed to the nursing, ancillary and financial systems either in the form of an unsolicited update or a response to a record-oriented query.</p>
+  </div>
+  <div class="paragraph">
+  <p>This topic defines the transactions that occur at the seventh level, that is, the abstract messages. The examples included in this topic were constructed using the HL7 Encoding Rules.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_implementation_considerations">Implementation Considerations</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_swapping_a_patient">Swapping a patient</h3>
+  <div class="paragraph">
+  <p>Some systems may handle this as a single function. Others may require a multiple process in which:</p>
+  </div>
+  <div class="paragraph">
+  <p>a) patient A is assigned a temporary location</p>
+  </div>
+  <div class="paragraph">
+  <p>b) patient B is assigned patient A&#8217;s location</p>
+  </div>
+  <div class="paragraph">
+  <p>c) patient A is assigned patient B&#8217;s prior location</p>
+  </div>
+  <div class="paragraph">
+  <p>This three‑step scenario requires three separate transfer messages instead of a single swap message. If all beds in a hospital are occupied, it may be necessary to use a dummy location.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_merging_patientperson_information">Merging patient/person information</h3>
+  <div class="sect3">
+  <h4 id="_definitions_merge_move_and_change_identifier_events">Definitions: Merge, move, and change identifier events</h4>
+  <div class="paragraph">
+  <p>The term "identifier" is used throughout this section. An identifier is associated with a set (or sets) of data. For example, an identifier (<em>PID-3 - Patient Identifier List</em>) may be a medical record number which has associated with it account numbers (<em>PID-18 - Patient Account Number</em>). Account number (<em>PID-18 - Patient Account Number</em>) is a type of identifier which may have associated with it visit numbers (<em>PV1-19 - Visit Number</em>).</p>
+  </div>
+  <div class="paragraph">
+  <p>This section addresses the events that occur usually for the purposes of correcting errors in person, patient, account, or visit identifiers. The types of errors that occur typically fall into three categories:</p>
+  </div>
+  <div class="paragraph">
+  <p>1) <strong>Duplicate identifier created</strong><br>
+  The registrar fails to identify an existing person, patient, account, or visit and creates a new, "duplicate" record instead of using the existing record. A "merge" operation is used to fix this type of error.</p>
+  </div>
+  <div class="paragraph">
+  <p>2) <strong>Incorrect identifier selected</strong><br>
+  The registrar mistakenly selects the wrong person, patient, or account and creates or attaches a patient, account, or visit underneath the incorrect person, patient, or account. A "move" operation is used to fix this type of error.</p>
+  </div>
+  <div class="paragraph">
+  <p>3) <strong>Incorrect identifier assigned</strong><br>
+  The registrar accidentally types in the wrong new identifier for a person, patient, account, or visit. This type of mistake usually occurs when identifiers are manually assigned (not system generated). A "change identifier" operation is used to fix this type of error.</p>
+  </div>
+  <div class="sect4">
+  <h5 id="_hierarchy_of_identifiers">Hierarchy of Identifiers</h5>
+  <div class="paragraph">
+  <p>This section was written from the perspective of one controlling MPI and does not adequately cover the implementation of peer MPIs or multiple enterprise identifiers. To avoid future problems implementors should carefully examine the inferences of multiple identifiers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Enterprise level MPI systems may collaborate forming either peer-to-peer or hierarchical relationships. When this occurs, multiple enterprise level identifiers may be required in the context of a single HL7 message. An example of a peer-to-peer MPI relationship might be represented by a data sharing application between the US Department of Veterans Affairs and the US Department of Defense, where each have their own MPI. An example of a hierarchical MPI relationship might be required by the need for local, city, and state organizations to collaborate, where each have an MPI.</p>
+  </div>
+  <div class="paragraph">
+  <p>These events assume a hierarchy of identifiers exists between person, patient, account, and visit. The hierarchy is as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>Level 3 - Patient (identified by <em>PID-3 - Patient Identifier List</em>)</p>
+  </div>
+  <div class="paragraph">
+  <p>Level 2 - Account (identified by <em>PID-18 - Patient Account Number</em>)</p>
+  </div>
+  <div class="paragraph">
+  <p>Level 1 - Visit (identified by <em>PV1-19 - Visit Number</em>)</p>
+  </div>
+  <div class="paragraph">
+  <p>The visit-level identifier <em>PV1-19 - Visit Number</em> is the lowest level identifier and is considered subordinate to the account-level identifier <em>PID-18 - Patient Account Number</em>.</p>
+  </div>
+  <div class="paragraph">
+  <p>This means that visit identifiers are defined within the context of an account identifier, and implies that visit identifiers are unique within account identifiers. Similarly, account identifiers are subordinate to, and unique within, patient identifiers; patient identifiers are subordinate to, and unique within, person identifiers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Conversely, the person-level identifier is the highest-level identifier and is considered superior to the patient-level identifiers, which are superior to the account-level identifier, which is superior to any visit-level identifiers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Note that these events will also apply to environments in which one or more of these levels do not occur. For example, some environments may not have a person (or MPI) level, or they may not have a visit level, or they may have a visit level without an account level. The hierarchy concept is depicted graphically below. For example, Adam Everyman might be assigned an MPI number at the Good Health Hospital network (depicted by the circle). He may have different medical records at two hospitals within the network (depicted by the squares). Associated with each of these medical records are two accounts (depicted by the triangles). Note that the environment illustrated does not support the "visit" level, although in other implementations it might.</p>
+  </div>
+  <div class="imageblock text-center">
+  <div class="content">
+  <img src="impl_considerations1.png" alt="impl_considerations1.png" width="499" height="174">
+  </div>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_merge">Merge</h5>
+  <div class="paragraph">
+  <p>A merge event signals that two distinct records have been combined together into a single record with a single set of identifiers and data surviving at the level of the merge. All records at a level subordinate to the merged identifier are combined under the surviving record. For example, an A40 (merge patient - patient identifier list) event would be sent to signal that two person records (identified by <em>MRG-1 - Prior Patient ID</em> and by <em>PID-3 - Patient ID</em>) have been merged into a single record. All of the identifiers, accounts, and visits under the person record are not merged together - they are instead combined under the same person record. The following figure graphically depicts the merge event:</p>
+  </div>
+  <div class="quoteblock">
+  <blockquote>
+  <div class="paragraph">
+  <p><span class="image"><img src="merge.png" alt="merge"></span></p>
+  </div>
+  </blockquote>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  It is not the intent of the merge definition to define the application or implementation specifics of how various systems or environments define, use or handle non-surviving information. "Non-surviving" in this document implies that a data set was existing in a fashion that was incorrect. Merging it into a new data set in itself implies that where there were two datasets, there is now only one. The means by which any system or environment conveys this new data set and the absence of the previous data set to the user is application specific. It is noted that some systems may still physically keep these "incorrect" datasets for audit trail or other purposes.
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_move">Move</h5>
+  <div class="paragraph">
+  <p>A "move" involves transferring one or more datasets (identified by a subordinate identifier) from one superior identifier at the next hierarchical level to another superior identifier at the next hierarchical level, while all identifiers involved retain their original value. An exception to retaining the original identifier value may occur if any of the subordinate source identifiers already exist under the target superior identifier. In this case the identifier value may have to be renumbered in order to be uniquely identified under the target superior identifier. (Refer to section <em>3.6.2.2.8</em>, "link:#<em>A45</em>-<em>move_visit information - visi[_A45 - Move visit information</em>]" for an illustration of this.)</p>
+  </div>
+  <div class="paragraph">
+  <p>A move event signals that a patient, account, or visit has been moved from one person, patient, or account, respectively, to another. All records at a subordinate level are also moved. For example, an A43 (move patient information - patient identifier list) event would be sent to signal that a medical records administrator has moved a medical record attached to an incorrect person to a correct person. The following figure graphically depicts the move event:</p>
+  </div>
+  <div class="quoteblock">
+  <blockquote>
+  <div class="paragraph">
+  <p><span class="image"><img src="move.png" alt="move" width="576" height="174"></span></p>
+  </div>
+  </blockquote>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  The move event implies that all data related to the incorrect source ID and its subordinate IDs (specified in the MRG segment) will be moved to the correct target ID (specified in the PID or PV1 segment). Specifying each subordinate ID in repeating PID/MRG/PV1 sets is optional but not recommended.
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_change_identifier">Change identifier</h5>
+  <div class="paragraph">
+  <p>A change identifier event signals that a single person, patient, account, or visit identifier has been changed. It does not reflect a merge or a move; it is simply a change of an identifier. For example, a "Change Identifier" event would be sent to signal that the registrar has changed an incorrectly assigned person identifier to a correct person identifier. The following picture graphically depicts this event:</p>
+  </div>
+  <div class="quoteblock">
+  <blockquote>
+  <div class="paragraph">
+  <p><span class="image"><img src="change_identifier.png" alt="change_identifier"></span></p>
+  </div>
+  </blockquote>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_source_and_target_identifiers">Source and target identifiers</h5>
+  <div class="paragraph">
+  <p>Merge, move, and change events reference target and source identifiers. The incorrect source identifier is specified in the MRG segment. The correct target identifier is identified in the PID or PV1 segment. For example, when you are changing a patient account number the source would be <em>MRG-3 - Prior Patient Account Number</em>. The target is <em>PID-18 - Patient Account Number</em>.</p>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_tightly_coupled_relationship">Tightly coupled relationship</h5>
+  <div class="paragraph">
+  <p>When patient/person identifiers are the target in merge, move, or change events, as specified in the <em>PID-2 - Patient ID</em>, <em>PID-3 - Patient Identifier List</em> and <em>PID-4 - Alternate Patient ID-PID</em>, the associated source identifiers in the <em>MRG-4 - Prior Patient ID</em>, <em>MRG-1 - Prior Patient Identifier List</em>, and <em>MRG-2 - Prior Alternate Patient ID</em>, respectively, must be "tightly coupled." Each event that is defined as a merge, move, or change message carries the "tightly" coupled relationship at the appropriate level in one of two ways: first, by virtue of positional placement in the sequence of identifiers; or, second, by identifier type and assigning authority. The methodology used to establish the definition of "tightly coupled" relationship is determined by site negotiation. The recommended definition is by virtue of positional placement in the sequence of identifiers (pairwise). In addition, HL7 allows the use of the second definition by identifier type and assigning authority as an acceptable convention to establish a "tightly coupled" relationship. In the absence of a site negotiated definition, it is assumed that the positional placement of the identifiers is the default method.</p>
+  </div>
+  <div class="paragraph">
+  <p>The list of identifiers can be aligned positionally in their respective segment fields and processed by the receiving system by virtue of their order. This is sometimes referred to as an "ordered pairwise" relationship and is described further in section <em>3.6.2.1.7</em>, "<a href="#ordered-pairwise-relationship"><em>Ordered pairwise relationship</em></a>".</p>
+  </div>
+  <div class="paragraph">
+  <p>Alternatively, the uniqueness of the identifiers included in the message is determined by the combination of identifier type and assigning authority. It is assumed that both sending system and receiving system can inspect both of these qualifiers as a message is constructed or processed to determine the "tightly coupled" relationship between the identifiers. This can be referred to as "identifier type/assigning authority" relationship and is described further in section <em>3.6.2.1.8</em>, "link:#<em>Identifier_type</em>/<em>assigning authori[_Identifier type/assigning authority relationship</em>]".</p>
+  </div>
+  <div class="paragraph">
+  <p>The pairing of identifiers between the MRG segment fields and their associated identifiers in the PID or PV1 segment are defined below:</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 31%;">
+  <col style="width: 9%;">
+  <col style="width: 60%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Person</strong></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PID-2 - Patient ID</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-4 - Prior Patient ID</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Patient</strong></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Pid-3 - Patient Identifier List</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-1 - Prior Patient Identifier List</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>and by</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Explicit order of identifiers in the list</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>or by</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;identifier type code&gt;</em> and <em>&lt;assigning authority&gt;</em> field components</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PID-4 - Alternate Patient ID</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-2 - Prior Alternate Patient ID</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Account</strong></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PID-18 - Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-3 - Prior Patient Account Number</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Visit</strong></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PV1-19 - Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-5 - Prior Visit Number</em></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PV1-50 - Alternate Visit ID</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>with</em></strong></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>MRG-6 - Prior Alternate Visit ID</em></p></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_ordered_pairwise_relationship">Ordered pairwise relationship</h5>
+  <div class="paragraph">
+  <p>In a strict sense, this type of relationship is characterized by a one-to-one association based on type (e.g., medical record number to medical record number, etc.) and the corresponding order of the element, and is typically found in list or set operations. However, for purposes of practical implementation, this relationship will be defined as a simple one-for-one pairing, as exists between the <em>PID-3 - Patient Identifier List</em> and the <em>MRG-1 - Prior Patient Identifier List</em>. In other words, elements "A", "B", and "C" in the first list would directly correspond to elements "X", "Y", and "Z" in the second list. No consideration is made to the type or value of the corresponding elements; it is the explicit order of the elements which controls the association process. This scenario could be expressed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>1</sub> = \{A,B,C}</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>2</sub> = \{X,Y,Z}</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 100%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A : X</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>B : Y</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C : Z</strong></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>A second scenario may arise which deserves mention. As in the list example above, elements "A", "B", and "C" in the first list would "pair-up" with elements "X", "Y", "Z", "Q", "R", and "S" in the second list. Again, no consideration is made to the type or value of the corresponding elements; it is the order and presence which controls the association process. This scenario could be expressed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>1</sub> = \{A,B,C}</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>2</sub> = \{X,Y,Z,Q,R,S}</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 100%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A : X</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>B : Y</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C : Z</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: Q</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: R</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: S</strong></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>In the second scenario, the last three elements "Q", "R", and "S" are not affected and their value remains as if no association had been made.</p>
+  </div>
+  <div class="paragraph">
+  <p>A third scenario may arise which deserves mention. As in the list example above, elements "A", "B", "C", "D", "E", and "F" in the first list would "pair-up" with elements "X", "Y", and "Z" in the second list. Again, no consideration is made to the type or value of the corresponding elements; it is the order and presence which controls the association process. This scenario could be expressed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>1</sub> = \{A,B,C,D,E,F}</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>2</sub> = \{X,Y,Z}</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 100%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A : X</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>B : Y</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C : Z</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>D :</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>E :</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>F :</strong></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>In the third scenario, the last three elements "D", "E", and "F" are not affected and their value remains the same as if no association had been made.</p>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_identifier_type_assigning_authority_relationship">Identifier type / assigning authority relationship</h5>
+  <div class="paragraph">
+  <p>As stated earlier, the uniqueness of the identifiers included in a message can be determined by the combination of identifier type (t) and assigning authority (a). It is assumed that both sending system and receiving system can inspect both of these qualifiers as a message is constructed or processed. This method is used to determine the "tightly coupled" relationship between the identifiers. The implementation of this relationship exists between the <em>PID-3 - Patient Identifier List</em> and the <em>MRG-1 - Prior Patient Identifier List</em>. In other words, elements "B<sup>t2</sup>a1", "C<sup>t3</sup>a1", "D<sup>t4</sup>a1", "A<sup>t1</sup>a1", "E<sup>t5</sup>a1", and "F<sup>t6</sup>a1" in the first list would be associated with elements "X<sup>t1</sup>a1", "Y<sup>t2</sup>a1", and "Z<sup>t3</sup>a1 in the second list. This scenario could be expressed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>1</sub> = \{B<sup>t2</sup>a1,C<sup>t3</sup>a1,D<sup>t4</sup>a1,A<sup>t1</sup>a1,E<sup>t5</sup>a1,F<sup>t6</sup>a1}</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>2</sub> = \{X<sup>t1</sup>a1,Y<sup>t2</sup>a1,Z<sup>t3</sup>a1}</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 100%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>B<sup>t2</sup>a1 : Y<sup>t2</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C<sup>t3</sup>a1 : Z<sup>t3</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>D<sup>t4</sup>a1 :</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A<sup>t1</sup>a1 : X<sup>t1</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>E<sup>t5</sup>a1 :</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>F<sup>t6</sup>a1 :</strong></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>In this scenario, the three elements which do not have corresponding identifier type and assigning authority "D<sup>t4</sup>a1", "E<sup>t5</sup>a1", and "F<sup>t6</sup>a1" are not affected and their value remains the same as if no association had been made.</p>
+  </div>
+  <div class="paragraph">
+  <p>A second scenario may arise which deserves mention. In the case of identifier type and assigning authority definition, the elements "A<sup>t1</sup>a1", "B<sup>t2</sup>a1", and "C<sup>t3</sup>a1" in the first list would be associated with elements "X<sup>t4</sup>a1", "Y<sup>t2</sup>a1", "Z<sup>t3</sup>a1", "Q<sup>t1</sup>a1", "R<sup>t5</sup>a1", and "S<sup>t6</sup>a1" in the second list. No consideration is made to the order of the identifiers; it is the identifier type and assigning authority of the corresponding elements which controls the association process. This scenario could be expressed as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>1</sub> = \{A<sup>t1</sup>a1,B<sup>t2</sup>a1,C<sup>t3</sup>a1}</p>
+  </div>
+  <div class="paragraph">
+  <p>List<sub>2</sub> = \{X<sup>t4</sup>a1,Y<sup>t2</sup>a1,Z<sup>t3</sup>a1, Q<sup>t1</sup>a1,R<sup>t5</sup>a1,S<sup>t6</sup>a1}</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 100%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A<sup>t1</sup>a1 : Q<sup>t1</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>B<sup>t2</sup>a1 : Y<sup>t2</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C<sup>t3</sup>a1 : Z<sup>t3</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: X<sup>t4</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: R<sup>t5</sup>a1</strong></p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>: S<sup>t6</sup>a1</strong></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>In the second scenario, the three elements which do not have corresponding identifier type and assigning authority "X<sup>t4</sup>a1", "R<sup>t5</sup>a1", and "S<sup>t6</sup>a1" are not affected and their value remains the same as if no association had been made.</p>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_global_merge_and_move_message_construct_versus_repeating_segment_message_constructs">Global merge and move message construct versus repeating segment message constructs</h5>
+  <div class="paragraph">
+  <p>A flexible message construct is provided for merge trigger events. The message construct allows for a repeating set of PID, optional PD1, MRG, and optional PV1 segments as illustrated below:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH</p>
+  </div>
+  <div class="paragraph">
+  <p>EVN</p>
+  </div>
+  <div class="paragraph">
+  <p>\{ PID</p>
+  </div>
+  <div class="paragraph">
+  <p>[PD1]</p>
+  </div>
+  <div class="paragraph">
+  <p>MRG</p>
+  </div>
+  <div class="paragraph">
+  <p>[PV1]</p>
+  </div>
+  <div class="paragraph">
+  <p>}</p>
+  </div>
+  <div class="paragraph">
+  <p>Trigger events support the concept of a global move or merge, where all the subordinate identifiers are moved or merged. For example, the use case for A41 (merge account-patient account number) (Section <em>3.6.2.2.3</em>, "<em>A41 - merge account - patient account number (global)</em>") illustrates a merge on the patient account number (<em>PID-18 - Patient Account Number</em>). All subordinate identifiers (<em>PV1-19 - Visit Number</em>) are moved to the target <em>PID-18 - Patient Account Number Identifier</em>, even though they are not specified in the message.</p>
+  </div>
+  <div class="paragraph">
+  <p>A repeating segment message construct supports reporting of the subordinate identifiers using the repeating segments. This is illustrated in the use case for A40 (merge patient - patient identifier list) (Section <em>3.6.2.2.2</em>, "<em>A40 - merge patient - patient identifier list (repeating segment)</em>," A41 (merge account - patient account number) (Section <em>3.6.2.2.4</em>, "<em>A41 - merge account - patient account number (repeating segment)</em>"), and A45 (move visit information-visit number) (Section <em>3.6.2.2.9</em> "<em>A45 - move visit information - visit number (repeating segment)</em>"). Specifying each subordinate ID in repeating segments is optional but not recommended. This construct can be used when renumbering of identifiers is necessary as illustrated in Sections <em>3.6.2.2.2</em>, "<em>A40 - merge patient - patient identifier list (repeating segment)</em>," <em>3.6.2.2.4</em>, "<em>A41 - merge account - patient account number (repeating segment)</em>," and <em>3.6.2.2.9</em>, "<em>A45 - move visit information - visit number (repeating segment)</em>," or to explicitly identify individual subordinate identifiers as illustrated in Section <em>3.6.2.2.9</em>, "<em>A45 - move visit information - visit number (repeating segment)</em>."</p>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_identifier_renumbering">Identifier renumbering</h5>
+  <div class="paragraph">
+  <p>When renumbering of identifiers occurs, the repeating segment construct may be required in order to report identifier number changes. When renumbering occurs, the incorrect source identifier is specified in the MRG segment and the correct target identifier is reported in the PID or PV1 segment. Refer to the use case for A41 (merge account-patient account number) for an illustration.</p>
+  </div>
+  </div>
+  <div class="sect4">
+  <h5 id="_superior_identifier_reporting">Superior identifier reporting</h5>
+  <div class="paragraph">
+  <p>When merging or moving subordinate numbers, the higher level, "superior" identifiers should be included in the message. For example, when merging an account where the target is <em>PID-18 - Patient Account Number</em> and the source is <em>MRG-3 - Prior Patient Account Number</em>, the higher level patient identifiers (<em>PID-3 -Patient Identifier List</em> and <em>MRG-1 - Prior Patient Identifier List</em>) and person identifiers (<em>PID-2 - Patient ID</em> and <em>MRG-4 - Prior Patient ID</em>) should also be reported in the message.</p>
+  </div>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_trigger_events">Trigger events</h4>
+  <div class="paragraph">
+  <p>The intent of trigger events A40 (merge patient- patient identifier list), A41 (merge account-patient account number), A42 (merge visit-visit number), A43 (move patient information-patient identifier list), A44 (move account information-patient account number), A45 (move visit information-visit number), A47 (change patient identifier list), A49 (change patient account number), A50 (change visit number), and A51 (change alternate visit ID) is to reconcile distinct sets of existing person/patient data records that have been entered under different identification numbers, either deliberately or because of errors. Ideally, following any of these trigger events, all of the person/patient data should be accessible under whatever surviving identifiers were specified in the messages. Because of substantial differences in database architectures and system-dependent data processing requirements or limitations, the exact meaning and implementation of these events must be negotiated between systems.</p>
+  </div>
+  <div class="sect4">
+  <h5 id="_a40_merge_patient_patient_identifier_list">A40 - merge patient - patient identifier list</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A40 - Merge patient - patient identifier list</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - During the admission process, the registrar does not find a record for patient EVE EVERYWOMAN in the ADT system and creates a new record with patient identifier MR2. EVE EVERYWOMAN has actually been to the healthcare facility several times in the past under her maiden name, Eve Maidenname with patient identifier MR1. The problem persists for a while. During that time, several more accounts are assigned to Eve under her newly created patient ID MR2. Finally, the problem is discovered and Medical Records merges her two charts together leaving patient identifier MR1. All the accounts (ACCT1, ACCT2) that were assigned to MR2 are combined under MR1 as a result.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em> (Note: <em>PID-18 - Patient Account Number</em> is not valued; all accounts associated with MR2 are combined under MR1). To merge <em>PID-18 - Patient Account Number</em> data only, use event A41 (merge account-patient account number). To move <em>PID-18 - Patient Account Number</em> data use event A44 (move account information-patient account number).</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em>) (Note: <em>MRG-3 - Prior Patient Account Number</em> is not valued; all accounts associated with MR2 are combined under MR1.)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A40^ADT_A39|00000003|P|2.8|&lt;cr&gt;+
+  EVN|A40|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||MAIDENNAME^EVE|&#8230;&#8203;.&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Merge</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Merge</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1 ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2 ACCT2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Implementation considerations: This scenario exists when two medical records are established for the same person.</p>
+  </div>
+  <div class="paragraph">
+  <p>Since there could be a discrepancy in the demographic information between the two records, reconciliation may be required. In the example above, the implementation allowed the older demographic information (in the PID) to survive. The demographics implied by the IDs in the MRG segment, did not survive. Surviving and non-surviving demographic information is application and implementation specific. An A08 (update patient information) event should be sent and/or negotiated as necessary to provide for implementation and application-specific needs.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a40_merge_patient_patient_identifier_list_repeating_segment">A40 - merge patient - patient identifier list (repeating segment)</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A40 - Merge patient - patient identifier list</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - During the admission process, the registrar does not find a record for patient EVE EVERYWOMAN in the Patient Administration system and creates a new record with patient identifier MR2. EVE EVERYWOMAN has actually been to the healthcare facility several times in the past under her maiden name, EVE MAIDENNAME with patient identifier MR1. The problem persists for a while. During that time, several more accounts are assigned to EVE under her newly created patient ID MR2. Finally, the problem is discovered and Medical Records merges her two charts together leaving patient identifier MR1. All the accounts (ACCT1, ACCT2) that were assigned to MR2 are combined under MR1 as a result. Since the account numbers are not unique, they are also renumbered.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em> and <em>PID-18 - Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em> and <em>MRG-3 - Prior Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A40^ADT_A39|00000003|P|2.8|&lt;cr&gt;+
+  EVN|A40|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE|||||||||||||ACCT3&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ||ACCT1&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE|||||||||||||ACCT4&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ||ACCT2&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Merge</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Merge</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1 ACCT1*</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2 ACCT2*</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT3*</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT4*</p>
+  </div>
+  <div class="paragraph">
+  <p>*accounts renumbered</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Implementation considerations: This scenario exists when two medical records are established for the same person.</p>
+  </div>
+  <div class="paragraph">
+  <p>If the account numbers are not unique (as implied by the After Merge example above) and renumbering of the accounts is required, you must use repeating segments as illustrated in the Example Transaction. Refer to Section <em>3.6.2.1.9</em>, "<em>Global merge and move message construct versus repeating segment message constructs</em>," for additional information regarding message construct.</p>
+  </div>
+  <div class="paragraph">
+  <p>Since there could be a discrepancy in the demographic information between the two records, reconciliation may be required. In the example above, the implementation allowed the older demographic information (in the PID) to survive. The demographics implied by the IDs in the MRG segment, did not survive. Surviving and non-surviving demographic information is application and implementation specific. An A08 (update patient information) event should be sent and/or negotiated as necessary to provide for implementation and application specific needs.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a41_merge_account_patient_account_number_global">A41 - merge account - patient account number (global)</h5>
+  <div class="paragraph">
+  <p>This event illustrates the concept of a global merge as defined in Section <em>3.6.2.1.9</em>, "<em>Global merge and move message construct versus repeating segment message constructs</em>."</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A41 - Merge account information - patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Eve Everywoman (patient identifier MR1) is a recurring outpatient at the Physical Therapy clinic at hospital XYZ with account number ACCT1. She has visited the clinic several times. When she arrives for therapy, a new registrar does not realize she already has an account and opens a new one with account number ACCT2. When the mistake is discovered, the two accounts are merged together, combining all visits under account ACCT1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-18 - Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-3 - Prior Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A41^ADT_A39|00000005|P|2.8|&lt;cr&gt;+
+  EVN|A41|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE||19501010|M|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT2&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Merge</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Merge</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>96124</p>
+  </div>
+  <div class="paragraph">
+  <p>96126</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div>
+  <div class="paragraph">
+  <p>96128</p>
+  </div>
+  <div class="paragraph">
+  <p>96130</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>96124</p>
+  </div>
+  <div class="paragraph">
+  <p>96126</p>
+  </div>
+  <div class="paragraph">
+  <p>96128</p>
+  </div>
+  <div class="paragraph">
+  <p>96130</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Implementation considerations: This scenario exists when two accounts are established for the same patient.</p>
+  </div>
+  <div class="paragraph">
+  <p>The PV1 segment is not valued since this event is really a merge at the <em>PID-18 - Patient Account Number</em> level. All identifiers below the <em>PID-18 - Patient Account Number</em> are combined under the surviving Patient Account Number.</p>
+  </div>
+  <div class="paragraph">
+  <p>Since there could be a discrepancy in the demographic information between the two records, reconciliation may be required. Surviving and non-surviving demographic information is application and implementation specific. An A08 (update patient information) event should be sent and/or negotiated as necessary to provide for implementation and application-specific needs.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a41_merge_account_patient_account_number_repeating_segment">A41 - merge account - patient account number (repeating segment)</h5>
+  <div class="paragraph">
+  <p>This event illustrates the concept of a repeating segment merge as defined in <em>3.6.2.2.1</em>.</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A41 - Merge account - patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Eve Everywoman (patient identifier MR1) is a recurring outpatient at the Physical Therapy clinic at hospital XYZ with account number ACCT1. She has visited the clinic several times. When she arrives for therapy, a new registrar does not realize she already has an account and opens a new one with account number ACCT2. When the mistake is discovered, the two accounts are merged together, combining all visits under account ACCT1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-18 - Patient Account Number</em> and <em>PV1-19 - Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-3 - Prior Patient Account Number</em> and <em>MRG-5 - Prior Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A41^ADT_A39|00000005|P|2.8|&lt;cr&gt;+
+  EVN|A41|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE||19501010|F|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT2||VISIT1&lt;cr&gt;+
+  PV1|1|I|||||||||||||||||VISIT3&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE||19501010|F|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT2||VISIT2
+  PV1|1|I|||||||||||||||||VISIT4&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Merge</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Merge</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1*</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2*</p>
+  </div>
+  <div class="paragraph">
+  <p>*Visits erroneously assigned</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT3**</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT4**</p>
+  </div>
+  <div class="paragraph">
+  <p>**Visits combined and renumbered as a result of merging the account</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Implementation considerations: This scenario exists when two accounts and associated visits are established for the same patient.</p>
+  </div>
+  <div class="paragraph">
+  <p>Repeating PID/MRG/PV1 segments report each Account Number and Visit Number affected. This construct is required since the visits are renumbered in this example.</p>
+  </div>
+  <div class="paragraph">
+  <p>Since there could be a discrepancy in the demographic information between the two records, reconciliation may be required. Surviving and non-surviving demographic information is application and implementation specific. An A08 (update patient information) event should be sent and/or negotiated as necessary to provide for implementation and application-specific needs.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a42_merge_visit_visit_number">A42 - Merge visit - visit number</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A42 - Merge visit - visit number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - A42 (merge visit -visit number) - Eve Everywoman (patient identifier MR1) is a recurring outpatient at the Physical Therapy clinic at hospital XYZ with account number ACCT1. She has visited the clinic several times. When she arrives for therapy, two different registrars create a new visit numbers. The mistake is not discovered immediately and clinical data is recorded under both visit numbers. When the mistake is discovered, the two visits are merged together, leaving visit VISIT1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PV1-19 - Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-5 - Prior Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A42^ADT_A39|00000005|P|2.8|&lt;cr&gt;+
+  EVN|A42|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYEWOMAN^EVE||19501010|F|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||VISIT2&lt;cr&gt;+
+  PV1|1|I|||||||||||||||||VISIT1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Merge</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Merge</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation considerations: This scenario exists when two visits are established in error for the same patient and episode of care.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a43_move_patient_information_patient_identifier_list">A43 - move patient information - patient identifier list</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 53%;">
+  <col style="width: 47%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A43 - Move patient information - patient identifier list</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - information from ABC HMO is loaded to a repository system each month. Eve Everywoman is entered in January and assigned Enterprise Number 1 (E1). Eve has visited Hospital XYZ and is assigned medical record number MR1. Evi Everywoman (a different person) is also a member of ABC HMO loaded to the repository and assigned Enterprise Number E2. Evi has visited Hospital XYZ and is assigned medical record number MR1. Evi visits Clinic DEF where she is assigned medical record number MR2 which is erroneously associated with Eve&#8217;s Enterprise Number (E1). When the error is discovered MR2 is moved from Enterprise Number E1 to E2.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-2 - Patient ID</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-4 - Prior Patient ID</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REPOSITORY|ENT|RSP1P8|MCM|200301051530|SEC|ADT</sup>A43^ADT_A43|0000009|P|2.8|&lt;cr&gt;+
+  EVN|A43|200301051530&lt;cr&gt;+
+  PID|1|E2|MR2<sup>^</sup>ABCHMO|||EVERYWOMAN^EVI|&#8230;&#8203;.&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>ABCHMO|||E1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Move</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Move</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>E1 E2</p>
+  </div>
+  <div class="paragraph">
+  <p>MR1 MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>MR2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>E1 E2</p>
+  </div>
+  <div class="paragraph">
+  <p>MR1 MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>MR2</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Implementation considerations: <em>PID-3 - Patient Identifier List</em> and <em>MRG-1 - Prior Patient Identifier List</em> are the same value since the PID-3 value does not change in this scenario.</p>
+  </div>
+  <div class="paragraph">
+  <p>The example above would be expressed as follows. In the following example, the assigning authority ENT1 represents an Enterprise and the PE identifier type code represents the Person&#8217;s Enterprise number. The MR1 identifier is omitted from the message because it is not moved.</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REPOSITORY|ENT|RSP1P8|MCM|200301051530|SEC|ADT</sup>A43^ADT_A43|0000009|P|2.8|&lt;cr&gt;+
+  EVN|A43|200301051530&lt;cr&gt;+
+  PID|1||E2<sup>^</sup>ENT1<sup>PE~MR2</sup><sup>^ABCHMO</sup>MR|||EVERYWOMAN^EVI|&#8230;&#8203;.&lt;cr&gt;+
+  MRG|E1<sup>^</sup>ENT1<sup>PE~MR2</sup><sup>^ABCHMO</sup>MR|. . .&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a44_move_account_information_patient_account_number">A44 - move account information - patient account number</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A44 - Move account information - patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - During the admission process, the admitting clerk uses the Medical Record Number of Adam Everyman III (MR1) instead of Adam Everyman, Jr. (MR2). The Patient Administration system assigns the new admission account number ACCT2. When the mistake is discovered, account ACCT2 is moved to the correct Medical Record, MR2. The account number is not changed.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em> and <em>PID-18 - Patient Account Number</em> (Note: <em>PID-18 - Patient Account Number</em> and <em>MRG-3 - Prior Patient Account Number</em> will be the same since the account number does not change in this scenario).</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em> and <em>MRG-3 - Prior Patient Account Number</em> (NOTE: <em>MRG-3 - Prior Patient Account Number</em> must be valued to indicate which account to move)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A44^ADT_A43|00000007|P|2.8|&lt;cr&gt;+
+  EVN|A44|200301051530&lt;cr&gt;+
+  PID|||MR2<sup>^</sup>XYZ||Everyman<sup>Adam</sup>A^JR||19501010|M|||123 EAST STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT2&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT2&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Move</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Move</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1 ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1 ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT2</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation considerations: This scenario exists when two medical records legitimately exist for two different people and an account is incorrectly associated with the wrong medical record number.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a45_move_visit_information_visit_number_repeating_segment">A45 - move visit information - visit number (repeating segment)</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A45 - Move visit information - visit number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Eve Everywoman (patient identifier MR1) is a recurring outpatient at the Physical Therapy and Speech Therapy clinics at hospital XYZ. She is assigned a different account for each clinic; her account number for Physical Therapy is ACCT1 and her account number for Speech Therapy is X1. However, on two different occasions, the Speech Therapy registrar accidentally assigned her visits (96102 and 96104) to the Physical Therapy account. The problem is later discovered and the corresponding visits are moved to the correct account.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-18 - Patient Account Number</em> and <em>PV1-19 - Visit Number</em>.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-3 - Prior Patient Account Number</em> and <em>MRG-5 - Prior Visit Number</em>.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A45^ADT_A45|00000005|P|2.8|&lt;cr&gt;+
+  EVN|A45|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE||19501010|M|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||X1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||96102&lt;cr&gt;+
+  PV1||O|PT||||||||||||||||96102&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||96104&lt;cr&gt;+
+  PV1||O|PT||||||||||||||||96104&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Move</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Move</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>96100</p>
+  </div>
+  <div class="paragraph">
+  <p>96102*</p>
+  </div>
+  <div class="paragraph">
+  <p>96104*</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div>
+  <div class="paragraph">
+  <p>96101</p>
+  </div>
+  <div class="paragraph">
+  <p>96103</p>
+  </div>
+  <div class="paragraph">
+  <p>96105</p>
+  </div>
+  <div class="paragraph">
+  <p>*Visits erroneously assigned</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>96100</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div>
+  <div class="paragraph">
+  <p>96101</p>
+  </div>
+  <div class="paragraph">
+  <p>96102</p>
+  </div>
+  <div class="paragraph">
+  <p>96103</p>
+  </div>
+  <div class="paragraph">
+  <p>96104</p>
+  </div>
+  <div class="paragraph">
+  <p>96105</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>In the above transaction/implementation, the application that generated the message assigns unique visit numbers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Implementation Considerations: In this scenario the repeating MRG/PV1 construct is used to indicate which visits are moved, as illustrated in the Example Transaction<em>. MRG-5 - Prior Visit Number</em> and <em>PV1-19 - Visit Number</em> are the same values because the visit numbers do not change. Refer to section link:#<em>Global_merge_and_move message const[_3.6.2.1.9</em>], "link:#<em>Global_merge_and_move message const[_Global merge and move message construct versus repeating segment message constructs&#44;</em>]" for additional information regarding message construct.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a45_move_visit_information_visit_number_repeating_segment_2">A45 - move visit information - visit number (repeating segment)</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A45 - Move visit information - visit number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case -Eve Everywoman (patient identifier MR1) is a recurring outpatient at the Physical Therapy and Speech Therapy clinics at hospital XYZ. She is assigned a different account for each clinic; her account number for Physical Therapy is ACCT1 and her account number for Speech Therapy is X1. However, on two different occasions, the Speech Therapy registrar accidentally assigned her visits (VISIT2 and VISIT3) to the Physical Therapy account. The problem is later discovered and the corresponding visits are moved to the correct account.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-18 - Patient Account Number</em> and <em>PV1-19 - Visit Number.</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-3 - Prior Patient Account Number</em> and <em>MRG-5 - Prior Visit Number</em>.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A45^ADT_A45|00000005|P|2.8|&lt;cr&gt;+
+  EVN|A45|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYWOMAN^EVE||19501010|M|||123 NORTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||X1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||VISIT2&lt;cr&gt;+
+  PV1||O|PT||||||||||||||||VISIT4&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||VISIT3&lt;cr&gt;+
+  PV1||O|PT||||||||||||||||VISIT5&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Move</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Move</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2*</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT3*</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT3</p>
+  </div>
+  <div class="paragraph">
+  <p>*Visits erroneously assigned</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT3</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT4**</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT5**</p>
+  </div>
+  <div class="paragraph">
+  <p>**visits moved and renumbered</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>In the above transaction/implementation, the application that generated the message allows non-unique visit numbers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Implementation Considerations: If Visit Numbers are not unique (as implied by the After Move example above) and renumbering of the visits is required, you must use a repeating MRG/PV1 construct as illustrated in the Example Transaction. Refer to <em>3.6.2.2.1</em>, "<em>A40 - merge patient - patient identifier list</em>," for additional information regarding message construct.</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a47_change_patient_identifier_list">A47 - change patient identifier list</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 53%;">
+  <col style="width: 47%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A47 - Change patient identifier list</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - The Medical Records Department of XYZ hospital uses a system of manual medical record number assignment. During the admission process, the registrar accidentally assigned the wrong Medical Record Number (MR2 instead of MR1) to ADAM EVERYMAN. Since the correct Medical Record has not yet been assigned to any patient, no merge takes place. The Patient Identifier List is simply changed.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A47|00000002|P|2.8|&lt;cr&gt;+
+  EVN|A47|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYMAN^ADAM||19501010|M|||987 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ||ACCT1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation considerations: None.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a49_change_patient_account_number">A49 - change patient account number</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A49 - Change patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Patients are automatically assigned an account number by hospital XYZ&#8217;s Patient Administration system at admission. However, when the Patient Administration system is down, the admitting clerk manually assigns account numbers from a pool of downtime account numbers. ADAM EVERYMAN (patient ID MR1) was manually assigned downtime account number ACCT1. When the Patient Administration system came back up, the admitting clerk accidentally entered the wrong account number, X1, into the system. When the problem was later discovered, the account number was changed from X1 to ACCT1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-18 - Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-3 - Prior Patient Account Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A49^ADT_A30|00000006|P|2.8|&lt;cr&gt;+
+  EVN|A49|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYMAN^ADAM||19501010|M|||123 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-2222|||S|CAT|ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||X1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation Considerations: None.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a50_change_visit_number">A50 - change visit number</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A50 - Change visit number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Patients are automatically assigned a visit number by hospital XYZ&#8217;s Patient Administration system at check-in. However, when the Patient Administration system is down, the admitting clerk manually assigns visit numbers from a pool of downtime numbers. ADAM EVERYMAN (patient ID MR1) was manually assigned downtime visit number VISIT1. When the Patient Administration system came back up, the admitting clerk accidentally entered the wrong visit number, VISIT2, into the system. When the problem was later discovered, the visit number was changed from VISIT2 to VISIT1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PV1-19 - Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-5 - Prior Visit Number</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A50^ADT_A50|00000006|P|2.8|&lt;cr&gt;+
+  EVN|A50|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYMAN^ADAM||19501010|M|||123 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-2222|||S|CAT|ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1||VISIT2&lt;cr&gt;+
+  PV1|1|O||3|||99<sup>BROWN</sup>JERRY|||ONC||||1||VIP|99<sup>BROWN</sup>JERRY|O/P|VISIT1&#8230;&#8203;&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation considerations: None.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_a51_change_alternate_visit_id">A51 - change alternate visit ID</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A51 - Change alternate visit ID</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Patients are automatically assigned an alternate visit number by hospital XYZ&#8217;s Patient Administration system at check-in. However, when the Patient Administration system is down, the admitting clerk manually assigns alternate visit numbers from a pool of downtime numbers. ADAM EVERYMAN was manually assigned downtime alternate visit number AV1. When the Patient Administration system came back up, the admitting clerk accidentally entered the wrong alternate visit number, AV2, into the system. When the problem was later discovered, the alternate visit number was changed from AV2 to AV1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PV1-50 - Alternate Visit ID</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-6 - Prior Alternate Visit ID</em></p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SECURITY|ADT</sup>A51^ADT_A50|00000006|P|2.8|&lt;cr&gt;+
+  EVN|A51|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ||EVERYMAN^ADAM||19501010|M|||123 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-2222|||S|CAT|ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ||ACCT1|||AV2&lt;cr&gt;+
+  PV1|1|O||3|||99<sup>BROWN</sup>JERRY|||ONC||||1||VIP|99<sup>BROWN</sup>JERRY|O/P|V1|SP|||||||||||||||||||A|||||19990902081010||||||AV1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>AV2</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div>
+  <div class="paragraph">
+  <p>VISIT1</p>
+  </div>
+  <div class="paragraph">
+  <p>AV1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation Considerations: None.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_example_using_multiple_messages">Example using multiple messages</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A47 - Change patient identifier list and A49 - Change patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - Patients are automatically assigned Medical Records Numbers and account numbers by hospital XYZ&#8217;s Patient Administration system at admission. However, when the Patient Administration system is down, the admitting clerk manually assigns account numbers and Medical Records numbers from a pool of downtime numbers. ADAM EVERYMAN was manually assigned downtime Medical Record Number MR1 and downtime account number A1. When the Patient Administration system came back up, the admitting clerk accidentally enters the wrong Medical Record Number (MR2) and account number (X1) into the system. The error occurred because she was reading from the paperwork for a different downtime admit not yet entered into the Patient Administration system. The problem is quickly discovered, and the medical record number and account number was fixed accordingly. Since the other downtime admit had not yet been entered into the Patient Administration system, no merge was required.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em> (Message 1) and <em>PID-18 - Patient Account Number</em> (Message 2)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em> (Message 1) and <em>MRG-3 - Prior Patient Account Number</em> (Message 2)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction - Message 1:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A47^ADT_A30|00000006|P|2.8|&lt;cr&gt;+
+  EVN|A47|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ<sup>MR||EVERYMAN</sup>ADAM||19501010|M|||123 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-2222|||S|CAT|X1&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ^MR|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Example Transaction - Message 2:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A49^ADT_A30|00000006|P|2.5&lt;cr&gt;+
+  EVN|A49|200301051530&lt;cr&gt;+
+  PID|||MR1<sup>^</sup>XYZ<sup>MR||EVERYMAN</sup>ADAM||19501010|M|||123 SOUTH STREET<sup>^NY</sup>NY^10021||(212)111-2222|||S|CAT|ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ^MR||X1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation considerations: Message 1 (A47) changes the patient identifier list. Message 2 (A49) changes the account number.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="sect4">
+  <h5 id="_example_using_multiple_messages_2">Example using multiple messages</h5>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 54%;">
+  <col style="width: 46%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">A44 - Move account information - patient account number and A49 - Change patient account number</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Use Case - During the admitting process, the admitting clerk uses the Medical Record Number of Adam Everyman, III (MR1) instead of Adam Everyman, Jr. (MR2). The Patient Administration system assigns the new admission account number A1. When the mistake is discovered, the account is moved to the correct Medical Record, MR2. The Patient Administration system generates a new account number as a result: number X1.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Target: <em>PID-3 - Patient Identifier List</em> (Message 1) and <em>PID-18 - Patient Account Number</em> (Message 2)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Source: <em>MRG-1 - Prior Patient Identifier List</em> (Message 1) and <em>MRG-3 - Prior Patient Account Number</em> (Message 2)</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>Example Transaction (Message 1):</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A44^ADT_A43|00000007|P|2.8|&lt;cr&gt;+
+  EVN|A44|200301051530&lt;cr&gt;+
+  PID|||MR2<sup>^</sup>XYZ<sup>MR||EVERYMAN</sup>ADAM<sup>A</sup>JR||19501010|M|||123 EAST STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||ACCT1&lt;cr&gt;+
+  MRG|MR1<sup>^</sup>XYZ^MR||ACCT1&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Example Transaction (Message 2):</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|RSP1P8|MCM|200301051530|SEC|ADT</sup>A49^ADT_A30|00000007|P|2.5&lt;cr&gt;+
+  EVN|A49|200301051530&lt;cr&gt;+
+  PID|||MR2<sup>^</sup>XYZ<sup>MR||EVERYMAN</sup>ADAM<sup>A</sup>JR||19501010|M|||123 EAST STREET<sup>^NY</sup>NY^10021||(212)111-3333|||S||X1&lt;cr&gt;+
+  MRG|MR2<sup>^</sup>XYZ^MR||ACCT1&lt;cr&gt;</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Before Change</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">After Change</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>ACCT1</p>
+  </div></div></td>
+  <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+  <p>MR1 MR2</p>
+  </div>
+  <div class="paragraph">
+  <p>X1</p>
+  </div></div></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation Considerations: Message 1, A44 (move account information-patient account number), moves the account from MR1 to MR2. Message 2, A49 (change patient account number), changes the account number.</p></td>
+  <td class="tableblock halign-left valign-top"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_patient_record_links">Patient record links</h3>
+  <div class="paragraph">
+  <p>Linking two or more patients does not require the actual merging of patient information as discussed in Section <a href="#merging-patientperson-information"><em>3.6.2</em></a>, "<a href="#merging-patientperson-information"><em>Merging patient/person information</em></a>;" following a link trigger event, sets of affected patient data records should remain distinct. However, because of differences in database architectures, there may be system-dependent limitations or restrictions regarding the linking of one or more patients that must be negotiated.</p>
+  </div>
+  <div class="paragraph">
+  <p>There are multiple approaches for implementing Master Patient Indexes. It is useful for the purpose of MPI mediation to support two types of linkage. Explicit linkage requires a message declaring a link has been made between multiple identifiers. Implicit linkage is performed when a receiving system infers the linkage from the presence of multiple identifiers present in <em>PID-3 - Patient Identifier List</em>.</p>
+  </div>
+  <div class="paragraph">
+  <p>In an MPI setting, the A24 -link patient information message is preferred for transmitting an explicit link of identifiers whether they are in the same or different assigning authorities. The A37 unlink patient information message is preferred for transmitting the explicit unlinking of identifiers.</p>
+  </div>
+  <div class="paragraph">
+  <p>Implicit linkage of identifiers, sometimes called passive linking, has been implemented using various messages. An acknowledged method is inclusion of multiple identifiers in <em>PID-3 - Patient Identifier List</em>, which the receiving system implicitly links. An MPI or application that makes such an implicit linkage can generate an A24 - link patient information message to explicitly notify another system of this action.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_mpi_integration_an_introduction">MPI Integration - an introduction</h3>
+  <div class="paragraph">
+  <p>The purpose of this section is to provide some insight into how HL7 committees have approached the area of MPI integration, as well as to provide concrete examples of how the integration could be done using messages in Version 2.4 and later.</p>
+  </div>
+  <div class="sect3">
+  <h4 id="_hidden_text">(hidden text)</h4>
+  
+  </div>
+  <div class="sect3">
+  <h4 id="_definitions_what_is_an_mpi">Definitions - what is an MPI?</h4>
+  <div class="paragraph">
+  <p>There can be quite a bit of confusion as to what defines an MPI. Early definitions called it a Master Patient Index, implying only patient data would be managed. Later the definition was expanded to mean persons in general, including patients, guarantors, subscribers, and even providers; essentially any entity that could be considered a "person." Thus the current acronym MPI generally is inferred to mean Master Person Index.</p>
+  </div>
+  <div class="paragraph">
+  <p>An MPI is generally used to manage person identification and cross-reference across disparate systems. Healthcare organizations may have several systems handling various different data processing needs, from laboratory to billing, each with its own database of persons and person identifier numbering schemes. Each of these can be called an ID Domain. An MPI can function as a Correlation Manager between these domains, providing a cross-reference of a person&#8217;s identifiers across each of the domains. Typically an MPI will also have one universal or enterprise identifier that uniquely identifies the person in the MPI itself. The domain for this identifier may or may not be the domain for clients of the MPI.</p>
+  </div>
+  <div class="paragraph">
+  <p>MPI functionality also typically includes methods to provide an identifier for a person, given a set of traits or demographics for that person. An example of the use of this is for a client system to query the MPI for a person given a set of demographics. The MPI uses matching algorithms to find possible matching persons, and returns to the client system the identifiers for those persons.</p>
+  </div>
+  <div class="paragraph">
+  <p>This section currently deals only with MPI functionality related to persons in the context of Version 2.4 and later. It is assuming integration using Version 2.4 and later ADT messages, and the functionality surrounding finding and identifying a person.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_hl7_and_corbamed_pids">HL7 and CORBAmed PIDS</h4>
+  <div class="paragraph">
+  <p>There has been an effort to harmonize the modeling work that has been done in the CORBAMed Patient Identification Service (PIDS) with the HL7 message set, with an eye toward HL7 Version 3.0. You may see evidence of CORBAMed modeling in this implementation, but that should not be taken as evidence that full harmonization has taken place. There is much work left to do in this area.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_mpi_query_for_person_lookup_and_identification">MPI QUERY for person lookup and identification</h4>
+  <div class="paragraph">
+  <p>Several QBP/RSP queries have been developed to aid in the integration of systems with an MPI. They consist of several Qxx/Kxx trigger/response pairs and one Q24/K24 trigger/response pair. The following table lists their functions:</p>
+  </div>
+  <div class="paragraph">
+  <p>MPI QBP/RSP Queries</p>
+  </div>
+  <table class="tableblock frame-all grid-all stretch">
+  <colgroup>
+  <col style="width: 15%;">
+  <col style="width: 28%;">
+  <col style="width: 57%;">
+  </colgroup>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Query</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">MPI Use</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Q21/K21</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Get Person Demographics</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Given a person identifier, return the PID and optionally the PD1 segments for the matching person.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Q22/K22</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Find Candidates</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Given some demographics, optionally a match threshold and algorithm, find and return a list of matching persons.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Q23/K23</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Get Corresponding Identifiers</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Given a person&#8217;s identifier and a list of identifier domains, return the person&#8217;s identifiers in those domains.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Q24/K24</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Allocate Identifiers</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Given a list of identifier domains, return new identifiers for those domains. Should not link to a person, just reserve and return identifiers.</p></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="paragraph">
+  <p>The following sections show several scenarios involving looking up a person on a "client" system, and how it can be integrated to an MPI. The basic flow is for a user to enter person information on the client system, and the client system using services of the MPI to match the user&#8217;s input to a person that exists somewhere on the two systems.</p>
+  </div>
+  <div class="paragraph">
+  <p>The scenarios are differentiated on two variables:</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>ID Creator -</strong> Which system assigns new person identifiers for the client system. This can either be the MPI or the client system.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Person Existence -</strong> On which system the person record currently exists - the client system, the MPI, or both.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_client_system_assigns_identifier_person_exists_on_mpi_only">Client system assigns identifier, person exists on MPI only</h4>
+  <div class="paragraph">
+  <p>In this scenario, a client system (e.g., a registration system) will query an MPI for a person that does not currently exist on the client system. The MPI returns a list of one or more possible matching candidates, and one is chosen by the user on the client system. The client system assigns the person an identifier and an update is sent to the MPI to notify it of the new assigned identifier.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Client system assigns identifier, person exists on MPI only</div>
+  <p><span class="image"><img src="assign_identifier_1.png" alt="assign_identifier_1"></span></p>
+  </div>
+  <div class="paragraph">
+  <p>The messages are defined as follows:</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Q22/K22 Find Candidates</strong> - This signals the MPI to search its database for a list of persons that match the demographic criteria sent in the query, using whatever algorithms it has at its disposal, or using the algorithm optionally specified in the query. The response includes a list of "candidates" that matched the criteria in the query, one PID segment for each candidate. The query can also specify the identifier domains to return in <em>PID-3 - Patient Identifier List</em>, so that the client system identifier and the MPI enterprise identifier could be returned for each match.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Q21/K21 Get Person Demographics</strong> - Once a candidate is chosen from the list, another query may be done to retrieve the full set of demographics for that person.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>A24 or A01/A04/A05</strong> - This transaction is to update the MPI with the new identifier the client system has created for the person. It is acceptable for systems to simply send <em>an A01 Admit/visit notification,</em> <em>A04 Register a patient or A05 Pre-admit a patient</em> as may have been done traditionally, with the new client system identifier and the existing MPI enterprise identifier in PID-3. However an <em>A24 Link patient information</em> may be sent instead, with one PID segment containing the MPI enterprise identifier for the person, and the second PID segment containing the new registration system identifier.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_client_system_assigns_identifier_person_exists_on_both_systems">Client system assigns identifier, person exists on both systems</h4>
+  <div class="paragraph">
+  <p>In this scenario, a client system (e.g., a registration system) will query an MPI for a person, and the person record exists on both systems. The MPI returns a list of possible matching candidates, and one is chosen by the user on the client system. The client system simply asks the MPI for an updated set of demographics and does not assign an identifier since the person already exists with an identifier on the client system.</p>
+  </div>
+  <div class="paragraph">
+  <p>Prior to querying the MPI, the client system may query its own database to reduce network transactions. However, the full searching capabilities of the MPI may be preferred to the client system in order to prevent the selection of the wrong person.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Client system assigns identifier, person exists on both systems</div>
+  <p><span class="image"><img src="assign_identifier_2.png" alt="assign_identifier_2" width="504" height="480"></span></p>
+  </div>
+  <div class="paragraph">
+  <p>The message flow is identical to the message flow in the 3.6.4.5 example, with the exception that the final update to the MPI is not needed in order to give the MPI a new identifier for the person. The MPI should already have the client system identifier from previous transactions.</p>
+  </div>
+  <div class="paragraph">
+  <p>An ADT event may be sent later by the client system simply to update the MPI with any demographic changes that occur.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_client_system_assigns_identifier_person_exists_on_neither_system">Client system assigns identifier, person exists on neither system</h4>
+  <div class="paragraph">
+  <p>In this scenario, a client system (e.g., a registration system) will query an MPI for a person, and the person does not exist on either system. The MPI returns a list of possible matching candidates, or possibly an empty list. The user does <em>not</em> choose one, and a new person record is created.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Client system assigns identifier, does not exist on either system</div>
+  <p><span class="image"><img src="assign_identifier_3.png" alt="assign_identifier_3" width="584" height="440"></span></p>
+  </div>
+  <div class="paragraph">
+  <p>The message flow again begins with a <em>Q22/K22</em> <em>Find Candidates</em> query. The response may or may not contain a list of candidates.</p>
+  </div>
+  <div class="paragraph">
+  <p>If the client system assigns a person identifier when the record is created, an <em>A28 Add person information</em> could be sent to the MPI to notify it of the record creation. If the client system does not create an identifier until the registration is completed, the A01, A04 or A05 events could serve the purpose of notifying the MPI of an added person and identifier. The fact that the person will have an identifier unknown to the MPI, and no enterprise identifier, will allow the MPI to infer that a person record is being added.</p>
+  </div>
+  <div class="paragraph">
+  <p>When the person record is added to the MPI with the new identifier, an enterprise identifier is assigned, and ancillary systems may be notified of the new person record creation.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_mpi_assigns_identifier_person_exists_on_mpi">MPI assigns identifier, person exists on MPI</h4>
+  <div class="paragraph">
+  <p>In the next set of three scenarios, it is assumed that a third party (ID Manager) creates identifiers for the client system, and for these examples the MPI fulfills this role. The QBP/RSP queries support this service.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">Example of two healthcare organizations merging</div>
+  <p><span class="image"><img src="assign_identifier_4.png" alt="assign_identifier_4" width="624" height="304"></span></p>
+  </div>
+  <div class="paragraph">
+  <p>Figure 3-4 shows a case where identifiers may need to be assigned by a third party. In the example, East Health Organization had one identifier domain (XXXX numbers) for both the hospital registration system and the outpatient clinic registration numbers. Coordination was done through the use of pre-printed charts for new patients, which prevented the two systems from using the same XXXX number for two patients.</p>
+  </div>
+  <div class="paragraph">
+  <p>Later West Health Organization is bought and merged with East. West has been using its own identifier domain (YYYY numbers). An MPI is also implemented to keep a cross-reference between the two systems, and assigns its own enterprise identifier (EEEE number) to each patient.</p>
+  </div>
+  <div class="paragraph">
+  <p>Because the organization is attempting to go paperless, East decides to forgo its pre-printed charts, but still keep the XXXX numbers. Since the pre-printed charts are no longer there to keep numbers from being re-used between the hospital and clinic, a third party is needed to assign the XXXX numbers.</p>
+  </div>
+  <div class="paragraph">
+  <p>A patient arrives at East Hospital that had never been there, but had been to West previously. To register the patient, the hospital system submits a Find Candidates Q22/K22 query to get from the MPI a list of possible matching patients. The user finds the patient since she had been to West previously. Since the patient is new to East, she must be given a new East identifier (XXXX number). An Allocate Identifiers A56/K24 query is sent from the East Hospital to the MPI and the MPI generates an XXXX number and returns it. Later when the registration is finished, an A24 Link Person Information message is sent to notify the MPI that the allocated identifier has been assigned to a patient</p>
+  </div>
+  <div class="paragraph">
+  <p>In the following first scenario, the person record exists on the MPI, however it does not exist on the client system. The message flow assumes that the MPI is assigning identifiers for the client system that are not the enterprise identifiers. If this were not the case, the Allocate Identifiers A56/K24 query would not be needed.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">MPI assigns identifier, person exists on MPI</div>
+  <p><span class="image"><img src="assign_identifier_5.png" alt="assign_identifier_5"></span></p>
+  </div>
+  <div class="paragraph">
+  <p>The message flow is similar to previous examples, with the exception of the <em>Q24/K24 Allocate Identifiers</em> query and the final <em>A24 Link Patient Information</em> message:</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Q24/K24 Allocate Identifiers</strong> - This query is for the client system to ask the MPI for an identifier in the client system&#8217;s domain. It is not to assign the identifier to a particular person record, but rather just to reserve an identifier for later use.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>A24 Link patient information</strong> - This message is to notify the MPI that the previously allocated identifier has been assigned to a person. The A24 should include one PID segment with the new identifier and one PID segment with the MPI enterprise identifier.</p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_mpi_assigns_identifier_person_exists_on_both_systems">MPI assigns identifier, person exists on both systems</h4>
+  <div class="paragraph">
+  <p>is scenario is identical to the scenario in 3.5.4.2 Client system assigns identifier, person exists on both systems.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">MPI assigns identifier, person exists on both systems</div>
+  <p><span class="image"><img src="assign_identifier_6.png" alt="assign_identifier_6"></span></p>
+  </div>
+  </div>
+  <div class="sect3">
+  <h4 id="_mpi_assigns_identifier_person_exists_on_neither_system">MPI assigns identifier, person exists on neither system</h4>
+  <div class="paragraph">
+  <p>In this scenario, the person does not exist on either system. The message flow is similar to <em>3.6.4.7</em>, "<em>MPI assigns identifier, person exists on MPI</em>"; however, there is no need for the <em>Q21/K21Get person Demographics</em> query as a double-check for the user since the person does not exist on the MPI. Also, after the person is registered and the identifier assigned, an <em>A28 Add Person Information</em> is sent to the MPI to have it add the person to its database and assign an enterprise identifier.</p>
+  </div>
+  <div class="paragraph">
+  <div class="title">MPI assigns identifier, person exists on neither system</div>
+  <p><span class="image"><img src="assign_identifier_7.png" alt="assign_identifier_7"></span></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_usage_notes_non_human_pid_patient_identification">Usage notes: Non-human PID patient identification</h3>
+  <div class="paragraph">
+  <p>The species attribute is required for non-human patients. The breed and strain attributes are conditional. Thus if the strain attribute is populated, the species attribute must be populated, but the breed attribute is optional. The production class attribute is optional, but if populated the species attribute must also be populated. The name of the animal populates the PID-5 attribute, component 2. The last name of the owner may populate component 1 of PID-5. Owner information is transmitted in the NK1 segment.</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Example 1</strong>: Mrs. EVERYWOMAN brings her 9 year old, female, spayed miniature poodle, Fluffy, into the Allstate University, Veterinary Medical Teaching Hospital to have skin growths removed. The poodle resides with Mrs. EVERYWOMAN in her apartment at 2222 Home Street, Apt 123, in Ann Arbor, MI 11111, Washtenaw County;</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;||ALLSTATE UNIV VMTH|||200702171830||ADT^A04&lt;cr&gt;+
+  PID|1||A83245<sup>^</sup>VMTH<sup>MR</sup>UCD||EVERYWOMAN<sup>Fluffy</sup><sup>^</sup>^^D||19901001|S|||2222 Home St^Apt 123^Ann Arbor<sup>MI</sup>11111<sup>USA</sup><sup>^Washtenaw||||||||||||MI||||||||||||L-80700</sup>Canine, NOS<sup>SNM3|L-80832</sup>Miniature Poodle, NOS^SNM3&lt;cr&gt;+
+  NK1|1|EVERYWOMAN<sup>EVE</sup>M<sup>^Mrs.</sup>^L|O|2222 Home St^Apt 123^Ann Arbor^MI <sup>11111</sup>USA<sup>^</sup>Washtenaw|(530) 555-4325<sup>^</sup>emeverywoman123@AOL.COM||CP|&lt;cr&gt;+
+  PV1|1|O||R|||0045<sup>BARKER</sup>BART<sup>^Dr.</sup>DVM||||||||||||||||||||||||||||||||||||199902161015&lt;cr&gt;+
+  OBX|1|NM|21611-9<sup>Age</sup>LN||9|yr&lt;cr&gt;+
+  OBX|2|NM|3141-9^Body Weight^LN||16|lb&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p><strong>Example 2:</strong> Over the Hill Horses owns the Morgan horse mare named Breeze that is referred by Dr. Equine of Foothill Veterinary Clinic for colic (acute abdominal pain) to the Allstate University, Veterinary Medical Teaching Hospital. The manager of the farm and contact person is Randall "Buck" Shins, who works at the farm headquarters in Ypsilanti, MI, 11111:</p>
+  </div>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;||Foothill Veterinary Clinic||Allstate Univ VMTH|200702171830||ADT^A04&lt;cr&gt;+
+  PID|1||N324256<sup>^</sup>^^Foothill Vet Clinic||<sup>Breeze</sup><sup>^</sup><sup>^D|||F|||</sup><sup>^MI</sup><sup>^</sup><sup>Lassen||||||||||||||||||19981123|Y|||||L-80400</sup>Horse<sup>SNM3|L-80431</sup>Morgan horse^SNM3||BR&lt;cr&gt;+
+  NK1|1||||||O|||||Over the Hill Horses|||||||||||||||||~Shins<sup>Buck</sup><sup>^Mr.</sup><sup>N|(530)555-9843</sup>^^<a href="mailto:Buckshins@OvertheHill.com">Buckshins@OvertheHill.com</a>|2222 Farm Rd ^Suite A<sup>Ypsilanti</sup>MI<sup>11111</sup><sup>^</sup>Lassen+
+  PV1|1|E||R|||<sup>Equine</sup><sup>^Dr.</sup>DVM||||||||||||||||||||||||||||||||||||199903102013&lt;cr&gt;</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_technical_specs">Technical Specs</h2>
+  <div class="sectionbody">
+  <div class="paragraph">
+  <p><a href="technical_specs/A01.html">Message - A01 Admit/Visit Notification</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A02.html">Message - A02 Transfer a Patient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A03.html">Message - A03 Discharge/End Visit</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A04.html">Message - A04 Register a Patient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A05.html">Message - A05 Pre-Admit a Patient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A06.html">Message - A06  Change an Outpatient to an Inpatient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A07.html">Message - A07 Change an Inpatient to an Outpatient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A08.html">Message - A08 Update Patient Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A09.html">Message - A09 Patient Departing - Tracking</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A10.html">Message - A10 Patient Arriving - Tracking</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A11.html">Message - A11 Cancel Admit / Visit Notification</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A12.html">Message - A12 Cancel Transfer</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A13.html">Message - A13 Cancel Discharge / End Visit</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A14.html">Message - A14 Pending Admit</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A15.html">Message - A15 Pending Transfer</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A16.html">Message - A16 Pending Discharge</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A17.html">Message - A17 Swap Patients</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A20.html">Message - A20 Bed Status Update</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A21.html">Message - A21 Patient Goes on a Leave of Absence</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A22.html">Message - A22 Patient Returns From a Leave of Absence</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A23.html">Message - A23 Delete a Patient Record</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A24.html">Message - A24 Link Patient Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A25.html">Message - A25 Cancel Pending Discharge</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A26.html">Message - A26 Cancel Pending Transfer</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A27.html">Message - A27 Cancel Pending Admit</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A28.html">Message - A28 Add Person or Patient Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A29.html">Message - A29 Delete Person Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A31.html">Message - A31 Update Person Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A32.html">Message - A32 Cancel Patient Arriving - Tracking</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A33.html">Message - A33 Cancel Patient Departing - Tracking</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A37.html">Message - A37 Unlink Patient Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A38.html">Message - A38 Cancel Pre-Admit</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A40.html">Message - A40 Merge Patient - Patient Identifier List</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A41.html">Message - A41 Merge Account - Patient Account Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A42.html">Message - A42 Merge Visit - Visit Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A43.html">Message - A43 Move Patient Information - Patient Identifier List</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A44.html">Message - A44 Move Account Information - Patient Account Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A45.html">Message - A45 Move Visit Information - Visit Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A47.html">Message - A47 Change Patient Identifier List</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A49.html">Message - A49 Change Patient Account Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A50.html">Message - A50 Change Visit Number</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A51.html">Message - A51 Change Alternate Visit ID</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A52.html">Message - A52 Cancel Leave of Absence for a Patient</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A53.html">Message - A53 Cancel Patient Returns from a Leave of Absence</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A54.html">Message - A54 Change Attending Doctor</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A55.html">Message - A55 Cancel Change Attending Doctor</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A60.html">Message - A60 Update Adverse Reaction Information</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A61.html">Message - A61 Change Consulting Doctor</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/A62.html">Message - A62 Cancel Change Consulting Doctor</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q21_K21.html">Message - Q21/K21 Get Person Demographics (QBP) and Response</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q22_K22.html">Message - Q22/K22 Find Candidates (QBP) and Response (RSP)</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q23_K23.html">Message - Q23/K23 Get Corresponding Identifiers (QBP) and Response (RSP)</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q24_K24.html">Message - Q24/K24 Allocate Identifiers (QBP) and Response (RSP)</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/Q32_K32.html">Message - Q32/K32 Find Candidates including Visit Information (QBP) and Response (RSP)</a></p>
+  </div>
+  <div class="paragraph">
+  <p><a href="technical_specs/technical_specs.html">Technical Specs</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="sect1">
+  <h2 id="_example_transactions">Example Transactions</h2>
+  <div class="sectionbody">
+  <div class="sect2">
+  <h3 id="_admitvisit_notification_event_a01_admitted_patient">Admit/visit notification ‑ event A01 (admitted patient)</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|ADT1|GOOD HEALTH HOSPITAL|GHH LAB, INC.|GOOD HEALTH HOSPITAL|202101011126|SECURITY|ADT­<sup>A01</sup>ADT_A01|MSG00001­|P|2.9.1||&lt;cr&gt;+
+  EVN|A01|202101011123||&lt;cr&gt;+
+  PID|1||PATID1234<sup>5</sup>M11<sup>ADT1</sup>MR^GOOD HEALTH HOSPITAL~123456789<sup>^</sup>USSSA<sup>SS||EVERYMAN</sup>ADAM<sup>A</sup>III||19610615|M­||C|2222 HOME STREET<sup>^GREENSBORO</sup>NC^27401‑1020|GL|(555) 555‑2004|(555)555‑2004||S||
+  PATID12345001<sup>2</sup>M10<sup>ADT1</sup>AN<sup>A|444333333|9­87654</sup>NC|&lt;­cr&gt;+
+  GSP|1|S||76691-5^Gender identity<sup>LN|446151000124109</sup>Identifies as male gender^SCT|20210101&lt;cr&gt;+
+  GSP|2|S||90778-2^Personal pronouns – Reported<sup>LN|LA29518-0</sup>he/him/his/his/himself^LN|20210101&lt;cr&gt;+
+  GSP|3|S||76690-7^Sexual orientation<sup>LN|42035005</sup>Bisexual^SCT|20210101&lt;cr&gt;+
+  NK1|1|NUCLEAR<sup>NELDA</sup>W|SPO<sup>SPOUSE||||NK</sup>NEXT OF KIN&lt;cr&gt;+
+  PV1|1|I|2000<sup>2012</sup>01||||004777<sup>ATTEND</sup>AARON^A|||SUR||­||ADM|A0­|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Patient Adam A. Everyman, III was admitted on January 1, 2021 at 11:23 a.m. by Doctor Aaron A. Attending (#004777) for surgery (SUR). He has been assigned to room 2012, bed 01 on nursing unit 2000.</p>
+  </div>
+  <div class="paragraph">
+  <p>The message was sent from system ADT1 at the Good Health Hospital site to system GHH Lab, also at the Good Health Hospital site, on the same date as the admission took place, but three minutes after the admit.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_update_adverse_reaction_info_allergen_code_provides_unique_identifier_event_a60_where_the_allergen_code_provides_unique_identifier">Update adverse reaction info - allergen code provides unique identifier - event A60 (where the allergen code provides unique identifier)</h3>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|ADT|CA.SCA|IE|200701310815-0800|200702010101||ADT</sup>A60^ADT_A60|6757498734|P|2.8|+
+  EVN||200701310815-0800+
+  PID|||987654321098||EVERYWOMAN<sup>EVE</sup>E||19530406|F+
+  PV1||O+
+  PV2||||||||200701310800-0800+
+  IAM|1|DA|PHM1345<sup>Penicillin</sup>local|SV<sup>^HL70128|</sup>rash on back|A<sup>^HL70323|||AL</sup>^HL70436| 01<sup>Penicillins,Cephalosporins</sup>NDDF DAC|20070127||200701311015| NUCLEAR<sup>NEVILLE</sup>H|<sup>Husband||C</sup><sup>HL70438|MLEE</sup>ATTEND<sup>AARON</sup>A<sup>^</sup>MD||</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_pre_admit_notification_event_a05_nonadmitted_patient">Pre-admit notification - event A05 (nonadmitted patient)</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|GHH LAB||200701061000||ADT<sup>A05</sup>ADT_A05|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A05|200701061000|200701101400|01||200701061000&lt;cr&gt;+
+  PID|1|| PATID1234<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR</sup>GOOD HEALTH HOSPITAL~123456789<sup>^</sup>USSSA<sup>SS|253763|EVERYMAN</sup>ADAM^A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^||(555) 555‑2004|(555)555‑2004||S|C|99999<sup>^</sup>GOOD HEALTH HOSPITAL^AN|444-33-3333||&lt;cr&gt;+
+  NK1|1|NUCLEAR<sup>NELDA</sup>W|SPO^SPOUSE|6666 HOME STREET <sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>|555-555-5001|555-555-5001555-555-5001|EC</sup>EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|2|MUM<sup>MARTHA</sup>M|MOTHER|4444 HOME STREET <sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>|555-555-2006|555-555-2006~555-555-2006|EC</sup>EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|3&lt;cr&gt;+
+  NK1|4|||6666 WORKER LOOP<sup>^ISHPEMING</sup>MI<sup>49849|555-555-3003|EM</sup>EMPLOYER|19940605||PROGRAMMER|||WORK IS FUN, INC.&lt;cr&gt;+
+  PV1||O|||||0148<sup>ATTEND</sup>AARON<sup>A|0148</sup>SENDER<sup>SAM||AMB|||||||0148</sup>ATTEND<sup>AARON</sup>A|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL||||||&lt;cr&gt;+
+  PV2||||||||200301101400||||||||||||||||||||||||||200301101400&lt;cr&gt;+
+  OBX||ST|1010.1^BODY WEIGHT||62|kg|||||F&lt;cr&gt;+
+  OBX||ST|1010.1^HEIGHT||190|cm|||||F&lt;cr&gt;+
+  DG1|1|19||BIOPSY||00&lt;cr&gt;+
+  GT1|1||EVERYMAN<sup>ADAM</sup>A<sup>""</sup>""<sup>""</sup>""^||2222 HOME STREET <sup>ISHPEMING</sup>MI<sup>49849</sup>""^|(555) 555‑2004|555 555‑2004||||SE^SELF|444-33 3333|||| |2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""|555-555‑2004 |||||||||||||||||||||||||||||||||AUTO CLINIC&lt;cr&gt;+
+  IN1|1|0|UA1|UARE INSURED, INC.|8888 INSURERS CIRCLE<sup>^ISHPEMING</sup>M1<sup>49849</sup>^||555-555-3015|90||||||50 OK&lt;cr&gt;+
+  IN1|2|""|""&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Patient Adam A. Everyman was pre-admitted on January 6<sup>th</sup>, 2007 for ambulatory surgery, which is scheduled for January 10, 2007 at 1400. As part of the pre-admission process, he specified two emergency contacts as well as employer, insurance, and guarantor information. He also was measured and weighed.</p>
+  </div>
+  <div class="admonitionblock note">
+  <table>
+  <tr>
+  <td class="icon">
+  <div class="title">Note</div>
+  </td>
+  <td class="content">
+  Above, the REGADT system supports the entry of four NK1 type records: first, second, and third emergency contacts and employer information. A third emergency contact was not provided for Adam A. Everyman. However, an NK1 record must be sent to support "snapshot" mode of update. The REGADT system also supports entry of two insurance plans, one guarantor, and one diagnosis.
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_register_a_patient_event_a04_nonadmitted_patient">Register a patient - event A04 (nonadmitted patient)</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|GHH LAB||200712311501||ADT<sup>A04</sup>ADT_A01|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A04|200701101500|200701101400|01||200701101410&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR</sup>GOOD HEALTH HOSPITAL<sup>^</sup>USSSA<sup>SS|253763|EVERYMAN</sup>ADAM^A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^||555-555-2004|555-555- 2004||S|C|10199925<sup>^</sup>GOOD HEALTH HOSPITAL^AN|371-66-9256||&lt;cr&gt;+
+  NK1|1|NUCLEAR^NELDA|SPOUSE|6666 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>|555-555-5001|555-555-5001~555-555-5001|EC1</sup>FIRST EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|2|MUM^MARTHA|MOTHER|4444 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^|555-555 2006|555-555-2006~555-555-2006|EC2^SECOND EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|3&lt;cr&gt;+
+  NK1|4|||6666 WORKER LOOP<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||(900)545-1200|EM</sup>EMPLOYER|19940605||PROGRAMMER|||WORK IS FUN, INC.&lt;cr&gt;+
+  PV1||O|O/R||||0148<sup>ATTEND</sup>AARON<sup>A|0148</sup>ATTEND<sup>AARON</sup>A|0148<sup>ATTEND</sup>AARON<sup>A|AMB|||||||0148</sup>ATTEND<sup>AARON</sup>A|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL|||||199501101410|&lt;cr&gt;+
+  PV2||||||||200701101400||||||||||||||||||||||||||200301101400&lt;cr&gt;+
+  OBX||ST|1010.1^BODY WEIGHT||62|kg|||||F&lt;cr&gt;+
+  OBX||ST|1010.1^HEIGHT||190|cm|||||F&lt;cr&gt;+
+  DG1|1|19||BIOPSY||00|&lt;cr&gt;+
+  GT1|1||EVERYMAN<sup>ADAM</sup>A||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^|444-33 3333|555-555-2004||||SE^SELF|444-33 3333||||AUTO CLINIC|2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""|555-555-2004|&lt;cr&gt;+
+  IN1|0|0|UA1|UARE INSURED, INC.|8888 INSURERS CIRCLE<sup>^ISHPEMING</sup>M149849<sup>""</sup>||555-555-3015|90||||||50 OK|&lt;cr&gt;+
+  IN1|2|""|""&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Patient Adam A. Everyman arrived at location O/R for surgery on January 10<sup>th</sup>, 2007 at 1410 for ambulatory surgery which was scheduled for January 10, 2007 at 1400. The visit event was recorded into the Good Health Hospital system on January 10, 2007 at 1500. It was sent to the interface engine (IFENG) at 1501.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_change_an_outpatient_to_an_inpatient_event_a06">Change an outpatient to an inpatient - event A06</h3>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|REGADT|MCM|IFENG||200701110025||ADT</sup>A06^ADT_A06|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A06|200701100250||01||200701102300&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR</sup>FAC1~11111<sup>^</sup>USSSA<sup>SS|253763|MASSIE</sup>JAMES^A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||555-555-2004|555-555-2004||S|C|10199925</sup>^^GOOD HEALTH HOSPITAL^AN|371-66-9256||&lt;cr&gt;+
+  NK1|1|MASSIE^ELLEN|SPOUSE|2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^|555) 555 2004|555-555-5001~555-555-5001|EC1^FIRST EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|2|MASSIE^MARYLOU|MOTHER|300 ZOBERLEIN<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^|555) 555 2004|555-555-5001~555-555-5001|EC2^SECOND EMERGENCY CONTACT&lt;cr&gt;+
+  NK1|3&lt;cr&gt;+
+  NK1|4|||6666 WORKER LOOP<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||(900)545-1200|EM</sup>EMPLOYER|19940605||PROGRAMMER|||WORK IS FUN, INC.&lt;cr&gt;+
+  PV1||I|6N<sup>1234</sup>A^GOOD HEALTH HOSPITAL||||0100<sup>SENDER,SAM|0148</sup>ATTEND<sup>AARON</sup>A||SUR|||||||0148^SENDER,SAM|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL|||||199501102300|&lt;cr&gt;+
+  OBX||ST|1010.1^BODY WEIGHT||62|kg|||||F&lt;cr&gt;+
+  OBX||ST|1010.1^HEIGHT||190|cm|||||F&lt;cr&gt;+
+  DG1|1|19||BIOPSY||00&lt;cr&gt;+
+  GT1|1||EVERYMAN<sup>ADAM</sup>A||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^|444-33 3333|555-555-2004||||SE^SELF|444-33 3333||||AUTO CLINIC|2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""|555-555-2004&lt;cr&gt;+
+  IN1|0|0|UA1|UARE INSURED, INC.|8888 INSURERS CIRCLE<sup>^ISHPEMING</sup>M149849<sup>""</sup>||555-555-3015|90||||||50 OK&lt;cr&gt;+
+  IN1|2|""|""&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>Patient Adam A. Everyman was later converted to an inpatient on January 10<sup>th</sup>, 2007 at 2300 to recover from the operation. The change from outpatient to inpatient was recorded on the MCM system on January 11, 2007 at 0020. He was assigned to room 1234, bed A on unit 6N. When Patient Adam A. Everyman was converted to an inpatient on January 10<sup>th</sup>, 2007 at 2300, his hospital service changed to SUR. His attending doctor and admitting doctors changed to Dr Sam Sender. As a result of the conversion, his account number changed from 10199923 to 10199925</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_transfer_patient_event_a02_first_example">Transfer patient - event A02 (first example)</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|IFENG||200701110500||ADT<sup>A02</sup>ADT_A02|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A02|200701110520||01||200701110500&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR~111111</sup><sup>^USSSA</sup>SS|253763|EVERYMAN<sup>ADAM</sup>A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||555-555-2004|555-555-2004||S|C|10199925</sup>^^GOOD HEALTH HOSPITAL^AN|444-33-3333|||||||||&lt;cr&gt;+
+  PV1||I|SICU<sup>0001</sup>01^GOOD HEALTH HOSPITAL|||6N<sup>1234</sup>A^GOOD HEALTH HOSPITAL|0200<sup>ATTEND</sup>AARON<sup>A|0148</sup> SENDER<sup>SAM||ICU|||||||0148</sup>SENDER^SAM|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL|||||200701102300|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>On January 11<sup>th</sup>, 2007 at 0500, Adam A. Everyman condition became worse due to a complication. As a result, he was transferred to the surgical ICU (SICU). The transfer was recorded on the Good Health Hospital system on January 11, 2007 at 0520. He was assigned to room 0001, bed 1. When Patient Adam A. Everyman was transferred to SICU, his hospital service changed to ICU and his attending doctor changed to Dr. Sam Sender.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_cancel_transfer_event_a12">Cancel transfer - event A12</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|IFENG||200701110600||ADT<sup>A12</sup>ADT_A12|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A02|200701110600||01||200701110500&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL|253763|EVERYMAN<sup>ADAM</sup>A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""^||555-555-2004|555-555-2004||S|C|10199925|444-33-3333||+
+  PV1||I|6N<sup>1234</sup>A^GOOD HEALTH HOSPITAL|||SICU<sup>0001</sup>1^GOOD HEALTH HOSPITAL|0100<sup>ATTEND</sup>AARON<sup>A|0148</sup>ATTEND<sup>AARON</sup>A||SUR|||||||0148<sup>ATTEND</sup>AARON^A|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL|||||200701102300|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>It was determined that Adam A. Everyman was transferred to the wrong room in the SICU. Therefore, the transfer was cancelled.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_transfer_patient_event_a02_second_example">Transfer patient - event A02 (second example)</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|IFENG||200701110603||ADT<sup>A02</sup>ADT_A02|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A02|200701110603||01||200701110500&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR</sup>FAC1~1111<sup>^</sup>USSSA<sup>SS|253763|EVERYMAN</sup>ADAM^A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||555-555-2004|555-555-2004||S|C|10199925</sup>^^GOOD HEALTH HOSPITAL^AN|444-33-3333||&lt;cr&gt;+
+  PV1||I|SICU<sup>0001</sup>02^GOOD HEALTH HOSPITAL|||6N<sup>1234</sup>A^GOOD HEALTH HOSPITAL|0100<sup>ATTEND</sup>AARON<sup>A|0148</sup>ATTEND<sup>AARON</sup>A||SUR|||||||0148<sup>ATTEND</sup>AARON^A|S|1400|A|||||||||||||||||||GOOD HEALTH HOSPITAL|||||200701102300|&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>The transfer is then repeated, this time to the correct bed: bed 2 of room 0001 in the SICU.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_discharge_patient_event_a03">Discharge patient - event A03</h3>
+  <div class="paragraph">
+  <p>MSH|^~\&amp;|REGADT|GOOD HEALTH HOSPITAL|IFENG||200701121005||ADT<sup>A03</sup>ADT_A03|000001|P|2.8||||&lt;cr&gt;+
+  EVN|A03|200701121005||01||200701121000&lt;cr&gt;+
+  PID|||191919<sup>^</sup>GOOD HEALTH HOSPITAL<sup>MR~11111</sup><sup>^USSSA</sup>SS|253763|EVERYMAN<sup>ADAM</sup>A||19560129|M|||2222 HOME STREET<sup>^ISHPEMING</sup>MI<sup>49849</sup>""<sup>||555-555-2004|555-555-2004||S|C|10199925</sup>^^GOOD HEALTH HOSPITAL^AN|444-33-3333|||||||||&lt;cr&gt;+
+  PV1||I|6N||||0100<sup>ATTEND</sup>AARON<sup>A|0148</sup>ATTEND<sup>AARON</sup>A||SUR|||||||0148<sup>ATTEND</sup>AARON<sup>A|S|1400|A||||||||||||||||SNF|ISH</sup>GREEN ACRES RETIREMENT HOME||GOOD HEALTH HOSPITAL|||||200701102300|200791121005&lt;cr&gt;</p>
+  </div>
+  <div class="paragraph">
+  <p>When Adam A. Everyman&#8217;s condition became more stable, he returned to 6N for another day (transfer not shown) and then was discharged to the Green Acres Retirement Home.</p>
+  </div>
+  </div>
+  <div class="sect2">
+  <h3 id="_update_adverse_reaction_info_unique_identifier_is_provided_event_a60_where_unique_identifier_is_provided">Update adverse reaction info - unique identifier is provided - event A60 (where unique identifier is provided)</h3>
+  <div class="paragraph">
+  <p>MSH|<sup>~\&amp;|ADT|CA.SCA|IE|200701310815-0800|200702010101||ADT</sup>A60^ADT_A60|6757498734|P|2.8|+
+  EVN||200701310815-0800+
+  PID|||987654321098||EVERYWOMAN<sup>EVE</sup>E||19530406|F+
+  PV1||O+
+  PV2||||||||200701310800-0800+
+  IAM|1|DA|<sup>Penicillin|SV</sup><sup>HL70128|</sup>rash on back|A<sup>^HL70323|12345||AL</sup><sup>HL70436|19990127||200301311015|NUCLEAR</sup>NEVILLE<sup>H|</sup>Husband||C<sup>^HL70438|MLEE</sup>ATTEND<sup>AARON</sup>A<sup>^</sup>MD||</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
