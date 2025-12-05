@@ -12,8 +12,11 @@ require 'fileutils'
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
+# CONFIG_FILE = 'sushi-config.yaml'
+CONFIG_FILE = 'page-config.yaml'
+
 # File paths
-SUSHI_CONFIG = File.join(__dir__, '..', '..', 'sushi-config.yaml')
+SUSHI_CONFIG = File.join(__dir__, '..', '..', 'CONFIG_FILE')
 V2PLUS_XML = File.join(__dir__, '..', '..', 'input', 'v2plus.xml')
 BACKUP_DIR = File.join(__dir__, '..', '..', 'backups', 'xml_backups')
 
@@ -25,7 +28,7 @@ class SushiToV2PlusConverter
 
   def convert
     puts "=" * 70
-    puts "Updating v2plus.xml pages from sushi-config.yaml"
+    puts "Updating v2plus.xml pages from #{CONFIG_FILE}"
     puts "=" * 70
     puts
 
@@ -34,15 +37,15 @@ class SushiToV2PlusConverter
       abort "❌ Error: sushi-config.yaml not found at #{SUSHI_CONFIG}"
     end
 
-    puts "Reading sushi-config.yaml..."
+    puts "Reading #{CONFIG_FILE}..."
     sushi_config = YAML.load_file(SUSHI_CONFIG)
 
     unless sushi_config['pages']
-      abort "❌ Error: No 'pages' section found in sushi-config.yaml"
+      abort "❌ Error: No 'pages' section found in #{CONFIG_FILE}"
     end
 
     pages = sushi_config['pages']
-    puts "✓ Found #{count_pages(pages)} page(s) in sushi-config.yaml"
+    puts "✓ Found #{count_pages(pages)} page(s) in #{CONFIG_FILE}"
     puts
 
     # Read v2plus.xml
