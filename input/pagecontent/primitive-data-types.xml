@@ -1,0 +1,75 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <h2>HL7 v2+ Primitive Data Types</h2>
+  <p>This page lists all primitive data types defined in HL7 v2+. Click on a data type code to view its full definition.</p>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="StructureDefinition-DT.html">DT</a></td>
+        <td>V2_DT_Data_Type</td>
+        <td>DT Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DTM.html">DTM</a></td>
+        <td>V2_DTM_Data_Type</td>
+        <td>DTM Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-FT.html">FT</a></td>
+        <td>V2_FT_Data_Type</td>
+        <td>FT Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-GTS.html">GTS</a></td>
+        <td>V2_GTS_Data_Type</td>
+        <td>GTS Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-ID.html">ID</a></td>
+        <td>V2_ID_Data_Type</td>
+        <td>ID Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-IS.html">IS</a></td>
+        <td>V2_IS_Data_Type</td>
+        <td>IS Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-NM.html">NM</a></td>
+        <td>NM</td>
+        <td>Numeric</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SI.html">SI</a></td>
+        <td>SI</td>
+        <td>SI Primtive Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SNM.html">SNM</a></td>
+        <td>V2_SNM_Data_Type</td>
+        <td>SNM Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-ST.html">ST</a></td>
+        <td>ST</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-TM.html">TM</a></td>
+        <td>V2_TM_Data_Type</td>
+        <td>TM Data Type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-TX.html">TX</a></td>
+        <td>V2_TX_Data_Type</td>
+        <td>TX Data Type</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
