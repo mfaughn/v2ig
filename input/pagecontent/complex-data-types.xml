@@ -1,0 +1,370 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <h2>HL7 v2+ Complex Data Types</h2>
+  <p>This page lists all complex data types defined in HL7 v2+. Click on a data type code to view its full definition.</p>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="StructureDefinition-AD.html">AD</a></td>
+        <td>AD</td>
+        <td>address</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-AUI.html">AUI</a></td>
+        <td>AUI</td>
+        <td>authorization information</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CCD.html">CCD</a></td>
+        <td>CCD</td>
+        <td>charge code and date</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CCP.html">CCP</a></td>
+        <td>CCP</td>
+        <td>channel calibration parameters</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CD.html">CD</a></td>
+        <td>CD</td>
+        <td>channel definition</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CF.html">CF</a></td>
+        <td>CF</td>
+        <td>coded element with formatted values</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CNE.html">CNE</a></td>
+        <td>CNE</td>
+        <td>coded with no exceptions</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CNN.html">CNN</a></td>
+        <td>CNN</td>
+        <td>composite ID number and name simplified</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CP.html">CP</a></td>
+        <td>CP</td>
+        <td>composite price</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CQ.html">CQ</a></td>
+        <td>CQ</td>
+        <td>composite quantity with units</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CSU.html">CSU</a></td>
+        <td>CSU</td>
+        <td>channel sensitivity and units</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CWE.html">CWE</a></td>
+        <td>CWE</td>
+        <td>coded with exceptions</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-CX.html">CX</a></td>
+        <td>CX</td>
+        <td>extended composite ID with check digit</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DDI.html">DDI</a></td>
+        <td>DDI</td>
+        <td>daily deductible information</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DIN.html">DIN</a></td>
+        <td>DIN</td>
+        <td>date and institution name</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DLD.html">DLD</a></td>
+        <td>DLD</td>
+        <td>discharge to location and date</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DLN.html">DLN</a></td>
+        <td>DLN</td>
+        <td>driver’s license number</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DLT.html">DLT</a></td>
+        <td>DLT</td>
+        <td>delta</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DR.html">DR</a></td>
+        <td>DR</td>
+        <td>date/time range</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-DTN.html">DTN</a></td>
+        <td>DTN</td>
+        <td>day type and number</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-ED.html">ED</a></td>
+        <td>ED</td>
+        <td>encapsulated data</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-EI.html">EI</a></td>
+        <td>EI</td>
+        <td>entity identifier</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-EIP.html">EIP</a></td>
+        <td>EIP</td>
+        <td>entity identifier pair</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-ERL.html">ERL</a></td>
+        <td>ERL</td>
+        <td>Message location</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-FC.html">FC</a></td>
+        <td>FC</td>
+        <td>financial class</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-FN.html">FN</a></td>
+        <td>FN</td>
+        <td>family name</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-HD.html">HD</a></td>
+        <td>HD</td>
+        <td>hierarchic designator</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-ICD.html">ICD</a></td>
+        <td>ICD</td>
+        <td>insurance certification definition</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-JCC.html">JCC</a></td>
+        <td>JCC</td>
+        <td>job code/class</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-MA.html">MA</a></td>
+        <td>MA</td>
+        <td>multiplexed array</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-MO.html">MO</a></td>
+        <td>MO</td>
+        <td>money</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-MOC.html">MOC</a></td>
+        <td>MOC</td>
+        <td>money and charge code</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-MOP.html">MOP</a></td>
+        <td>MOP</td>
+        <td>money or percentage</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-MSG.html">MSG</a></td>
+        <td>MSG</td>
+        <td>message type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-NA.html">NA</a></td>
+        <td>NA</td>
+        <td>numeric array</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-NDL.html">NDL</a></td>
+        <td>NDL</td>
+        <td>name with date and location</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-NR.html">NR</a></td>
+        <td>NR</td>
+        <td>numeric range</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-OCD.html">OCD</a></td>
+        <td>OCD</td>
+        <td>occurrence code and date</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-OG.html">OG</a></td>
+        <td>OG</td>
+        <td>observation grouper</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-OSP.html">OSP</a></td>
+        <td>OSP</td>
+        <td>occurrence span code and date</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PIP.html">PIP</a></td>
+        <td>PIP</td>
+        <td>practitioner institutional privileges</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PL.html">PL</a></td>
+        <td>PL</td>
+        <td>person location</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PLN.html">PLN</a></td>
+        <td>PLN</td>
+        <td>practitioner license or other Id number</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PPN.html">PPN</a></td>
+        <td>PPN</td>
+        <td>performing person time stamp</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PRL.html">PRL</a></td>
+        <td>PRL</td>
+        <td>parent result link</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PT.html">PT</a></td>
+        <td>PT</td>
+        <td>processing type</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-PTA.html">PTA</a></td>
+        <td>PTA</td>
+        <td>policy type and amount</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-QIP.html">QIP</a></td>
+        <td>QIP</td>
+        <td>query input parameter list</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-QSC.html">QSC</a></td>
+        <td>QSC</td>
+        <td>query selection criteria</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RCD.html">RCD</a></td>
+        <td>RCD</td>
+        <td>row column definition</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RFR.html">RFR</a></td>
+        <td>RFR</td>
+        <td>reference range</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RI.html">RI</a></td>
+        <td>RI</td>
+        <td>repeat interval</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RMC.html">RMC</a></td>
+        <td>RMC</td>
+        <td>room coverage</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RP.html">RP</a></td>
+        <td>RP</td>
+        <td>reference pointer</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-RPT.html">RPT</a></td>
+        <td>RPT</td>
+        <td>repeat pattern</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SAD.html">SAD</a></td>
+        <td>SAD</td>
+        <td>street address</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SCV.html">SCV</a></td>
+        <td>SCV</td>
+        <td>scheduling class value pair</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SN.html">SN</a></td>
+        <td>SN</td>
+        <td>structured numeric</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SPD.html">SPD</a></td>
+        <td>SPD</td>
+        <td>specialty description</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-SRT.html">SRT</a></td>
+        <td>SRT</td>
+        <td>sort order</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-UVC.html">UVC</a></td>
+        <td>UVC</td>
+        <td>UB value code and amount</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-VH.html">VH</a></td>
+        <td>VH</td>
+        <td>visiting hours</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-VID.html">VID</a></td>
+        <td>VID</td>
+        <td>version identifier</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-VR.html">VR</a></td>
+        <td>VR</td>
+        <td>value range</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-WVI.html">WVI</a></td>
+        <td>WVI</td>
+        <td>channel identifier</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-WVS.html">WVS</a></td>
+        <td>WVS</td>
+        <td>waveform source</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-XAD.html">XAD</a></td>
+        <td>XAD</td>
+        <td>extended address</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-XCN.html">XCN</a></td>
+        <td>XCN</td>
+        <td>extended composite ID number and name for persons</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-XON.html">XON</a></td>
+        <td>XON</td>
+        <td>extended composite name and identification number for organizations</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-XPN.html">XPN</a></td>
+        <td>XPN</td>
+        <td>extended person name</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-XTN.html">XTN</a></td>
+        <td>XTN</td>
+        <td>extended telecommunication number</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
