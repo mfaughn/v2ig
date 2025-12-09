@@ -1,0 +1,2955 @@
+= Control
+
+== Introduction
+[v291_section="2.1"]
+
+The Control chapter of this Standard defines the generic rules that apply to all messages. Subsequent sections define functionally specific messages to be exchanged among certain applications. The specific aspects of message definition that are addressed herein are:
+
+{empty}a) the form to be used in functional chapters for describing messages. This includes their purpose, their contents, and the interrelationships among them. This form is called an abstract message definition because it is purely a level 7 (application) definition.
+
+{empty}b) the HL7 encoding rules for converting an abstract message into a string of characters that comprises an actual message.
+
+{empty}c) the programming procedures required to exchange messages using the HL7 specifications.
+
+{empty}d) the anticipated relationship with lower level protocols.
+
+{empty}e) certain message segments that are components of all messages.
+
+{empty}f) a single message, the acknowledgment message, that MAY be used unchanged in multiple applications.
+
+
+
+=== ANSI modal verbs
+[v291_section="2.1.1"]
+
+.An effort has been made in this version of Chapter 2 to use the ANSI MODAL verbs as described in ISO/IEC Directive, Appendix G, as delineated in the following table:
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|To convey the Sense of: |Use the following (in UPPERCASE) |
+|Required/Mandatory |SHALL* |SHALL NOT*
+|Best Practice/Recommendation |SHOULD* |SHOULD NOT*
+|Acceptable Permitted |MAY* |NEED NOT*
+|*Usage of any of these in lower case does not carry the same weight. | |
+|===
+
+
+
+== Conceptual Approach
+[v291_section="2.2"]
+
+
+
+=== Assumptions
+[v291_section="2.2.1"]
+
+The HL7 Standard makes no assumptions about the ownership of data. It also makes no requirements of its own on the subsequent action of the recipient of data, nor does it make any assumption about the design or architecture of the receiving application system. The scope of HL7 is restricted to the specification of messages between application systems, and the events triggering them. HL7 does not explicitly support, but can be used with, systems that support store and forward and data broadcast facilities (see the HL7 Implementation Support Guide).
+
+
+
+=== Trigger events
+[v291_section="2.2.2"]
+
+The Standard is written from the assumption that an event in the real world of healthcare creates the need for data to flow among systems. The real-world event is called the *trigger event*. For example, the trigger event *a patient is admitted* MAY cause the need for data about that patient to be sent to a number of other systems. The trigger event, *an observation (e.g., a CBC result) for a patient is* *available,* MAY cause the need for that observation to be sent to a number of other systems. When the transfer of information is initiated by the application system that deals with the triggering event, the exchange is termed an *unsolicited update*.
+
+[NOTE]
+No assumption is made about the design or architecture of the application/ system creating the unsolicited update. The scope of HL7 is restricted to the specification of messages between application/ systems and the events triggering them.
+
+HL7 allows the use of trigger events at several different levels of data granularity and inter-relationships. For example, most Patient Administration (ADT) trigger events concern single objects (such as an admit event, which creates a message that contains data about a single person and/or account). Other ADT trigger events are concerned with relationships between more than one object (e.g., the merge events, which specify patient or account merges). Some ADT trigger events pertain to a collection of objects that MAY have no significant inter-relationships (e.g., a record-oriented location-based query, whose response contains data about a collection of inpatients who are related only temporarily, by local geography).
+
+
+
+=== Acknowledgments: original mode
+[v291_section="2.2.3"]
+
+When the unsolicited update is sent from one system to another, this acknowledgment mode specifies that it be acknowledged at the application level. The reasoning is that it is not sufficient to know that the underlying communications system guaranteed delivery of the message. It is also necessary to know that the receiving application processed the data successfully at a logical application level.
+
+The acknowledgment MAY contain data of interest to the system that initiated the exchange. For example, if a patient care system has processed the trigger event *a lab test is ordered for a patient*, it MAY send an unsolicited update to a lab application identifying the patient, the test ordered, and various other information about the order. The ancillary system will acknowledge the order when it has processed it successfully. For some pairings of patient care and ancillary department systems the acknowledgment MAY also include the ancillary identification number that was assigned (HL7 does not require Order Entry and Results Reporting applications to interface in this manner, but it supports those that do).
+
+[NOTE]
+[line-through]#Original mode acknowledgment was replaced by enhanced mode acknowledgment in version 2.2. Implementers SHALL always value MSH-15 and MSH-16# Original mode allows the sender to transmit and receive on a single communication channel.
+
+The HL7 Standard makes no functional interpretation of the requirement that a system commit the data in a message to its database before acknowledging it. All that is required is that the receiving system accept responsibility for the data, providing the same integrity test that it would apply to data from any source. To continue the prior example, the ancillary system MAY acknowledge the order after placing it in an input queue, expecting to fully process the order into its database at a future time. The only assumption is that the input queue is maintained at the same level of integrity as the database.
+
+Instances of messages are transient by nature, and can not be expected by transmitter and/or receiver to be persistent after acknowledgment.
+
+
+
+=== Acknowledgments: enhanced mode
+[v291_section="2.2.4"]
+
+The HL7 acknowledgment paradigm has been extended to distinguish both accept and application acknowledgments, as well the conditions under which each is required. With a positive accept acknowledgment, the receiving system commits the message to safe storage in a manner that releases the sending system from the need to resend the message. After the message has been processed by the receiving system, an application acknowledgment MAY be used to return the resultant status to the sending system.
+
+
+
+=== Queries
+[v291_section="2.2.5"]
+
+Query documentation including messages, segments, special protocols, implementation considerations and examples have been moved to chapter 5. The unsolicited display messages were also moved because their message syntax is query-like in nature.
+
+
+
+== Communications Environment
+[v291_section="2.3"]
+
+The HL7 Standard defines the messages as they are exchanged among application entities and the procedures used to exchange them. As such, it conceptually operates at the seventh level of the ISO model for Open System Intercon­nection (OSI). It is primarily concerned with the data content and interrelationship of messages and with communicating certain application-level error conditions.
+
+Since the OSI protocols are not universally implemented, the HL7 Working Group is interested in providing standards that will be useful in the interim. It is also recognized that there is now, and will continue to be, interest in communicating health data among systems operating in communications environ­ments that provide a high level of functionality, but use protocols other than ISO OSI. The universe of environments of interest to HL7 includes, but is not restricted to:
+
+{empty}a) ad hoc environments that do not provide even basic transport reliability. Such environments consist of point-to-point RS-232 links, modems, and even LANs, if their connection to host computers is made via RS-232 communications links. Until OSI high level standards become truly prevalent, many healthcare interfaces will be implemented over such links. In such an environment, the HL7 Lower Level Protocols (LLP) MAY be used between systems to enhance the capabilities of the communications environment. The HL7 Lower Level Protocols are defined in the HL7 Implementation Guide, which is not an official part of the Standard.
+
+{empty}b) environments that support a robust transport level, but do not meet the high level requirements. This includes environments such as TCP/IP, DECNET, and SNA.
+
+{empty}c) ISO and proprietary networks that implement up to presentation and other high level services. IBM's SNA LU6.2 and IETF NFS are examples of complete proprietary networks.
+
+{empty}d) two or more applications running on the same physical and/or logical machine that are not tightly integrated. In these environments, the messaging capabilities MAY be provided by inter-process communications services (e.g., Pipes in a UNIX System).
+
+The HL7 Standard assumes that the communications environment will provide the following capabilities:
+
+{empty}a) error free transmission. Applications can assume that they correctly received all of the transmitted bytes in the order in which they were sent. This implies that error checking is done at a lower level. However, sending applications MAY NOT assume that the message was actually received without receiving an acknowledgment message.
+
+{empty}b) character conversion. If the two machines exchanging data use different representations of the same character set, the communications environment will convert the data from one representation to the other.
+
+{empty}c) message length. HL7 sets no limits on the maximum size of HL7 messages. The Standard assumes that the communications environment can transport messages of any length that might be necessary. In practice, sites MAY agree to place some upper bound on the size of messages and MAY use the message continuation protocol, described later in this chapter, for messages that exceed the upper limit.
+
+[NOTE]
+Just as HL7 makes no assumptions about the design or architecture of the application systems sending and receiving HL7 messages, it makes no assumptions about the communications environment beyond those listed above. In particular, aside from the above assumptions, the communications environment, including its architecture, design and implementation, is outside the scope of HL7.
+
+
+
+== Message Framework
+[v291_section="2.4"]
+
+This section defines the constituents of messages and provides the methodology for defining abstract messages that are used in later chapters. Message construction rules can be found in section 2.4.5.
+
+
+
+=== Messages
+[v291_section="2.4.1"]
+
+A *message* is the atomic unit of data transferred between systems. It is comprised of a group of segments in a defined sequence. Each message has a *message type* that defines its purpose. For example the ADT Message type is used to transmit portions of a patient's Patient Administration (ADT) data from one system to another. A three-character code contained within each message identifies its type. These are listed in the Message Type list, Appendix A.
+
+The real-world event that initiates an exchange of messages is called a trigger event. See Section _2.2.2_, "_Trigger events_," for a more detailed description of trigger events. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70003[_HL7 Tabl__e_ _0003 – Event type_] in Chapter 2C, Code Tables, for a listing of all defined trigger events. These codes represent values such as *A patient is admitted* or *An order event occurred*. There is a one-to-many relationship between message types and trigger event codes. The same trigger event code SHALL NOT be associated with more than one message type; however a message type MAY be associated with more than one trigger event code.
+
+All message types and trigger event codes beginning with the letter "Z" are reserved for locally defined messages. Z codes SHALL NOT be defined within the HL7 Standard.
+
+
+
+=== Segments and segment groups
+[v291_section="2.4.2"]
+
+A *segment* is a logical grouping of data fields. Segments of a message MAY be required or optional. They MAY occur only once in a message or they MAY be allowed to repeat. Each segment is given a name. For example, the ADT message MAY contain the following segments: Message Header (MSH), Event Type (EVN), Patient ID (PID), and Patient Visit (PV1).
+
+Each segment is identified by a unique three-character code known as the Segment ID. Although the actual segments are defined in various chapters, the ID codes assigned to the various segments are listed in Appendix A.
+
+All segment ID codes beginning with the letter *Z* are reserved for locally defined segments. Z Codes SHALL NOT be defined within the HL7 Standard.
+
+Two or more segments MAY be organized as a logical unit called a segment group. A segment group MAY be required or optional and might or might not repeat. As of v 2.5, the first segment in a newly defined segment group will be required to help ensure that unparsable messages will not be inadvertently defined. This required first segment is known as the anchor segment.
+
+A segment group is assigned a name that represents a permanent identifier that SHALLNOT be changed.
+
+A named segment X MAY occur more than once in an abstract message syntax. This differs from repetition described earlier in this section. When this occurs, the following rules SHALL be adhered to:
+
+If, within an abstract message syntax, a named segment X appears in two individual or group locations, and
+
+{empty}a) Either appearance is optional or repeating in an individual location or,
+
+{empty}b) either appearance is optional or repeating in a group location
+
+then, the occurrences of segment X SHALL be separated by at least one required segment of a different name so that no ambiguity can exist as to the individual or group location of any occurrence of segment X in a message instance.
+
+.Examples of proper segment grouping
+[width="99%",cols="33%,35%,32%",]
+|===
+|Example 1 |Example 2 |Example 3
+|\{ SEG 1} |[ SEG1 ] |SEG1
+|SEG2 |\{ |[ SEG2 ]
+|[ SEG1 ] |SEG2 |SEG3
+| |[ SEG1 ] |\{ SEG1 }
+| |} |
+|===
+
+.Examples of unparsable segment grouping
+[width="100%",cols="26%,26%,24%,24%",]
+|===
+|Example 1 |Example 2 |Example 3 |Example 4
+|\{ SEG 1} |\{ SEG1 } |[ SEG1 ] |\{ SEG1 }
+|[ SEG1 ] |[ SEG2 ] |\{ |[ SEG2
+| |SEG1 |[ SEG2 ] |SEG3 ]
+| | |SEG1 |SEG1
+| | |SEG3 |
+| | |} |
+|===
+
+In each of these examples it is not possible to tell which part of the message SEG1 belongs.
+
+
+
+=== Fields
+[v291_section="2.4.3"]
+
+[datatype-definition]
+A field is a string of characters. Fields for use within HL7 segments are defined by HL7. A comprehensive data dictionary of all HL7 fields is provided in Appendix A.
+
+Refer to section link:#protocol-for-interpreting-repeating-fields-in-an-update-message[_2.10.5_], "link:#protocol-for-interpreting-repeating-fields-in-an-update-message[_Protocol for interpreting repeating segments or segment groups in an update Message_]" for information on updating records in a database.
+
+Version control rules regarding fields can be found in section _2.7_, "_Version compatibility definition_".
+
+Local extension rules regarding fields can be found in section _2.10_, "_Local Extension_".
+
+
+
+==== Field or Component Status
+[v291_section="2.4.3.1"]
+
+HL7 does not care how systems actually store data within an application. When fields are transmitted, they are sent as character strings
+
+A field SHALL exist in one of three population states in an HL7 message:
+
+*Populated*. (Synonyms: valued, non-blank, not blank, not empty.) The sending system sends a value in the field. For example, if a sending system includes medical record number, that would be communicated as |1234567^^^MR^KP-CA|.
+
+[NOTE]
+that the field might be populated with a code that means "no information" or "unknown".
+
+*Not populated*. (Synonyms: unpopulated, not valued, unvalued, blank, empty, not present, missing.) The sending system does not supply a value for the field. The Sender might or might not have a value for the field. The receiving system can make no inference regarding the absence of an element value if there is not a conformance profile governing the implementation. However, if there is a Conformance Message Profile in effect, then special rules apply; see section 2.B, "Conformance Using Message Profiles".
+
+*Null. HL7 v2.x does not have an explicit concept for null values.*
+
+*Populated with Delete Indicator:* Any existing value for the corresponding data base element in the receiving application SHOULD be deleted. This is symbolically communicated as two double-quotes between the delimiters (i.e., |""|).Employing consecutive double quote characters as the only content of a field for other purposes is prohibited.
+
+Refer to Chapter link:#_Message_construction_rules[_2.5_], "link:#_Message_construction_rules[_Message construction rules_]" for information on data fields with a delete indicator.
+
+The various chapters of the Standard contain segment attribute tables. These tables list and describe the data fields in the segment and characteristics of their usage. In defining a segment, the following information is specified about each field:
+
+{empty}1. SEQ : Position
+
+{empty}2. LEN : Normative Length
+
+{empty}3. C.LEN : Conformance Length
+
+{empty}4. DT : Data Type
+
+{empty}5. OPT: Optionality
+
+{empty}6. RP/# : Repitition
+
+{empty}7. TBL# : Table Identifier
+
+{empty}8. ITEM# : ID Number
+
+{empty}9. Element Name
+
+Chapter 2A contains similar tables that describe the components of a data type. In defining a data type, the following information is specified about each component:
+
+{empty}1. SEQ : Position
+
+{empty}2. LEN : Normative Length
+
+{empty}3. C.LEN : Conformance Length
+
+{empty}4. DT : Data Type
+
+{empty}5. OPT: Optionality
+
+{empty}6. TBL# : Table Identifier
+
+{empty}7. Component Name
+
+{empty}8. Comments
+
+{empty}9. SEC.REF: The reference to where the data type is defined
+
+The following sections describe the information that is provided in the table.
+
+
+
+==== Position (sequence within the segment)
+[v291_section="2.4.3.2"]
+
+[datatype-definition]
+Ordinal position of the data field within the segment. This number is used to refer to the data field in the text comments that follow the segment definition table.
+
+In the segment attribute tables this information is provided in the column labeled *SEQ*.
+
+
+
+==== Length
+[v291_section="2.4.3.3"]
+
+[datatype-definition]
+If applicable, the number of characters that one occurrence of the data field or component MAY occupy if populated.
+
+For full discussion, consult section 2.5.5
+
+
+
+==== Conformance Length
+[v291_section="2.4.3.4"]
+
+[datatype-definition]
+If applicable, the conformance length that applies to the field or component. For full discussion, consult section 2.5.5
+
+
+
+==== Data type
+[v291_section="2.4.3.5"]
+
+[datatype-definition]
+The basic building block used to construct or restrict the contents of a data field.
+
+In the segment attribute tables this information is provided in the column labeled *DT*. If the data type of the field is variable, the notation "varies" will be displayed.
+
+There are a number of data types defined by HL7. See section _2.14_, "file:///D:\Eigene%20Dateien\V27_CH02A_DataTypes.doc[_Data types_]" and in Chapter 2A.
+
+Each field is assigned a data type that defines the value domain of the field – the possible values that it SHALL take. The data type SHALL have a type taken from the list of data types defined in chapter 2A.
+
+Data types MAY be either primitive or composite. Primitive data types consist of a series of characters as specified by the data type. Composite data types are made up of a series of components that are themselves assigned to a data type, which MAY again be either primitive or composite data types. In the case of composite data types, the components of a component are called sub-components, and they SHALL only be assigned primitive data types.
+
+[NOTE]
+that the data types do not specify how systems actually store data within an application. When fields are transmitted, they are sent as character strings as specified by the data type.
+
+
+
+==== Optionality
+[v291_section="2.4.3.6"]
+
+[datatype-definition]
+Whether the field is required, optional, or conditional in a segment.
+
+In the segment attribute tables this information is provided in the column labeled *OPT*.
+
+.The designations for optionality are:
+[width="100%",cols="8%,4%,88%",]
+|===
+|R |- |required
+|RE |- |Required but MAY be Empty: The field or data type component description SHALL stipulate when the field or data type component MAY be empty.
+|O |- |optional
+|C(a/b) |- a|
+conditional on the trigger event or on some other field(s). The field definitions following the segment attribute table SHOULD specify the algorithm that defines the conditionality for this field. An element with a conditional usage code has an associated condition predicate (See section 2.B.79.9 “Condition Predicate” that determines the requirements (usage code) of the element.
+
+If the condition predicate associated with the element is true, follow the rules for *_a_* which SHALL be one of “R”, “RE”, “O” or X”:
+
+If the condition predicate associated with the element is false, follow the rules for *_b_* which SHALL be one of “R”, “RE”, “O” or X”.
+
+*_a_* and *_b_* can be valued the same.
+
+|X |- |not used with this trigger event
+|B |- |left in for backward compatibility with previous versions of HL7. The field definitions following the segment attribute table SHOULD denote the optionality of the field for prior versions.
+|W |- |Withdrawn
+|===
+
+[NOTE]
+For Versions 2.3 and higher: the optionality of fields SHOULD be explicitly documented in the segment field definitions that follow each segment definition table; if the optionality of fields within a segment changes depending on the trigger event, that optionality SHOULD also be explicitly documented.
+
+[NOTE]
+Conditionality defined in Chapter 2 is further expanded by the requirements stated in Chapter 2B. See Chapter 2.B for the explanation of the c(a/b) approach.
+
+For version 2.5 and higher, the optionality, table references, and lengths of data type components are supplied in component tables of the data type definition. The component definitions that follow the component table will elaborate on the optionality and table references. Where needed, additional detailed field definitions will follow the formal segment attribute tables. (See also Sections 2.14, ”Message delimiters”, 2.14,”Data types “ ).
+
+
+
+==== Repetition
+[v291_section="2.4.3.7"]
+
+[datatype-definition]
+Whether the field MAY repeat. The value that appears in the repetitions column is the maximum number of allowed occurrences, e.g., a value of '3' would mean that the field can have '3 occurrences'; if unspecified, there is only one occurrence, i.e., cannot repeat.
+
+In the segment attribute tables this information is provided in the column labeled *RP/#.* Note that components and subcomponents MAY NOT repeat, so this does not apply to components and subcomponents.
+
+.The designations for Repetition are:
+[width="100%",cols="14%,4%,82%",]
+|===
+|N or blank |- |no repetition
+|Y |- |the field MAY repeat an indefinite or site-determined number of times
+|(integer) |- |the field MAY repeat up to the number of times specified by the integer
+|===
+
+Each occurrence MAY contain the number of characters specified by the field's maximum length. See Section _2_.
+
+Usage Note: For improved readability some work groups opt to leave the Repetition fields blank to indicate that the field SHALL NOT repeat. A blank SHALL NOT be construed to mean that the field MAY optionally repeat.
+
+As of v2.5 the Repetition column is to be left blank if the field SHALL NOT repeat.
+
+
+
+==== Table
+[v291_section="2.4.3.8"]
+
+Refer to Chapter 2.C, "Code Tables".
+
+
+
+==== ID number
+[v291_section="2.4.3.9"]
+
+[datatype-definition]
+a small integer that uniquely identifies the data item throughout the Standard**.** In the segment definition this information is provided in the column labeled *ITEM #.*
+
+
+
+==== Name
+[v291_section="2.4.3.10"]
+
+[datatype-definition]
+Descriptive name for the data item. In the segment attribute tables this information is provided in the column labeled *ELEMENT NAME*.
+
+When the same name is used in more than one segment, it SHALL have the same data type and semantic meaning in each segment as well as the same ID number. To deal with any ambiguities arising from this convention, whenever a field is referenced herein, the segment name and position SHALL always be included.
+
+
+
+=== Message delimiters
+[v291_section="2.4.4"]
+
+In constructing a message, certain special characters are used. They are the segment terminator, the field separator, the component separator, subcomponent separator, repetition separator, escape character and truncation character. The segment terminator is always a carriage return (in ASCII 13,hex 0D). The other delimiters are defined in the MSH segment, with the field delimiter in the 4th character position, and the other delimiters occurring as in the field called Encoding Characters, which is the first field after the segment ID. The delimiter values used in the MSH segment are the delimiter values used throughout the entire message. In the absence of other considerations, HL7 recommends the suggested values found in Figure 2-1 delimiter values.
+
+At any given site, the subset of the possible delimiters MAY be limited by negotiations between applications. This implies that the receiving applications will use the agreed upon delimiters, as they appear in the Message Header segment (MSH), to parse the message.
+
+[NOTE]
+The binary representation of the delimiter characters will vary with the character set used in the message.
+
+.Figure 2-1. Delimiter values
+[width="100%",cols="19%,9%,15%,57%",]
+|===
+|Delimiter |Suggested Value |Encoding Character Position |Usage
+|Segment Terminator |<cr> |- |Terminates a segment record. This value cannot be changed by implementers.
+|Field Separator |\| |- |Separates two adjacent data fields within a segment. It also separates the segment ID from the first data field in each segment.
+|Component Separator |^ |1 |Separates adjacent components of data fields where allowed.
+|Repetition Separator |~ |2 |Separates multiple occurrences of a field where allowed.
+|Escape Character |\ |3 |Escape character for use with any field, component, or sub-component.
+|Subcomponent Separator |& |4 |Separates adjacent subcomp­onents of data fields where allowed.
+|Truncation character |# |5 |Indicated character to be used for the truncation pattern - See 2.4.5.2, Truncation Pattern.
+|===
+
+
+
+=== Length
+[v291_section="2.4.5"]
+
+While the length is not generally of conceptual importance in HL7 messages, most HL7 aware applications are implemented using some form of data storage that imposes length limitations on the data. This section describes how the lengths of the fields are controlled, and how interoperability can be arranged in this context.
+
+
+
+==== Normative Length
+[v291_section="2.4.5.0"]
+
+For some fields or components, the value domain of the content leads to clearly established boundaries for minimum and/or maximum length of the content. In these cases, these known limits are specified for the item. Normative lengths are only specified for primitive data types.
+
+[example]
+s of value domains that have clearly established boundaries for minimum and maximum length:
+
+• A date/time field: See 2.A.22 DTM date/time for detailed examples.
+
+o 4..4 for year
+
+o 4..6 for Year to month
+
+o 8..8 for year to day
+
+• A component whose values are limited to a set of fixed length strings, e.g.(ABC, SYL, or IDE)A component that contains a reference to a field in a message
+
+The information is given in one of two forms:
+
+• The minimum and the maximum length separated by two dots, e.g. m..n
+
+• the list of possible values for length separated by commas, e.g. x,y,z
+
+When a normative length is asserted and assertion is a range, conformant messages SHALL have a length that lies within the boundaries specified. The boundaries are inclusive, so a length of 1..2 means the length of the item SHALL be either 1 or 2. When a normative length is asserted and assertion is a list of values, conformant messages SHALL have a length that is one of the values in the list.
+
+[NOTE]
+The minimum length is always 1 or more. If an item is optional, and there is no content present, the item is considered as not populated, rather than present with a length of 0.
+
+[NOTE]
+The deletion indicator is treated as having no length and therefore fits to all length specifications.
+
+
+
+==== Length & Persistent Data Stores
+[v291_section="2.4.5.1"]
+
+For many fields or components, the value domain of the content does not lead to clearly established boundaries for minimum and/or maximum length of the content.
+
+[example]
+s of value domains that do not have clearly established boundaries for minimum and maximum length:
+
+• Parts of Names and Addresses
+
+• Codes defined in external code systems
+
+• Descriptive text
+
+In many cases, systems store the information of these value domains using data storage mechanisms that have fixed lengths, such as relational databases, and must impose a limitation on the amount of information that can be stored. Though this does not directly impact on the length of the item in the instance, nevertheless the storage length has great significance for establishing interoperability.
+
+
+
+==== Truncation Pattern
+[v291_section="2.4.5.2"]
+
+For technical and/or architectural reasons, many applications must define a limit to the length that they will store for a particular item. This creates a need for the length of an element to be defined somewhere and raises the question of what is intended to happen if a real world value is longer than the acceptable value. The problem of how to handle this is unaffected by whether it is the standard that defines the length, or the receiving system that defines the length: what can be done?
+
+The most obvious response is that the data must be rejected, and either the message cannot be constructed or must be rejected completely. For some data items, this is the only clinically safe behaviour.On the other hand, for some data items such as names and addresses, this is generally unwelcome information – the system can still function to some degree in the presence of truncated data.
+
+However truncation of data can have later consequences – if a data item such as a particularly long surname is truncated, and then returned to the source application in the truncated form, the source application might not correctly match on the truncated name.
+
+For this reason, when values are truncated because they are too long (whether because some applicable specification limits the length of the item, or because the application is not able to store the full value), the value SHOULD be truncated at N-1, where N is the length limit, and the final character replaced with a special truncation character. This means that whenever that value is subsequently processed later, either by the system, a different system, or a human user, the fact that the value has been truncated has been preserved, and the information can be handled accordingly.
+
+The truncation character is not fixed; applications MAY use any character. The truncation character used in the message is defined in MSH-2. The default truncation character in a message is # (ASCII 35, HEX 23),because the character must come from the narrow range of allowed characters in an instance. The truncation character only represents truncation when it appears as the last character of a truncatable field. It SHALL be escaped if the last character of the data that is the maximum allowable size for the component is the truncation character.
+
+[example]
+For a field with a conformance length of 5 where the content is |1234\P\| the truncation character is not representing truncation, it is the actual data.
+
+[NOTE]
+The selection of # as truncation character is taken from ISO 22220 and 27527.
+
+
+
+==== Conformance Length
+[v291_section="2.4.5.3"]
+
+If populated, the conformance length column specifies the minimum length that applications must be able to store. Conformant applications SHALL NOT truncate a value that is shorter than the length specified. The conformance length is also the minimum value that SHOULD be assigned to maximum length in an implementation profile.
+
+In addition, the conformance length MAY be followed by a “=” or a “#”. The “=” denotes the value MAY never be truncated, and the “#” denotes that the truncation behaviour defined for the data type applies.
+
+Applications are not required to implement the truncation pattern, even if it can be applied to an item. Applications SHOULD declare their adoption of the truncation pattern in their conformance profiles.
+
+
+
+==== Type and Component/Field lengths
+[v291_section="2.4.5.4"]
+
+Either normative or conformative lengths MAY be specified on a primitive data type. Whether or not normative or conformance lengths are specified on the data type, they MAY also be specified on the components and/or fields where the data type is used. If specified here, they override the length specified for the type (but must be consistent with the information on the type). If not specified, then the information specified on the data type itself – if present – applies where the data type is used.
+
+Minimum and maximum lengths are not assigned for composite data types (data types having more than one component). Not only can the minimum or maximum lengths be indeterminate, it is misleading to report a length with separator characters included, and also misleading to associate a length with a composite component that must be broken up when it is stored. For these reasons derived lengths are not reported in this standard, though implementers MAY derive them as desired.
+
+
+
+==== Implications for Implementers
+[v291_section="2.4.5.5"]
+
+.In an ideal world, the standard would be able to determine the maximum length for a value with authority, and all implementations would be able to handle the maximum length. However neither of these are true, and so this specification defines both normative maximum length, conformance length, and whether a value MAY be truncated. This following table summarises how these various parameters interact, provides an example of each combination, and outlines the implications for implementations. The second data type listed refers to the underlying data type the cited one is based upon.
+[width="100%",cols="11%,7%,6%,7%,69%",options="header",]
+|===
+|ID/DT |Child DT |LEN |C.LEN |Implication
+|CX.5 | |2..5 | a|
+CX.5 MAY contain a number of fixed values, all of which have a length between 2 and 5. Other values are not allowed.
+
+Truncation is not allowed.
+
+| |ID |1.. |15= |The conformance length is 15 – applications SHALL be able to properly handle all values, which includes the range of allowed lengths for this component.
+|ED.3 | | |32 a|
+ED.3 is one of the few examples where an ID value is taken from an externally derived code system (IANA mime types in this case).
+
+The conformance length is 32: applications SHALL be able to handle mime types up to a length of 32. Applications can choose to handle more if desired.
+
+| |ID |1.. |15= |Since truncation is not allowed, applications SHALL respond with an error if the length of a mime type exceeds the length it can handle without truncation.
+|CWE.1 | | |20= a|
+If populated, the value SHALL be at least one character. There is no upper limit to the number of characters that are allowed, since this specification cannot apply a limit to the external code systems that CWE is provided to support. In particular, Snomed-CT (post-coordinated) expressions MAY be provided in the coding identifier component.
+
+However this specification does not impose the requirement to support arbitrarily long values in this very common component. Instead, applications SHALL support codesystem identifiers up to 20 characters long.
+
+| |ST |1.. | a|
+Since the identifier is useless if truncated, truncation SHALL NOT be allowed.
+
+Application designers SHOULD consider the range of possible values and how they are handled. If the application imposes a maximum limit, this SHOULD be published in the application conformance profile.
+
+|FN.1 | | |50# a|
+FN.1 contains a surname. This specification is not in a position to impose an upper normative limit on the length of all surnames in the world.
+
+However our collective experience shows that values longer than 50 are rarely encountered, so applications SHALL be able to handle values up to the length of 50 without truncation.
+
+| |ST |1.. | |Applications MAY choose to truncate values longer than 50 characters. If applications do this, the truncation pattern SHOULD be followed in order to reduce the risks of downstream handling of the data following truncation.
+|XAD.5 | | |12= a|
+XAD.5 is postal/zip code. This specification is not able to impose a normative limit on the size of postal codes around the world, but our collective experience is that 12 covers all the currently known postal systems.
+
+Because postal code is used as an identifier in postal delivery systems, it is not appropriate to truncate the value.
+
+| |ST |1.. | |
+|XPN.12 | | | |XPN.12 specifies the date that a person name became applicable. By default, this field allows a highly precise date including milliseconds and a time zone. Applications are not required to implement this level of precision; they MAY truncate the value to a the day containing the specified time interval.
+| |DTM |4..24 |8# |
+|CWE.16 | |4..24 |8= |CWE.16 specifies the date that a value set was published. In some contexts, the publication date of a value set MAY be identified by a date precise to at least hours and minutes in order to allow multiple releases in a single day.
+| |DTM |4..24 |8# a|
+However this is an unusual use case; nearly all value sets only identify their publication date to the nearest day.
+
+For this reason applications are only required to handle value sets specified to the particular day. However, since the publication date identifies a particular version of the value set, applications are not allowed to truncate the publication date. This specification recommends but does not require that applications support a full date time for this value.
+
+Note that the base DTM type default conformance length is that all applications are required to be able to store a full day, and are allowed to truncate dates to this length. These rules MAY be overridden where DTM is used.
+
+|NTE.1 | | | |NTE.1 is the segment Id. The segment id MAY have any value between 1 and 9999. Applications are required to handle all these values.
+| |SI |1..4 |4= |
+|SN.2 | | | |SN.2 is a numerical value from a structured numeric presented in decimal form. It has a normative length of 16.
+| |NM |1..16 | |The NM data type defines its own truncation pattern driven by the semantics of numbers. The truncation character SHALL NOT be used. While there is no conformance length specified, the truncation rules for the NM data type SHALL always be followed; the application SHALL reject the instance if it is unable to conform to these rules.
+|ED.5 | | | a|
+ED.5 is text data of arbitrary length. This specification does not apply either a normative length or a conformance length. This does not mean that applications are not required to handle data of infinite length. Applications MAY choose to define limits on the length of data handled in their conformance profiles.
+
+Note that the length of data handled can depend on the type of the data.
+
+| |TX | | |
+|===
+
+
+
+=== Acknowledgment Choreography
+[v291_section="2.4.6"]
+
+Acknowledgment Choreography is defined as the definition of the acknowledgments to be expected for a given trigger event. It is required to document the expected acknowledgment based on the values in link:#_MSH-15___Accept Acknowledgment Type[MSH-15] and link:#_MSH-16___Application Acknowledgment[MSH-16].
+
+As of V2.9, all chapters SHALL include in their trigger event definitions the acknowledgment choreography.
+
+The first row SHALL contain the words "Acknowledgment Choreography". The second row SHALL contain the message definition being described. When multiple message definitions have the same response in the same chapter all of the message pairs MAY be listed in the second row.
+
+The values rows MSH-15 and MSH-16 are extracted from the valid values for the field.
+
+The Application ACK row SHOULD contain the message expected in reponse to the processing of the message named in third row containing the value(s) for MSH-16 in that column.
+
+[ack_chor-table]
+
+For proper formatting please consult the styleguide.
+
+
+
+== Message construction rules
+[v291_section="2.5"]
+
+This section addresses HL7 general rules for composing messages. Both the sender and receiver of the data must have predictable rules for how they will process the data. The reader is also referred to Section 2.B, "Conformance Using Message Profiles", where procedures for ensuring messaging integrity are discussed in detail.
+
+In constructing a message, certain special characters are used. They are the segment terminator, the field separator, the component separator, subcomponent separator, repetition separator, escape character and the truncation character. The segment terminator is always a carriage return (in ASCII 13, hex 0D).The other delimiters are defined in the MSH segment, with the field delimiter in the 4th character position, and the other delimiters occurring as in the field called Encoding Characters, which is the first field after the segment ID. The delimiter values used in the MSH segment are the delimiter values used throughout the entire message. In the absence of other considerations, HL7 recommends the suggested values found in Figure 2-1 delimiter values.
+
+[NOTE]
+These message construction rules define the standard HL7 encoding rules, creating variable length delimited messages. Although only one set of encoding rules has been defined as a standard since HL7 Version 2.3, other encoding rules are possible (but since they are non-standard, they MAY only be used by a site-specific agreement).
+
+
+
+=== Message Construction Pseudocode
+[v291_section="2.5.1"]
+
+procedure construct_message ( data ) \{
+
+identify_message_needed;
+
+identify_separators_used;
+
+validate( data );
+
+order_segments( data, segment_list );
+
+foreach segment in ( segment_list ) \{
+
+insert segment.name; /* e.g., MSH */
+
+/* gather all data for fields */
+
+foreach field in ( fields_of( segment ) ) \{
+
+insert field separator; /* e.g., | */
+
+/* gather occurrences (MAY be multiple only for fields that are allowed to repeat */
+
+foreach occurrence in ( occurrences_of( field ) ) \{
+
+construct_occurrence( occurrence );
+
+if not last ( populated occurrence ) insert repetition_separator; /* e.g., ~ */
+
+}
+
+break if last ( populated field );
+
+}
+
+insert segment_terminator; /* always<cr>! */
+
+}
+
+return;
+
+}
+
+procedure construct_occurrence ( occurrence ) \{
+
+/* gather populated components */
+
+foreach component in ( components_of( occurrence ) ) \{
+
+get_subcomponent_data( component );
+
+/* gather all data for subcomponents */
+
+foreach subcomponent in ( subcomponents_of( component ) ) \{
+
+substitute( escape_character, \E\ );
+
+/* escape the field separator */
+
+substitute( field_separator, \F\ );
+
+/* escape the encoding characters */
+
+substitute( component_separator, \S\ );
+
+substitute( repetition_separator, \R\ );
+
+substitute( subcomponent_separator, \T\ );
+
+substitute (truncation_character, \P\ ) /*See 2.6.2Truncation Character escape*/
+
+insert subcomponent;
+
+if not last ( populated subcomponent ) insert subcomponent_separator; /* e.g., & */
+
+}
+
+if not last ( populated component ) insert component_separator; /* e.g., ^ */
+
+}
+
+return;
+
+}
+
+
+
+==== Message Construction Flow Chart
+[v291_section="2.5.1.0"]
+
+The flow charts on the following pages represent another view of the message construction rules. The first shows the rules for transmitting a message; the second shows transmitting field occurrences.
+
+image::extracted-media/media/image1.wmf[]
+
+image::extracted-media/media/image2.wmf[]
+
+
+
+=== Rules for the recipient
+[v291_section="2.5.2"]
+
+The following rules apply to receiving HL7 messages and converting their contents to data values:
+
+{empty}a) ignore segments, fields, components, subcomponents, and extra repetitions of a field that are present but were not expected.
+
+{empty}b) treat optional segments that were expected but are not present as consisting entirely of fields that are not present.
+
+{empty}c) treat fields and components that are expected but were not included in a segment as not present.
+
+
+
+=== Encoding rules notes
+[v291_section="2.5.3"]
+
+If a segment is to be continued across messages, use the extended encoding rules. These rules are defined in terms of the more general message continuation protocol (see Section _2.9.2_, "_Continuation messages and segments_").
+
+
+
+== Use of escape sequences in fields
+[v291_section="2.6"]
+
+
+
+=== Formatting codes
+[v291_section="2.6.1"]
+
+.When delimiters are included in any component, the delimiters SHALL be escaped. Failure to do so can alter the meaning of the component. The escape character is whichever ASCII character is specified in the <escape character> component of MSH-2 Encoding Characters. For purposes of this section, the character \ will be used to represent the character so designated in a message. An escape sequence consists of the escape character followed by an escape code ID of one character, zero (0) or more data characters, and another occurrence of the escape character. The following escape sequences are defined:
+[width="100%",cols="21%,79%",]
+|===
+|\F\ |field separator
+|\S\ |component separator
+|\T\ |subcomponent separator
+|\R\ |repetition separator
+|\E\ |escape character
+|\P\ |truncation character
+|===
+
+When a field, component or sub-component of type TX, FT, or CF is being encoded, additional escape character(s) MAY be used to signal certain special characteristics of portions of the text field. The escape character is whatever display ASCII character is specified in the <escape character> component of MSH-2 Encoding Characters.
+
+.The following additional escape sequences are defined:
+[width="100%",cols="21%,79%",]
+|===
+|\H\ |start highlighting
+|\N\ |normal text (end highlighting)
+|\Xdddd...\ |hexadecimal data
+|\Zdddd...\ |locally defined escape sequence
+|===
+
+Escape sequences SHALL NOT contain nested escape sequences.
+
+For the purposes of determining length, all the characters inside the escape (all between the opening and closing \, not including the \ symbols themselves) count towards the length. This applies to all the escape sequences, including the formatting ones described below.
+
+
+
+=== Truncation Character escape
+[v291_section="2.6.2"]
+
+When the last character of a value that is expected to be truncated is the truncation character, the truncation character SHALL be escaped.
+
+.Examples of truncation character usage.
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Conformance length |Original value |Component value
+|6# |abcdefgh |abcde#
+|6# |abcdef |abcdef
+|6# |abcde# |abcde\P\
+|===
+
+
+
+=== Escape sequences supporting multiple character sets
+[v291_section="2.6.3"]
+
+The following HL7 escape sequences are defined to support multiple character sets for fields, components and sub-components that are defined as data types FT, ST, and TX. They allow HL7 parsers to use escape codes (defined in the standards used below), without breaking, and without being non-conformant to the HL7 escape paradigm defined in this section.
+
+\Cxxyy\ single-byte character set escape sequence with two hexadecimal values, xx and yy, that indicate the escape sequence defined for one of the character repertoires supported for the current message (i.e., ISO-IR xxx).
+
+\Mxxyyzz\ multi-byte character set escape sequence with three hexadecimal values, xx, yy and zz. zz is optional.
+
+Common character set escape sequences include the following which are defined in the standards mentioned:
+
+.Single-byte character sets:
+[width="100%",cols="32%,68%",]
+|===
+|\C2842\ |ISO-IR6 G0 (ISO 646 : ASCII)
+|\C2D41\ |ISO-IR100 (ISO 8859 : Latin Alphabet 1)
+|\C2D42\ |ISO-IR101 (ISO 8859 : Latin Alphabet 2)
+|\C2D43\ |ISO-IR109 (ISO 8859 : Latin Alphabet 3)
+|\C2D44\ |ISO-IR110 (ISO 8859 : Latin Alphabet 4)
+|\C2D4C\ |ISO-IR144 (ISO 8859 : Cyrillic)
+|\C2D47\ |ISO-IR127 (ISO 8859 : Arabic)
+|\C2D46\ |ISO-IR126 (ISO 8859 : Greek)
+|\C2D48\ |ISO-IR138 (ISO 8859 : Hebrew)
+|\C2D4D\ |ISO-IR148 (ISO 8859 : Latin Alphabet 5)
+|\C284A\ |ISO-IR14 (JIS X 0201 -1976: Romaji)
+|\C2949\ |ISO-IR13 (JIS X 0201 : Katakana)
+|===
+
+.Multi-byte codes:
+[width="100%",cols="31%,69%",]
+|===
+|\M2442\ |ISO-IR87 (JIS X 0208 : Kanji, hiragana and katakana)
+|\M242844\ |ISO-IR159 (JIS X 0212 : Supplementary Kanji)
+|===
+
+
+
+=== Highlighting
+[v291_section="2.6.4"]
+
+In designating highlighting, the sending application is indicating that the characters that follow somehow can be made to stand out, but leaving the method of doing so to the receiving application. Depending on device characteristics and application style considerations, the receiving application MAY choose reverse video, boldface, underlining, blink, an alternate color or another means of highlighting the displayed data. For example the message fragment:
+
+DSP| TOTAL CHOLESTEROL \H\240*\N\ [90 - 200]
+
+might cause the following data to appear on a screen or report:
+
+TOTAL CHOLESTEROL 240* [90 - 200]
+
+whereas another system might choose to show the 240* in red.
+
+
+
+=== Special character
+[v291_section="2.6.5"]
+
+The special character escape sequences (\F\, \S\, \R\, \T\, \P\ and \E\) allow the corresponding characters to be included in the data in a text field, though the actual characters are reserved. For example, the message fragment
+
+DSP| TOTAL CHOLESTEROL 180 \F\90 - 200\F\
+
+DSP| \S\----------------\S\
+
+would cause the following information to be displayed, given suitable assignment of separators:
+
+TOTAL CHOLESTEROL 180 |90 - 200|
+
+[er7]
+^----------------^
+
+
+
+=== Hexadecimal
+[v291_section="2.6.6"]
+
+When the hexadecimal escape sequence (\Xdddd...\) is used the X SHALL be followed by 1 or more pairs of hexadecimal digits (0, 1, . . . , 9, A, . . . , F). Consecutive pairs of the hexadecimal digits represent 8-bit binary values. The interpretation of the data is entirely left to an agreement between the sending and receiving applications that is beyond the scope of this Standard.
+
+
+
+=== Usage and Examples of Formatted Text
+[v291_section="2.6.7"]
+
+.If the field is of the formatted text (FT) data type, formatting commands also SHALL be surrounded by the escape character. Each command begins with the "." (period) character. The following formatting commands are available:
+[width="100%",cols="18%,82%",]
+|===
+|\.sp <number>\ |End current output line and skip <number> vertical spaces. <number> is a positive integer or absent. If <number> is absent, skip one space. The horizontal character position remains unchanged. Note that only for purposes of compatibility with previous versions of HL7, "^\.sp\" is equivalent to "\.br\."
+|\.br\ |Begin new output line. Set the horizontal position to the current left margin and increment the vertical position by 1.
+|\.fi\ |Begin word wrap or fill mode. This is the default state. It can be changed to a no-wrap mode using the .nf command.
+|\.nf\ |Begin no-wrap mode.
+|\.in <number>\ |Indent <number> of spaces, where <number> is a positive or negative integer. This command cannot appear after the first printable character of a line.
+|\.ti <number>\ |Temporarily indent <number> of spaces where number is a positive or negative integer. This command cannot appear after the first printable character of a line.
+|\.sk < number>\ |Skip <number> spaces to the right.
+|\.ce\ |End current output line and center the next line.
+|===
+
+The component separator that marks each line defines the extent of the temporary indent command (.ti), and the beginning of each line in the no-wrap mode (.nf). Examples of formatting instructions that are NOT included in this data type include: width of display, position on page or screen, and type of output devices.
+
+Figure 2-3 is an example of the FT data type from a radiology impression section of a radiology report:
+
+.Figure 2-3. Formatted text as transmitted
+[width="100%",cols="100%",]
+|===
+|\| \.in+4\\.ti-4\ 1. The cardiomediastinal silhouette is now within normal limits.\.br\\.ti-4\ 2. Lung fields show minimal ground glass appearance.\.br\\.ti-4\ 3. A loop of colon visible in the left upper quadrant is distinctly abnormal with the appearance of mucosal effacement suggesting colitis.\.br\.in-4\\|
+|===
+
+Figure 2-4 shows one way of presenting the data in Figure 2-3. The receiving system can create many other interpretations by varying the right margin.
+
+.Figure 2-4. Formatted text in one possible presentation
+[width="100%",cols="100%",]
+|===
+a|
+{empty}1. The cardiomediastinal silhouette is now within normal limits.
+
+{empty}2. Lung fields show minimal ground glass appearance.
+
+{empty}3. A loop of colon visible in the left upper quadrant is distinctly abnormal with the appearance of mucosal effacement suggesting colitis.
+
+|===
+
+
+
+=== Local
+[v291_section="2.6.8"]
+
+When the local escape sequence (\Zdddd...\) is used the Z SHALL be followed by characters that are valid in a TX field. The interpretation of the data is entirely left to an agreement between the sending and receiving applications that is beyond the scope of this Standard.
+
+
+
+== Version compatibility definition
+[v291_section="2.7"]
+
+The rules, described in section _2.5_, _Message construction rules,_ for receiving HL7 messages and converting their contents to data values allow the following definition of a backward compatibility requirement between the 2.x versions of HL7:
+
+[NOTE]
+If an issue is not covered explicitly under these rules, no assumption SHOULD be made that the change is allowed.
+
+The keys to understanding version compatibility are the following 2 axioms, plus the processing rules which state that unexpected information SHOULD be discarded.
+
+• Old receivers receiving new messages SHOULD be able to continue receiving messages without error.
+
+• New receivers SHOULD be able to understand old messages.
+
+This section elaborates on what the kinds of changes can be done that satisfies these axioms. Only HL7 changes introduced in new versions are included. Local extensions are discussed in section _2.10_, "_Local Extension_".
+
+
+
+=== Adding messages or message constituents
+[v291_section="2.7.1"]
+
+When a new message or a new constituent of an HL7 message is introduced it SHALL be defined as described below. A sending system SHOULD be able to send a new message or new constituent; the receiver, regardless of its version level, SHALL ignore any message or message constituent it is not expecting without generating an application failure. This does not preclude a receiver notifying the sender that additional element was ignored, but the receiving application SHOULD NOT fail just from the existence of additional element.
+
+{empty}a) New messages MAY be introduced.
+
+{empty}b) A new segment group MAY be defined.
+
+{empty}c) As of V2.5 the first segment in a newly-defined segment group SHALL be marked as required.
+
+{empty}d) New segments MAY be introduced to an existing message. In general these SHOULD be introduced at the end of a message or a segment group, but they MAY be introduced elsewhere within the message if the segment hierarchy makes this necessary. Unless needed as a technical correction or for regulatory reporting purposes, a new segment SHALL NOT be added to a deprecated message. As of v2.6 all new segments, except for those pertaining only to message transmission or control, SHALL include an Action Code field as the first or second field as appropriate.
+
+{empty}e) Care must be taken when introducing a new segment if this results in a situation in which a named segment X appears in two individual or group locations. See section _2.5_, "_Message construction rules_".
+
+{empty}f) New fields MAY be added at the end of a segment. A field that changes the semantic meaning of a segment (e.g., an Acton Code, or Mood code) SHALL only be introduced in a pre-existing segment if the usage of the field is conditional on it not being used in messages with pre-existing trigger events. This is to avoid the risk of reversing the intent of the segment as it is known to the recipient of an earlier version. For example, if the Sender were to send the segment with a delete action code, the recipient would not understand that the information SHOULD be deleted.
+
+{empty}g) A new data type MAY be introduced.
+
+{empty}h) New components MAY be added at the end of a data type.
+
+{empty}i) A new table MAY be introduced.
+
+
+
+=== Changing messages or message constituents
+[v291_section="2.7.2"]
+
+Allowable changes to messages or message constituents can be categorized as name, data type, optionality, repeatability, length or definition changes.
+
+{empty}a) The descriptive text name of a message or message constituent (except for segment group name) MAY be changed. This is not expected to have impact on either the sender's ability to transmit a message or the receiver's ability to receive and understand the message. Reasons for changing the descriptive text name include: 1) clarify a misleading name, and 2) encompassing a broader use without jeopardizing current use.
+
+{empty}b) The data type of a field or data type component MAY be changed. A sending system SHOULD be able to send the modified field or data type; the receiver, regardless of its version level, SHOULD be able to understand the message and to ignore any message constituent it is not expecting.
+
+{empty}1) The data type of the field MAY be changed provided that the components of the new data type have the same structure and interpretation as the old data type. For example, an IS data type MAY be changed to a CE, but a PPN data type cannot be changed to a PN. An NM data type cannot be changed to an ST data type.
+
+{empty}2) For existing fields in existing segments, data types MAY be changed if the leftmost (prior version) part of the field has the same meaning as it had in the prior version of HL7. This is in accordance with the rules governing the addition of new components and subcomponents described in the section above. In other words, if the new parts of the field (those that are part of the new data type) are ignored, what remains is the old field (defined by the old data type), which has the same meaning as it had in the prior version of HL7.
+
+{empty}3) If a data type component has its data type changed, the structure and interpretation SHALL remain the same as the pre-existing component. Any new component is added at the end of the data type.
+
+{empty}c) The optionality of a message constituent MAY be changed. A sending system SHOULD be able to send the modified field; the receiver, regardless of its version level, SHOULD be able to understand the message. This pertains as follows:
+
+{empty}1) Existing optional segment groups MAY be made required.
+
+{empty}2) Existing optional segments MAY be made conditional or required.
+
+{empty}3) Existing optional fields MAY be made conditional or required.
+
+{empty}4) Existing required fields MAY be made conditional if a new trigger event has been applied. The condition must be specified such that the field remains required for the pre-existing trigger events.
+
+{empty}5) Existing optional components of a data type MAY be made conditional or required.
+
+{empty}d) The repeatability of a message constituent MAY be changed. A sending system SHOULD be able to send the modified message constituent; the receiver, regardless of its version level, SHOULD be able to understand the message. Note that if a non-repeating message constituent is made repeating, information sent in the new repetitions couldbe lost to the recipient who is not expecting them.
+
+If HL7 has given, or will give, semantic meaning to the first instance, to allow backward compatibility, the first instance of the repeating constituent SHALL have the same meaning as the non-repeating constituent had in the prior version of HL7. In this way, a receiving application that interprets the message based upon the prior standard would continue to find the same intent communicated in the message.
+
+If HL7 has not given, and will/can not give, semantic meaning to the first instance, and one or more implementation-applied business rules exist to select one of several occurrences to populate a non-repeating constituent, those same rules SHOULD be applied when a newer version of the standard allows for repetition of the constituent. By applying the prior business rules to determine the first occurrence of a repeating constituent, a receiving application that interprets the message based upon the prior standard would continue to find the same intent communicated in the message.
+
+If, in the judgment of the owner/author of the standard section in question, changing a message constituent from non-repeating to repeating poses logical, parsing, business, or other compatibility issues, the owner/author SHOULD create a new structure to eliminate the compatibility concern.
+
+For example, if allowing a segment to repeat implies a change to the business intent of the message, the work group(s) responsible SHOULD define a new message structure (as a new message/trigger) and retain the old structure for backward compatibility.
+
+This pertains as follows:
+
+{empty}1) A segment group MAY change from non-repeating to repeating, subject to the backward compatibility concerns expressed above.
+
+{empty}2) A segment group SHALL NOT be changed from repeating to non-repeating.
+
+{empty}3) A segment MAY be changed from non-repeating to repeating, subject to the backward compatibility concerns expressed above.
+
+{empty}4) A segment SHALL NOT be changed from repeating to non-repeating.
+
+{empty}5) A field MAY be changed from non-repeating to repeating, subject to the backward compatibility concerns expressed above. A field SHALL NOT be changed from repeating to non-repeating.
+
+{empty}e) The minimum and maximum normative lengths and the conformance length and truncation status of each field or data type component MAY be changed between versions. .
+
+{empty}f) Table definition MAY change.
+
+{empty}1) A table MAY be changed from user-defined to HL7 defined or externally defined.
+
+{empty}2) A table MAY be changed from HL7 defined to an externally defined table. When this occurs, the data type of the field SHOULD be changed to a CNE or CWE.
+
+{empty}3) A table MAY be changed from HL7 defined published in Chapter 2c to HL7 Defined sourced externally (HL7-EXT).
+
+
+
+=== Deprecating messages or message constituents
+[v291_section="2.7.3"]
+
+Any required, optional or conditional constituent of an HL7 message, including the message itself, MAY be deprecated. This means that one of the following situations has occurred:
+
+• The message or message constituent no longer has a meaningful purpose
+
+• The message or message constituent has been replaced by a better method
+
+Language will be inserted stating the fact of deprecation, the version in which the deprecation occurred, and what message or message constituent, if any, replaces it. The phrase "Retained for backward compatibility only in version 2.x; refer to section n.m instead" will be the standard language for such an occurrence.
+
+The fact of deprecation SHOULD NOT affect either the sender or the receiver because the message or message constituent is retained for backward compatibility. Implementers, by site agreement, MAY agree to not support deprecated message constituents.
+
+The following are allowed:
+
+{empty}a) A message MAY be deprecated.
+
+{empty}c) A trigger event MAY be deprecated.
+
+{empty}d) A message structure MAY be deprecated.
+
+{empty}e) A segment in an existing message MAY be deprecated. Implementers, by site agreement, MAY agree to not support deprecated segments. If the segment that is to be deprecated has dependents the entire segment group SHALL be deprecated. For example, in a group [\{ABC[DEF][\{GHI}]], DEF and/or GHI MAY be deprecated, but ABC cannot be deprecated without deprecating the whole.
+
+{empty}f) A field MAY be deprecated by HL7. Before deprecating a field, HL7 SHALL ensure that all message structures which use that field have an appropriate non-deprecated location to move the data. Implementers, by site agreement, MAY agree to not use deprecated fields.
+
+{empty}g) A data type MAY be deprecated provided all fields referencing it have been deprecated or there is an explicit statement that the data type is not to be used in any field defined in the future.
+
+{empty}h) A data type component MAY be deprecated.
+
+{empty}i) A table MAY be deprecated. This includes HL7 tables, HL7-EXT tables, user-defined tables, imported external tables and reference to external tables. Before deprecating a table, HL7 SHALL ensure that no references to the table exist.
+
+{empty}j) An entry in an HL7-defined table MAY be deprecated. The table itself SHOULD be reviewed if it contains a substantial number of deprecated members.
+
+{empty}k) An entry in an imported external table SHALL *NOT* be deprecated.
+
+
+
+=== Removing messages or message constituents
+[v291_section="2.7.4"]
+
+A message or message constituent MAY be removed from the standard when criteria described in this section are met. HL7 will track old names so they are not re-used.
+
+[NOTE]
+To refer to the detail of a withdrawn message constituent, the reader will need to review the appropriate earlier version of the standard. By site agreement senders and receivers MAY agree to continue to use messages and/or message constituents that have been removed.
+
+{empty}a) A message constituent MAY be immediately removed from the standard based on the following criteria (immediately means in the same version in which the criteria are met.).
+
+{empty}1) A message structure MAY be removed immediately provided no message references it in the standard. Care must be taken lest a message structure is prematurely removed if the associated trigger event that contributed to its name is removed. For example, if a message structure ABC_D01 is associated with trigger events D01, D02 and D03 and D01 is changed and becomes associated with another existing message structure DEF_E01, the message structure ABC_D01 is still active and valid for trigger events D02 and D03.
+
+{empty}2) A segment MAY be removed immediately provided no message references it in the standard.
+
+{empty}3) A data type MAY be removed immediately provided no fields reference it. This occurs when the data type for a field is changed to a new data type that incorporates the components of the old one.
+
+{empty}4) A table MAY be deprecated provided all fields and components, where the table has been used have been removed. This applies to HL7, user-defined and external tables. It is recognized that this might have a ripple effect.
+
+{empty}b) A message constituent, except as noted in points c, d and e below, will be withdrawn and removed, no sooner than, after 2 versions in a deprecated state. For example, if a message was originally deprecated in v 2.3.1, its definition can be removed when v 2.6 is published.
+
+{empty}1) A message type and its definition MAY be removed.
+
+{empty}2) A trigger event and its definition MAY be removed.
+
+{empty}3) A segment group in an existing message MAY be removed.
+
+{empty}4) A segment in an existing message MAY be removed.
+
+{empty}c) A deprecated field in an existing segment SHALL NOT be removed from the standard. However, no sooner than, after 2 versions in a deprecated state, the field will be marked as withdrawn and all explanatory narrative will be removed
+
+{empty}d) A deprecated component in an existing data type SHALL NOT be removed from the standard. However, no sooner than, after 2 versions in a deprecated state, the component will be marked as withdrawn and all explanatory narrative will be removed.
+
+{empty}e) A deprecated member of an existing HL7 table SHALL NOT be removed from the standard. However, no sooner than, after 2 versions in a deprecated state, the table member will be marked as withdrawn and all explanatory narrative will be removed from the description and comment column.
+
+
+
+=== Early adoption of HL7 changes
+[v291_section="2.7.5"]
+
+Early adoption of HL7 changes that have been approved by the technical committee for the next membership ballot is a common practice and is not prohibited, but carries risk. Such changes MAY be rejected or modified in the balloting process. One example is that the change might pass but MAY be positioned differently in the segment or data type.
+
+
+
+=== Technical correction rules
+[v291_section="2.7.6"]
+
+Technical corrections MAY be applied between versions on a case-by-case basis. These corrections SHALL be published on the HL7 website. The following meet criteria for technical correction:
+
+{empty}a) Spelling correction
+
+{empty}b) Incorrect section reference
+
+{empty}c) Transcription error in an imported external table
+
+{empty}d) Correction of an inconsistency between a segment attribute table and the field narrative
+
+{empty}e) Erroneous examples
+
+{empty}f) Erroneous/misleading descriptions
+
+
+
+== Message Processing Rules
+[v291_section="2.8"]
+
+The processing rules described here apply to all exchanges of messages, whether or not the HL7 encoding rules or Lower Layer Protocols are used. They represent the primary message processing mode. The user MAY use either the original processing rules, described in section _2.8.2_, "_Message response using the original processing rules_", or -the enhanced processing rules, described in section _2.8.3_, "_Response using enhanced acknowledgment_" . The original mode and the enhanced mode serve different purposes.
+
+[NOTE]
+The MCF – Delayed Acknowledgment message has been removed from the standard. It was deprecated in v 2.2. Accordingly, the narrative notes regarding deferred processing have been removed from this section.
+
+Certain variants exist and are documented elsewhere:
+
+{empty}a) an optional sequence number protocol. Refer to section _2.9.1_, "_Sequence number protocol_".
+
+{empty}b) an optional protocol for continuing a very long message. Refer to section _2.9.2_, "_Continuation messages and segments_".
+
+Because the protocol describes an exchange of messages, it is described in terms of two entities, the initiating and responding systems. Each is both a sender and receiver of messages. The initiating system sends first and then receives, while the responding system receives and then sends.
+
+In overview this exchange proceeds as follows:
+
+.Message Exchange
+[width="100%",cols="14%,46%,40%",]
+|===
+|Step |Process |Comment
+|Step 1 |Initiator constructs an HL7 message from application data and sends it to the responding system |
+|Step 2 |Responder receives message and processes it based on rules |The rules differ based on whether the original acknowledge mode or the enhanced acknowledgment mode is followed
+|Step 3 |Responder sends response message |
+|Step 4 |Initiator processes response message |
+|===
+
+
+
+=== Message initiation
+[v291_section="2.8.1"]
+
+.The initiating application creates a message with data values as defined in the appropriate chapter of this Standard. The fields shown below SHOULD be valued in the MSH segment (as defined under the MSH segment definition of this chapter). The message is encoded according to the applicable rules and sent to the lower level protocols, which will attempt to deliver it to the responding application. (For definitions of the MSH fields see Section _2.13.9_, "_MSH ‑ Message Header segment_")
+[width="100%",cols="31%,69%",options="header",]
+|===
+|Field |Notes
+|MSH-3-sending application |
+|MSH-4-sending facility |
+|MSH-5-receiving application |
+|MSH-6-receiving facility |
+|MSH-7-date/time of message |
+|MSH-9-message type |
+|MSH-10-message control ID |Unique identifier used to relate the response to the initial message.
+|MSH-11-processing ID |
+|MSH-12-version ID |
+|MSH-13-sequence number |
+|MSH-14-continuation pointer |Used in implementation of message continuation protocol. See Section _2.9.2_, "_Continuation messages and segments_". Also see chapter 5, "Queries".
+|===
+
+Certain other fields in the MSH segment are required for the operation of the HL7 encoding rules; they will not be relevant if other encoding rules are employed.
+
+The event code in the second component of link:#_MSH-9___Message Type  (MSG)   00009[MSH-9 Message Type] is redundantly shown elsewhere in some messages. For example, the same information is in the EVN segment of the ADT message. This is for compatibility with prior versions of the HL7 protocol. Newly defined messages SHOULD only show the event code in link:#_MSH-9___Message Type  (MSG)   00009[MSH-9 Message Type].
+
+
+
+=== Message response using the original processing rules
+[v291_section="2.8.2"]
+
+
+
+==== Accept and validate the message in responding system
+[v291_section="2.8.2.0"]
+
+Upon receipt of the message, when the Original Acknowledgment rules are used, the protocol software in the responding system validates it against at least the following criteria:
+
+[NOTE]
+Both MSH-15 - accept acknowledgment type and MSH-16 - application acknowledgment type are not present.
+
+{empty}a) the value in link:#_MSH-9___Message Type  (MSG)   00009[MSH-9 Message Type] is one that is acceptable to the receiver.
+
+{empty}b) the value in link:#_MSH-12___Version ID  (VID)   00012[MSH-12 Version ID] is acceptable to the receiver.
+
+{empty}c) the value in link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] is appropriate for the application process handling the message.
+
+If any of these edits fail, the protocol software rejects the message. That is, it creates an ACK message with *AR* in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code].
+
+[NOTE]
+If the Acknowledgment Code is other than AA, the reason(s) for the rejection SHOULD be sent in the ERR segment(s) to notify the sender of the exact problem.*
+
+If successful, the process moves to the next step.
+
+
+
+==== Accept and validate/process the message in the receiving application
+[v291_section="2.8.2.1"]
+
+Upon successful validation by the responding system, the message is passed to the receiving application, which performs one of these functions:
+
+{empty}a) process the message successfully, generating the functional response message with a value of *AA* in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code].
+
+{empty}b) send an error response, providing error information in functional segments to be included in the response message with a value of *AE* in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code].
+
+{empty}c) fail to process (reject) the message for reasons unrelated to its content or format (system down, internal error, etc.). For most such problems it is likely that the responding system will be able to accept the same message at a later time. The implementers must decide on an application-specific basis whether the message SHOULD be automatically sent again. The response message contains a value of *AR* in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code].
+
+The MSH segment in the response is constructed anew following the rules used to create the initial message described above. In particular, link:#_MSH-7___Date/Time Of Message  (DTM)[MSH-7 Date/Time of Message] and link:#_MSH-10___Message Control ID  (ST)  [MSH-10 Message Control ID] refer to the response message; they are not echoes of the fields in the initial message. link:#_MSH-5___Receiving Application  (HD)[MSH-5 Receiving Application], link:#_MSH-6___Receiving Facility  (HD)   [MSH-6 Receiving Facility], and link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] contain codes that are copied from link:#_MSH-3___Sending Application  (HD)  [MSH-3 Sending Application], link:#_MSH-4___Sending Facility  (HD)   00[MSH-4 Sending Facility] and link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] in the initiating message.
+
+.In all the responses described above, the following values are put in the MSA segment. Note that the field definitions for the MSA segment fields are in Section _2.13.8_, "_MSA ‑ Message Acknowledgment segment_".
+[width="100%",cols="36%,64%",]
+|===
+|Field |Notes
+|MSA-1-acknowledgment code |As described above.
+|MSA-2-message control ID |MSH-10-message control ID from MSH segment of incoming message.
+|MSA-4-expected sequence number |As described in Section _2.9.1_, "_Sequence number protocol_," (if the sequence number protocol is being used).
+|ERR segment fields |Refer to section 2.13.5 link:#err-error-segment[ERR - error segment].
+|===
+
+The receiving application then passes the response message back to the responding system for the next step in the process.
+
+
+
+==== Transmit the response message
+[v291_section="2.8.2.2"]
+
+Upon receiving the response message from the receiving application, the responding system transmits it to the initiating system.
+
+The initiator processes the response message.
+
+
+
+==== Original Mode flow chart
+[v291_section="2.8.2.3"]
+
+image::extracted-media/media/image3.png[]
+
+
+
+=== Response using enhanced acknowledgment
+[v291_section="2.8.3"]
+
+{empty}a) the responding system receives the message and commits it to safe storage. This means that the responding system accepts the responsibility for the message in a manner that releases the sending system from any obligation to resend the message. The responding system now checks the message header record to determine whether or not the initiating system requires an accept acknowledgment message indicating successful receipt and secure storage of the message. If it does, the accept acknowledgment message is constructed and returned to the initiator.
+
+{empty}b) at this point, the requirements of the applications involved in the interface determine whether or not more information needs to be exchanged. This exchange is referred to as an application acknowledgment and includes information ranging from simple validation to a complex application-dependent response. If the receiving system is expected to return application-dependent information, it initiates another exchange when this information is available. This time, the roles of initiator and responder are reversed.
+
+
+
+==== Accept and validate the message in responding system
+[v291_section="2.8.3.0"]
+
+Upon receipt of the message, , the protocol software in the responding system makes an initial determination as to whether or not the message can be accepted, based on factors such as:
+
+[NOTE]
+Both MSH-15-accept acknowledgment type and MSH-16-application acknowledgment type SHALL BE valued.
+
+{empty}a) the status of the interface
+
+{empty}b) the availability of safe storage onto which the message can be saved
+
+{empty}c) the syntactical correctness of the message, if the design of the receiving system includes this type of validation at this phase
+
+{empty}d) the values of link:#_MSH-9___Message Type  (MSG)   00009[MSH-9 Message Type], link:#msh-12-version-id-vid-00012[MSH-12 Version ID], and link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID], if the design of the receiving system includes this type of validation at this phase
+
+It then examines the Message Header segment (MSH) to determine whether or not the initiating system requires an accept acknowledgment.
+
+
+
+==== Transmit general acknowledgment message
+[v291_section="2.8.3.1"]
+
+A general acknowledgment message is not always required by the initiating system, but if it is the responding system sends one of the following:
+
+{empty}a) a commit accept (CA) in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code] if the message can be accepted for processing
+
+{empty}b) a commit reject (CR) in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code] if the one of the values of link:#_MSH-9___Message Type  (MSG)   00009[MSH-9 Message Type], link:#msh-12-version-id-vid-00012[MSH-12 Version ID] or link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] is not acceptable to the receiving application
+
+{empty}c) a commit error (CE) in link:#_MSA-1___Acknowledgment Code  (ID)  [MSA-1 Acknowledgment Code] if the message cannot be accepted for any other reason (e.g., sequence number error)
+
+[NOTE]
+If the Acknowledgment Code is other than CA, the reason(s) for the rejection SHOULD be sent in the ERR segment(s) to notify the sender of the exact problem.*
+
+The MSH segment in the response is constructed anew following the rules used to create the initial message described above. In particular, link:#_MSH-7___Date/Time Of Message  (DTM)[MSH-7 Date/Time of Message] and link:#_MSH-10___Message Control ID  (ST)  [MSH-10 Message Control ID] refer to the response message; they are not echoes of the fields in the initial message. link:#_MSH-5___Receiving Application  (HD)[MSH-5 Receiving Application], link:#_MSH-6___Receiving Facility  (HD)   [MSH-6 Receiving Facility], and link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] contain codes that are copied from link:#_MSH-3___Sending Application  (HD)  [MSH-3 Sending Application], link:#_MSH-4___Sending Facility  (HD)   00[MSH-4 Sending Facility] and link:#_MSH-11___Processing ID  (PT)   0001[MSH-11 Processing ID] in the initiating message.
+
+.For this response, the following values are put in the MSA segment. Note that the field definitions for the MSA segment fields are in Section _2.13.8_, '_MSA ‑ Message Acknowledgment segment_":
+[width="100%",cols="35%,65%",]
+|===
+|Field |Notes
+|MSA-2-message control ID |MSH-10-message control ID from the incoming message.
+|MSA-1-acknowledgment code |As described above.
+|MSA-4-expected sequence number |As described in Section _2.9.1_, "_Sequence number protocol_" (if the sequence number protocol is being used).
+|ERR segment fields |Refer to section 2.13.5 link:#err-error-segment[ERR - error segment]
+|===
+
+[NOTE]
+MSH-15-accept acknowledgment type and MSH-16-application acknowledgment type are not valued (i.e. not present or empty). At this point, the accept portion of this message exchange is considered complete.
+
+
+
+==== Transmit application acknowledgment
+[v291_section="2.8.3.2"]
+
+If the message header segment indicates that the initiating system also requires an application acknowledgment, this SHALL be returned as the initial message of a later exchange.
+
+For this message, the receiving system acts as the initiator. Since the message it sends is application‑specific, the layouts of these application-level response messages are defined in the relevant application-specific chapter. If needed, this application acknowledgment message can itself require (in link:#_MSH-15___Accept Acknowledgment Type[MSH-15 Accept Acknowledgment Type]) an accept acknowledgment message (MSA). link:#_MSH-16___Application Acknowledgment[MSH-16 Application Acknowledgment Type], however, is always NE(Never), since the protocol does not allow the application acknowledgment message to have an application acknowledgment.
+
+.For this response, the following values are put in the MSA segment. Note that the field definitions for the MSA segment fields are in Section _2.13.8_, "_MSA ‑ Message Acknowledgment segment_".
+[width="100%",cols="30%,70%",]
+|===
+|Field |Notes
+|MSA-2-message control ID |Identifies the initial message from the original initiating system as defined in Section _2.8.1_, "_Message initiation_".
+|MSA-1-acknowledgment code |Uses the application (processing) acknowledgment codes as described in Section _2.13.8.1_.
+|MSA-3-text message |Text description of error.q
+|ERR segment fields |Refer to section link:#err-error-segment[ERR - error segment]
+|===
+
+At this point, the application acknowledgment portion of this message exchange is considered complete.
+
+If the processing on the receiving system goes through multiple stages, chapter-defined messages MAY be used to relay status or informational changes to other systems (including the original initiating system). Such messages are not part of the acknowledgment scheme for the original message, but are considered to be independent messages triggered by events on the (original) responding system.
+
+[NOTE]
+There is no equivalent to the V2.1 original acknowledgment protocol, where the acknowledgment is always sent as a response on the same communications channel. The enhanced acknowledgment protocol with MSH-15 (accept acknowledgment type) = NE and MSH-16 (application acknowledgment type) = AL still requires that the application acknowledgment is sent on a separate communications channel.
+
+
+
+==== image:extracted-media/media/image4.png[extracted-media/media/image4,width=624,height=677]Enhanced acknowledgment flow chart
+[v291_section="2.8.3.3"]
+
+
+
+== Special HL7 Protocols
+[v291_section="2.9"]
+
+This section contains several extensions to the basic HL7 message protocol. These extensions represent implementation choices, and are to be used on a site-specific and application-specific basis as needed.
+
+
+
+=== Sequence number protocol
+[v291_section="2.9.1"]
+
+For certain types of data transactions between systems the issue of keeping databases synchronized is critical. An example is an ancillary system such as lab, which needs to know the locations of all inpatients to route stat results correctly. If the lab receives an ADT transaction out of sequence, the census/location information could be incorrect. Although it is true that a simple one-to-one acknowledgment scheme can prevent out-of-sequence transactions between any two systems, only the use of sequence numbers can prevent duplicate transactions.
+
+[NOTE]
+Although this sequence number protocol is limited to the use of sequence numbers on a single transaction stream between two applications, this sequencing protocol is sufficiently robust to allow the design of HL7-compatible store-and-forward applications.
+
+{empty}a) initial conditions:
+
+{empty}1) the system receiving the data stream is expected to store the sequence number of the most recently accepted transaction in a secure fashion before acknowledging that transaction. This stored sequence number allows comparison with the next transaction's sequence number, and the implementation of fault-tolerant restart capabilities.
+
+{empty}2) the initiating system keeps a queue of outgoing transactions indexed by the sequence number. The length of this queue must be negotiated as part of the design process for a given link. The minimum length for this queue is one.
+
+{empty}3) the sequence number is a positive (non-zero) integer; and it is incremented by one (by the initiating system) for each successive transaction.
+
+{empty}b) starting the link:
+
+{empty}1) the value of 0 (zero) for a sequence number is reserved: it is allowed only when the initiating system (re-)starts the link.
+
+{empty}2) if the receiving system gets a transaction with a 0 (zero) in the sequence number field, it SHOULD respond with a general acknowledgment message whose MSA contains a sequence number one greater than the sequence number of the last transaction it accepted in the Expected Sequence Number field. If this value does not exist (as on the first startup of a given link), the MSA SHOULD contain a sequence number of -1, meaning that the receiving system will use the positive, non-zero sequence number of the first transaction it accepts as its initial sequence number (see re-synching the link, item e below).
+
+{empty}3) the initiating system then sends the transaction indexed by the expected sequence number (if that expected transaction is still on its queue). Otherwise the link is frozen until an operator intervenes.
+
+{empty}c) normal operation of the link:
+
+As it accepts each transaction, the receiving system securely stores the sequence number (which agrees with its expected sequence number), and then acknowledges the message by echoing the sequence number in link:#_MSA-4___Expected Sequence Number  ([MSA-4 Expected Sequence Number].
+
+{empty}d) error conditions (from point of view of initiating system). These are generated by the receiving system, by its comparison of the sequence number sent out (with the MSH in link:#_MSH-13___Sequence Number  (NM)   00[MSH-13 Sequence Number]) with the expected sequence number (link:#_MSA-4___Expected Sequence Number  ([MSA-4 Expected Sequence Number] received with the MSA).
+
+{empty}1) expected sequence number is one greater than current value. The previous acknowledgment was lost. That transaction was sent again. Correct by sending next transaction.
+
+{empty}2) expected sequence number less than current value. Initiating system can try starting again by issuing a transaction with a sequence number of zero; or freeze the link for operator intervention.
+
+{empty}3) other errors: freeze the link for operator intervention
+
+{empty}e) forcing resynchronization of sequence numbers across the link. The value of -1 for a sequence number is reserved: it is allowed only when the initiating system is re-synchronizing the link. Thus if the receiving system gets a value of -1 in the sequence number field, it SHOULD return a general acknowledgment message with a -1 in the expected sequence number field. The receiving system then resets its sequence number, using the non-zero positive sequence number of the next transaction it accepts.
+
+[NOTE]
+When the initiating system sends a message with a sequence number of 0 or -1 (see b or e above), the segments beyond the MSH need not be present in the message, or, if present, all fields MAY be empty or unpopulated. In terms of the responding system, for these two cases, only a General acknowledgment message is needed.*
+
+
+
+=== Continuation messages and segments
+[v291_section="2.9.2"]
+
+Sometimes, implementation limitations require that large messages or segments be broken into manageable chunks. We use the term "fragmentation" to describe how a logical message is broken into one or more separate HL7 messages. HL7 consciously identifies two situations where this MAY happen.
+
+First, a single segment mightbe too large. HL7 uses the "ADD" segment to handle breaking a single segment into several smaller segments.
+
+Second, a single HL7 message might be too large. HL7 uses the DSC segment and the continuation protocol to handle message fragmentation.
+
+[NOTE]
+HL7 does not define what "too large" means. Acceptable values are subject to site negotiations.
+
+See chapter 5 for a discussion of the continuation pointer segment and the continuation pointer field, and their use in the continuation of responses to queries and in the continuation of unsolicited update messages.
+
+
+
+==== Segment fragmentation/continuation using the ADD segment
+[v291_section="2.9.2.0"]
+
+Beginning with version 2.4, the ADD segment can be used [.underline]#within# a message to break a long segment into shorter segments within a single HL7 message.
+
+[NOTE]
+Unless some explicit agreement exists between systems, a receiving application SHOULD NOT infer semantic meaning from the placement of the ADD segment.
+
+To break a large segment,
+
+{empty}a) the segment being continued (call it ANY for this example) is ended at an arbitrary character position and terminated with the standard segment terminator (carriage return).
+
+{empty}b) the following segment is the ADD segment. All characters after the ADD and field separator ("|") are logically part of the preceding segment. All succeeding consecutive ADD segments contribute characters to the ANY segment until a non ADD segment is found.
+
+{empty}c) an ADD segment with no field separator takes on special meaning. See Section link:#segment-fragmentation-across-messages[_2.10.2.3_], "link:#segment-fragmentation-across-messages[_Segment fragmentation across messages_]".
+
+For example, segment "C" can be fragmented within an HL7 message as follows:
+
+A|1
+
+B|2
+
+C|34
+
+[er7]
+ADD|5|678|
+
+ADD|90
+
+D|1
+
+This is logically the same as
+
+A|1
+
+B|2
+
+C|345|678|90
+
+D|1
+
+
+
+==== Segment fragmentation/continuation using the DSC segment
+[v291_section="2.9.2.1"]
+
+When a message itself must be fragmented and sent as several HL7 messages, the DSC segment is used.
+
+{empty}a) First, the logical message is broken after an arbitrary segment.
+
+{empty}b) Next, a DSC segment is sent. The link:#_DSC-1___Continuation Pointer (ST)  [DSC-1 Continuation Pointer] field will contain a unique value that is used to match a subsequent message with this specific value.
+
+{empty}c) The DSC terminates the first fragment of the logical message.
+
+{empty}d) A subsequent message will contain in link:#_MSH-14___Continuation Pointer  (ST)[MSH-14 Continuation Pointer], a value that matches the value from DSC-1. (The presence of a value in MSH-14 indicates that the message is a fragment of an earlier message.). Each subsequent message will have its own unique value for link:#_MSH-10___Message Control ID  (ST)  [MSH-10 Message Control ID]. Coordination between link:#_DSC-1___Continuation Pointer (ST)  [DSC-1 Continuation Pointer] and the subsequent message's link:#_MSH-14___Continuation Pointer  (ST)[MSH-14 Continuation Pointer] is used to link the fragments in their proper order.
+
+{empty}e) The logical message is the concatenation of the contents of the first message (which while having no value in MSH-14, did end with DSC, and hence was actually a message fragment), plus all subsequent fragments (as identified by values in MSH-14).
+
+{empty}f) If enhanced mode acknowledgments are used to request an accept ACK, then the receiver will acknowledge each fragment with an ACK message. Since each fragment has its own Message Control ID, each fragment level accept ACK will use the Message Control ID from the fragment it is acknowledging.
+
+{empty}g) If enhanced mode acknowledgments are used to request an application level ACK, then the receiver will send an acknowledgment after receiving the final fragment.
+
+[NOTE]
+The application level ACK SHOULD refer to the message by the Message Control ID of the first fragment.
+
+[NOTE]
+The receiver can tell that a given incoming message is a fragment by the presence of the trailing DSC. Subsequent HL7 messages are identified as fragments by the presence of an MSH-14 value. The presence of a DSC in a fragment indicates that more fragments are to follow.
+
+It is a protocol error to end a message with DSC, and then never send a fragment.
+
+For example, a single logical message MAY be fragmented into three HL7 messages:
+
+---- Sender HL7 message (incomplete,fragment1)---
+
+[er7]
+MSH|||||||||1001||2.4|123||..
+
+A|...
+
+B|...
+
+DSC|W4xy
+
+---- Sender HL7 message (fragment 2)---
+
+[er7]
+MSH|||||||||2106||2.4|124|W4xy|
+
+C|...
+
+D|...
+
+DSC|V292
+
+----- another HL7 message(fragment 3, final)---
+
+[er7]
+MSH|||||||||2401||2.4|125|V292
+
+E|...
+
+Such a sequence is logically the same as the single message:
+
+[er7]
+MSH|...|2.4|123||..
+
+A|...
+
+B|...
+
+C|...
+
+D|...
+
+E|...
+
+See example in section *_Error! Reference source not found._* for a more elaborate example.
+
+
+
+==== Segment fragmentation across messages
+[v291_section="2.9.2.2"]
+
+If the last segment of a fragment itself needs to be broken, then the following idiomatic use of ADD SHALL apply.
+
+{empty}a) the segment being continued (call it ANY for this example) is ended at an arbitrary character position and terminated with the standard segment terminator (carriage return).
+
+{empty}b) the following segment is the ADD segment. It will contain no characters other than "ADD". (The lack of characters signals the receiver that ANY will be continued.)
+
+{empty}c) The second following segment will be the DSC, used as described above in Section _2.9.2.1_, "_Segment fragmentation/continuation using the DSC segment_".
+
+{empty}d) The first segment of the following fragment will be an ADD segment. The characters of this ADD segment are logically part of the ANY segment of the previous fragment.
+
+For example
+
+[er7]
+MSH|...|2.4|
+
+ANY|12
+
+ADD
+
+DSC|JR97
+
+--------- (fragment 2)
+
+[er7]
+MSH|...|2.4|JR97
+
+ADD|345
+
+is logically the same as
+
+[er7]
+MSH|...|2.4
+
+ANY|12345
+
+{empty}e) transaction flow for a continued unsolicited message with a continued segment.
+
+.First unsolicited message and acknowledgment:
+[width="100%",cols="29%,71%",]
+|===
+|MSH |
+|URD |
+|[ URS ] |
+|\{DSP} |(last DSP is incomplete)
+|ADD |(contains no fields)
+|DSC |(Continuation segment)
+|===
+
+[width="100%",cols="29%,71%",]
+|===
+|MSH |(General acknowledgment)
+|MSA |
+|[ \{ ERR } ] |
+|===
+
+.Second unsolicited message and acknowledgment:
+[width="100%",cols="29%,71%",]
+|===
+|MSH |(contains continuation pointer from DSC segment of prior message)
+|ADD |(contains remainder of data from continued DSP segment from prior message)
+|\{DSP} |
+|===
+
+.*Note*: This second message could itself be continued with a second DSC and (if needed) a second ADD segment prior to it.
+[width="100%",cols="30%,70%",]
+|===
+|MSH |(General acknowledgment)
+|[ \{ SFT } ] |
+|MSA |
+|[ \{ ERR } ] |
+|===
+
+
+
+=== HL7 batch protocol
+[v291_section="2.9.3"]
+
+There are instances when it is convenient to transfer a batch of HL7 messages. Common examples would be a batch of financial posting detail transactions (DFT's) sent from an ancillary to a financial system. Such a batch could be sent online using a common file transfer protocol, or offline via tape or diskette.
+
+
+
+==== HL7 batch file structure
+[v291_section="2.9.3.1"]
+
+.The structure of an HL7 batch file is given by the following (using the HL7 abstract message syntax)
+[width="100%",cols="30%,70%",]
+|===
+|[FHS] |(file header segment)
+|[\{ARV}] |Access Restrictions
+|\{ |--- BATCH begin
+|[BHS] |(batch header segment)
+|[\{ARV}] |Access Restrictions
+|\{ [ |--- MESSAGE begin
+|MSH |(zero or more HL7 messages)
+|.... |
+|.... |
+|.... |
+|] } |--- MESSAGE end
+|[BTS] |(batch trailer segment)
+|} |--- Batch end
+|[FTS] |(file trailer segment)
+|===
+
+[NOTE]
+s:
+
+The sequence numbering protocol has a natural application in batch transfers. See the discussion of batch acknowledgments that follows.
+
+Although a batch will usually consist of a single type of message, there is nothing in the definition that restricts a batch to only one message type.
+
+The HL7 file and batch header and trailer segments are defined in exactly the same manner as the HL7 message segments. Hence the HL7 message construction rules of Sections _2.4.5_ and _2.5_, can be used to encode and decode HL7 batch files.
+
+There are only two cases in which an HL7 batch file MAY contain zero HL7 messages:
+
+{empty}a) a batch containing zero HL7 messages MAY be sent to meet a requirement for periodic submission of batches when there are no messages to send.
+
+{empty}b) a batch containing zero negative acknowledgment messages MAY be sent to indicate that all the HL7 messages contained in the batch being acknowledged are implicitly acknowledged. See Section _2.9.3.3_, "_Acknowledging batches_."
+
+To better understand, why security labels MAY be applicable to batch files, we provide the following use case:
+
+Some HIEs (likely a majority of US HIEs) push ADTs to HIE participants authorized to receive these under HIPAA. Some consider payers to be authorized to receive ADTs under HIPAA (despite the fact that ADTs are for treatment purposes and should likely only be going to providers.)
+
+If 1..*of the ADTs included in 1..* BSH within a FSH contains an ADT with security label indicating that this information is not to be disclosed to payer X based on patient right under HIPAA to restrict because the patient paid for services in full out of pocket, then the HIE SHOULD NOT automatically send the entire FSH to the payers it would otherwise send it to,
+
+The HIE would need to parse the FSH to find the 1..* BSH with security label = do not disclose to payer X. It could then send any of the other BSH on to payers as usual.
+
+It would then parse the 1..* BSH with security label = do not disclose to payer X to find the 1..*MSH with the security label = do not disclose to payer X, and then send those MSH to the payers besides payer X.
+
+
+
+==== Related segments and data usage
+[v291_section="2.9.3.2"]
+
+The following segments relate to the HL7 Batch Protocol:
+
+BHS Batch Header (See section _2.13.2_)
+
+BTS Batch Trailer (See section _2.13.3_)
+
+FHS File Header (See section _2.13.6_)
+
+FTS File Trailer (See section _2.13.7_)
+
+The BTS segment contains a field, link:#_BTS-3___Batch Totals  (NM)   00095[BTS-3 Batch Totals], which MAY have one or more totals drawn from fields within the individual messages. The method for computing such totals will be determined on a site or application basis unless explicitly stated in a functional chapter.
+
+
+
+==== Acknowledging batches
+[v291_section="2.9.3.3"]
+
+In general, the utility of sending batches of data is that the data is accepted all at once, with errors processed on an exception basis. However, it is a permissible application of HL7 to acknowledge all messages. Several options for acknowledgment are given and will be chosen on an application basis. In these cases, the sequence numbering protocol can be useful to the applications processing the batch.
+
+The options are:
+
+{empty}a) all messages are acknowledged in the response batch.
+
+{empty}b) the receiving system prints some form of batch control report, which is then dealt with manually by personnel at the sending system. No acknowledgments are performed by the protocol software.
+
+{empty}c) an automated acknowledgment batch is created containing acknowledgment messages only for those messages containing errors. In this mode an empty acknowledgment batch MAY be created (i.e., an HL7 batch file without any HL7 acknowledgment messages).
+
+In each case where there is a response batch, its format is a batch of individual messages. Each individual message is in the format defined for an online response in the chapters. Consider, for example, a batch that might be constructed to respond to a batch of Detailed Financial Transactions (Chapter 6). The messages in the response batch would consist entirely of ACK messages, since ACK is the response shown in Chapter 6.
+
+When batches are retransmitted after the correction of errors, link:#_BHS-12___Reference Batch Control ID[BHS-12 Reference Batch Control ID] SHOULD contain the batch control ID of the original batch.
+
+
+
+==== Batch message as a query response
+[v291_section="2.9.3.4"]
+
+[NOTE]
+The QRD and QRF segments were retained for backward compatibility only as of v 2.4. The reader is referred to chapter 5, section 5.4, for the current query/response message structure.
+
+The HL7 query also can be used to query for a batch in the following manner:
+
+{empty}a) use the B in ResponseModality field of the RCP segment. The query will be acknowledged with a general acknowledgment as in the Deferred Access example above (see chapter 5)
+
+.{empty}b) in addition, insert into the batch file the QRD and QRF segments as follows:
+[width="100%",cols="30%,70%",]
+|===
+|[FHS] |(file header segment)
+|\{ [BHS] |(batch header segment)
+|[QPD] |(the QRD and QRF define the
+|[RCP] |query that this batch is a response to)
+|\{ MSH |(one or more HL7 messages)
+|.... |
+|.... |
+|.... |
+|} |
+|[BTS] |(batch trailer segment)
+|} |
+|[FTS] |(file trailer segment)
+|===
+
+{empty}c) the acknowledgment of a batch is described in this chapter (see Section _2.9.3.3_, "_Acknowledging batches_").
+
+
+
+=== Protocol for interpreting repeating segments or segment groups in an update Message
+[v291_section="2.9.4"]
+
+This section describes the protocol for interpreting repeating segments or segment groups in an update message. Common examples of repeating segments are NK1 and OBX shown as [\{NK1}] and [\{OBX}] in the abstract message syntax. Common examples of segment groups are displayed as \{ORC RXO [\{RXC}]} or [\{IN1 [IN2] [\{IN3}]}] in the abstract message syntax
+
+There are 2 methods of update: the "snapshot" and the "action code/unique identifier" modes. These are defined in sections 2.10.4.1 and 2.10.4.2 below.
+
+If a particular repeating segment can be updated by either of these two modes, the parties concerned will determine by agreement among messaging partners whether an interface will use the "snapshot" mode or the "action code/unique identifier" mode.
+
+Both the sender and receiver of the data must have predictable rules for how they will process the data in repeating segments or segment groups regardless of which mode is used. This SHOULD be documented in the Conformance Profile. It is critical to know, for instance, if the Sender is the System of Record.
+
+
+
+==== hiddentext
+[v291_section="2.9.4.0"]
+
+
+
+==== Snapshot mode update definition
+[v291_section="2.9.4.1"]
+
+For segments that do not contain unique identifiers and action codes (mainly NTE and patient administration segments), the only option is to treat the information in the repeating segments and segment groups as a whole.
+
+When an HL7 abstract message syntax includes these repeating units or sets, there is no implicit indication of how they interact with a similar set in a prior or subsequent message. Interpretation is not obvious from the message syntax particularly if the requirement is to update only part of the information previously sent.
+
+The existence of a segment, and possibly the lack of existence of a segment, might serve to add, update, replace, or delete information passed in similar segments in prior messages. Special consideration is warranted in the case where multiple instances of a segment exist in a message.
+
+In the “snapshot” mode, a group of repeating segments from the incoming message replaces the prior group of repeating segments on the receiving system. This is equivalent to a deletion of the prior group followed by the addition of the new group.
+
+To avoid confusion when all of the segments in a repeating group are to be deleted, one must send a single segment with “delete data” indicated for the first field (or all fields) of the segment to indicate that all information related to the segment is to be deleted.  In this scenario, snapshot mode provides for deleting the prior group of repeating segment data on the receiving system.  Otherwise, sending no segment(s) at all without such explicit indication could lead the receiver to assume nothing was changed, thus not sent.  I.e., if no segment is sent, this equates to "no information." No information SHOULD NOT signal the receiver to take an action, i.e. no action SHOULD be taken on any of the data related to the prior group of repeating segments.
+
+Since messages MAY contain multiple, possibly nested, groups, it is critically important to understand the level at which group(s) are subject to snapshot mode, especially the delete functionality outlined above. For example, a results message MAY include results for multiple patients, or a charge batch MAY include charges for multiple patients. Whether snapshot, and especially delete, applies to all the patients in the entire message, all the order-observations within one patient, or all the observations within one order-observation group must be agreed to by the trading partners, or otherwise specified in a conformance profile and/or the section-specific chapters of the HL7 Standard.
+
+To support assertions made in some chapters, e.g., chapter 6, and common practice at implementation sites, as of v2.6, the signal methods have been extended. By agreement among messaging partners or Conformance Profile, a sender might opt to signal deletion of data in the following manner:
+
+Transmit the delete indicator only:
+
+• in the key identifier field if the segment has an explicit one – all other fields have no data
+
+• in the first field of the segment to indicate that all are to be deleted
+
+• in any combination of fields that the Sender customarily sends to the recipient - all other fields have no data
+
+• in all required fields all – all other fields have no data
+
+This obviates the need for the Sender to populate fields ordinarily not sent and not expected by the receiver.
+
+
+
+===== Snapshot Mode and Repeating Segments - Example
+[v291_section="2.9.4.1.1"]
+
+[example]
+A: if a patient record indicated a 2 sisters and a brother as next of kin, this would be represented as follows in the add person/patient information message:
+
+MSH||||||||ADT^A28^ADT_A05|...<cr>
+
+EVN|...<cr>
+
+PID|...<cr>
+
+[er7]
+NK1|1|Nuclear^Nancy^D|SIS^Sister^HL70063|...<cr>
+[er7]
+NK1|2|Nuclear^Nelda^W|SIS^Sister^HL70063|...<cr>
+[er7]
+NK1|3|Nuclear^Neville^S|BRO^Brother^HL70063|...<cr>
+
+PV1|...<cr>
+
+If, subsequently, the one of the sisters was delisted as next of kin, it would be necessary to send both the remaining "brother" and "sister" records in order to form a complete replacement set in an update person information message:
+
+[er7]
+MSH|||||||||ADT^A31^ADT_A05|...<cr>
+
+EVN|...<cr>
+
+PID|...<cr>
+
+[er7]
+NK1|1|Nuclear^Nancy^D|SIS^Sister^HL70063|...<cr>
+[er7]
+NK1|2|Nuclear^Neville^S|BRO^Brother^HL70063|...<cr>
+
+PV1|...<cr>
+
+If all next of kin were to be subsequently delisted, an update message with a single delete indicator populated segment would instruct the receiving system to delete information represented by any prior set:
+
+[er7]
+MSH||||||||ADT^A31^ADT_A05|...<cr>
+
+EVN|...
+
+PID|...
+
+[er7]
+NK1|""|""|""|""|<cr>
+
+PV1|...<cr>
+
+Alternatively, as of v2.6, the deletion could be signaled by sending a delete indicatorin the first field of the NK1 segment. This is its only required field.
+
+[er7]
+MSH||||||||ADT^A31^ADT_A05|...<cr>
+
+EVN|...
+
+PID|...
+
+[er7]
+NK1|""|<cr>
+
+PV1|...<cr>
+
+
+
+===== Snapshot Mode and Repeating Segment Groups
+[v291_section="2.9.4.1.2"]
+
+Treatment of the repeating segment group is analogous to the handling of the repeating segment described above. To indicate deletion of all of the information in a repeating segment group, it is only necessary to delete the anchoring segment of the segment group. This is accomplished just as described above for deleting a repeating segment. This pertains to segments governed by snapshot mode, not action code.
+
+[example]
+An account is created for Adam Everyman. He is insured under plan ID A357 with an insurance company known to both systems as BCMD, with a company ID of 1234. He is also covered by his wife's insurance under plan ID A789 with an insurance company known to both systems as VGMC, with a company ID of 6789.
+
+MSH||||||||BAR^P01^BAR_P01|...<cr>
+
+EVN|
+
+PID|
+
+[er7]
+IN1|1|A357|1234|BCMD
+
+IN2|
+
+IN3|
+
+[er7]
+IN1|2|A789|6789|VGMC
+
+IN2|
+
+IN3|
+
+Subsequently it is learned that his wife has changed insurance plans. Her new plan is now C45. The insurance company and company ID have remained the same. A BAR^P05 might be sent.
+
+[er7]
+MSH||||||||BAR^P05^BAR_P05|...<cr>
+
+EVN|
+
+PID|
+
+[er7]
+IN1|1|A357|1234|BCMD
+
+IN2|
+
+IN3|
+
+[er7]
+IN1|2|C45|6789|VGMC
+
+IN2|
+
+IN3|
+
+It is later discovered that the patient is not covered by either plan and now has no insurance at all. A BAR^P05 is again sent. In accordance with chapter 6, this can be signaled by showing delete indicator in the plan field.
+
+[er7]
+MSH||||||||BAR^P05^BAR_P05|...<cr>
+
+EVN|
+
+PID|
+
+[er7]
+IN1|""|""
+
+If, on the other hand, the patient still had his coverage, and only the wife's insurance had been dropped, a fully populated IN1 segment group would be transmitted. The presence of only one IN1 in a subsequent message conveys the "full group replacement" notion. The BAR^P05 would be transmitted and would be interpreted to mean "retain plan A357; delete and other plans":
+
+[er7]
+MSH||||||||BAR^P05^BAR_P05|...<cr>
+
+EVN|
+
+PID|
+
+[er7]
+IN1|1|A357|1234|BCMD
+
+IN2|
+
+IN3|
+
+
+
+==== Action code/unique identifier mode update definition
+[v291_section="2.9.4.2"]
+
+In the "action code/unique identifier" mode (action code mode), each member of a segment or segment group can be acted upon independently of the other members. Thus, it is possible to delete or update a member of the set without including the other members of the set. The choice of delete/update/insert is determined by the action code (or an equivalent such as result status in an ORU Observation Report message). Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70206[_HL7 Table 0206 - Segment Action Code_] in Chapter 2C, Code Tables, for valid values.
+
+The _unique identifier_ unambiguously identifies one of multiple repetitions of the repeating segment or segment group in a way that does not change over time. It is not dependent on any particular message identifier level (MSH) fields; it functions across messages, not just within a message. For a single segment repetition, the _unique identifier_ MAY be an explicit field (e.g., IAM-7 Allergy Unique Identifier) or a combination of fields (IAM suggests IAM-3 Allergen Identifier in the context of the particular patient). For a repeating segment group, an identifier in the anchoring segment would identify the repeating set. For MFN messages, MFI-1 Master File Identifier and MFE-4 Primary Key Value identify the particular table and record.
+
+[example]
+1: If a patient is allergic to penicillin and shellfish, the following message would be sent showing an Action code of "A(dd) in IAM-6:
+
+MSH|||||||||ADT^A60^ADT_A60|...<cr>
+
+EVN|...<cr>
+
+PID|...<cr>
+
+[er7]
+IAM|1||peni|||A<cr>
+[er7]
+IAM|2||shell||A<cr>
+
+Subsequently, if it is learned that the patient is not allergic to shellfish, the following message would be sent showing an Action code of "D(elete) in IAM-6:
+
+[er7]
+MSH|||||||||ADT^A60^ADT_A60|...<cr>
+
+EVN|...<cr>
+
+PID|...<cr>
+
+[er7]
+IAM|1||shell||D<cr>
+
+Some messages, Orders and Observations, in particular, do not use table 0206. Order control codes are used to unambiguously specify the action to be taken.
+
+[example]
+2: if a set of orders had been sent as
+
+MSH|||||||||OML^O21^OML_O21|...<cr>
+
+PID|...
+
+[er7]
+ORC|NW|987654^CIS|...<cr>
+[er7]
+ORC|NW|876543^CIS|...<cr>
+[er7]
+ORC|NW|765432^CIS|...<cr>
+
+and subsequently order 876543 was cancelled, the following message would target that specific segment instance without affecting the other orders. ORC-1 contains order control code "CA" for cancel. ORC-2 identifies the specific order number.
+
+[er7]
+MSH|||||||||OML^O21^ OML_O21|...<cr>
+
+PID|
+
+[er7]
+ORC|CA|876543^CIS|...<cr>
+
+[example]
+3: Add staff person to Provider master:
+
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|200102280700||MFN^M02^MFN_M02|MSGID002|P|2.7|||AL|NE
+[er7]
+MFI|PRA^Practitioner Master File^HL70175||UPD|||AL
+[er7]
+MFE|MAD|U2246|200102280700|PMF98123789182^^PLW|CWE
+[er7]
+STF|PMF98123789182^^PLW|U2246^^^PLW |SEVEN^HENRY^L^JR^DR^M.D.|P|M|19511004|A|^ICU|^MED|(555)555-1002X345CO~(955)555-1002CH(206)689-1345X789CB|1002 Healthcare Drive^SUITE 227^AnnArbor^MI^48104^US~1012 Healthcare Drive^^AnnArbor, MI^48104^O |19890125^GHH&Good Health Hospital&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
+
+The birth date was discovered to be in error. An MFN^M02 message is sent with the MFE-1 having a value of MUP for Update Record for master File. The corrected birth date (19521004) appears in STF-6:
+
+[er7]
+MSH|^~\&|HL7REG|UH|HL7LAB|CH|200102280700||MFN^M02^MFN_M02|MSGID002|P|2.7|||AL|NE
+[er7]
+MFI|PRA^Practitioner Master File^HL70175||UPD|||AL
+[er7]
+MFE|MUP|U2246|200102280700|PMF98123789182^^PLW|CWE
+[er7]
+STF|PMF98123789182^^PLW|U2246^^^PLW |SEVEN^HENRY^L^JR^DR^M.D.|P|M|19521004|A|^ICU|^MED|(555)555-1002X345CO~(955)555-1002CH(206)689-1345X789CB|1002 Healthcare Drive^SUITE 227^AnnArbor^MI^48104^US~1012 Healthcare Drive^^AnnArbor, MI^48104^O |19890125^GHH&Good Health Hospital&L01||PMF88123453334|74160.2326@COMPUSERV.COM|B
+
+
+
+=== Protocol for interpreting repeating fields in an update message
+[v291_section="2.9.5"]
+
+With repeating fields, the segment action codes are not relevant. Action codes cannot be applied to individual field repetitions, because they cannot be uniquely identified. Therefore, they must all be there, i.e., send a full list for each transaction. If the intent is to delete an element, it is left off the list. This is analogous to the snapshot mode for repeating segments and segment groups. If the intent is to delete the whole list, the field is transmitted once with a delete indicator in the first component. In effect, the Sender must make a statement about what action the receiver is expected to take: omitting, or not populating, the field is not a clear signal according to field state definition as described in section 2.5.3.
+
+At the same time, it is not incorrect to be precise about specific information that is to be deleted if the data type supports this capability. Note, however, that data types without components, e.g., ID or ST do not support this capability. There is no way to tie the delete indicator to an actual element instance in the persistent data store. See the example below.
+
+Special consideration is warranted when implementing multiple interfaces. While the same processing rules (snapshot or update) can be applied to multiple systems and interfaces, desynchronization can occur if any one system is receiving similar information from multiple sources. Business rules and processes need to be considered in these cases to determine if there is a single authoritative source for the information (a "System of Record"), or if other business logic exists to resolve the possibility that information from the two (or more) sources are not in agreement.
+
+[example]
+Repeating field of data type ID: A patient is added to the Master Patient Index. The patient has two specific living conditions: "spouse dependent" and "medical supervision required". This is transmitted as:
+
+MSH|^~\&||||||||ADT^A28^ADT_A05|1|P|2.7...<cr>
+
+EVN|...<cr>
+
+[er7]
+PID|||1234567^^^^MRN| <cr>
+
+PV1|...<cr>
+
+[er7]
+PD1|S~M|
+
+Subsequently, the "medical supervision required" living condition is dropped.
+
+[er7]
+MSH|^~\&||||||||ADT^A31^ADT_A31|1|P|2.7...<cr>
+
+EVN|...<cr>
+
+[er7]
+PID|||1234567^^^^MRN|<cr>
+
+PV1|...<cr>
+
+[er7]
+PD1|S||||||||||||||||||||||
+
+The data type for PD1-1 is a data types without components. There is no way to tie the delete indicator to an actual element instance in the persistent data store. Therefore the following is ambiguous and not good practice.
+
+[er7]
+MSH|^~\&||||||||ADT^A31^ADT_A31|1|P|2.7...<cr>
+
+EVN|...<cr>
+
+[er7]
+PID|||1234567^^^^MRN|<cr>
+
+PV1|...<cr>
+
+[er7]
+PD1|S~""||||||||||||||||||||||
+
+
+
+== Local Extension
+[v291_section="2.10"]
+
+The following section specifies where local extensions to a message and its constituent parts are allowed, where they are not, and where they are ill-advised. Inter-version compatibility rules must be followed plus there are certain restrictions and prohibitions outlined in the sections that follow. In general, basic structures SHOULD NOT be altered.
+
+The reader is advised to review the Conformance mechanism defined in section 2B__,__ "Conformance Using Message Profiles" before applying local extensions. Using the conformance mechanismighteliminate the need for local extension.
+
+
+
+=== Messages
+[v291_section="2.10.1"]
+
+Messages MAY be locally extended as follows:
+
+{empty}a) Users MAY develop local Z messages to cover areas not already covered by existing HL7 messages. These SHOULD be composed of HL7 segments where possible.
+
+{empty}b) A local Z message MAY consist entirely of Z segments except that it SHALL begin with a MSH segment.
+
+{empty}c) A local Z Acknowledgment message SHALL begin with an MSH segment followed by an MSA segment, an optional SFT segment and a conditional ERR segment.
+
+{empty}d) Users MAY develop Z segments and add them to Z messages.
+
+{empty}e) Users MAY develop Z segments and add them to HL7 messages. The trigger event MAY remain the same if the intent of the message has remained unchanged.
+
+{empty}f) The practice of adding additional HL7 segments, like NTE, to existing HL7 messages locally is ill-advised. HL7 MAY move or change the segment in a future release; this will render the message unparsible.
+
+
+
+=== Trigger events
+[v291_section="2.10.2"]
+
+Users MAY develop local Z trigger events for messages.
+
+
+
+=== Segment groups
+[v291_section="2.10.3"]
+
+{empty}a) The practice of turning a single segment or segments into a segment group locally *SHALL NOT be* allowed within an HL7 event. It will have a negative impact on XML and any component-based encoding schemes. Note that HL7, on other hand, can do this.
+
+{empty}b) A segment group MAY NOT be ungrouped locally.
+
+For example, if there is an HL7 group as follows:
+
+\{
+
+ABC
+
+[DEF
+
+{empty}[GHI]]
+
+}
+
+one cannot change it in a local implementation to be as follows:
+
+\{[ABC]}
+
+{empty}[DEF]
+
+{empty}[GHI]
+
+[example]
+2:
+
+If the original definition was:
+
+GROUP1 ::= ABC, GROUP2?
+
+GROUP2 ::= DEF, GHI?
+
+and someone wished to constrain the segments in GROUP2 to be mandatory
+
+(i.e., the HL7 grammar would look like:
+
+\{[
+
+ABC
+
+DEF
+
+{empty}[GHI]
+
+]}
+
+Their message instance would need to still look like:
+
+<GROUP1>
+
+<ABC/>
+
+<GROUP2>
+
+<DEF/>
+
+<GHI/>
+
+</GROUP2>
+
+</GROUP1>
+
+It would be an error if they instead sent it as:
+
+<GROUP1>
+
+<ABC/>
+
+<DEF/>
+
+<GHI/>
+
+</GROUP1>
+
+{empty}c) A segment group MAY repeat locally. The 1^st^ repetition needs to mean what it does in HL7
+
+{empty}d) The practice of incorporating a Z segment into a segment group locally *is* allowed.
+
+
+
+=== Segments
+[v291_section="2.10.4"]
+
+
+
+==== Local extension rules for segments
+[v291_section="2.10.4.0"]
+
+Users SHALL NOT modify an existing segment, except as specified in section _2.7.2_, "_Changing messages or message constituents_".
+
+Locally defined fields MAY be defined for use in locally defined segments, although HL7 defined fields are a better choice when available. The practice of extending an HL7 segment with locally defined fields, while not prohibited, is ill-advised.
+
+HL7 also recognizes that sites MAY have locally defined fields where the users believe the enhancement might be of interest to the HL7 community as a whole and are moving forward with a proposal to HL7.
+
+
+
+==== Caveats for locally extending segments
+[v291_section="2.10.4.1"]
+
+Locally extending an HL7 segment with locally defined fields will likely cause conformance problems with the next release of the HL7 standard. There are, however, certain circumstances where HL7 has, itself, directed the membership to add Z fields as an interim measure between versions to accommodate regulatory agency requirements. These are fields that HL7 has reserved for official introduction in the next release.
+
+If the local site intends to add a proposed field early, there is a risk that it might collide with another field when HL7 officially approves or rejects the proposed additions. Some sites have employed the practice of assigning a high sequence number locally, i.e., leaving a gap between the last official HL7 field and the proposed new field. The user–defined fields SHOULD be deleted or deprecated when HL7 officially approves or rejects the proposed additions so that the fields do not collide. It must be understood that the local implementation will have to adjust if a collision occurs and they want to conform.
+
+
+
+=== Data types
+[v291_section="2.10.5"]
+
+The following rules apply for locally extending data types:
+
+{empty}a) Locally defined data types MAY be defined for use in locally defined segment fields, although HL7 defined data types are a better choice when available.
+
+{empty}b) Locally redefining existing data type components, e.g., changing a component from NM to ST, is prohibited.
+
+{empty}c) Data types MAY be locally extended by adding new components at the end. This action creates a Z data type.
+
+[NOTE]
+The practice of extending an HL7 data type with locally defined components is particularly ill-advised and might cause conformance problems with the next release of the HL7 standard.
+
+
+
+=== Tables
+[v291_section="2.10.6"]
+
+Rules for locally extending tables are the same as discussed in section _2.4.3.8_, "_Table_":
+
+{empty}a) Users MAY redefine suggested values in User-defined tables.
+
+{empty}b) Local tables MAY be defined for Z fields.
+
+{empty}c) Local tables MAY be assigned to HL7 fields with data type CWE.
+
+
+
+=== Fields
+[v291_section="2.10.7"]
+
+Fields MAY be extended locally by the extension of data-types. See section 2.10.5, Data Types.
+
+
+
+=== Message representation
+[v291_section="2.10.8"]
+
+For each trigger event the messages that are exchanged when the trigger event occurs are defined using the HL7 abstract message syntax as follows:
+
+Each message is defined in special notation that lists the segment IDs in the order they would appear in the message. Braces, \{ . . . }, indicate one or more repetitions of the enclosed group of segments. Of course, the group MAY contain only a single segment. Brackets, [ . . . ], show that the enclosed group of segments is optional. If a group of segments is optional and MAY repeat it SHALL be enclosed in brackets and braces, [\{...}].
+
+[NOTE]
+[\{...}] and \{[...]} are equivalent.
+
+Whenever braces or brackets enclose more than one segment ID a special stylistic convention is used to help the reader understand the hierarchy of repetition. For example, the first segment ID appears on the same line as the brace, two columns to the right. The subsequent segment IDs appear under the first. The closing brace appears on a line of its own in the same column as the opening brace. This convention is an optional convenience to the user. If there is conflict between its use and the braces that appear in a message schematic, the braces define the actual grouping of segments that is permitted.
+
+A choice of one segment from a group of segments is indicated by using angle brackets to delimit the group and vertical bar delimiters between the several segments.
+
+[example]
+The following example allows a choice of segments :
+
+<ABC | DEF | GHI | JKL >
+
+[example]
+The following example allows a choice of segments and/or segment groups. (see Figure 2-5 Hypothetical schematic message)
+
+The first choice is a repeating group consisting of an ABC segment followed by optionally repeating NTE segments.
+
+The second choice is the DEF segment.
+
+The third choice is a group with a required GHI segment followed by an optionally repeating group containing a PRT segment followed by an optionally repeating NTE segment.
+
+<\{ABC [\{NTE}] } |DEF | GHI [\{PRT [\{NTE}] }] >
+
+
+
+== Chapter Formats For Defining HL7 Messages
+[v291_section="2.11"]
+
+Subsequent chapters of this document describe messages that are exchanged among applications in functionally-specific situations. Each chapter is organized as follows:
+
+{empty}a) purpose. This is an overview describing the purpose of the chapter, general information and concepts.
+
+{empty}b) trigger events and messages. There is a list of the trigger events.
+
+{empty}c) message segments. The segments defined in a chapter are then listed in a functional order designed to maximize conceptual clarity.
+
+{empty}d) examples. Complete messages are included.
+
+{empty}e) implementation considerations. Special supplementary information is presented here. This includes issues that must be addressed in planning an implementation.
+
+{empty}f) outstanding issues. Issues still under consideration or requiring consideration are listed here.
+
+
+
+=== HL7 abstract message syntax example
+[v291_section="2.11.1"]
+
+Consider the hypothetical triggering event *a widget report is requested*. It might be served by the Widget Request (WRQ) and Widget Report (WRP) messages. These would be defined in the Widget chapter (say Chapter XX). The Widget Request message might consist of the following segments: Message Header (MSH), Software Segment (SFT), User Authentication Credentials (UAC), and Widget ID (WID). The Widget Report message might consist of the following segments: Message Header (MSH), Software Segment (SFT), Message acknowledgment (MSA), Error Segment (ERR) and one or more Widget Description (WDN) Segments each of which is followed by a single Widget Portion segment (WPN) followed by zero or more Widget Portion Detail (WPD) segments. The Widget group ends with the optional Inclusion group, which allows a choice of segments/groups.
+
+The ADD and DSC segments follow special rules or protocol as defined in section 2.10.2. They are not represented in the message grammar in the domain chapters as their presence is context sensitive.
+
+The schematic form for this hypothetical exchange of messages is shown in Figure 2-5:
+
+Figure 2-5. Hypothetical schematic message
+
+.Trigger Event WRQ^Z01^WRQ_Z01: WIDGET REPORT IS REQUESTED
+[width="100%",cols="29%,36%,13%,22%",options="header",]
+|===
+|Segments |Desription |Status |Chapter
+|link:#MSH[MSH] |Message Header | |2
+|[\{SFT}] |Software Segment | |2
+|[UAC] |User Authentication Credential | |2
+|WID |Widget ID | |XX
+|===
+
+[message_structure-table]
+
+The WID, WDN, WPN, and WPD segments would be defined by the widget committee in the widget chapter, as designated by the Arabic numeral XX in the right column. The MSH and MSA segments, although included in the widget messages, are defined in another chapter. They are incorporated by reference into the widget chapter by the chapter number XX.
+
+On the other hand, the widget committee might decide that the WPN and WPD segments SHALL appear in pairs, but the pairs are optional and can repeat. Then the schematic for the WRP message would be as shown in Figure 2-6.
+
+.Figure 2-6. WPN and WPD segments in pairs WRQ^Z02^WRQ_Z03
+[width="100%",cols="30%,37%,12%,21%",options="header",]
+|===
+|WRF |Widget Report |Status |Chapter
+|link:#MSH[MSH] |Message Header | |2
+|[\{SFT}] |Software Segment | |2
+|[UAC] |User Authentication Credential | |2
+|link:#MSA[MSA] |Message Acknowledgment | |2
+|[\{ERR}] |Error Segment | |2
+|\{ |--Widget begin | |
+|WDN |Widget Description | |XX
+|[ \{ |---WidgetDetailA begin | |
+|WPN |Widget Portion | |XX
+|WPD |Widget Portion Detail | |XX
+|} ] |---WidgetDetailA end | |
+|} |---Widget end | |
+|===
+
+If the widget committee determined that at least one pair of WPN and WPD segments must follow a WDN, then the notation would be as shown in Figure 2-7.
+
+.Figure 2-7. At least one pair of WPN and WPD WRQ^Z02^WRQ_Z04
+[width="99%",cols="30%,36%,13%,21%",options="header",]
+|===
+|WRP |Widget Report |Status |Chapter
+|link:#MSH[MSH] |Message Header | |2
+|[\{SFT}] |Software Segment |2 |
+|[UAC] |User Authentication Credential |2 |
+|link:#MSA[MSA] |Message Acknowledgment | |2
+|[\{ERR}] |Error Segment |2 |
+|\{ |--Widget begin | |
+|WDN |Widget Description | |XX
+|\{ |---WidgetDetailB begin | |
+|WPN |Widget Portion | |XX
+|WPD |Widget Portion Detail | |XX
+|} |---WidgetDetailB begin | |
+|} |---Widget end | |
+|===
+
+
+
+=== HL7 Acknowledgment Choreography Example
+[v291_section="2.11.2"]
+
+Using the example messages in Figure 2-5. Hypothetical schematic message for the WRQ/WRP message pair:
+
+o When MSH-15 is blank and MSH-16 is blank an original mode acknowledgment SHALL be returned on the same communication channel.
+
+o When MSH-15 is AL (Always) and MSH-16 is NE (Never) an immediate ack is always returned. When MSH-15 is NE, and MSH-16 is AL, the receiver is expected to only return an WRP application acknowledgment on a separate communication channel. See Section 2.8.3.2
+
+.o When MSH-15 is AL, and MSH-16 is AL, the receiver is expected to return both the immediate ACK as well as the WRP application ack. The immediate ACK will return on the current channel, and the application acknowledgment on a separate communication channel. See Section 2.8.3.2
+[width="99%",cols="16%,24%,15%,23%,22%,",options="header",]
+|===
+|Example of Acknowledgment Choreography: | | | | |
+|WRQ^Z01^WRQ_Z01/WRP^Z02^WRP_Z02 | | | | |
+|Field name |Field value: Original Mode |Field Value: Enhanced Mode | | |
+|MSH-15 |BLANK |AL(Always) |NE(Never) |AL(Always) |
+|MSH-16 |BLANK |NE(Never) |AL(Always) |AL(Always) |
+|Immediate Ack |- |ACK^Z01 |- |ACK^Z01 |
+|Application Ack |WRP^Z02^WRP_Z02 |- |WRP^Z02^WRP_Z02 |WRP^Z02^WRP_Z02 |
+|===
+
+
+
+== Acknowledgment Messages
+[v291_section="2.12"]
+
+Acknowledgment messages MAY be defined on an application basis. However the simple general acknowledgment message (ACK) SHALL be used where the application does not define a special message (application level acknowledgment) and in other cases as described in Section _2.8_, "_Message Processing Rules_".
+
+
+
+=== ACK - general acknowledgment message
+[v291_section="2.12.1"]
+
+The simple general acknowledgment (ACK) can be used where the application does not define a special application level acknowledgment message or where there has been an error that precludes application processing. It is also used for accept level acknowledgments. The details are described in Section _2.8_, "_Message Processing Rules_".
+
+[message_structure-table]
+
+[NOTE]
+For the general acknowledgment (ACK) message, the value of MSH-9-2-Trigger event is equal to the value of MSH-9-2-Trigger event in the message being acknowledged. The value of MSH-9-3-Message structure for the general acknowledgment message is always ACK.
+
+
+
+==== Acknowledgment Choreography
+[v291_section="2.12.1.0"]
+
+[ack_chor-table]
+
+[NOTE]
+In general, there is no purpose for a receiver to acknowledge an Immediate Acknowledgment message while at times it is appropriate to acknowledge an Application Acknowledgment.  Site specific profiles MAY require this based on the use case.
+
+
+
+== Message Control Segments
+[v291_section="2.13"]
+
+The following segments are necessary to support the functionality described in this chapter.
+
+[NOTE]
+The HL7 message construction rules define the standard HL7 encoding rules, creating variable length delimited messages from the segments defined below. Although only one set of encoding rules is defined as a standard in HL7 Version 2.3, other encoding rules are possible (but since they are non-standard, they MAY only used by a site-specific agreement).
+
+The segments in this section are listed in alphabetical order. The following chart shows a summary of the segments listed by category.
+
+.Figure 2-8. HL7 message segments
+[width="100%",cols="26%,38%,36%",options="header",]
+|===
+|Segment Category |Segment Name |HL7 Section Reference
+|Control | |
+| |ADD |2.13.1
+| |BHS |2.13.2
+| |BTS |2.13.3
+| |DSC |2.13.4
+| |ERR |2.13.5
+| |FHS |2.13.6
+| |FTS |2.13.7
+| |MSA |2.13.8
+| |MSH |2.13.9
+|General Purpose | |
+| |NTE |2.13.10
+| |OVR |2.13.10.5
+| |SFT |2.13.12
+| |SGH |2.13.13
+| |SGT |2.13.14
+| |UAC |link:#_UAC_-_User_Authentication Credentia[2.13.15]
+|===
+
+
+
+==== ADD field definition
+[v291_section="2.13.1.0"]
+
+
+
+==== BHS field definitions
+[v291_section="2.13.2.0"]
+
+
+
+==== BTS field definitions
+[v291_section="2.13.3.0"]
+
+
+
+==== DSC field definitions
+[v291_section="2.13.4.0"]
+
+
+
+==== ERR field definition
+[v291_section="2.13.5.0"]
+
+
+
+==== FHS field definitions
+[v291_section="2.13.6.0"]
+
+
+
+==== FTS field definitions
+[v291_section="2.13.7.0"]
+
+
+
+==== MSA field definitions
+[v291_section="2.13.8.0"]
+
+
+
+==== MSH field definitions
+[v291_section="2.13.9.0"]
+
+
+
+===== Alphabetic Languages Other Than English
+[v291_section="2.13.9.18.1"]
+
+The first occurrence of link:#_MSH-18___Character Set   (ID)   006[MSH-18 Character Set] MAY reference a character set other than 7-bit ASCII. Western alphabetic languages other than English are accommodated by the ISO 8859 series of character encodings. For example, if MSH-18 Character Set is valued *8859/1*, the ISO character set commonly known as "8-bit ASCII" is in use in the message. This includes all values from decimal 0 through decimal 127 (hex 00 through hex 7F), plus an additional 128 values from decimal 128 through decimal 255 (hex 80 through hex FF). The latter values include the accented Latin letters used in common Western European languages, plus some symbolic values such as the paragraph mark (¶) and the trademark symbol (™).
+
+Other ISO character sets in the 8859 series accommodate non-Latin character sets. For example, MSH-18 Character Set could be valued *8859/2* to specify the default character encoding in use in Eastern Europe, while *8859/6* indicates the use of the Arabic alphabet.
+
+The ASCII and ISO character sets all allow the specification of any character in a single byte.
+
+
+
+===== Non-Alphabetic Languages
+[v291_section="2.13.9.18.2"]
+
+HL7 Table 0211 includes values for languages that do not use alphabets. These include ideographic written languages, such as the Japanese Graphic Character Set which is specified as *ISO IR87*.
+
+There are non-alphabetic encoding systems for which HL7 Table 0211 does not provide specific entries. One of these is the Traditional Chinese character set, CNS 11643, which is used in Taiwan. This character set can, however, be encoded using the Unicode Standard, which does have a value in HL7 0211.
+
+The Unicode Standard (which is now coordinated with ISO 10646) permits the specification of multiple-byte characters in a much larger range than is available in a single-byte ASCII or ISO character set. Unicode Version 3.1 (http://www.unicode.org) includes almost 100,000 characters, including many Chinese, Japanese, and Korean ideographs. This is particularly valuable to implementers who need to encode messages in more than one character set, as for example to accommodate the use of both alphabetic and ideographic characters.
+
+Non-alphabetic encoding systems do not restrict characters to a length of one byte. Unicode incorporates three encoding forms that allow for the use of multiple bytes to encode a message. The most flexible Unicode encoding form is UTF-8, which uses high-order bits to specify the number of bytes (from one to six) used to encode each character.
+
+Interestingly, Unicode UTF-8 incorporates the 7-bit ASCII character set as single-byte codes. This means that a message encoded in 7-bit ASCII can be submitted to a destination using Unicode UTF- 8 with no modification.
+
+
+
+==== NTE field definitions
+[v291_section="2.13.10.0"]
+
+
+
+==== OVR field definitions
+[v291_section="2.13.11.0"]
+
+
+
+==== SFT field definitions
+[v291_section="2.13.12.0"]
+
+
+
+==== SGH field definitions
+[v291_section="2.13.13.0"]
+
+
+
+==== SGT field definitions
+[v291_section="2.13.14.0"]
+
+
+
+==== UAC Field Definitions
+[v291_section="2.13.15.0"]
+
+
+
+== Data types
+[v291_section="2.14"]
+
+Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70440[_HL7 Table 0440 – Data Types_] in Chapter 2C, Code Tables, for valid values.
+
+
+
+== Miscellaneous HL7 tables used across all chapters
+[v291_section="2.15"]
+
+
+
+=== Message Type Table (0076)
+[v291_section="2.15.1"]
+
+Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70076[_HL7 Table 0076 – Message Type_] in Chapter 2C, Code Tables, for valid values.
+
+
+
+=== Event Type Table (0003)
+[v291_section="2.15.2"]
+
+Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70003[_HL7 Table 0003 – Event Type_] in Chapter 2C, Code Tables, for valid values.
+
+
+
+=== Message Structure Table (0354)
+[v291_section="2.15.3"]
+
+The first column of this table contains the message structure code, which describes a particular HL7 "abstract message structure definition" in terms of segments, as defined in section _2.10.8_, "_Message representation_
+
+For each trigger event the messages that are exchanged when the trigger event occurs are defined using the HL7 abstract message syntax as follows:
+
+Each message is defined in special notation that lists the segment IDs in the order they would appear in the message. Braces, \{ . . . }, indicate one or more repetitions of the enclosed group of segments. Of course, the group MAY contain only a single segment. Brackets, [ . . . ], show that the enclosed group of segments is optional. If a group of segments is optional and MAY repeat it SHALL be enclosed in brackets and braces, [\{...}].
+
+[NOTE]
+[\{...}] and \{[...]} are equivalent.
+
+Whenever braces or brackets enclose more than one segment ID a special stylistic convention is used to help the reader understand the hierarchy of repetition. For example, the first segment ID appears on the same line as the brace, two columns to the right. The subsequent segment IDs appear under the first. The closing brace appears on a line of its own in the same column as the opening brace. This convention is an optional convenience to the user. If there is conflict between its use and the braces that appear in a message schematic, the braces define the actual grouping of segments that is permitted.
+
+A choice of one segment from a group of segments is indicated by using angle brackets to delimit the group and vertical bar delimiters between the several segments.
+
+[example]
+The following example allows a choice of segments :
+
+<ABC | DEF | GHI | JKL >
+
+[example]
+The following example allows a choice of segments and/or segment groups. (see Figure 2-5 Hypothetical schematic message)
+
+The first choice is a repeating group consisting of an ABC segment followed by optionally repeating NTE segments.
+
+The second choice is the DEF segment.
+
+The third choice is a group with a required GHI segment followed by an optionally repeating group containing a PRT segment followed by an optionally repeating NTE segment.
+
+<\{ABC [\{NTE}] } |DEF | GHI [\{PRT [\{NTE}] }] >
+
+Chapter Formats For Defining HL7 Messages". The second column lists the various HL7 trigger events that use the particular abstract message definition. For example, the message structure code ADT_A01 describes the single abstract message structure used by the trigger events A01, A04, A08 and A13. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70354[_HL7 Table 0354 – Message Structure_] in Chapter 2C, Code Tables, for valid values
+
+
+
+=== Coding System Table (0396)
+[v291_section="2.15.4"]
+
+[NOTE]
+The Vocabulary T.C. is the steward of HL7 Table 0396. As of v2.6, no special characters, except for underscore if absolutely necessary, are allowed for the Value in this table.
+
+Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70396[_HL7 Table 0396 - Coding System_] in Chapter 2C, Code Tables, for valid values.
+
+
+
+=== Yes/no Indicator Table (0136)
+[v291_section="2.15.5"]
+
+The actual interpretation of Yes/No is context sensitive. Individual chapters will further refine the meaning of Yes/No in their specific context. Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70136[_HL7 Table 0136 - Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values
+
+
+
+=== Expanded Yes/no Indicator Table (0532)
+[v291_section="2.15.6"]
+
+This table expands on the original Yes/no indicator table by including "flavors of null". It is intended to be applied to fields where the response is not limited to "yes" or "no". Refer to file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70532[_HL7 Table 0532 – Expanded Yes/no Indicator_] in Chapter 2C, Code Tables, for valid values.
+
+Use Case: A reporting facility/person has little or no information on a particular event or outcome and these are reported as unknown for public health reporting purposes.
+
+
+
+== Sample Control Messages
+[v291_section="2.16"]
+
+
+
+=== General acknowledgment
+[v291_section="2.16.1"]
+
+LAB acknowledges the message that ADT sent identified as ZZ9380. (LAB and ADT, the sending and receiving system IDs, are site-defined.) Both systems are associated with the same FACILITY, 767543. The *AA* code in the MSA segment indicates that the message was accepted by the application.
+
+[er7]
+MSH|^~\&|LAB|767543|ADT|767543|19900314130405-500||ACK^A08^ACK |XX3657|P|2.9<cr>
+[er7]
+MSA|AA|ZZ9380<cr>
+
+
+
+=== General acknowledgment, error return
+[v291_section="2.16.2"]
+
+The *AR* code in MSA indicates that the application rejected the message for functional reasons. The optional ERR segment includes here that the 16th field of the PID segment with the SET ID value of 1 had an error which was defined by the locally-established code X3L. The optional text message UNKNOWN COUNTY CODE in the link is designed to help programmers and support personnel while reviewing message logs.
+
+[er7]
+MSH|^~\&|LAB|767543|ADT|767543|199003141304-0500||ACK^A08^ACK |XX3657|P|2.9<cr>
+
+[er7]
+MSA|AR|ZZ9380| <cr>
+
+[er7]
+ERR| |PID^1^11^^9|103|E<cr>
+
+
+
+
+=== Message using sequence number: protocol
+[v291_section="2.16.3"]
+
+The sender initiates the link with a message that has no functional content. The sequence number is 0. The message type and event code are not used.
+
+[er7]
+MSH|^~\&|ADT|767543|LAB|767543|199003141304-0500||ADT^A08^ADT_A01|XX3657|P|2.9|0<cr>
+
+The responder uses a general acknowledgment. The expected sequence number is 1.
+
+[er7]
+MSH|^~\&|LAB|767543|ADT|767543|199003141304-0500||ACK^A08^ACK |ZZ9380|P|2.9<cr>
+[er7]
+MSA|AA|XX3657||1<cr>
+
+See section 2.9.1, "Sequence number protocol" for further detail.
+
+
+
+=== Message fragmentation
+[v291_section="2.16.4"]
+
+This summarizes the methodology for splitting a single logical HL7 message among two or more actual HL7 messages. The actual specifications for this, the segment definitions of the ADD and DSC segments, and examples are in Section _2.9.2_, "_Continuation messages and segments_".
+
+Continuing of messages is a generic methodology that can be used for all HL7 message types. It can be used to split based on segment boundaries, on field boundaries, and to split a single field among several messages. It utilizes two specific segments, ADD and DSC, as well as a field in the message header, MSH-14 Continuation Pointer.
+
+When a message is continued, a unique continuation value is used. This same value will appear in MSH-14 and DSC-1 as appropriate for a single pair of messages. This allows messages to be "chained together".
+
+Here are two examples of ways to create continuation pointers for fragmented messages. The only absolute requirement is that when the sending application values the continuation pointer, the receiving application can appropriately reconstruct the message.
+
+Sitecode-interfaceapplicationcode-date-sequentialcounterwithindate
+
+This will guarantee uniqueness of this field.
+
+e.g., BWH-LDS-19990331-27 for the 27^th^ large message to be created on March 31, within the Discharge Summary interfaces at BWH
+
+An alternative method of valuing the continuation pointer:
+
+Sitecode-interfaceapplicationcode-medicalrecordnumber-datetime
+
+e.g. MGH-PCIS-1234567-19980331121314 for a message created on March 31, at 12:13:14pm for patient medical record number 1234567, within the PCIS interfaces at MGH
+
+Sending Application Note: In the ADD segment, a trailing field delimiter, i.e., the vertical bar character, after the final field, has explicit meaning. The sending application SHOULD NOT include a trailing field delimiter for the last field in the ADD segment unless it has completely valued the entire field from the message being continued.
+
+Receiving Application Note: The receiving application will need to be concerned with a single segment and a single field being continued.
+
+Receiving a message with an empty ADD segment followed by a DSC segment is the notification that the segment preceding the ADD is being continued in a subsequent message. Note that the continuing message might not be the next one received! The receiver must match up the continuation pointer value from MSH-14 of subsequent messages to the DSC-1 continuation pointer value of the prior message. Also if the continuing message contains an ADD segment, the receiver SHOULD continue appending to the fields from the segment being continued with values from the ADD segment. For example, if OBX-5 is being continued, the continuation will appear in ADD-1 of the continuing message. If there were a value for OBX-13 of the original message, that would appear in ADD-9 of the continuing message, assuming that the remainder of the OBX segment fit into the single ADD segment.
+
+Question: if continuing a message after the completion of a complete segment, SHOULD the continuing message have an empty ADD segment or not? Answer: No. This means that a continuing message need not have an ADD segment, if the continued message was split on a segment boundary.
+
+Notation conventions: items within angle brackets are comments and not intended to represent a portion of an actual message. For example, <this is a comment>.
+
+[NOTE]
+the multiple continuation pointer values, one for each pair of physical messages.
+
+*Message 1*
+
+[er7]
+MSH|...|<field-13>||...
+
+PID|...
+
+ORC|...
+
+OBR|...
+
+[er7]
+OBX|1|FT|^Discharge Summary|1|This is the first sentence of a long
+
+message. This is the second sentence of a long message.
+
+<snip>
+
+This is the 967th sentence of "
+
+ADD|
+
+[er7]
+DSC|BWH-LDS-19990405-6|
+
+*Message 2*
+
+[er7]
+MSH|...|<field-13>|BWH-LDS-19990405-6|
+
+ADD|a long message. This is the 968th sentence of a long message.
+
+<snip>
+
+This is the 1001st line of
+
+<there SHOULD be no trailing field delimiter after the last field in this ADD segment>
+
+[er7]
+DSC|BWH-LDS-19990405-7|
+
+*Message 3*
+
+[er7]
+MSH|...|<field-13>|BWH-LDS-19990405-7|
+[er7]
+ADD|a long message. This is the 1002nd sentence of a long message. <snip> This is the final sentence of this long message!|||||F||199707211325|
+
+DG1|...
+
+<end of message>
+
+The following examples discuss an unsolicited transmission of an observation message, ORU^R01.
+
+The expected result values in OBX-5 Observation Value, for reports (e.g., autopsy, pathology) MAY exceed the message length restrictions of one or more interfaces.
+
+Thus the OBX-5 Observation Value data element will be split into more than one message.
+
+Here's an example intended to illustrate the interpretation of Chapter 2 and 7. It reflects a single logical message broken up into three distinct messages.
+
+[example]
+1, a single field being split across three messages
+
+Message #1: ---------------------------------------------------------------
+
+[NOTE]
+MSH-14, continuation pointer, is empty.
+
+[er7]
+MSH|...|<field-13>||...
+
+PID|...
+
+ORC|...
+
+OBR|...
+
+[er7]
+OBX|1|FT|^Discharge Summary|1|This is the first sentence of a long
+
+message. This is the second sentence of a long message.
+
+<snip>
+
+This is the 967^th^ sentence of "
+
+ADD|
+
+[er7]
+DSC|<continuation-pointer-value-1>|F
+
+Message #2: --------------------------------------------------------------
+
+[NOTE]
+MSH-14, continuation pointer, is valued with the same value as in DSC-1, continuation pointer from the message this is continuing, in this case Message #1.
+
+[er7]
+MSH|...|<field-13>|<continuation-pointer-value-1>|
+
+ADD|a long message. This is the 968th sentence of a long message.
+
+<snip>
+
+This is the 1001st line of
+
+<there SHOULD be no trailing field delimiter after the last field in this ADD segment>
+
+[er7]
+DSC|<continuation-pointer-value-2>|F
+
+Message #3: ---------------------------------------------------------------
+
+[NOTE]
+MSH-14, continuation pointer, is valued with the same value as in DSC-1, continuation pointer from the message this is continuing, in this case Message #1.
+
+[er7]
+MSH|...|<field-13>|<continuation-pointer-value-2>|
+[er7]
+ADD|a long message. This is the 1002nd sentence of a long message. <snip> This is the final sentence of this long message!|||||F||199707211325|
+
+<remaining segments after the big OBX from the original message go here, after the ADD segment>
+
+PR1|...
+
+DG1|...
+
+[example]
+2, a single message being split across two messages, but on segment boundaries
+
+Message #1: ---------------------------------------------------------------
+
+[NOTE]
+MSH-14, continuation pointer, is empty.
+
+[er7]
+MSH|...|<field-13>||...
+
+PID|...
+
+ORC|...
+
+OBR|...
+
+[er7]
+OBX|1|FT|^Discharge Summary|1|This is the first sentence of a long
+
+message. This is the final sentence of this long discharge summary!|||||F||199707211325|
+
+[er7]
+DSC|<continuation-pointer-value-3>|F
+
+Message #2: --------------------------------------------------------------
+
+[NOTE]
+MSH-14 Continuation Pointer, is valued with the same value as in DSC-1, continuation pointer from the message this is continuing, in this case Message #1.
+
+[NOTE]
+that no ADD segment is necessary, since a segment is not being split across two messages.
+
+[er7]
+MSH|...|<field-13>|<continuation-pointer-value-3>|
+
+PR1|...
+
+DG1|...
+
+
+
+=== Acknowledgment message using original mode processing
+[v291_section="2.16.5"]
+
+This example shows the lab system using the Master Files specification to send two update test dictionary entries to an ICU system.
+
+Initiating Message:
+
+[er7]
+MSH|^~\&|LABxxx|ClinLAB|ICU||19910918060544-500||MFN^M03^MFN_M03|MSGID002|P|2.9
+
+MFI|...
+
+Response Message: Original mode acknowledgment of the HL7 message according to MFI Response Level Code of AL.
+
+[er7]
+MSH|^~\&|ICU||LABxxx|ClinLAB|19910918060545-500||MFK^M03^MFK_M01|MSGID99002|P|2.9
+[er7]
+MSA|AA|MSGID002
+[er7]
+MFI|LABxxx^Lab Test Dictionary^L|UPD|||MFAA
+[er7]
+MFA|MUP|199110010000|199110010040|S|12345^WBC^L
+[er7]
+MFA|MUP|199110010000|199110010041|S|6789^RBC^L...
+
+
+
+=== Acknowledgment message using enhanced mode processing
+[v291_section="2.16.6"]
+
+Initial message with accept acknowledgment
+
+[er7]
+MSH|^~\&|LABxxx|ClinLAB|ICU||19910918060544-500||MFN^M03^MFN_M03|MSGID002|P|2.9|||AL|AL
+
+MFI|...
+
+[er7]
+MSH|^~\&|ICU||LABxxx|ClinLAB|19910918060545-500||MSA|MSGID99002|P|2.9
+[er7]
+MSA|CA|MSGID002
+
+Application acknowledgment message
+
+[er7]
+MSH|^~\&|ICU||LABxxx|ClinLAB|19911001080504-500|| MFK^M03^MFK_M01|MSGID5002|P|2.9|||AL|
+[er7]
+MSA|AA|MSGID002
+
+MFI|...
+
+[er7]
+MSH|^~\&|LABxxx|ClinLAB|ICU||19911001080507-500||ACK|MSGID444|P|2.9
+[er7]
+MSA|CA|MSGID5002
+
+
+
+== Outstanding Issues
+[v291_section="2.17"]
+
+The following items are being discussed in the Infrastructure and Messaging work group for addition to future versions of HL7:
+
+
