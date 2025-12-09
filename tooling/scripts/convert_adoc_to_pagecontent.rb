@@ -9,9 +9,10 @@ Encoding.default_external = Encoding::UTF_8
 
 # Directories
 REPO_ROOT = File.expand_path('../..', __dir__)
+WEBSITE_DIR = File.join(REPO_ROOT, 'website')
 WEBSITE_DOMAINS = File.join(REPO_ROOT, 'website', 'domains')
 INPUT_PAGECONTENT = File.join(REPO_ROOT, 'input', 'pagecontent')
-SUSHI_CONFIG = File.join(REPO_ROOT, 'sushi-config.yaml')
+PAGE_CONFIG = File.join(REPO_ROOT, 'page-config.yaml')
 
 # FHIR XHTML wrapper template
 XHTML_WRAPPER = <<~XML
@@ -48,8 +49,14 @@ def find_adoc_source(page_name, parent_path)
     case page_name
     when 'index'
       return :skip  # Already exists as XML
-    when 'introduction', 'foundation', 'foundation-intro', 'control'
-      return nil  # No source available
+    when 'introduction'
+      adoc_path = File.join(WEBSITE_DIR, 'introduction.adoc')
+      return adoc_path if File.exist?(adoc_path)
+      return nil
+    when 'control'
+      adoc_path = File.join(WEBSITE_DIR, 'control.adoc')
+      return adoc_path if File.exist?(adoc_path)
+      return nil
     when 'data-types', 'complex-data-types', 'primitive-data-types'
       return :skip  # Already exist or are templates
     when 'domains'
@@ -131,9 +138,9 @@ def process_pages
   puts "=" * 70
   puts
 
-  # Read sushi-config.yaml
-  puts "Reading sushi-config.yaml..."
-  config = YAML.load_file(SUSHI_CONFIG)
+  # Read page-config.yaml
+  puts "Reading page-config.yaml..."
+  config = YAML.load_file(PAGE_CONFIG)
   pages = extract_pages_from_config(config)
 
   created_count = 0

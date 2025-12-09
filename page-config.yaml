@@ -79,15 +79,9 @@ pages:
     title: Introduction
     generation: markdown
 
-  foundation.md:
-    title: Foundation
+  control.md:
+    title: Control
     generation: markdown
-    foundation-intro.md:
-      title: Introduction
-      generation: markdown
-    control.md:
-      title: Control
-      generation: markdown
 
   data-types.md:
     title: Data Types

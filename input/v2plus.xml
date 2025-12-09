@@ -35,19 +35,9 @@
         <generation value='html'/>
       </page>
       <page>
-        <name value='foundation.html'/>
-        <title value='Foundation'/>
+        <name value='control.html'/>
+        <title value='Control'/>
         <generation value='html'/>
-        <page>
-          <name value='foundation-intro.html'/>
-          <title value='Introduction'/>
-          <generation value='html'/>
-        </page>
-        <page>
-          <name value='control.html'/>
-          <title value='Control'/>
-          <generation value='html'/>
-        </page>
       </page>
       <page>
         <name value='data-types.html'/>
