@@ -32,171 +32,171 @@
       <page>
         <name value='introduction.html'/>
         <title value='Introduction'/>
-        <generation value='xml'/>
+        <generation value='html'/>
       </page>
       <page>
         <name value='control.html'/>
         <title value='Control'/>
-        <generation value='xml'/>
+        <generation value='html'/>
       </page>
       <page>
         <name value='data-types.html'/>
         <title value='Data Types'/>
-        <generation value='xml'/>
+        <generation value='html'/>
         <page>
           <name value='complex-data-types.html'/>
           <title value='Complex Data Types'/>
-          <generation value='xml'/>
+          <generation value='html'/>
         </page>
         <page>
           <name value='primitive-data-types.html'/>
           <title value='Primitive Data Types'/>
-          <generation value='xml'/>
+          <generation value='html'/>
         </page>
       </page>
       <page>
         <name value='domains.html'/>
         <title value='Domain Messaging'/>
-        <generation value='xml'/>
+        <generation value='html'/>
         <page>
           <name value='administration.html'/>
           <title value='Administration'/>
-          <generation value='xml'/>
+          <generation value='html'/>
           <page>
             <name value='registration.html'/>
             <title value='Registration'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='scheduling.html'/>
             <title value='Scheduling'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='referral.html'/>
             <title value='Referral'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='consent.html'/>
             <title value='Consent'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
         </page>
         <page>
           <name value='clinical.html'/>
           <title value='Clinical'/>
-          <generation value='xml'/>
+          <generation value='html'/>
           <page>
             <name value='general-orders-and-results.html'/>
             <title value='General Orders and Results'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='laboratory.html'/>
             <title value='Laboratory'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='pharmacy.html'/>
             <title value='Pharmacy'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='blood-bank.html'/>
             <title value='Blood Bank'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='immunizations.html'/>
             <title value='Immunizations'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='patient-care.html'/>
             <title value='Patient Care'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='medical-records.html'/>
             <title value='Medical Records'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='imaging.html'/>
             <title value='Imaging'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='dietary.html'/>
             <title value='Dietary'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='clinical-trials.html'/>
             <title value='Clinical Trials'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='product-experience.html'/>
             <title value='Product Experience'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='supply.html'/>
             <title value='Supply'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
         </page>
         <page>
           <name value='financial.html'/>
           <title value='Financial'/>
-          <generation value='xml'/>
+          <generation value='html'/>
           <page>
             <name value='claims-and-reimbursements.html'/>
             <title value='Claims and Reimbursements'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='financial-management.html'/>
             <title value='Financial Management'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
         </page>
         <page>
           <name value='erp.html'/>
           <title value='Enterprise Resource Planning'/>
-          <generation value='xml'/>
+          <generation value='html'/>
           <page>
             <name value='lab-automation.html'/>
             <title value='Lab Automation'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='personnel-management.html'/>
             <title value='Personnel Management'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='materials-management.html'/>
             <title value='Materials Management'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='supply-erp.html'/>
             <title value='Supply'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
           <page>
             <name value='specimen-shipment-manifest.html'/>
             <title value='Specimen Shipment Manifest'/>
-            <generation value='xml'/>
+            <generation value='html'/>
           </page>
         </page>
         <page>
           <name value='technical.html'/>
           <title value='Technical'/>
-          <generation value='xml'/>
+          <generation value='html'/>
         </page>
       </page>
     </page>

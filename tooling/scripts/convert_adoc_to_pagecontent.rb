@@ -161,7 +161,7 @@ def process_pages
     end
 
     if adoc_source.nil? || !File.exist?(adoc_source)
-      puts "⚠️  #{page_name}.xml: No ADOC source found"
+      puts "⚠️  #{page_name}.xhtml: No ADOC source found"
       error_count += 1
       next
     end
@@ -177,13 +177,13 @@ def process_pages
     # Wrap in FHIR XHTML
     xhtml_content = wrap_in_xhtml(html_content)
 
-    # Write to pagecontent as .xml
-    output_file = File.join(INPUT_PAGECONTENT, "#{page_name}.xml")
+    # Write to pagecontent as .xhtml
+    output_file = File.join(INPUT_PAGECONTENT, "#{page_name}.xhtml")
     File.write(output_file, xhtml_content, encoding: 'UTF-8')
 
     # Show relative paths for cleaner output
     relative_source = adoc_source.sub(REPO_ROOT, '')
-    puts "✓ #{page_name}.xml ← #{relative_source}"
+    puts "✓ #{page_name}.xhtml ← #{relative_source}"
     created_count += 1
   end
 
