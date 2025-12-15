@@ -63,133 +63,133 @@ packageId: hl7.v2plus
 # │  page entries that are not specified.                                                           │
 # │                                                                                                  │
 # │  Indentation represents hierarchy. The format is:                                               │
-# │    page-file.md:                                                                                │
+# │    page-file.xml:                                                                                │
 # │      title: Page Title                                                                          │
 # │      generation: html|markdown                                                                  │
-# │      child-page.md:                                                                             │
+# │      child-page.xml:                                                                             │
 # │        title: Child Page Title                                                                  │
 # ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 pages:
-  index.md:
+  index.xml:
     title: V2+ Home
-    generation: markdown
+    generation: html
 
-  introduction.md:
+  introduction.xml:
     title: Introduction
-    generation: markdown
+    generation: html
 
-  control.md:
+  control.xml:
     title: Control
-    generation: markdown
+    generation: html
 
-  data-types.md:
+  data-types.xml:
     title: Data Types
-    generation: markdown
-    complex-data-types.md:
+    generation: html
+    complex-data-types.xml:
       title: Complex Data Types
-      generation: markdown
-    primitive-data-types.md:
+      generation: html
+    primitive-data-types.xml:
       title: Primitive Data Types
-      generation: markdown
+      generation: html
 
-  domains.md:
+  domains.xml:
     title: Domain Messaging
-    generation: markdown
+    generation: html
 
     # Administration Domain
-    administration.md:
+    administration.xml:
       title: Administration
-      generation: markdown
-      registration.md:
+      generation: html
+      registration.xml:
         title: Registration
-        generation: markdown
-      scheduling.md:
+        generation: html
+      scheduling.xml:
         title: Scheduling
-        generation: markdown
-      referral.md:
+        generation: html
+      referral.xml:
         title: Referral
-        generation: markdown
-      consent.md:
+        generation: html
+      consent.xml:
         title: Consent
-        generation: markdown
+        generation: html
 
     # Clinical Domain
-    clinical.md:
+    clinical.xml:
       title: Clinical
-      generation: markdown
-      general-orders-and-results.md:
+      generation: html
+      general-orders-and-results.xml:
         title: General Orders and Results
-        generation: markdown
-      laboratory.md:
+        generation: html
+      laboratory.xml:
         title: Laboratory
-        generation: markdown
-      pharmacy.md:
+        generation: html
+      pharmacy.xml:
         title: Pharmacy
-        generation: markdown
-      blood-bank.md:
+        generation: html
+      blood-bank.xml:
         title: Blood Bank
-        generation: markdown
-      immunizations.md:
+        generation: html
+      immunizations.xml:
         title: Immunizations
-        generation: markdown
-      patient-care.md:
+        generation: html
+      patient-care.xml:
         title: Patient Care
-        generation: markdown
-      medical-records.md:
+        generation: html
+      medical-records.xml:
         title: Medical Records
-        generation: markdown
-      imaging.md:
+        generation: html
+      imaging.xml:
         title: Imaging
-        generation: markdown
-      dietary.md:
+        generation: html
+      dietary.xml:
         title: Dietary
-        generation: markdown
-      clinical-trials.md:
+        generation: html
+      clinical-trials.xml:
         title: Clinical Trials
-        generation: markdown
-      product-experience.md:
+        generation: html
+      product-experience.xml:
         title: Product Experience
-        generation: markdown
-      supply.md:
+        generation: html
+      supply.xml:
         title: Supply
-        generation: markdown
+        generation: html
 
     # Financial Domain
-    financial.md:
+    financial.xml:
       title: Financial
-      generation: markdown
-      claims-and-reimbursements.md:
+      generation: html
+      claims-and-reimbursements.xml:
         title: Claims and Reimbursements
-        generation: markdown
-      financial-management.md:
+        generation: html
+      financial-management.xml:
         title: Financial Management
-        generation: markdown
+        generation: html
 
     # ERP Domain
-    erp.md:
+    erp.xml:
       title: Enterprise Resource Planning
-      generation: markdown
-      lab-automation.md:
+      generation: html
+      lab-automation.xml:
         title: Lab Automation
-        generation: markdown
-      personnel-management.md:
+        generation: html
+      personnel-management.xml:
         title: Personnel Management
-        generation: markdown
-      materials-management.md:
+        generation: html
+      materials-management.xml:
         title: Materials Management
-        generation: markdown
-      supply-erp.md:
+        generation: html
+      supply-erp.xml:
         title: Supply
-        generation: markdown
-      specimen-shipment-manifest.md:
+        generation: html
+      specimen-shipment-manifest.xml:
         title: Specimen Shipment Manifest
-        generation: markdown
+        generation: html
 
     # Technical Domain
-    technical.md:
+    technical.xml:
       title: Technical
-      generation: markdown
+      generation: html
 
 # ╭─────────────────────────────────────────────parameters─────────────────────────────────────────╮
 # │  The parameters property represents IG.definition.parameter. Parameters can control            │

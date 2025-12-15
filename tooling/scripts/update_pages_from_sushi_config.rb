@@ -110,9 +110,9 @@ class SushiToV2PlusConverter
   def count_pages(pages_hash, count = 0)
     pages_hash.each do |key, value|
       count += 1
-      if value.is_a?(Hash) && value.keys.any? { |k| k.end_with?('.md', '.html') }
+      if value.is_a?(Hash) && value.keys.any? { |k| k.end_with?('.md', '.xml', '.html') }
         # Has child pages
-        child_pages = value.select { |k, v| k.end_with?('.md', '.html') }
+        child_pages = value.select { |k, v| k.end_with?('.md', '.xml', '.html') }
         count = count_pages(child_pages, count)
       end
     end
@@ -122,13 +122,14 @@ class SushiToV2PlusConverter
   def convert_pages_to_xml(pages_hash, doc)
     # In SUSHI config, all top-level pages are siblings
     # But in FHIR IG XML, we need ONE root page with children
-    # Convention: index.md is root, all others are siblings under it
+    # Convention: index is root, all others are siblings under it
 
-    root_name = 'index.md'
+    # Try both .md and .xml extensions for index
+    root_name = pages_hash.key?('index.xml') ? 'index.xml' : 'index.md'
     root_config = pages_hash[root_name] || {}
 
     unless pages_hash.key?(root_name)
-      puts "⚠️  Warning: No index.md found, using first page as root"
+      puts "⚠️  Warning: No index found, using first page as root"
       root_name = pages_hash.keys.first
       root_config = pages_hash[root_name]
     end
@@ -136,7 +137,7 @@ class SushiToV2PlusConverter
     # Create root page element
     root_element = REXML::Element.new('page')
 
-    html_name = root_name.gsub(/\.md$/, '.html')
+    html_name = root_name.gsub(/\.(md|xml)$/, '.html')
     name_elem = root_element.add_element('name')
     name_elem.attributes['value'] = html_name
 
@@ -163,8 +164,8 @@ class SushiToV2PlusConverter
   def create_page_element(page_name, page_config, parent_pages_hash, doc, is_root = false)
     page_element = REXML::Element.new('page')
 
-    # Convert .md to .html for the name value
-    html_name = page_name.gsub(/\.md$/, '.html')
+    # Convert .md or .xml to .html for the name value
+    html_name = page_name.gsub(/\.(md|xml)$/, '.html')
 
     name_elem = page_element.add_element('name')
     name_elem.attributes['value'] = html_name
@@ -186,7 +187,7 @@ class SushiToV2PlusConverter
 
     # Process child pages
     if page_config.is_a?(Hash)
-      child_pages = page_config.select { |k, v| k.end_with?('.md', '.html') }
+      child_pages = page_config.select { |k, v| k.end_with?('.md', '.xml', '.html') }
 
       child_pages.each do |child_name, child_config|
         child_element = create_page_element(child_name, child_config, page_config, doc)
