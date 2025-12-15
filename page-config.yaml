@@ -65,7 +65,7 @@ packageId: hl7.v2plus
 # │  Indentation represents hierarchy. The format is:                                               │
 # │    page-file.xml:                                                                                │
 # │      title: Page Title                                                                          │
-# │      generation: html|markdown                                                                  │
+# │      generation: xml|markdown                                                                  │
 # │      child-page.xml:                                                                             │
 # │        title: Child Page Title                                                                  │
 # ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -73,123 +73,123 @@ packageId: hl7.v2plus
 pages:
   index.xml:
     title: V2+ Home
-    generation: html
+    generation: xml
 
   introduction.xml:
     title: Introduction
-    generation: html
+    generation: xml
 
   control.xml:
     title: Control
-    generation: html
+    generation: xml
 
   data-types.xml:
     title: Data Types
-    generation: html
+    generation: xml
     complex-data-types.xml:
       title: Complex Data Types
-      generation: html
+      generation: xml
     primitive-data-types.xml:
       title: Primitive Data Types
-      generation: html
+      generation: xml
 
   domains.xml:
     title: Domain Messaging
-    generation: html
+    generation: xml
 
     # Administration Domain
     administration.xml:
       title: Administration
-      generation: html
+      generation: xml
       registration.xml:
         title: Registration
-        generation: html
+        generation: xml
       scheduling.xml:
         title: Scheduling
-        generation: html
+        generation: xml
       referral.xml:
         title: Referral
-        generation: html
+        generation: xml
       consent.xml:
         title: Consent
-        generation: html
+        generation: xml
 
     # Clinical Domain
     clinical.xml:
       title: Clinical
-      generation: html
+      generation: xml
       general-orders-and-results.xml:
         title: General Orders and Results
-        generation: html
+        generation: xml
       laboratory.xml:
         title: Laboratory
-        generation: html
+        generation: xml
       pharmacy.xml:
         title: Pharmacy
-        generation: html
+        generation: xml
       blood-bank.xml:
         title: Blood Bank
-        generation: html
+        generation: xml
       immunizations.xml:
         title: Immunizations
-        generation: html
+        generation: xml
       patient-care.xml:
         title: Patient Care
-        generation: html
+        generation: xml
       medical-records.xml:
         title: Medical Records
-        generation: html
+        generation: xml
       imaging.xml:
         title: Imaging
-        generation: html
+        generation: xml
       dietary.xml:
         title: Dietary
-        generation: html
+        generation: xml
       clinical-trials.xml:
         title: Clinical Trials
-        generation: html
+        generation: xml
       product-experience.xml:
         title: Product Experience
-        generation: html
+        generation: xml
       supply.xml:
         title: Supply
-        generation: html
+        generation: xml
 
     # Financial Domain
     financial.xml:
       title: Financial
-      generation: html
+      generation: xml
       claims-and-reimbursements.xml:
         title: Claims and Reimbursements
-        generation: html
+        generation: xml
       financial-management.xml:
         title: Financial Management
-        generation: html
+        generation: xml
 
     # ERP Domain
     erp.xml:
       title: Enterprise Resource Planning
-      generation: html
+      generation: xml
       lab-automation.xml:
         title: Lab Automation
-        generation: html
+        generation: xml
       personnel-management.xml:
         title: Personnel Management
-        generation: html
+        generation: xml
       materials-management.xml:
         title: Materials Management
-        generation: html
+        generation: xml
       supply-erp.xml:
         title: Supply
-        generation: html
+        generation: xml
       specimen-shipment-manifest.xml:
         title: Specimen Shipment Manifest
-        generation: html
+        generation: xml
 
     # Technical Domain
     technical.xml:
       title: Technical
-      generation: html
+      generation: xml
 
 # ╭─────────────────────────────────────────────parameters─────────────────────────────────────────╮
 # │  The parameters property represents IG.definition.parameter. Parameters can control            │
