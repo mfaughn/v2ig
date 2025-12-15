@@ -71,9 +71,9 @@ packageId: hl7.v2plus
 # ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 pages:
-  index.xml:
+  index.md:
     title: V2+ Home
-    generation: xml
+    generation: markdown
 
   introduction.xml:
     title: Introduction

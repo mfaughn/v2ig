@@ -28,7 +28,7 @@
     <page>
       <name value='index.html'/>
       <title value='V2+ Home'/>
-      <generation value='xml'/>
+      <generation value='html'/>
       <page>
         <name value='introduction.html'/>
         <title value='Introduction'/>
