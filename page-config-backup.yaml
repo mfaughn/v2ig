@@ -1,0 +1,218 @@
+# ╭─────────────────────────────────ImplementationGuide-hl7.other.uv.v2plus.json─────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+id: hl7.other.uv.v2plus
+canonical: http://somewhere.org/fhir/uv/v2plus
+version: 0.0.0
+name: V2Plus
+title: HL7 v2+ Specification
+status: draft
+experimental: false
+publisher:
+  name: HL7 International
+contact:
+  - telecom:
+      - system: url
+        value: http://hl7.org/Special/committees/v2mgmt
+description: HL7 v2+ Specification
+license: CC0-1.0
+fhirVersion: 5.0.0
+packageId: hl7.v2plus
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# menu:
+#   Home: index.html
+#   Artifacts:
+#     Profiles: artifacts.html#2
+#     Extensions: artifacts.html#3
+#     Value Sets: artifacts.html#4
+#   Support:
+#     Downloads: downloads.html
+#     Changelog: changelog.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# history:
+#   current: http://build.fhir.org/ig/HL7/v2plus
+#   0.0.0:
+#     fhirversion: 5.0.0
+#     date: 2099-01-01
+#     desc: Initial STU ballot
+#     path: http://somewhere.org/fhir/uv/v2plus/2024Jan
+#     status: ballot
+#     sequence: STU 1
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To use a provided ig.ini file, delete the "template" property below.                          │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# template: fhir.base.template#current
+# Note: We're using a local template, so template is not specified here
+# The ig.ini file will reference: template = #local-template
+
+# ╭────────────────────────────────────────────pages────────────────────────────────────────────────╮
+# │  The pages property corresponds to ImplementationGuide.definition.page. SUSHI can              │
+# │  auto-generate the page list, but if the author includes pages in this file, it is assumed     │
+# │  that the author will fully manage the pages section and SUSHI will not generate any           │
+# │  page entries that are not specified.                                                           │
+# │                                                                                                  │
+# │  Indentation represents hierarchy. The format is:                                               │
+# │    page-file.xhtml:                                                                                │
+# │      title: Page Title                                                                          │
+# │      generation: html|markdown                                                                  │
+# │      child-page.xhtml:                                                                             │
+# │        title: Child Page Title                                                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+pages:
+  index.md:
+    title: V2+ Home
+    generation: markdown
+
+  introduction.xhtml:
+    title: Introduction
+    generation: html
+
+  control.xhtml:
+    title: Control
+    generation: html
+
+  data-types.xhtml:
+    title: Data Types
+    generation: html
+    complex-data-types.xhtml:
+      title: Complex Data Types
+      generation: html
+    primitive-data-types.xhtml:
+      title: Primitive Data Types
+      generation: html
+
+  domains.xhtml:
+    title: Domain Messaging
+    generation: html
+
+    # Administration Domain
+    administration.xhtml:
+      title: Administration
+      generation: html
+      registration.xhtml:
+        title: Registration
+        generation: html
+      scheduling.xhtml:
+        title: Scheduling
+        generation: html
+      referral.xhtml:
+        title: Referral
+        generation: html
+      consent.xhtml:
+        title: Consent
+        generation: html
+
+    # Clinical Domain
+    clinical.xhtml:
+      title: Clinical
+      generation: html
+      general-orders-and-results.xhtml:
+        title: General Orders and Results
+        generation: html
+      laboratory.xhtml:
+        title: Laboratory
+        generation: html
+      pharmacy.xhtml:
+        title: Pharmacy
+        generation: html
+      blood-bank.xhtml:
+        title: Blood Bank
+        generation: html
+      immunizations.xhtml:
+        title: Immunizations
+        generation: html
+      patient-care.xhtml:
+        title: Patient Care
+        generation: html
+      medical-records.xhtml:
+        title: Medical Records
+        generation: html
+      imaging.xhtml:
+        title: Imaging
+        generation: html
+      dietary.xhtml:
+        title: Dietary
+        generation: html
+      clinical-trials.xhtml:
+        title: Clinical Trials
+        generation: html
+      product-experience.xhtml:
+        title: Product Experience
+        generation: html
+      supply.xhtml:
+        title: Supply
+        generation: html
+
+    # Financial Domain
+    financial.xhtml:
+      title: Financial
+      generation: html
+      claims-and-reimbursements.xhtml:
+        title: Claims and Reimbursements
+        generation: html
+      financial-management.xhtml:
+        title: Financial Management
+        generation: html
+
+    # ERP Domain
+    erp.xhtml:
+      title: Enterprise Resource Planning
+      generation: html
+      lab-automation.xhtml:
+        title: Lab Automation
+        generation: html
+      personnel-management.xhtml:
+        title: Personnel Management
+        generation: html
+      materials-management.xhtml:
+        title: Materials Management
+        generation: html
+      supply-erp.xhtml:
+        title: Supply
+        generation: html
+      specimen-shipment-manifest.xhtml:
+        title: Specimen Shipment Manifest
+        generation: html
+
+    # Technical Domain
+    technical.xhtml:
+      title: Technical
+      generation: html
+
+# ╭─────────────────────────────────────────────parameters─────────────────────────────────────────╮
+# │  The parameters property represents IG.definition.parameter. Parameters can control            │
+# │  various aspects of the build.                                                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+parameters:
+  path-resource:
+    - input/sourceOfTruth/control-manifests
+    - input/sourceOfTruth/data-type
+    - input/sourceOfTruth/data-type/complex
+    - input/sourceOfTruth/data-type/complex/complex-data-types
+    - input/sourceOfTruth/data-type/primitive
+    - input/sourceOfTruth/data-type/primitive/primitive-data-types
+    - input/sourceOfTruth/data-type/primitive/primitives
+    # Uncomment when ready:
+    # - input/sourceOfTruth/message
+    # - input/sourceOfTruth/message/messages
+    # - input/sourceOfTruth/message-structure
+    # - input/sourceOfTruth/message-structure/message-structures
+    # - input/sourceOfTruth/segment
+    # - input/sourceOfTruth/segment/segments
+    # - input/sourceOfTruth/acknowledgement-choreography
+    # - input/sourceOfTruth/acknowledgement-choreography/acknowledgement-choreographies
+    # - input/sourceOfTruth/event
+    # - input/sourceOfTruth/event/events
