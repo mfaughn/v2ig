@@ -146,7 +146,7 @@ class SushiToV2PlusConverter
       title_elem.attributes['value'] = root_config['title']
     end
 
-    generation = root_config['generation'] == 'markdown' ? 'html' : (root_config['generation'] || 'html')
+    generation = root_config['generation'] || 'html'
     gen_elem = root_element.add_element('generation')
     gen_elem.attributes['value'] = generation
 
@@ -176,10 +176,10 @@ class SushiToV2PlusConverter
       title_elem.attributes['value'] = page_config['title']
     end
 
-    # Add generation (default to 'html' for markdown files)
+    # Add generation (default to 'html')
     generation = 'html'
     if page_config.is_a?(Hash) && page_config['generation']
-      generation = page_config['generation'] == 'markdown' ? 'html' : page_config['generation']
+      generation = page_config['generation']
     end
 
     gen_elem = page_element.add_element('generation')
